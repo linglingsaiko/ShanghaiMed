@@ -1,0 +1,13 @@
+# ShanghaiMed Robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://shanghaimed.com/sitemap.xml
+
+# Crawl-delay (optional, be considerate to the server)
+Crawl-delay: 1
+
+# Disallow admin or private areas (none currently)
+# Disallow: /admin/

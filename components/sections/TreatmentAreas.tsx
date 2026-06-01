@@ -11,8 +11,10 @@ import {
   Hospital,
 } from '@/lib/constants'
 import { events } from '@/lib/analytics'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const TreatmentAreas: React.FC = () => {
+  const { t } = useLanguage()
   const [activeTier, setActiveTier] = useState<'all' | 'tier1' | 'tier2'>('all')
   const [showModal, setShowModal] = useState(false)
 
@@ -27,8 +29,8 @@ const TreatmentAreas: React.FC = () => {
       : tier2Hospitals
 
   const tierLabels = {
-    tier1: 'Public Grade-A Hospitals',
-    tier2: 'International Private',
+    tier1: t('treatments.publicHospitals'),
+    tier2: t('treatments.privateHospitals'),
   }
 
   const handleHospitalClick = (hospital: Hospital) => {
@@ -41,14 +43,13 @@ const TreatmentAreas: React.FC = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           <span className="text-accent font-semibold text-sm tracking-wider uppercase">
-            Hospital Network
+            {t('treatments.hospitalNetwork')}
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mt-4 mb-6">
-            Shanghai&apos;s Top Medical Institutions
+            {t('treatments.title')}
           </h2>
           <p className="text-gray-600 text-lg">
-            Access to China&apos;s leading hospitals, from top-tier public
-            institutions to world-class private facilities.
+            {t('treatments.subtitle')}
           </p>
         </div>
 
@@ -82,7 +83,9 @@ const TreatmentAreas: React.FC = () => {
                 <p className="text-gray-600 text-sm mb-3 line-clamp-2">
                   {hospital.description}
                 </p>
-                <div className="flex flex-wrap gap-1">
+
+                {/* Key Departments - Pill Tags */}
+                <div className="flex flex-wrap gap-1 mb-3">
                   {hospital.specialties.slice(0, 3).map((specialty, idx) => (
                     <span
                       key={idx}
@@ -92,6 +95,41 @@ const TreatmentAreas: React.FC = () => {
                     </span>
                   ))}
                 </div>
+
+                {/* Certifications - Green Pills */}
+                {hospital.certifications.length > 0 && (
+                  <div className="flex flex-wrap gap-1 mb-3">
+                    {hospital.certifications.map((cert, idx) => (
+                      <span
+                        key={idx}
+                        className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full flex items-center gap-1"
+                      >
+                        <Shield className="w-3 h-3" />
+                        {cert}
+                      </span>
+                    ))}
+                  </div>
+                )}
+
+                {/* Insurance Partners - Blue Pills (show first 4) */}
+                {hospital.insurancePartners.length > 0 && (
+                  <div className="flex flex-wrap gap-1">
+                    <span className="text-xs text-gray-500 mr-1">{t('treatments.insurance')}</span>
+                    {hospital.insurancePartners.slice(0, 4).map((insurance, idx) => (
+                      <span
+                        key={idx}
+                        className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full"
+                      >
+                        {insurance}
+                      </span>
+                    ))}
+                    {hospital.insurancePartners.length > 4 && (
+                      <span className="text-xs text-gray-400">
+                        +{hospital.insurancePartners.length - 4}
+                      </span>
+                    )}
+                  </div>
+                )}
               </div>
             </Card>
           ))}
@@ -103,132 +141,139 @@ const TreatmentAreas: React.FC = () => {
             onClick={() => setShowModal(true)}
             className="inline-flex items-center gap-2 px-8 py-3 border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-white transition-colors"
           >
-            View All Hospitals
+            {t('treatments.viewAll')}
             <ExternalLink className="w-4 h-4" />
           </button>
         </div>
 
-        {/* Trust Indicator */}
-        <div className="mt-16 bg-gray-50 rounded-2xl p-8 text-center">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <Shield className="w-6 h-6 text-accent" />
-            <span className="font-semibold text-primary">All Partner Hospitals</span>
-          </div>
-          <p className="text-gray-600">
-            Every hospital in our network is verified, accredited, and
-            equipped with English-speaking staff and international patient
-            services.
-          </p>
-        </div>
-      </div>
+        {/* Modal for All Hospitals */}
+        {showModal && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+            {/* Backdrop */}
+            <div
+              className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+              onClick={() => setShowModal(false)}
+            />
 
-      {/* Modal for All Hospitals */}
-      {showModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-          {/* Backdrop */}
-          <div
-            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
-            onClick={() => setShowModal(false)}
-          />
-
-          {/* Modal Content */}
-          <div className="relative bg-white rounded-2xl shadow-2xl max-w-5xl w-full max-h-[85vh] overflow-hidden">
-            {/* Header */}
-            <div className="flex items-center justify-between p-6 border-b">
-              <div>
-                <h3 className="text-xl font-bold text-gray-900">All Hospitals</h3>
-                <p className="text-sm text-gray-500 mt-1">
-                  {hospitals.length} hospitals available
-                </p>
-              </div>
-              <button
-                onClick={() => setShowModal(false)}
-                className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
-                aria-label="Close modal"
-              >
-                <X className="w-5 h-5 text-gray-600" />
-              </button>
-            </div>
-
-            {/* Filter Tabs */}
-            <div className="flex flex-wrap gap-2 p-4 border-b">
-              {[
-                { key: 'all', label: 'All Hospitals' },
-                { key: 'tier1', label: 'Public Grade-A' },
-                { key: 'tier2', label: 'International Private' },
-              ].map((tab) => (
+            {/* Modal Content */}
+            <div className="relative bg-white rounded-2xl shadow-2xl max-w-5xl w-full max-h-[85vh] overflow-hidden">
+              {/* Header */}
+              <div className="flex items-center justify-between p-6 border-b">
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900">All Hospitals</h3>
+                  <p className="text-sm text-gray-500 mt-1">
+                    {allHospitals.length} hospitals available
+                  </p>
+                </div>
                 <button
-                  key={tab.key}
-                  onClick={() => setActiveTier(tab.key as typeof activeTier)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-                    activeTier === tab.key
-                      ? 'bg-primary text-white'
-                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                  }`}
+                  onClick={() => setShowModal(false)}
+                  className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                  aria-label="Close modal"
                 >
-                  {tab.label}
+                  <X className="w-5 h-5 text-gray-600" />
                 </button>
-              ))}
-            </div>
+              </div>
 
-            {/* Hospital List */}
-            <div className="p-4 overflow-y-auto max-h-[60vh]">
-              <div className="grid md:grid-cols-2 gap-4">
-                {hospitals.map((hospital) => (
-                  <Card
-                    key={hospital.id}
-                    className="overflow-hidden flex gap-4 p-4 cursor-pointer hover:bg-gray-50 transition-colors"
-                    onClick={() => handleHospitalClick(hospital)}
+              {/* Filter Tabs */}
+              <div className="flex flex-wrap gap-2 p-4 border-b">
+                {[
+                  { key: 'all', label: 'All Hospitals' },
+                  { key: 'tier1', label: 'Public Grade-A' },
+                  { key: 'tier2', label: 'International Private' },
+                ].map((tab) => (
+                  <button
+                    key={tab.key}
+                    onClick={() => setActiveTier(tab.key as typeof activeTier)}
+                    className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                      activeTier === tab.key
+                        ? 'bg-primary text-white'
+                        : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                    }`}
                   >
-                    <div className="relative w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden">
-                      <Image
-                        src={hospital.image}
-                        alt={hospital.name}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-start justify-between gap-2 mb-1">
-                        <h4 className="font-bold text-gray-900 truncate">
-                          {hospital.name}
-                        </h4>
-                        <Badge variant="info" className="flex-shrink-0">
-                          {tierLabels[hospital.tier]}
-                        </Badge>
-                      </div>
-                      <div className="flex flex-wrap gap-1 mb-2">
-                        {hospital.specialties.slice(0, 3).map((specialty, idx) => (
-                          <span
-                            key={idx}
-                            className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded"
-                          >
-                            {specialty}
-                          </span>
-                        ))}
-                      </div>
-                      <div className="flex items-center gap-2 text-xs text-gray-500">
-                        <Award className="w-3 h-3" />
-                        <span>{hospital.insuranceStatus}</span>
-                      </div>
-                    </div>
-                  </Card>
+                    {tab.label}
+                  </button>
                 ))}
               </div>
-            </div>
 
-            {/* Footer */}
-            <div className="p-4 border-t bg-gray-50">
-              <button
-                onClick={() => setShowModal(false)}
-                className="w-full py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-600 transition-colors"
-              >
-                Close
-              </button>
+              {/* Hospital List */}
+              <div className="p-4 overflow-y-auto max-h-[60vh]">
+                <div className="grid md:grid-cols-2 gap-4">
+                  {hospitals.map((hospital) => (
+                    <Card
+                      key={hospital.id}
+                      className="overflow-hidden flex gap-4 p-4 cursor-pointer hover:bg-gray-50 transition-colors"
+                      onClick={() => handleHospitalClick(hospital)}
+                    >
+                      <div className="relative w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden">
+                        <Image
+                          src={hospital.image}
+                          alt={hospital.name}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-start justify-between gap-2 mb-1">
+                          <h4 className="font-bold text-gray-900 truncate">
+                            {hospital.name}
+                          </h4>
+                          <Badge variant="info" className="flex-shrink-0">
+                            {tierLabels[hospital.tier]}
+                          </Badge>
+                        </div>
+                        {/* Specialties */}
+                        <div className="flex flex-wrap gap-1 mb-2">
+                          {hospital.specialties.slice(0, 3).map((specialty, idx) => (
+                            <span
+                              key={idx}
+                              className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded"
+                            >
+                              {specialty}
+                            </span>
+                          ))}
+                        </div>
+                        {/* Certifications */}
+                        {hospital.certifications.length > 0 && (
+                          <div className="flex flex-wrap gap-1 mb-2">
+                            {hospital.certifications.map((cert, idx) => (
+                              <span
+                                key={idx}
+                                className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded flex items-center gap-1"
+                              >
+                                <Shield className="w-3 h-3" />
+                                {cert}
+                              </span>
+                            ))}
+                          </div>
+                        )}
+                        {/* Insurance Partners */}
+                        {hospital.insurancePartners.length > 0 && (
+                          <div className="flex flex-wrap gap-1">
+                            <span className="text-xs text-gray-500 mr-1">Ins:</span>
+                            {hospital.insurancePartners.slice(0, 4).map((insurance, idx) => (
+                              <span
+                                key={idx}
+                                className="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded"
+                              >
+                                {insurance}
+                              </span>
+                            ))}
+                            {hospital.insurancePartners.length > 4 && (
+                              <span className="text-xs text-gray-400">
+                                +{hospital.insurancePartners.length - 4}
+                              </span>
+                            )}
+                          </div>
+                        )}
+                      </div>
+                    </Card>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </section>
   )
 }

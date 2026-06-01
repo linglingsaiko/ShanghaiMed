@@ -4,8 +4,10 @@ import React from 'react'
 import { MessageSquare, Users, Plane, Heart } from 'lucide-react'
 import Card from '../ui/Card'
 import { processSteps } from '@/lib/constants'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const HowItWorks: React.FC = () => {
+  const { t } = useLanguage()
   const iconMap: Record<string, React.ElementType> = {
     MessageSquare,
     Users,
@@ -19,14 +21,13 @@ const HowItWorks: React.FC = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-accent font-semibold text-sm tracking-wider uppercase">
-            Simple Process
+            {t('howItWorks.simpleProcess')}
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mt-4 mb-6">
-            How It Works
+            {t('howItWorks.title')}
           </h2>
           <p className="text-gray-600 text-lg">
-            From your first inquiry to full recovery, we guide you through
-            every step of your medical tourism in Shanghai.
+            {t('howItWorks.subtitle')}
           </p>
         </div>
 
@@ -69,7 +70,7 @@ const HowItWorks: React.FC = () => {
             href="#contact"
             className="inline-flex items-center gap-2 bg-accent text-white px-8 py-4 rounded-full font-semibold hover:bg-accent-600 transition-colors shadow-lg hover:shadow-xl"
           >
-            Start Your Medical Tourism Today
+            {t('contact.cta')}
             <svg
               className="w-5 h-5"
               fill="none"

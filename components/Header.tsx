@@ -4,7 +4,6 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 import { navLinks } from '@/lib/constants'
-import LanguageSwitcher from './LanguageSwitcher'
 
 const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -31,12 +30,10 @@ const Header: React.FC = () => {
                 {link.label}
               </Link>
             ))}
-            <LanguageSwitcher />
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="lg:hidden flex items-center gap-2">
-            <LanguageSwitcher />
+          <div className="lg:hidden">
             <button
               className="p-2 text-gray-600 hover:text-primary"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

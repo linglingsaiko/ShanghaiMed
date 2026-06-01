@@ -1,16 +1,23 @@
 'use client'
 
 import React from 'react'
-import { CheckCircle, Stethoscope, Bed, Languages, Heart } from 'lucide-react'
+import { CheckCircle, Stethoscope, Bed, Languages, Heart, Clipboard, Calendar, Map, FileText, Phone } from 'lucide-react'
 import Card from '../ui/Card'
 import Badge from '../ui/Badge'
 import { nurseServices, nurseCredentials } from '@/lib/constants'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const CareTeam: React.FC = () => {
+  const { t } = useLanguage()
   const iconMap: Record<string, React.ElementType> = {
+    Clipboard,
+    Calendar,
+    Languages,
+    Map,
+    FileText,
+    Phone,
     Stethoscope,
     Bed,
-    Languages,
     Heart,
   }
 
@@ -20,14 +27,13 @@ const CareTeam: React.FC = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-accent font-semibold text-sm tracking-wider uppercase">
-            Expert Care Team
+            {t('careTeam.expertTeam')}
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mt-4 mb-6">
-            Bilingual Registered Nurses
+            {t('careTeam.title')}
           </h2>
           <p className="text-gray-600 text-lg">
-            Your dedicated healthcare companions throughout every step of your
-            medical journey in Shanghai.
+            {t('careTeam.subtitle')}
           </p>
         </div>
 
@@ -41,10 +47,10 @@ const CareTeam: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-primary">
-                    ISPN Certified
+                    {t('careTeam.ispnCertified')}
                   </h3>
                   <p className="text-sm text-gray-500">
-                    International Standards of Nursing
+                    {t('careTeam.ispnDesc')}
                   </p>
                 </div>
               </div>
@@ -59,7 +65,12 @@ const CareTeam: React.FC = () => {
                 {nurseCredentials.map((credential, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">{credential}</span>
+                    <div>
+                      <span className="text-gray-700 font-medium">{credential.name}</span>
+                      {credential.detail && (
+                        <p className="text-sm text-gray-500">{credential.detail}</p>
+                      )}
+                    </div>
                   </li>
                 ))}
               </ul>

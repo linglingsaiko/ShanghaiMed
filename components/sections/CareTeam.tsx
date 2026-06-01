@@ -15,7 +15,7 @@ const CareTeam: React.FC = () => {
   }
 
   return (
-    <section className="py-20 lg:py-28 bg-gray-50">
+    <section id="care-team" className="py-20 lg:py-28 bg-gray-50">
       <div className="section-container">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -23,7 +23,7 @@ const CareTeam: React.FC = () => {
             Expert Care Team
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mt-4 mb-6">
-            ISPN-Certified Bilingual Nurses
+            Bilingual Registered Nurses
           </h2>
           <p className="text-gray-600 text-lg">
             Your dedicated healthcare companions throughout every step of your
@@ -65,19 +65,6 @@ const CareTeam: React.FC = () => {
               </ul>
             </Card>
 
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-4">
-              {[
-                { value: '500+', label: 'Active Nurses' },
-                { value: '15+', label: 'Languages' },
-                { value: '24/7', label: 'Availability' },
-              ].map((stat, index) => (
-                <div key={index} className="bg-white rounded-xl p-4 text-center shadow-sm">
-                  <div className="text-2xl font-bold text-primary">{stat.value}</div>
-                  <div className="text-xs text-gray-500 mt-1">{stat.label}</div>
-                </div>
-              ))}
-            </div>
           </div>
 
           {/* Right Column - Services */}
@@ -96,37 +83,14 @@ const CareTeam: React.FC = () => {
                     <h4 className="font-semibold text-primary mb-2">
                       {service.title}
                     </h4>
-                    <p className="text-sm text-gray-600 mb-4">
+                    <p className="text-sm text-gray-600">
                       {service.description}
                     </p>
-                    <Badge variant="success">{service.price}</Badge>
                   </Card>
                 )
               })}
             </div>
 
-            {/* CTA Card */}
-            <Card className="mt-6 p-6 bg-primary">
-              <div className="flex items-center gap-4">
-                <div className="w-14 h-14 bg-accent rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Heart className="w-7 h-7 text-white" />
-                </div>
-                <div className="flex-1">
-                  <h4 className="font-semibold text-white mb-1">
-                    Need Nurse Services?
-                  </h4>
-                  <p className="text-sm text-gray-300">
-                    Add nursing accompaniment to any hospital visit
-                  </p>
-                </div>
-                <a
-                  href="/contact"
-                  className="px-4 py-2 bg-accent text-white rounded-lg font-medium hover:bg-accent-600 transition-colors whitespace-nowrap"
-                >
-                  Book Now
-                </a>
-              </div>
-            </Card>
           </div>
         </div>
       </div>

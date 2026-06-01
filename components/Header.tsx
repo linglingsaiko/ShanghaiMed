@@ -3,8 +3,8 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
-import Button from './ui/Button'
 import { navLinks } from '@/lib/constants'
+import LanguageSwitcher from './LanguageSwitcher'
 
 const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -31,27 +31,24 @@ const Header: React.FC = () => {
                 {link.label}
               </Link>
             ))}
-          </div>
-
-          {/* Desktop CTA */}
-          <div className="hidden lg:block">
-            <Button href="/contact" size="sm">
-              Get Consultation
-            </Button>
+            <LanguageSwitcher />
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden p-2 text-gray-600 hover:text-primary"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {mobileMenuOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
-          </button>
+          <div className="lg:hidden flex items-center gap-2">
+            <LanguageSwitcher />
+            <button
+              className="p-2 text-gray-600 hover:text-primary"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
@@ -68,11 +65,6 @@ const Header: React.FC = () => {
                   {link.label}
                 </Link>
               ))}
-              <div className="pt-4 border-t border-gray-100">
-                <Button href="/contact" className="w-full">
-                  Get Consultation
-                </Button>
-              </div>
             </div>
           </div>
         )}

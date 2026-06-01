@@ -1,120 +1,74 @@
 'use client'
 
 import React from 'react'
-import { Quote, Star, Flag } from 'lucide-react'
+import { Shield, Users, FileText, Headphones } from 'lucide-react'
 import Card from '../ui/Card'
-import Badge from '../ui/Badge'
-import { patientStories } from '@/lib/constants'
+import Button from '../ui/Button'
+import { trustPillars } from '@/lib/constants'
 
-const PatientStories: React.FC = () => {
+const TrustSection: React.FC = () => {
+  const iconMap: Record<string, React.ElementType> = {
+    Shield,
+    Users,
+    FileText,
+    Headphones,
+  }
+
   return (
-    <section className="py-20 lg:py-28 bg-white">
+    <section id="trust" className="py-20 lg:py-28 bg-gray-50">
       <div className="section-container">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-accent font-semibold text-sm tracking-wider uppercase">
-            Patient Stories
+            Why Choose Us
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mt-4 mb-6">
-            Real Experiences, Real Results
+            Your Trusted Medical Tourism Partner
           </h2>
           <p className="text-gray-600 text-lg">
-            Hear from international patients who chose Shanghai for their
-            medical care and transformed their health journey.
+            We provide professional, transparent, and reliable medical tourism
+            services in Shanghai. Here&apos;s what sets us apart.
           </p>
         </div>
 
-        {/* Stories Grid */}
+        {/* Trust Pillars Grid */}
         <div className="grid md:grid-cols-2 gap-8 mb-12">
-          {patientStories.map((story) => (
-            <Card key={story.id} className="p-8 relative overflow-hidden">
-              {/* Quote Icon */}
-              <div className="absolute top-6 right-6 text-accent/20">
-                <Quote className="w-16 h-16" />
-              </div>
-
-              {/* Header */}
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-14 h-14 bg-gradient-to-br from-accent to-accent-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
-                  {story.name.charAt(0)}
-                </div>
-                <div>
-                  <h3 className="font-semibold text-primary">{story.name}</h3>
-                  <div className="flex items-center gap-2 text-sm text-gray-500">
-                    <Flag className="w-3 h-3" />
-                    <span>{story.nationality}</span>
+          {trustPillars.map((pillar, index) => {
+            const Icon = iconMap[pillar.icon]
+            return (
+              <Card key={index} className="p-8">
+                <div className="flex items-start gap-5">
+                  <div className="w-14 h-14 bg-accent-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Icon className="w-7 h-7 text-accent" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-primary mb-4">
+                      {pillar.title}
+                    </h3>
+                    <ul className="space-y-3">
+                      {pillar.items.map((item, itemIndex) => (
+                        <li key={itemIndex} className="flex items-start gap-3">
+                          <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0"></span>
+                          <span className="text-gray-600">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
-              </div>
-
-              {/* Title */}
-              <h4 className="text-xl font-bold text-primary mb-4">
-                &ldquo;{story.title}&rdquo;
-              </h4>
-
-              {/* Content */}
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                {story.content}
-              </p>
-
-              {/* Tags */}
-              <div className="flex flex-wrap gap-2">
-                {story.tags.map((tag, index) => (
-                  <Badge key={index} variant="default">
-                    {tag}
-                  </Badge>
-                ))}
-              </div>
-
-              {/* Quote Footer */}
-              <div className="mt-6 pt-6 border-t border-gray-100 flex items-center gap-2 text-accent">
-                <Star className="w-4 h-4 fill-current" />
-                <span className="text-sm font-medium">
-                  Verified Patient Experience
-                </span>
-              </div>
-            </Card>
-          ))}
-        </div>
-
-        {/* Statistics */}
-        <div className="bg-gray-50 rounded-2xl p-8 lg:p-12">
-          <div className="grid sm:grid-cols-3 gap-8 text-center">
-            {[
-              { value: '5,000+', label: 'International Patients Served' },
-              { value: '98%', label: 'Patient Satisfaction Rate' },
-              { value: '4.9/5', label: 'Average Rating' },
-            ].map((stat, index) => (
-              <div key={index}>
-                <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">
-                  {stat.value}
-                </div>
-                <div className="flex items-center justify-center gap-1 text-gray-600">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="w-4 h-4 text-accent fill-current"
-                    />
-                  ))}
-                  <span className="ml-2">{stat.label}</span>
-                </div>
-              </div>
-            ))}
-          </div>
+              </Card>
+            )
+          })}
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-12">
+        <div className="text-center">
           <p className="text-gray-600 mb-4">
-            Ready to write your own success story?
+            Ready to experience professional medical tourism services?
           </p>
-          <a
-            href="/contact"
-            className="inline-flex items-center gap-2 bg-accent text-white px-8 py-4 rounded-full font-semibold hover:bg-accent-600 transition-colors shadow-lg hover:shadow-xl"
-          >
-            Start Your Journey
+          <Button href="#contact" size="lg" className="group">
+            Start Your Medical Tourism
             <svg
-              className="w-5 h-5"
+              className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -126,11 +80,11 @@ const PatientStories: React.FC = () => {
                 d="M17 8l4 4m0 0l-4 4m4-4H3"
               />
             </svg>
-          </a>
+          </Button>
         </div>
       </div>
     </section>
   )
 }
 
-export default PatientStories
+export default TrustSection

@@ -77,18 +77,14 @@ const FAQ: React.FC = () => {
             Our team is available 24/7 to help you with any questions about
             your medical journey.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <a
-              href="/contact"
+              href="https://wa.me/+8613818274110"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-6 py-3 bg-accent text-white rounded-lg font-semibold hover:bg-accent-600 transition-colors"
             >
-              Contact Us
-            </a>
-            <a
-              href="#"
-              className="px-6 py-3 bg-white/10 text-white rounded-lg font-semibold hover:bg-white/20 transition-colors"
-            >
-              Chat with Us
+              Contact Us on WhatsApp
             </a>
           </div>
         </Card>

@@ -3,13 +3,13 @@
 import React from 'react'
 import { TrendingDown, Globe, Award, Clock, Building2 } from 'lucide-react'
 import Card from '../ui/Card'
-import { statistics, costComparison } from '@/lib/constants'
+import { statistics, priceReference } from '@/lib/constants'
 
 const WhyShanghai: React.FC = () => {
   const statIcons = [Building2, Globe, Award, Globe, Clock]
 
   return (
-    <section className="py-20 lg:py-28 bg-white">
+    <section id="why-shanghai" className="py-20 lg:py-28 bg-white">
       <div className="section-container">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -118,7 +118,7 @@ const WhyShanghai: React.FC = () => {
           </Card>
         </div>
 
-        {/* Cost Comparison */}
+        {/* Price Reference Table */}
         <div className="bg-gray-50 rounded-2xl p-8 lg:p-12">
           <div className="flex items-center gap-3 mb-8">
             <div className="w-12 h-12 bg-accent rounded-xl flex items-center justify-center">
@@ -126,32 +126,46 @@ const WhyShanghai: React.FC = () => {
             </div>
             <div>
               <h3 className="text-2xl font-bold text-primary">
-                Dramatic Cost Savings
+                Reference Pricing
               </h3>
-              <p className="text-gray-600">Same quality, fraction of the cost</p>
+              <p className="text-gray-600">Transparent costs at pilot hospitals</p>
             </div>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {costComparison.map((item, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-xl p-6 shadow-sm text-center"
-              >
-                <p className="text-gray-500 mb-2">{item.procedure}</p>
-                <div className="flex items-baseline justify-center gap-2 mb-3">
-                  <span className="text-2xl font-bold text-primary line-through">
-                    {item.usCost}
-                  </span>
-                  <span className="text-3xl font-bold text-accent">
-                    {item.shanghaiCost}
-                  </span>
-                </div>
-                <span className="inline-block bg-accent-50 text-accent px-3 py-1 rounded-full text-sm font-semibold">
-                  Save {item.savings}
-                </span>
-              </div>
-            ))}
+          {/* Price Disclaimer */}
+          <div className="bg-accent-50 border border-accent/20 rounded-lg p-4 mb-6">
+            <p className="text-sm text-gray-700">
+              <strong>Reference prices at government-accredited pilot hospitals&apos; international departments.</strong>
+            </p>
+            <ul className="text-xs text-gray-600 mt-2 space-y-1">
+              <li>• All prices are for reference only. Actual charges are determined by the hospital.</li>
+              <li>• Exchange rate for reference only. Actual rate at time of payment applies.</li>
+              <li>• Complex treatment costs (surgery, chemotherapy, etc.) require personalized quotation.</li>
+            </ul>
+          </div>
+
+          {/* Price Table */}
+          <div className="overflow-x-auto">
+            <table className="w-full">
+              <thead>
+                <tr className="border-b border-gray-200">
+                  <th className="text-left py-3 px-4 text-sm font-semibold text-gray-700">Service / Treatment</th>
+                  <th className="text-center py-3 px-4 text-sm font-semibold text-gray-700">RMB Price</th>
+                  <th className="text-center py-3 px-4 text-sm font-semibold text-gray-700">USD Estimate</th>
+                  <th className="text-left py-3 px-4 text-sm font-semibold text-gray-700 hidden md:table-cell">Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                {priceReference.map((item, index) => (
+                  <tr key={index} className="border-b border-gray-100 hover:bg-white transition-colors">
+                    <td className="py-4 px-4 font-medium text-primary">{item.item}</td>
+                    <td className="py-4 px-4 text-center font-semibold text-accent">{item.priceRMB}</td>
+                    <td className="py-4 px-4 text-center text-gray-600">{item.priceUSD}</td>
+                    <td className="py-4 px-4 text-sm text-gray-500 hidden md:table-cell">{item.note}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </div>

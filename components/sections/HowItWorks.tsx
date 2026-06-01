@@ -14,7 +14,7 @@ const HowItWorks: React.FC = () => {
   }
 
   return (
-    <section className="py-20 lg:py-28 bg-gray-50">
+    <section id="how-it-works" className="py-20 lg:py-28 bg-gray-50">
       <div className="section-container">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -26,7 +26,7 @@ const HowItWorks: React.FC = () => {
           </h2>
           <p className="text-gray-600 text-lg">
             From your first inquiry to full recovery, we guide you through
-            every step of your medical journey in Shanghai.
+            every step of your medical tourism in Shanghai.
           </p>
         </div>
 
@@ -66,10 +66,10 @@ const HowItWorks: React.FC = () => {
         {/* CTA */}
         <div className="text-center mt-16">
           <a
-            href="/contact"
+            href="#contact"
             className="inline-flex items-center gap-2 bg-accent text-white px-8 py-4 rounded-full font-semibold hover:bg-accent-600 transition-colors shadow-lg hover:shadow-xl"
           >
-            Start Your Journey Today
+            Start Your Medical Tourism Today
             <svg
               className="w-5 h-5"
               fill="none"

@@ -3,7 +3,7 @@ import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import WhatsAppFloat from '@/components/WhatsAppFloat'
-import AgentChat from '@/components/AgentChat'
+import { LanguageProvider } from '@/contexts/LanguageContext'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://shanghaimed.com'),
@@ -69,11 +69,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
-        <Header />
-        <main>{children}</main>
-        <Footer />
-        <WhatsAppFloat />
-        <AgentChat />
+        <LanguageProvider>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+          <WhatsAppFloat />
+        </LanguageProvider>
         
         {/* JSON-LD Structured Data */}
         <script
@@ -127,6 +128,33 @@ export default function RootLayout({
                 ],
               },
             }),
+          }}
+        />
+
+        {/* Coze Chat SDK */}
+        <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.19/libs/cn/index.js"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              var token = '${process.env.NEXT_PUBLIC_COZE_TOKEN || ''}';
+              new CozeWebSDK.WebChatClient({
+                config: {
+                  bot_id: '7641560175996059663',
+                },
+                componentProps: {
+                  title: 'Coze',
+                  placeholder: 'Send a message...',
+                  thinkingBoxVisible: false,
+                },
+                auth: {
+                  type: 'token',
+                  token: token,
+                  onRefreshToken: function() {
+                    return token;
+                  }
+                }
+              });
+            `
           }}
         />
       </body>

@@ -2,74 +2,145 @@
 export interface Hospital {
   id: string
   name: string
-  tier: 'tier1' | 'tier2' | 'tier3'
+  tier: 'tier1' | 'tier2'
   specialties: string[]
   internationalFeatures: string
   insuranceStatus: string
   description: string
+  image: string
 }
 
-// Tier 1 - Public Grade-A International Departments
+// Tier 1 - 13 Public Grade-A Medical Tourism Pilot Hospitals
 export const tier1Hospitals: Hospital[] = [
   {
-    id: 'huashan',
-    name: 'Huashan Hospital',
+    id: 'xinhua',
+    name: 'Xinhua Hospital (SJTU)',
     tier: 'tier1',
-    specialties: ['Neurology #1', 'Dermatology #1', 'Infectious Disease #1'],
-    internationalFeatures: '~100 international insurance direct payment',
+    specialties: ['Spine Surgery', 'Pediatric Surgery', 'Ophthalmology', 'Fetal Medicine'],
+    internationalFeatures: 'Comprehensive international department',
+    insuranceStatus: 'International Insurance',
+    description: 'Leading spine surgery and pediatric surgery center with full international services.',
+    image: 'https://picsum.photos/seed/xinhua/800/600',
+  },
+  {
+    id: 'children-fudan',
+    name: 'Children\'s Hospital (Fudan University)',
+    tier: 'tier1',
+    specialties: ['Neonatology', 'Stem Cell Transplant', 'Genetic Diseases', 'Pediatric Rare Diseases'],
+    internationalFeatures: 'International pediatric department since 1993',
     insuranceStatus: 'Direct Settlement',
-    description:
-      'Fudan University affiliated. Ranked #1 in neurology, dermatology, and infectious disease nationwide. Serving 600,000+ international patients from 100+ countries.',
+    description: 'Leading center for neonatal care and pediatric rare diseases.',
+    image: 'https://picsum.photos/seed/children/800/600',
   },
   {
     id: 'ruijin',
-    name: 'Ruijin Hospital',
+    name: 'Ruijin Hospital (SJTU)',
     tier: 'tier1',
-    specialties: ['Hematology #1', 'CAR-T Therapy'],
-    internationalFeatures: '95.7% CAR-T remission rate',
+    specialties: ['Hematology #1', 'Endocrinology', 'Cardiac Surgery', 'Minimally Invasive Surgery'],
+    internationalFeatures: '95.7% CAR-T remission rate, dedicated international ward',
     insuranceStatus: 'Direct Settlement',
-    description:
-      'Shanghai Jiao Tong University affiliated. Pioneer in bone marrow transplantation and CAR-T therapy. Discharged with direct insurance billing.',
+    description: 'Pioneer in bone marrow transplantation and CAR-T therapy with world-leading outcomes.',
+    image: 'https://picsum.photos/seed/ruijin/800/600',
   },
   {
-    id: 'renji',
-    name: 'Renji Hospital',
+    id: 'huashan',
+    name: 'Huashan Hospital (Fudan University)',
     tier: 'tier1',
-    specialties: ['Gastroenterology #1 (4 years)', 'Liver Transplants'],
-    internationalFeatures: 'UK HarleyDoc cross-border partnership',
+    specialties: ['Dermatology #1', 'Neurosurgery', 'Hand Surgery', 'Infectious Disease', 'Rehabilitation'],
+    internationalFeatures: 'Dedicated international department, 100+ insurance direct payment',
+    insuranceStatus: 'Direct Settlement',
+    description: 'Ranked #1 in dermatology and neurosurgery nationwide. One of China\'s most internationally recognized hospitals.',
+    image: 'https://picsum.photos/seed/huashan/800/600',
+  },
+  {
+    id: 'shanghai-general',
+    name: 'Shanghai General Hospital',
+    tier: 'tier1',
+    specialties: ['Ophthalmology', 'Urology', 'Cardiovascular Medicine'],
+    internationalFeatures: 'International patient center with multilingual staff',
     insuranceStatus: 'International Insurance',
-    description:
-      '连续4年全国消化科第一. Strategic partnership with UK HarleyDoc for seamless cross-border patient referrals.',
+    description: 'One of Shanghai\'s oldest and most prestigious hospitals. Leading ophthalmology and urology departments.',
+    image: 'https://picsum.photos/seed/general/800/600',
   },
   {
     id: 'zhongshan',
-    name: 'Zhongshan Hospital',
+    name: 'Zhongshan Hospital (Fudan University)',
     tier: 'tier1',
-    specialties: ['Cardiology #2', 'Interventional Cardiology'],
-    internationalFeatures: 'Dedicated international building',
+    specialties: ['Cardiac Surgery', 'Liver Cancer', 'Gastroenterology', 'Respiratory'],
+    internationalFeatures: 'Independent international patient building',
     insuranceStatus: 'International Insurance',
-    description:
-      'Fudan University affiliated. Cardiovascular center with independent international patient building and dedicated English-speaking staff.',
+    description: 'Fudan University affiliated. Cardiovascular center with independent international patient building and dedicated English-speaking staff.',
+    image: 'https://picsum.photos/seed/zhongshan/800/600',
   },
   {
-    id: 'jiuyuan',
-    name: 'Shanghai Ninth People\'s Hospital',
+    id: 'renji',
+    name: 'Renji Hospital (SJTU)',
     tier: 'tier1',
-    specialties: ['Stomatology #1', 'Plastic Surgery #1'],
-    internationalFeatures: 'Maxillofacial surgery excellence',
-    insuranceStatus: 'Direct Settlement',
-    description:
-      'Leading center for dental implants, cosmetic surgery, and complex maxillofacial procedures. High volume international patient experience.',
+    specialties: ['Reproductive Medicine', 'Gastroenterology', 'Rheumatology', 'Liver Transplant'],
+    internationalFeatures: 'International reproductive medicine center',
+    insuranceStatus: 'International Insurance',
+    description: 'Shanghai Jiao Tong University affiliated. #1 gastroenterology nationwide for 4 consecutive years. Leading liver transplant center.',
+    image: 'https://picsum.photos/seed/renji/800/600',
   },
   {
-    id: 'children',
-    name: 'Children\'s Hospital of Fudan University',
+    id: 'longhua',
+    name: 'Longhua Hospital (Shanghai Univ. of TCM)',
     tier: 'tier1',
-    specialties: ['Pediatrics', 'Pediatric Surgery'],
-    internationalFeatures: 'International pediatric department since 1993',
-    insuranceStatus: 'Direct Settlement',
-    description:
-      'Established dedicated international pediatric department in 1993. Comprehensive children\'s healthcare with multilingual support.',
+    specialties: ['TCM Oncology', 'TCM Orthopedics', 'TCM Rheumatology'],
+    internationalFeatures: 'Official TCM medical tourism pilot hospital',
+    insuranceStatus: 'International Insurance',
+    description: 'Premier Traditional Chinese Medicine hospital. Official pilot for TCM medical tourism. Acupuncture, herbal therapy, and TCM rehabilitation.',
+    image: 'https://picsum.photos/seed/longhua/800/600',
+  },
+  {
+    id: 'ipmch',
+    name: 'International Peace Maternity & Child Health Hospital',
+    tier: 'tier1',
+    specialties: ['Obstetrics', 'Reproductive Medicine', 'Fetal Medicine'],
+    internationalFeatures: 'China Welfare Institute affiliated, international maternity care',
+    insuranceStatus: 'International Insurance',
+    description: 'Affiliated with China Welfare Institute. Leading center for high-risk pregnancy, fetal medicine, and reproductive medicine.',
+    image: 'https://picsum.photos/seed/ipmch/800/600',
+  },
+  {
+    id: 'scmc',
+    name: 'Shanghai Children\'s Medical Center (SJTU)',
+    tier: 'tier1',
+    specialties: ['Pediatric Oncology', 'Cardiac Surgery', 'Hematology'],
+    internationalFeatures: 'Partnership with Project HOPE, international pediatric center',
+    insuranceStatus: 'International Insurance',
+    description: 'Shanghai Jiao Tong University affiliated. Top pediatric cardiac surgery center in China. Partnership with Project HOPE.',
+    image: 'https://picsum.photos/seed/scmc/800/600',
+  },
+  {
+    id: 'sixth',
+    name: 'Shanghai Sixth People\'s Hospital',
+    tier: 'tier1',
+    specialties: ['Orthopedics (Limb Replantation Pioneer)', 'Endocrinology', 'Ultrasound'],
+    internationalFeatures: 'World\'s first limb replantation center',
+    insuranceStatus: 'International Insurance',
+    description: 'Pioneer in limb replantation surgery since 1963. Leading orthopedics and endocrinology center with international recognition.',
+    image: 'https://picsum.photos/seed/sixth/800/600',
+  },
+  {
+    id: 'first-maternity',
+    name: 'Shanghai First Maternity & Infant Hospital',
+    tier: 'tier1',
+    specialties: ['Obstetrics', 'Neonatology', 'Reproductive Medicine'],
+    internationalFeatures: 'Dedicated international maternity services',
+    insuranceStatus: 'International Insurance',
+    description: 'Shanghai\'s premier maternity hospital. Comprehensive obstetric and neonatal care with international patient support.',
+    image: 'https://picsum.photos/seed/maternity/800/600',
+  },
+  {
+    id: 'huadong',
+    name: 'Huadong Hospital (Fudan University)',
+    tier: 'tier1',
+    specialties: ['Geriatric Medicine', 'Rehabilitation Medicine'],
+    internationalFeatures: 'Executive health screening center, international rehabilitation',
+    insuranceStatus: 'International Insurance',
+    description: 'Fudan University affiliated. Premier geriatric medicine and rehabilitation center. Popular for executive health screening programs.',
+    image: 'https://picsum.photos/seed/huadong/800/600',
   },
 ]
 
@@ -84,6 +155,7 @@ export const tier2Hospitals: Hospital[] = [
     insuranceStatus: '50+ International Insurance',
     description:
       'Largest private international hospital in Shanghai with 500 beds. Affiliated with Massachusetts General Hospital. Full-service medical center.',
+    image: 'https://picsum.photos/seed/jiahui/800/600',
   },
   {
     id: 'unicare',
@@ -94,16 +166,18 @@ export const tier2Hospitals: Hospital[] = [
     insuranceStatus: '50+ International Insurance',
     description:
       'Part of Chindex Healthcare. Comprehensive healthcare services with western-style patient care and international standards.',
+    image: 'https://picsum.photos/seed/unicare/800/600',
   },
   {
-    id: 'shine',
-    name: 'Shine Healthcare',
+    id: 'sinounited',
+    name: 'SinoUnited Health',
     tier: 'tier2',
-    specialties: ['Multi-specialty', 'Mayo Clinic Network'],
-    internationalFeatures: '8 clinic locations, Mayo Clinic network',
+    specialties: ['Multi-specialty', 'Premium Care'],
+    internationalFeatures: '8 locations, international standards',
     insuranceStatus: 'Direct Settlement',
     description:
-      '8 locations across Shanghai with Mayo Clinic Care Network membership. Comprehensive outpatient and inpatient services.',
+      'Leading premium healthcare provider with 8 locations across Shanghai. Comprehensive outpatient and inpatient services with international standards.',
+    image: 'https://picsum.photos/seed/sinounited/800/600',
   },
   {
     id: 'parkway',
@@ -114,6 +188,7 @@ export const tier2Hospitals: Hospital[] = [
     insuranceStatus: 'Prudential Direct Payment',
     description:
       'Part of IHH Healthcare, one of the world\'s largest healthcare groups. Strong insurance network including Prudential direct settlement.',
+    image: 'https://picsum.photos/seed/parkway/800/600',
   },
   {
     id: 'raffles',
@@ -124,44 +199,20 @@ export const tier2Hospitals: Hospital[] = [
     insuranceStatus: 'International Insurance',
     description:
       'Part of Singapore-based Surbana Jurong group. Focus on medical tourism with comprehensive health screening services.',
-  },
-]
-
-// Tier 3 - Specialized Centers
-export const tier3Hospitals: Hospital[] = [
-  {
-    id: 'proton',
-    name: 'Shanghai Proton Center',
-    tier: 'tier3',
-    specialties: ['Proton Therapy', 'Heavy Ion Therapy'],
-    internationalFeatures: 'One of few proton-heavy ion centers globally',
-    insuranceStatus: 'Limited Insurance',
-    description:
-      'State-of-the-art proton and carbon ion therapy center. Among the few facilities worldwide offering both treatment modalities.',
-  },
-  {
-    id: 'cancer',
-    name: 'Meizhong Jiahe Cancer Center',
-    tier: 'tier3',
-    specialties: ['Oncology', 'Precision Medicine'],
-    internationalFeatures: 'MD Anderson collaboration',
-    insuranceStatus: 'International Insurance',
-    description:
-      'Comprehensive cancer center with MD Anderson Cancer Center collaboration. Focus on precision oncology and international patient care.',
+    image: 'https://picsum.photos/seed/raffles/800/600',
   },
 ]
 
 // Export all hospitals
-export const allHospitals = [...tier1Hospitals, ...tier2Hospitals, ...tier3Hospitals]
+export const allHospitals = [...tier1Hospitals, ...tier2Hospitals]
 
 // Navigation links
 export const navLinks = [
-  { href: '/why-shanghai', label: 'Why Shanghai' },
-  { href: '/how-it-works', label: 'How It Works' },
-  { href: '/treatments', label: 'Treatments' },
-  { href: '/care-team', label: 'Care Team' },
-  { href: '/patient-stories', label: 'Stories' },
-  { href: '/contact', label: 'Contact' },
+  { href: '#why-shanghai', label: 'Why Shanghai' },
+  { href: '#how-it-works', label: 'How It Works' },
+  { href: '#treatments', label: 'Treatments' },
+  { href: '#care-team', label: 'Care Team' },
+  { href: '#trust', label: 'Trust' },
 ]
 
 // Statistics data
@@ -193,31 +244,43 @@ export const statistics = [
   },
 ]
 
-// Cost comparison data
-export const costComparison = [
+// Price reference data
+export const priceReference = [
   {
-    procedure: 'MRI Scan',
-    usCost: '$3,000',
-    shanghaiCost: '$65',
-    savings: '98%',
+    item: 'Doctor Consultation',
+    priceRMB: '¥500–1,000',
+    priceUSD: '$70–140',
+    note: 'Specialist consultation at international department',
   },
   {
-    procedure: 'Cardiac Check-up',
-    usCost: '$18,000',
-    shanghaiCost: '$75',
-    savings: '99.6%',
+    item: 'Blood Routine (CBC)',
+    priceRMB: '~¥50',
+    priceUSD: '~$7',
+    note: 'Complete blood count',
   },
   {
-    procedure: 'Knee Replacement',
-    usCost: '$40,000',
-    shanghaiCost: '$8,000',
-    savings: '80%',
+    item: 'C-Reactive Protein (CRP)',
+    priceRMB: '~¥50',
+    priceUSD: '~$7',
+    note: 'Inflammation marker test',
   },
   {
-    procedure: 'Heart Bypass',
-    usCost: '$120,000',
-    shanghaiCost: '$25,000',
-    savings: '79%',
+    item: 'Chest X-ray',
+    priceRMB: '~¥300',
+    priceUSD: '~$42',
+    note: 'Standard chest imaging',
+  },
+  {
+    item: 'CT Scan',
+    priceRMB: 'From ¥600',
+    priceUSD: 'From $84',
+    note: 'Varies by body part and contrast',
+  },
+  {
+    item: 'MRI Scan',
+    priceRMB: 'From ¥1,000',
+    priceUSD: 'From $140',
+    note: 'Varies by body part and contrast',
   },
 ]
 
@@ -271,9 +334,9 @@ export const faqData = [
       'We work with 47+ hospitals that accept international insurance direct payment, including major providers like Aetna, Cigna, Allianz, and Prudential.',
   },
   {
-    question: 'How much can I save?',
+    question: 'What are the costs?',
     answer:
-      'Medical costs in Shanghai are typically 70-90% lower than in Western countries. For example, MRI scans average $65 vs $3,000 in the US.',
+      'Consultation fees at international departments range from ¥500–1,000 (~$70–140). Basic diagnostic tests like blood work and X-rays are very affordable. For complex treatment costs, we provide personalized quotes after reviewing your case.',
   },
   {
     question: 'Will language be a barrier?',
@@ -287,25 +350,43 @@ export const faqData = [
   },
 ]
 
-// Patient stories
-export const patientStories = [
+// Trust pillars data
+export const trustPillars = [
   {
-    id: 'dean-johnson',
-    name: 'Dean Johnson',
-    nationality: 'British',
-    title: 'A British engineer flew 5,000 miles to China for surgery. Twice.',
-    content:
-      'When Dean Johnson was told a hip replacement would cost £25,000 and require a 6-month wait on the NHS, he did something unexpected. He flew to Shanghai. The surgery, including a private room and rehabilitation, cost him under £6,000. Three years later, when he needed the other hip replaced, he came back. "The care was excellent, the doctors were world-class, and the savings paid for my retirement," he says.',
-    tags: ['Orthopedics', 'Hip Replacement', 'Cost Savings'],
+    icon: 'Shield',
+    title: 'Licensed & Certified',
+    items: [
+      'ISPN (International Professional Nursing) certified',
+      'Chief Nurse (主管护师) with 10+ years clinical experience',
+      'Company registered and licensed in Shanghai',
+    ],
   },
   {
-    id: 'sarah-chen',
-    name: 'Sarah Chen',
-    nationality: 'American',
-    title: 'Same surgery. 1/10 the price.',
-    content:
-      'Sarah Chen\'s daughter was diagnosed with a rare spinal condition requiring specialized surgery not available at their local hospital in California. After researching options globally, they chose Shanghai. "We were initially nervous about going to China for such a serious procedure, but the hospital was state-of-the-art, the surgeon had trained at Johns Hopkins, and the ISPN nurse who accompanied us made everything seamless. The total cost was $12,000 including travel, compared to $150,000 estimated in the US."',
-    tags: ['Pediatrics', 'Spinal Surgery', 'Complex Case'],
+    icon: 'Users',
+    title: 'Nurse-Accompanied Care',
+    items: [
+      'Bilingual nurse accompanies every hospital visit',
+      'From airport pick-up to discharge — never navigate alone',
+      'Medical interpretation included in all consultations',
+    ],
+  },
+  {
+    icon: 'FileText',
+    title: 'Transparent Pricing',
+    items: [
+      'All fees disclosed upfront — no hidden charges',
+      'You pay the hospital directly, we never handle your money',
+      'Detailed cost breakdown before you commit',
+    ],
+  },
+  {
+    icon: 'Headphones',
+    title: 'After-Care Guarantee',
+    items: [
+      'Post-treatment follow-up within 30 days',
+      'English translation of all medical reports',
+      'Prescription coordination with your home-country doctor',
+    ],
   },
 ]
 
@@ -315,28 +396,24 @@ export const nurseServices = [
     title: 'Outpatient Accompaniment',
     description:
       'Professional nurse accompanies you to clinic visits, ensuring clear communication with doctors and proper understanding of treatment plans.',
-    price: '$120-180 / half-day',
     icon: 'Stethoscope',
   },
   {
     title: 'Inpatient Care',
     description:
       'Dedicated bedside care during hospital stays. Monitor vital signs, assist with daily needs, and bridge any language gaps with medical staff.',
-    price: '$220-300 / 8 hours',
     icon: 'Bed',
   },
   {
     title: 'Translation & Navigation',
     description:
       'Real-time medical interpretation during consultations, help understanding prescriptions, and navigation through hospital procedures.',
-    price: '$80-120 / hour',
     icon: 'Languages',
   },
   {
     title: 'Post-Treatment Care',
     description:
       'Continued support after discharge including wound care, medication management, and coordination with your home-country doctors.',
-    price: 'Custom quote',
     icon: 'Heart',
   },
 ]
@@ -348,4 +425,66 @@ export const nurseCredentials = [
   'English/Japanese bilingual proficiency',
   'Minimum 5 years clinical experience',
   'Specialized training in international patient care',
+]
+
+// Patient testimonials
+export const patientTestimonials = [
+  {
+    id: 1,
+    name: 'Michael T.',
+    country: 'USA',
+    treatment: 'Cardiac Surgery',
+    savings: '$45,000',
+    avatar: 'M',
+    testimonial: 'I saved $45,000 on my cardiac surgery compared to the US. The bilingual nurse was with me every step of the way. Best medical experience I\'ve ever had.',
+    rating: 5,
+  },
+  {
+    id: 2,
+    name: 'Yuki S.',
+    country: 'Japan',
+    treatment: 'Health Check-up',
+    savings: '$3,200',
+    avatar: 'Y',
+    testimonial: 'Comprehensive health screening at 1/3 of the cost in Tokyo. The nurse explained everything in Japanese and I received all reports in English.',
+    rating: 5,
+  },
+  {
+    id: 3,
+    name: 'Sarah L.',
+    country: 'UK',
+    treatment: 'Orthopedic Surgery',
+    savings: '$28,000',
+    avatar: 'S',
+    testimonial: 'Waited 18 months in the UK for my knee surgery. Had it done in Shanghai within 2 weeks at 70% less cost. Amazing experience!',
+    rating: 5,
+  },
+  {
+    id: 4,
+    name: 'Hans M.',
+    country: 'Germany',
+    treatment: 'Dental Implants',
+    savings: '$12,000',
+    avatar: 'H',
+    testimonial: 'Dental work was exceptional quality. The clinic had the latest technology and the dentist spoke perfect English.',
+    rating: 5,
+  },
+  {
+    id: 5,
+    name: 'Elena R.',
+    country: 'Russia',
+    treatment: 'Oncology Treatment',
+    savings: '$35,000',
+    avatar: 'E',
+    testimonial: 'My cancer treatment was world-class. The hospital had international accreditation and my nurse stayed with me throughout chemotherapy.',
+    rating: 5,
+  },
+]
+
+// Statistics for social proof
+export const socialProofStats = [
+  { value: '2,500+', label: 'Patients Served' },
+  { value: '45+', label: 'Countries' },
+  { value: '98%', label: 'Satisfaction Rate' },
+  { value: '$2.5M+', label: 'Total Savings' },
 ]

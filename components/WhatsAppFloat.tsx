@@ -1,44 +1,28 @@
 'use client'
 
 import React, { useState } from 'react'
-import { MessageCircle } from 'lucide-react'
 import { events } from '@/lib/analytics'
 
-// WhatsApp phone number placeholder - replace with actual number
-const WHATSAPP_NUMBER = '+XXXXXXXXXXX'
+// WhatsApp phone number
+const WHATSAPP_NUMBER = '+8613818274110'
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER.replace(/\D/g, '')}`
 
 const WhatsAppFloat: React.FC = () => {
   const [isHovered, setIsHovered] = useState(false)
 
-  const handleClick = () => {
+  const handleWhatsAppClick = () => {
     events.whatsappClick()
     window.open(WHATSAPP_LINK, '_blank')
   }
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
-      {/* Tooltip */}
-      <div
-        className={`bg-white rounded-lg shadow-lg p-3 transition-all duration-300 ${
-          isHovered ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4 pointer-events-none'
-        }`}
-        style={{ maxWidth: '280px' }}
-      >
-        <p className="text-sm font-medium text-primary">
-          Need help? Chat with us!
-        </p>
-        <p className="text-xs text-gray-500 mt-1">
-          We typically reply within 1 hour
-        </p>
-      </div>
-
+    <div className="fixed bottom-24 right-6 z-40 flex flex-col items-center gap-3">
       {/* WhatsApp Button */}
       <button
-        onClick={handleClick}
+        onClick={handleWhatsAppClick}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        className="group flex items-center justify-center w-14 h-14 bg-[#25D366] rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+        className="flex items-center justify-center w-14 h-14 bg-[#25D366] rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
         aria-label="Contact us on WhatsApp"
       >
         <svg

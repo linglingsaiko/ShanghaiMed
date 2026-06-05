@@ -7,28 +7,27 @@ const Footer: React.FC = () => {
 
   const footerLinks = {
     About: [
-      { label: 'About Us', href: '/about' },
-      { label: 'Why Shanghai', href: '/why-shanghai' },
-      { label: 'Our Network', href: '/treatments' },
-      { label: 'Care Team', href: '/care-team' },
+      { label: 'About Us', href: '#' },
+      { label: 'Why Shanghai', href: '/#why-shanghai' },
+      { label: 'Our Network', href: '/#treatments' },
+      { label: 'Care Team', href: '/#care-team' },
     ],
     Treatments: [
-      { label: 'Hospitals', href: '/treatments' },
-      { label: 'Specialties', href: '/treatments' },
-      { label: 'Patient Stories', href: '/patient-stories' },
-      { label: 'Pricing Guide', href: '/pricing' },
+      { label: 'Hospitals', href: '/#treatments' },
+      { label: 'Specialties', href: '/#treatments' },
+      { label: 'Pricing Guide', href: '/#pricing' },
     ],
     Support: [
-      { label: 'How It Works', href: '/how-it-works' },
-      { label: 'FAQ', href: '/faq' },
-      { label: 'Contact Us', href: '/contact' },
-      { label: 'WhatsApp Support', href: '#' },
+      { label: 'How It Works', href: '/#how-it-works' },
+      { label: 'FAQ', href: '/#faq' },
+      { label: 'Contact Us', href: '/#contact' },
+      { label: 'WhatsApp Support', href: 'https://wa.me/8613818274110' },
     ],
     Legal: [
-      { label: 'Privacy Policy', href: '/privacy' },
-      { label: 'Terms of Service', href: '/terms' },
-      { label: 'Cookie Policy', href: '/cookies' },
-      { label: 'Medical Disclaimer', href: '/disclaimer' },
+      { label: 'Privacy Policy', href: '#' },
+      { label: 'Terms of Service', href: '#' },
+      { label: 'Cookie Policy', href: '#' },
+      { label: 'Medical Disclaimer', href: '#' },
     ],
   }
 

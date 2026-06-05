@@ -19,7 +19,7 @@ const TreatmentAreas: React.FC = () => {
   const [showModal, setShowModal] = useState(false)
 
   const allHospitals = [...tier1Hospitals, ...tier2Hospitals]
-  const featuredHospitals = allHospitals.slice(0, 3)
+  const featuredHospitals = allHospitals.filter(h => ['xinhua', 'renji', 'longhua'].includes(h.id))
 
   const hospitals =
     activeTier === 'all'
@@ -70,9 +70,7 @@ const TreatmentAreas: React.FC = () => {
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                <Badge variant="info" className="absolute top-3 left-3 bg-white/90 text-gray-800">
-                  {tierLabels[hospital.tier]}
-                </Badge>
+
               </div>
 
               {/* Content */}
@@ -217,9 +215,7 @@ const TreatmentAreas: React.FC = () => {
                           <h4 className="font-bold text-gray-900 truncate">
                             {hospital.name}
                           </h4>
-                          <Badge variant="info" className="flex-shrink-0">
-                            {tierLabels[hospital.tier]}
-                          </Badge>
+
                         </div>
                         {/* Specialties */}
                         <div className="flex flex-wrap gap-1 mb-2">

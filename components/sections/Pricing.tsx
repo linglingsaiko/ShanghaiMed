@@ -22,7 +22,7 @@ const Pricing: React.FC = () => {
       description: 'Only available as add-on to 3-Day / 5-Day packages',
     },
     {
-      name: '3-Day Standard Concierge Package',
+      name: 'Essential Care Concierge',
       price: '$1,000',
       duration: 'Up to 8 hours/day × 3 days (daytime)',
       icon: Calendar,
@@ -32,7 +32,7 @@ const Pricing: React.FC = () => {
       popular: true,
     },
     {
-      name: '5-Day Extended Concierge Package',
+      name: 'Complex Care Concierge',
       price: '$1,650',
       duration: 'Up to 8 hours/day × 5 days (daytime)',
       icon: Calendar,
@@ -55,6 +55,7 @@ const Pricing: React.FC = () => {
     { icon: Car, text: 'Transportation / payment / local guidance' },
     { icon: MessageCircle, text: 'WeChat / WhatsApp support' },
     { icon: FileText, text: 'Visa assistance' },
+    { icon: Phone, text: 'Post-Care Remote Follow-up' },
   ]
 
   const freeConsultationItems = [
@@ -154,7 +155,7 @@ const Pricing: React.FC = () => {
                   <span className="text-gray-500 text-sm ml-1">USD</span>
                 </div>
                 <p className="text-sm text-gray-600 mb-2">{pkg.duration}</p>
-                <p className={`text-xs ${pkg.type === 'addon' ? 'text-amber-600' : 'text-gray-500'}`}>
+                <p className={`text-xs ${pkg.type === 'addon' ? 'text-amber-600' : 'text-amber-600'}`}>
                   {pkg.description}
                 </p>
               </div>

@@ -17,7 +17,7 @@ interface ProcessPhase {
 const ProcessFlow: React.FC = () => {
   const phases: ProcessPhase[] = [
     {
-      phase: 'Phase 1 — Pre-arrival',
+      phase: 'Before You Arrive',
       steps: [
         {
           icon: MessageCircle,
@@ -42,7 +42,7 @@ const ProcessFlow: React.FC = () => {
       ],
     },
     {
-      phase: 'Phase 2 — In Shanghai',
+      phase: 'During Your Visit',
       steps: [
         {
           icon: Car,
@@ -57,7 +57,7 @@ const ProcessFlow: React.FC = () => {
         {
           icon: Heart,
           title: 'Treatment',
-          description: 'World-class care at pilot hospitals',
+          description: 'World-class care at leading hospitals',
         },
         {
           icon: Stethoscope,
@@ -67,7 +67,7 @@ const ProcessFlow: React.FC = () => {
       ],
     },
     {
-      phase: 'Phase 3 — Post-treatment',
+      phase: 'After Your Visit',
       steps: [
         {
           icon: FileText,
@@ -156,14 +156,8 @@ const ProcessFlow: React.FC = () => {
             </div>
           ))}
 
-          {/* Bottom Timeline Indicator */}
-          <div className="flex items-center justify-center gap-2 mt-8">
-            <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center">
-              <Heart className="w-4 h-4 text-white" />
-            </div>
-            <span className="text-accent font-semibold">Complete Recovery</span>
-          </div>
         </div>
+
       </div>
     </section>
   )

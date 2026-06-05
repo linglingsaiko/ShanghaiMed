@@ -70,13 +70,9 @@ const FAQ: React.FC = () => {
 
         {/* Still Have Questions */}
         <Card className="mt-12 p-8 text-center max-w-3xl mx-auto bg-gradient-to-r from-primary to-primary-600">
-          <h3 className="text-2xl font-bold text-white mb-4">
+          <h3 className="text-2xl font-bold text-white mb-6">
             Still have questions?
           </h3>
-          <p className="text-gray-300 mb-6">
-            Our team is available 24/7 to help you with any questions about
-            your medical journey.
-          </p>
           <div className="flex justify-center">
             <a
               href="https://wa.me/+8613818274110"

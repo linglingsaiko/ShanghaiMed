@@ -85,4 +85,11 @@ body {
   @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
 }
 
+/* Navi avatar rounded */
+img[alt="Navi"],
+.coze-chat-avatar img,
+.coze-webchat-avatar img {
+  border-radius: 50% !important;
+}
+
 

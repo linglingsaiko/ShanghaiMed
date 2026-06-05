@@ -21,18 +21,18 @@ const HowItWorks: React.FC = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-accent font-semibold text-sm tracking-wider uppercase">
-            {t('howItWorks.simpleProcess')}
+            How It Works
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mt-4 mb-6">
             {t('howItWorks.title')}
           </h2>
-          <p className="text-gray-600 text-lg">
+          <p className="text-gray-600 text-lg whitespace-nowrap">
             {t('howItWorks.subtitle')}
           </p>
         </div>
 
         {/* Process Steps */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+        <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6 relative">
           {/* Connection Lines (Desktop Only) */}
           <div className="hidden lg:block absolute top-24 left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-accent via-accent/50 to-accent"></div>
 
@@ -52,7 +52,7 @@ const HowItWorks: React.FC = () => {
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-xl font-bold text-primary mb-3">
+                  <h3 className="text-xl font-bold text-primary mb-3 whitespace-nowrap">
                     {step.title}
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed">

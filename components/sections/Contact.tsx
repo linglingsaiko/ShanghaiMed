@@ -84,7 +84,7 @@ const Contact: React.FC = () => {
                 </div>
               </div>
               <Button
-                href="#"
+                href="https://wa.me/8613818274110"
                 variant="outline"
                 className="w-full border-[#25D366] text-[#25D366] hover:bg-[#25D366] hover:text-white"
                 onClick={() => events.whatsappClick()}
@@ -151,7 +151,7 @@ const Contact: React.FC = () => {
                     Send Another Message
                   </Button>
                   <Button
-                    href="#"
+                    href="https://wa.me/8613818274110"
                     variant="outline"
                     className="border-[#25D366] text-[#25D366] hover:bg-[#25D366] hover:text-white"
                     onClick={() => events.whatsappClick()}

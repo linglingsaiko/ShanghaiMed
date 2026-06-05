@@ -52,14 +52,11 @@ const CareTeam: React.FC = () => {
                   <p className="text-sm text-gray-500">
                     {t('careTeam.ispnDesc')}
                   </p>
+                  <p className="text-xs text-accent mt-1">
+                    {t('careTeam.ispnIssuer')}
+                  </p>
                 </div>
               </div>
-
-              <p className="text-gray-600 mb-6">
-                All nurses in our network hold ISPN (International Professional
-                Nursing) certification, ensuring they meet global standards of
-                healthcare excellence.
-              </p>
 
               <ul className="space-y-3">
                 {nurseCredentials.map((credential, index) => (

@@ -132,26 +132,86 @@ export default function RootLayout({
         />
 
         {/* Coze Chat SDK */}
-        <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.19/libs/cn/index.js"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.19/libs/cn/index.js" onload="scheduleCozeInit()"><\/script>`
+          }}
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              var token = '${process.env.NEXT_PUBLIC_COZE_TOKEN || ''}';
-              new CozeWebSDK.WebChatClient({
-                config: {
-                  bot_id: '7641560175996059663',
-                },
-                componentProps: {
-                  title: 'Coze',
-                  placeholder: 'Send a message...',
-                  thinkingBoxVisible: false,
-                },
-                auth: {
-                  type: 'token',
-                  token: token,
-                  onRefreshToken: function() {
-                    return token;
+              var cozeInitAttempted = false;
+              var cozeInitRetries = 0;
+              var maxRetries = 3;
+              
+              function scheduleCozeInit() {
+                // Delay initialization for better mobile performance
+                setTimeout(initCozeChat, 1000);
+              }
+              
+              function initCozeChat() {
+                if (cozeInitAttempted && cozeInitRetries >= maxRetries) return;
+                
+                cozeInitAttempted = true;
+                cozeInitRetries++;
+                
+                try {
+                  var token = '${process.env.NEXT_PUBLIC_COZE_TOKEN || ''}';
+                  if (typeof CozeWebSDK !== 'undefined' && token) {
+                    new CozeWebSDK.WebChatClient({
+                      config: {
+                        bot_id: '7641560175996059663',
+                        chatInputPlaceholder: 'Ask me about medical services in Shanghai...',
+                      },
+                      componentProps: {
+                        icon: '/images/navi-avatar.png',
+                        title: 'ShanghaiMed Navigator',
+                      },
+                      ui: {
+                        base: {
+                          lang: 'en',
+                        },
+                        chatBot: {
+                          title: 'ShanghaiMed Navigator',
+                          uploadable: true,
+                          showThinking: false,
+                        },
+                        asstBtn: {
+                          isNeed: true,
+                        },
+                        footer: {
+                          isShow: false,
+                        },
+                      },
+                      auth: {
+                        type: 'token',
+                        token: token,
+                        onRefreshToken: function() {
+                          return token;
+                        }
+                      },
+                      onError: function(error) {
+                        console.warn('Coze SDK error:', error);
+                        // Retry on error if we haven't exceeded max retries
+                        if (cozeInitRetries < maxRetries) {
+                          setTimeout(initCozeChat, 2000 * cozeInitRetries);
+                        }
+                      }
+                    });
                   }
+                } catch (e) {
+                  console.warn('Coze SDK init failed (attempt ' + cozeInitRetries + '):', e);
+                  // Retry on exception
+                  if (cozeInitRetries < maxRetries) {
+                    setTimeout(initCozeChat, 2000 * cozeInitRetries);
+                  }
+                }
+              }
+              
+              // Fallback init if script loads before DOM ready
+              document.addEventListener('DOMContentLoaded', function() {
+                if (!cozeInitAttempted) {
+                  scheduleCozeInit();
                 }
               });
             `

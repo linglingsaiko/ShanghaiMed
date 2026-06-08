@@ -5,8 +5,10 @@ import Footer from '@/components/Footer'
 import WhatsAppFloat from '@/components/WhatsAppFloat'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://shanghaimedhealth.com'
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://shanghaimed.com'),
+  metadataBase: new URL(siteUrl),
   title: {
     default: 'ShanghaiMed - World-Class Medical Care in Shanghai',
     template: '%s | ShanghaiMed',
@@ -27,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://shanghaimed.com',
+    url: siteUrl,
     siteName: 'ShanghaiMed',
     title: 'ShanghaiMed - World-Class Medical Care in Shanghai',
     description:
@@ -86,8 +88,8 @@ export default function RootLayout({
               name: 'ShanghaiMed',
               description:
                 'International medical services platform connecting global patients with Shanghai\'s top-tier hospitals and bilingual healthcare professionals.',
-              url: 'https://shanghaimed.com',
-              logo: 'https://shanghaimed.com/logo.png',
+              url: siteUrl,
+              logo: `${siteUrl}/logo.png`,
               contactPoint: {
                 '@type': 'ContactPoint',
                 contactType: 'customer service',

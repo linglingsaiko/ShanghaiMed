@@ -19,7 +19,7 @@ export async function POST(request: NextRequest) {
 
     const mailOptions = {
       from: process.env.SMTP_USER,
-      to: 'kagamiya33@163.com',
+      to: process.env.CONTACT_EMAIL || 'kagamiya33@163.com',
       subject: `New Medical Consultation Request from ${name}`,
       html: `
         <h2>New Consultation Request</h2>

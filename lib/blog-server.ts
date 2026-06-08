@@ -1,31 +1,28 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import { remark } from 'remark'
-import remarkHtml from 'remark-html'
-import remarkGfm from 'remark-gfm'
-import type { BlogPost, Category, BlogQueryParams } from './types'
+import type { BlogPost, BlogQueryParams } from './types'
+import { 
+  categories, 
+  getCategories, 
+  getCategoryBySlug, 
+  getRelatedPosts as getRelatedPostsShared,
+  getNextPost as getNextPostShared,
+  getPreviousPost as getPreviousPostShared,
+  getAllTags as getAllTagsShared,
+  calculateReadingTime,
+  renderMarkdown 
+} from './blog-shared'
+
+export { 
+  categories, 
+  getCategories, 
+  getCategoryBySlug, 
+  calculateReadingTime,
+  renderMarkdown 
+}
 
 const postsDirectory = path.join(process.cwd(), 'content', 'blog')
-
-export const categories: Category[] = [
-  { id: 'health-checkups', name: 'Health Checkups', slug: 'health-checkups', description: 'Comprehensive health screening and medical checkup guides' },
-  { id: 'preventive-healthcare', name: 'Preventive Healthcare', slug: 'preventive-healthcare', description: 'Tips and strategies for preventive medicine' },
-  { id: 'medical-tourism', name: 'Medical Tourism', slug: 'medical-tourism', description: 'Guides for international patients in Shanghai' },
-  { id: 'traditional-chinese-medicine', name: 'Traditional Chinese Medicine', slug: 'traditional-chinese-medicine', description: 'TCM treatments and wellness practices' },
-  { id: 'shanghai-hospitals', name: 'Shanghai Hospitals', slug: 'shanghai-hospitals', description: 'Information about Shanghai medical institutions' },
-  { id: 'expat-healthcare', name: 'Expat Healthcare', slug: 'expat-healthcare', description: 'Healthcare resources for expatriates in Shanghai' },
-  { id: 'patient-stories', name: 'Patient Stories', slug: 'patient-stories', description: 'Real patient experiences and testimonials' },
-  { id: 'health-guides', name: 'Health Guides', slug: 'health-guides', description: 'Comprehensive health guides and articles' },
-]
-
-export function getCategories(): Category[] {
-  return categories
-}
-
-export function getCategoryBySlug(slug: string): Category | undefined {
-  return categories.find(c => c.slug === slug)
-}
 
 export function getSortedPosts(): BlogPost[] {
   let fileNames: string[] = []
@@ -120,46 +117,20 @@ export function getPostSlugs(): string[] {
 
 export function getRelatedPosts(currentPost: BlogPost, limit: number = 3): BlogPost[] {
   const allPosts = getSortedPosts()
-  return allPosts
-    .filter(post => post.id !== currentPost.id && post.category === currentPost.category)
-    .slice(0, limit)
+  return getRelatedPostsShared(allPosts, currentPost, limit)
 }
 
 export function getNextPost(currentPost: BlogPost): BlogPost | undefined {
   const allPosts = getSortedPosts()
-  const currentIndex = allPosts.findIndex(post => post.id === currentPost.id)
-  if (currentIndex < allPosts.length - 1) {
-    return allPosts[currentIndex + 1]
-  }
-  return undefined
+  return getNextPostShared(allPosts, currentPost)
 }
 
 export function getPreviousPost(currentPost: BlogPost): BlogPost | undefined {
   const allPosts = getSortedPosts()
-  const currentIndex = allPosts.findIndex(post => post.id === currentPost.id)
-  if (currentIndex > 0) {
-    return allPosts[currentIndex - 1]
-  }
-  return undefined
+  return getPreviousPostShared(allPosts, currentPost)
 }
 
 export function getAllTags(): string[] {
   const posts = getSortedPosts()
-  const tags = new Set<string>()
-  posts.forEach(post => post.tags.forEach(tag => tags.add(tag)))
-  return Array.from(tags).sort()
-}
-
-export function calculateReadingTime(content: string): number {
-  const wordsPerMinute = 200
-  const words = content.split(/\s+/).length
-  return Math.ceil(words / wordsPerMinute)
-}
-
-export async function renderMarkdown(content: string): Promise<string> {
-  const result = await remark()
-    .use(remarkGfm)
-    .use(remarkHtml)
-    .process(content)
-  return result.toString()
+  return getAllTagsShared(posts)
 }

@@ -21,7 +21,7 @@ export const tier1Hospitals: Hospital[] = [
     specialties: ['Neurosurgery', 'Dermatology', 'Infectious Disease'],
     certifications: ['JCI Certified', 'HMI Partnership'],
     insurancePartners: ['MSH', 'Bupa', 'Cigna', 'Aetna', 'AXA', 'Allianz', 'International SOS', 'Now Health', 'Pacific Prime', 'Ping An Health', 'Pacific Health', 'AIA', 'ICBC-AXA', 'MediLink', 'CIGNA & CMC', 'Windstone Health', 'PICC Health', 'SOS International', 'AXA PPP', 'Bupa Global', 'Allianz Care', 'Aetna International', 'Generali Global Health', 'Zurich International'],
-    internationalFeatures: 'Dedicated international department, 24 insurance partners',
+    internationalFeatures: 'Dedicated international department, 24 accepted insurance providers',
     insuranceStatus: 'Direct Settlement',
     description: 'Ranked #1 in dermatology and neurosurgery nationwide. One of China\'s most internationally recognized hospitals.',
     image: '/images/华山.jpeg',
@@ -33,7 +33,7 @@ export const tier1Hospitals: Hospital[] = [
     specialties: ['Neonatology', 'Pediatric Surgery', 'Critical Care Medicine'],
     certifications: ['JCI Certified', 'HIMSS EMRAM Stage 6'],
     insurancePartners: ['MSH', 'Cigna', 'Ping An Health', 'AIA', 'Allianz', 'AXA', 'MediLink', 'Now Health', 'Pacific Prime', 'International SOS', 'CIGNA & CMC', 'Windstone Health', 'Bupa', 'Aetna', 'Pacific Health', 'ICBC-AXA', 'SOS International', 'AXA PPP', 'Bupa Global'],
-    internationalFeatures: 'International pediatric department since 1993, 19 insurance partners',
+    internationalFeatures: 'International pediatric department since 1993, 19 accepted insurance providers',
     insuranceStatus: 'Direct Settlement',
     description: 'Leading center for neonatal care and pediatric rare diseases.',
     image: '/images/儿科医院.jpeg',
@@ -45,7 +45,7 @@ export const tier1Hospitals: Hospital[] = [
     specialties: ['Hematology', 'Endocrinology', 'Burns & Wound Care'],
     certifications: ['JCI Certified', 'National EMR Level 7'],
     insurancePartners: ['MSH', 'Pacific Health', 'Ping An Health', 'Cigna', 'AIA', 'Allianz', 'AXA', 'ICBC-AXA', 'MediLink', 'Now Health', 'Bupa', 'Aetna', 'International SOS', 'CIGNA & CMC', 'Windstone Health', 'PICC Health', 'SOS International', 'AXA PPP', 'Bupa Global', 'Allianz Care', 'Aetna International'],
-    internationalFeatures: '95.7% CAR-T remission rate, dedicated international ward, 21 insurance partners',
+    internationalFeatures: '95.7% CAR-T remission rate, dedicated international ward, 21 accepted insurance providers',
     insuranceStatus: 'Direct Settlement',
     description: 'Pioneer in bone marrow transplantation and CAR-T therapy with world-leading outcomes.',
     image: '/images/瑞金.jpeg',
@@ -57,7 +57,7 @@ export const tier1Hospitals: Hospital[] = [
     specialties: ['Ophthalmology', 'Urology', 'ENT & Head-Neck Surgery'],
     certifications: ['DNV GL Certified', 'Mayo Clinic Partnership'],
     insurancePartners: ['AIA', 'MSH', 'SOS International', 'Ping An Health', 'Pacific Health', 'Cigna', 'Allianz', 'AXA', 'MediLink', 'Bupa', 'Now Health', 'CIGNA & CMC', 'Windstone Health', 'ICBC-AXA', 'Pacific Prime', 'International SOS', 'AXA PPP'],
-    internationalFeatures: 'International patient center with multilingual staff, 17 insurance partners',
+    internationalFeatures: 'International patient center with multilingual staff, 17 accepted insurance providers',
     insuranceStatus: 'International Insurance',
     description: 'One of Shanghai\'s oldest and most prestigious hospitals. Leading ophthalmology and urology departments.',
     image: '/images/市一.png',
@@ -69,7 +69,7 @@ export const tier1Hospitals: Hospital[] = [
     specialties: ['General Surgery', 'Gastroenterology', 'Cardiovascular Medicine'],
     certifications: ['JCI Certified', 'JBI Certified'],
     insurancePartners: ['MSH', 'Ping An Health', 'Pacific Health', 'AIA', 'Cigna', 'Allianz', 'AXA', 'ICBC-AXA', 'MediLink', 'Bupa', 'Now Health', 'CIGNA & CMC', 'Windstone Health', 'PICC Health', 'SOS International', 'AXA PPP', 'Bupa Global', 'Allianz Care', 'Aetna International'],
-    internationalFeatures: 'Independent international patient building, 19 insurance partners',
+    internationalFeatures: 'Independent international patient building, 19 accepted insurance providers',
     insuranceStatus: 'International Insurance',
     description: 'Fudan University affiliated. Cardiovascular center with independent international patient building and dedicated English-speaking staff.',
     image: '/images/中山.png',
@@ -81,7 +81,7 @@ export const tier1Hospitals: Hospital[] = [
     specialties: ['Gastroenterology', 'Reproductive Medicine', 'Rheumatology'],
     certifications: ['DNV GL Certified', 'DNV GL RTAC Certified'],
     insurancePartners: ['Cigna', 'AXA', 'AIA', 'Allianz', 'MSH', 'PICC Health', 'Ping An Health', 'Pacific Health', 'ICBC-AXA', 'MediLink', 'International SOS', 'Now Health', 'Bupa', 'Aetna', 'CIGNA & CMC', 'Windstone Health', 'SOS International', 'AXA PPP', 'Bupa Global', 'Allianz Care'],
-    internationalFeatures: 'International reproductive medicine center, 20 insurance partners',
+    internationalFeatures: 'International reproductive medicine center, 20 accepted insurance providers',
     insuranceStatus: 'International Insurance',
     description: 'Shanghai Jiao Tong University affiliated. #1 gastroenterology nationwide for 4 consecutive years. Leading liver transplant center.',
     image: '/images/仁济.jpeg',
@@ -93,7 +93,7 @@ export const tier1Hospitals: Hospital[] = [
     specialties: ['TCM Oncology', 'TCM Orthopedics', 'TCM Surgery'],
     certifications: ['JCI Certified', 'HIMSS EMRAM Stage 7'],
     insurancePartners: ['MSH', 'Ping An Health', 'Pacific Health', 'AIA', 'Cigna', 'Allianz', 'AXA', 'MediLink', 'Bupa', 'Now Health', 'CIGNA & CMC', 'Windstone Health', 'ICBC-AXA', 'Pacific Prime', 'International SOS', 'AXA PPP', 'Bupa Global', 'Allianz Care'],
-    internationalFeatures: 'Official TCM medical tourism pilot hospital, 18 insurance partners',
+    internationalFeatures: 'Official TCM medical tourism pilot hospital, 18 accepted insurance providers',
     insuranceStatus: 'International Insurance',
     description: 'Premier Traditional Chinese Medicine hospital. Official pilot for TCM medical tourism. Acupuncture, herbal therapy, and TCM rehabilitation.',
     image: '/images/龙华.jpg',
@@ -105,7 +105,7 @@ export const tier1Hospitals: Hospital[] = [
     specialties: ['Reproductive Medicine', 'Obstetrics', 'Gynecology'],
     certifications: ['DNV GL Certified'],
     insurancePartners: ['MSH', 'Ping An Health', 'AIA', 'Cigna', 'Allianz', 'MediLink', 'Bupa', 'AXA', 'Now Health', 'CIGNA & CMC', 'Windstone Health', 'ICBC-AXA', 'Pacific Prime', 'International SOS', 'AXA PPP', 'Bupa Global', 'Allianz Care', 'Aetna International', 'Pacific Health'],
-    internationalFeatures: 'China Welfare Institute affiliated, international maternity care, 19 insurance partners',
+    internationalFeatures: 'China Welfare Institute affiliated, international maternity care, 19 accepted insurance providers',
     insuranceStatus: 'International Insurance',
     description: 'Affiliated with China Welfare Institute. Leading center for high-risk pregnancy, fetal medicine, and reproductive medicine.',
     image: '/images/国妇婴.png',
@@ -117,7 +117,7 @@ export const tier1Hospitals: Hospital[] = [
     specialties: ['Pediatric Cardiac Surgery', 'Pediatric Hematology-Oncology', 'Developmental Behavioral Pediatrics'],
     certifications: ['JCI Certified', 'HIMSS EMRAM Stage 6', 'ISO 15189', 'GCP Certified'],
     insurancePartners: ['MSH', 'CIGNA & CMC', 'Ping An', 'AIA', 'MediLink', 'Windstone Health', 'Allianz', 'AXA', 'Cigna', 'Now Health', 'Pacific Prime', 'Bupa', 'Aetna', 'International SOS', 'Pacific Health', 'ICBC-AXA', 'SOS International', 'AXA PPP', 'Bupa Global', 'Allianz Care', 'Aetna International', 'Generali Global Health', 'Zurich International', 'PICC Health'],
-    internationalFeatures: 'Partnership with Project HOPE, international pediatric center, 23 insurance partners',
+    internationalFeatures: 'Partnership with Project HOPE, international pediatric center, 23 accepted insurance providers',
     insuranceStatus: 'International Insurance',
     description: 'Shanghai Jiao Tong University affiliated. Top pediatric cardiac surgery center in China. Partnership with Project HOPE.',
     image: '/images/儿中心.png',
@@ -129,7 +129,7 @@ export const tier1Hospitals: Hospital[] = [
     specialties: ['Orthopedics', 'Endocrinology & Metabolism', 'Sports Medicine'],
     certifications: ['JCI Certified'],
     insurancePartners: ['MSH', 'Ping An Health', 'Pacific Health', 'Cigna', 'AIA', 'Allianz', 'AXA', 'MediLink', 'Bupa', 'Now Health', 'CIGNA & CMC', 'Windstone Health', 'ICBC-AXA', 'Pacific Prime', 'International SOS', 'AXA PPP', 'Bupa Global', 'Allianz Care'],
-    internationalFeatures: 'World\'s first limb replantation center, 18 insurance partners',
+    internationalFeatures: 'World\'s first limb replantation center, 18 accepted insurance providers',
     insuranceStatus: 'International Insurance',
     description: 'Pioneer in limb replantation surgery since 1963. Leading orthopedics and endocrinology center with international recognition.',
     image: '/images/六院.png',
@@ -141,7 +141,7 @@ export const tier1Hospitals: Hospital[] = [
     specialties: ['Obstetrics', 'Fetal Medicine', 'Reproductive Medicine'],
     certifications: ['JCI Certified', 'APAGE Certified'],
     insurancePartners: ['MSH', 'AIA', 'MediLink', 'Ping An Health', 'Cigna', 'Allianz', 'AXA', 'ICBC-AXA', 'Now Health', 'Bupa', 'Pacific Health', 'CIGNA & CMC', 'Windstone Health', 'Pacific Prime', 'International SOS', 'AXA PPP', 'Bupa Global', 'Allianz Care'],
-    internationalFeatures: 'Dedicated international maternity services, 18 insurance partners',
+    internationalFeatures: 'Dedicated international maternity services, 18 accepted insurance providers',
     insuranceStatus: 'International Insurance',
     description: 'Shanghai\'s premier maternity hospital. Comprehensive obstetric and neonatal care with international patient support.',
     image: '/images/一妇婴.png',
@@ -153,7 +153,7 @@ export const tier1Hospitals: Hospital[] = [
     specialties: ['Pediatrics', 'Dermatology', 'General Surgery'],
     certifications: ['JCI Certified'],
     insurancePartners: ['MSH', 'Ping An Health', 'Pacific Health', 'AIA', 'Cigna', 'Allianz', 'AXA', 'MediLink', 'Bupa', 'Now Health', 'CIGNA & CMC', 'Windstone Health', 'ICBC-AXA', 'Pacific Prime', 'International SOS', 'AXA PPP'],
-    internationalFeatures: 'Comprehensive international department, 16 insurance partners',
+    internationalFeatures: 'Comprehensive international department, 16 accepted insurance providers',
     insuranceStatus: 'International Insurance',
     description: 'Leading spine surgery and pediatric surgery center with full international services.',
     image: '/images/新华.png',
@@ -165,7 +165,7 @@ export const tier1Hospitals: Hospital[] = [
     specialties: ['Geriatric Medicine', 'Rehabilitation Medicine', 'Clinical Nutrition'],
     certifications: ['Bupa Silver Certified'],
     insurancePartners: ['Cigna', 'Bupa', 'Ping An', 'MSH', 'ICBC-AXA', 'MediLink', 'Allianz', 'AXA', 'AIA', 'Now Health', 'CIGNA & CMC', 'Windstone Health', 'Pacific Health', 'Pacific Prime', 'International SOS', 'AXA PPP', 'Allianz Care'],
-    internationalFeatures: 'Executive health screening center, international rehabilitation, 17 insurance partners',
+    internationalFeatures: 'Executive health screening center, international rehabilitation, 17 accepted insurance providers',
     insuranceStatus: 'International Insurance',
     description: 'Fudan University affiliated. Premier geriatric medicine and rehabilitation center. Popular for executive health screening programs.',
     image: '/images/华东.png',
@@ -252,13 +252,12 @@ export const navLinks = [
 
 // Statistics data
 export const statistics = [
-  { value: '2,500+', label: 'International Patients Assisted', description: '' },
   { value: '45+', label: 'Countries Represented', description: '' },
-  { value: '98%', label: 'Patient Satisfaction', description: '' },
-  { value: '$2.5M+', label: 'Estimated Patient Savings', description: '' },
+  { value: '18', label: 'Supported Hospitals', description: '' },
 ]
 
 // Testimonials
+// TODO: Replace with real patient testimonials before launch
 export const testimonials = [
   {
     id: 1,
@@ -304,10 +303,8 @@ export const testimonials = [
 
 // Social Proof Stats
 export const socialProofStats = [
-  { value: '2,500+', label: 'Patients Served' },
   { value: '45+', label: 'Countries' },
-  { value: '98%', label: 'Satisfaction Rate' },
-  { value: '$2.5M+', label: 'Total Savings' },
+  { value: '18', label: 'Supported Hospitals' },
 ]
 
 // Patient Testimonials
@@ -413,8 +410,8 @@ export const trustPillars = [
     icon: 'Shield',
     title: 'Verified Hospitals',
     items: [
-      'All partner hospitals are Grade-A public or JCI-accredited private facilities',
-      'Direct partnerships with 18 top Shanghai hospitals',
+      'All supported hospitals are Grade-A public or JCI-accredited private facilities',
+      '18 top Shanghai hospitals in our network',
       'Regular quality assessments and patient feedback reviews',
     ],
   },

@@ -22,7 +22,7 @@ const WhyShanghai: React.FC = () => {
             Simplified for International Patients
           </h2>
           <p className="text-gray-600 text-lg">
-            Shanghai offers access to leading hospitals, experienced specialists, transparent pricing, and personalized support for international patients.
+            Shanghai offers access to leading hospitals, experienced specialists, transparent pricing, and personalized support for international patients. Shanghai's public hospitals served over 73,000 international patients in 2025, with 23 hospitals now offering dedicated international medical services.
           </p>
         </div>
 

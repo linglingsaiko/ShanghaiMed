@@ -252,8 +252,10 @@ export const navLinks = [
 
 // Statistics data
 export const statistics = [
-  { value: '45+', label: 'Countries Represented', description: '' },
-  { value: '18', label: 'Supported Hospitals', description: '' },
+  { value: '73,000+', label: "Shanghai's Annual International Patient Visits", description: 'Source: Shanghai Municipal Health Commission, 2025' },
+  { value: '23', label: 'Public Hospitals with International Services', description: 'Source: Shanghai International Service Portal' },
+  { value: '90+', label: 'Nationalities Served', description: 'Source: Huashan Hospital International Medical Center, 2025' },
+  { value: '25%', label: 'Year-over-Year Growth', description: 'Source: Shanghai Municipal Health Commission, 2024' },
 ]
 
 // Testimonials
@@ -303,8 +305,10 @@ export const testimonials = [
 
 // Social Proof Stats
 export const socialProofStats = [
-  { value: '45+', label: 'Countries' },
-  { value: '18', label: 'Supported Hospitals' },
+  { value: '73,000+', label: "Shanghai's Int'l Patient Visits" },
+  { value: '23', label: 'Public Hospitals' },
+  { value: '90+', label: 'Nationalities' },
+  { value: '25%', label: 'YoY Growth' },
 ]
 
 // Patient Testimonials

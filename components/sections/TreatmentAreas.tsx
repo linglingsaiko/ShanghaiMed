@@ -49,7 +49,8 @@ const TreatmentAreas: React.FC = () => {
             {t('treatments.title')}
           </h2>
           <p className="text-gray-600 text-lg">
-            {t('treatments.subtitle')}
+            Access leading hospitals across Shanghai,<br />
+            with recommendations tailored to your medical needs.
           </p>
         </div>
 

@@ -92,10 +92,10 @@ const ProcessFlow: React.FC = () => {
             Your Journey
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mt-4 mb-6">
-            From Inquiry to Recovery
+            From Inquiry to Care
           </h2>
           <p className="text-gray-600 text-lg">
-            A complete timeline of your medical tourism experience in Shanghai,
+            A complete timeline of your medical tourism experience in Shanghai<br />
             with professional support at every step.
           </p>
         </div>

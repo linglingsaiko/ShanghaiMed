@@ -47,11 +47,11 @@ export default function BlogPageComponent({ searchParams }: BlogPageComponentPro
   }
   
   return (
-    <div className="py-16 bg-gray-50">
+    <div className="pt-28 pb-16 bg-gray-50">
       <div className="section-container">
         {/* Page Header */}
-        <div className="text-center mb-10">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Healthcare Insights</h1>
+        <div className="text-center mb-10 px-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 w-full overflow-visible">Healthcare Insights</h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Discover articles about medical tourism, healthcare services, and wellness tips in Shanghai
           </p>

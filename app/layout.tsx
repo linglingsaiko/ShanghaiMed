@@ -162,7 +162,7 @@ export default function RootLayout({
                   if (typeof CozeWebSDK !== 'undefined' && token) {
                     new CozeWebSDK.WebChatClient({
                       config: {
-                        bot_id: '7641560175996059663',
+                        bot_id: '${process.env.NEXT_PUBLIC_COZE_BOT_ID || '7641560175996059663'}',
                         chatInputPlaceholder: 'Ask me about medical services in Shanghai...',
                       },
                       componentProps: {

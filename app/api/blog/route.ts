@@ -10,7 +10,6 @@ export async function GET(request: Request) {
   const category = searchParams.get('category')
   const tag = searchParams.get('tag')
   const search = searchParams.get('search')
-  const status = searchParams.get('status')
   
   let posts = getSortedPosts()
   
@@ -29,10 +28,6 @@ export async function GET(request: Request) {
   
   if (tag) {
     posts = posts.filter(post => post.tags.includes(tag))
-  }
-  
-  if (status) {
-    posts = posts.filter(post => post.status === status)
   }
   
   const pageSize = 6

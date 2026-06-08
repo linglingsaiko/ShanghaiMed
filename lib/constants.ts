@@ -311,6 +311,7 @@ export const socialProofStats = [
 ]
 
 // Patient Testimonials
+// TODO: Replace with real patient testimonials before launch
 export const patientTestimonials = [
   {
     id: 1,

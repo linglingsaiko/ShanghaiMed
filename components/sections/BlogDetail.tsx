@@ -183,7 +183,7 @@ export default function BlogDetail({ post }: BlogDetailProps) {
                 </div>
               </div>
               
-              <div className="article-content">
+              <div className="article-content prose prose-lg max-w-none">
                 <div 
                   dangerouslySetInnerHTML={{ __html: content.replace(/<h([2-3])([^>]*)>(.*?)<\/h[2-3]>/gi, (_, level, attrs, text) => {
                     const id = text.toLowerCase().replace(/[^a-z0-9]+/g, '-')

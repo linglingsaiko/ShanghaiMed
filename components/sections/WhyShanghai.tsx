@@ -1,12 +1,12 @@
 'use client'
 
 import React from 'react'
-import { TrendingDown, Globe, Award, Clock, Building2 } from 'lucide-react'
+import { TrendingUp, TrendingDown, Globe, Award, Clock, Building2 } from 'lucide-react'
 import Card from '../ui/Card'
 import { statistics, priceReference } from '@/lib/constants'
 
 const WhyShanghai: React.FC = () => {
-  const statIcons = [Building2, Globe, Award, Globe, Clock]
+  const statIcons = [Building2, Globe, Award, TrendingUp, Clock]
 
   return (
     <section id="why-shanghai" className="py-20 lg:py-28 bg-white">
@@ -22,7 +22,7 @@ const WhyShanghai: React.FC = () => {
             Simplified for International Patients
           </h2>
           <p className="text-gray-600 text-lg">
-            Shanghai offers access to leading hospitals, experienced specialists, transparent pricing, and personalized support for international patients. Shanghai's public hospitals served over 73,000 international patients in 2025, with 23 hospitals now offering dedicated international medical services.
+            Shanghai offers access to leading hospitals, experienced specialists, transparent pricing, and personalized support for international patients.
           </p>
         </div>
 

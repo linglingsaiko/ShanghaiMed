@@ -102,19 +102,31 @@ export default function AdminPage() {
     const url = isEditing && selectedPost ? `/api/blog/${selectedPost.slug}` : '/api/blog'
     const method = isEditing ? 'PUT' : 'POST'
 
-    const response = await fetch(url, {
-      method,
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    })
+    try {
+      const response = await fetch(url, {
+        method,
+        headers: {
+          'Content-Type': 'application/json',
+          'x-admin-password': process.env.NEXT_PUBLIC_ADMIN_PASSWORD || '',
+        },
+        body: JSON.stringify(data),
+      })
 
-    if (response.ok) {
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}))
+        console.error('API Error:', response.status, errorData)
+        alert(`Failed to ${isEditing ? 'update' : 'publish'} article: ${response.status} ${errorData.error || ''}`)
+        return
+      }
+
       loadPosts()
       setIsEditing(false)
       setIsCreating(false)
       setSelectedPost(null)
+      alert('Article published successfully!')
+    } catch (error) {
+      console.error('Submit error:', error)
+      alert('An error occurred while publishing the article.')
     }
   }
 

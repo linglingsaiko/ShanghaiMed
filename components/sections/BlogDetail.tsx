@@ -17,6 +17,9 @@ export default function BlogDetail({ post }: BlogDetailProps) {
   const [headings, setHeadings] = useState<{ id: string; text: string; level: number }[]>([])
   const [nextPost, setNextPost] = useState<BlogPost | undefined>(undefined)
   const [previousPost, setPreviousPost] = useState<BlogPost | undefined>(undefined)
+  const [email, setEmail] = useState('')
+  const [subscribed, setSubscribed] = useState(false)
+  const [showSuccessModal, setShowSuccessModal] = useState(false)
   
   useEffect(() => {
     const fetchRelatedPosts = async () => {
@@ -72,6 +75,37 @@ export default function BlogDetail({ post }: BlogDetailProps) {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
       setShowToc(false)
+    }
+  }
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault()
+    
+    if (!email) {
+      alert('Please enter your email address')
+      return
+    }
+
+    try {
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      })
+
+      if (response.ok) {
+        setSubscribed(true)
+        setEmail('')
+        setShowSuccessModal(true)
+        setTimeout(() => setShowSuccessModal(false), 3000)
+      } else {
+        alert('Failed to subscribe. Please try again later.')
+      }
+    } catch (error) {
+      console.error('Subscribe error:', error)
+      alert('An error occurred. Please try again later.')
     }
   }
   
@@ -149,13 +183,14 @@ export default function BlogDetail({ post }: BlogDetailProps) {
                 </div>
               </div>
               
-              <div 
-                className="prose prose-lg max-w-none text-gray-700"
-                dangerouslySetInnerHTML={{ __html: content.replace(/<h([2-3])([^>]*)>(.*?)<\/h[2-3]>/gi, (_, level, attrs, text) => {
-                  const id = text.toLowerCase().replace(/[^a-z0-9]+/g, '-')
-                  return `<h${level}${attrs} id="${id}">${text}</h${level}>`
-                }) }}
-              />
+              <div className="article-content">
+                <div 
+                  dangerouslySetInnerHTML={{ __html: content.replace(/<h([2-3])([^>]*)>(.*?)<\/h[2-3]>/gi, (_, level, attrs, text) => {
+                    const id = text.toLowerCase().replace(/[^a-z0-9]+/g, '-')
+                    return `<h${level}${attrs} id="${id}">${text}</h${level}>`
+                  }) }}
+                />
+              </div>
               
               {post.tags.length > 0 && (
                 <div className="mt-8 pt-6 border-t border-gray-100">
@@ -241,19 +276,27 @@ export default function BlogDetail({ post }: BlogDetailProps) {
                 <div className="p-4 bg-blue-50 rounded-lg">
                   <h3 className="font-medium text-gray-900 mb-2">Subscribe to Newsletter</h3>
                   <p className="text-sm text-gray-600">Get the latest health tips and updates delivered to your inbox.</p>
-                  <form className="mt-4">
-                    <input
-                      type="email"
-                      placeholder="Your email"
-                      className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
-                    />
-                    <button
-                      type="submit"
-                      className="w-full mt-2 bg-primary text-white py-2 rounded-lg hover:bg-primary/90 transition-colors"
-                    >
-                      Subscribe
-                    </button>
-                  </form>
+                  {subscribed ? (
+                    <div className="mt-4 p-3 bg-green-100 text-green-700 rounded-lg text-sm">
+                      ✓ Successfully subscribed! Thank you for joining our newsletter.
+                    </div>
+                  ) : (
+                    <form onSubmit={handleSubscribe} className="mt-4">
+                      <input
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder="Your email"
+                        className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
+                      />
+                      <button
+                        type="submit"
+                        className="w-full mt-2 bg-primary text-white py-2 rounded-lg hover:bg-primary/90 transition-colors"
+                      >
+                        Subscribe
+                      </button>
+                    </form>
+                  )}
                 </div>
                 
                 <div className="p-4 bg-gray-50 rounded-lg">
@@ -290,6 +333,27 @@ export default function BlogDetail({ post }: BlogDetailProps) {
       
       {/* CTA Section */}
       <BlogCTA post={post} />
+      
+      {/* Subscribe Success Modal */}
+      {showSuccessModal && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-xl p-8 max-w-md mx-4 text-center animate-bounce-in">
+            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">Subscription Successful!</h3>
+            <p className="text-gray-600">Thank you for subscribing to our newsletter. You'll receive the latest health tips and updates.</p>
+            <button
+              onClick={() => setShowSuccessModal(false)}
+              className="mt-4 px-6 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

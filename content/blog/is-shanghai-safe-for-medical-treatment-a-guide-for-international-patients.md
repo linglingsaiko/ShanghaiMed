@@ -72,7 +72,7 @@ Best for: Preventive care, routine checkups, minor procedures, dental work, pedi
 Many international patients use a combination of both: complex treatment at public hospital international departments where top specialists and advanced equipment are concentrated, routine follow-ups and preventive care at private international clinics where the experience is more comfortable.
 Typical Medical Costs: A Real Comparison
 One of the most common questions: "How much will it cost?" Here's a comparison of typical costs in Shanghai versus the United States and Europe for common procedures.
-表格
+
 Service	Shanghai (USD)	United States (USD)	Europe (EUR)
 Dental Cleaning	$50–$100	$100–$250	€80–€180
 Dental Crown	$500–$1,200	$1,000–$3,500	€800–€2,000

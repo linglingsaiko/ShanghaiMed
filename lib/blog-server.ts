@@ -30,6 +30,41 @@ function renderMarkdownToHtml(content: string): string {
   // 代码块 (必须先处理，避免内部被其他规则污染)
   html = html.replace(/```(\w*)\n([\s\S]*?)```/g, '<pre><code class="language-$1">$2</code></pre>')
   
+  // Tab分隔表格处理（在代码块之后、其他规则之前）
+  // 识别连续的tab分隔行，第一行为表头
+  const lines = html.split('\n')
+  let result: string[] = []
+  let i = 0
+  while (i < lines.length) {
+    const line = lines[i]
+    // 检测tab分隔的表格行：至少有2个tab
+    if (line.includes('\t') && (line.match(/\t/g) || []).length >= 2) {
+      const tableLines: string[] = []
+      // 收集连续的tab分隔行
+      while (i < lines.length && lines[i].includes('\t') && (lines[i].match(/\t/g) || []).length >= 2) {
+        tableLines.push(lines[i])
+        i++
+      }
+      // 转换为HTML表格
+      let tableHtml = '<table><thead><tr>'
+      const headers = tableLines[0].split('\t')
+      headers.forEach(h => { tableHtml += `<th>${h.trim()}</th>` })
+      tableHtml += '</tr></thead><tbody>'
+      for (let j = 1; j < tableLines.length; j++) {
+        const cells = tableLines[j].split('\t')
+        tableHtml += '<tr>'
+        cells.forEach(c => { tableHtml += `<td>${c.trim()}</td>` })
+        tableHtml += '</tr>'
+      }
+      tableHtml += '</tbody></table>'
+      result.push(tableHtml)
+    } else {
+      result.push(line)
+      i++
+    }
+  }
+  html = result.join('\n')
+  
   // 行内代码
   html = html.replace(/`([^`]+)`/g, '<code>$1</code>')
   

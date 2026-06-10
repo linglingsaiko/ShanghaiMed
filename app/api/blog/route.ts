@@ -4,14 +4,14 @@ import path from 'path'
 import matter from 'gray-matter'
 import { getSortedPosts, calculateReadingTime } from '@/lib/blog-server'
 
-export async function GET(request: Request) {
+export function GET(request: Request) {
   const { searchParams } = new URL(request.url)
   const page = parseInt(searchParams.get('page') || '1')
   const category = searchParams.get('category')
   const tag = searchParams.get('tag')
   const search = searchParams.get('search')
   
-  let posts = await getSortedPosts()
+  let posts = getSortedPosts()
   
   if (search) {
     const searchLower = search.toLowerCase()

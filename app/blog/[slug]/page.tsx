@@ -5,8 +5,8 @@ export default function BlogDetailPage({ params }: { params: { slug: string } })
   return <BlogDetailComponent slug={params.slug} />
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const post = await getPostBySlug(params.slug)
+export function generateMetadata({ params }: { params: { slug: string } }) {
+  const post = getPostBySlug(params.slug)
   
   if (!post) {
     return {

@@ -6,7 +6,7 @@ export default function BlogDetailPage({ params }: { params: { slug: string } })
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const post = getPostBySlug(params.slug)
+  const post = await getPostBySlug(params.slug)
   
   if (!post) {
     return {
@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   return {
     title: post.seoTitle || post.title,
     description: post.metaDescription || post.excerpt,
-    keywords: post.keywords.join(', '),
+    keywords: (post.keywords || []).join(', '),
     openGraph: {
       title: post.seoTitle || post.title,
       description: post.metaDescription || post.excerpt,

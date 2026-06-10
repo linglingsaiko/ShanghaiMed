@@ -1,7 +1,6 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import { marked } from 'marked'
 import type { BlogPost, BlogQueryParams } from './types'
 import { 
   categories, 
@@ -25,13 +24,71 @@ export {
 
 const postsDirectory = path.join(process.cwd(), 'content', 'blog')
 
-marked.setOptions({
-  gfm: true,
-  breaks: false,
-})
-
 function renderMarkdownToHtml(content: string): string {
-  return marked(content) as string
+  let html = content
+  
+  // 代码块 (必须先处理，避免内部被其他规则污染)
+  html = html.replace(/```(\w*)\n([\s\S]*?)```/g, '<pre><code class="language-$1">$2</code></pre>')
+  
+  // 行内代码
+  html = html.replace(/`([^`]+)`/g, '<code>$1</code>')
+  
+  // 标题 (h2-h6，博客正文通常不用h1)
+  html = html.replace(/^######\s+(.+)$/gm, '<h6>$1</h6>')
+  html = html.replace(/^#####\s+(.+)$/gm, '<h5>$1</h5>')
+  html = html.replace(/^####\s+(.+)$/gm, '<h4>$1</h4>')
+  html = html.replace(/^###\s+(.+)$/gm, '<h3>$1</h3>')
+  html = html.replace(/^##\s+(.+)$/gm, '<h2>$1</h2>')
+  html = html.replace(/^#\s+(.+)$/gm, '<h1>$1</h1>')
+  
+  // 引用块
+  html = html.replace(/^>\s+(.+)$/gm, '<blockquote>$1</blockquote>')
+  // 合并连续blockquote
+  html = html.replace(/<\/blockquote>\n<blockquote>/g, '\n')
+  
+  // 粗体和斜体
+  html = html.replace(/\*\*\*(.+?)\*\*\*/g, '<strong><em>$1</em></strong>')
+  html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+  html = html.replace(/\*(.+?)\*/g, '<em>$1</em>')
+  
+  // 水平线
+  html = html.replace(/^---+$/gm, '<hr />')
+  
+  // 无序列表
+  html = html.replace(/^[-*+]\s+(.+)$/gm, '<li>$1</li>')
+  html = html.replace(/(<li>.*<\/li>\n?)+/g, (match) => `<ul>${match}</ul>`)
+  
+  // 有序列表
+  html = html.replace(/^\d+\.\s+(.+)$/gm, '<li>$1</li>')
+  
+  // 链接
+  html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
+  
+  // 图片
+  html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" />')
+  
+  // 段落：两个换行分隔的文本块
+  html = html.replace(/\n\n(?!<)/g, '\n\n<p>')
+  html = html.replace(/(?!>)\n\n/g, '</p>\n\n')
+  
+  // 清理：确保段落标签正确
+  html = html.replace(/<p>(<h[1-6]>)/g, '$1')
+  html = html.replace(/(<\/h[1-6]>)<\/p>/g, '$1')
+  html = html.replace(/<p>(<ul>)/g, '$1')
+  html = html.replace(/(<\/ul>)<\/p>/g, '$1')
+  html = html.replace(/<p>(<ol>)/g, '$1')
+  html = html.replace(/(<\/ol>)<\/p>/g, '$1')
+  html = html.replace(/<p>(<pre>)/g, '$1')
+  html = html.replace(/(<\/pre>)<\/p>/g, '$1')
+  html = html.replace(/<p>(<blockquote>)/g, '$1')
+  html = html.replace(/(<\/blockquote>)<\/p>/g, '$1')
+  html = html.replace(/<p>(<hr\s*\/?>)/g, '$1')
+  html = html.replace(/(<hr\s*\/?>)<\/p>/g, '$1')
+  
+  // 单个换行 → <br>
+  html = html.replace(/(?<!>)\n(?!<)/g, '<br />\n')
+  
+  return html
 }
 
 export function getSortedPosts(): BlogPost[] {

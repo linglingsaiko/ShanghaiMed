@@ -4,6 +4,7 @@ export interface BlogPost {
   slug: string
   excerpt: string
   content: string
+  htmlContent?: string
   category: string
   tags: string[]
   author: string

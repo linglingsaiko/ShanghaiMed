@@ -11,7 +11,7 @@ export async function GET(request: Request) {
   const tag = searchParams.get('tag')
   const search = searchParams.get('search')
   
-  let posts = getSortedPosts()
+  let posts = await getSortedPosts()
   
   if (search) {
     const searchLower = search.toLowerCase()

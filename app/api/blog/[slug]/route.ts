@@ -5,7 +5,7 @@ import matter from 'gray-matter'
 import { getPostBySlug } from '@/lib/blog-server'
 
 export async function GET(request: Request, { params }: { params: { slug: string } }) {
-  const post = getPostBySlug(params.slug)
+  const post = await getPostBySlug(params.slug)
   
   if (!post) {
     return NextResponse.json({ error: 'Article not found' }, { status: 404 })
@@ -17,7 +17,7 @@ export async function GET(request: Request, { params }: { params: { slug: string
 export async function PUT(request: Request, { params }: { params: { slug: string } }) {
   try {
     const body = await request.json()
-    const existingPost = getPostBySlug(params.slug)
+    const existingPost = await getPostBySlug(params.slug)
     
     if (!existingPost) {
       return NextResponse.json({ error: 'Article not found' }, { status: 404 })

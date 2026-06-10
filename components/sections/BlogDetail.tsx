@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import { ArrowLeft, ArrowRight, Calendar, User, Tag, Share2, Linkedin, Facebook, Twitter, List } from 'lucide-react'
 import type { BlogPost } from '@/lib/types'
-import { getNextPost, getPreviousPost, renderMarkdown, categories } from '@/lib/blog'
+import { getNextPost, getPreviousPost, categories } from '@/lib/blog'
 import BlogCTA from './BlogCTA'
 import Link from 'next/link'
 
@@ -12,7 +12,6 @@ interface BlogDetailProps {
 }
 
 export default function BlogDetail({ post }: BlogDetailProps) {
-  const [content, setContent] = useState('')
   const [showToc, setShowToc] = useState(false)
   const [headings, setHeadings] = useState<{ id: string; text: string; level: number }[]>([])
   const [nextPost, setNextPost] = useState<BlogPost | undefined>(undefined)
@@ -30,23 +29,17 @@ export default function BlogDetail({ post }: BlogDetailProps) {
   }, [post])
   
   useEffect(() => {
-    const fetchContent = async () => {
-      const html = await renderMarkdown(post.content)
-      setContent(html)
-      
-      const headingRegex = /<h([2-3])[^>]*>(.*?)<\/h[2-3]>/gi
-      const foundHeadings: { id: string; text: string; level: number }[] = []
-      let match
-      while ((match = headingRegex.exec(html)) !== null) {
-        const level = parseInt(match[1])
-        const text = match[2].replace(/<[^>]*>/g, '').trim()
-        const id = text.toLowerCase().replace(/[^a-z0-9]+/g, '-')
-        foundHeadings.push({ id, text, level })
-      }
-      setHeadings(foundHeadings)
+    const headingRegex = /<h([2-3])[^>]*>(.*?)<\/h[2-3]>/gi
+    const foundHeadings: { id: string; text: string; level: number }[] = []
+    let match
+    while ((match = headingRegex.exec(post.htmlContent || '')) !== null) {
+      const level = parseInt(match[1])
+      const text = match[2].replace(/<[^>]*>/g, '').trim()
+      const id = text.toLowerCase().replace(/[^a-z0-9]+/g, '-')
+      foundHeadings.push({ id, text, level })
     }
-    fetchContent()
-  }, [post.content])
+    setHeadings(foundHeadings)
+  }, [post.htmlContent])
   
   const handleShare = (platform: string) => {
     const url = encodeURIComponent(`${window.location.origin}/blog/${post.slug}`)
@@ -185,10 +178,7 @@ export default function BlogDetail({ post }: BlogDetailProps) {
               
               <div className="article-content prose prose-lg max-w-none">
                 <div 
-                  dangerouslySetInnerHTML={{ __html: content.replace(/<h([2-3])([^>]*)>(.*?)<\/h[2-3]>/gi, (_, level, attrs, text) => {
-                    const id = text.toLowerCase().replace(/[^a-z0-9]+/g, '-')
-                    return `<h${level}${attrs} id="${id}">${text}</h${level}>`
-                  }) }}
+                  dangerouslySetInnerHTML={{ __html: post.htmlContent || '' }}
                 />
               </div>
               

@@ -24,7 +24,23 @@ export {
 
 const postsDirectory = path.join(process.cwd(), 'content', 'blog')
 
-export function getSortedPosts(): BlogPost[] {
+async function renderMarkdownToHtml(content: string): Promise<string> {
+  const { unified } = await import('unified')
+  const remarkParse = (await import('remark-parse')).default
+  const remarkGfm = (await import('remark-gfm')).default
+  const remarkRehype = (await import('remark-rehype')).default
+  const rehypeStringify = (await import('rehype-stringify')).default
+  
+  const result = await unified()
+    .use(remarkParse)
+    .use(remarkGfm)
+    .use(remarkRehype)
+    .use(rehypeStringify)
+    .process(content)
+  return result.toString()
+}
+
+export async function getSortedPosts(): Promise<BlogPost[]> {
   let fileNames: string[] = []
   try {
     fileNames = fs.readdirSync(postsDirectory)
@@ -32,15 +48,16 @@ export function getSortedPosts(): BlogPost[] {
     return []
   }
   
-  const allPostsData = fileNames
+  const allPostsData = await Promise.all(fileNames
     .filter(fileName => fileName.endsWith('.md'))
-    .map(fileName => {
+    .map(async fileName => {
       const id = fileName.replace(/\.md$/, '')
       const fullPath = path.join(postsDirectory, fileName)
       const fileContents = fs.readFileSync(fullPath, 'utf8')
       const matterResult = matter(fileContents)
       
       const readingTime = calculateReadingTime(matterResult.content)
+      const htmlContent = await renderMarkdownToHtml(matterResult.content || '')
       
       return {
         id,
@@ -48,6 +65,7 @@ export function getSortedPosts(): BlogPost[] {
         title: matterResult.data.title || '',
         excerpt: matterResult.data.excerpt || '',
         content: matterResult.content || '',
+        htmlContent,
         category: matterResult.data.category || 'health-guides',
         tags: matterResult.data.tags || [],
         author: matterResult.data.author || 'ShanghaiMed Team',
@@ -62,20 +80,20 @@ export function getSortedPosts(): BlogPost[] {
         scheduledDate: matterResult.data.scheduledDate,
         views: matterResult.data.views || 0,
       } as BlogPost
-    })
+    }))
   
   return allPostsData.sort((a, b) => 
     new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()
   )
 }
 
-export function getPostBySlug(slug: string): BlogPost | undefined {
-  const posts = getSortedPosts()
+export async function getPostBySlug(slug: string): Promise<BlogPost | undefined> {
+  const posts = await getSortedPosts()
   return posts.find(post => post.slug === slug)
 }
 
-export function getPostsByQuery(params: BlogQueryParams): { posts: BlogPost[]; totalPages: number } {
-  let posts = getSortedPosts()
+export async function getPostsByQuery(params: BlogQueryParams): Promise<{ posts: BlogPost[]; totalPages: number }> {
+  let posts = await getSortedPosts()
   const page = params.page || 1
   const pageSize = 6
   
@@ -115,22 +133,22 @@ export function getPostSlugs(): string[] {
     .map(fileName => fileName.replace(/\.md$/, ''))
 }
 
-export function getRelatedPosts(currentPost: BlogPost, limit: number = 3): BlogPost[] {
-  const allPosts = getSortedPosts()
+export async function getRelatedPosts(currentPost: BlogPost, limit: number = 3): Promise<BlogPost[]> {
+  const allPosts = await getSortedPosts()
   return getRelatedPostsShared(allPosts, currentPost, limit)
 }
 
-export function getNextPost(currentPost: BlogPost): BlogPost | undefined {
-  const allPosts = getSortedPosts()
+export async function getNextPost(currentPost: BlogPost): Promise<BlogPost | undefined> {
+  const allPosts = await getSortedPosts()
   return getNextPostShared(allPosts, currentPost)
 }
 
-export function getPreviousPost(currentPost: BlogPost): BlogPost | undefined {
-  const allPosts = getSortedPosts()
+export async function getPreviousPost(currentPost: BlogPost): Promise<BlogPost | undefined> {
+  const allPosts = await getSortedPosts()
   return getPreviousPostShared(allPosts, currentPost)
 }
 
-export function getAllTags(): string[] {
-  const posts = getSortedPosts()
+export async function getAllTags(): Promise<string[]> {
+  const posts = await getSortedPosts()
   return getAllTagsShared(posts)
 }

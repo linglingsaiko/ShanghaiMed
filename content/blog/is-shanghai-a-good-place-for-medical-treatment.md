@@ -44,7 +44,7 @@ Cutting-edge technology. Shanghai's major hospitals invest heavily in advanced d
 Significant cost savings. Even with travel expenses factored in, treatment in Shanghai typically costs 40-70% less than equivalent care in the US or Western Europe.
 Geographic convenience. As a major international hub, Shanghai is easily accessible from most Asian cities, and visa policies have become increasingly foreigner-friendly.
 Public vs. International Hospitals: What's the Difference?
-A critical difference from the West: If you're from the US or Europe, you probably assume private hospitals deliver the best care. In China, that's not the case. China's top-tier medical institutions are public Grade 3A (三甲) hospitals—the country's most experienced specialists, most advanced equipment, and deepest expertise in complex cases are concentrated there. Think of it this way: in the US, the best hospitals are private (Mayo Clinic, Cleveland Clinic); in China, the best hospitals are public. This is a fundamental difference that shapes the entire healthcare landscape, and understanding it will help you make better decisions about your care.
+A critical difference from the West: If you're from the US or Europe, you probably assume private hospitals deliver the best care. In China, that's not the case. China's top-tier medical institutions are public Grade 3A hospitals—the country's most experienced specialists, most advanced equipment, and deepest expertise in complex cases are concentrated there. Think of it this way: in the US, the best hospitals are private (Mayo Clinic, Cleveland Clinic); in China, the best hospitals are public. This is a fundamental difference that shapes the entire healthcare landscape, and understanding it will help you make better decisions about your care.
 Shanghai offers two main pathways for international patients: public hospital international departments and private international hospitals. Each has distinct advantages.
 Public Hospital International Departments
 Advantages:
@@ -67,7 +67,7 @@ Comprehensive services under one roof (consultations, diagnostics, pharmacy, den
 Considerations:
 Higher costs than public hospital international departments
 For highly complex cases, specialists may refer to public hospital colleagues
-Some insurance companies classify certain private hospitals as High Cost Providers (HCP) or "expensive medical facilities" (昂贵医疗). Depending on your insurance plan, visits to HCP-listed hospitals may require a 20% copay—while the same treatment at non-HCP facilities would be covered in full. This is worth checking before you commit to a facility
+Some insurance companies classify certain private hospitals as High Cost Providers (HCP) or "expensive medical facilities". Depending on your insurance plan, visits to HCP-listed hospitals may require a 20% copay—while the same treatment at non-HCP facilities would be covered in full. This is worth checking before you commit to a facility
 Best for: Preventive care, routine checkups, minor procedures, dental work, pediatrics, and patients who prioritize comfort and communication.
 Many international patients use a combination of both: complex treatment at public hospital international departments where top specialists and advanced equipment are concentrated, routine follow-ups and preventive care at private international clinics where the experience is more comfortable.
 Typical Medical Costs: A Real Comparison
@@ -89,19 +89,19 @@ Private international hospitals offer a fully English-speaking experience—rece
 Insurance Acceptance: Can You Use Your Plan?
 Many international patients wonder whether their health insurance will work in Shanghai. The answer is increasingly yes.
 Direct billing is available at both public hospital international departments and private international hospitals in Shanghai—the process is equally smooth at both types of facilities. The hospital bills your insurance company directly; you pay only what your plan doesn't cover. Private international hospitals currently have the most extensive direct billing networks, though major public hospital international departments are rapidly expanding their insurance partnerships.
-Watch out for the "expensive medical facility" classification. Some private hospitals are categorized by insurers as High Cost Providers (HCPs) or "expensive medical facilities" (昂贵医疗). If your insurance plan includes HCP coverage, treatment at these facilities is typically covered in full. However, many plans offer a lower-premium option with a 20% copay at HCPs—meaning you pay 20% out-of-pocket at these facilities while receiving 100% coverage elsewhere. This is the most popular plan choice among expats in China (84% opt for some form of HCP copay to reduce premiums). Check your specific plan details before committing to a facility.
+Watch out for the "expensive medical facility" classification. Some private hospitals are categorized by insurers as High Cost Providers (HCPs) or "expensive medical facilities" . If your insurance plan includes HCP coverage, treatment at these facilities is typically covered in full. However, many plans offer a lower-premium option with a 20% copay at HCPs—meaning you pay 20% out-of-pocket at these facilities while receiving 100% coverage elsewhere. This is the most popular plan choice among expats in China (84% opt for some form of HCP copay to reduce premiums). Check your specific plan details before committing to a facility.
 Major international insurance providers accepted in Shanghai include:
-MSH International (万欣和)
+MSH International 
 Bupa Global
 Cigna Global
 Aetna International
 AXA Partners / ICBC-AXA
 Allianz Care
 Now Health International
-Prudential (保诚 — cross-border direct billing with United Family)
-AIA (友邦保险)
-Cigna & CMB (招商信诺)
-Ping An Health (平安健康)
+Prudential
+AIA 
+Cigna & CMB 
+Ping An Health 
 Pacific Prime
 International SOS
 GeoBlue

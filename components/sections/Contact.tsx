@@ -32,6 +32,8 @@ const Contact: React.FC = () => {
         body: JSON.stringify({
           fullName: formData.name,
           email: formData.email,
+          country: formData.country,
+          phone: formData.phone,
           medicalNeeds: formData.medicalNeeds,
           message: formData.message,
         }),
@@ -205,6 +207,53 @@ const Contact: React.FC = () => {
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-colors"
                     placeholder="your@email.com"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="country"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
+                    Country *
+                  </label>
+                  <select
+                    id="country"
+                    name="country"
+                    required
+                    value={formData.country}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-colors"
+                  >
+                    <option value="">Select your country *</option>
+                    <option value="United States">United States</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Japan">Japan</option>
+                    <option value="South Korea">South Korea</option>
+                    <option value="Singapore">Singapore</option>
+                    <option value="Germany">Germany</option>
+                    <option value="France">France</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="phone"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
+                    Phone / WhatsApp
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-colors"
+                    placeholder="Phone / WhatsApp (optional)"
                   />
                 </div>
 

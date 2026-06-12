@@ -9,9 +9,9 @@ function genSign(secret: string, timestamp: number): string {
 
 export async function POST(request: NextRequest) {
   try {
-    const { fullName, email, medicalNeeds, message } = await request.json();
+    const { fullName, email, medicalNeeds, message, country, phone } = await request.json();
 
-    if (!fullName || !email || !medicalNeeds) {
+    if (!fullName || !email || !country || !medicalNeeds) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
     }
 
@@ -33,7 +33,9 @@ export async function POST(request: NextRequest) {
         },
         elements: [
           { tag: 'div', text: { content: `**姓名：** ${fullName}`, tag: 'lark_md' } },
+          { tag: 'div', text: { content: `**国家：** ${country}`, tag: 'lark_md' } },
           { tag: 'div', text: { content: `**邮箱：** ${email}`, tag: 'lark_md' } },
+          { tag: 'div', text: { content: `**电话/WhatsApp：** ${phone || '未提供'}`, tag: 'lark_md' } },
           { tag: 'div', text: { content: `**需求：** ${medicalNeeds}`, tag: 'lark_md' } },
           { tag: 'div', text: { content: `**留言：** ${message || '无'}`, tag: 'lark_md' } },
           { tag: 'div', text: { content: `**时间：** ${new Date().toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' })}`, tag: 'lark_md' } }

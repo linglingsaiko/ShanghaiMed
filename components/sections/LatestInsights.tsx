@@ -6,24 +6,19 @@ import { getSortedPosts, categories } from '@/lib/blog'
 import type { BlogPost } from '@/lib/types'
 import Link from 'next/link'
 
-// 首页固定显示的三篇文章，按顺序排列
-const FEATURED_POST_SLUGS = [
-  'traditional-chinese-medicine-in-shanghai',
-  'the-complete-guide-to-medical-checkups-in-shanghai-for-international-visitors',
-  'is-shanghai-a-good-place-for-medical-treatment',
-]
-
 export default function LatestInsights() {
   const [posts, setPosts] = useState<BlogPost[]>([])
   
   useEffect(() => {
     const fetchPosts = async () => {
       const allPosts = await getSortedPosts()
-      // 按指定顺序获取固定的三篇文章
-      const featuredPosts = FEATURED_POST_SLUGS
-        .map(slug => allPosts.find(post => post.slug === slug))
-        .filter((post): post is BlogPost => post !== undefined)
-      setPosts(featuredPosts)
+      const featuredPost = allPosts.find(p => p.featured)
+      const latestPosts = allPosts.filter(p => !p.featured).slice(0, 2)
+      if (featuredPost) {
+        setPosts([featuredPost, ...latestPosts])
+      } else {
+        setPosts(allPosts.slice(0, 3))
+      }
     }
     fetchPosts()
   }, [])

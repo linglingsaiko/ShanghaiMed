@@ -18,6 +18,7 @@ export interface BlogPost {
   status: 'draft' | 'published' | 'scheduled'
   scheduledDate?: string
   views: number
+  featured?: boolean
 }
 
 export interface Category {

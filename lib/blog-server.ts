@@ -165,12 +165,15 @@ export function getSortedPosts(): BlogPost[] {
         status: matterResult.data.status || 'draft',
         scheduledDate: matterResult.data.scheduledDate,
         views: matterResult.data.views || 0,
+        featured: matterResult.data.featured || false,
       } as BlogPost
     })
   
-  return allPostsData.sort((a, b) => 
-    new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()
-  )
+  return allPostsData.sort((a, b) => {
+    if (a.featured && !b.featured) return -1
+    if (!a.featured && b.featured) return 1
+    return new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()
+  })
 }
 
 export function getPostBySlug(slug: string): BlogPost | undefined {

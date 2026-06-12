@@ -29,7 +29,12 @@ const Contact: React.FC = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          fullName: formData.name,
+          email: formData.email,
+          medicalNeeds: formData.medicalNeeds,
+          message: formData.message,
+        }),
       })
 
       if (response.ok) {

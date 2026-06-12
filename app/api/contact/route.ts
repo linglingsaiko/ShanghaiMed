@@ -1,60 +1,46 @@
-import { NextRequest, NextResponse } from 'next/server'
-import nodemailer from 'nodemailer'
+import { NextRequest, NextResponse } from 'next/server';
 
 export async function POST(request: NextRequest) {
   try {
-    const data = await request.json()
+    const { fullName, email, medicalNeeds, message } = await request.json();
 
-    const { name, email, medicalNeeds, message } = data
-
-    const transporter = nodemailer.createTransport({
-      host: 'smtp.163.com',
-      port: 465,
-      secure: true,
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
-    })
-
-    const mailOptions = {
-      from: process.env.SMTP_USER,
-      to: process.env.CONTACT_EMAIL || 'kagamiya33@163.com',
-      subject: `New Medical Consultation Request from ${name}`,
-      html: `
-        <h2>New Consultation Request</h2>
-        <table style="border-collapse: collapse; width: 100%;">
-          <tr style="border-bottom: 1px solid #ddd;">
-            <td style="padding: 8px; font-weight: bold;">Name:</td>
-            <td style="padding: 8px;">${name}</td>
-          </tr>
-          <tr style="border-bottom: 1px solid #ddd;">
-            <td style="padding: 8px; font-weight: bold;">Email:</td>
-            <td style="padding: 8px;">${email}</td>
-          </tr>
-          <tr style="border-bottom: 1px solid #ddd;">
-            <td style="padding: 8px; font-weight: bold;">Medical Needs:</td>
-            <td style="padding: 8px;">${medicalNeeds || 'Not specified'}</td>
-          </tr>
-          <tr>
-            <td style="padding: 8px; font-weight: bold;">Message:</td>
-            <td style="padding: 8px;">${message || 'No message provided'}</td>
-          </tr>
-        </table>
-        <p style="margin-top: 20px; color: #666;">
-          Submitted at: ${new Date().toLocaleString('en-US', { timeZone: 'Asia/Shanghai' })}
-        </p>
-      `,
+    if (!fullName || !email || !medicalNeeds) {
+      return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
     }
 
-    await transporter.sendMail(mailOptions)
+    const webhookUrl = process.env.FEISHU_WEBHOOK_URL;
+    if (!webhookUrl) {
+      return NextResponse.json({ error: 'Webhook not configured' }, { status: 500 });
+    }
 
-    return NextResponse.json({ success: true, message: 'Email sent successfully' })
+    const response = await fetch(webhookUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        msg_type: 'interactive',
+        card: {
+          header: {
+            title: { content: '🩺 新客户咨询', tag: 'plain_text' },
+            template: 'green'
+          },
+          elements: [
+            { tag: 'div', text: { content: `**姓名：** ${fullName}`, tag: 'lark_md' } },
+            { tag: 'div', text: { content: `**邮箱：** ${email}`, tag: 'lark_md' } },
+            { tag: 'div', text: { content: `**需求：** ${medicalNeeds}`, tag: 'lark_md' } },
+            { tag: 'div', text: { content: `**留言：** ${message || '无'}`, tag: 'lark_md' } },
+            { tag: 'div', text: { content: `**时间：** ${new Date().toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' })}`, tag: 'lark_md' } }
+          ]
+        }
+      })
+    });
+
+    if (!response.ok) {
+      throw new Error('Feishu webhook failed');
+    }
+
+    return NextResponse.json({ success: true });
   } catch (error) {
-    console.error('Error sending email:', error)
-    return NextResponse.json(
-      { success: false, message: 'Failed to send email' },
-      { status: 500 }
-    )
+    console.error('Contact form error:', error);
+    return NextResponse.json({ error: 'Failed to send message' }, { status: 500 });
   }
 }

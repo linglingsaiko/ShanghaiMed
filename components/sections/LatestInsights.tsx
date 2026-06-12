@@ -24,7 +24,7 @@ export default function LatestInsights() {
   }, [])
   
   return (
-    <section id="insights" className="py-16 bg-gray-50">
+    <section id="insights" className="py-16 bg-gray-50 scroll-mt-24">
       <div className="section-container">
         <div className="flex items-center justify-between mb-10">
           <div>

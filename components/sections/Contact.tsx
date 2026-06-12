@@ -17,6 +17,18 @@ const Contact: React.FC = () => {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
+  const [showCustomCountry, setShowCustomCountry] = useState(false)
+
+  const handleCountryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const val = e.target.value;
+    if (val === 'Other') {
+      setShowCustomCountry(true);
+      setFormData((prev) => ({ ...prev, country: '' }));
+    } else {
+      setShowCustomCountry(false);
+      setFormData((prev) => ({ ...prev, country: val }));
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -221,8 +233,8 @@ const Contact: React.FC = () => {
                     id="country"
                     name="country"
                     required
-                    value={formData.country}
-                    onChange={handleChange}
+                    value={showCustomCountry ? 'Other' : formData.country}
+                    onChange={handleCountryChange}
                     className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-colors"
                   >
                     <option value="">Select your country *</option>
@@ -237,6 +249,16 @@ const Contact: React.FC = () => {
                     <option value="France">France</option>
                     <option value="Other">Other</option>
                   </select>
+                  {showCustomCountry && (
+                    <input
+                      type="text"
+                      name="customCountry"
+                      placeholder="Enter your country *"
+                      required
+                      onChange={(e) => setFormData((prev) => ({ ...prev, country: e.target.value }))}
+                      className="mt-2 w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-colors"
+                    />
+                  )}
                 </div>
 
                 <div>

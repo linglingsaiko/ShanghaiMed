@@ -51,6 +51,11 @@ export default function LatestInsights() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
                   />
+                  {post.featured && (
+                    <div className="absolute top-3 left-3 bg-amber-500 text-white text-xs font-semibold px-2.5 py-1 rounded-md shadow-sm">
+                      ★ Featured
+                    </div>
+                  )}
                 </div>
               )}
               <div className="p-6">

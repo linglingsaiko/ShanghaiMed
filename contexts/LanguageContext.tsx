@@ -106,7 +106,7 @@ export const translations = {
       submit: 'Get Free Consultation',
       submitting: 'Sending...',
       successTitle: 'Thank You!',
-      successMessage: 'Our AI Navigator has received your inquiry and a human coordinator will follow up within 24 hours. For immediate assistance, reach us on WhatsApp.',
+      successMessage: 'Thank you! Our AI Navigator has received your inquiry and our team will follow up within 24 hours. You can also reach us on WhatsApp — we\'ll respond as soon as possible.',
       sendAnother: 'Send Another Message',
       whatsapp: 'Chat on WhatsApp',
     },

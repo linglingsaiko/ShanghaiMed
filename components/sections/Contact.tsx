@@ -149,7 +149,7 @@ const Contact: React.FC = () => {
                   Thank You!
                 </h3>
                 <p className="text-gray-600 mb-6">
-                  Our AI Navigator has received your inquiry and a human coordinator will follow up within 24 hours. For immediate assistance, reach us on WhatsApp.
+                  Thank you! Our AI Navigator has received your inquiry and our team will follow up within 24 hours. You can also reach us on WhatsApp — we'll respond as soon as possible.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button onClick={() => setSubmitted(false)} variant="outline">

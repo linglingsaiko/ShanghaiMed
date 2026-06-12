@@ -80,7 +80,7 @@ const Pricing: React.FC = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <span className="text-accent font-semibold text-sm tracking-wider uppercase">
-            Care Team
+            Pricing
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Medical Concierge Program

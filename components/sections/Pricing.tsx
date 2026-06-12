@@ -79,6 +79,9 @@ const Pricing: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
+          <span className="text-accent font-semibold text-sm tracking-wider uppercase">
+            Care Team
+          </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Medical Concierge Program
           </h2>

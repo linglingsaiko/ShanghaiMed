@@ -93,7 +93,6 @@ Typical Prices
 
 One of the most compelling reasons international patients choose Shanghai for health screenings is cost. The following comparison illustrates typical pricing across three tiers.
 
-表格
 Package Level	Shanghai	United States	Potential Savings
 Basic Screening	$200–400	$800–1,500	60–75%
 Standard Checkup	$500–1,000	$2,500–4,000	65–80%

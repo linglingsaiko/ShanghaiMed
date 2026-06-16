@@ -98,79 +98,35 @@ const AgentChat: React.FC = () => {
         })
 
 
-        const observer = new MutationObserver((mutations) => {
+        const positionInterval = setInterval(() => {
 
-          for (const mutation of mutations) {
+          const allElements = document.querySelectorAll('*');
 
-            for (const node of Array.from(mutation.addedNodes)) {
+          allElements.forEach((el) => {
 
-              if (!(node instanceof HTMLElement)) continue
+            const htmlEl = el as HTMLElement;
 
-              if (node.tagName === 'DIV' && node.style.position === 'fixed') {
+            const style = window.getComputedStyle(htmlEl);
 
-                const svg = node.querySelector('svg')
+            if (style.position === 'fixed') {
 
-                const waLink = node.querySelector('a[href*="wa.me"]')
+              const hasImg = htmlEl.querySelector('img');
 
-                if (svg && !waLink) {
+              const isWhatsApp =
 
-                  node.style.bottom = '96px'
+                htmlEl.closest('a[href*="wa.me"]') ||
 
-                  node.style.right = '24px'
+                htmlEl.closest('[class*="whatsapp"]') ||
 
-                  const img = node.querySelector('img')
+                htmlEl.closest('[aria-label*="WhatsApp"]');
 
-                  if (img) {
+              if (hasImg && !isWhatsApp) {
 
-                    img.style.borderRadius = '50%'
+                if (htmlEl.style.bottom !== '96px') {
 
-                    img.style.width = '56px'
+                  htmlEl.style.bottom = '96px';
 
-                    img.style.height = '56px'
-
-                    img.style.objectFit = 'cover'
-
-                  }
-
-                  observer.disconnect()
-
-                  return
-
-                }
-
-              }
-
-              const fixedDiv = node.querySelector?.('div[style*="position: fixed"]') as HTMLElement | null
-
-              if (fixedDiv) {
-
-                const svg = fixedDiv.querySelector('svg')
-
-                const waLink = fixedDiv.querySelector('a[href*="wa.me"]')
-
-                if (svg && !waLink) {
-
-                  fixedDiv.style.bottom = '96px'
-
-                  fixedDiv.style.right = '24px'
-
-                  const img = fixedDiv.querySelector('img')
-
-                  if (img) {
-
-                    img.style.borderRadius = '50%'
-
-                    img.style.width = '56px'
-
-                    img.style.height = '56px'
-
-                    img.style.objectFit = 'cover'
-
-                  }
-
-                  observer.disconnect()
-
-                  return
+                  htmlEl.style.right = '24px';
 
                 }
 
@@ -178,11 +134,16 @@ const AgentChat: React.FC = () => {
 
             }
 
-          }
+          });
 
-        })
+        }, 500);
 
-        observer.observe(document.body, { childList: true, subtree: true })
+
+        return () => {
+
+          clearInterval(positionInterval);
+
+        };
 
       }
 

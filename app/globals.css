@@ -107,68 +107,6 @@ body {
   animation: bounce-in 0.5s ease-out;
 }
 
-/* Navi avatar rounded */
-img[alt="Navi"],
-.coze-chat-avatar img,
-.coze-webchat-avatar img {
-  border-radius: 50% !important;
-}
-
-/* Navi 悬浮球位置：WhatsApp 按钮上方 - 宽泛选择器 */
-button[style*="position"][style*="fixed"],
-div[style*="position: fixed"] > button,
-[id*="coze"] button,
-[class*="coze"] button,
-[class*="CozeWebSDK"] button,
-[data-testid*="coze"] button,
-[role="button"][style*="fixed"] {
-  bottom: 96px !important;
-  right: 24px !important;
-}
-
-/* 排除 WhatsApp 按钮，保持原位 */
-a[href*="wa.me"],
-button[aria-label*="WhatsApp"],
-[class*="whatsapp"],
-[class*="WhatsApp"] {
-  bottom: 24px !important;
-  right: 24px !important;
-}
-
-/* Coze SDK Custom Styles - Force position and size */
-.coze-web-sdk-assistant-btn,
-.coze-chat-assistant-btn,
-[class*="coze"][class*="asst"],
-[class*="CozeWebSDK"][class*="btn"] {
-  width: 56px !important;
-  height: 56px !important;
-  background: transparent !important;
-  background-color: transparent !important;
-}
-
-/* Override default Coze background */
-[class*="coze"] [class*="asst-btn"],
-[class*="CozeWebSDK"] [class*="asst-btn"] {
-  background: #00B37E !important;
-  border-radius: 50% !important;
-  overflow: hidden !important;
-}
-
-/* Avatar image inside button - no content replacement, just style */
-.coze-web-sdk-assistant-btn img,
-.coze-chat-assistant-btn img,
-[class*="coze"] [class*="avatar"] img,
-[class*="CozeWebSDK"] [class*="avatar"] img,
-[class*="coze"] [class*="asst"] img {
-  width: 100% !important;
-  height: 100% !important;
-  max-width: 56px !important;
-  max-height: 56px !important;
-  border-radius: 50% !important;
-  object-fit: cover !important;
-  display: block !important;
-}
-
 /* Responsive Table */
 .table-container {
   overflow-x: auto;

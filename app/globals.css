@@ -317,14 +317,4 @@ button[aria-label*="WhatsApp"],
   right: 24px !important;
 }
 
-/* 隐藏 Coze SDK 官方 banner */
-[class*="coze"] [class*="banner"],
-[class*="coze"] [class*="official"],
-[class*="CozeWebSDK"] [class*="banner"],
-[class*="coze"] [class*="footer"],
-[class*="coze"] [class*="copyright"] {
-  display: none !important;
-  visibility: hidden !important;
-}
-
 

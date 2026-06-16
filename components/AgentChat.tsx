@@ -43,7 +43,7 @@ const AgentChat: React.FC = () => {
           componentProps: {
             title: 'Navi - Medical Navigator',
             icon: '/images/navi-avatar.png',
-            chatInputPlaceholder: 'Ask me about healthcare in Shanghai...',
+            placeholder: 'Ask me about healthcare in Shanghai...',
           },
           ui: {
             asstBtn: {
@@ -93,6 +93,13 @@ const AgentChat: React.FC = () => {
               console.log('[Navi AI] Position adjusted:', htmlEl.tagName, htmlEl.className.substring(0, 50));
             }
           }
+        }
+
+        // Hide SDK banner text
+        if (htmlEl.textContent?.includes('web_sdk_official_banner') || 
+            htmlEl.textContent?.includes('Coze') ||
+            htmlEl.textContent?.includes('扣子')) {
+          htmlEl.style.display = 'none';
         }
       });
     }, 500);

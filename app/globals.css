@@ -114,7 +114,7 @@ img[alt="Navi"],
   border-radius: 50% !important;
 }
 
-/* Coze SDK Custom Styles */
+/* Coze SDK Custom Styles - Force position and size */
 .coze-web-sdk-assistant-btn,
 .coze-chat-assistant-btn,
 [class*="coze"][class*="asst"],
@@ -123,17 +123,31 @@ img[alt="Navi"],
   right: 24px !important;
   width: 56px !important;
   height: 56px !important;
+  background: transparent !important;
+  background-color: transparent !important;
 }
 
+/* Override default Coze background */
+[class*="coze"] [class*="asst-btn"],
+[class*="CozeWebSDK"] [class*="asst-btn"] {
+  background: #00B37E !important;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+}
+
+/* Avatar image inside button - no content replacement, just style */
 .coze-web-sdk-assistant-btn img,
 .coze-chat-assistant-btn img,
 [class*="coze"] [class*="avatar"] img,
-[class*="CozeWebSDK"] [class*="avatar"] img {
-  width: 56px !important;
-  height: 56px !important;
+[class*="CozeWebSDK"] [class*="avatar"] img,
+[class*="coze"] [class*="asst"] img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 56px !important;
+  max-height: 56px !important;
   border-radius: 50% !important;
   object-fit: cover !important;
-  content: url('/images/navi-avatar.png') !important;
+  display: block !important;
 }
 
 /* Responsive Table */

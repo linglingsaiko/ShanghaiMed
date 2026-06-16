@@ -300,4 +300,21 @@ button[aria-label*="WhatsApp"],
   margin: 1rem 0;
 }
 
+/* Navi 悬浮球移到 WhatsApp 上方 */
+[class*="coze"] > button,
+[id*="coze"] button,
+[class*="coze-web"] button,
+[id*="coze-web"] button {
+  bottom: 96px !important;
+  right: 24px !important;
+}
+
+/* 强制 WhatsApp 按钮在右下角 */
+a[href*="wa.me"],
+button[aria-label*="WhatsApp"],
+.fixed.bottom-6.right-6 {
+  bottom: 24px !important;
+  right: 24px !important;
+}
+
 

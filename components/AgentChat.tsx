@@ -43,6 +43,7 @@ const AgentChat: React.FC = () => {
           componentProps: {
             title: 'Navi - Medical Navigator',
             icon: '/images/navi-avatar.png',
+            chatInputPlaceholder: 'Ask me about healthcare in Shanghai...',
           },
           ui: {
             asstBtn: {
@@ -67,43 +68,34 @@ const AgentChat: React.FC = () => {
 
     // Fallback: JS-based position adjustment for Coze SDK button
     const positionInterval = setInterval(() => {
-      // Debug: Log all fixed position elements
-      const allFixedElements = document.querySelectorAll('[style*="position"]');
-      let foundFixed = false;
-      allFixedElements.forEach((el) => {
-        const htmlEl = el as HTMLElement;
-        const style = window.getComputedStyle(htmlEl);
-        if (style.position === 'fixed') {
-          foundFixed = true;
-          console.log('[Navi AI] Fixed element found:', htmlEl.tagName, htmlEl.className, htmlEl.id, htmlEl.style.cssText);
-        }
-      });
-      
-      if (!foundFixed) {
-        console.log('[Navi AI] No fixed elements found');
-      }
-
-      // Try to find and adjust Coze SDK button
+      // Find all elements and check if they are fixed position with Navi avatar
       const allElements = document.querySelectorAll('*');
       allElements.forEach((el) => {
         const htmlEl = el as HTMLElement;
         const style = window.getComputedStyle(htmlEl);
-        if (
-          style.position === 'fixed' &&
-          htmlEl.querySelector('img') &&
-          !htmlEl.closest('a[href*="wa.me"]') &&
-          !htmlEl.closest('[class*="whatsapp"]') &&
-          !htmlEl.closest('[class*="WhatsApp"]') &&
-          !htmlEl.closest('[aria-label*="WhatsApp"]')
-        ) {
-          if (htmlEl.style.bottom !== '96px') {
-            htmlEl.style.bottom = '96px';
-            htmlEl.style.right = '24px';
-            console.log('[Navi AI] Position adjusted via JS:', htmlEl.tagName, htmlEl.className);
+        
+        // Check if it's a fixed position element
+        if (style.position === 'fixed') {
+          // Check if it contains an image (likely the chat button)
+          const hasImg = htmlEl.querySelector('img');
+          
+          // Exclude WhatsApp button
+          const isWhatsApp = 
+            htmlEl.closest('a[href*="wa.me"]') ||
+            htmlEl.closest('[class*="whatsapp"]') ||
+            htmlEl.closest('[aria-label*="WhatsApp"]');
+          
+          if (hasImg && !isWhatsApp) {
+            // This is likely the Coze SDK Navi button
+            if (style.bottom !== '96px') {
+              htmlEl.style.bottom = '96px';
+              htmlEl.style.right = '24px';
+              console.log('[Navi AI] Position adjusted:', htmlEl.tagName, htmlEl.className.substring(0, 50));
+            }
           }
         }
       });
-    }, 1000);
+    }, 500);
 
     return () => {
       clearInterval(positionInterval);

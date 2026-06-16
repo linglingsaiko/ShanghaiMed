@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 
 declare global {
@@ -9,7 +9,13 @@ declare global {
 
     CozeWebSDK?: {
 
-      WebChatClient: new (options: Record<string, unknown>) => void
+      WebChatClient: new (options: Record<string, unknown>) => {
+
+        showChatBot: () => void
+
+        hideChatBot: () => void
+
+      }
 
     }
 
@@ -19,6 +25,11 @@ declare global {
 
 
 const AgentChat: React.FC = () => {
+
+  const [client, setClient] = useState<ReturnType<typeof window.CozeWebSDK.WebChatClient> | null>(null)
+
+  const [isOpen, setIsOpen] = useState(false)
+
 
   useEffect(() => {
 
@@ -41,7 +52,7 @@ const AgentChat: React.FC = () => {
 
         const patToken = process.env.NEXT_PUBLIC_COZE_PAT || ''
 
-        new window.CozeWebSDK.WebChatClient({
+        const sdkClient = new window.CozeWebSDK.WebChatClient({
 
           config: {
 
@@ -67,8 +78,6 @@ const AgentChat: React.FC = () => {
 
             title: 'ShanghaiMed Navigator',
 
-            icon: '/images/navi-avatar.png',
-
             placeholder: 'Ask me about healthcare in Shanghai...',
 
           },
@@ -77,7 +86,7 @@ const AgentChat: React.FC = () => {
 
             asstBtn: {
 
-              isNeed: true,
+              isNeed: false,
 
             },
 
@@ -97,53 +106,7 @@ const AgentChat: React.FC = () => {
 
         })
 
-
-        const positionInterval = setInterval(() => {
-
-          const allElements = document.querySelectorAll('*');
-
-          allElements.forEach((el) => {
-
-            const htmlEl = el as HTMLElement;
-
-            const style = window.getComputedStyle(htmlEl);
-
-            if (style.position === 'fixed') {
-
-              const hasImg = htmlEl.querySelector('img');
-
-              const isWhatsApp =
-
-                htmlEl.closest('a[href*="wa.me"]') ||
-
-                htmlEl.closest('[class*="whatsapp"]') ||
-
-                htmlEl.closest('[aria-label*="WhatsApp"]');
-
-              if (hasImg && !isWhatsApp) {
-
-                if (htmlEl.style.bottom !== '96px') {
-
-                  htmlEl.style.bottom = '96px';
-
-                  htmlEl.style.right = '24px';
-
-                }
-
-              }
-
-            }
-
-          });
-
-        }, 500);
-
-
-        return () => {
-
-          clearInterval(positionInterval);
-
-        };
+        setClient(sdkClient)
 
       }
 
@@ -173,7 +136,90 @@ const AgentChat: React.FC = () => {
   }, [])
 
 
-  return null
+  const toggleChat = () => {
+
+    if (!client) return
+
+    if (isOpen) {
+
+      client.hideChatBot()
+
+      setIsOpen(false)
+
+    } else {
+
+      client.showChatBot()
+
+      setIsOpen(true)
+
+    }
+
+  }
+
+
+  return (
+
+    <button
+
+      onClick={toggleChat}
+
+      aria-label="Open AI Navigator"
+
+      style={{
+
+        position: 'fixed',
+
+        bottom: '96px',
+
+        right: '24px',
+
+        width: '56px',
+
+        height: '56px',
+
+        borderRadius: '50%',
+
+        border: 'none',
+
+        padding: 0,
+
+        cursor: 'pointer',
+
+        zIndex: 40,
+
+        boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+
+        overflow: 'hidden',
+
+        background: '#00B37E',
+
+      }}
+
+    >
+
+      <img
+
+        src="/images/navi-avatar.png"
+
+        alt="Navi"
+
+        style={{
+
+          width: '100%',
+
+          height: '100%',
+
+          objectFit: 'cover',
+
+          borderRadius: '50%',
+
+        }}
+
+      />
+
+    </button>
+
+  )
 
 }
 

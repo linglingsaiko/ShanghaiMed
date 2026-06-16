@@ -28,7 +28,11 @@ const AgentChat: React.FC = () => {
             bot_id: '7641560175996059663',
           },
           auth: {
-            type: 'unauth',
+            type: 'token',
+            token: process.env.NEXT_PUBLIC_COZE_PAT || '',
+            onRefreshToken: function () {
+              return process.env.NEXT_PUBLIC_COZE_PAT || ''
+            }
           },
           componentProps: {
             title: 'Navi - Medical Navigator',

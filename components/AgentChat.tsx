@@ -36,6 +36,7 @@ const AgentChat: React.FC = () => {
           },
           componentProps: {
             title: 'ShanghaiMed Navigator',
+            icon: '/images/navi-avatar.png',
             placeholder: 'Ask me about healthcare in Shanghai...',
           },
           ui: {
@@ -63,6 +64,23 @@ const AgentChat: React.FC = () => {
         }
       }, 100)
     }
+
+    // Position: Navi button above WhatsApp
+    const positionInterval = setInterval(() => {
+      const cozeContainer = document.querySelector('[id*="coze"]')
+        || document.querySelector('[class*="coze-web-chat"]');
+      if (cozeContainer) {
+        const btn = cozeContainer.querySelector('button') as HTMLElement;
+        if (btn && btn.style.bottom !== '96px') {
+          btn.style.bottom = '96px';
+          btn.style.right = '24px';
+        }
+      }
+    }, 300);
+
+    return () => {
+      clearInterval(positionInterval);
+    };
   }, [])
 
   return null

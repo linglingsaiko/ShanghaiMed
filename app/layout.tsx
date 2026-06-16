@@ -135,8 +135,6 @@ export default function RootLayout({
           }}
         />
 
-        {/* Coze Web SDK for AI Chat */}
-        <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.19/libs/cn/index.js" async></script>
       </body>
     </html>
   )

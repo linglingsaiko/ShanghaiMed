@@ -67,16 +67,20 @@ const AgentChat: React.FC = () => {
 
     // Position: Navi button above WhatsApp
     const positionInterval = setInterval(() => {
-      const cozeContainer = document.querySelector('[id*="coze"]')
-        || document.querySelector('[class*="coze-web-chat"]');
-      if (cozeContainer) {
-        const btn = cozeContainer.querySelector('button') as HTMLElement;
-        if (btn && btn.style.bottom !== '96px') {
-          btn.style.bottom = '96px';
-          btn.style.right = '24px';
+      const fixedEls = document.querySelectorAll('div[style*="position: fixed"]');
+      fixedEls.forEach((el) => {
+        const htmlEl = el as HTMLElement;
+        const style = htmlEl.style;
+        const hasWhatsApp = htmlEl.querySelector('a[href*="wa.me"]');
+        if (!hasWhatsApp && style.position === 'fixed') {
+          const hasCozeContent = htmlEl.querySelector('[class*="coze"]') || htmlEl.querySelector('[id*="coze"]');
+          if (hasCozeContent && style.bottom !== '96px') {
+            htmlEl.style.bottom = '96px';
+            htmlEl.style.right = '24px';
+          }
         }
-      }
-    }, 300);
+      });
+    }, 500);
 
     return () => {
       clearInterval(positionInterval);

@@ -23,19 +23,26 @@ const AgentChat: React.FC = () => {
     // Initialize chat widget after SDK loads
     const initChat = () => {
       if (window.CozeWebSDK) {
+        // Debug: Check if PAT token is loaded
+        const patToken = process.env.NEXT_PUBLIC_COZE_PAT || ''
+        console.log('[Navi AI] PAT Token loaded:', patToken ? 'Yes (length: ' + patToken.length + ')' : 'No')
+        
         new window.CozeWebSDK.WebChatClient({
           config: {
             bot_id: '7641560175996059663',
           },
           auth: {
             type: 'token',
-            token: process.env.NEXT_PUBLIC_COZE_PAT || '',
+            token: patToken,
             onRefreshToken: function () {
-              return process.env.NEXT_PUBLIC_COZE_PAT || ''
+              const refreshToken = process.env.NEXT_PUBLIC_COZE_PAT || ''
+              console.log('[Navi AI] Refresh token called, token:', refreshToken ? 'Yes' : 'No')
+              return refreshToken
             }
           },
           componentProps: {
             title: 'Navi - Medical Navigator',
+            icon: '/images/navi-avatar.png',
           },
           ui: {
             asstBtn: {

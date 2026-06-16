@@ -114,6 +114,28 @@ img[alt="Navi"],
   border-radius: 50% !important;
 }
 
+/* Coze SDK Custom Styles */
+.coze-web-sdk-assistant-btn,
+.coze-chat-assistant-btn,
+[class*="coze"][class*="asst"],
+[class*="CozeWebSDK"][class*="btn"] {
+  bottom: 96px !important;
+  right: 24px !important;
+  width: 56px !important;
+  height: 56px !important;
+}
+
+.coze-web-sdk-assistant-btn img,
+.coze-chat-assistant-btn img,
+[class*="coze"] [class*="avatar"] img,
+[class*="CozeWebSDK"] [class*="avatar"] img {
+  width: 56px !important;
+  height: 56px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  content: url('/images/navi-avatar.png') !important;
+}
+
 /* Responsive Table */
 .table-container {
   overflow-x: auto;

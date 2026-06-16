@@ -143,9 +143,9 @@ const Contact: React.FC = () => {
                   <Mail className="w-5 h-5 text-accent mt-1" />
                   <div>
                     <h4 className="font-semibold text-primary">Email</h4>
-                    <p className="text-sm text-gray-600">
-                      Available upon request
-                    </p>
+                    <a href="mailto:hello@shanghaimedhealth.com" className="text-sm text-gray-600 hover:text-primary transition-colors">
+                      hello@shanghaimedhealth.com
+                    </a>
                   </div>
                 </div>
               </div>

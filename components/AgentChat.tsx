@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 
 
 declare global {
@@ -19,6 +19,10 @@ declare global {
 
     }
 
+    __naviShow?: () => void
+
+    __naviHide?: () => void
+
   }
 
 }
@@ -26,25 +30,7 @@ declare global {
 
 const AgentChat: React.FC = () => {
 
-  const [client, setClient] = useState<ReturnType<typeof window.CozeWebSDK.WebChatClient> | null>(null)
-
-  const [isOpen, setIsOpen] = useState(false)
-
-
   useEffect(() => {
-
-    if (!window.CozeWebSDK) {
-
-      const script = document.createElement('script')
-
-      script.src = 'https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.19/libs/cn/index.js'
-
-      script.async = true
-
-      document.body.appendChild(script)
-
-    }
-
 
     const initChat = () => {
 
@@ -106,7 +92,10 @@ const AgentChat: React.FC = () => {
 
         })
 
-        setClient(sdkClient)
+
+        window.__naviShow = () => sdkClient.showChatBot()
+
+        window.__naviHide = () => sdkClient.hideChatBot()
 
       }
 
@@ -119,107 +108,22 @@ const AgentChat: React.FC = () => {
 
     } else {
 
-      const checkInterval = setInterval(() => {
+      const script = document.createElement('script')
 
-        if (window.CozeWebSDK) {
+      script.src = 'https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.19/libs/cn/index.js'
 
-          clearInterval(checkInterval)
+      script.async = true
 
-          initChat()
+      script.onload = initChat
 
-        }
-
-      }, 100)
+      document.body.appendChild(script)
 
     }
 
   }, [])
 
 
-  const toggleChat = () => {
-
-    if (!client) return
-
-    if (isOpen) {
-
-      client.hideChatBot()
-
-      setIsOpen(false)
-
-    } else {
-
-      client.showChatBot()
-
-      setIsOpen(true)
-
-    }
-
-  }
-
-
-  return (
-
-    <button
-
-      onClick={toggleChat}
-
-      aria-label="Open AI Navigator"
-
-      style={{
-
-        position: 'fixed',
-
-        bottom: '96px',
-
-        right: '24px',
-
-        width: '56px',
-
-        height: '56px',
-
-        borderRadius: '50%',
-
-        border: 'none',
-
-        padding: 0,
-
-        cursor: 'pointer',
-
-        zIndex: 40,
-
-        boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
-
-        overflow: 'hidden',
-
-        background: '#00B37E',
-
-      }}
-
-    >
-
-      <img
-
-        src="/images/navi-avatar.png"
-
-        alt="Navi"
-
-        style={{
-
-          width: '100%',
-
-          height: '100%',
-
-          objectFit: 'cover',
-
-          borderRadius: '50%',
-
-        }}
-
-      />
-
-    </button>
-
-  )
+  return null
 
 }
 

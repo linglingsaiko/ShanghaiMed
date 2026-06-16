@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Bot } from 'lucide-react'
 import { navLinks } from '@/lib/constants'
 
 const Header: React.FC = () => {
@@ -69,6 +69,14 @@ const Header: React.FC = () => {
                 {link.label}
               </a>
             ))}
+            {/* Navi AI Button */}
+            <button
+              onClick={() => (window as any).__naviShow?.()}
+              className="hidden lg:flex items-center gap-2 bg-accent text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-accent/90 transition-colors ml-4"
+            >
+              <Bot className="w-4 h-4" />
+              Ask Navi
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -105,6 +113,16 @@ const Header: React.FC = () => {
                   {link.label}
                 </a>
               ))}
+              <button
+                onClick={() => {
+                  (window as any).__naviShow?.()
+                  setMobileMenuOpen(false)
+                }}
+                className="flex items-center gap-2 bg-accent text-white px-4 py-2.5 rounded-full text-sm font-medium hover:bg-accent/90 transition-colors mt-2"
+              >
+                <Bot className="w-4 h-4" />
+                Ask Navi
+              </button>
             </div>
           </div>
         )}

@@ -95,10 +95,15 @@ const AgentChat: React.FC = () => {
           }
         }
 
-        // Hide SDK banner text
-        if (htmlEl.textContent?.includes('web_sdk_official_banner') || 
-            htmlEl.textContent?.includes('Coze') ||
-            htmlEl.textContent?.includes('扣子')) {
+        // Hide SDK banner text - only inside Coze containers
+        const isInsideCozeContainer = 
+          htmlEl.closest('[class*="coze"]') || 
+          htmlEl.closest('[id*="coze"]');
+        
+        if (isInsideCozeContainer && 
+            (htmlEl.textContent?.includes('web_sdk_official_banner') || 
+             htmlEl.textContent?.includes('Coze') ||
+             htmlEl.textContent?.includes('扣子'))) {
           htmlEl.style.display = 'none';
         }
       });

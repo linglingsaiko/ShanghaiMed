@@ -67,8 +67,25 @@ const AgentChat: React.FC = () => {
 
     // Fallback: JS-based position adjustment for Coze SDK button
     const positionInterval = setInterval(() => {
-      const allFixedElements = document.querySelectorAll('button, div[role="button"]');
+      // Debug: Log all fixed position elements
+      const allFixedElements = document.querySelectorAll('[style*="position"]');
+      let foundFixed = false;
       allFixedElements.forEach((el) => {
+        const htmlEl = el as HTMLElement;
+        const style = window.getComputedStyle(htmlEl);
+        if (style.position === 'fixed') {
+          foundFixed = true;
+          console.log('[Navi AI] Fixed element found:', htmlEl.tagName, htmlEl.className, htmlEl.id, htmlEl.style.cssText);
+        }
+      });
+      
+      if (!foundFixed) {
+        console.log('[Navi AI] No fixed elements found');
+      }
+
+      // Try to find and adjust Coze SDK button
+      const allElements = document.querySelectorAll('*');
+      allElements.forEach((el) => {
         const htmlEl = el as HTMLElement;
         const style = window.getComputedStyle(htmlEl);
         if (
@@ -79,15 +96,14 @@ const AgentChat: React.FC = () => {
           !htmlEl.closest('[class*="WhatsApp"]') &&
           !htmlEl.closest('[aria-label*="WhatsApp"]')
         ) {
-          // This is likely the Coze SDK button
           if (htmlEl.style.bottom !== '96px') {
             htmlEl.style.bottom = '96px';
             htmlEl.style.right = '24px';
-            console.log('[Navi AI] Position adjusted via JS');
+            console.log('[Navi AI] Position adjusted via JS:', htmlEl.tagName, htmlEl.className);
           }
         }
       });
-    }, 500);
+    }, 1000);
 
     return () => {
       clearInterval(positionInterval);

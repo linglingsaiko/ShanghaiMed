@@ -64,6 +64,34 @@ const AgentChat: React.FC = () => {
         }
       }, 100)
     }
+
+    // Fallback: JS-based position adjustment for Coze SDK button
+    const positionInterval = setInterval(() => {
+      const allFixedElements = document.querySelectorAll('button, div[role="button"]');
+      allFixedElements.forEach((el) => {
+        const htmlEl = el as HTMLElement;
+        const style = window.getComputedStyle(htmlEl);
+        if (
+          style.position === 'fixed' &&
+          htmlEl.querySelector('img') &&
+          !htmlEl.closest('a[href*="wa.me"]') &&
+          !htmlEl.closest('[class*="whatsapp"]') &&
+          !htmlEl.closest('[class*="WhatsApp"]') &&
+          !htmlEl.closest('[aria-label*="WhatsApp"]')
+        ) {
+          // This is likely the Coze SDK button
+          if (htmlEl.style.bottom !== '96px') {
+            htmlEl.style.bottom = '96px';
+            htmlEl.style.right = '24px';
+            console.log('[Navi AI] Position adjusted via JS');
+          }
+        }
+      });
+    }, 500);
+
+    return () => {
+      clearInterval(positionInterval);
+    };
   }, [])
 
   return null

@@ -3,6 +3,7 @@ import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import WhatsAppFloat from '@/components/WhatsAppFloat'
+import AgentChat from '@/components/AgentChat'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://shanghaimedhealth.com'
@@ -76,6 +77,7 @@ export default function RootLayout({
           <main>{children}</main>
           <Footer />
           <WhatsAppFloat />
+          <AgentChat />
         </LanguageProvider>
         
         {/* JSON-LD Structured Data */}
@@ -133,7 +135,8 @@ export default function RootLayout({
           }}
         />
 
-        {/* Chat Widget - will be replaced with custom component connecting to /api/chat */}
+        {/* Coze Web SDK for AI Chat */}
+        <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.19/libs/cn/index.js" async></script>
       </body>
     </html>
   )

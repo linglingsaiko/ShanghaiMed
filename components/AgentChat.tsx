@@ -67,16 +67,23 @@ const AgentChat: React.FC = () => {
 
     // Position: Navi button above WhatsApp
     const positionInterval = setInterval(() => {
-      const fixedEls = document.querySelectorAll('div[style*="position: fixed"]');
-      fixedEls.forEach((el) => {
+      const allElements = document.querySelectorAll('*');
+      allElements.forEach((el) => {
         const htmlEl = el as HTMLElement;
-        const style = htmlEl.style;
-        const hasWhatsApp = htmlEl.querySelector('a[href*="wa.me"]');
-        if (!hasWhatsApp && style.position === 'fixed') {
-          const hasCozeContent = htmlEl.querySelector('[class*="coze"]') || htmlEl.querySelector('[id*="coze"]');
-          if (hasCozeContent && style.bottom !== '96px') {
-            htmlEl.style.bottom = '96px';
-            htmlEl.style.right = '24px';
+        const style = window.getComputedStyle(htmlEl);
+        
+        if (style.position === 'fixed') {
+          const hasImg = htmlEl.querySelector('img');
+          const isWhatsApp =
+            htmlEl.closest('a[href*="wa.me"]') ||
+            htmlEl.closest('[class*="whatsapp"]') ||
+            htmlEl.closest('[aria-label*="WhatsApp"]');
+          
+          if (hasImg && !isWhatsApp) {
+            if (htmlEl.style.bottom !== '96px') {
+              htmlEl.style.bottom = '96px';
+              htmlEl.style.right = '24px';
+            }
           }
         }
       });

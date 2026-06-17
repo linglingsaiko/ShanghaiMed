@@ -45,9 +45,9 @@ const FeaturedHospitals: React.FC = () => {
                   {hospital?.name}
                 </h3>
 
-                {hospital?.certifications.slice(0, 2).length > 0 && (
+                {(hospital?.certifications?.slice(0, 2)?.length ?? 0) > 0 && (
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {hospital.certifications.slice(0, 2).map((cert, idx) => (
+                    {hospital.certifications?.slice(0, 2).map((cert, idx) => (
                       <span
                         key={idx}
                         className="inline-flex items-center gap-1 text-xs bg-gray-100 text-gray-700 px-2.5 py-1 rounded-full"

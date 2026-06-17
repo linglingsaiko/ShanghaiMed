@@ -9,6 +9,7 @@ import {
   tier1Hospitals,
   tier2Hospitals,
   Hospital,
+  featuredHospitalIds,
 } from '@/lib/constants'
 import { events } from '@/lib/analytics'
 import { useLanguage } from '@/contexts/LanguageContext'
@@ -19,7 +20,9 @@ const TreatmentAreas: React.FC = () => {
   const [showModal, setShowModal] = useState(false)
 
   const allHospitals = [...tier1Hospitals, ...tier2Hospitals]
-  const featuredHospitals = allHospitals.filter(h => ['xinhua', 'renji', 'longhua'].includes(h.id))
+  const featuredHospitals = featuredHospitalIds
+    .map(id => allHospitals.find(h => h.id === id))
+    .filter((h): h is NonNullable<typeof h> => h != null)
 
   const hospitals =
     activeTier === 'all'

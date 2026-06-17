@@ -12,7 +12,7 @@ export interface Hospital {
   image: string
 }
 
-// Tier 1 - 13 Public Grade-A Medical Tourism Pilot Hospitals
+// Tier 1 - 14 Public Grade-A Medical Tourism Pilot Hospitals
 export const tier1Hospitals: Hospital[] = [
   {
     id: 'huashan',
@@ -170,6 +170,18 @@ export const tier1Hospitals: Hospital[] = [
     description: 'Fudan University affiliated. Premier geriatric medicine and rehabilitation center. Popular for executive health screening programs.',
     image: '/images/华东.png',
   },
+  {
+    id: 'ninth',
+    name: 'Shanghai Ninth People\'s Hospital (SJTU)',
+    tier: 'tier1',
+    specialties: ['Oral/Dental Surgery #1', 'Plastic & Reconstructive Surgery', 'Oral & Maxillofacial Surgery'],
+    certifications: ['International Medical Department (2024)', '21 Commercial Insurance Partnerships'],
+    insurancePartners: ['8 Direct Billing Insurers', '21 Commercial Insurance Partners', 'Shanghai Medical Insurance Bureau Pilot'],
+    internationalFeatures: 'Int\'l Medical Dept. (2024), 100+ dental chairs, 40+ countries served, Prof. Tonetti on staff',
+    insuranceStatus: 'Direct Settlement (8 insurers)',
+    description: 'China\'s #1 dental hospital. Dedicated International Medical Department opened Jan 2024 at Pudong campus with 100+ dental chairs, CBCT, microscopes, and laser equipment. Full-time international implant specialist Prof. Tonetti. MDT mechanism for complex cases. Treated patients from 40+ countries.',
+    image: '/hospitals/hospital-ninth.jpg',
+  },
 ]
 
 // Tier 2 - International Private Hospitals
@@ -239,6 +251,9 @@ export const tier2Hospitals: Hospital[] = [
 // Export all hospitals
 export const allHospitals = [...tier1Hospitals, ...tier2Hospitals]
 
+// Featured hospitals for homepage display
+export const featuredHospitalIds = ['huashan', 'longhua', 'ninth']
+
 // Navigation links
 export const navLinks = [
   { href: '#why-shanghai', label: 'Why Shanghai' },
@@ -253,7 +268,7 @@ export const navLinks = [
 // Statistics data
 export const statistics = [
   { value: '73,000+', label: "Shanghai's Annual International Patient Visits", description: 'Source: Shanghai Municipal Health Commission, 2025' },
-  { value: '23', label: 'Public Hospitals with International Services', description: 'Source: Shanghai International Service Portal' },
+  { value: '14', label: 'Public Grade-A Medical Tourism Pilots', description: 'Specialized international services' },
   { value: '90+', label: 'Nationalities Served', description: 'Source: Huashan Hospital International Medical Center, 2025' },
   { value: '25%', label: 'Year-over-Year Growth', description: 'Source: Shanghai Municipal Health Commission, 2024' },
 ]

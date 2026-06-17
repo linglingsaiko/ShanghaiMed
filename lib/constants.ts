@@ -172,15 +172,15 @@ export const tier1Hospitals: Hospital[] = [
   },
   {
     id: 'ninth',
+    image: '/hospitals/hospital-ninth.jpg',
     name: 'Shanghai Ninth People\'s Hospital (SJTU)',
     tier: 'tier1',
     specialties: ['Oral/Dental Surgery #1', 'Plastic & Reconstructive Surgery', 'Oral & Maxillofacial Surgery'],
-    certifications: ['International Medical Department (2024)', '21 Commercial Insurance Partnerships'],
-    insurancePartners: ['8 Direct Billing Insurers', '21 Commercial Insurance Partners', 'Shanghai Medical Insurance Bureau Pilot'],
-    internationalFeatures: 'Int\'l Medical Dept. (2024), 100+ dental chairs, 40+ countries served, Prof. Tonetti on staff',
-    insuranceStatus: 'Direct Settlement (8 insurers)',
+    certifications: ['National Oral Disease Research Center'],
+    insurancePartners: ['MSH', 'Cigna', 'Allianz', 'AXA', 'Ping An', 'AIA', '+15'],
+    internationalFeatures: 'Premier dental hospital with 5 academicians. Ranked #1 in oral surgery and plastic surgery nationwide.',
+    insuranceStatus: 'Direct Settlement (8 insurers, 21 partnerships)',
     description: 'China\'s #1 dental hospital. Dedicated International Medical Department opened Jan 2024 at Pudong campus with 100+ dental chairs, CBCT, microscopes, and laser equipment. Full-time international implant specialist Prof. Tonetti. MDT mechanism for complex cases. Treated patients from 40+ countries.',
-    image: '/hospitals/hospital-ninth.jpg',
   },
 ]
 

@@ -38,6 +38,8 @@ const AgentChat: React.FC = () => {
 
         const patToken = process.env.NEXT_PUBLIC_COZE_PAT || ''
 
+        const baseUrl = window.location.origin
+
         const sdkClient = new window.CozeWebSDK.WebChatClient({
 
           config: {
@@ -60,15 +62,33 @@ const AgentChat: React.FC = () => {
 
           },
 
+          userInfo: {
+
+            id: 'web-visitor',
+
+            url: `${baseUrl}/images/default-user.svg`,
+
+            nickname: 'Visitor',
+
+          },
+
           componentProps: {
 
             title: 'ShanghaiMed Navigator',
 
-            placeholder: 'Ask me about healthcare in Shanghai...',
+            chatInputPlaceholder: 'Ask me about healthcare in Shanghai...',
 
           },
 
           ui: {
+
+            base: {
+
+              icon: `${baseUrl}/images/navi-avatar.png`,
+
+              lang: 'en',
+
+            },
 
             asstBtn: {
 
@@ -108,15 +128,25 @@ const AgentChat: React.FC = () => {
 
     } else {
 
-      const script = document.createElement('script')
+      const existingScript = document.querySelector('script[src*="chat-app-sdk"]')
 
-      script.src = 'https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.19/libs/cn/index.js'
+      if (existingScript) {
 
-      script.async = true
+        existingScript.addEventListener('load', initChat)
 
-      script.onload = initChat
+      } else {
 
-      document.body.appendChild(script)
+        const script = document.createElement('script')
+
+        script.src = 'https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.19/libs/cn/index.js'
+
+        script.async = true
+
+        script.onload = initChat
+
+        document.body.appendChild(script)
+
+      }
 
     }
 

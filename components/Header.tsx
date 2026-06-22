@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
 import { navLinks } from '@/lib/constants'
+import LanguageSwitcher from '@/components/LanguageSwitcher'
 
 const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -69,6 +70,7 @@ const Header: React.FC = () => {
                 {link.label}
               </a>
             ))}
+            <LanguageSwitcher />
             {/* Navi AI Button */}
             <button
               onClick={() => window.__naviShow?.()}
@@ -119,6 +121,9 @@ const Header: React.FC = () => {
                   {link.label}
                 </a>
               ))}
+              <div className="py-2">
+                <LanguageSwitcher />
+              </div>
               <button
                 onClick={() => {
                   window.__naviShow?.()

@@ -1,6 +1,5 @@
 import Hero from '@/components/sections/Hero'
 import WhyShanghai from '@/components/sections/WhyShanghai'
-import FeaturedHospitals from '@/components/sections/FeaturedHospitals'
 import HowItWorks from '@/components/sections/HowItWorks'
 import ProcessFlow from '@/components/sections/ProcessFlow'
 import TreatmentAreas from '@/components/sections/TreatmentAreas'
@@ -15,7 +14,6 @@ export default function HomePage() {
     <>
       <Hero />
       <WhyShanghai />
-      <FeaturedHospitals />
       <HowItWorks />
       <ProcessFlow />
       <TreatmentAreas />

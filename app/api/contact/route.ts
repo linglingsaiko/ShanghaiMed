@@ -1,11 +1,4 @@
-import crypto from 'crypto';
 import { NextRequest, NextResponse } from 'next/server';
-
-function genSign(secret: string, timestamp: number): string {
-  const stringToSign = `${timestamp}\n${secret}`;
-  const hmac = crypto.createHmac('sha256', stringToSign);
-  return hmac.digest('base64');
-}
 
 export async function POST(request: NextRequest) {
   try {
@@ -16,15 +9,11 @@ export async function POST(request: NextRequest) {
     }
 
     const webhookUrl = process.env.FEISHU_WEBHOOK_URL;
-    const secret = process.env.FEISHU_WEBHOOK_SECRET;
     if (!webhookUrl) {
       return NextResponse.json({ error: 'Webhook not configured' }, { status: 500 });
     }
 
-    const timestamp = Math.floor(Date.now() / 1000);
     const body: Record<string, unknown> = {
-      timestamp: String(timestamp),
-      sign: genSign(secret || '', timestamp),
       msg_type: 'interactive',
       card: {
         header: {

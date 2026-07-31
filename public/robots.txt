@@ -1,13 +1,57 @@
 # ShanghaiMed Robots.txt
+# https://shanghaimedhealth.com
 
+# === Traditional Search Engines ===
 User-agent: *
 Allow: /
-
-# Sitemap
-Sitemap: https://shanghaimedhealth.com/sitemap.xml
-
-# Crawl-delay (optional, be considerate to the server)
 Crawl-delay: 1
 
-# Disallow admin or private areas (none currently)
-# Disallow: /admin/
+# === AI Search Engine Crawlers (GEO Optimization) ===
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+# === Sitemap ===
+Sitemap: https://shanghaimedhealth.com/sitemap.xml
+
+# === Private Areas ===
+Disallow: /admin/
+Disallow: /api/

@@ -1,0 +1,80 @@
+# ShanghaiMed
+
+> International medical concierge platform connecting global patients with Shanghai's 14 public Grade-A tertiary hospitals. Bilingual ISPN-certified nurses, 24/7 AI support, transparent pricing ($1,000-$1,650 concierge packages). Medical procedures cost 60-80% less than the US.
+
+## Core Services
+
+- **Free Initial Consultation**: Medical needs assessment, hospital/specialist recommendations, cost estimates, insurance guidance
+- **Essential Care Concierge** ($1,000 USD / 3 days / up to 8h per day): Airport pickup, in-person medical accompaniment, interpretation, report translation, scheduling, medication coordination
+- **Complex Care Concierge** ($1,650 USD / 5 days / up to 8h per day): Same services for complex medical procedures or multi-department visits
+- **Half-Day Add-On** ($200 USD / 4 hours) and **Full-Day Add-On** ($350 USD / 8 hours)
+
+Medical expenses are paid directly to hospitals. Concierge fees cover coordination and support services only.
+
+## Hospital Network (14 Public Grade-A Tertiary Hospitals)
+
+| Hospital | University | Top Specialties | Certification |
+|----------|-----------|-----------------|---------------|
+| Huashan Hospital | Fudan University | Neurosurgery #1, Dermatology #1, Infectious Disease | JCI Certified |
+| Children's Hospital | Fudan University | Neonatology, Pediatric Surgery, Critical Care | JCI Certified |
+| Ruijin Hospital | SJTU | Hematology (95.7% CAR-T remission), Endocrinology, Burns | JCI Certified |
+| Shanghai General Hospital | - | Ophthalmology, Urology, ENT | DNV GL, Mayo Clinic Partnership |
+| Zhongshan Hospital | Fudan University | General Surgery, Gastroenterology, Cardiovascular | JCI Certified |
+| Renji Hospital | SJTU | Gastroenterology #1, Reproductive Medicine, Rheumatology | DNV GL Certified |
+| Longhua Hospital | Shanghai Univ. of TCM | TCM Oncology, TCM Orthopedics, Acupuncture | JCI Certified |
+| IPMCH | China Welfare Institute | Reproductive Medicine, Obstetrics, Gynecology | DNV GL Certified |
+| SCMC | SJTU | Pediatric Cardiac Surgery, Pediatric Hematology-Oncology | JCI, ISO 15189 |
+| Sixth People's Hospital | - | Orthopedics (world's first limb replantation), Endocrinology | JCI Certified |
+| First Maternity & Infant | - | Obstetrics, Fetal Medicine, Reproductive Medicine | JCI Certified |
+| Xinhua Hospital | SJTU | Pediatrics, Dermatology, General Surgery | JCI Certified |
+| Huadong Hospital | Fudan University | Geriatric Medicine, Rehabilitation, Executive Health Screening | Bupa Silver Certified |
+| Ninth People's Hospital | SJTU | Dental Surgery #1 in China, Plastic Surgery, Oral Maxillofacial | National Oral Disease Research Center |
+
+All hospitals have dedicated international departments with English-speaking staff. 16+ international insurance providers accepted with direct settlement (MSH, Bupa, Cigna, Aetna, AXA, Allianz, AIA, International SOS, etc.).
+
+## Price Comparison (Shanghai vs US)
+
+| Procedure | Shanghai | Typical US Cost | Savings |
+|-----------|---------|-----------------|---------|
+| MRI Scan | From $300 | From $1,000 | 70% |
+| CT Scan | From $150 | From $500 | 70% |
+| Specialist Consultation | From $70 | From $250 | 72% |
+| Executive Health Screening | From $700 | From $2,500 | 72% |
+| Dental Implant | From $800 | From $3,000 | 73% |
+| IVF Treatment | From $4,200 | From $15,000 | 72% |
+| Hip Replacement | From $8,500 | From $40,000 | 79% |
+| Cardiac Bypass Surgery | From $11,000 | From $80,000 | 86% |
+| Chemotherapy (per cycle) | From $1,400 | From $10,000 | 86% |
+| Spinal Fusion | From $11,000 | From $50,000 | 78% |
+
+## Key Statistics
+
+- 73,000+ annual international patient visits in Shanghai
+- 14 public Grade-A medical tourism pilot hospitals
+- 90+ nationalities served
+- 25% year-over-year growth
+- 240-hour visa-free transit for 54 countries
+- ISPN-certified bilingual registered nurses
+
+## Important Links
+
+- [Homepage](https://shanghaimedhealth.com)
+- [Hospital Network](https://shanghaimedhealth.com/#treatments)
+- [Pricing](https://shanghaimedhealth.com/#pricing)
+- [How It Works](https://shanghaimedhealth.com/how-it-works)
+- [FAQ](https://shanghaimedhealth.com/faq)
+- [Contact](https://shanghaimedhealth.com/contact)
+- [Care Team](https://shanghaimedhealth.com/care-team)
+- [Blog](https://shanghaimedhealth.com/blog)
+- [Sitemap](https://shanghaimedhealth.com/sitemap.xml)
+
+## Contact
+
+- Website: https://shanghaimedhealth.com
+- Email: care@shanghaimedhealth.com
+- WhatsApp available on website
+- AI navigator available 24/7
+
+## About
+
+ShanghaiMed is an independent medical concierge service, not a medical provider. We are based in Shanghai, China, and serve international patients seeking world-class healthcare at competitive prices. Our team of ISPN-certified bilingual registered nurses provides end-to-end support from initial inquiry to post-treatment follow-up.

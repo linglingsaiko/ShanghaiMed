@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
           alt="Shanghai Medical"
           fill
           className="object-cover"
-          style={{ objectPosition: "center 30%" }}
+          style={{ objectPosition: "center 15%" }}
           priority
         />
       </div>
@@ -36,7 +36,7 @@ const Hero: React.FC = () => {
         <div className="max-w-xl">
           {/* Main Headline - Two lines */}
           <h1 
-            className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white leading-tight mb-4"
+            className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white leading-tight mb-4 text-right"
             style={{ textShadow: '0 2px 8px rgba(0, 0, 0, 0.8)' }}
           >
             {t('hero.title')}
@@ -44,8 +44,8 @@ const Hero: React.FC = () => {
             <span className="text-white">{t('hero.titleHighlight')}</span>
           </h1>
 
-          {/* CTA Button - Third line */}
-          <div className="mb-4">
+          {/* CTA Button - Right-aligned */}
+          <div className="mb-4 flex justify-end">
             <Link
               href="#contact"
               className="inline-flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 border-2 border-white text-white font-semibold text-base md:text-lg rounded-full hover:bg-white hover:text-primary transition-all duration-300 whitespace-nowrap"
@@ -56,7 +56,7 @@ const Hero: React.FC = () => {
           </div>
 
           {/* Trust Badges - Right-aligned */}
-          <div className="flex flex-col items-end md:flex-row-reverse gap-3">
+          <div className="flex flex-col items-end md:flex-row md:justify-end gap-3">
             {stats.map((stat, index) => (
               <div
                 key={index}

@@ -26,13 +26,14 @@ const Hero: React.FC = () => {
           alt="Shanghai Medical"
           fill
           className="object-cover"
+          style={{ objectPosition: "center 30%" }}
           priority
         />
       </div>
 
-      {/* Mobile Layout - Left-aligned, vertical stack */}
-      <div className="absolute left-0 bottom-0 z-10 w-full px-4 pb-6 md:px-0 md:left-[16.67%] md:w-[83.33%]">
-        <div className="max-w-4xl">
+      {/* Content - Right-aligned for corridor empty space */}
+      <div className="absolute right-0 bottom-0 z-10 w-full px-4 pb-6 md:px-0 md:right-[5%] md:w-[40%]">
+        <div className="max-w-xl">
           {/* Main Headline - Two lines */}
           <h1 
             className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white leading-tight mb-4"
@@ -54,8 +55,8 @@ const Hero: React.FC = () => {
             </Link>
           </div>
 
-          {/* Trust Badges - Fourth line onwards, three badges stacked vertically on mobile */}
-          <div className="flex flex-col md:flex-row gap-3">
+          {/* Trust Badges - Right-aligned */}
+          <div className="flex flex-col items-end md:flex-row-reverse gap-3">
             {stats.map((stat, index) => (
               <div
                 key={index}

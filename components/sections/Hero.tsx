@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/images/首屏.png"
+          src="/images/hero_b1_no_text_frameless.jpg"
           alt="Shanghai Medical"
           fill
           className="object-cover"

@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
           alt="Shanghai Medical"
           fill
           className="object-cover"
-          style={{ objectPosition: "center 15%" }}
+          style={{ objectPosition: "center top" }}
           priority
         />
       </div>

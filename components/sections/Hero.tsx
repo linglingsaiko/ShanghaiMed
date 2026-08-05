@@ -31,13 +31,19 @@ const Hero: React.FC = () => {
         />
       </div>
 
+      {/* Gradient overlay for text readability */}
+      <div 
+        className="absolute inset-0 z-[1] pointer-events-none"
+        style={{ background: 'linear-gradient(to left, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.3) 30%, rgba(0,0,0,0.08) 50%, transparent 65%)' }}
+      />
+
       {/* Content - Right-aligned for corridor empty space */}
-      <div className="absolute right-0 bottom-0 z-10 w-full px-4 pb-6 md:px-0 md:right-[5%] md:w-[40%]">
+      <div className="absolute right-0 bottom-0 z-20 w-full px-4 pb-6 md:px-0 md:right-[5%] md:w-[40%]">
         <div className="max-w-xl">
           {/* Main Headline - Two lines */}
           <h1 
             className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white leading-tight mb-4 text-right"
-            style={{ textShadow: '0 2px 8px rgba(0, 0, 0, 0.8)' }}
+            style={{ textShadow: '0 2px 12px rgba(0, 0, 0, 0.9), 0 0 30px rgba(0, 0, 0, 0.4)' }}
           >
             {t('hero.title')}
             <br />
@@ -60,12 +66,12 @@ const Hero: React.FC = () => {
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="flex items-center gap-2 px-4 py-2 rounded-full whitespace-nowrap"
+                className="flex items-center gap-2 px-4 py-2 rounded-full whitespace-nowrap bg-black/20 backdrop-blur-[2px]"
               >
                 <CheckCircle className="w-3.5 h-3.5 text-white/80 flex-shrink-0" />
                 <span 
                   className="text-sm sm:text-base font-bold text-white/90"
-                  style={{ textShadow: '0 1px 4px rgba(0, 0, 0, 0.6)' }}
+                  style={{ textShadow: '0 1px 6px rgba(0, 0, 0, 0.8)' }}
                 >{stat}</span>
               </div>
             ))}

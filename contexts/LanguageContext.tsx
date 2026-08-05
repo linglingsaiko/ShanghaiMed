@@ -49,7 +49,7 @@ export const translations = {
         badge1: 'International Insurance Hospitals',
         badge2: 'Bilingual Registered Nurses',
         badge3: '24/7 AI + Human Support',
-        title: 'Healthcare in Shanghai,',
+        title: 'Healthcare in Shanghai',
         titleHighlight: 'Designed Around You',
         subtitle: "Connect with China's top hospitals, bilingual nurses, and 24/7 AI support — all through one platform.",
         cta: 'Start Your Medical Tourism',

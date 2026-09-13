@@ -1,85 +1,311 @@
 'use client'
 
-import React, { useEffect } from 'react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
+import Image from 'next/image'
 
 declare global {
   interface Window {
-    CozeWebSDK?: {
-      WebChatClient: new (options: Record<string, unknown>) => {
-        showChatBot: () => void
-        hideChatBot: () => void
-      }
-    }
     __naviShow?: () => void
     __naviHide?: () => void
   }
 }
 
+type ChatMessage = {
+  role: 'user' | 'assistant'
+  content: string
+  streaming?: boolean
+  error?: boolean
+}
+
+const WELCOME: ChatMessage = {
+  role: 'assistant',
+  content:
+    "Hello! I'm Navi, your medical navigator. Ask me anything about hospitals, treatments, costs, visas, or planning your medical journey in Shanghai.",
+}
+
+type SseEvent = {
+  event?: string
+  conversation_id?: string
+  role?: string
+  content?: unknown
+  message_item?: {
+    role?: string
+    content?: string
+    msg?: string
+    error?: string
+    message?: string
+  }
+  msg?: string
+  error?: string
+  message?: string
+}
+
+async function readStream(
+  body: ReadableStream<Uint8Array>,
+  onDelta: (text: string) => void,
+): Promise<{ conversationId?: string }> {
+  const reader = body.getReader()
+  const decoder = new TextDecoder()
+  let buffer = ''
+  let conversationId: string | undefined
+  let assistantContent = ''
+
+  const handleLine = (raw: string) => {
+    const line = raw.replace(/\r$/, '')
+    if (!line.startsWith('data:')) return
+    const dataStr = line.slice(5).trim()
+    if (!dataStr || dataStr === '[DONE]') return
+
+    let evt: SseEvent
+    try {
+      evt = JSON.parse(dataStr) as SseEvent
+    } catch {
+      return
+    }
+
+    if (evt.conversation_id) conversationId = String(evt.conversation_id)
+
+    const eventName = evt.event || ''
+    if (eventName === 'conversation.error' || eventName === 'conversation.chat.failed') {
+      const inner = evt.message_item || evt
+      const msg = inner.msg || inner.error || inner.message
+      throw new Error(typeof msg === 'string' && msg ? msg : 'Navi failed to respond. Please try again.')
+    }
+
+    const role =
+      typeof evt.role === 'string'
+        ? evt.role
+        : typeof evt.message_item?.role === 'string'
+          ? evt.message_item.role
+          : undefined
+
+    let text = ''
+    if (typeof evt.content === 'string') text = evt.content
+    else if (typeof evt.message_item?.content === 'string') text = evt.message_item.content
+
+    if (!text || role === 'user') return
+
+    if (eventName === 'conversation.message.delta') {
+      assistantContent += text
+      onDelta(text)
+    } else if (eventName === 'conversation.message.completed' && assistantContent === '') {
+      // 兜底：极端情况下没有 delta 事件，用完成时的完整内容
+      assistantContent = text
+      onDelta(text)
+    }
+  }
+
+  while (true) {
+    const { done, value } = await reader.read()
+    if (done) break
+    buffer += decoder.decode(value, { stream: true })
+    let idx: number
+    while ((idx = buffer.indexOf('\n')) >= 0) {
+      const line = buffer.slice(0, idx)
+      buffer = buffer.slice(idx + 1)
+      if (line) handleLine(line)
+    }
+  }
+  if (buffer) handleLine(buffer)
+
+  return { conversationId }
+}
+
 const AgentChat: React.FC = () => {
+  const [open, setOpen] = useState(false)
+  const [messages, setMessages] = useState<ChatMessage[]>([WELCOME])
+  const [input, setInput] = useState('')
+  const [loading, setLoading] = useState(false)
+
+  const conversationIdRef = useRef<string | undefined>(undefined)
+  const abortRef = useRef<AbortController | null>(null)
+  const listRef = useRef<HTMLDivElement>(null)
+  const inputRef = useRef<HTMLInputElement>(null)
+
+  const show = useCallback(() => setOpen(true), [])
+  const hide = useCallback(() => setOpen(false), [])
+
   useEffect(() => {
-    const initChat = () => {
-      if (window.CozeWebSDK) {
-        const patToken = process.env.NEXT_PUBLIC_COZE_PAT || ''
-        const baseUrl = window.location.origin
-        const sdkClient = new window.CozeWebSDK.WebChatClient({
-          config: {
-            bot_id: '7684227464671215669',
-          },
-          auth: {
-            type: 'token',
-            token: patToken,
-            onRefreshToken: function () {
-              return process.env.NEXT_PUBLIC_COZE_PAT || ''
-            },
-          },
-          userInfo: {
-            id: 'web-visitor',
-            url: `${baseUrl}/images/default-user.svg`,
-            nickname: 'Visitor',
-          },
-          componentProps: {
-            title: 'Navi · Medical Navigator',
-            chatInputPlaceholder: 'Ask me about healthcare in Shanghai...',
-          },
-          ui: {
-            base: {
-              icon: `${baseUrl}/images/navi-avatar.png`,
-              lang: 'en',
-            },
-            asstBtn: {
-              isNeed: false,
-            },
-            chatBot: {
-              title: 'Navi · Medical Navigator',
-            },
-            footer: {
-              isShow: false,
-            },
-          },
+    window.__naviShow = show
+    window.__naviHide = hide
+    return () => {
+      delete window.__naviShow
+      delete window.__naviHide
+      abortRef.current?.abort()
+    }
+  }, [show, hide])
+
+  useEffect(() => {
+    if (open) {
+      setTimeout(() => inputRef.current?.focus(), 100)
+    }
+  }, [open])
+
+  useEffect(() => {
+    if (listRef.current) {
+      listRef.current.scrollTop = listRef.current.scrollHeight
+    }
+  }, [messages, loading, open])
+
+  const send = async () => {
+    const text = input.trim()
+    if (!text || loading) return
+
+    setInput('')
+    setLoading(true)
+    setMessages((prev) => [...prev, { role: 'user', content: text }, { role: 'assistant', content: '', streaming: true }])
+
+    const controller = new AbortController()
+    abortRef.current = controller
+
+    try {
+      const res = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          message: text,
+          conversation_id: conversationIdRef.current,
+          user_id: 'web-visitor',
+        }),
+        signal: controller.signal,
+      })
+
+      if (!res.ok || !res.body) {
+        let msg = 'Navi is temporarily unavailable. Please try again in a moment.'
+        try {
+          const j = await res.json()
+          if (typeof j?.error === 'string' && j.error) msg = j.error
+        } catch {
+          /* ignore */
+        }
+        throw new Error(msg)
+      }
+
+      const { conversationId } = await readStream(res.body, (delta) => {
+        setMessages((prev) => {
+          const next = [...prev]
+          const last = next[next.length - 1]
+          if (last && last.role === 'assistant' && last.streaming) {
+            next[next.length - 1] = { role: 'assistant', content: last.content + delta, streaming: true }
+          }
+          return next
         })
+      })
 
-        window.__naviShow = () => sdkClient.showChatBot()
-        window.__naviHide = () => sdkClient.hideChatBot()
+      if (conversationId) conversationIdRef.current = conversationId
+
+      setMessages((prev) => {
+        const next = [...prev]
+        const last = next[next.length - 1]
+        if (last && last.role === 'assistant' && last.streaming) {
+          next[next.length - 1] = { role: 'assistant', content: last.content, streaming: false }
+        }
+        return next
+      })
+    } catch (e) {
+      if ((e as Error)?.name !== 'AbortError') {
+        const msg =
+          (e as Error)?.message || 'Navi is temporarily unavailable. Please try again later.'
+        setMessages((prev) => {
+          const next = [...prev]
+          const last = next[next.length - 1]
+          if (last && last.role === 'assistant' && last.streaming) {
+            next[next.length - 1] = { role: 'assistant', content: msg, streaming: false, error: true }
+          } else {
+            next.push({ role: 'assistant', content: msg, error: true })
+          }
+          return next
+        })
       }
+    } finally {
+      setLoading(false)
+      abortRef.current = null
     }
+  }
 
-    if (window.CozeWebSDK) {
-      initChat()
-    } else {
-      const existingScript = document.querySelector('script[src*="chat-app-sdk"]')
-      if (existingScript) {
-        existingScript.addEventListener('load', initChat)
-      } else {
-        const script = document.createElement('script')
-        script.src = 'https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/1.2.0-beta.6/libs/oversea/index.js'
-        script.async = true
-        script.onload = initChat
-        document.body.appendChild(script)
-      }
-    }
-  }, [])
+  return (
+    <>
+      {/* 浮动按钮 */}
+      <button
+        onClick={() => setOpen((v) => !v)}
+        aria-label="Open Navi AI assistant"
+        className="fixed right-6 bottom-24 z-40 flex items-center justify-center w-14 h-14 rounded-full bg-primary text-white shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+      >
+        <Image src="/images/navi-avatar.png" alt="Navi" width={32} height={32} className="rounded-full" />
+      </button>
 
-  return null
+      {/* 聊天面板 */}
+      {open && (
+        <div className="fixed z-50 inset-0 sm:inset-auto sm:right-6 sm:bottom-40 sm:w-[380px] sm:max-h-[70vh] flex flex-col bg-white sm:rounded-2xl shadow-2xl border border-gray-100 overflow-hidden">
+          {/* 标题栏 */}
+          <div className="flex items-center gap-3 px-4 py-3 bg-primary text-white">
+            <Image src="/images/navi-avatar.png" alt="Navi" width={36} height={36} className="rounded-full" />
+            <div className="flex-1 min-w-0">
+              <div className="font-semibold text-sm">Navi · Medical Navigator</div>
+              <div className="text-xs text-gray-300 truncate">24/7 AI assistant</div>
+            </div>
+            <button
+              onClick={hide}
+              aria-label="Close chat"
+              className="text-gray-300 hover:text-white transition-colors"
+            >
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+
+          {/* 消息列表 */}
+          <div ref={listRef} className="flex-1 overflow-y-auto px-4 py-4 space-y-3 bg-gray-50">
+            {messages.map((m, i) => (
+              <div key={i} className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+                <div
+                  className={`max-w-[85%] px-3.5 py-2.5 rounded-2xl text-sm leading-relaxed whitespace-pre-wrap ${
+                    m.role === 'user'
+                      ? 'bg-accent text-white rounded-br-md'
+                      : m.error
+                        ? 'bg-red-50 text-red-600 border border-red-200 rounded-bl-md'
+                        : 'bg-white text-gray-700 border border-gray-100 rounded-bl-md'
+                  }`}
+                >
+                  {m.content}
+                  {m.streaming && <span className="inline-block w-1.5 h-4 ml-0.5 bg-gray-400 animate-pulse align-middle" />}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* 输入区 */}
+          <form
+            onSubmit={(e) => {
+              e.preventDefault()
+              send()
+            }}
+            className="border-t border-gray-100 p-3 bg-white flex items-center gap-2"
+          >
+            <input
+              ref={inputRef}
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              placeholder="Ask me about healthcare in Shanghai..."
+              className="flex-1 px-3 py-2 text-sm border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-accent/40"
+              disabled={loading}
+            />
+            <button
+              type="submit"
+              disabled={loading || !input.trim()}
+              className="flex items-center justify-center w-9 h-9 rounded-full bg-accent text-white disabled:opacity-40 hover:bg-accent/90 transition-colors"
+              aria-label="Send message"
+            >
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+              </svg>
+            </button>
+          </form>
+        </div>
+      )}
+    </>
+  )
 }
 
 export default AgentChat

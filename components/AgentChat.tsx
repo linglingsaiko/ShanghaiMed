@@ -146,9 +146,9 @@ const AgentChat: React.FC = () => {
       <button
         onClick={() => setOpen((v) => !v)}
         aria-label="Open Navi AI assistant"
-        className="fixed right-6 bottom-24 z-40 flex items-center justify-center w-14 h-14 rounded-full bg-primary text-white shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+        className="fixed right-6 bottom-24 z-40 relative overflow-hidden w-14 h-14 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
       >
-        <Image src="/images/navi-avatar.png" alt="Navi" width={32} height={32} className="rounded-full" />
+        <Image src="/images/navi-avatar.png" alt="Navi" fill sizes="56px" className="object-cover" />
       </button>
 
       {/* 聊天面板 */}

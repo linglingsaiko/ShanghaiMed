@@ -99,6 +99,9 @@ const AgentChat: React.FC = () => {
       }
 
       const data = await res.json()
+      if (typeof data?.error === 'string' && data.error) {
+        throw new Error(data.error)
+      }
       const reply = typeof data?.reply === 'string' ? data.reply : ''
       if (typeof data?.conversation_id === 'string' && data.conversation_id) {
         conversationIdRef.current = data.conversation_id

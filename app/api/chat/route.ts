@@ -59,7 +59,8 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Message is required' }, { status: 400 })
     }
     if (!COZE_TOKEN) {
-      return NextResponse.json({ error: 'Coze token is not configured.' }, { status: 500 })
+      // 用 200 返回，避免被 CDN/代理把错误体屏蔽，方便前端直接展示
+      return NextResponse.json({ error: 'Coze token is not configured.' })
     }
 
     const upstream = await fetch(COZE_API_URL, {
@@ -82,21 +83,15 @@ export async function POST(request: NextRequest) {
     const text = await upstream.text().catch(() => '')
     const parsed = safeParse(text)
 
-    // HTTP 层错误（非 2xx）
+    // HTTP 层错误（非 2xx）——用 200 返回真实错误体，避免被 Cloudflare 把 502 错误页屏蔽
     if (!upstream.ok) {
       const msg = extractError(parsed)
-      return NextResponse.json(
-        { error: msg || `Coze returned an error (${upstream.status}).` },
-        { status: 502 },
-      )
+      return NextResponse.json({ error: msg || `Coze returned an error (${upstream.status}).` })
     }
 
     // 业务层错误（HTTP 200 但 code != 0），常见如 token 错误、Bot 未发布到 API 渠道等
     if (parsed && typeof parsed.code === 'number' && parsed.code !== 0) {
-      return NextResponse.json(
-        { error: extractError(parsed) || `Coze error code ${parsed.code}` },
-        { status: 502 },
-      )
+      return NextResponse.json({ error: extractError(parsed) || `Coze error code ${parsed.code}` })
     }
 
     // 成功响应：{ code: 0, data: { conversation_id, messages: [...] } }
@@ -106,7 +101,11 @@ export async function POST(request: NextRequest) {
     const reply = messageText(assistant?.content).trim()
 
     if (!reply) {
-      return NextResponse.json({ error: 'Navi returned an empty response.' }, { status: 502 })
+      // bot 可能未发布到「Agent as API」渠道或返回为空；用 200 返回真实原因，避免被 Cloudflare 拦成 502
+      console.error('[navi] empty reply, raw:', text)
+      return NextResponse.json({
+        error: 'Navi returned an empty response. Please ensure the bot is published to the "Agent as API" channel.',
+      })
     }
 
     const returnedConversationId =
@@ -122,6 +121,6 @@ export async function POST(request: NextRequest) {
     })
   } catch (error) {
     console.error('[navi] api error:', error)
-    return NextResponse.json({ error: 'Internal server error.' }, { status: 500 })
+    return NextResponse.json({ error: `Internal error: ${(error as Error)?.message || 'unknown'}` })
   }
 }

@@ -105,6 +105,8 @@ export async function POST(request: NextRequest) {
       console.error('[navi] empty reply, raw:', text)
       return NextResponse.json({
         error: 'Navi returned an empty response. Please ensure the bot is published to the "Agent as API" channel.',
+        status: typeof data?.status === 'string' ? data.status : '',
+        debug_raw: text.slice(0, 2000),
       })
     }
 

@@ -23,94 +23,6 @@ const WELCOME: ChatMessage = {
     "Hello! I'm Navi, your medical navigator. Ask me anything about hospitals, treatments, costs, visas, or planning your medical journey in Shanghai.",
 }
 
-type SseEvent = {
-  event?: string
-  conversation_id?: string
-  role?: string
-  content?: unknown
-  message_item?: {
-    role?: string
-    content?: string
-    msg?: string
-    error?: string
-    message?: string
-  }
-  msg?: string
-  error?: string
-  message?: string
-}
-
-async function readStream(
-  body: ReadableStream<Uint8Array>,
-  onDelta: (text: string) => void,
-): Promise<{ conversationId?: string }> {
-  const reader = body.getReader()
-  const decoder = new TextDecoder()
-  let buffer = ''
-  let conversationId: string | undefined
-  let assistantContent = ''
-
-  const handleLine = (raw: string) => {
-    const line = raw.replace(/\r$/, '')
-    if (!line.startsWith('data:')) return
-    const dataStr = line.slice(5).trim()
-    if (!dataStr || dataStr === '[DONE]') return
-
-    let evt: SseEvent
-    try {
-      evt = JSON.parse(dataStr) as SseEvent
-    } catch {
-      return
-    }
-
-    if (evt.conversation_id) conversationId = String(evt.conversation_id)
-
-    const eventName = evt.event || ''
-    if (eventName === 'conversation.error' || eventName === 'conversation.chat.failed') {
-      const inner = evt.message_item || evt
-      const msg = inner.msg || inner.error || inner.message
-      throw new Error(typeof msg === 'string' && msg ? msg : 'Navi failed to respond. Please try again.')
-    }
-
-    const role =
-      typeof evt.role === 'string'
-        ? evt.role
-        : typeof evt.message_item?.role === 'string'
-          ? evt.message_item.role
-          : undefined
-
-    let text = ''
-    if (typeof evt.content === 'string') text = evt.content
-    else if (typeof evt.message_item?.content === 'string') text = evt.message_item.content
-
-    if (!text || role === 'user') return
-
-    if (eventName === 'conversation.message.delta') {
-      assistantContent += text
-      onDelta(text)
-    } else if (eventName === 'conversation.message.completed' && assistantContent === '') {
-      // 兜底：极端情况下没有 delta 事件，用完成时的完整内容
-      assistantContent = text
-      onDelta(text)
-    }
-  }
-
-  while (true) {
-    const { done, value } = await reader.read()
-    if (done) break
-    buffer += decoder.decode(value, { stream: true })
-    let idx: number
-    while ((idx = buffer.indexOf('\n')) >= 0) {
-      const line = buffer.slice(0, idx)
-      buffer = buffer.slice(idx + 1)
-      if (line) handleLine(line)
-    }
-  }
-  if (buffer) handleLine(buffer)
-
-  return { conversationId }
-}
-
 const AgentChat: React.FC = () => {
   const [open, setOpen] = useState(false)
   const [messages, setMessages] = useState<ChatMessage[]>([WELCOME])
@@ -153,7 +65,11 @@ const AgentChat: React.FC = () => {
 
     setInput('')
     setLoading(true)
-    setMessages((prev) => [...prev, { role: 'user', content: text }, { role: 'assistant', content: '', streaming: true }])
+    setMessages((prev) => [
+      ...prev,
+      { role: 'user', content: text },
+      { role: 'assistant', content: '', streaming: true },
+    ])
 
     const controller = new AbortController()
     abortRef.current = controller
@@ -170,7 +86,8 @@ const AgentChat: React.FC = () => {
         signal: controller.signal,
       })
 
-      if (!res.ok || !res.body) {
+      if (!res.ok) {
+        // 尽量透出服务端返回的真实报错（如 token 错误、Bot 未发布到 API 渠道）
         let msg = 'Navi is temporarily unavailable. Please try again in a moment.'
         try {
           const j = await res.json()
@@ -181,24 +98,21 @@ const AgentChat: React.FC = () => {
         throw new Error(msg)
       }
 
-      const { conversationId } = await readStream(res.body, (delta) => {
-        setMessages((prev) => {
-          const next = [...prev]
-          const last = next[next.length - 1]
-          if (last && last.role === 'assistant' && last.streaming) {
-            next[next.length - 1] = { role: 'assistant', content: last.content + delta, streaming: true }
-          }
-          return next
-        })
-      })
-
-      if (conversationId) conversationIdRef.current = conversationId
+      const data = await res.json()
+      const reply = typeof data?.reply === 'string' ? data.reply : ''
+      if (typeof data?.conversation_id === 'string' && data.conversation_id) {
+        conversationIdRef.current = data.conversation_id
+      }
 
       setMessages((prev) => {
         const next = [...prev]
         const last = next[next.length - 1]
         if (last && last.role === 'assistant' && last.streaming) {
-          next[next.length - 1] = { role: 'assistant', content: last.content, streaming: false }
+          next[next.length - 1] = {
+            role: 'assistant',
+            content: reply || '(No response)',
+            streaming: false,
+          }
         }
         return next
       })

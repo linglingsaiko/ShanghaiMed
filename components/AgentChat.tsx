@@ -23,12 +23,11 @@ const WELCOME: ChatMessage = {
     "Hello! I'm Navi, your medical navigator. Ask me anything about hospitals, treatments, costs, visas, or planning your medical journey in Shanghai.",
 }
 
-// 开场快捷问题。文案可随时替换为 Coze 后台配置的具体内容。
+// 开场快捷问题（与 Coze 后台「开场问题」配置保持一致）
 const SUGGESTED_QUESTIONS = [
-  'How do I choose the right hospital in Shanghai?',
-  'How much does treatment in Shanghai cost?',
-  'Do I need a visa for medical treatment in China?',
-  'What is the visit process for international patients?',
+  "What's included in your personalized service?",
+  'How do I book an appointment?',
+  "What's the cost of your one-on-one service?",
 ]
 
 type StreamFrame = {
@@ -36,6 +35,7 @@ type StreamFrame = {
   content?: string
   conversation_id?: string
   message?: string
+  questions?: string[]
 }
 
 const AgentChat: React.FC = () => {
@@ -43,6 +43,7 @@ const AgentChat: React.FC = () => {
   const [messages, setMessages] = useState<ChatMessage[]>([WELCOME])
   const [input, setInput] = useState('')
   const [loading, setLoading] = useState(false)
+  const [followUps, setFollowUps] = useState<string[]>([])
 
   const conversationIdRef = useRef<string | undefined>(undefined)
   const abortRef = useRef<AbortController | null>(null)
@@ -72,7 +73,7 @@ const AgentChat: React.FC = () => {
     if (listRef.current) {
       listRef.current.scrollTop = listRef.current.scrollHeight
     }
-  }, [messages, loading, open])
+  }, [messages, loading, followUps, open])
 
   // 更新最后一条 assistant 消息（流式期间频繁调用，用函数式 setState 保证不丢帧）
   const updateAssistant = useCallback((content: string, streaming: boolean, error = false) => {
@@ -95,6 +96,7 @@ const AgentChat: React.FC = () => {
 
       setInput('')
       setLoading(true)
+      setFollowUps([])
       setMessages((prev) => [
         ...prev,
         { role: 'user', content: text },
@@ -159,6 +161,8 @@ const AgentChat: React.FC = () => {
               updateAssistant(acc, true)
             } else if (obj.type === 'meta' && typeof obj.conversation_id === 'string' && obj.conversation_id) {
               conversationIdRef.current = obj.conversation_id
+            } else if (obj.type === 'follow_up' && Array.isArray(obj.questions)) {
+              setFollowUps(obj.questions.filter((q): q is string => typeof q === 'string'))
             } else if (obj.type === 'error' && typeof obj.message === 'string') {
               throw new Error(obj.message)
             }
@@ -235,6 +239,21 @@ const AgentChat: React.FC = () => {
             {messages.length === 1 && !loading && (
               <div className="flex flex-wrap gap-2 pt-1">
                 {SUGGESTED_QUESTIONS.map((q) => (
+                  <button
+                    key={q}
+                    onClick={() => send(q)}
+                    className="text-left text-xs text-primary border border-primary/30 bg-white hover:bg-primary/5 rounded-full px-3 py-2 transition-colors"
+                  >
+                    {q}
+                  </button>
+                ))}
+              </div>
+            )}
+
+            {/* Coze 返回的追问：每次回复后显示，点击可继续追问 */}
+            {!loading && followUps.length > 0 && (
+              <div className="flex flex-wrap gap-2 pt-1">
+                {followUps.map((q) => (
                   <button
                     key={q}
                     onClick={() => send(q)}

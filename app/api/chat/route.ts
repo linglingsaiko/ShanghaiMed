@@ -99,6 +99,7 @@ export async function POST(request: NextRequest) {
     let sentMeta = false
     let streamedAny = false
     let reportedError = false
+    let followUps: string[] = []
 
     const stream = new ReadableStream<Uint8Array>({
       async start(controller) {
@@ -132,6 +133,15 @@ export async function POST(request: NextRequest) {
             ) {
               streamedAny = true
               send({ type: 'delta', content: ev.content })
+            }
+            // 追问：每条是独立的 message.completed（type=follow_up），在回答之后返回
+            if (
+              event === 'conversation.message.completed' &&
+              ev.type === 'follow_up' &&
+              typeof ev.content === 'string'
+            ) {
+              const q = ev.content.trim()
+              if (q) followUps.push(q)
             }
           }
         }
@@ -167,6 +177,9 @@ export async function POST(request: NextRequest) {
 
           if (!sentMeta && !reportedError) {
             send({ type: 'meta', conversation_id: outgoingConversationId || null })
+          }
+          if (followUps.length > 0) {
+            send({ type: 'follow_up', questions: followUps })
           }
           send({ type: 'done' })
           controller.close()

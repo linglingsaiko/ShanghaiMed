@@ -1,116 +1,50 @@
 import { NextRequest, NextResponse } from 'next/server'
 
-// 国际版 Coze Chat V3 API（非流式，兼容 Cloudflare 代理链路）。区别于国内版 api.coze.cn。
+// 国际版 Coze Chat V3 API（流式）。区别于国内版 api.coze.cn。
 const COZE_API_URL = 'https://api.coze.com/v3/chat'
-const COZE_RETRIEVE_URL = 'https://api.coze.com/v3/chat/retrieve'
-const COZE_MESSAGE_LIST_URL = 'https://api.coze.com/v3/chat/message/list'
 const COZE_BOT_ID = process.env.COZE_BOT_ID || '7684227464671215669'
 // 服务端专用 token，运行时读取。不用 NEXT_PUBLIC 前缀，避免被打进前端包 / 被构建期内联成旧值。
 const COZE_TOKEN = process.env.COZE_API_TOKEN || ''
 
-// 非流式轮询会多停留几秒，适当放宽函数超时（在支持该配置的套餐上生效）。
-export const maxDuration = 30
+// 流式对话时间较短，适当放宽函数超时（在支持该配置的套餐上生效）。
+export const maxDuration = 60
 
-type CozeMessage = {
-  role?: string
-  type?: string
-  content?: unknown
-  content_type?: string
-  [key: string]: unknown
-}
+type Json = Record<string, unknown>
+type SseEvent = { event: string; data: Json }
 
-function safeParse(text: string): Record<string, unknown> | null {
+function safeParse(text: string): Json | null {
   try {
-    return JSON.parse(text) as Record<string, unknown>
+    return JSON.parse(text) as Json
   } catch {
     return null
   }
 }
 
-// 兼容 content 为字符串或分段数组（多模态/富文本）两种情况
-function messageText(content: unknown): string {
-  if (typeof content === 'string') return content
-  if (Array.isArray(content)) {
-    return content
-      .map((part) => {
-        if (part && typeof part === 'object' && typeof (part as Record<string, unknown>).text === 'string') {
-          return (part as Record<string, unknown>).text as string
-        }
-        return ''
-      })
-      .filter(Boolean)
-      .join(' ')
-  }
-  return ''
-}
-
-function extractError(data: Record<string, unknown> | null): string {
+function extractError(data: Json | null): string {
   if (!data) return ''
   const v = data.msg ?? data.error ?? data.message
   return typeof v === 'string' ? v : ''
 }
 
-// 从 retrieve 结果中提取 last_error 的人类可读描述
-function extractLastError(data: Record<string, unknown> | null): string {
-  const lastError = data?.last_error as Record<string, unknown> | null
-  if (!lastError) return ''
-  const msg = lastError.msg ?? lastError.message ?? lastError.error
-  return typeof msg === 'string' ? msg : ''
-}
-
-// 非流式：发起对话后 Coze 先返回 in_progress，需要轮询 retrieve 直到 completed。
-// 用指数退避降低请求频率，避免触发 Coze 限流（错误 4009/4013）。
-async function waitForCompletion(conversationId: string, chatId: string): Promise<{ ok: boolean; error?: string }> {
-  let delay = 1200
-  for (let i = 0; i < 6; i++) {
-    await new Promise((r) => setTimeout(r, delay))
-    const url = `${COZE_RETRIEVE_URL}?conversation_id=${encodeURIComponent(conversationId)}&chat_id=${encodeURIComponent(chatId)}`
-    const res = await fetch(url, {
-      headers: { Authorization: `Bearer ${COZE_TOKEN}` },
-    })
-    const text = await res.text().catch(() => '')
-    const parsed = safeParse(text)
-
-    if (!res.ok) {
-      return { ok: false, error: extractError(parsed) || `Coze retrieve failed (${res.status}).` }
+// 把一段 SSE 文本解析为若干 { event, data }。Coze 每个事件形如：
+//   event:conversation.message.delta
+//   data:{...json...}
+function parseSseBlock(block: string): SseEvent[] {
+  const out: SseEvent[] = []
+  let currentEvent = ''
+  for (const rawLine of block.split('\n')) {
+    const line = rawLine.trim()
+    if (line.startsWith('event:')) {
+      currentEvent = line.slice(6).trim()
+    } else if (line.startsWith('data:')) {
+      const parsed = safeParse(line.slice(5).trim())
+      if (parsed) {
+        out.push({ event: currentEvent, data: parsed })
+        currentEvent = ''
+      }
     }
-    if (parsed && typeof parsed.code === 'number' && parsed.code !== 0) {
-      return { ok: false, error: extractError(parsed) || `Coze retrieve error code ${parsed.code}` }
-    }
-
-    const data = (parsed?.data ?? parsed) as Record<string, unknown> | null
-    const status = typeof data?.status === 'string' ? data.status : ''
-
-    if (status === 'completed') return { ok: true }
-    if (status === 'failed' || status === 'canceled') {
-      return { ok: false, error: `Chat ${status}: ${extractLastError(data) || 'unknown reason'}` }
-    }
-    // created / in_progress / requires_action：延长间隔后继续
-    delay = Math.min(Math.round(delay * 1.5), 3000)
   }
-  return { ok: false, error: 'Timed out waiting for Navi to reply. Please try again.' }
-}
-
-// 拉取对话消息，返回助手回复文本
-async function fetchReply(conversationId: string, chatId: string): Promise<{ reply: string; error?: string }> {
-  const url = `${COZE_MESSAGE_LIST_URL}?conversation_id=${encodeURIComponent(conversationId)}&chat_id=${encodeURIComponent(chatId)}`
-  const res = await fetch(url, {
-    headers: { Authorization: `Bearer ${COZE_TOKEN}` },
-  })
-  const text = await res.text().catch(() => '')
-  const parsed = safeParse(text)
-
-  if (!res.ok) {
-    return { reply: '', error: extractError(parsed) || `Coze message list failed (${res.status}).` }
-  }
-  if (parsed && typeof parsed.code === 'number' && parsed.code !== 0) {
-    return { reply: '', error: extractError(parsed) || `Coze message list error code ${parsed.code}` }
-  }
-
-  const messages = (Array.isArray(parsed?.data) ? parsed.data : []) as CozeMessage[]
-  const assistant = messages.find((m) => m.role === 'assistant' && m.type !== 'follow_up')
-  const reply = messageText(assistant?.content).trim()
-  return { reply }
+  return out
 }
 
 export async function POST(request: NextRequest) {
@@ -121,14 +55,12 @@ export async function POST(request: NextRequest) {
       typeof body?.conversation_id === 'string' && body.conversation_id
         ? body.conversation_id
         : undefined
-    const userId =
-      typeof body?.user_id === 'string' && body.user_id ? body.user_id : 'web-visitor'
+    const userId = typeof body?.user_id === 'string' && body.user_id ? body.user_id : 'web-visitor'
 
     if (!message) {
       return NextResponse.json({ error: 'Message is required' }, { status: 400 })
     }
     if (!COZE_TOKEN) {
-      // 用 200 返回，避免被 CDN/代理把错误体屏蔽，方便前端直接展示
       return NextResponse.json({ error: 'Coze token is not configured.' })
     }
 
@@ -141,65 +73,119 @@ export async function POST(request: NextRequest) {
       body: JSON.stringify({
         bot_id: COZE_BOT_ID,
         user_id: userId,
-        stream: false,
+        stream: true,
         auto_save_history: true,
         additional_messages: [{ role: 'user', content: message, content_type: 'text' }],
         ...(conversationId ? { conversation_id: conversationId } : {}),
       }),
     })
 
-    // 无论状态码，先把上游文本读出来，方便把 Coze 的真实报错透传给前端
-    const text = await upstream.text().catch(() => '')
-    const parsed = safeParse(text)
-
-    // HTTP 层错误（非 2xx）——用 200 返回真实错误体，避免被 Cloudflare 把 502 错误页屏蔽
+    // HTTP 层错误（非 2xx）——此时上游返回 JSON 错误体，而非 SSE。
     if (!upstream.ok) {
-      const msg = extractError(parsed)
-      return NextResponse.json({ error: msg || `Coze returned an error (${upstream.status}).` })
+      const text = await upstream.text().catch(() => '')
+      const parsed = safeParse(text)
+      return NextResponse.json({ error: extractError(parsed) || `Coze returned an error (${upstream.status}).` })
     }
 
-    // 业务层错误（HTTP 200 但 code != 0），常见如 token 错误、Bot 未发布到 API 渠道等
-    if (parsed && typeof parsed.code === 'number' && parsed.code !== 0) {
-      return NextResponse.json({ error: extractError(parsed) || `Coze error code ${parsed.code}` })
+    if (!upstream.body) {
+      return NextResponse.json({ error: 'Coze returned an empty response.' })
     }
 
-    // 成功响应：{ code: 0, data: { id: chat_id, conversation_id, status: 'in_progress' } }
-    const data = (parsed?.data ?? parsed) as Record<string, unknown> | null
-    const chatId = typeof data?.id === 'string' ? data.id : ''
-    const returnedConversationId =
-      typeof data?.conversation_id === 'string'
-        ? data.conversation_id
-        : typeof parsed?.conversation_id === 'string'
-          ? parsed.conversation_id
-          : ''
+    const reader = upstream.body.getReader()
+    const decoder = new TextDecoder()
+    const encoder = new TextEncoder()
 
-    // 拿不到会话标识，无法继续轮询，透出原始响应便于排查
-    if (!chatId || !returnedConversationId) {
-      console.error('[navi] missing chat/conversation id, raw:', text)
-      return NextResponse.json({
-        error: 'Navi did not return a chat session. The bot may not be published to the "API" channel yet.',
-        debug_raw: text.slice(0, 2000),
-      })
-    }
+    let outgoingConversationId = conversationId ?? ''
+    let sentMeta = false
+    let streamedAny = false
+    let reportedError = false
 
-    // 非流式流程：轮询直到 completed，再拉取消息列表取助手回复
-    const state = await waitForCompletion(returnedConversationId, chatId)
-    if (!state.ok) {
-      return NextResponse.json({ error: state.error || 'Navi failed to complete the chat.' })
-    }
+    const stream = new ReadableStream<Uint8Array>({
+      async start(controller) {
+        const send = (obj: Json) => {
+          controller.enqueue(encoder.encode(JSON.stringify(obj) + '\n'))
+        }
 
-    const { reply, error } = await fetchReply(returnedConversationId, chatId)
-    if (error) {
-      return NextResponse.json({ error })
-    }
-    if (!reply) {
-      console.error('[navi] empty reply, raw:', text)
-      return NextResponse.json({ error: 'Navi returned an empty response. Please try again.' })
-    }
+        const processBlock = (block: string) => {
+          const events = parseSseBlock(block)
+          for (const { event, data: ev } of events) {
+            // 业务/协议错误（HTTP 200 但仍可能在流内返回 code != 0）
+            if (typeof ev.code === 'number' && ev.code !== 0) {
+              reportedError = true
+              send({ type: 'error', message: extractError(ev) || `Coze error code ${ev.code}` })
+              return
+            }
+            // conversation_id 用于维持多轮会话
+            if (typeof ev.conversation_id === 'string' && ev.conversation_id && !outgoingConversationId) {
+              outgoingConversationId = ev.conversation_id
+            }
+            if (!sentMeta && outgoingConversationId) {
+              sentMeta = true
+              send({ type: 'meta', conversation_id: outgoingConversationId })
+            }
+            // 仅取 delta 事件的正文增量，忽略 message.completed 里的完整内容，避免重复
+            if (
+              event === 'conversation.message.delta' &&
+              ev.type === 'answer' &&
+              typeof ev.content === 'string' &&
+              ev.content
+            ) {
+              streamedAny = true
+              send({ type: 'delta', content: ev.content })
+            }
+          }
+        }
 
-    return NextResponse.json({
-      reply,
-      conversation_id: returnedConversationId ?? conversationId ?? null,
+        let buffer = ''
+        try {
+          while (true) {
+            const { done, value } = await reader.read()
+            if (done) break
+            buffer += decoder.decode(value, { stream: true }).replace(/\r\n/g, '\n')
+            let idx: number
+            while ((idx = buffer.indexOf('\n\n')) !== -1) {
+              const block = buffer.slice(0, idx)
+              buffer = buffer.slice(idx + 2)
+              processBlock(block)
+              if (reportedError) break
+            }
+            if (reportedError) break
+          }
+
+          if (!reportedError) {
+            // 处理剩余 buffer（可能是切在事件中间的尾巴，或整段 JSON 错误）
+            const rest = buffer.trim()
+            if (rest) processBlock(rest)
+            if (!streamedAny) {
+              const whole = safeParse(rest)
+              if (whole && typeof whole.code === 'number' && whole.code !== 0) {
+                send({ type: 'error', message: extractError(whole) || `Coze error code ${whole.code}` })
+                reportedError = true
+              }
+            }
+          }
+
+          if (!sentMeta && !reportedError) {
+            send({ type: 'meta', conversation_id: outgoingConversationId || null })
+          }
+          send({ type: 'done' })
+          controller.close()
+        } catch (e) {
+          if (!reportedError) {
+            send({ type: 'error', message: (e as Error)?.message || 'Stream failed' })
+          }
+          send({ type: 'done' })
+          controller.close()
+        }
+      },
+    })
+
+    return new Response(stream, {
+      headers: {
+        'Content-Type': 'application/x-ndjson; charset=utf-8',
+        'Cache-Control': 'no-cache, no-transform',
+        'X-Accel-Buffering': 'no',
+      },
     })
   } catch (error) {
     console.error('[navi] api error:', error)

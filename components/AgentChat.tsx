@@ -23,6 +23,21 @@ const WELCOME: ChatMessage = {
     "Hello! I'm Navi, your medical navigator. Ask me anything about hospitals, treatments, costs, visas, or planning your medical journey in Shanghai.",
 }
 
+// 开场快捷问题。文案可随时替换为 Coze 后台配置的具体内容。
+const SUGGESTED_QUESTIONS = [
+  'How do I choose the right hospital in Shanghai?',
+  'How much does treatment in Shanghai cost?',
+  'Do I need a visa for medical treatment in China?',
+  'What is the visit process for international patients?',
+]
+
+type StreamFrame = {
+  type?: string
+  content?: string
+  conversation_id?: string
+  message?: string
+}
+
 const AgentChat: React.FC = () => {
   const [open, setOpen] = useState(false)
   const [messages, setMessages] = useState<ChatMessage[]>([WELCOME])
@@ -59,86 +74,111 @@ const AgentChat: React.FC = () => {
     }
   }, [messages, loading, open])
 
-  const send = async () => {
-    const text = input.trim()
-    if (!text || loading) return
-
-    setInput('')
-    setLoading(true)
-    setMessages((prev) => [
-      ...prev,
-      { role: 'user', content: text },
-      { role: 'assistant', content: '', streaming: true },
-    ])
-
-    const controller = new AbortController()
-    abortRef.current = controller
-
-    try {
-      const res = await fetch('/api/chat', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          message: text,
-          conversation_id: conversationIdRef.current,
-          user_id: 'web-visitor',
-        }),
-        signal: controller.signal,
-      })
-
-      if (!res.ok) {
-        // 尽量透出服务端返回的真实报错（如 token 错误、Bot 未发布到 API 渠道）
-        let msg = 'Navi is temporarily unavailable. Please try again in a moment.'
-        try {
-          const j = await res.json()
-          if (typeof j?.error === 'string' && j.error) msg = j.error
-        } catch {
-          /* ignore */
-        }
-        throw new Error(msg)
+  // 更新最后一条 assistant 消息（流式期间频繁调用，用函数式 setState 保证不丢帧）
+  const updateAssistant = useCallback((content: string, streaming: boolean, error = false) => {
+    setMessages((prev) => {
+      const next = [...prev]
+      const last = next[next.length - 1]
+      if (last && last.role === 'assistant') {
+        next[next.length - 1] = { role: 'assistant', content, streaming, error }
+      } else {
+        next.push({ role: 'assistant', content, streaming, error })
       }
+      return next
+    })
+  }, [])
 
-      const data = await res.json()
-      if (typeof data?.error === 'string' && data.error) {
-        throw new Error(data.error)
-      }
-      const reply = typeof data?.reply === 'string' ? data.reply : ''
-      if (typeof data?.conversation_id === 'string' && data.conversation_id) {
-        conversationIdRef.current = data.conversation_id
-      }
+  const send = useCallback(
+    async (overrideText?: string) => {
+      const text = (overrideText ?? input).trim()
+      if (!text || loading) return
 
-      setMessages((prev) => {
-        const next = [...prev]
-        const last = next[next.length - 1]
-        if (last && last.role === 'assistant' && last.streaming) {
-          next[next.length - 1] = {
-            role: 'assistant',
-            content: reply || '(No response)',
-            streaming: false,
-          }
-        }
-        return next
-      })
-    } catch (e) {
-      if ((e as Error)?.name !== 'AbortError') {
-        const msg =
-          (e as Error)?.message || 'Navi is temporarily unavailable. Please try again later.'
-        setMessages((prev) => {
-          const next = [...prev]
-          const last = next[next.length - 1]
-          if (last && last.role === 'assistant' && last.streaming) {
-            next[next.length - 1] = { role: 'assistant', content: msg, streaming: false, error: true }
-          } else {
-            next.push({ role: 'assistant', content: msg, error: true })
-          }
-          return next
+      setInput('')
+      setLoading(true)
+      setMessages((prev) => [
+        ...prev,
+        { role: 'user', content: text },
+        { role: 'assistant', content: '', streaming: true },
+      ])
+
+      const controller = new AbortController()
+      abortRef.current = controller
+
+      try {
+        const res = await fetch('/api/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            message: text,
+            conversation_id: conversationIdRef.current,
+            user_id: 'web-visitor',
+          }),
+          signal: controller.signal,
         })
+
+        const contentType = res.headers.get('content-type') ?? ''
+
+        // 服务端在流开始前用 JSON 返回错误（非 2xx 或明确 JSON）
+        if (!res.ok || contentType.includes('application/json')) {
+          let msg = 'Navi is temporarily unavailable. Please try again in a moment.'
+          try {
+            const j = await res.json()
+            if (typeof j?.error === 'string' && j.error) msg = j.error
+          } catch {
+            /* ignore */
+          }
+          throw new Error(msg)
+        }
+
+        if (!res.body) {
+          throw new Error('Navi returned no content.')
+        }
+
+        const reader = res.body.getReader()
+        const decoder = new TextDecoder()
+        let buffer = ''
+        let acc = ''
+
+        while (true) {
+          const { done, value } = await reader.read()
+          if (done) break
+          buffer += decoder.decode(value, { stream: true })
+          let idx: number
+          while ((idx = buffer.indexOf('\n')) !== -1) {
+            const line = buffer.slice(0, idx).trim()
+            buffer = buffer.slice(idx + 1)
+            if (!line) continue
+            let obj: StreamFrame
+            try {
+              obj = JSON.parse(line) as StreamFrame
+            } catch {
+              continue
+            }
+            if (obj.type === 'delta' && typeof obj.content === 'string') {
+              acc += obj.content
+              updateAssistant(acc, true)
+            } else if (obj.type === 'meta' && typeof obj.conversation_id === 'string' && obj.conversation_id) {
+              conversationIdRef.current = obj.conversation_id
+            } else if (obj.type === 'error' && typeof obj.message === 'string') {
+              throw new Error(obj.message)
+            }
+          }
+        }
+
+        updateAssistant(acc || '(No response)', false)
+      } catch (e) {
+        if ((e as Error)?.name !== 'AbortError') {
+          const msg =
+            (e as Error)?.message || 'Navi is temporarily unavailable. Please try again later.'
+          updateAssistant(msg, false, true)
+        }
+      } finally {
+        setLoading(false)
+        abortRef.current = null
       }
-    } finally {
-      setLoading(false)
-      abortRef.current = null
-    }
-  }
+    },
+    [input, loading, updateAssistant],
+  )
 
   return (
     <>
@@ -190,6 +230,21 @@ const AgentChat: React.FC = () => {
                 </div>
               </div>
             ))}
+
+            {/* 开场快捷问题：仅在首次打开、尚未开始对话时显示 */}
+            {messages.length === 1 && !loading && (
+              <div className="flex flex-wrap gap-2 pt-1">
+                {SUGGESTED_QUESTIONS.map((q) => (
+                  <button
+                    key={q}
+                    onClick={() => send(q)}
+                    className="text-left text-xs text-primary border border-primary/30 bg-white hover:bg-primary/5 rounded-full px-3 py-2 transition-colors"
+                  >
+                    {q}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* 输入区 */}

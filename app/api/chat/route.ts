@@ -59,8 +59,11 @@ function extractLastError(data: Record<string, unknown> | null): string {
 }
 
 // 非流式：发起对话后 Coze 先返回 in_progress，需要轮询 retrieve 直到 completed。
+// 用指数退避降低请求频率，避免触发 Coze 限流（错误 4009/4013）。
 async function waitForCompletion(conversationId: string, chatId: string): Promise<{ ok: boolean; error?: string }> {
-  for (let i = 0; i < 8; i++) {
+  let delay = 1200
+  for (let i = 0; i < 6; i++) {
+    await new Promise((r) => setTimeout(r, delay))
     const url = `${COZE_RETRIEVE_URL}?conversation_id=${encodeURIComponent(conversationId)}&chat_id=${encodeURIComponent(chatId)}`
     const res = await fetch(url, {
       headers: { Authorization: `Bearer ${COZE_TOKEN}` },
@@ -82,8 +85,8 @@ async function waitForCompletion(conversationId: string, chatId: string): Promis
     if (status === 'failed' || status === 'canceled') {
       return { ok: false, error: `Chat ${status}: ${extractLastError(data) || 'unknown reason'}` }
     }
-    // created / in_progress / requires_action：稍候继续
-    await new Promise((r) => setTimeout(r, 1000))
+    // created / in_progress / requires_action：延长间隔后继续
+    delay = Math.min(Math.round(delay * 1.5), 3000)
   }
   return { ok: false, error: 'Timed out waiting for Navi to reply. Please try again.' }
 }

@@ -5,8 +5,8 @@ const COZE_API_URL = 'https://api.coze.com/v3/chat'
 const COZE_RETRIEVE_URL = 'https://api.coze.com/v3/chat/retrieve'
 const COZE_MESSAGE_LIST_URL = 'https://api.coze.com/v3/chat/message/list'
 const COZE_BOT_ID = process.env.COZE_BOT_ID || '7684227464671215669'
-// 优先使用服务端专用 token；未配置时回退到已有的 NEXT_PUBLIC_COZE_PAT，保证开箱即用。
-const COZE_TOKEN = process.env.COZE_API_TOKEN || process.env.NEXT_PUBLIC_COZE_PAT || ''
+// 服务端专用 token，运行时读取。不用 NEXT_PUBLIC 前缀，避免被打进前端包 / 被构建期内联成旧值。
+const COZE_TOKEN = process.env.COZE_API_TOKEN || ''
 
 // 非流式轮询会多停留几秒，适当放宽函数超时（在支持该配置的套餐上生效）。
 export const maxDuration = 30

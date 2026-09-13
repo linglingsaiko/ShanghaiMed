@@ -2,6 +2,7 @@
 
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
+import Markdown from '@/components/Markdown'
 
 declare global {
   interface Window {
@@ -229,7 +230,7 @@ const AgentChat: React.FC = () => {
                         : 'bg-white text-gray-700 border border-gray-100 rounded-bl-md'
                   }`}
                 >
-                  {m.content}
+                  {m.role === 'assistant' && !m.error ? <Markdown text={m.content} /> : m.content}
                   {m.streaming && <span className="inline-block w-1.5 h-4 ml-0.5 bg-gray-400 animate-pulse align-middle" />}
                 </div>
               </div>

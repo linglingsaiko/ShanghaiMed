@@ -16,7 +16,7 @@ const WhatsAppFloat: React.FC = () => {
   }
 
   return (
-    <div className="fixed bottom-6 right-6 z-40 flex flex-col items-center gap-3">
+    <div className="fixed right-6 z-40 flex flex-col items-center gap-3 bottom-[calc(env(safe-area-inset-bottom)+6rem)] sm:bottom-6">
       {/* WhatsApp Button */}
       <button
         onClick={handleWhatsAppClick}

@@ -820,13 +820,16 @@ export const translations = {
 }
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguageState] = useState<Language>(() => {
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('shanghaimed-lang')
-      if (saved === 'en' || saved === 'ja') return saved
+  // SSR 安全模式：初始渲染固定 'en'，保证服务端 HTML 与客户端首次渲染一致（避免 React 水合错误）
+  const [language, setLanguageState] = useState<Language>('en')
+
+  // 挂载完成后从 localStorage 恢复用户语言偏好
+  useEffect(() => {
+    const saved = localStorage.getItem('shanghaimed-lang')
+    if (saved === 'en' || saved === 'ja') {
+      setLanguageState(saved)
     }
-    return 'en'
-  })
+  }, [])
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang)

@@ -1,35 +1,46 @@
+'use client'
+
 import React from 'react'
 import Link from 'next/link'
-import { MapPin, Phone, Mail } from 'lucide-react'
+import { MapPin } from 'lucide-react'
+import { useLanguage } from '@/contexts/LanguageContext'
+
+// 页脚链接结构（href 保持不变，文案通过翻译表渲染）
+const footerLinkStructure = [
+  {
+    keys: ['about', 'whyShanghai', 'ourNetwork', 'careTeam'],
+    hrefs: ['#', '/#why-shanghai', '/#treatments', '/#care-team'],
+  },
+  {
+    keys: ['hospitals', 'specialties', 'pricingGuide'],
+    hrefs: ['/#treatments', '/#treatments', '/#pricing'],
+  },
+  {
+    keys: ['howItWorks', 'faq', 'contactUs', 'whatsappSupport'],
+    hrefs: ['/#how-it-works', '/#faq', '/#contact', 'https://wa.me/8613818274110'],
+  },
+  {
+    keys: ['privacyPolicy', 'termsOfService', 'cookiePolicy', 'medicalDisclaimer'],
+    hrefs: ['#', '#', '#', '#'],
+  },
+]
+
+// 每列英文默认文案（与原版一致，翻译表缺失时回退）
+const footerFallback = [
+  ['About Us', 'Why Shanghai', 'Our Network', 'Care Team'],
+  ['Hospitals', 'Specialties', 'Pricing Guide'],
+  ['How It Works', 'FAQ', 'Contact Us', 'WhatsApp Support'],
+  ['Privacy Policy', 'Terms of Service', 'Cookie Policy', 'Medical Disclaimer'],
+]
+
+const fallbackTitles = ['About', 'Treatments', 'Support', 'Legal']
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear()
+  const { t, tArr } = useLanguage()
 
-  const footerLinks = {
-    About: [
-      { label: 'About Us', href: '#' },
-      { label: 'Why Shanghai', href: '/#why-shanghai' },
-      { label: 'Our Network', href: '/#treatments' },
-      { label: 'Care Team', href: '/#care-team' },
-    ],
-    Treatments: [
-      { label: 'Hospitals', href: '/#treatments' },
-      { label: 'Specialties', href: '/#treatments' },
-      { label: 'Pricing Guide', href: '/#pricing' },
-    ],
-    Support: [
-      { label: 'How It Works', href: '/#how-it-works' },
-      { label: 'FAQ', href: '/#faq' },
-      { label: 'Contact Us', href: '/#contact' },
-      { label: 'WhatsApp Support', href: 'https://wa.me/8613818274110' },
-    ],
-    Legal: [
-      { label: 'Privacy Policy', href: '#' },
-      { label: 'Terms of Service', href: '#' },
-      { label: 'Cookie Policy', href: '#' },
-      { label: 'Medical Disclaimer', href: '#' },
-    ],
-  }
+  const translatedColumns = tArr('footer.columns')
+  const tagline = t('footer.tagline')
 
   return (
     <footer className="bg-primary text-white">
@@ -44,8 +55,7 @@ const Footer: React.FC = () => {
               </span>
             </Link>
             <p className="text-gray-400 text-sm mb-6">
-              Connecting international patients with Shanghai&apos;s world-class
-              medical institutions and bilingual healthcare professionals.
+              {tagline !== 'footer.tagline' ? tagline : 'Connecting international patients with Shanghai\'s world-class medical institutions and bilingual healthcare professionals.'}
             </p>
             {/* Social Media Icons */}
             <div className="flex gap-4">
@@ -98,35 +108,48 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Link Columns */}
-          {Object.entries(footerLinks).map(([title, links]) => (
-            <div key={title}>
-              <h4 className="font-semibold text-white mb-4">{title}</h4>
-              <ul className="space-y-3">
-                {links.map((link, index) => (
-                  <li key={`${title}-${index}`}>
-                    <Link
-                      href={link.href}
-                      className="text-sm text-gray-400 hover:text-white transition-colors"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {footerLinkStructure.map((column, colIndex) => {
+            const translatedCol = translatedColumns[colIndex]
+            const title =
+              translatedCol && typeof translatedCol.title === 'string'
+                ? translatedCol.title
+                : fallbackTitles[colIndex]
+            return (
+              <div key={colIndex}>
+                <h4 className="font-semibold text-white mb-4">{title}</h4>
+                <ul className="space-y-3">
+                  {column.keys.map((key, linkIndex) => {
+                    const label =
+                      translatedCol && Array.isArray(translatedCol.links) && typeof translatedCol.links[linkIndex] === 'string'
+                        ? translatedCol.links[linkIndex]
+                        : footerFallback[colIndex][linkIndex]
+                    return (
+                      <li key={`${colIndex}-${linkIndex}`}>
+                        <Link
+                          href={column.hrefs[linkIndex]}
+                          className="text-sm text-gray-400 hover:text-white transition-colors"
+                        >
+                          {label}
+                        </Link>
+                      </li>
+                    )
+                  })}
+                </ul>
+              </div>
+            )
+          })}
         </div>
 
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-gray-400">
-              © {currentYear} ShanghaiMed. All rights reserved.
+              © {currentYear} ShanghaiMed. {t('footer.rights')}
             </p>
             <div className="flex items-center gap-6 text-sm text-gray-400">
               <span className="flex items-center gap-2">
                 <MapPin className="w-4 h-4" />
-                Shanghai, China
+                {t('footer.location')}
               </span>
             </div>
           </div>

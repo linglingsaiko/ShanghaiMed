@@ -5,10 +5,12 @@ import { ArrowRight, Calendar } from 'lucide-react'
 import { getSortedPosts, categories } from '@/lib/blog'
 import type { BlogPost } from '@/lib/types'
 import Link from 'next/link'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function LatestInsights() {
   const [posts, setPosts] = useState<BlogPost[]>([])
-  
+  const { t, language } = useLanguage()
+
   useEffect(() => {
     const fetchPosts = async () => {
       const allPosts = await getSortedPosts()
@@ -22,21 +24,21 @@ export default function LatestInsights() {
     }
     fetchPosts()
   }, [])
-  
+
   return (
     <section id="insights" className="py-16 bg-gray-50 scroll-mt-24">
       <div className="section-container">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           <span className="text-accent font-semibold text-sm tracking-wider uppercase">
-            Blog
+            {t('insights.badge')}
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mt-4 mb-6">Latest Insights</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mt-4 mb-6">{t('insights.title')}</h2>
           <p className="text-gray-600 text-lg">
-            Discover articles about healthcare in Shanghai, medical tourism, and wellness.
+            {t('insights.subtitle')}
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {posts.map(post => (
             <article key={post.id} className="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-shadow group">
@@ -50,7 +52,7 @@ export default function LatestInsights() {
                   />
                   {post.featured && (
                     <div className="absolute top-3 left-3 bg-amber-500 text-white text-xs font-semibold px-2.5 py-1 rounded-md shadow-sm">
-                      ★ Featured
+                      {t('insights.featured')}
                     </div>
                   )}
                 </div>
@@ -70,26 +72,29 @@ export default function LatestInsights() {
                 <div className="flex items-center justify-between">
                   <span className="flex items-center gap-1 text-sm text-gray-500">
                     <Calendar className="h-4 w-4" />
-                    {new Date(post.publishDate).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+                    {new Date(post.publishDate).toLocaleDateString(
+                      language === 'ja' ? 'ja-JP' : 'en-US',
+                      { year: 'numeric', month: 'short', day: 'numeric' }
+                    )}
                   </span>
                   <Link
                     href={`/blog/${post.slug}`}
                     className="flex items-center gap-1 text-primary text-sm font-medium hover:gap-2 transition-all"
                   >
-                    Read More <ArrowRight className="h-4 w-4" />
+                    {t('insights.readMore')} <ArrowRight className="h-4 w-4" />
                   </Link>
                 </div>
               </div>
             </article>
           ))}
         </div>
-        
+
         <div className="text-center">
           <Link
             href="/blog"
             className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
           >
-            View All Articles
+            {t('insights.viewAll')}
             <ArrowRight className="h-4 w-4" />
           </Link>
         </div>

@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { MessageCircle, Stethoscope, DollarSign, Plane, Car, Building2, Heart, FileText, Phone } from 'lucide-react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 interface ProcessStep {
   icon: React.ElementType
@@ -14,74 +15,59 @@ interface ProcessPhase {
   steps: ProcessStep[]
 }
 
+// 图标按原顺序固定（与翻译表 steps 一一对应）
+const PHASE_ICONS: React.ElementType[][] = [
+  [MessageCircle, Stethoscope, DollarSign, Plane],
+  [Car, Building2, Heart, Stethoscope],
+  [FileText, Phone],
+]
+
+// 英文默认数据（翻译缺失时回退）
+const FALLBACK_PHASES: ProcessPhase[] = [
+  {
+    phase: 'Before You Arrive',
+    steps: [
+      { icon: MessageCircle, title: 'Online Inquiry', description: 'AI Navigator responds instantly' },
+      { icon: Stethoscope, title: 'Medical Assessment', description: 'Collect symptoms, recommend hospitals' },
+      { icon: DollarSign, title: 'Cost Estimate', description: 'Transparent pricing for consultation & basic tests' },
+      { icon: Plane, title: 'Visa & Travel', description: 'Visa-free/240h transit guidance, travel tips' },
+    ],
+  },
+  {
+    phase: 'During Your Visit',
+    steps: [
+      { icon: Car, title: 'Airport Pick-up', description: 'Bilingual nurse meets you' },
+      { icon: Building2, title: 'Hospital Visit', description: 'Nurse-accompanied consultation & tests' },
+      { icon: Heart, title: 'Treatment', description: 'World-class care at leading hospitals' },
+      { icon: Stethoscope, title: 'Inpatient Care', description: 'Dedicated nursing support (if needed)' },
+    ],
+  },
+  {
+    phase: 'After Your Visit',
+    steps: [
+      { icon: FileText, title: 'Discharge & Translation', description: 'English medical reports' },
+      { icon: Phone, title: 'Follow-up', description: 'Remote support, prescription coordination' },
+    ],
+  },
+]
+
 const ProcessFlow: React.FC = () => {
-  const phases: ProcessPhase[] = [
-    {
-      phase: 'Before You Arrive',
-      steps: [
-        {
-          icon: MessageCircle,
-          title: 'Online Inquiry',
-          description: 'AI Navigator responds instantly',
-        },
-        {
-          icon: Stethoscope,
-          title: 'Medical Assessment',
-          description: 'Collect symptoms, recommend hospitals',
-        },
-        {
-          icon: DollarSign,
-          title: 'Cost Estimate',
-          description: 'Transparent pricing for consultation & basic tests',
-        },
-        {
-          icon: Plane,
-          title: 'Visa & Travel',
-          description: 'Visa-free/240h transit guidance, travel tips',
-        },
-      ],
-    },
-    {
-      phase: 'During Your Visit',
-      steps: [
-        {
-          icon: Car,
-          title: 'Airport Pick-up',
-          description: 'Bilingual nurse meets you',
-        },
-        {
-          icon: Building2,
-          title: 'Hospital Visit',
-          description: 'Nurse-accompanied consultation & tests',
-        },
-        {
-          icon: Heart,
-          title: 'Treatment',
-          description: 'World-class care at leading hospitals',
-        },
-        {
-          icon: Stethoscope,
-          title: 'Inpatient Care',
-          description: 'Dedicated nursing support (if needed)',
-        },
-      ],
-    },
-    {
-      phase: 'After Your Visit',
-      steps: [
-        {
-          icon: FileText,
-          title: 'Discharge & Translation',
-          description: 'English medical reports',
-        },
-        {
-          icon: Phone,
-          title: 'Follow-up',
-          description: 'Remote support, prescription coordination',
-        },
-      ],
-    },
-  ]
+  const { t, tArr } = useLanguage()
+  const translatedPhases = tArr('processFlow.phases')
+
+  // 翻译表完整时用翻译，否则回退英文
+  const phases: ProcessPhase[] =
+    translatedPhases.length === FALLBACK_PHASES.length &&
+    translatedPhases.every((p) => Array.isArray(p?.steps) && p.steps.length > 0)
+      ? translatedPhases.map((phase, phaseIndex) => ({
+          phase: phase.phase as string,
+          steps: phase.steps.map((step: any, stepIndex: number) => ({
+            icon: PHASE_ICONS[phaseIndex][stepIndex] || MessageCircle,
+            title: step.title as string,
+            description: step.description as string,
+          })),
+        }))
+      : FALLBACK_PHASES
 
   return (
     <section className="py-20 lg:py-28 bg-white">
@@ -89,14 +75,13 @@ const ProcessFlow: React.FC = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-accent font-semibold text-sm tracking-wider uppercase">
-            Your Journey
+            {t('processFlow.badge')}
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mt-4 mb-6">
-            From Inquiry to Care
+            {t('processFlow.title')}
           </h2>
           <p className="text-gray-600 text-lg">
-            A complete timeline of your medical tourism experience in Shanghai<br />
-            with professional support at every step.
+            {t('processFlow.subtitle')}
           </p>
         </div>
 

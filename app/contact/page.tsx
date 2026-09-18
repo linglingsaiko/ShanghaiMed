@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import PageHeading from '@/components/PageHeading'
 
 export const metadata: Metadata = {
   title: 'Contact Us - Get a Free Consultation',
@@ -8,16 +9,11 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="pt-24 pb-16">
-      <div className="section-container">
-        <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-          Contact Us
-        </h1>
-        <p className="text-xl text-gray-600 max-w-3xl">
-          Get started with your medical journey today. Our team is ready to
-          help 24/7.
-        </p>
-      </div>
-    </div>
+    <PageHeading
+      titleKey="pages.contactTitle"
+      subtitleKey="pages.contactSubtitle"
+      fallbackTitle="Contact Us"
+      fallbackSubtitle="Get started with your medical journey today. Our team is ready to help 24/7."
+    />
   )
 }

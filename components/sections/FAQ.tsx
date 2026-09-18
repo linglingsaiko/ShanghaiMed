@@ -4,9 +4,18 @@ import React, { useState } from 'react'
 import { ChevronDown, HelpCircle } from 'lucide-react'
 import Card from '../ui/Card'
 import { faqData } from '@/lib/constants'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const FAQ: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
+  const { t, tArr } = useLanguage()
+
+  // 翻译表中的 FAQ 数据（缺失时回退英文常量）
+  const translatedFaqs = tArr('faq.items')
+  const faqs =
+    translatedFaqs.length === faqData.length
+      ? translatedFaqs
+      : faqData
 
   return (
     <section className="py-20 lg:py-28 bg-gray-50">
@@ -14,19 +23,19 @@ const FAQ: React.FC = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-accent font-semibold text-sm tracking-wider uppercase">
-            FAQ
+            {t('faq.badge')}
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mt-4 mb-6">
-            Frequently Asked Questions
+            {t('faq.title')}
           </h2>
           <p className="text-gray-600 text-lg">
-            Everything you need to know about medical tourism in Shanghai.
+            {t('faq.subtitle')}
           </p>
         </div>
 
         {/* FAQ Grid */}
         <div className="max-w-3xl mx-auto">
-          {faqData.map((faq, index) => (
+          {faqs.map((faq: any, index: number) => (
             <Card
               key={index}
               className={`mb-4 transition-all duration-300 ${
@@ -71,7 +80,7 @@ const FAQ: React.FC = () => {
         {/* Still Have Questions */}
         <Card className="mt-12 p-8 text-center max-w-3xl mx-auto bg-gradient-to-r from-primary to-primary-600">
           <h3 className="text-2xl font-bold text-white mb-6">
-            Still have questions?
+            {t('faq.stillTitle')}
           </h3>
           <div className="flex justify-center">
             <a
@@ -80,7 +89,7 @@ const FAQ: React.FC = () => {
               rel="noopener noreferrer"
               className="px-6 py-3 bg-accent text-white rounded-lg font-semibold hover:bg-accent-600 transition-colors"
             >
-              Contact Us on WhatsApp
+              {t('faq.whatsappCta')}
             </a>
           </div>
         </Card>

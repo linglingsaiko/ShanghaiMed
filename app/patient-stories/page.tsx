@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import PageHeading from '@/components/PageHeading'
 
 export const metadata: Metadata = {
   title: 'Patient Stories - Real Experiences',
@@ -8,15 +9,11 @@ export const metadata: Metadata = {
 
 export default function PatientStoriesPage() {
   return (
-    <div className="pt-24 pb-16">
-      <div className="section-container">
-        <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-          Patient Stories
-        </h1>
-        <p className="text-xl text-gray-600 max-w-3xl">
-          Real experiences from patients who trusted us with their health.
-        </p>
-      </div>
-    </div>
+    <PageHeading
+      titleKey="pages.patientStoriesTitle"
+      subtitleKey="pages.patientStoriesSubtitle"
+      fallbackTitle="Patient Stories"
+      fallbackSubtitle="Real experiences from patients who trusted us with their health."
+    />
   )
 }

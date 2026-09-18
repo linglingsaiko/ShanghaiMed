@@ -7,7 +7,7 @@ import { processSteps } from '@/lib/constants'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 const HowItWorks: React.FC = () => {
-  const { t } = useLanguage()
+  const { t, tArr } = useLanguage()
   const iconMap: Record<string, React.ElementType> = {
     MessageSquare,
     Users,
@@ -15,13 +15,16 @@ const HowItWorks: React.FC = () => {
     Heart,
   }
 
+  // 翻译表中的步骤文案（与 processSteps 一一对应），缺失时回退英文常量
+  const translatedSteps = tArr('howItWorks.steps')
+
   return (
     <section id="how-it-works" className="py-20 lg:py-28 bg-gray-50">
       <div className="section-container">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-accent font-semibold text-sm tracking-wider uppercase">
-            How It Works
+            {t('howItWorks.badge')}
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mt-4 mb-6">
             {t('howItWorks.title')}
@@ -38,6 +41,15 @@ const HowItWorks: React.FC = () => {
 
           {processSteps.map((step, index) => {
             const Icon = iconMap[step.icon]
+            const translated = translatedSteps[index]
+            const title =
+              translatedSteps.length === processSteps.length && translated?.title
+                ? translated.title
+                : step.title
+            const description =
+              translatedSteps.length === processSteps.length && translated?.description
+                ? translated.description
+                : step.description
             return (
               <div key={step.step} className="relative">
                 <Card className="text-center p-8 h-full bg-white">
@@ -53,10 +65,10 @@ const HowItWorks: React.FC = () => {
 
                   {/* Content */}
                   <h3 className="text-xl font-bold text-primary mb-3 whitespace-nowrap">
-                    {step.title}
+                    {title}
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
-                    {step.description}
+                    {description}
                   </p>
                 </Card>
               </div>

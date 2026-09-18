@@ -3,6 +3,7 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import Markdown from '@/components/Markdown'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 declare global {
   interface Window {
@@ -18,14 +19,15 @@ type ChatMessage = {
   error?: boolean
 }
 
-const WELCOME: ChatMessage = {
+// 英文默认文案（翻译缺失时回退）
+const WELCOME_EN: ChatMessage = {
   role: 'assistant',
   content:
     "Hello! I'm Navi, your medical navigator. Ask me anything about hospitals, treatments, costs, visas, or planning your medical journey in Shanghai.",
 }
 
-// 开场快捷问题（与 Coze 后台「开场问题」配置保持一致）
-const SUGGESTED_QUESTIONS = [
+// 开场快捷问题英文默认（与 Coze 后台「开场问题」配置保持一致）
+const SUGGESTED_QUESTIONS_EN = [
   "What's included in your personalized service?",
   'How do I book an appointment?',
   "What's the cost of your one-on-one service?",
@@ -41,10 +43,11 @@ type StreamFrame = {
 
 const AgentChat: React.FC = () => {
   const [open, setOpen] = useState(false)
-  const [messages, setMessages] = useState<ChatMessage[]>([WELCOME])
+  const [messages, setMessages] = useState<ChatMessage[]>([WELCOME_EN])
   const [input, setInput] = useState('')
   const [loading, setLoading] = useState(false)
   const [followUps, setFollowUps] = useState<string[]>([])
+  const { t, tArr } = useLanguage()
 
   const conversationIdRef = useRef<string | undefined>(undefined)
   const abortRef = useRef<AbortController | null>(null)
@@ -75,6 +78,19 @@ const AgentChat: React.FC = () => {
       listRef.current.scrollTop = listRef.current.scrollHeight
     }
   }, [messages, loading, followUps, open])
+
+  // 语言切换时，若尚未开始对话（仅剩欢迎消息），同步更新欢迎语
+  useEffect(() => {
+    setMessages((prev) => {
+      if (prev.length === 1 && prev[0].role === 'assistant' && !prev[0].streaming) {
+        const welcome = t('agentChat.welcome')
+        if (welcome !== 'agentChat.welcome') {
+          return [{ role: 'assistant', content: welcome }]
+        }
+      }
+      return prev
+    })
+  }, [t])
 
   // 更新最后一条 assistant 消息（流式期间频繁调用，用函数式 setState 保证不丢帧）
   const updateAssistant = useCallback((content: string, streaming: boolean, error = false) => {
@@ -185,6 +201,11 @@ const AgentChat: React.FC = () => {
     [input, loading, updateAssistant],
   )
 
+  // 开场快捷问题：优先使用当前语言的翻译，回退英文
+  const translatedQuestions = tArr('agentChat.questions')
+  const suggestedQuestions =
+    translatedQuestions.length > 0 ? translatedQuestions : SUGGESTED_QUESTIONS_EN
+
   return (
     <>
       {/* 浮动按钮 */}
@@ -203,8 +224,8 @@ const AgentChat: React.FC = () => {
           <div className="flex items-center gap-3 px-4 py-3 bg-primary text-white">
             <Image src="/images/navi-avatar.png" alt="Navi" width={36} height={36} className="rounded-full" />
             <div className="flex-1 min-w-0">
-              <div className="font-semibold text-sm">Navi · Medical Navigator</div>
-              <div className="text-xs text-gray-300 truncate">24/7 AI assistant</div>
+              <div className="font-semibold text-sm">{t('agentChat.chatTitle')}</div>
+              <div className="text-xs text-gray-300 truncate">{t('agentChat.chatSubtitle')}</div>
             </div>
             <button
               onClick={hide}
@@ -239,7 +260,7 @@ const AgentChat: React.FC = () => {
             {/* 开场快捷问题：仅在首次打开、尚未开始对话时显示 */}
             {messages.length === 1 && !loading && (
               <div className="flex flex-wrap gap-2 pt-1">
-                {SUGGESTED_QUESTIONS.map((q) => (
+                {suggestedQuestions.map((q) => (
                   <button
                     key={q}
                     onClick={() => send(q)}
@@ -279,7 +300,7 @@ const AgentChat: React.FC = () => {
               ref={inputRef}
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder="Ask me about healthcare in Shanghai..."
+              placeholder={t('agentChat.inputPlaceholder')}
               className="flex-1 px-3 py-2 text-sm border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-accent/40"
               disabled={loading}
             />

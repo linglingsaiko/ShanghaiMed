@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import PageHeading from '@/components/PageHeading'
 
 export const metadata: Metadata = {
   title: 'Treatments & Hospitals - Shanghai Medical Network',
@@ -8,16 +9,11 @@ export const metadata: Metadata = {
 
 export default function TreatmentsPage() {
   return (
-    <div className="pt-24 pb-16">
-      <div className="section-container">
-        <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-          Treatments & Hospitals
-        </h1>
-        <p className="text-xl text-gray-600 max-w-3xl">
-          Access to Shanghai&apos;s finest medical institutions across all
-          specialties.
-        </p>
-      </div>
-    </div>
+    <PageHeading
+      titleKey="pages.treatmentsTitle"
+      subtitleKey="pages.treatmentsSubtitle"
+      fallbackTitle="Treatments & Hospitals"
+      fallbackSubtitle="Access to Shanghai's finest medical institutions across all specialties."
+    />
   )
 }

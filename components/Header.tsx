@@ -7,11 +7,20 @@ import { usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
 import { navLinks } from '@/lib/constants'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const pathname = usePathname()
   const isHomePage = pathname === '/'
+  const { tArr } = useLanguage()
+
+  // 翻译表中的导航文案（与 navLinks 一一对应），缺失时回退到英文常量
+  const navLabels = tArr('nav.items')
+  const getLabel = (index: number, fallback: string) =>
+    navLabels.length === navLinks.length && typeof navLabels[index] === 'string'
+      ? navLabels[index]
+      : fallback
 
   const handleNavClick = (href: string) => {
     setMobileMenuOpen(false)
@@ -56,7 +65,7 @@ const Header: React.FC = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link) => (
+            {navLinks.map((link, index) => (
               <a
                 key={link.href}
                 href={link.href}
@@ -67,7 +76,7 @@ const Header: React.FC = () => {
                 }}
                 className="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
               >
-                {link.label}
+                {getLabel(index, link.label)}
               </a>
             ))}
             <LanguageSwitcher />
@@ -93,7 +102,7 @@ const Header: React.FC = () => {
         {mobileMenuOpen && (
           <div className="lg:hidden py-4 border-t border-gray-100">
             <div className="flex flex-col gap-4">
-              {navLinks.map((link) => (
+              {navLinks.map((link, index) => (
                 <a
                   key={link.href}
                   href={link.href}
@@ -104,7 +113,7 @@ const Header: React.FC = () => {
                   }}
                   className="text-base font-medium text-gray-600 hover:text-primary transition-colors py-2"
                 >
-                  {link.label}
+                  {getLabel(index, link.label)}
                 </a>
               ))}
               <div className="py-2">

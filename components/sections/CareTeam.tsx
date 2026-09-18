@@ -8,7 +8,7 @@ import { nurseServices, nurseCredentials } from '@/lib/constants'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 const CareTeam: React.FC = () => {
-  const { t } = useLanguage()
+  const { t, tArr } = useLanguage()
   const iconMap: Record<string, React.ElementType> = {
     Clipboard,
     Calendar,
@@ -21,13 +21,17 @@ const CareTeam: React.FC = () => {
     Heart,
   }
 
+  // 翻译表数据（缺失时回退英文常量）
+  const translatedServices = tArr('careTeam.services')
+  const translatedCredentials = tArr('careTeam.credentials')
+
   return (
     <section id="care-team" className="py-20 lg:py-28 bg-gray-50">
       <div className="section-container">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-accent font-semibold text-sm tracking-wider uppercase">
-            Care Team
+            {t('careTeam.badge')}
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mt-4 mb-6">
             {t('careTeam.title')}
@@ -59,7 +63,10 @@ const CareTeam: React.FC = () => {
               </div>
 
               <ul className="space-y-3">
-                {nurseCredentials.map((credential, index) => (
+                {(translatedCredentials.length === nurseCredentials.length
+                  ? translatedCredentials
+                  : nurseCredentials
+                ).map((credential, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
                     <div>
@@ -78,21 +85,30 @@ const CareTeam: React.FC = () => {
           {/* Right Column - Services */}
           <div>
             <h3 className="text-xl font-bold text-primary mb-6">
-              Our Nursing Services
+              {t('careTeam.servicesTitle')}
             </h3>
             <div className="grid sm:grid-cols-2 gap-4">
               {nurseServices.map((service, index) => {
                 const Icon = iconMap[service.icon]
+                const translated = translatedServices[index]
+                const title =
+                  translatedServices.length === nurseServices.length && translated?.title
+                    ? translated.title
+                    : service.title
+                const description =
+                  translatedServices.length === nurseServices.length && translated?.description
+                    ? translated.description
+                    : service.description
                 return (
                   <Card key={index} className="p-6">
                     <div className="w-12 h-12 bg-accent-50 rounded-xl flex items-center justify-center mb-4">
                       <Icon className="w-6 h-6 text-accent" />
                     </div>
                     <h4 className="font-semibold text-primary mb-2">
-                      {service.title}
+                      {title}
                     </h4>
                     <p className="text-sm text-gray-600">
-                      {service.description}
+                      {description}
                     </p>
                   </Card>
                 )

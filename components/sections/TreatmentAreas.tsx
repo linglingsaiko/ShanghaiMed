@@ -15,9 +15,22 @@ import { events } from '@/lib/analytics'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 const TreatmentAreas: React.FC = () => {
-  const { t } = useLanguage()
+  const { t, tArr } = useLanguage()
   const [activeTier, setActiveTier] = useState<'all' | 'tier1' | 'tier2'>('all')
   const [showModal, setShowModal] = useState(false)
+
+  // 医院描述翻译（缺失时回退英文原文）
+  const getHospitalDesc = (hospital: Hospital): string => {
+    const key = `hospitals.${hospital.id}.description`
+    const translated = t(key)
+    return translated !== key ? translated : hospital.description
+  }
+
+  // 医院专科标签翻译（数量匹配时使用，否则回退英文）
+  const getHospitalSpecialties = (hospital: Hospital): string[] => {
+    const translated = tArr(`hospitals.${hospital.id}.specialties`)
+    return translated.length === hospital.specialties.length ? translated : hospital.specialties
+  }
 
   const allHospitals = [...tier1Hospitals, ...tier2Hospitals]
   const featuredHospitals = featuredHospitalIds
@@ -52,8 +65,7 @@ const TreatmentAreas: React.FC = () => {
             {t('treatments.title')}
           </h2>
           <p className="text-gray-600 text-lg">
-            Access leading hospitals across Shanghai,<br />
-            with recommendations tailored to your medical needs.
+            {t('treatments.subtitle')}
           </p>
         </div>
 
@@ -83,12 +95,12 @@ const TreatmentAreas: React.FC = () => {
                   {hospital.name}
                 </h3>
                 <p className="text-gray-600 text-sm mb-3 line-clamp-2">
-                  {hospital.description}
+                  {getHospitalDesc(hospital)}
                 </p>
 
                 {/* Key Departments - Pill Tags */}
                 <div className="flex flex-wrap gap-1 mb-3">
-                  {hospital.specialties.slice(0, 3).map((specialty, idx) => (
+                  {getHospitalSpecialties(hospital).slice(0, 3).map((specialty, idx) => (
                     <span
                       key={idx}
                       className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full"
@@ -162,9 +174,9 @@ const TreatmentAreas: React.FC = () => {
               {/* Header */}
               <div className="flex items-center justify-between p-6 border-b">
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900">All Hospitals</h3>
+                  <h3 className="text-xl font-bold text-gray-900">{t('treatments.modalAllHospitals')}</h3>
                   <p className="text-sm text-gray-500 mt-1">
-                    {allHospitals.length} hospitals available
+                    {allHospitals.length} {t('treatments.modalHospitalsAvailable')}
                   </p>
                 </div>
                 <button
@@ -179,9 +191,9 @@ const TreatmentAreas: React.FC = () => {
               {/* Filter Tabs */}
               <div className="flex flex-wrap gap-2 p-4 border-b">
                 {[
-                  { key: 'all', label: 'All Hospitals' },
-                  { key: 'tier1', label: 'Public Grade-A' },
-                  { key: 'tier2', label: 'International Private' },
+                  { key: 'all', label: t('treatments.modalAll') },
+                  { key: 'tier1', label: t('treatments.modalPublicGradeA') },
+                  { key: 'tier2', label: t('treatments.modalInternationalPrivate') },
                 ].map((tab) => (
                   <button
                     key={tab.key}
@@ -223,7 +235,7 @@ const TreatmentAreas: React.FC = () => {
                         </div>
                         {/* Specialties */}
                         <div className="flex flex-wrap gap-1 mb-2">
-                          {hospital.specialties.slice(0, 3).map((specialty, idx) => (
+                          {getHospitalSpecialties(hospital).slice(0, 3).map((specialty, idx) => (
                             <span
                               key={idx}
                               className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded"
@@ -249,7 +261,7 @@ const TreatmentAreas: React.FC = () => {
                         {/* Insurance Partners */}
                         {hospital.insurancePartners.length > 0 && (
                           <div className="flex flex-wrap gap-1">
-                            <span className="text-xs text-gray-500 mr-1">Ins:</span>
+                            <span className="text-xs text-gray-500 mr-1">{t('treatments.modalIns')}</span>
                             {hospital.insurancePartners.slice(0, 4).map((insurance, idx) => (
                               <span
                                 key={idx}

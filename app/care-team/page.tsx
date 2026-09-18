@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import PageHeading from '@/components/PageHeading'
 
 export const metadata: Metadata = {
   title: 'Care Team - ISPN Certified Bilingual Nurses',
@@ -8,15 +9,11 @@ export const metadata: Metadata = {
 
 export default function CareTeamPage() {
   return (
-    <div className="pt-24 pb-16">
-      <div className="section-container">
-        <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-          Our Care Team
-        </h1>
-        <p className="text-xl text-gray-600 max-w-3xl">
-          ISPN-certified bilingual nurses dedicated to your health and comfort.
-        </p>
-      </div>
-    </div>
+    <PageHeading
+      titleKey="pages.careTeamTitle"
+      subtitleKey="pages.careTeamSubtitle"
+      fallbackTitle="Our Care Team"
+      fallbackSubtitle="ISPN-certified bilingual nurses dedicated to your health and comfort."
+    />
   )
 }

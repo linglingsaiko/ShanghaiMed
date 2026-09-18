@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import PageHeading from '@/components/PageHeading'
 
 export const metadata: Metadata = {
   title: 'Why Shanghai - World-Class Medical Destination',
@@ -8,16 +9,11 @@ export const metadata: Metadata = {
 
 export default function WhyShanghaiPage() {
   return (
-    <div className="pt-24 pb-16">
-      <div className="section-container">
-        <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-          Why Shanghai?
-        </h1>
-        <p className="text-xl text-gray-600 max-w-3xl">
-          Shanghai has emerged as a premier destination for international
-          patients seeking world-class medical care at accessible prices.
-        </p>
-      </div>
-    </div>
+    <PageHeading
+      titleKey="pages.whyShanghaiTitle"
+      subtitleKey="pages.whyShanghaiSubtitle"
+      fallbackTitle="Why Shanghai?"
+      fallbackSubtitle="Shanghai has emerged as a premier destination for international patients seeking world-class medical care at accessible prices."
+    />
   )
 }

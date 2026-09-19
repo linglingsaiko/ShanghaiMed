@@ -6,12 +6,14 @@ import type { BlogPost } from '@/lib/types'
 import { getNextPost, getPreviousPost, categories } from '@/lib/blog'
 import BlogCTA from './BlogCTA'
 import Link from 'next/link'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 interface BlogDetailProps {
   post: BlogPost
 }
 
 export default function BlogDetail({ post }: BlogDetailProps) {
+  const { language, t, tArr } = useLanguage()
   const [showToc, setShowToc] = useState(false)
   const [headings, setHeadings] = useState<{ id: string; text: string; level: number }[]>([])
   const [nextPost, setNextPost] = useState<BlogPost | undefined>(undefined)
@@ -22,11 +24,11 @@ export default function BlogDetail({ post }: BlogDetailProps) {
   
   useEffect(() => {
     const fetchRelatedPosts = async () => {
-      setNextPost(await getNextPost(post))
-      setPreviousPost(await getPreviousPost(post))
+      setNextPost(await getNextPost(post, language === 'ja' ? 'ja' : undefined))
+      setPreviousPost(await getPreviousPost(post, language === 'ja' ? 'ja' : undefined))
     }
     fetchRelatedPosts()
-  }, [post])
+  }, [post, language])
   
   useEffect(() => {
     const headingRegex = /<h([2-3])[^>]*>(.*?)<\/h[2-3]>/gi
@@ -75,7 +77,7 @@ export default function BlogDetail({ post }: BlogDetailProps) {
     e.preventDefault()
     
     if (!email) {
-      alert('Please enter your email address')
+      alert(t('blog.alertEmailRequired'))
       return
     }
 
@@ -94,20 +96,20 @@ export default function BlogDetail({ post }: BlogDetailProps) {
         setShowSuccessModal(true)
         setTimeout(() => setShowSuccessModal(false), 3000)
       } else {
-        alert('Failed to subscribe. Please try again later.')
+        alert(t('blog.alertSubscribeFail'))
       }
     } catch (error) {
       console.error('Subscribe error:', error)
-      alert('An error occurred. Please try again later.')
+      alert(t('blog.alertError'))
     }
   }
   
   return (
     <div className="w-full max-w-6xl mx-auto px-4 py-8">
       <nav className="mb-6 flex items-center gap-2 text-sm text-gray-500">
-        <Link href="/" className="hover:text-primary">Home</Link>
+        <Link href="/" className="hover:text-primary">{t('blog.home')}</Link>
         <span>/</span>
-        <Link href="/blog" className="hover:text-primary">Blog</Link>
+        <Link href="/blog" className="hover:text-primary">{t('blog.blogNav')}</Link>
         <span>/</span>
         <span className="text-gray-700">{post.title}</span>
       </nav>
@@ -129,7 +131,7 @@ export default function BlogDetail({ post }: BlogDetailProps) {
             <div className="p-8">
               <div className="flex flex-wrap items-center gap-4 mb-4">
                 <span className="px-3 py-1 text-sm font-medium bg-green-100 text-green-700 rounded-full">
-                  {categories.find(c => c.id === post.category)?.name || post.category}
+                  {(() => { const k = 'blog.categoryNames.' + post.category; const v = t(k); return language === 'ja' && v !== k ? v : categories.find(c => c.id === post.category)?.name || post.category })()}
                 </span>
                 <span className="flex items-center gap-1 text-sm text-gray-500">
                   <User className="h-4 w-4" />
@@ -137,9 +139,9 @@ export default function BlogDetail({ post }: BlogDetailProps) {
                 </span>
                 <span className="flex items-center gap-1 text-sm text-gray-500">
                   <Calendar className="h-4 w-4" />
-                  {new Date(post.publishDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                  {new Date(post.publishDate).toLocaleDateString(language === 'ja' ? 'ja-JP' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
                 </span>
-                <span className="text-sm text-gray-500">{post.readingTime} min read</span>
+                <span className="text-sm text-gray-500">{post.readingTime} {t('blog.minRead')}</span>
               </div>
               
               <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{post.title}</h1>
@@ -149,7 +151,7 @@ export default function BlogDetail({ post }: BlogDetailProps) {
               <div className="flex items-center gap-4 mb-6">
                 <span className="text-sm text-gray-500 flex items-center gap-2">
                   <Share2 className="h-4 w-4" />
-                  Share:
+                  {t('blog.shareLabel')}
                 </span>
                 <div className="flex gap-2">
                   <button
@@ -207,7 +209,7 @@ export default function BlogDetail({ post }: BlogDetailProps) {
                 <div className="flex items-center gap-3">
                   <ArrowLeft className="h-5 w-5 text-gray-400 group-hover:text-primary transition-colors" />
                   <div>
-                    <span className="text-sm text-gray-500">Previous Article</span>
+                    <span className="text-sm text-gray-500">{t('blog.previousArticle')}</span>
                     <h3 className="font-medium text-gray-900 group-hover:text-primary transition-colors">
                       {previousPost.title}
                     </h3>
@@ -220,7 +222,7 @@ export default function BlogDetail({ post }: BlogDetailProps) {
               <Link href={`/blog/${nextPost.slug}`} className="group bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition-shadow ml-auto md:ml-0">
                 <div className="flex items-center gap-3">
                   <div className="text-right">
-                    <span className="text-sm text-gray-500">Next Article</span>
+                    <span className="text-sm text-gray-500">{t('blog.nextArticle')}</span>
                     <h3 className="font-medium text-gray-900 group-hover:text-primary transition-colors">
                       {nextPost.title}
                     </h3>
@@ -240,9 +242,9 @@ export default function BlogDetail({ post }: BlogDetailProps) {
             >
               <span className="font-medium flex items-center gap-2">
                 <List className="h-5 w-5" />
-                Table of Contents
+                {t('blog.toc')}
               </span>
-              <span className="text-gray-400">{showToc ? 'Hide' : 'Show'}</span>
+              <span className="text-gray-400">{showToc ? t('blog.tocHide') : t('blog.tocShow')}</span>
             </button>
             
             {showToc && headings.length > 0 && (
@@ -264,11 +266,11 @@ export default function BlogDetail({ post }: BlogDetailProps) {
             {!showToc && (
               <div className="space-y-4">
                 <div className="p-4 bg-blue-50 rounded-lg">
-                  <h3 className="font-medium text-gray-900 mb-2">Subscribe to Newsletter</h3>
-                  <p className="text-sm text-gray-600">Get the latest health tips and updates delivered to your inbox.</p>
+                  <h3 className="font-medium text-gray-900 mb-2">{t('blog.subscribeTitle')}</h3>
+                  <p className="text-sm text-gray-600">{t('blog.subscribeDesc')}</p>
                   {subscribed ? (
                     <div className="mt-4 p-3 bg-green-100 text-green-700 rounded-lg text-sm">
-                      ✓ Successfully subscribed! Thank you for joining our newsletter.
+                      {t('blog.subscribed')}
                     </div>
                   ) : (
                     <form onSubmit={handleSubscribe} className="mt-4">
@@ -276,21 +278,21 @@ export default function BlogDetail({ post }: BlogDetailProps) {
                         type="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        placeholder="Your email"
+                        placeholder={t('blog.emailPlaceholder')}
                         className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
                       />
                       <button
                         type="submit"
                         className="w-full mt-2 bg-primary text-white py-2 rounded-lg hover:bg-primary/90 transition-colors"
                       >
-                        Subscribe
+                        {t('blog.subscribe')}
                       </button>
                     </form>
                   )}
                 </div>
                 
                 <div className="p-4 bg-gray-50 rounded-lg">
-                  <h3 className="font-medium text-gray-900 mb-2">Share this article</h3>
+                  <h3 className="font-medium text-gray-900 mb-2">{t('blog.shareArticle')}</h3>
                   <div className="flex gap-2">
                     <button
                       onClick={() => handleShare('linkedin')}
@@ -333,13 +335,13 @@ export default function BlogDetail({ post }: BlogDetailProps) {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-2">Subscription Successful!</h3>
-            <p className="text-gray-600">Thank you for subscribing to our newsletter. You'll receive the latest health tips and updates.</p>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">{t('blog.subscribeSuccessTitle')}</h3>
+            <p className="text-gray-600">{t('blog.subscribeSuccessDesc')}</p>
             <button
               onClick={() => setShowSuccessModal(false)}
               className="mt-4 px-6 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
             >
-              Close
+              {t('blog.close')}
             </button>
           </div>
         </div>

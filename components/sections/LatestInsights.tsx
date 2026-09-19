@@ -13,7 +13,7 @@ export default function LatestInsights() {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const allPosts = await getSortedPosts()
+      const allPosts = await getSortedPosts(language === 'ja' ? 'ja' : undefined)
       const featuredPost = allPosts.find(p => p.featured)
       const latestPosts = allPosts.filter(p => !p.featured).slice(0, 2)
       if (featuredPost) {
@@ -23,7 +23,7 @@ export default function LatestInsights() {
       }
     }
     fetchPosts()
-  }, [])
+  }, [language])
 
   return (
     <section id="insights" className="py-16 bg-gray-50 scroll-mt-24">
@@ -60,7 +60,7 @@ export default function LatestInsights() {
               <div className="p-6">
                 <div className="flex items-center gap-2 mb-3">
                   <span className="px-3 py-1 text-xs font-medium bg-green-100 text-green-700 rounded-full">
-                    {categories.find(c => c.id === post.category)?.name || post.category}
+                    {(() => { const k = 'blog.categoryNames.' + post.category; const v = t(k); return language === 'ja' && v !== k ? v : categories.find(c => c.id === post.category)?.name || post.category })()}
                   </span>
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">

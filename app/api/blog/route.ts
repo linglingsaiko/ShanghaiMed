@@ -10,8 +10,9 @@ export function GET(request: Request) {
   const category = searchParams.get('category')
   const tag = searchParams.get('tag')
   const search = searchParams.get('search')
+  const lang = searchParams.get('lang') || undefined
   
-  let posts = getSortedPosts()
+  let posts = getSortedPosts(lang)
   
   if (search) {
     const searchLower = search.toLowerCase()

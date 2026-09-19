@@ -5,7 +5,9 @@ import matter from 'gray-matter'
 import { getPostBySlug } from '@/lib/blog-server'
 
 export function GET(request: Request, { params }: { params: { slug: string } }) {
-  const post = getPostBySlug(params.slug)
+  const { searchParams } = new URL(request.url)
+  const lang = searchParams.get('lang') || undefined
+  const post = getPostBySlug(params.slug, lang)
   
   if (!post) {
     return NextResponse.json({ error: 'Article not found' }, { status: 404 })

@@ -5,6 +5,7 @@ import { Search, Filter, Tag, Calendar, ArrowRight } from 'lucide-react'
 import type { BlogPost, Category } from '@/lib/types'
 import { categories, getAllTags } from '@/lib/blog'
 import Link from 'next/link'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 interface BlogListProps {
   posts: BlogPost[]
@@ -16,6 +17,7 @@ interface BlogListProps {
 }
 
 export default function BlogList({ posts, totalPages, currentPage, category, tag, search }: BlogListProps) {
+  const { language, t, tArr } = useLanguage()
   const [searchQuery, setSearchQuery] = useState(search || '')
   const [selectedCategory, setSelectedCategory] = useState(category || '')
   const [selectedTag, setSelectedTag] = useState(tag || '')
@@ -50,28 +52,28 @@ export default function BlogList({ posts, totalPages, currentPage, category, tag
   return (
     <div className="w-full max-w-6xl mx-auto px-4 py-8">
       <div className="mb-8">
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Blog</h1>
-        <p className="text-gray-600">Discover articles about healthcare in Shanghai, medical tourism, and wellness.</p>
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{t('blog.title')}</h1>
+        <p className="text-gray-600">{t('blog.subtitle')}</p>
       </div>
       
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
         <div className="lg:col-span-1">
           <div className="bg-white rounded-xl shadow-sm p-6 sticky top-8">
-            <h2 className="text-lg font-semibold text-gray-900 mb-4">Filter Content</h2>
+            <h2 className="text-lg font-semibold text-gray-900 mb-4">{t('blog.filterContent')}</h2>
             
             <form onSubmit={handleSearch} className="mb-6">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
                 <input
                   type="text"
-                  placeholder="Search articles..."
+                  placeholder={t('blog.searchPlaceholder')}
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
                 />
               </div>
               <button type="submit" className="mt-2 w-full bg-primary text-white py-2 rounded-lg hover:bg-primary/90 transition-colors">
-                Search
+                {t('blog.search')}
               </button>
             </form>
             
@@ -81,14 +83,14 @@ export default function BlogList({ posts, totalPages, currentPage, category, tag
                 className="w-full mb-4 text-sm text-gray-500 hover:text-gray-700 flex items-center gap-1"
               >
                 <Filter className="h-4 w-4" />
-                Clear filters
+                {t('blog.clearFilters')}
               </button>
             )}
             
             <div className="mb-6">
               <h3 className="text-sm font-medium text-gray-700 mb-3 flex items-center gap-2">
                 <Filter className="h-4 w-4" />
-                Categories
+                {t('blog.categories')}
               </h3>
               <ul className="space-y-2">
                 {categories.map((cat: Category) => (
@@ -111,7 +113,7 @@ export default function BlogList({ posts, totalPages, currentPage, category, tag
             <div>
               <h3 className="text-sm font-medium text-gray-700 mb-3 flex items-center gap-2">
                 <Tag className="h-4 w-4" />
-                Popular Tags
+                {t('blog.popularTags')}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {allTags.slice(0, 10).map(tag => (
@@ -135,7 +137,7 @@ export default function BlogList({ posts, totalPages, currentPage, category, tag
         <div className="lg:col-span-3">
           {posts.length === 0 ? (
             <div className="text-center py-16">
-              <p className="text-gray-500">No articles found matching your criteria.</p>
+              <p className="text-gray-500">{t('blog.noArticles')}</p>
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -154,7 +156,7 @@ export default function BlogList({ posts, totalPages, currentPage, category, tag
                   <div className="p-6">
                     <div className="flex items-center gap-2 mb-3">
                       <span className="px-3 py-1 text-xs font-medium bg-green-100 text-green-700 rounded-full">
-                        {categories.find(c => c.id === post.category)?.name || post.category}
+                        {(() => { const k = 'blog.categoryNames.' + post.category; const v = t(k); return language === 'ja' && v !== k ? v : categories.find(c => c.id === post.category)?.name || post.category })()}
                       </span>
                     </div>
                     <h2 className="text-xl font-semibold text-gray-900 mb-2 line-clamp-2">
@@ -167,15 +169,15 @@ export default function BlogList({ posts, totalPages, currentPage, category, tag
                       <div className="flex items-center gap-4 text-sm text-gray-500">
                         <span className="flex items-center gap-1">
                           <Calendar className="h-4 w-4" />
-                          {new Date(post.publishDate).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+                          {new Date(post.publishDate).toLocaleDateString(language === 'ja' ? 'ja-JP' : 'en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
                         </span>
-                        <span>{post.readingTime} min read</span>
+                        <span>{post.readingTime} {t('blog.minRead')}</span>
                       </div>
                       <Link
                         href={`/blog/${post.slug}`}
                         className="flex items-center gap-1 text-primary text-sm font-medium hover:gap-2 transition-all"
                       >
-                        Read More <ArrowRight className="h-4 w-4" />
+                        {t('insights.readMore')} <ArrowRight className="h-4 w-4" />
                       </Link>
                     </div>
                     {post.tags.length > 0 && (
@@ -201,7 +203,7 @@ export default function BlogList({ posts, totalPages, currentPage, category, tag
                     href={`/blog?page=${currentPage - 1}${category ? `&category=${category}` : ''}${tag ? `&tag=${tag}` : ''}${search ? `&search=${search}` : ''}`}
                     className="px-4 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
                   >
-                    Previous
+                    {t('blog.previous')}
                   </Link>
                 )}
                 {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
@@ -222,7 +224,7 @@ export default function BlogList({ posts, totalPages, currentPage, category, tag
                     href={`/blog?page=${currentPage + 1}${category ? `&category=${category}` : ''}${tag ? `&tag=${tag}` : ''}${search ? `&search=${search}` : ''}`}
                     className="px-4 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
                   >
-                    Next
+                    {t('blog.next')}
                   </Link>
                 )}
               </nav>

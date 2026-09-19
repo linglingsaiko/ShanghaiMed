@@ -126,7 +126,29 @@ function renderMarkdownToHtml(content: string): string {
   return html
 }
 
-export function getSortedPosts(): BlogPost[] {
+// 日語版記事（slug.ja.md）で上書き読込（lang='ja' 時、ファイルが存在すれば）
+function applyJaOverride(post: BlogPost, id: string): BlogPost {
+  const jaPath = path.join(postsDirectory, id + '.ja.md')
+  try {
+    if (!fs.existsSync(jaPath)) return post
+    const jaContents = fs.readFileSync(jaPath, 'utf8')
+    const jaMatter = matter(jaContents)
+    return {
+      ...post,
+      title: jaMatter.data.title || post.title,
+      excerpt: jaMatter.data.excerpt || post.excerpt,
+      content: jaMatter.content || post.content,
+      htmlContent: renderMarkdownToHtml(jaMatter.content || ''),
+      readingTime: calculateReadingTime(jaMatter.content || ''),
+      seoTitle: jaMatter.data.seoTitle || post.seoTitle,
+      metaDescription: jaMatter.data.metaDescription || post.metaDescription,
+    } as BlogPost
+  } catch {
+    return post
+  }
+}
+
+export function getSortedPosts(lang?: string): BlogPost[] {
   let fileNames: string[] = []
   try {
     fileNames = fs.readdirSync(postsDirectory)
@@ -135,7 +157,7 @@ export function getSortedPosts(): BlogPost[] {
   }
   
   const allPostsData = fileNames
-    .filter(fileName => fileName.endsWith('.md'))
+    .filter(fileName => fileName.endsWith('.md') && !fileName.endsWith('.ja.md'))
     .map(fileName => {
       const id = fileName.replace(/\.md$/, '')
       const fullPath = path.join(postsDirectory, fileName)
@@ -145,7 +167,7 @@ export function getSortedPosts(): BlogPost[] {
       const readingTime = calculateReadingTime(matterResult.content)
       const htmlContent = renderMarkdownToHtml(matterResult.content || '')
       
-      return {
+      const post = {
         id,
         slug: matterResult.data.slug || id,
         title: matterResult.data.title || '',
@@ -167,6 +189,8 @@ export function getSortedPosts(): BlogPost[] {
         views: matterResult.data.views || 0,
         featured: matterResult.data.featured || false,
       } as BlogPost
+      
+      return lang === 'ja' ? applyJaOverride(post, id) : post
     })
   
   return allPostsData.sort((a, b) => {
@@ -176,13 +200,13 @@ export function getSortedPosts(): BlogPost[] {
   })
 }
 
-export function getPostBySlug(slug: string): BlogPost | undefined {
-  const posts = getSortedPosts()
+export function getPostBySlug(slug: string, lang?: string): BlogPost | undefined {
+  const posts = getSortedPosts(lang)
   return posts.find(post => post.slug === slug)
 }
 
-export function getPostsByQuery(params: BlogQueryParams): { posts: BlogPost[]; totalPages: number } {
-  let posts = getSortedPosts()
+export function getPostsByQuery(params: BlogQueryParams, lang?: string): { posts: BlogPost[]; totalPages: number } {
+  let posts = getSortedPosts(lang)
   const page = params.page || 1
   const pageSize = 6
   
@@ -218,22 +242,22 @@ export function getPostSlugs(): string[] {
     return []
   }
   return fileNames
-    .filter(fileName => fileName.endsWith('.md'))
+    .filter(fileName => fileName.endsWith('.md') && !fileName.endsWith('.ja.md'))
     .map(fileName => fileName.replace(/\.md$/, ''))
 }
 
-export function getRelatedPosts(currentPost: BlogPost, limit: number = 3): BlogPost[] {
-  const allPosts = getSortedPosts()
+export function getRelatedPosts(currentPost: BlogPost, limit: number = 3, lang?: string): BlogPost[] {
+  const allPosts = getSortedPosts(lang)
   return getRelatedPostsShared(allPosts, currentPost, limit)
 }
 
-export function getNextPost(currentPost: BlogPost): BlogPost | undefined {
-  const allPosts = getSortedPosts()
+export function getNextPost(currentPost: BlogPost, lang?: string): BlogPost | undefined {
+  const allPosts = getSortedPosts(lang)
   return getNextPostShared(allPosts, currentPost)
 }
 
-export function getPreviousPost(currentPost: BlogPost): BlogPost | undefined {
-  const allPosts = getSortedPosts()
+export function getPreviousPost(currentPost: BlogPost, lang?: string): BlogPost | undefined {
+  const allPosts = getSortedPosts(lang)
   return getPreviousPostShared(allPosts, currentPost)
 }
 

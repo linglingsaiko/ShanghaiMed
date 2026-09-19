@@ -24,7 +24,7 @@ canonicalUrl: 'https://shanghaimedhealth.com/blog/medical-checkup-shanghai-guide
 ---
 If you are an expatriate living in Shanghai, a business traveler planning a stopover, or someone exploring medical tourism options in Asia, this guide is for you. Shanghai has quietly built one of the most sophisticated and accessible health screening ecosystems in the world—and for international visitors, the combination of world-class facilities, English-speaking specialists, and significantly lower costs makes it a destination worth serious consideration.
 
-Good to know: Citizens of over 50 countries can visit Shanghai visa-free for up to 144 hours (6 days) under China's transit exemption—more than enough time for a comprehensive health checkup and follow-up. Check current eligibility before booking.
+Good to know: Citizens of 54 countries can visit Shanghai visa-free for up to 240 hours (10 days) under China's transit exemption—more than enough time for a comprehensive health checkup and follow-up. Check current eligibility before booking.
 
 If you have not yet decided whether Shanghai is the right destination for your medical needs, start with our comprehensive Is Shanghai Safe for Medical Treatment? to understand the full landscape before booking your checkup.
 

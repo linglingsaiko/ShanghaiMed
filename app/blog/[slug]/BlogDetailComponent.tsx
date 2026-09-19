@@ -5,6 +5,7 @@ import { getPostBySlug } from '@/lib/blog'
 import BlogDetail from '@/components/sections/BlogDetail'
 import { notFound } from 'next/navigation'
 import type { BlogPost } from '@/lib/types'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 interface BlogDetailComponentProps {
   slug: string
@@ -13,11 +14,12 @@ interface BlogDetailComponentProps {
 export default function BlogDetailComponent({ slug }: BlogDetailComponentProps) {
   const [post, setPost] = useState<BlogPost | null>(null)
   const [loading, setLoading] = useState(true)
+  const { language } = useLanguage()
   
   useEffect(() => {
     const fetchPost = async () => {
       setLoading(true)
-      const result = await getPostBySlug(slug)
+      const result = await getPostBySlug(slug, language === 'ja' ? 'ja' : undefined)
       if (!result) {
         notFound()
         return
@@ -27,7 +29,7 @@ export default function BlogDetailComponent({ slug }: BlogDetailComponentProps) 
     }
     
     fetchPost()
-  }, [slug])
+  }, [slug, language])
   
   if (loading) {
     return (

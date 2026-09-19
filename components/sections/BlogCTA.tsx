@@ -6,21 +6,23 @@ import { getRelatedPosts } from '@/lib/blog'
 import { tier1Hospitals } from '@/lib/constants'
 import type { BlogPost } from '@/lib/types'
 import Link from 'next/link'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 interface BlogCTAProps {
   post: BlogPost
 }
 
 export default function BlogCTA({ post }: BlogCTAProps) {
+  const { language, t, tArr } = useLanguage()
   const [relatedPosts, setRelatedPosts] = useState<BlogPost[]>([])
   
   useEffect(() => {
     const fetchRelated = async () => {
-      const posts = await getRelatedPosts(post, 3)
+      const posts = await getRelatedPosts(post, 3, language === 'ja' ? 'ja' : undefined)
       setRelatedPosts(posts)
     }
     fetchRelated()
-  }, [post])
+  }, [post, language])
   
   // 根据文章分类推荐医院
   const recommendedHospitals = tier1Hospitals.slice(0, 3)
@@ -31,7 +33,7 @@ export default function BlogCTA({ post }: BlogCTAProps) {
       {relatedPosts.length > 0 && (
         <section className="py-16">
           <div className="section-container">
-            <h2 className="text-2xl font-bold text-gray-900 mb-8">Related Articles</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-8">{t('blog.relatedArticles')}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {relatedPosts.map(relatedPost => (
                 <article key={relatedPost.id} className="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-shadow">
@@ -56,7 +58,7 @@ export default function BlogCTA({ post }: BlogCTAProps) {
                       href={`/blog/${relatedPost.slug}`}
                       className="inline-flex items-center gap-1 text-primary text-sm font-medium hover:gap-2 transition-all"
                     >
-                      Read More <ArrowRight className="h-4 w-4" />
+                      {t('insights.readMore')} <ArrowRight className="h-4 w-4" />
                     </Link>
                   </div>
                 </article>
@@ -69,7 +71,7 @@ export default function BlogCTA({ post }: BlogCTAProps) {
       {/* Recommended Hospitals */}
       <section className="py-16 bg-white">
         <div className="section-container">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8">Recommended Hospitals</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">{t('blog.recommendedHospitals')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {recommendedHospitals.map(hospital => (
               <div key={hospital.id} className="border border-gray-200 rounded-xl overflow-hidden hover:shadow-md transition-shadow">
@@ -85,17 +87,21 @@ export default function BlogCTA({ post }: BlogCTAProps) {
                   </div>
                 </div>
                 <div className="p-5">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{hospital.name}</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{language === 'ja' && hospital.nameJa ? hospital.nameJa : hospital.name}</h3>
                   <div className="flex flex-wrap gap-1 mb-3">
-                    {hospital.specialties.slice(0, 3).map(specialty => (
-                      <span key={specialty} className="px-2 py-1 text-xs bg-gray-100 text-gray-600 rounded">
-                        {specialty}
-                      </span>
-                    ))}
+                    {hospital.specialties.slice(0, 3).map(specialty => {
+                      const tr = language === 'ja' ? tArr('hospitals.' + hospital.id + '.specialties') : []
+                      const i = hospital.specialties.indexOf(specialty)
+                      return (
+                        <span key={specialty} className="px-2 py-1 text-xs bg-gray-100 text-gray-600 rounded">
+                          {tr.length === hospital.specialties.length && tr[i]?.length > 0 ? tr[i] : specialty}
+                        </span>
+                      )
+                    })}
                   </div>
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-2">{hospital.description}</p>
+                  <p className="text-gray-600 text-sm mb-4 line-clamp-2">{(() => { const k = 'hospitals.' + hospital.id + '.description'; const v = t(k); return language === 'ja' && v !== k ? v : hospital.description })()}</p>
                   <div className="flex items-center justify-between">
-                    <span className="text-xs text-gray-500">{hospital.insurancePartners.length}+ Insurance Partners</span>
+                    <span className="text-xs text-gray-500">{hospital.insurancePartners.length}+ {t('blog.insurancePartnersLabel')}</span>
                     <Link
                       href="#treatments"
                       onClick={(e) => {
@@ -104,7 +110,7 @@ export default function BlogCTA({ post }: BlogCTAProps) {
                       }}
                       className="inline-flex items-center gap-1 text-primary text-sm font-medium hover:gap-2 transition-all"
                     >
-                      Learn More <ArrowRight className="h-4 w-4" />
+                      {t('blog.learnMore')} <ArrowRight className="h-4 w-4" />
                     </Link>
                   </div>
                 </div>
@@ -120,9 +126,9 @@ export default function BlogCTA({ post }: BlogCTAProps) {
           <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-6">
             <Stethoscope className="w-8 h-8 text-white" />
           </div>
-          <h2 className="text-3xl font-bold text-white mb-4">Book a Free Consultation</h2>
+          <h2 className="text-3xl font-bold text-white mb-4">{t('blog.bookTitle')}</h2>
           <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
-            Our medical coordinators are ready to assist you with hospital selection, treatment options, and travel arrangements.
+            {t('blog.bookDesc')}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
@@ -132,7 +138,7 @@ export default function BlogCTA({ post }: BlogCTAProps) {
               className="inline-flex items-center gap-2 px-8 py-4 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors"
             >
               <Phone className="h-5 w-5" />
-              WhatsApp Consultation
+              {t('blog.whatsappConsult')}
             </a>
             <Link
               href="#contact"
@@ -143,7 +149,7 @@ export default function BlogCTA({ post }: BlogCTAProps) {
               className="inline-flex items-center gap-2 px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors"
             >
               <Building2 className="h-5 w-5" />
-              Request a Quote
+              {t('blog.requestQuote')}
             </Link>
           </div>
         </div>

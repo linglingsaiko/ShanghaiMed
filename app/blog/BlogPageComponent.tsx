@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { getPostsByQuery } from '@/lib/blog'
 import BlogList from '@/components/sections/BlogList'
 import type { BlogPost } from '@/lib/types'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 interface BlogPageComponentProps {
   searchParams: {
@@ -18,6 +19,7 @@ export default function BlogPageComponent({ searchParams }: BlogPageComponentPro
   const [posts, setPosts] = useState<BlogPost[]>([])
   const [totalPages, setTotalPages] = useState(1)
   const [loading, setLoading] = useState(true)
+  const { language, t } = useLanguage()
   
   useEffect(() => {
     const fetchPosts = async () => {
@@ -27,14 +29,14 @@ export default function BlogPageComponent({ searchParams }: BlogPageComponentPro
         category: searchParams.category,
         tag: searchParams.tag,
         search: searchParams.search,
-      })
+      }, undefined, language === 'ja' ? 'ja' : undefined)
       setPosts(result.posts)
       setTotalPages(result.totalPages)
       setLoading(false)
     }
     
     fetchPosts()
-  }, [searchParams])
+  }, [searchParams, language])
   
   if (loading) {
     return (
@@ -51,9 +53,9 @@ export default function BlogPageComponent({ searchParams }: BlogPageComponentPro
       <div className="section-container">
         {/* Page Header */}
         <div className="text-center mb-10 px-4">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 w-full overflow-visible">Healthcare Insights</h1>
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 w-full overflow-visible">{t('blog.pageHeaderTitle')}</h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Discover articles about medical tourism, healthcare services, and wellness tips in Shanghai
+            {t('blog.pageHeaderSubtitle')}
           </p>
         </div>
         

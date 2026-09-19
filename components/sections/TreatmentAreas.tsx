@@ -15,9 +15,13 @@ import { events } from '@/lib/analytics'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 const TreatmentAreas: React.FC = () => {
-  const { t, tArr } = useLanguage()
+  const { t, tArr, language } = useLanguage()
   const [activeTier, setActiveTier] = useState<'all' | 'tier1' | 'tier2'>('all')
   const [showModal, setShowModal] = useState(false)
+
+  // 医院名称（日语模式显示日语名，缺失时回退英文）
+  const getHospitalName = (hospital: Hospital): string =>
+    language === 'ja' && hospital.nameJa ? hospital.nameJa : hospital.name
 
   // 医院描述翻译（缺失时回退英文原文）
   const getHospitalDesc = (hospital: Hospital): string => {
@@ -81,7 +85,7 @@ const TreatmentAreas: React.FC = () => {
               <div className="relative h-48 overflow-hidden">
                 <Image
                   src={hospital.image}
-                  alt={hospital.name}
+                  alt={getHospitalName(hospital)}
                   fill
                   className="object-cover"
                 />
@@ -92,7 +96,7 @@ const TreatmentAreas: React.FC = () => {
               {/* Content */}
               <div className="p-5">
                 <h3 className="text-lg font-bold text-gray-900 mb-2">
-                  {hospital.name}
+                  {getHospitalName(hospital)}
                 </h3>
                 <p className="text-gray-600 text-sm mb-3 line-clamp-2">
                   {getHospitalDesc(hospital)}
@@ -221,7 +225,7 @@ const TreatmentAreas: React.FC = () => {
                       <div className="relative w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden">
                         <Image
                           src={hospital.image}
-                          alt={hospital.name}
+                          alt={getHospitalName(hospital)}
                           fill
                           className="object-cover"
                         />
@@ -229,7 +233,7 @@ const TreatmentAreas: React.FC = () => {
                       <div className="flex-1 min-w-0">
                         <div className="flex items-start justify-between gap-2 mb-1">
                           <h4 className="font-bold text-gray-900 truncate">
-                            {hospital.name}
+                            {getHospitalName(hospital)}
                           </h4>
 
                         </div>

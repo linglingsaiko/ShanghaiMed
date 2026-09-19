@@ -37,7 +37,7 @@ canonicalUrl: 'https://shanghaimedhealth.com/blog/medical-tourism-shanghai-guide
 | Hospital network | 14 public Grade-A + 5 private international hospitals |
 | All-inclusive companion package | $1,000/3 days or $1,650/5 days |
 | US-China flight time | 12-15 hours |
-| Visa-free option | 144-hour transit exemption (54 countries) |
+| Visa-free option | 240-hour transit exemption (54 countries) |
 | China inbound tourism 2025 | 35.17M trips (+30.5% YoY) |
 
 ## Introduction
@@ -146,7 +146,7 @@ Contact **ShanghaiMed** (shanghaimedhealth.com) for a free video consultation. T
 ShanghaiMed matches you with the appropriate partner hospital based on your condition. You receive an **itemized cost breakdown** — companion package + estimated hospital fees — before committing.
 
 ### Step 3: Visa and Travel Arrangements
-ShanghaiMed provides a **medical invitation letter** from the partner hospital for your visa application (2-4 weeks processing). **Pro tip**: China's 144-hour transit visa exemption covers 54 countries for trips under 6 days.
+ShanghaiMed provides a **medical invitation letter** from the partner hospital for your visa application (2-4 weeks processing). **Pro tip**: China's 240-hour transit visa exemption covers 54 countries for trips under 10 days.
 
 ### Step 4: Treatment in Shanghai
 A **bilingual medical companion** meets you at the airport and accompanies you throughout:
@@ -208,7 +208,7 @@ Many senior doctors speak English and have international training. ShanghaiMed a
 Possibly. ShanghaiMed partner hospitals have direct settlement with major international insurers including Cigna, Aetna, AXA, and Allianz. ShanghaiMed assists with insurance verification before your trip.
 
 ### Q5: How do I get a medical visa?
-ShanghaiMed provides a medical invitation letter from the partner hospital. You submit it to the Chinese embassy for visa application (2-4 weeks). The 144-hour transit visa exemption may cover shorter trips for 54 eligible countries.
+ShanghaiMed provides a medical invitation letter from the partner hospital. You submit it to the Chinese embassy for visa application (2-4 weeks). The 240-hour transit visa exemption may cover shorter trips for 54 eligible countries.
 
 ### Q6: Can I combine treatment with tourism?
 Absolutely. ShanghaiMed helps integrate medical appointments into your travel itinerary. The Bund, Yu Garden, Shanghai Tower, and Disneyland are all accessible. Recovery-friendly activities include garden walks and museum visits.

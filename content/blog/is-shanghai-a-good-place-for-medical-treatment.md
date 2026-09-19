@@ -129,7 +129,7 @@ Keep digital receipts for insurance claims
 Most international clinics provide itemized invoices in English for reimbursement purposes
 Travel and Visa Considerations
 Getting to Shanghai and navigating entry requirements is simpler than you might expect.
-The 144-Hour Visa-Free Transit is a game-changer for many international patients. If you're from one of 50+ eligible countries (including the US, UK, Canada, Australia, Japan, and most EU nations), you can transit through Shanghai without a visa for up to 144 hours (6 days). This is particularly useful for:
+The 240-Hour Visa-Free Transit is a game-changer for many international patients. If you're from one of 54 eligible countries (including the US, UK, Canada, Australia, Japan, and most EU nations), you can transit through Shanghai without a visa for up to 240 hours (10 days). This is particularly useful for:
 Quick consultations and minor procedures
 Health checkups that don't require extended stays
 Follow-up visits for patients who received initial treatment elsewhere
@@ -150,7 +150,7 @@ A typical medical trip to Shanghai involves:
 Identifying the right hospital and specialist for your condition
 Confirming insurance coverage or self-pay costs before you travel
 Scheduling appointments and requesting cost estimates
-Arranging visa, travel, and accommodation (many nationalities qualify for China's 144-hour transit visa)
+Arranging visa, travel, and accommodation (many nationalities qualify for China's 240-hour transit visa)
 Receiving treatment with English-speaking medical staff
 Follow-up care, including English reports and telemedicine options
 Each of these steps involves choices that can significantly affect your experience and costs. We help international patients navigate all of them—so you can focus on your health, not the logistics.

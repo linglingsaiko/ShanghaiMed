@@ -2,6 +2,7 @@
 export interface Hospital {
   id: string
   name: string
+  nameJa?: string
   tier: 'tier1' | 'tier2'
   specialties: string[]
   certifications: string[]
@@ -17,6 +18,7 @@ export const tier1Hospitals: Hospital[] = [
   {
     id: 'huashan',
     name: 'Huashan Hospital (Fudan University)',
+    nameJa: '復旦大学附属華山病院',
     tier: 'tier1',
     specialties: ['Neurosurgery', 'Dermatology', 'Infectious Disease'],
     certifications: ['JCI Certified', 'HMI Partnership'],
@@ -29,6 +31,7 @@ export const tier1Hospitals: Hospital[] = [
   {
     id: 'children-fudan',
     name: 'Children\'s Hospital (Fudan University)',
+    nameJa: '復旦大学附属小児病院',
     tier: 'tier1',
     specialties: ['Neonatology', 'Pediatric Surgery', 'Critical Care Medicine'],
     certifications: ['JCI Certified', 'HIMSS EMRAM Stage 6'],
@@ -41,6 +44,7 @@ export const tier1Hospitals: Hospital[] = [
   {
     id: 'ruijin',
     name: 'Ruijin Hospital (SJTU)',
+    nameJa: '上海交通大学医学院附属瑞金病院',
     tier: 'tier1',
     specialties: ['Hematology', 'Endocrinology', 'Burns & Wound Care'],
     certifications: ['JCI Certified', 'National EMR Level 7'],
@@ -53,6 +57,7 @@ export const tier1Hospitals: Hospital[] = [
   {
     id: 'shanghai-general',
     name: 'Shanghai General Hospital',
+    nameJa: '上海市第一人民病院',
     tier: 'tier1',
     specialties: ['Ophthalmology', 'Urology', 'ENT & Head-Neck Surgery'],
     certifications: ['DNV GL Certified', 'Mayo Clinic Partnership'],
@@ -65,6 +70,7 @@ export const tier1Hospitals: Hospital[] = [
   {
     id: 'zhongshan',
     name: 'Zhongshan Hospital (Fudan University)',
+    nameJa: '復旦大学附属中山病院',
     tier: 'tier1',
     specialties: ['General Surgery', 'Gastroenterology', 'Cardiovascular Medicine'],
     certifications: ['JCI Certified', 'JBI Certified'],
@@ -77,6 +83,7 @@ export const tier1Hospitals: Hospital[] = [
   {
     id: 'renji',
     name: 'Renji Hospital (SJTU)',
+    nameJa: '上海交通大学医学院附属仁済病院',
     tier: 'tier1',
     specialties: ['Gastroenterology', 'Reproductive Medicine', 'Rheumatology'],
     certifications: ['DNV GL Certified', 'DNV GL RTAC Certified'],
@@ -89,6 +96,7 @@ export const tier1Hospitals: Hospital[] = [
   {
     id: 'longhua',
     name: 'Longhua Hospital (Shanghai Univ. of TCM)',
+    nameJa: '上海中医薬大学附属龍華病院',
     tier: 'tier1',
     specialties: ['TCM Oncology', 'TCM Orthopedics', 'TCM Surgery'],
     certifications: ['JCI Certified', 'HIMSS EMRAM Stage 7'],
@@ -101,6 +109,7 @@ export const tier1Hospitals: Hospital[] = [
   {
     id: 'ipmch',
     name: 'International Peace Maternity & Child Health Hospital',
+    nameJa: '中国福利会国際平和母子保健院',
     tier: 'tier1',
     specialties: ['Reproductive Medicine', 'Obstetrics', 'Gynecology'],
     certifications: ['DNV GL Certified'],
@@ -113,6 +122,7 @@ export const tier1Hospitals: Hospital[] = [
   {
     id: 'scmc',
     name: 'Shanghai Children\'s Medical Center (SJTU)',
+    nameJa: '上海交通大学医学院附属上海児童医学センター',
     tier: 'tier1',
     specialties: ['Pediatric Cardiac Surgery', 'Pediatric Hematology-Oncology', 'Developmental Behavioral Pediatrics'],
     certifications: ['JCI Certified', 'HIMSS EMRAM Stage 6', 'ISO 15189', 'GCP Certified'],
@@ -125,6 +135,7 @@ export const tier1Hospitals: Hospital[] = [
   {
     id: 'sixth',
     name: 'Shanghai Sixth People\'s Hospital',
+    nameJa: '上海市第六人民病院',
     tier: 'tier1',
     specialties: ['Orthopedics', 'Endocrinology & Metabolism', 'Sports Medicine'],
     certifications: ['JCI Certified'],
@@ -137,6 +148,7 @@ export const tier1Hospitals: Hospital[] = [
   {
     id: 'first-maternity',
     name: 'Shanghai First Maternity & Infant Hospital',
+    nameJa: '上海市第一母子保健院',
     tier: 'tier1',
     specialties: ['Obstetrics', 'Fetal Medicine', 'Reproductive Medicine'],
     certifications: ['JCI Certified', 'APAGE Certified'],
@@ -149,6 +161,7 @@ export const tier1Hospitals: Hospital[] = [
   {
     id: 'xinhua',
     name: 'Xinhua Hospital (SJTU)',
+    nameJa: '上海交通大学医学院附属新華病院',
     tier: 'tier1',
     specialties: ['Pediatrics', 'Dermatology', 'General Surgery'],
     certifications: ['JCI Certified'],
@@ -161,6 +174,7 @@ export const tier1Hospitals: Hospital[] = [
   {
     id: 'huadong',
     name: 'Huadong Hospital (Fudan University)',
+    nameJa: '復旦大学附属華東病院',
     tier: 'tier1',
     specialties: ['Geriatric Medicine', 'Rehabilitation Medicine', 'Clinical Nutrition'],
     certifications: ['Bupa Silver Certified'],
@@ -174,6 +188,7 @@ export const tier1Hospitals: Hospital[] = [
     id: 'ninth',
     image: '/hospitals/hospital-ninth.jpg',
     name: 'Shanghai Ninth People\'s Hospital (SJTU)',
+    nameJa: '上海交通大学医学院附属第九人民病院',
     tier: 'tier1',
     specialties: ['Oral/Dental Surgery #1', 'Plastic & Reconstructive Surgery', 'Oral & Maxillofacial Surgery'],
     certifications: ['National Oral Disease Research Center'],
@@ -189,6 +204,7 @@ export const tier2Hospitals: Hospital[] = [
   {
     id: 'jiahui',
     name: 'Jiahui International Hospital',
+    nameJa: '嘉会国際病院',
     tier: 'tier2',
     specialties: ['Oncology', 'Surgery', 'General Medicine'],
     certifications: ['JCI Certified'],
@@ -201,6 +217,7 @@ export const tier2Hospitals: Hospital[] = [
   {
     id: 'unicare',
     name: 'Shanghai United Family Hospital',
+    nameJa: '上海和睦家病院',
     tier: 'tier2',
     specialties: ['Family Medicine', 'Obstetrics', 'Pediatrics'],
     certifications: ['JCI Certified'],
@@ -213,6 +230,7 @@ export const tier2Hospitals: Hospital[] = [
   {
     id: 'parkway',
     name: 'ParkwayHealth',
+    nameJa: 'パークウェイヘルス',
     tier: 'tier2',
     specialties: ['Multi-specialty', 'Family Medicine', 'Diagnostics'],
     certifications: [],
@@ -225,6 +243,7 @@ export const tier2Hospitals: Hospital[] = [
   {
     id: 'shine',
     name: 'SinoUnited Health',
+    nameJa: '卓越医療（SinoUnited Health）',
     tier: 'tier2',
     specialties: ['Cardiology', 'Gastroenterology', 'General Medicine'],
     certifications: ['3A Five-Star Certified', 'Mayo Clinic Care Network Member'],
@@ -237,6 +256,7 @@ export const tier2Hospitals: Hospital[] = [
   {
     id: 'raffles',
     name: 'Shanghai Raffles Hospital',
+    nameJa: '上海ラッフルズ病院',
     tier: 'tier2',
     specialties: ['Executive Health', 'General Medicine', 'Medical Tourism'],
     certifications: [],
@@ -418,7 +438,8 @@ export const nurseServices = [
 // Nurse Credentials
 export const nurseCredentials = [
   { name: 'Licensed Registered Nurses (RN)', detail: 'Verified by Shanghai Health Commission' },
-  { name: 'Bilingual Certification', detail: 'Fluent in English' },
+  { name: 'Trilingual Certification', detail: 'Fluent in Japanese, English, and Chinese' },
+  { name: 'JLPT N1 Certified', detail: '日本語能力試験 N1 — Japanese-Language Proficiency Test (highest level)' },
   { name: 'Medical Interpretation', detail: 'Supports medical document translation and on-site interpretation' },
   { name: 'International Patient Care', detail: '5+ years experience' },
 ]

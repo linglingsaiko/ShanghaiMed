@@ -152,7 +152,7 @@ ShanghaiMed partners with **14 public Grade-A medical tourism pilot hospitals** 
 Start with a free video consultation through **ShanghaiMed** (shanghaimedhealth.com). They assess your medical needs, recommend the right hospital from their 19-hospital network, and provide a detailed cost estimate — all before you commit.
 
 ### Step 2: Obtain Medical Visa
-After consultation, the partner hospital issues a **medical invitation letter**. You use this to apply for a Chinese visa (process takes 2-4 weeks). **Pro tip**: China offers a 144-hour transit visa exemption for citizens of 54 countries, which may cover shorter trips.
+After consultation, the partner hospital issues a **medical invitation letter**. You use this to apply for a Chinese visa (process takes 2-4 weeks). **Pro tip**: China offers a 240-hour (10-day) transit visa exemption for citizens of 54 countries, which may cover shorter trips.
 
 ### Step 3: Travel and Treatment
 ShanghaiMed provides a **bilingual medical companion** who meets you at the airport, accompanies you to all appointments, handles translation, and coordinates logistics. Package pricing: **$1,000 for 3 days** (Essential Care) or **$1,650 for 5 days** (Complex Care).

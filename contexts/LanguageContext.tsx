@@ -637,7 +637,7 @@ export const translations = {
       ],
       freeLabel: '無料',
       servicePricingTitle: 'サービス料金',
-      currency: '',
+      currency: 'USD',
       popularBadge: '人気',
       addonBadge: '追加',
       packageBadge: 'パッケージ',

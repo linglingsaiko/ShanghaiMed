@@ -5,25 +5,22 @@ import { Check, Clock, Calendar, Phone, Plane, Building2, FileText, Car, Message
 import { useLanguage } from '@/contexts/LanguageContext'
 
 const Pricing: React.FC = () => {
-  const { t, tArr, language } = useLanguage()
+  const { t, tArr } = useLanguage()
 
   const packageIcons = [Clock, Calendar, Calendar, Calendar]
   const packages = [
     {
       priceUsd: '$200',
-      priceJpy: '¥32,000',
       icon: Clock,
       type: 'addon',
     },
     {
       priceUsd: '$350',
-      priceJpy: '¥56,000',
       icon: Calendar,
       type: 'addon',
     },
     {
       priceUsd: '$1,000',
-      priceJpy: '¥160,000',
       icon: Calendar,
       type: 'core',
       tier: 'Standard',
@@ -31,7 +28,6 @@ const Pricing: React.FC = () => {
     },
     {
       priceUsd: '$1,650',
-      priceJpy: '¥260,000',
       icon: Calendar,
       type: 'core',
       tier: 'Extended',
@@ -176,7 +172,7 @@ const Pricing: React.FC = () => {
 
                 <h4 className="text-lg font-bold text-gray-900 mb-2">{getPackage(index, 'name', index === 0 ? 'Half-Day Add-On' : index === 1 ? 'Full-Day Add-On' : index === 2 ? 'Essential Care Concierge' : 'Complex Care Concierge')}</h4>
                 <div className="mb-3">
-                  <span className="text-3xl font-bold text-primary">{language === 'ja' ? pkg.priceJpy : pkg.priceUsd}</span>
+                  <span className="text-3xl font-bold text-primary">{pkg.priceUsd}</span>
                   <span className="text-gray-500 text-sm ml-1">{t('pricing.currency')}</span>
                 </div>
                 <p className="text-sm text-gray-600 mb-2">{getPackage(index, 'duration', index === 0 ? 'Up to 4 hours (daytime)' : index === 1 ? 'Up to 8 hours (daytime)' : index === 2 ? 'Up to 8 hours/day × 3 days (daytime)' : 'Up to 8 hours/day × 5 days (daytime)')}</p>

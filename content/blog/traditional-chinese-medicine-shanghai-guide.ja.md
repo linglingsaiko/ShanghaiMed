@@ -12,7 +12,7 @@ tags:
 author: ShanghaiMed Team
 date: '2026-07-29T10:00:00.000Z'
 featured: false
-featuredImage: /images/tcm-shanghai-guide.jpg
+featuredImage: /images/龙华.jpg
 seoTitle: '上海の伝統中国医学：外国人患者のための完全ガイド（2026年版）'
 metaDescription: '上海の本格的な中医薬治療は米国より75〜80%安価です。国家級中医薬拠点の龍華病院での鍼灸・漢方・統合医療のガイド。'
 keywords:

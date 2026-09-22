@@ -12,7 +12,7 @@ tags:
 author: ShanghaiMed Team
 date: '2026-07-29T10:00:00.000Z'
 featured: false
-featuredImage: /images/tcm-shanghai-guide.jpg
+featuredImage: /images/龙华.jpg
 seoTitle: 'Traditional Chinese Medicine in Shanghai: Complete TCM Guide for International Patients (2026)'
 metaDescription: 'Authentic TCM in Shanghai costs 75-80% less than the US. Guide to acupuncture, herbal medicine, and integrative therapy at Longhua Hospital, a national TCM flagship.'
 keywords:

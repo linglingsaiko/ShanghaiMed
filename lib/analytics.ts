@@ -25,6 +25,7 @@ export const trackEvent = (
 export const events = {
   consultationClick: () => trackEvent('cta_click', { cta_name: 'consultation' }),
   whatsappClick: () => trackEvent('cta_click', { cta_name: 'whatsapp' }),
+  lineClick: () => trackEvent('cta_click', { cta_name: 'line' }),
   hospitalView: (hospitalName: string) =>
     trackEvent('view_hospital', { hospital_name: hospitalName }),
   formSubmit: (formType: string) =>

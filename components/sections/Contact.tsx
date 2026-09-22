@@ -56,7 +56,7 @@ const Contact: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   const [showCustomCountry, setShowCustomCountry] = useState(false)
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
 
   const handleCountryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const val = e.target.value;
@@ -137,6 +137,38 @@ const Contact: React.FC = () => {
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Contact Info */}
           <div className="space-y-6">
+            {language === 'ja' ? (
+            <Card className="p-6">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 bg-[#06C755]/10 rounded-xl flex items-center justify-center">
+                  <MessageCircle className="w-6 h-6 text-[#06C755]" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-primary">{t('contact.lineTitle')}</h3>
+                  <p className="text-sm text-gray-500">{t('contact.lineDesc')}</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="w-28 h-28 shrink-0 rounded-xl border border-gray-100 overflow-hidden bg-white">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/images/line-qr.jpg" alt={t('contact.lineQrAlt')} className="w-full h-full object-cover" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-xs text-gray-500">{t('contact.lineIdLabel')}</p>
+                  <p className="text-sm font-semibold text-gray-800 mb-3 break-all">{t('contact.lineId')}</p>
+                  <Button
+                    href="https://line.me/ti/p/cD_Ed4GHBM"
+                    variant="outline"
+                    className="w-full border-[#06C755] text-[#06C755] hover:bg-[#06C755] hover:text-white"
+                    onClick={() => events.lineClick()}
+                  >
+                    {t('contact.lineButton')}
+                  </Button>
+                  <p className="text-xs text-gray-400 mt-2">{t('contact.lineScanHint')}</p>
+                </div>
+              </div>
+            </Card>
+            ) : (
             <Card className="p-6">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-12 bg-accent-50 rounded-xl flex items-center justify-center">
@@ -159,6 +191,7 @@ const Contact: React.FC = () => {
                 {t('contact.whatsapp')}
               </Button>
             </Card>
+            )}
 
             <Card className="p-6">
               <div className="space-y-4">
@@ -214,6 +247,16 @@ const Contact: React.FC = () => {
                   <Button onClick={() => setSubmitted(false)} variant="outline">
                     {t('contact.sendAnother')}
                   </Button>
+                  {language === 'ja' ? (
+                    <Button
+                      href="https://line.me/ti/p/cD_Ed4GHBM"
+                      variant="outline"
+                      className="border-[#06C755] text-[#06C755] hover:bg-[#06C755] hover:text-white"
+                      onClick={() => events.lineClick()}
+                    >
+                      {t('contact.lineButton')}
+                    </Button>
+                  ) : (
                   <Button
                     href="https://wa.me/8613818274110"
                     variant="outline"
@@ -225,6 +268,7 @@ const Contact: React.FC = () => {
                     </svg>
                     {t('contact.whatsapp')}
                   </Button>
+                  )}
                 </div>
               </div>
             ) : (

@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { MapPin, Phone, Mail, Clock, Send, MessageCircle } from 'lucide-react'
 import Card from '../ui/Card'
 import Button from '../ui/Button'
@@ -57,6 +57,13 @@ const Contact: React.FC = () => {
   const [submitted, setSubmitted] = useState(false)
   const [showCustomCountry, setShowCustomCountry] = useState(false)
   const { t, language } = useLanguage()
+
+  // 日语版面向日本客户，国家固定为 Japan，无需选择
+  useEffect(() => {
+    if (language === 'ja') {
+      setFormData((prev) => ({ ...prev, country: 'Japan' }))
+    }
+  }, [language])
 
   const handleCountryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const val = e.target.value;

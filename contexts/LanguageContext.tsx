@@ -787,8 +787,8 @@ export const translations = {
       countryPlaceholder: 'お住まいの国を選択してください *',
       otherCountry: 'その他',
       otherCountryPlaceholder: '国名をご記入ください *',
-      phoneLabel: '電話 / WhatsApp',
-      phonePlaceholder: '電話 / WhatsApp（任意）',
+      phoneLabel: '電話 / LINE',
+      phonePlaceholder: '電話 / LINE（任意）',
       medicalNeedsLabel: '医療ニーズ *',
       medicalNeedsPlaceholder: '医療ニーズを選択してください',
       medicalNeeds: {
@@ -807,10 +807,10 @@ export const translations = {
       submit: '無料相談を申し込む',
       submitting: '送信中...',
       successTitle: 'ありがとうございます！',
-      successMessage: 'お問い合わせを受け付けました。AIナビゲーターが確認し、担当チームが24時間以内にフォローアップいたします。今すぐのご相談はWhatsAppでも承ります。',
+      successMessage: 'お問い合わせを受け付けました。AIナビゲーターが確認し、担当チームが24時間以内にフォローアップいたします。今すぐのご相談はLINEでも承ります。',
       sendAnother: '別のメッセージを送信',
       privacyNote: 'このフォームを送信することで、プライバシーポリシーに同意し、弊社の医療サービスに関するご連絡に同意したものとみなされます。',
-      alertFail: 'メッセージの送信に失敗しました。もう一度お試しいただくか、WhatsAppでご連絡ください。',
+      alertFail: 'メッセージの送信に失敗しました。もう一度お試しいただくか、LINEでご連絡ください。',
     },
     footer: {
       tagline: '国際患者と、上海の世界クラスの医療機関・バイリンガル医療スタッフをつなぐ。',

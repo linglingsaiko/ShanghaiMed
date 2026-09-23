@@ -24,7 +24,7 @@ export async function POST(request: NextRequest) {
           { tag: 'div', text: { content: `**姓名：** ${fullName}`, tag: 'lark_md' } },
           { tag: 'div', text: { content: `**国家：** ${country}`, tag: 'lark_md' } },
           { tag: 'div', text: { content: `**邮箱：** ${email}`, tag: 'lark_md' } },
-          { tag: 'div', text: { content: `**电话/WhatsApp：** ${phone || '未提供'}`, tag: 'lark_md' } },
+          { tag: 'div', text: { content: `**电话/WhatsApp/LINE：** ${phone || '未提供'}`, tag: 'lark_md' } },
           { tag: 'div', text: { content: `**需求：** ${medicalNeeds}`, tag: 'lark_md' } },
           { tag: 'div', text: { content: `**留言：** ${message || '无'}`, tag: 'lark_md' } },
           { tag: 'div', text: { content: `**时间：** ${new Date().toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' })}`, tag: 'lark_md' } }

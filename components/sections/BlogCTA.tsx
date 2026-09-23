@@ -132,7 +132,7 @@ export default function BlogCTA({ post }: BlogCTAProps) {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="https://wa.me/8613817562808"
+              href={language === 'ja' ? 'https://line.me/ti/p/cD_Ed4GHBM' : 'https://wa.me/8613817562808'}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors"

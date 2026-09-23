@@ -125,6 +125,12 @@ const Contact: React.FC = () => {
     return translated !== `contact.medicalNeeds.${key}` ? translated : MEDICAL_NEEDS_FALLBACK[key]
   }
 
+  // 国家选项显示文案随语言切换（缺失时回退英文国名，提交值仍为英文）
+  const getCountryLabel = (key: string) => {
+    const translated = t(`contact.countries.${key}`)
+    return translated !== `contact.countries.${key}` ? translated : key
+  }
+
   return (
     <section id="contact" className="py-20 lg:py-28 bg-white">
       <div className="section-container">
@@ -335,7 +341,7 @@ const Contact: React.FC = () => {
                   >
                     <option value="">{t('contact.countryPlaceholder')}</option>
                     {COUNTRY_OPTIONS.map((option) => (
-                      <option key={option.value} value={option.value}>{option.value}</option>
+                      <option key={option.value} value={option.value}>{getCountryLabel(option.value)}</option>
                     ))}
                     <option value="Other">{t('contact.otherCountry')}</option>
                   </select>

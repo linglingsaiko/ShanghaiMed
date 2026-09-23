@@ -37,10 +37,16 @@ const fallbackTitles = ['About', 'Treatments', 'Support', 'Legal']
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear()
-  const { t, tArr } = useLanguage()
+  const { t, tArr, language } = useLanguage()
 
   const translatedColumns = tArr('footer.columns')
   const tagline = t('footer.tagline')
+
+  // 日语版客服渠道为 LINE，链接与文案一起切换
+  const getSupportHref = (href: string) =>
+    language === 'ja' && href === 'https://wa.me/8613818274110'
+      ? 'https://line.me/ti/p/cD_Ed4GHBM'
+      : href
 
   return (
     <footer className="bg-primary text-white">
@@ -126,7 +132,7 @@ const Footer: React.FC = () => {
                     return (
                       <li key={`${colIndex}-${linkIndex}`}>
                         <Link
-                          href={column.hrefs[linkIndex]}
+                          href={getSupportHref(column.hrefs[linkIndex])}
                           className="text-sm text-gray-400 hover:text-white transition-colors"
                         >
                           {label}

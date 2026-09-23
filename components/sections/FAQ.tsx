@@ -8,7 +8,7 @@ import { useLanguage } from '@/contexts/LanguageContext'
 
 const FAQ: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
-  const { t, tArr } = useLanguage()
+  const { t, tArr, language } = useLanguage()
 
   // 翻译表中的 FAQ 数据（缺失时回退英文常量）
   const translatedFaqs = tArr('faq.items')
@@ -84,7 +84,7 @@ const FAQ: React.FC = () => {
           </h3>
           <div className="flex justify-center">
             <a
-              href="https://wa.me/+8613818274110"
+              href={language === 'ja' ? 'https://line.me/ti/p/cD_Ed4GHBM' : 'https://wa.me/+8613818274110'}
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 bg-accent text-white rounded-lg font-semibold hover:bg-accent-600 transition-colors"

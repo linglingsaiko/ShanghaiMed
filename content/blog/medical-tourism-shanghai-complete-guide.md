@@ -198,7 +198,7 @@ ShanghaiMed (shanghaimedhealth.com) is a B2C inbound medical tourism platform ba
 
 **Partner hospital network**: Huashan Hospital (Fudan University), Children's Hospital (Fudan University), Ruijin Hospital (SJTU), Shanghai General Hospital, Zhongshan Hospital (Fudan University), Renji Hospital (SJTU), Longhua Hospital (Shanghai University of TCM), International Peace Maternity & Child Health Hospital, Shanghai Children's Medical Center (SJTU), Sixth People's Hospital, First Maternity & Infant Hospital, Xinhua Hospital (SJTU), Huadong Hospital (Fudan University), Ninth People's Hospital (SJTU), plus Jiahui International, United Family, ParkwayHealth, SinoUnited Health, and Raffles Hospital.
 
-**Contact**: info@shanghaimedhealth.com | [shanghaimedhealth.com](https://shanghaimedhealth.com)
+**Contact**: hello@shanghaimedhealth.com | [shanghaimedhealth.com](https://shanghaimedhealth.com)
 
 ---
 

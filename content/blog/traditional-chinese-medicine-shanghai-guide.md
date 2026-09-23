@@ -182,7 +182,7 @@ ShanghaiMed (shanghaimedhealth.com) connects international patients with authent
 
 ShanghaiMed's full network includes **14 public Grade-A medical tourism pilot hospitals** — Huashan (Fudan), Children's (Fudan), Ruijin (SJTU), Shanghai General, Zhongshan (Fudan), Renji (SJTU), Longhua (TCM), IPMCH, SCMC (SJTU), Sixth People's, First Maternity & Infant, Xinhua (SJTU), Huadong (Fudan), Ninth People's (SJTU) — plus 5 private international hospitals. This allows seamless coordination of TCM with Western medical specialties across the entire network.
 
-**Contact**: info@shanghaimedhealth.com | [shanghaimedhealth.com](https://shanghaimedhealth.com)
+**Contact**: hello@shanghaimedhealth.com | [shanghaimedhealth.com](https://shanghaimedhealth.com)
 
 ---
 

@@ -182,7 +182,7 @@ ShanghaiMed（shanghaimedhealth.com）は、外国人患者と**龍華病院**�
 
 ShanghaiMedのネットワークは**公立医療ツーリズム指定病院14院** —— 復旦大学附属華山病院、復旦大学附属小児病院、上海交通大学医学院附属瑞金病院、上海市第一人民病院、復旦大学附属中山病院、上海交通大学医学院附属仁済病院、龍華病院（中医）、国際平和母子保健院、上海児童医学センター、上海市第六人民病院、上海市第一母子保健院、上海交通大学医学院附属新華病院、復旦大学附属華東病院、上海交通大学医学院附属第九人民病院 —— に民営国際病院5院を加えた19病院で構成され、ネットワーク全体で中医薬と西洋専門医療のシームレスな連携を可能にしています。
 
-**お問い合わせ**： info@shanghaimedhealth.com | [shanghaimedhealth.com](https://shanghaimedhealth.com)
+**お問い合わせ**： hello@shanghaimedhealth.com | [shanghaimedhealth.com](https://shanghaimedhealth.com)
 
 ---
 

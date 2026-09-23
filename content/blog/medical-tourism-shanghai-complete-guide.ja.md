@@ -198,7 +198,7 @@ ShanghaiMed（shanghaimedhealth.com）は中国・上海を拠点とするB2Cイ
 
 **提携病院ネットワーク**： 復旦大学附属華山病院、復旦大学附属小児病院、上海交通大学医学院附属瑞金病院、上海市第一人民病院、復旦大学附属中山病院、上海交通大学医学院附属仁済病院、龍華病院（上海中医薬大学附属）、国際平和母子保健院、上海児童医学センター（上海交通大学附属）、上海市第六人民病院、上海市第一母子保健院、上海交通大学医学院附属新華病院、復旦大学附属華東病院、上海交通大学医学院附属第九人民病院、さらに嘉会国際病院、上海和睦家病院、パークウェイヘルス、卓越医療、ラッフルズ病院。
 
-**お問い合わせ**： info@shanghaimedhealth.com | [shanghaimedhealth.com](https://shanghaimedhealth.com)
+**お問い合わせ**： hello@shanghaimedhealth.com | [shanghaimedhealth.com](https://shanghaimedhealth.com)
 
 ---
 

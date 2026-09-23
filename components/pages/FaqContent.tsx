@@ -612,7 +612,7 @@ const FaqContent: React.FC = () => {
         <p className="text-gray-600 mb-6">{cta.text}</p>
         <div className="flex flex-wrap gap-4">
           <a
-            href="mailto:info@shanghaimedhealth.com"
+            href="mailto:hello@shanghaimedhealth.com"
             className="bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-dark transition"
           >
             {cta.email}

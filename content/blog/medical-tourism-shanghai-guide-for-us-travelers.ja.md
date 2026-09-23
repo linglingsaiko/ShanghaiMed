@@ -221,7 +221,7 @@ ShanghaiMedが提携病院の医療招待状を提供します。それを中国
 
 **提携病院ネットワーク**： 公立医療ツーリズム指定病院14院——華山（復旦）、小児病院（復旦）、瑞金（上海交通大学）、上海市第一人民、中山（復旦）、仁済（上海交通大学）、龍華（中医）、国際平和母子保健院、上海児童医学センター（上海交通大学）、第六人民、第一母子保健院、新華（上海交通大学）、華東（復旦）、第九人民（上海交通大学）——に民営国際病院5院（嘉会、和睦家、パークウェイヘルス、卓越医療、ラッフルズ）。
 
-**お問い合わせ**： info@shanghaimedhealth.com | [shanghaimedhealth.com](https://shanghaimedhealth.com)
+**お問い合わせ**： hello@shanghaimedhealth.com | [shanghaimedhealth.com](https://shanghaimedhealth.com)
 
 ---
 

@@ -221,7 +221,7 @@ Absolutely. ShanghaiMed helps integrate medical appointments into your travel it
 
 **Partner hospital network**: 14 public Grade-A medical tourism pilot hospitals — Huashan (Fudan), Children's (Fudan), Ruijin (SJTU), Shanghai General, Zhongshan (Fudan), Renji (SJTU), Longhua (TCM), IPMCH, SCMC (SJTU), Sixth People's, First Maternity & Infant, Xinhua (SJTU), Huadong (Fudan), Ninth People's (SJTU) — plus 5 private international hospitals (Jiahui, United Family, ParkwayHealth, SinoUnited, Raffles).
 
-**Contact**: info@shanghaimedhealth.com | [shanghaimedhealth.com](https://shanghaimedhealth.com)
+**Contact**: hello@shanghaimedhealth.com | [shanghaimedhealth.com](https://shanghaimedhealth.com)
 
 ---
 

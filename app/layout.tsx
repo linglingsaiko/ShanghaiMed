@@ -94,7 +94,7 @@ export default function RootLayout({
                   url: siteUrl,
                   logo: `${siteUrl}/logo.png`,
                   image: `${siteUrl}/og-image.png`,
-                  email: 'care@shanghaimedhealth.com',
+                  email: 'hello@shanghaimedhealth.com',
                   priceRange: '$$$',
                   address: {
                     '@type': 'PostalAddress',

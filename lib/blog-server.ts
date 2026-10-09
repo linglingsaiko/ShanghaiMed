@@ -1,6 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+import { marked } from 'marked'
 import type { BlogPost, BlogQueryParams } from './types'
 import { 
   categories, 
@@ -25,105 +26,8 @@ export {
 const postsDirectory = path.join(process.cwd(), 'content', 'blog')
 
 function renderMarkdownToHtml(content: string): string {
-  let html = content
-  
-  // 代码块 (必须先处理，避免内部被其他规则污染)
-  html = html.replace(/```(\w*)\n([\s\S]*?)```/g, '<pre><code class="language-$1">$2</code></pre>')
-  
-  // Tab分隔表格处理（在代码块之后、其他规则之前）
-  // 识别连续的tab分隔行，第一行为表头
-  const lines = html.split('\n')
-  let result: string[] = []
-  let i = 0
-  while (i < lines.length) {
-    const line = lines[i]
-    // 检测tab分隔的表格行：至少有2个tab
-    if (line.includes('\t') && (line.match(/\t/g) || []).length >= 2) {
-      const tableLines: string[] = []
-      // 收集连续的tab分隔行
-      while (i < lines.length && lines[i].includes('\t') && (lines[i].match(/\t/g) || []).length >= 2) {
-        tableLines.push(lines[i])
-        i++
-      }
-      // 转换为HTML表格
-      let tableHtml = '<table><thead><tr>'
-      const headers = tableLines[0].split('\t')
-      headers.forEach(h => { tableHtml += `<th>${h.trim()}</th>` })
-      tableHtml += '</tr></thead><tbody>'
-      for (let j = 1; j < tableLines.length; j++) {
-        const cells = tableLines[j].split('\t')
-        tableHtml += '<tr>'
-        cells.forEach(c => { tableHtml += `<td>${c.trim()}</td>` })
-        tableHtml += '</tr>'
-      }
-      tableHtml += '</tbody></table>'
-      result.push(tableHtml)
-    } else {
-      result.push(line)
-      i++
-    }
-  }
-  html = result.join('\n')
-  
-  // 行内代码
-  html = html.replace(/`([^`]+)`/g, '<code>$1</code>')
-  
-  // 标题 (h2-h6，博客正文通常不用h1)
-  html = html.replace(/^######\s+(.+)$/gm, '<h6>$1</h6>')
-  html = html.replace(/^#####\s+(.+)$/gm, '<h5>$1</h5>')
-  html = html.replace(/^####\s+(.+)$/gm, '<h4>$1</h4>')
-  html = html.replace(/^###\s+(.+)$/gm, '<h3>$1</h3>')
-  html = html.replace(/^##\s+(.+)$/gm, '<h2>$1</h2>')
-  html = html.replace(/^#\s+(.+)$/gm, '<h1>$1</h1>')
-  
-  // 引用块
-  html = html.replace(/^>\s+(.+)$/gm, '<blockquote>$1</blockquote>')
-  // 合并连续blockquote
-  html = html.replace(/<\/blockquote>\n<blockquote>/g, '\n')
-  
-  // 粗体和斜体
-  html = html.replace(/\*\*\*(.+?)\*\*\*/g, '<strong><em>$1</em></strong>')
-  html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-  html = html.replace(/\*(.+?)\*/g, '<em>$1</em>')
-  
-  // 水平线
-  html = html.replace(/^---+$/gm, '<hr />')
-  
-  // 无序列表
-  html = html.replace(/^[-*+]\s+(.+)$/gm, '<li>$1</li>')
-  html = html.replace(/(<li>.*<\/li>\n?)+/g, (match) => `<ul>${match}</ul>`)
-  
-  // 有序列表
-  html = html.replace(/^\d+\.\s+(.+)$/gm, '<li>$1</li>')
-  
-  // 链接
-  html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
-  
-  // 图片
-  html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" />')
-  
-  // 段落：两个换行分隔的文本块
-  html = html.replace(/\n\n(?!<)/g, '\n\n<p>')
-  html = html.replace(/(?!>)\n\n/g, '</p>\n\n')
-  
-  // 清理：确保段落标签正确
-  html = html.replace(/<p>(<h[1-6]>)/g, '$1')
-  html = html.replace(/(<\/h[1-6]>)<\/p>/g, '$1')
-  html = html.replace(/<p>(<ul>)/g, '$1')
-  html = html.replace(/(<\/ul>)<\/p>/g, '$1')
-  html = html.replace(/<p>(<ol>)/g, '$1')
-  html = html.replace(/(<\/ol>)<\/p>/g, '$1')
-  html = html.replace(/<p>(<pre>)/g, '$1')
-  html = html.replace(/(<\/pre>)<\/p>/g, '$1')
-  html = html.replace(/<p>(<blockquote>)/g, '$1')
-  html = html.replace(/(<\/blockquote>)<\/p>/g, '$1')
-  html = html.replace(/<p>(<hr\s*\/?>)/g, '$1')
-  html = html.replace(/(<hr\s*\/?>)<\/p>/g, '$1')
-  
-  // 单个换行 → <br>
-  html = html.replace(/(?<!>)\n(?!<)/g, '<br />\n')
-  
-  return html
+  // 使用 marked 库（支持 GFM 标准表格、代码块、列表等完整 Markdown 语法）
+  return marked.parse(content, { gfm: true, breaks: false }) as string
 }
 
 // 日語版記事（slug.ja.md）で上書き読込（lang='ja' 時、ファイルが存在すれば）

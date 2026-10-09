@@ -12,7 +12,7 @@ tags:
 author: ShanghaiMed Team
 date: '2026-07-29T08:00:00.000Z'
 featured: true
-featuredImage: /images/shanghai-medical-guide.jpg
+featuredImage: /images/hero_b1_no_text_frameless.jpg
 seoTitle: '上海の医療ツーリズム：外国人患者のための完全ガイド（2026年版）'
 metaDescription: '上海の医療ツーリズムは米国より50〜80%安価です。三級甲等病院14院、治療内容、料金、外国語対応サポートを網羅した完全ガイド。'
 keywords:

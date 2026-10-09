@@ -12,7 +12,7 @@ tags:
 author: ShanghaiMed Team
 date: '2026-07-29T08:00:00.000Z'
 featured: true
-featuredImage: /images/shanghai-medical-guide.jpg
+featuredImage: /images/hero_b1_no_text_frameless.jpg
 seoTitle: 'Medical Tourism in Shanghai: Complete Guide for International Patients (2026)'
 metaDescription: 'Shanghai medical tourism costs 50-80% less than the US. Complete guide to 14 Grade-A hospitals, procedures, pricing, and bilingual support for international patients.'
 keywords:

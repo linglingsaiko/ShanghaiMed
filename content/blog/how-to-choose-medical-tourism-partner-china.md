@@ -15,7 +15,7 @@ tags:
 author: ShanghaiMed Team
 date: '2026-10-09T08:00:00.000Z'
 featured: true
-featuredImage: /images/shanghai-medical-guide.jpg
+featuredImage: /images/首屏.png
 seoTitle: How to Choose a Medical Tourism Partner for China | ShanghaiMed
 metaDescription: >-
   Six questions to ask before choosing a medical tourism agency for China:

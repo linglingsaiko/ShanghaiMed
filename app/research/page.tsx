@@ -447,9 +447,76 @@ const categories = [
   { key: 'tcm', label: 'Traditional Chinese Medicine', count: studies.filter(s => s.category === 'tcm').length },
 ]
 
+// ─── Schema.org Structured Data ───
+function generateJsonLd() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Dataset',
+    name: 'Medical Travel to China: Research Library',
+    description: '30 peer-reviewed studies and official data sources on international patient experience, healthcare quality, and medical tourism in China. Each entry verified against its original publication.',
+    url: 'https://shanghaimedhealth.com/research',
+    license: 'https://creativecommons.org/licenses/by-nc/4.0/',
+    creator: {
+      '@type': 'Organization',
+      name: 'ShanghaiMed',
+      url: 'https://shanghaimedhealth.com',
+    },
+    includedInDataCatalog: {
+      '@type': 'DataCatalog',
+      name: 'ShanghaiMed Research Library',
+    },
+    keywords: [
+      'medical tourism China',
+      'international patient experience',
+      'healthcare quality Shanghai',
+      'medical travel research',
+      'China hospital ratings',
+      'healthcare cost comparison',
+      'traditional Chinese medicine evidence',
+    ],
+    dateModified: '2026-10-10',
+    datePublished: '2026-09-01',
+    measurementTechnique: 'Each entry is verified against its original PubMed record or official publication. Study type, sample size, key finding, and stated limitations are extracted and summarised.',
+    variableMeasured: [
+      { '@type': 'PropertyValue', name: 'Total studies', value: '30' },
+      { '@type': 'PropertyValue', name: 'Categories', value: 'Patient Experience, Medical Tourism, Quality & Safety, Cost & Value, Traditional Chinese Medicine' },
+      { '@type': 'PropertyValue', name: 'Last reviewed', value: '2026-10-10' },
+    ],
+    about: categories
+      .filter(c => c.key !== 'all')
+      .map(c => ({
+        '@type': 'Thing',
+        name: c.label,
+        description: `${c.count} studies on ${c.label.toLowerCase()} in the context of medical travel to China.`,
+      })),
+    hasPart: studies.map(study => ({
+      '@type': 'ScholarlyArticle',
+      name: study.title,
+      datePublished: String(study.year),
+      ...(study.url ? { url: study.url } : {}),
+      ...(study.pmid ? { identifier: study.pmid } : {}),
+      isPartOf: {
+        '@type': 'PublicationIssue',
+        name: study.source,
+      },
+      description: study.finding,
+      ...(study.pmid
+        ? {
+            sameAs: `https://pubmed.ncbi.nlm.nih.gov/${study.pmid}/`,
+          }
+        : {}),
+    })),
+  }
+}
+
 export default function ResearchPage() {
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* Schema.org Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateJsonLd()) }}
+      />
       {/* Hero */}
       <div className="bg-white border-b">
         <div className="max-w-6xl mx-auto px-4 py-16">

@@ -416,7 +416,7 @@ export const translations = {
         },
         {
           title: 'Support',
-          links: ['How It Works', 'FAQ', 'Research Library', 'Contact Us', 'WhatsApp Support'],
+          links: ['How It Works', 'FAQ', 'Research Library', 'Glossary', 'Contact Us', 'WhatsApp Support'],
         },
         {
           title: 'Legal',

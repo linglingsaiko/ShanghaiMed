@@ -155,50 +155,66 @@ export default function RootLayout({
                   mainEntity: [
                     {
                       '@type': 'Question',
-                      name: 'How much does medical care cost in Shanghai compared to the US?',
+                      name: 'How much does medical treatment cost in Shanghai compared to the US?',
                       acceptedAnswer: {
                         '@type': 'Answer',
-                        text: 'Medical procedures in Shanghai typically cost 60-80% less than in the US. Examples: MRI scan from $300 (US: $1,000+), specialist consultation from $70 (US: $250+), dental implant from $800 (US: $3,000+), IVF treatment from $4,200 (US: $15,000+), cardiac bypass surgery from $11,000 (US: $80,000+). ShanghaiMed concierge packages: Essential Care $1,000/3 days, Complex Care $1,650/5 days. Medical expenses are paid directly to hospitals.',
+                        text: 'Medical procedures in Shanghai cost 50-80% less than in the US. Examples: knee replacement $5,000-$10,000 (US: $30,000-$50,000), cardiac bypass $11,000-$21,000 (US: $80,000-$150,000), MRI scan (3T) $200-$400 (US: $1,200-$3,000), dental implant per tooth $800-$1,200 (US: $4,000-$6,000), IVF cycle $3,000-$5,000 (US: $12,000-$15,000), cataract surgery $1,000-$2,000 (US: $3,500-$6,000), comprehensive health checkup $300-$600 (US: $2,000-$5,000). ShanghaiMed companion service packages are $1,000 for 3 days (Essential Care) or $1,650 for 5 days (Complex Care), covering hospital coordination, bilingual escort, translation, and logistics. Hospital treatment costs are billed separately at local rates.',
                       },
                     },
                     {
                       '@type': 'Question',
-                      name: 'Which hospitals does ShanghaiMed partner with?',
+                      name: 'Is medical tourism in Shanghai safe for international patients?',
                       acceptedAnswer: {
                         '@type': 'Answer',
-                        text: 'ShanghaiMed partners with 14 public Grade-A tertiary hospitals designated as medical tourism pilots: Huashan Hospital (Fudan, #1 neurosurgery/dermatology), Shanghai Ninth People\'s Hospital (SJTU, #1 dental in China), Ruijin Hospital (SJTU, 95.7% CAR-T remission rate), Zhongshan Hospital (Fudan, cardiovascular center), Renji Hospital (SJTU, #1 gastroenterology), Longhua Hospital (premier TCM), Shanghai Children\'s Medical Center (SJTU, top pediatric cardiac surgery), and 7 others. All have dedicated international departments with English-speaking staff and direct insurance settlement with 16+ international insurers.',
+                        text: 'Yes. Shanghai\'s top hospitals meet international safety standards: Huashan Hospital (Fudan University), Grade 3A (China\'s highest hospital rating) with 24 international insurance partners; Ruijin Hospital (SJTU), Grade 3A, national leader in hematology and CAR-T cell therapy with National EMR Level 7; Zhongshan Hospital (Fudan University), Grade 3A with an independent international patient building; Shanghai Ninth People\'s Hospital (SJTU), Grade 3A, national center for dental, oral, and plastic surgery; Longhua Hospital (Shanghai University of TCM), Grade 3A, official TCM medical tourism pilot hospital. These hospitals use the same medical equipment (Siemens, GE Healthcare, Philips) and implant brands (Stryker, Zimmer, Straumann) found in US hospitals, and many senior physicians have trained at Johns Hopkins, Mayo Clinic, and Cleveland Clinic.',
                       },
                     },
                     {
                       '@type': 'Question',
-                      name: 'Do I need a visa for medical treatment in Shanghai?',
+                      name: 'Which hospitals in Shanghai does ShanghaiMed work with?',
                       acceptedAnswer: {
                         '@type': 'Answer',
-                        text: 'China offers 240-hour (10-day) visa-free transit for citizens of 54 countries including the US, UK, Australia, Canada, and most EU nations. For longer stays, ShanghaiMed provides medical visa support with invitation letters from partner hospitals. The 240-hour visa-free option is sufficient for most Essential Care (3-day) and Complex Care (5-day) packages.',
+                        text: 'ShanghaiMed partners with 14 public Grade-A medical tourism pilot hospitals and 5 private international hospitals, 19 institutions in total. Public partners include Huashan Hospital (Fudan University), Children\'s Hospital of Fudan University, Ruijin Hospital (SJTU), Shanghai General Hospital, Zhongshan Hospital (Fudan University), Renji Hospital (SJTU), Longhua Hospital (TCM), International Peace Maternity & Child Health Hospital, Shanghai Children\'s Medical Center, Sixth People\'s Hospital, First Maternity & Infant Hospital, Xinhua Hospital, Huadong Hospital, and Ninth People\'s Hospital. Private partners are Jiahui International Hospital (Massachusetts General Hospital affiliation), Shanghai United Family Hospital, ParkwayHealth, SinoUnited Health (Mayo Clinic Care Network), and Shanghai Raffles Hospital.',
                       },
                     },
                     {
                       '@type': 'Question',
-                      name: 'Will language be a barrier during my medical treatment?',
+                      name: 'Do doctors in Shanghai speak English?',
                       acceptedAnswer: {
                         '@type': 'Answer',
-                        text: 'No. ShanghaiMed provides ISPN-certified (International Standards for Professional Nurses) bilingual registered nurses who accompany you throughout your entire medical journey. Services include real-time medical interpretation during consultations, medical document translation, hospital navigation, and discharge support. All medical reports can be provided in English.',
+                        text: 'Many senior doctors at Shanghai\'s top hospitals have international training and speak English, and physicians regularly publish in English-language medical journals. To guarantee zero communication gaps, ShanghaiMed provides professional bilingual medical companions (English-Chinese) who accompany you to every appointment, translate medical terminology accurately, help with hospital paperwork and navigation, and ensure you fully understand your diagnosis, treatment plan, and medication. All medical documents, treatment plans, and prescriptions are translated into English for your records.',
                       },
                     },
                     {
                       '@type': 'Question',
-                      name: 'Is it safe to get medical treatment in China?',
+                      name: 'How do I get a medical visa for China?',
                       acceptedAnswer: {
                         '@type': 'Answer',
-                        text: 'Yes. All ShanghaiMed partner hospitals are Grade 3A tertiary hospitals — China\'s highest official hospital rating — or accredited international private hospitals. Partner institutions include Huashan Hospital (Fudan University), Ruijin Hospital (SJTU), and Zhongshan Hospital (Fudan University), many with dedicated international patient centers and direct billing arrangements with major global insurers.',
+                        text: 'ShanghaiMed assists with the complete visa process: (1) free initial consultation via video call; (2) a medical invitation letter issued by the partner hospital after consultation; (3) you submit the invitation letter with your visa application to the Chinese embassy or consulate; (4) processing typically takes 2-4 weeks; (5) ShanghaiMed provides translation of all required documents. China also offers a 240-hour transit visa exemption for citizens of 54 countries, including the US, UK, Canada, Australia, and most EU nations, which may be sufficient for shorter medical trips.',
                       },
                     },
                     {
                       '@type': 'Question',
-                      name: 'What is included in the ShanghaiMed concierge packages?',
+                      name: 'What is included in the ShanghaiMed service package?',
                       acceptedAnswer: {
                         '@type': 'Answer',
-                        text: 'Essential Care ($1,000/3 days) and Complex Care ($1,650/5 days) include: airport pickup/drop-off, hotel coordination, in-person medical accompaniment (up to 8h/day), real-time interpretation, medical report translation, examination scheduling, medication coordination, hospital/specialist matching, transportation/local guidance, WeChat/WhatsApp support, visa assistance, and post-care remote follow-up. Medical expenses are paid directly to hospitals and are separate from concierge fees.',
+                        text: 'Essential Care Package ($1,000 / 3 days) includes hospital appointment scheduling at 1 hospital, bilingual medical escort (English-Chinese), medical translation at all appointments, local transportation to and from hospital, and AI-powered pre-consultation and cost estimation. Complex Care Package ($1,650 / 5 days) includes everything in Essential Care plus multi-hospital coordination (2+ hospitals), specialist appointment booking, post-treatment follow-up (30 days of remote video check-ups), and visa assistance and airport pickup. Not included and billed separately by the hospital at local rates: hospital treatment costs (surgery, medication, lab tests), accommodation, and international flights.',
+                      },
+                    },
+                    {
+                      '@type': 'Question',
+                      name: 'Can I combine medical treatment with tourism in Shanghai?',
+                      acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: 'Absolutely. Shanghai is China\'s most international city, with the Bund waterfront, the 400-year-old Yu Garden, Shanghai Tower (the world\'s 2nd tallest building at 632m), Shanghai Disneyland, and the tree-lined French Concession. Many patients schedule a medical appointment on Day 1-2 and spend the remaining days exploring the city. ShanghaiMed helps integrate medical appointments into your travel itinerary so you do not waste vacation time.',
+                      },
+                    },
+                    {
+                      '@type': 'Question',
+                      name: 'What medical procedures are most popular for medical tourists in Shanghai?',
+                      acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: 'Popular procedures with typical savings versus the US: orthopedic surgery (knee/hip replacement, spine surgery, about 80%, at Sixth People\'s Hospital and Huashan Hospital), plastic surgery (rhinoplasty, facial reconstruction, 70-80%, Ninth People\'s Hospital), dental treatment (implants, crowns, orthodontics, 70-80%, Ninth People\'s Hospital), Traditional Chinese Medicine (acupuncture, herbal therapy, Tuina, 75-80%, Longhua Hospital), cancer treatment (chemotherapy, CAR-T, immunotherapy, 60-80%, Ruijin and Huashan), cardiac surgery (bypass, valve replacement, about 80%, Zhongshan Hospital), fertility treatment (IVF, ICSI, about 75%, Renji and IPMCH), and executive health screening (full-day checkup, about 88%, Huadong Hospital).',
                       },
                     },
                     {
@@ -206,31 +222,15 @@ export default function RootLayout({
                       name: 'Can I use my international health insurance?',
                       acceptedAnswer: {
                         '@type': 'Answer',
-                        text: 'Yes. ShanghaiMed partner hospitals accept 16+ international insurance providers including MSH, Bupa, Cigna, Aetna, AXA, Allianz, AIA, Ping An Health, and International SOS. Many hospitals offer direct settlement (no upfront payment). ShanghaiMed nurses provide insurance support including policy benefit checks and hospital insurance coverage confirmation.',
+                        text: 'Yes. ShanghaiMed partner hospitals have direct settlement agreements with major international insurers, ranging from 8 to 24 insurers per hospital: Huashan Hospital has 24 insurance partners, Shanghai Children\'s Medical Center 23, Ruijin Hospital 21, and Renji Hospital 20. Accepted insurers include MSH, Bupa, Cigna, Aetna, AXA, Allianz, AIA, and International SOS. ShanghaiMed assists with insurance verification and direct settlement before your trip.',
                       },
                     },
                     {
                       '@type': 'Question',
-                      name: 'What treatments are available through ShanghaiMed?',
+                      name: 'What happens after my medical treatment in Shanghai?',
                       acceptedAnswer: {
                         '@type': 'Answer',
-                        text: 'ShanghaiMed supports: executive health screening, specialist consultations, cardiac surgery, orthopedic surgery (hip/knee replacement, spinal fusion), cancer treatment (chemotherapy, CAR-T therapy), IVF and reproductive medicine, dental implants and oral surgery, plastic and reconstructive surgery, TCM (acupuncture, herbal therapy), pediatric care, ophthalmology, and more. Each patient receives a personalized hospital and specialist matching based on their condition.',
-                      },
-                    },
-                    {
-                      '@type': 'Question',
-                      name: 'How do I start my medical journey with ShanghaiMed?',
-                      acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: '1) Submit an inquiry via the contact form on shanghaimedhealth.com (AI navigator available 24/7). 2) Receive a consultation within 24 hours with hospital options and cost estimates. 3) Confirm and travel — we coordinate appointments, travel logistics, and arrival support. 4) Receive care with bilingual nurse accompaniment throughout. 5) Follow-up care including medical records, remote consultations, and prescription coordination.',
-                      },
-                    },
-                    {
-                      '@type': 'Question',
-                      name: 'What makes Shanghai different from other medical tourism destinations?',
-                      acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: 'Shanghai offers: 14 public Grade-A hospitals designated as medical tourism pilots (vs. private clinics in Thailand/India), 73,000+ annual international patient visits, ISPN-certified bilingual nurses (rare in other destinations), 240-hour visa-free transit for 54 countries, direct insurance settlement with 16+ international insurers, and costs 60-80% lower than the US. Shanghai is also a major tourism hub — patients can combine medical care with world-class dining, sightseeing, and cultural experiences.',
+                        text: 'ShanghaiMed provides comprehensive post-treatment follow-up: remote video check-ups with your treating doctor (Complex Care), translated medical records (full discharge summary, test results, and medication list in English), medication guidance on dosage, side effects, and interactions, personalized recovery planning, home-country coordination (sharing your medical records with your primary care physician with your consent), and ongoing support after you return home. For Complex Care patients, follow-up continues for 30 days after treatment.',
                       },
                     },
                   ],

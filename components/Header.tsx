@@ -66,18 +66,29 @@ const Header: React.FC = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link, index) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={(e) => {
-                  if (!handleNavClick(link.href)) {
-                    e.preventDefault()
-                  }
-                }}
-                className="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
-              >
-                {getLabel(index, link.label)}
-              </a>
+              link.href.startsWith('#') ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={(e) => {
+                    if (!handleNavClick(link.href)) {
+                      e.preventDefault()
+                    }
+                  }}
+                  className="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
+                >
+                  {getLabel(index, link.label)}
+                </a>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
+                >
+                  {getLabel(index, link.label)}
+                </Link>
+              )
             ))}
             <LanguageSwitcher />
           </div>
@@ -103,18 +114,29 @@ const Header: React.FC = () => {
           <div className="lg:hidden py-4 border-t border-gray-100">
             <div className="flex flex-col gap-4">
               {navLinks.map((link, index) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={(e) => {
-                    if (!handleNavClick(link.href)) {
-                      e.preventDefault()
-                    }
-                  }}
-                  className="text-base font-medium text-gray-600 hover:text-primary transition-colors py-2"
-                >
-                  {getLabel(index, link.label)}
-                </a>
+                link.href.startsWith('#') ? (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    onClick={(e) => {
+                      if (!handleNavClick(link.href)) {
+                        e.preventDefault()
+                      }
+                    }}
+                    className="text-base font-medium text-gray-600 hover:text-primary transition-colors py-2"
+                  >
+                    {getLabel(index, link.label)}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="text-base font-medium text-gray-600 hover:text-primary transition-colors py-2"
+                  >
+                    {getLabel(index, link.label)}
+                  </Link>
+                )
               ))}
               <div className="py-2">
                 <LanguageSwitcher />

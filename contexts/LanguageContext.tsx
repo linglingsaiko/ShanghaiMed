@@ -21,7 +21,7 @@ export const translations = {
       treatments: 'Treatments',
       careTeam: 'Care Team',
       trust: 'Trust',
-      items: ['Why Shanghai', 'How It Works', 'Hospital Network', 'Care Team', 'Pricing', 'Blog', 'Contact'],
+      items: ['Why Shanghai', 'How It Works', 'Hospital Network', 'Care Team', 'Pricing', 'About', 'Blog', 'Contact'],
     },
     whyShanghai: {
       badge: 'Why Shanghai',
@@ -461,7 +461,7 @@ export const translations = {
       treatments: '治療',
       careTeam: 'ケアチーム',
       trust: '信頼',
-      items: ['なぜ上海か', 'ご利用の流れ', '病院ネットワーク', 'ケアチーム', '料金', 'ブログ', 'お問い合わせ'],
+      items: ['なぜ上海か', 'ご利用の流れ', '病院ネットワーク', 'ケアチーム', '料金', '会社情報', 'ブログ', 'お問い合わせ'],
     },
     whyShanghai: {
       badge: 'なぜ上海か',

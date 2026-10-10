@@ -41,7 +41,54 @@ export default function EditorialPolicyPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-gray-900">3. Medical Accuracy</h2>
+            <h2 className="text-2xl font-bold text-gray-900">3. Source Classification</h2>
+            <p>
+              Every claim in our content is traced to a primary source. We classify sources into three tiers to help readers evaluate the strength of the underlying evidence:
+            </p>
+            <div className="overflow-x-auto mt-4">
+              <table className="w-full text-sm border-collapse">
+                <thead>
+                  <tr className="border-b-2 border-gray-200">
+                    <th className="text-left py-2 pr-4 font-semibold text-gray-900">Tier</th>
+                    <th className="text-left py-2 pr-4 font-semibold text-gray-900">Source Type</th>
+                    <th className="text-left py-2 font-semibold text-gray-900">Examples</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-100">
+                  <tr>
+                    <td className="py-3 pr-4 align-top">
+                      <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-green-100 text-green-800">Tier 1</span>
+                    </td>
+                    <td className="py-3 pr-4 align-top text-gray-700">Peer-reviewed publications</td>
+                    <td className="py-3 text-gray-600">PubMed-indexed journals, Cochrane Library, JAMA, Lancet, BMJ, Frontiers, MDPI journals</td>
+                  </tr>
+                  <tr>
+                    <td className="py-3 pr-4 align-top">
+                      <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-blue-100 text-blue-800">Tier 2</span>
+                    </td>
+                    <td className="py-3 pr-4 align-top text-gray-700">Government &amp; institutional data</td>
+                    <td className="py-3 text-gray-600">National Health Commission, WHO, NIH, CDC, municipal health commissions, official hospital reports</td>
+                  </tr>
+                  <tr>
+                    <td className="py-3 pr-4 align-top">
+                      <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-amber-100 text-amber-800">Tier 3</span>
+                    </td>
+                    <td className="py-3 pr-4 align-top text-gray-700">Verified industry &amp; credible secondary sources</td>
+                    <td className="py-3 text-gray-600">Published hospital pricing, conference presentations, accredited academic institutions, reputable industry analyses</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="text-sm text-gray-500 mt-4">
+              Our Research Library entries display their source tier in each citation. Where possible, we prioritise Tier 1 sources. Government statistics (Tier 2) are used when primary data is only available through official channels. We avoid relying solely on media reports or opinion pieces.
+            </p>
+            <p className="text-sm text-gray-500 mt-2">
+              <strong>Current Research Library breakdown:</strong> 17 Tier 1 (peer-reviewed) · 5 Tier 2 (government/institutional) · 8 Tier 3 (industry/other)
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold text-gray-900">4. Medical Accuracy</h2>
             <ul>
               <li>Clinical terms are verified against standard medical references.</li>
               <li>Hospital qualifications are described using China&rsquo;s official classification system (Grade 3A / 三甲). We do not use accreditation marks that are no longer current.</li>
@@ -64,7 +111,7 @@ export default function EditorialPolicyPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-gray-900">5. Corrections</h2>
+            <h2 className="text-2xl font-bold text-gray-900">6. Corrections</h2>
             <p>
               We take accuracy seriously. If you identify an error in any of our content — a factual mistake, an outdated statistic, an incorrect medical term, or a mischaracterised study finding — please contact us:
             </p>

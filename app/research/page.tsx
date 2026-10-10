@@ -528,7 +528,7 @@ export default function ResearchPage() {
             {studies.length} peer-reviewed studies and official data sources on international patient experience, healthcare quality, and medical tourism in China. Each entry is verified against its original publication and summarised with study type, sample size, key finding, and stated limitations.
           </p>
           <p className="text-sm text-gray-500 mt-4">
-            Last updated: October 10, 2026
+            Last reviewed and verified: October 10, 2026 · Each entry cross-checked against its original PubMed record or official publication.
           </p>
         </div>
       </div>

@@ -344,7 +344,7 @@ export default function GlossaryPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Medical Tourism Glossary</h1>
           <p className="text-lg text-gray-600">
             {terms.length} plain-language definitions of the terms patients encounter when arranging
-            medical care abroad \u2014 who does what, how hospitals are graded, how payment and insurance
+            medical care abroad — who does what, how hospitals are graded, how payment and insurance
             work, and what safe continuity of care requires.
           </p>
           <p className="text-sm text-gray-500 mt-4">Last reviewed: October 10, 2026</p>
@@ -420,19 +420,19 @@ export default function GlossaryPage() {
               <a href="/editorial-policy" className="text-teal-700 font-medium hover:underline">
                 Editorial Policy
               </a>{' '}
-              <span className="text-gray-600">\u2014 how we source, grade, and correct information.</span>
+              <span className="text-gray-600">— how we source, grade, and correct information.</span>
             </li>
             <li>
               <a href="/founder" className="text-teal-700 font-medium hover:underline">
                 About the Founder
               </a>{' '}
-              <span className="text-gray-600">\u2014 the clinical and operational background behind ShanghaiMed.</span>
+              <span className="text-gray-600">— the clinical and operational background behind ShanghaiMed.</span>
             </li>
             <li>
               <a href="/blog" className="text-teal-700 font-medium hover:underline">
                 Blog
               </a>{' '}
-              <span className="text-gray-600">\u2014 practical guides for patients considering treatment in Shanghai.</span>
+              <span className="text-gray-600">— practical guides for patients considering treatment in Shanghai.</span>
             </li>
           </ul>
         </div>

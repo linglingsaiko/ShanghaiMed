@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'About the Founder — Sara Ma | ShanghaiMed',
@@ -54,14 +55,28 @@ export default function FounderPage() {
       {/* Hero */}
       <div className="bg-white border-b">
         <div className="max-w-4xl mx-auto px-4 py-16">
-          <p className="text-sm text-teal-600 font-medium mb-2">Founder &amp; Medical Director</p>
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">Sara Ma</h1>
-          <p className="text-lg text-gray-500">马玲玲</p>
-          <p className="text-lg text-gray-600 mt-4 max-w-2xl">
-            ISPN-certified registered nurse, senior nurse practitioner, and founder of ShanghaiMed.
-            Over a decade of hands-on experience guiding international patients through Shanghai&apos;s
-            healthcare system — from routine health screenings to complex surgical coordination.
-          </p>
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
+            <div className="flex-shrink-0">
+              <Image
+                src="/images/sara-ma-headshot.jpg"
+                alt="Sara Ma — Founder of ShanghaiMed"
+                width={200}
+                height={200}
+                className="rounded-full object-cover border-4 border-teal-100 shadow-md"
+                priority
+              />
+            </div>
+            <div>
+              <p className="text-sm text-teal-600 font-medium mb-2">Founder &amp; Medical Director</p>
+              <h1 className="text-4xl font-bold text-gray-900 mb-2">Sara Ma</h1>
+              <p className="text-lg text-gray-500">马玲玲</p>
+              <p className="text-lg text-gray-600 mt-4 max-w-2xl">
+                ISPN-certified registered nurse, senior nurse practitioner, and founder of ShanghaiMed.
+                Over a decade of hands-on experience guiding international patients through Shanghai&apos;s
+                healthcare system — from routine health screenings to complex surgical coordination.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -128,7 +143,7 @@ export default function FounderPage() {
           <h2 className="text-2xl font-bold text-gray-900 mb-4">About the Company</h2>
           <div className="prose prose-gray max-w-none">
             <p>
-              ShanghaiMed is operated by <strong>上海可玲信息科技术有限公司</strong> (Shanghai Keling
+              ShanghaiMed is operated by <strong>上海可玲信息技术有限公司</strong> (Shanghai Keling
               Information Technology Co., Ltd.), a company registered in Shanghai, China.
             </p>
             <p>
@@ -139,25 +154,30 @@ export default function FounderPage() {
           </div>
           <div className="mt-6 pt-6 border-t grid md:grid-cols-2 gap-4 text-sm text-gray-600">
             <div>
-              <dt className="font-medium text-gray-900">Company</dt>
-              <dd>上海可玲信息科技术有限公司</dd>
+              <dt className="font-medium text-gray-900">Registered Name</dt>
+              <dd>上海可玲信息技术有限公司</dd>
               <dd>Shanghai Keling Information Technology Co., Ltd.</dd>
             </div>
             <div>
-              <dt className="font-medium text-gray-900">Location</dt>
-              <dd>Shanghai, China</dd>
+              <dt className="font-medium text-gray-900">Registered Address</dt>
+              <dd>Room 101, Floor 1, No. 2555 Changyang Road</dd>
+              <dd>Yangpu District, Shanghai, China</dd>
+            </div>
+            <div>
+              <dt className="font-medium text-gray-900">Registration Date</dt>
+              <dd>May 19, 2026</dd>
+            </div>
+            <div>
+              <dt className="font-medium text-gray-900">Registered Capital</dt>
+              <dd>RMB 100,000</dd>
+            </div>
+            <div>
+              <dt className="font-medium text-gray-900">Legal Representative</dt>
+              <dd>Ma Lingling (马玲玲)</dd>
             </div>
             <div>
               <dt className="font-medium text-gray-900">Languages</dt>
               <dd>English, 中文, 日本語</dd>
-            </div>
-            <div>
-              <dt className="font-medium text-gray-900">Contact</dt>
-              <dd>
-                <a href="mailto:hello@shanghaimedhealth.com" className="text-teal-600 hover:underline">
-                  hello@shanghaimedhealth.com
-                </a>
-              </dd>
             </div>
           </div>
         </section>

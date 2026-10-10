@@ -408,7 +408,7 @@ export const translations = {
       columns: [
         {
           title: 'About',
-          links: ['About Us', 'Why Shanghai', 'Our Network', 'Care Team'],
+          links: ['About Us', 'Our Founder', 'Why Shanghai', 'Our Network', 'Care Team'],
         },
         {
           title: 'Treatments',
@@ -416,11 +416,11 @@ export const translations = {
         },
         {
           title: 'Support',
-          links: ['How It Works', 'FAQ', 'Contact Us', 'WhatsApp Support'],
+          links: ['How It Works', 'FAQ', 'Research Library', 'Contact Us', 'WhatsApp Support'],
         },
         {
           title: 'Legal',
-          links: ['Privacy Policy', 'Terms of Service', 'Cookie Policy', 'Medical Disclaimer'],
+          links: ['Privacy Policy', 'Terms of Service', 'Editorial Policy', 'Medical Disclaimer'],
         },
       ],
       rights: 'All rights reserved.',
@@ -839,7 +839,7 @@ export const translations = {
       columns: [
         {
           title: '会社情報',
-          links: ['会社概要', 'なぜ上海か', '病院ネットワーク', 'ケアチーム'],
+          links: ['会社概要', '創業者', 'なぜ上海か', '病院ネットワーク', 'ケアチーム'],
         },
         {
           title: '治療',
@@ -847,11 +847,11 @@ export const translations = {
         },
         {
           title: 'サポート',
-          links: ['ご利用の流れ', 'よくある質問', 'お問い合わせ', 'LINEサポート'],
+          links: ['ご利用の流れ', 'よくある質問', '研究ライブラリ', 'お問い合わせ', 'LINEサポート'],
         },
         {
           title: '法的事項',
-          links: ['プライバシーポリシー', '利用規約', 'クッキーポリシー', '医療免責事項'],
+          links: ['プライバシーポリシー', '利用規約', '編集ポリシー', '医療免責事項'],
         },
       ],
       rights: 'All rights reserved.',

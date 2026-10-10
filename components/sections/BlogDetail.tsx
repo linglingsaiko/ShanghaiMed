@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowRight, Calendar, User, Tag, Share2, Linkedin, Facebook,
 import type { BlogPost } from '@/lib/types'
 import { getNextPost, getPreviousPost, categories } from '@/lib/blog'
 import BlogCTA from './BlogCTA'
+import AuthorBio from './AuthorBio'
 import Link from 'next/link'
 import { useLanguage } from '@/contexts/LanguageContext'
 
@@ -183,6 +184,8 @@ export default function BlogDetail({ post }: BlogDetailProps) {
                   dangerouslySetInnerHTML={{ __html: post.htmlContent || '' }}
                 />
               </div>
+              
+              <AuthorBio author={post.author} />
               
               {post.tags.length > 0 && (
                 <div className="mt-8 pt-6 border-t border-gray-100">

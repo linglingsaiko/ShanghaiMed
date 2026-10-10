@@ -347,59 +347,18 @@ export const socialProofStats = [
 ]
 
 // Patient Testimonials
-// TODO: Replace with real patient testimonials before launch
-export const patientTestimonials = [
-  {
-    id: 1,
-    name: 'Michael T.',
-    country: 'USA',
-    treatment: 'Cardiac Surgery',
-    testimonial: 'I saved $45,000 on cardiac surgery vs. the US. Bilingual nurse support made it the best medical experience ever.',
-    avatar: 'M',
-    rating: 5,
-    savings: '$45,000',
-  },
-  {
-    id: 2,
-    name: 'Sarah K.',
-    country: 'UK',
-    treatment: 'Orthopedic Surgery',
-    testimonial: 'The coordination team arranged everything perfectly. From airport pickup to hospital discharge, every detail was handled.',
-    avatar: 'S',
-    rating: 5,
-    savings: '$12,000',
-  },
-  {
-    id: 3,
-    name: 'Kenji M.',
-    country: 'Japan',
-    treatment: 'Cancer Treatment',
-    testimonial: 'Access to top oncologists and cutting-edge therapies. The medical report was detailed and in Japanese.',
-    avatar: 'K',
-    rating: 5,
-    savings: '¥2,000,000',
-  },
-  {
-    id: 4,
-    name: 'Anna L.',
-    country: 'Germany',
-    treatment: 'Fertility Treatment',
-    testimonial: 'The reproductive medicine department here has success rates that rival the best in Europe at a fraction of the cost.',
-    avatar: 'A',
-    rating: 5,
-    savings: '€8,500',
-  },
-  {
-    id: 5,
-    name: 'David W.',
-    country: 'Australia',
-    treatment: 'Spinal Surgery',
-    testimonial: 'World-class facilities with English-speaking staff. The entire medical journey was seamless and stress-free.',
-    avatar: 'D',
-    rating: 5,
-    savings: '$18,000',
-  },
-]
+// HIDDEN: No real completed patient cases yet. Will populate after first client completes treatment (expected Dec 2026).
+// Per YMYL Trustworthiness guidelines: only real, consented, completed patient cases may be displayed.
+export const patientTestimonials: Array<{
+  id: number
+  name: string
+  country: string
+  treatment: string
+  testimonial: string
+  avatar: string
+  rating: number
+  savings: string
+}> = []
 
 // Nurse Services
 export const nurseServices = [

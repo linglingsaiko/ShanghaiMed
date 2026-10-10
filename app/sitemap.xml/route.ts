@@ -18,6 +18,7 @@ export async function GET() {
   const staticPages = [
     { path: '/blog', changefreq: 'daily', priority: '0.8' },
     { path: '/research', changefreq: 'weekly', priority: '0.9' },
+    { path: '/glossary', changefreq: 'monthly', priority: '0.8' },
     { path: '/founder', changefreq: 'monthly', priority: '0.7' },
     { path: '/editorial-policy', changefreq: 'monthly', priority: '0.5' },
     { path: '/how-it-works', changefreq: 'monthly', priority: '0.7' },

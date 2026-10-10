@@ -10,7 +10,7 @@ tags:
   - medical travel savings
   - ShanghaiMed
 author: ShanghaiMed Team
-date: '2026-07-29T09:00:00.000Z'
+date: '2026-07-07T08:00:00.000Z'
 featured: true
 featuredImage: /images/us-travelers-guide.jpg
 seoTitle: '上海の医療ツーリズム：米国からの渡航者のための費用ガイド（2026年版）'

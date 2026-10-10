@@ -10,7 +10,7 @@ tags:
   - TCM guide
   - Longhua Hospital
 author: ShanghaiMed Team
-date: '2026-07-29T10:00:00.000Z'
+date: '2026-07-14T08:00:00.000Z'
 featured: false
 featuredImage: /images/龙华.jpg
 seoTitle: 'Traditional Chinese Medicine in Shanghai: Complete TCM Guide for International Patients (2026)'

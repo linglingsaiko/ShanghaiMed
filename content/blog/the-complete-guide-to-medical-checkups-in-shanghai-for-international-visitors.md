@@ -10,7 +10,7 @@ tags:
     'health checkup Shanghai' 'executive checkup' 'medical screening'
     'preventive care' 'international patient'
 author: ShanghaiMed Team
-date: '2026-06-12T02:45:34.473Z'
+date: '2026-06-16T08:00:00.000Z'
 featuredImage: /images/health-checkup.jpg
 seoTitle: 'Medical Checkup in Shanghai: Complete Guide for International Visitors'
 metaDescription: >-

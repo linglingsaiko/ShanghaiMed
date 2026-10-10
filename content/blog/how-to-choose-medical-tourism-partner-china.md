@@ -10,7 +10,7 @@ tags:
   - 'Shanghai medical concierge'
   - 'medical travel guide'
 author: ShanghaiMed Team
-date: '2026-10-09T08:00:00.000Z'
+date: '2026-07-21T08:00:00.000Z'
 featured: true
 featuredImage: /images/how-to-choose-medical-tourism-partner.jpg
 seoTitle: "How to Choose a Medical Tourism Partner for China | ShanghaiMed"

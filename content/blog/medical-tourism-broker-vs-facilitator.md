@@ -10,7 +10,7 @@ tags:
   - 'medical travel China'
   - 'choose medical tourism partner'
 author: ShanghaiMed Team
-date: '2026-10-10T08:00:00.000Z'
+date: '2026-07-28T08:00:00.000Z'
 featured: false
 featuredImage: /images/broker-vs-facilitator.jpg
 seoTitle: "Medical Tourism Broker vs. Facilitator: Key Differences | ShanghaiMed"

@@ -10,7 +10,7 @@ tags:
   - '''Shanghai hospitals'''
   - '''healthcare guide'''
 author: ShanghaiMed Team
-date: '2026-06-09T06:18:30.060Z'
+date: '2026-06-09T08:00:00.000Z'
 featured: true
 featuredImage: /images/shanghai-medical-guide.jpg
 seoTitle: 上海は医療受け入れ先として良い選択か？｜外国人患者のためのガイド

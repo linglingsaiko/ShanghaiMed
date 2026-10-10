@@ -12,7 +12,7 @@ tags:
   - '''integrative medicine'''
   - '''medical tourism'''
 author: ShanghaiMed Team
-date: '2026-06-12T05:13:48.819Z'
+date: '2026-06-23T08:00:00.000Z'
 featuredImage: /images/tcm-shanghai.jpg
 seoTitle: Traditional Chinese Medicine in Shanghai | Guide for International Patients
 metaDescription: >-

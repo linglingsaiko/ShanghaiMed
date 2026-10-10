@@ -123,6 +123,40 @@ export default function FounderPage() {
               </div>
             ))}
           </div>
+
+          {/* Certificate Images */}
+          <div className="mt-8 pt-6 border-t">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">Verified Credentials</h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="border rounded-lg overflow-hidden bg-gray-50">
+                <Image
+                  src="/images/certificate-nurse-redacted.jpg"
+                  alt="Nurse Practicing Certificate - Redacted"
+                  width={400}
+                  height={800}
+                  className="w-full h-auto object-contain"
+                />
+                <p className="text-xs text-gray-500 text-center py-2 bg-white">
+                  Registered Nurse Certificate — Shanghai Municipal Health Commission
+                </p>
+              </div>
+              <div className="border rounded-lg overflow-hidden bg-gray-50">
+                <Image
+                  src="/images/certificate-ispn-redacted.jpg"
+                  alt="ISPN Certificate of Achievement - Redacted"
+                  width={400}
+                  height={500}
+                  className="w-full h-auto object-contain"
+                />
+                <p className="text-xs text-gray-500 text-center py-2 bg-white">
+                  ISPN Certificate — CGFNS International (2017)
+                </p>
+              </div>
+            </div>
+            <p className="text-xs text-gray-400 mt-3 text-center">
+              Sensitive information (certificate numbers, QR codes, personal IDs) has been redacted for privacy.
+            </p>
+          </div>
         </section>
 
         {/* Experience */}

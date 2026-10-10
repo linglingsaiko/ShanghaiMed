@@ -120,7 +120,7 @@ const enFaqs: FaqItem[] = [
         </div>
         <p>
           Plus 5 private international hospitals: Jiahui International (Mass General affiliation), United Family,
-          ParkwayHealth, SinoUnited Health (Mayo Clinic Network), and Raffles Hospital.
+          ParkwayHealth, SinoUnited Health (Mayo Clinic collaboration and second opinion services), and Raffles Hospital.
         </p>
       </>
     ),

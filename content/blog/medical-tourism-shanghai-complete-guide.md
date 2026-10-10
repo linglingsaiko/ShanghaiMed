@@ -24,7 +24,6 @@ keywords:
 canonicalUrl: 'https://shanghaimedhealth.com/blog/medical-tourism-shanghai-complete-guide'
 ---
 
-# A Complete Guide for International Patients
 
 ## Key Stats at a Glance
 

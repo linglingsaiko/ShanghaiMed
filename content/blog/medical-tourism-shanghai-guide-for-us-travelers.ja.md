@@ -24,7 +24,6 @@ keywords:
 canonicalUrl: 'https://shanghaimedhealth.com/blog/medical-tourism-shanghai-guide-for-us-travelers'
 ---
 
-# 上海の医療ツーリズム：米国から渡航される方のためのガイド
 
 ## 主要データ 早見表
 

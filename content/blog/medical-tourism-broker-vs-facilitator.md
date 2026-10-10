@@ -24,7 +24,6 @@ keywords:
 canonicalUrl: 'https://shanghaimedhealth.com/blog/medical-tourism-broker-vs-facilitator'
 ---
 
-# Medical Tourism Broker vs. Facilitator: What's the Difference and Why It Matters
 
 Two patients landed at Shanghai Pudong International Airport within a week of each other last year. Both needed the same orthopedic procedure. Both had found a company online that promised to "handle everything" for their medical trip to China.
 

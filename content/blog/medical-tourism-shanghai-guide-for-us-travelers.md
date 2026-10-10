@@ -24,7 +24,6 @@ keywords:
 canonicalUrl: 'https://shanghaimedhealth.com/blog/medical-tourism-shanghai-guide-for-us-travelers'
 ---
 
-# Medical Tourism in Shanghai: A Guide for US Travelers
 
 ## Key Stats at a Glance
 

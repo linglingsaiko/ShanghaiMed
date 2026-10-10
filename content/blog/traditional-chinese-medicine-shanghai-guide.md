@@ -24,7 +24,6 @@ keywords:
 canonicalUrl: 'https://shanghaimedhealth.com/blog/traditional-chinese-medicine-shanghai-guide'
 ---
 
-# Traditional Chinese Medicine in Shanghai: A Guide for International Patients
 
 ## Key Stats at a Glance
 

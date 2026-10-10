@@ -24,7 +24,6 @@ keywords:
 canonicalUrl: 'https://shanghaimedhealth.com/blog/traditional-chinese-medicine-shanghai-guide'
 ---
 
-# 上海の伝統中国医学：外国人患者のためのガイド
 
 ## 主要データ 早見表
 

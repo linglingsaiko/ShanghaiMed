@@ -9,7 +9,7 @@ tags:
   - US travelers healthcare
   - medical travel savings
   - ShanghaiMed
-author: ShanghaiMed Team
+author: Sara Ma, Founder
 date: '2026-07-07T08:00:00.000Z'
 featured: true
 featuredImage: /images/us-travelers-guide.jpg

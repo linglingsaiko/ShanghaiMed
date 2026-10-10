@@ -9,7 +9,7 @@ tags:
   - healthcare in China
   - medical travel
   - international patients
-author: ShanghaiMed Team
+author: Sara Ma, Founder
 date: '2026-06-30T08:00:00.000Z'
 featured: true
 featuredImage: /images/hero_b1_no_text_frameless.jpg

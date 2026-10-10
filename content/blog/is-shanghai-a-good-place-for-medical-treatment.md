@@ -12,7 +12,7 @@ tags:
   - 'medical tourism China'
   - 'Shanghai hospitals'
   - 'healthcare guide'
-author: ShanghaiMed Team
+author: Sara Ma, Founder
 date: '2026-06-09T08:00:00.000Z'
 featured: true
 featuredImage: /images/shanghai-medical-guide.jpg

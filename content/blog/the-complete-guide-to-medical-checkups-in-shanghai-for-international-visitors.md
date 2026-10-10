@@ -9,7 +9,7 @@ tags:
   - >-
     'health checkup Shanghai' 'executive checkup' 'medical screening'
     'preventive care' 'international patient'
-author: ShanghaiMed Team
+author: Sara Ma, Founder
 date: '2026-06-16T08:00:00.000Z'
 featuredImage: /images/health-checkup.jpg
 seoTitle: 'Medical Checkup in Shanghai: Complete Guide for International Visitors'

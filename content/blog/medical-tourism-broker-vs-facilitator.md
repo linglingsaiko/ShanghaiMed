@@ -9,7 +9,7 @@ tags:
   - 'medical tourism agency'
   - 'medical travel China'
   - 'choose medical tourism partner'
-author: ShanghaiMed Team
+author: Sara Ma, Founder
 date: '2026-07-28T08:00:00.000Z'
 featured: false
 featuredImage: /images/broker-vs-facilitator.jpg

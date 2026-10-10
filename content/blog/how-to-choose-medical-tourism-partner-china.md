@@ -9,7 +9,7 @@ tags:
   - 'choose medical tourism partner'
   - 'Shanghai medical concierge'
   - 'medical travel guide'
-author: ShanghaiMed Team
+author: Sara Ma, Founder
 date: '2026-07-21T08:00:00.000Z'
 featured: true
 featuredImage: /images/how-to-choose-medical-tourism-partner.jpg

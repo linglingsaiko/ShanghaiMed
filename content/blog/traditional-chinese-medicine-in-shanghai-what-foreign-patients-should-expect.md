@@ -11,7 +11,7 @@ tags:
   - '''Chinese herbal medicine'''
   - '''integrative medicine'''
   - '''medical tourism'''
-author: ShanghaiMed Team
+author: Sara Ma, Founder
 date: '2026-06-23T08:00:00.000Z'
 featuredImage: /images/tcm-shanghai.jpg
 seoTitle: Traditional Chinese Medicine in Shanghai | Guide for International Patients

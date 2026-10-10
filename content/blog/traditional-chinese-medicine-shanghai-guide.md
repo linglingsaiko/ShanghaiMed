@@ -9,7 +9,7 @@ tags:
   - herbal medicine
   - TCM guide
   - Longhua Hospital
-author: ShanghaiMed Team
+author: Sara Ma, Founder
 date: '2026-07-14T08:00:00.000Z'
 featured: false
 featuredImage: /images/龙华.jpg

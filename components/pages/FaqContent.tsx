@@ -61,11 +61,11 @@ const enFaqs: FaqItem[] = [
       <>
         <p className="mb-4"><strong>Yes.</strong> Shanghai's top hospitals meet international safety standards:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
-          <li><strong>Huashan Hospital</strong> (Fudan University) — JCI accredited, 24 international insurance partners, treats 5+ million outpatients annually</li>
-          <li><strong>Ruijin Hospital</strong> (SJTU) — JCI accredited, 95.7% CAR-T therapy remission rate, EMR Level 7</li>
-          <li><strong>Zhongshan Hospital</strong> (Fudan University) — JCI accredited, independent international patient building</li>
-          <li><strong>Shanghai Ninth People's Hospital</strong> (SJTU) — #1 in China for dental and plastic surgery, treated patients from 40+ countries</li>
-          <li><strong>Longhua Hospital</strong> (Shanghai University of TCM) — JCI accredited, national TCM flagship</li>
+          <li><strong>Huashan Hospital</strong> (Fudan University) — Grade 3A (China&apos;s highest hospital rating), 24 international insurance partners</li>
+          <li><strong>Ruijin Hospital</strong> (SJTU) — Grade 3A, national leader in hematology and CAR-T cell therapy, National EMR Level 7</li>
+          <li><strong>Zhongshan Hospital</strong> (Fudan University) — Grade 3A, independent international patient building</li>
+          <li><strong>Shanghai Ninth People&apos;s Hospital</strong> (SJTU) — Grade 3A, national center for dental, oral, and plastic surgery</li>
+          <li><strong>Longhua Hospital</strong> (Shanghai University of TCM) — Grade 3A, official TCM medical tourism pilot hospital</li>
         </ul>
         <p>
           These hospitals use the <strong>same medical equipment</strong> (Siemens, GE Healthcare, Philips) and{' '}
@@ -344,11 +344,11 @@ const jaFaqs: FaqItem[] = [
       <>
         <p className="mb-4"><strong>はい。</strong>上海の一流病院は国際的な安全基準を満たしています：</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
-          <li><strong>Huashan Hospital</strong>（復旦大学）— JCI認証取得、24の国際保険会社と提携、年間500万人以上の外来患者を受け入れ</li>
-          <li><strong>Ruijin Hospital</strong>（上海交通大学）— JCI認証取得、CAR-T療法の寛解率95.7%、電子カルテレベル7</li>
-          <li><strong>Zhongshan Hospital</strong>（復旦大学）— JCI認証取得、独立した国際患者専用棟を完備</li>
-          <li><strong>Shanghai Ninth People's Hospital</strong>（上海交通大学）— 歯科・形成外科で中国第1位、40か国以上の患者を治療</li>
-          <li><strong>Longhua Hospital</strong>（上海中医薬大学）— JCI認証取得、国家中医薬フラッグシップ病院</li>
+          <li><strong>Huashan Hospital</strong>（復旦大学）— 三級甲等（中国最高の病院評価）、24の国際保険会社と提携</li>
+          <li><strong>Ruijin Hospital</strong>（上海交通大学）— 三級甲等、血液内科・CAR-T細胞療法の全国的リーダー、電子カルテレベル7</li>
+          <li><strong>Zhongshan Hospital</strong>（復旦大学）— 三級甲等、独立した国際患者専用棟を完備</li>
+          <li><strong>Shanghai Ninth People&apos;s Hospital</strong>（上海交通大学）— 三級甲等、歯科・口腔外科・形成外科の国家センター</li>
+          <li><strong>Longhua Hospital</strong>（上海中医薬大学）— 三級甲等、中医薬医療ツーリズム公式パイロット病院</li>
         </ul>
         <p>
           これらの病院は米国の病院と<strong>同じ医療機器</strong>（Siemens、GE Healthcare、Philips）や{' '}

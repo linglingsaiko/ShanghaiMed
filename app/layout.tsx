@@ -190,7 +190,7 @@ export default function RootLayout({
                       name: 'Is it safe to get medical treatment in China?',
                       acceptedAnswer: {
                         '@type': 'Answer',
-                        text: 'Yes. All ShanghaiMed partner hospitals are public Grade-A tertiary hospitals (China\'s highest rating) with JCI, DNV GL, or equivalent international certifications. Many have partnerships with Mayo Clinic, Massachusetts General Hospital, and Project HOPE. Shanghai handles 73,000+ international patient visits annually from 90+ countries with 25% year-over-year growth.',
+                        text: 'Yes. All ShanghaiMed partner hospitals are Grade 3A tertiary hospitals — China\'s highest official hospital rating — or accredited international private hospitals. Partner institutions include Huashan Hospital (Fudan University), Ruijin Hospital (SJTU), and Zhongshan Hospital (Fudan University), many with dedicated international patient centers and direct billing arrangements with major global insurers.',
                       },
                     },
                     {

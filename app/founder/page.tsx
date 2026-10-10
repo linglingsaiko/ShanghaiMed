@@ -129,7 +129,7 @@ export default function FounderPage() {
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Verified Credentials</h3>
             <div className="grid md:grid-cols-2 gap-4">
               <a
-                href="/images/certificate-nurse-redacted.jpg"
+                href="/images/certificate-nurse-redacted.png"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 p-4 border rounded-lg hover:border-teal-300 hover:bg-teal-50/30 transition-colors group"

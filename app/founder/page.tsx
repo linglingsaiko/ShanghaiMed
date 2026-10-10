@@ -1,0 +1,181 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'About the Founder — Sara Ma | ShanghaiMed',
+  description: 'Sara Ma, Founder & Medical Director of ShanghaiMed. ISPN-certified registered nurse, senior nurse practitioner, and 10+ years of premium healthcare experience in Shanghai.',
+  alternates: { canonical: 'https://shanghaimedhealth.com/founder' },
+}
+
+const credentials = [
+  {
+    title: 'ISPN — International Standards for Professional Nurses',
+    detail: 'International certification for registered nurses, issued by the International Society of Nurses in Cancer Care and affiliated bodies',
+    category: 'Nursing License',
+  },
+  {
+    title: 'Senior Nurse Practitioner (主管护师)',
+    detail: 'Advanced practice nursing qualification within China\u2019s national health professional title system',
+    category: 'Professional Title',
+  },
+  {
+    title: 'JLPT N1 — Japanese-Language Proficiency Test, Level N1',
+    detail: 'Highest level of Japanese language certification, issued by the Japan Foundation and Japan Educational Exchanges and Services',
+    category: 'Language Certification',
+  },
+  {
+    title: 'Registered Nurse (RN), China',
+    detail: 'Licensed by the Shanghai Municipal Health Commission',
+    category: 'Nursing License',
+  },
+]
+
+const experience = [
+  {
+    area: 'International Patient Coordination',
+    detail: 'Coordinated end-to-end medical journeys for patients from the Middle East, Southeast Asia, Europe, and North America — from initial consultation through discharge and post-operative follow-up.',
+  },
+  {
+    area: 'Hospital Navigation & Bilingual Support',
+    detail: 'Guided international patients through Shanghai\u2019s public hospital system, including Grade 3A (三甲) international departments, with real-time medical interpretation in English, Japanese, and Mandarin.',
+  },
+  {
+    area: 'Premium Health Screening',
+    detail: 'Designed and managed executive health screening programmes at top-tier Shanghai hospitals, coordinating same-day results and specialist follow-ups.',
+  },
+  {
+    area: 'Medical Tourism Operations',
+    detail: 'Built operational workflows covering visa guidance, insurance direct billing (Cigna, Allianz, AXA, Bupa), accommodation coordination, and 24/7 patient support.',
+  },
+]
+
+export default function FounderPage() {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {/* Hero */}
+      <div className="bg-white border-b">
+        <div className="max-w-4xl mx-auto px-4 py-16">
+          <p className="text-sm text-teal-600 font-medium mb-2">Founder &amp; Medical Director</p>
+          <h1 className="text-4xl font-bold text-gray-900 mb-2">Sara Ma</h1>
+          <p className="text-lg text-gray-500">马玲玲</p>
+          <p className="text-lg text-gray-600 mt-4 max-w-2xl">
+            ISPN-certified registered nurse, senior nurse practitioner, and founder of ShanghaiMed.
+            Over a decade of hands-on experience guiding international patients through Shanghai&apos;s
+            healthcare system — from routine health screenings to complex surgical coordination.
+          </p>
+        </div>
+      </div>
+
+      <div className="max-w-4xl mx-auto px-4 py-12 space-y-12">
+        {/* Why I founded ShanghaiMed */}
+        <section className="bg-white rounded-lg border p-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Why I Founded ShanghaiMed</h2>
+          <div className="prose prose-gray max-w-none">
+            <p>
+              I spent over ten years working inside Shanghai&apos;s premium healthcare system — coordinating
+              care for international patients, navigating hospital bureaucracy on their behalf, and watching
+              the same preventable problems repeat: patients arriving without translated records, being
+              routed to the wrong department, overpaying for services they didn&apos;t need, or leaving
+              without understanding their own discharge instructions.
+            </p>
+            <p>
+              The hospitals were excellent. The gap was never medical quality — it was the absence of
+              someone who understood both the clinical side and the patient&apos;s side, and who could
+              bridge them in the patient&apos;s own language.
+            </p>
+            <p>
+              ShanghaiMed exists to close that gap. We charge a transparent service fee, take zero
+              commission from hospitals, and treat every patient the way I would treat a family member
+              navigating an unfamiliar system in a foreign country.
+            </p>
+          </div>
+        </section>
+
+        {/* Professional Credentials */}
+        <section className="bg-white rounded-lg border p-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Professional Credentials</h2>
+          <div className="space-y-4">
+            {credentials.map((cred) => (
+              <div key={cred.title} className="flex items-start gap-4">
+                <div className="flex-shrink-0 mt-1">
+                  <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-teal-50 text-teal-700 border border-teal-200">
+                    {cred.category}
+                  </span>
+                </div>
+                <div>
+                  <h3 className="text-sm font-semibold text-gray-900">{cred.title}</h3>
+                  <p className="text-sm text-gray-600 mt-1">{cred.detail}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Experience */}
+        <section className="bg-white rounded-lg border p-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Areas of Experience</h2>
+          <div className="space-y-6">
+            {experience.map((exp) => (
+              <div key={exp.area}>
+                <h3 className="text-sm font-semibold text-gray-900 mb-1">{exp.area}</h3>
+                <p className="text-sm text-gray-600">{exp.detail}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Company */}
+        <section className="bg-white rounded-lg border p-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">About the Company</h2>
+          <div className="prose prose-gray max-w-none">
+            <p>
+              ShanghaiMed is operated by <strong>上海可玲信息科技术有限公司</strong> (Shanghai Keling
+              Information Technology Co., Ltd.), a company registered in Shanghai, China.
+            </p>
+            <p>
+              We are a full-service medical tourism facilitator — not a broker. We charge patients a
+              transparent concierge service fee and take zero commission from hospitals. Medical bills
+              are paid directly to the hospital at the hospital&apos;s own published rates.
+            </p>
+          </div>
+          <div className="mt-6 pt-6 border-t grid md:grid-cols-2 gap-4 text-sm text-gray-600">
+            <div>
+              <dt className="font-medium text-gray-900">Company</dt>
+              <dd>上海可玲信息科技术有限公司</dd>
+              <dd>Shanghai Keling Information Technology Co., Ltd.</dd>
+            </div>
+            <div>
+              <dt className="font-medium text-gray-900">Location</dt>
+              <dd>Shanghai, China</dd>
+            </div>
+            <div>
+              <dt className="font-medium text-gray-900">Languages</dt>
+              <dd>English, 中文, 日本語</dd>
+            </div>
+            <div>
+              <dt className="font-medium text-gray-900">Contact</dt>
+              <dd>
+                <a href="mailto:hello@shanghaimedhealth.com" className="text-teal-600 hover:underline">
+                  hello@shanghaimedhealth.com
+                </a>
+              </dd>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="bg-teal-50 rounded-lg border border-teal-200 p-8 text-center">
+          <h2 className="text-xl font-bold text-gray-900 mb-2">Have a question?</h2>
+          <p className="text-gray-600 mb-4">
+            I read every message personally. No sales team, no scripts.
+          </p>
+          <a
+            href="mailto:hello@shanghaimedhealth.com"
+            className="inline-flex items-center px-6 py-3 bg-teal-600 text-white font-medium rounded-lg hover:bg-teal-700 transition-colors"
+          >
+            Get in Touch
+          </a>
+        </section>
+      </div>
+    </div>
+  )
+}

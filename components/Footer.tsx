@@ -8,8 +8,8 @@ import { useLanguage } from '@/contexts/LanguageContext'
 // 页脚链接结构（href 保持不变，文案通过翻译表渲染）
 const footerLinkStructure = [
   {
-    keys: ['about', 'whyShanghai', 'ourNetwork', 'careTeam'],
-    hrefs: ['#', '/#why-shanghai', '/#treatments', '/#care-team'],
+    keys: ['about', 'ourFounder', 'whyShanghai', 'ourNetwork', 'careTeam'],
+    hrefs: ['#', '/founder', '/#why-shanghai', '/#treatments', '/#care-team'],
   },
   {
     keys: ['hospitals', 'specialties', 'pricingGuide'],
@@ -27,7 +27,7 @@ const footerLinkStructure = [
 
 // 每列英文默认文案（与原版一致，翻译表缺失时回退）
 const footerFallback = [
-  ['About Us', 'Why Shanghai', 'Our Network', 'Care Team'],
+  ['About Us', 'Our Founder', 'Why Shanghai', 'Our Network', 'Care Team'],
   ['Hospitals', 'Specialties', 'Pricing Guide'],
   ['How It Works', 'FAQ', 'Research Library', 'Contact Us', 'WhatsApp Support'],
   ['Privacy Policy', 'Terms of Service', 'Editorial Policy', 'Medical Disclaimer'],

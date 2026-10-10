@@ -149,9 +149,14 @@ const Footer: React.FC = () => {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-gray-400">
-              © {currentYear} ShanghaiMed. {t('footer.rights')}
-            </p>
+            <div>
+              <p className="text-sm text-gray-400">
+                © {currentYear} ShanghaiMed. {t('footer.rights')}
+              </p>
+              <p className="text-xs text-gray-500 mt-1">
+                Operated by Shanghai Keling Information Technology Co., Ltd.
+              </p>
+            </div>
             <div className="flex items-center gap-6 text-sm text-gray-400">
               <span className="flex items-center gap-2">
                 <MapPin className="w-4 h-4" />

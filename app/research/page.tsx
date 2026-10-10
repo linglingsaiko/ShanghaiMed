@@ -129,8 +129,8 @@ const studies = [
     focus: 'Cost differentials',
     finding: 'CAR-T cell therapy: $40,000\u2013$80,000 in China vs $400,000+ in the US (80\u201390% savings). Proton therapy: $30,000\u2013$55,000 vs $100,000\u2013$200,000 (70\u201380% savings). Knee replacement: $8,000\u2013$15,000 vs $30,000\u2013$70,000 (70\u201385% savings).',
     limitation: 'Estimated ranges; actual costs vary by case complexity, hospital tier, and insurance coverage.',
-    source: 'Medora China / Hospital published pricing',
-    url: 'https://www.medorachina.com/medical-tourism-statistics',
+    source: 'Hospital published pricing data',
+    url: null,
     pmid: null,
   },
   {

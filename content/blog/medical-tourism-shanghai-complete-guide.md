@@ -1,5 +1,5 @@
 ---
-title: 'Medical Tourism in Shanghai: A Complete Guide for International Patients'
+title: 'A Complete Guide for International Patients'
 slug: medical-tourism-shanghai-complete-guide
 excerpt: 'Shanghai medical tourism costs 50-80% less than the US. Complete guide to 14 Grade-A hospitals, procedures, pricing, and bilingual support for international patients.'
 category: medical-tourism
@@ -13,7 +13,7 @@ author: ShanghaiMed Team
 date: '2026-07-29T08:00:00.000Z'
 featured: true
 featuredImage: /images/hero_b1_no_text_frameless.jpg
-seoTitle: 'Medical Tourism in Shanghai: Complete Guide for International Patients (2026)'
+seoTitle: 'A Complete Guide for International Patients (2026)'
 metaDescription: 'Shanghai medical tourism costs 50-80% less than the US. Complete guide to 14 Grade-A hospitals, procedures, pricing, and bilingual support for international patients.'
 keywords:
   - medical tourism Shanghai
@@ -24,7 +24,7 @@ keywords:
 canonicalUrl: 'https://shanghaimedhealth.com/blog/medical-tourism-shanghai-complete-guide'
 ---
 
-# Medical Tourism in Shanghai: A Complete Guide for International Patients
+# A Complete Guide for International Patients
 
 ## Key Stats at a Glance
 

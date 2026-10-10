@@ -24,9 +24,9 @@ export default function AuthorBio({ author }: AuthorBioProps) {
             <h3 className="text-lg font-bold text-gray-900">Sara Ma</h3>
             <p className="text-sm text-teal-600 font-medium mb-3">Founder &amp; Medical Director</p>
             <p className="text-sm text-gray-600 leading-relaxed">
-              ISPN-certified registered nurse with 10+ years of experience guiding international patients
-              through Shanghai&apos;s healthcare system. Founded ShanghaiMed to bridge the gap between
-              world-class medical care and the patients who need it most.
+              ISPN-certified registered nurse with 10+ years of experience in premium healthcare operations
+              and guiding international patients through Shanghai&apos;s healthcare system. Founded ShanghaiMed
+              to bridge the gap between world-class medical care and the patients who need it most.
             </p>
             <Link
               href="/founder"

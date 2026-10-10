@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'About the Founder — Sara Ma | ShanghaiMed',
-  description: 'Sara Ma, Founder & Medical Director of ShanghaiMed. ISPN-certified registered nurse, senior nurse practitioner, and 10+ years of premium healthcare experience in Shanghai.',
+  description: 'Sara Ma, Founder & Medical Director of ShanghaiMed. ISPN-certified registered nurse, senior registered nurse, and 10+ years of premium healthcare operations experience in Shanghai.',
   alternates: { canonical: 'https://shanghaimedhealth.com/founder' },
 }
 
@@ -14,8 +14,8 @@ const credentials = [
     category: 'Nursing License',
   },
   {
-    title: 'Senior Nurse Practitioner (主管护师)',
-    detail: 'Advanced practice nursing qualification within China\u2019s national health professional title system',
+    title: 'Senior Registered Nurse (主管护师)',
+    detail: 'Senior-level professional title within China\u2019s national health professional ranking system, awarded by the Shanghai Municipal Health Commission',
     category: 'Professional Title',
   },
   {
@@ -33,19 +33,19 @@ const credentials = [
 const experience = [
   {
     area: 'International Patient Coordination',
-    detail: 'Coordinated end-to-end medical journeys for patients from the Middle East, Southeast Asia, Europe, and North America — from initial consultation through discharge and post-operative follow-up.',
+    detail: 'Coordinated end-to-end medical journeys for patients from the Middle East, Southeast Asia, Europe, North America, and other regions — from initial consultation through discharge and post-operative follow-up.',
   },
   {
-    area: 'Hospital Navigation & Bilingual Support',
-    detail: 'Guided international patients through Shanghai\u2019s public hospital system, including Grade 3A (三甲) international departments, with real-time medical interpretation in English, Japanese, and Mandarin.',
+    area: 'Hospital Navigation & Medical Translation',
+    detail: 'Provided real-time medical interpretation in English, Japanese, and Mandarin for international patients at Shanghai Grade 3A (三甲) hospitals. Additional languages supported through vetted professional translators.',
   },
   {
-    area: 'Premium Health Screening',
-    detail: 'Designed and managed executive health screening programmes at top-tier Shanghai hospitals, coordinating same-day results and specialist follow-ups.',
+    area: 'Premium Healthcare Operations',
+    detail: 'Over 10 years of operational management at Shanghai\'s leading private medical institutions — designing care workflows, optimizing patient experience, and coordinating cross-departmental medical programmes.',
   },
   {
     area: 'Medical Tourism Operations',
-    detail: 'Built operational workflows covering visa guidance, insurance direct billing (Cigna, Allianz, AXA, Bupa), accommodation coordination, and 24/7 patient support.',
+    detail: 'Built operational workflows covering visa guidance, insurance direct billing (Cigna, Allianz, AXA, Bupa), accommodation coordination, and AI-powered 24/7 patient support via Navi, our medical navigator.',
   },
 ]
 
@@ -71,9 +71,9 @@ export default function FounderPage() {
               <h1 className="text-4xl font-bold text-gray-900 mb-2">Sara Ma</h1>
               <p className="text-lg text-gray-500">马玲玲</p>
               <p className="text-lg text-gray-600 mt-4 max-w-2xl">
-                ISPN-certified registered nurse, senior nurse practitioner, and founder of ShanghaiMed.
-                Over a decade of hands-on experience guiding international patients through Shanghai&apos;s
-                healthcare system — from routine health screenings to complex surgical coordination.
+                ISPN-certified registered nurse, senior registered nurse (主管护师), and founder of ShanghaiMed.
+                Over a decade of hands-on experience in premium healthcare operations and guiding international
+                patients through Shanghai&apos;s healthcare system — from routine consultations to complex surgical coordination.
               </p>
             </div>
           </div>
@@ -162,14 +162,6 @@ export default function FounderPage() {
               <dt className="font-medium text-gray-900">Registered Address</dt>
               <dd>Room 101, Floor 1, No. 2555 Changyang Road</dd>
               <dd>Yangpu District, Shanghai, China</dd>
-            </div>
-            <div>
-              <dt className="font-medium text-gray-900">Registration Date</dt>
-              <dd>May 19, 2026</dd>
-            </div>
-            <div>
-              <dt className="font-medium text-gray-900">Registered Capital</dt>
-              <dd>RMB 100,000</dd>
             </div>
             <div>
               <dt className="font-medium text-gray-900">Legal Representative</dt>

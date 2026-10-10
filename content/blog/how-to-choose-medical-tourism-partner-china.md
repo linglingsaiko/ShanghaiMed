@@ -1,32 +1,26 @@
 ---
-title: How to Choose a Medical Tourism Partner for China: 6 Questions to Ask Before You Commit
+title: "How to Choose a Medical Tourism Partner for China: 6 Questions to Ask Before You Commit"
 slug: how-to-choose-medical-tourism-partner-china
-excerpt: >-
-  Not all medical tourism agencies are equal. Ask these six questions before
-  you pay anyone — and find a partner who reviews your records, plans your
-  whole stay, and shows up when it matters.
+excerpt: "Not all medical tourism agencies are equal. Ask these six questions before you pay anyone — and find a partner who reviews your records, plans your whole stay, and shows up when it matters."
 category: medical-tourism
 tags:
-  - '''medical tourism China'''
-  - '''medical tourism agency'''
-  - '''choose medical tourism partner'''
-  - '''Shanghai medical concierge'''
-  - '''medical travel guide'''
+  - 'medical tourism China'
+  - 'medical tourism agency'
+  - 'choose medical tourism partner'
+  - 'Shanghai medical concierge'
+  - 'medical travel guide'
 author: ShanghaiMed Team
 date: '2026-10-09T08:00:00.000Z'
 featured: true
-featuredImage: /images/首屏.png
-seoTitle: How to Choose a Medical Tourism Partner for China | ShanghaiMed
-metaDescription: >-
-  Six questions to ask before choosing a medical tourism agency for China:
-  medical record review, full-day support, family costs, housing, transparent
-  pricing, and local presence.
+featuredImage: /images/how-to-choose-medical-tourism-partner.jpg
+seoTitle: "How to Choose a Medical Tourism Partner for China | ShanghaiMed"
+metaDescription: "Six questions to ask before choosing a medical tourism agency for China: medical record review, full-day support, family costs, housing, transparent pricing, and local presence."
 keywords:
-  - '''medical tourism China agency'''
-  - '''choose medical tourism partner'''
-  - '''medical concierge Shanghai'''
-  - '''China medical travel agency'''
-  - '''medical tourism guide'''
+  - 'medical tourism China agency'
+  - 'choose medical tourism partner'
+  - 'medical concierge Shanghai'
+  - 'China medical travel agency'
+  - 'medical tourism guide'
 canonicalUrl: 'https://shanghaimedhealth.com/blog/how-to-choose-medical-tourism-partner-china'
 ---
 If you're reading this, you've probably already decided that China is worth considering for your treatment — the prices make sense, and you've seen that top hospitals here are genuinely excellent. The next question is harder: who should help you make it happen?

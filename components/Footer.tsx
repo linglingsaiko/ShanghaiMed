@@ -16,12 +16,12 @@ const footerLinkStructure = [
     hrefs: ['/#treatments', '/#treatments', '/#pricing'],
   },
   {
-    keys: ['howItWorks', 'faq', 'contactUs', 'whatsappSupport'],
-    hrefs: ['/#how-it-works', '/#faq', '/#contact', 'https://wa.me/8613818274110'],
+    keys: ['howItWorks', 'faq', 'researchLibrary', 'contactUs', 'whatsappSupport'],
+    hrefs: ['/#how-it-works', '/#faq', '/research', '/#contact', 'https://wa.me/8613818274110'],
   },
   {
-    keys: ['privacyPolicy', 'termsOfService', 'cookiePolicy', 'medicalDisclaimer'],
-    hrefs: ['#', '#', '#', '#'],
+    keys: ['privacyPolicy', 'termsOfService', 'editorialPolicy', 'medicalDisclaimer'],
+    hrefs: ['#', '#', '/editorial-policy', '#'],
   },
 ]
 
@@ -29,8 +29,8 @@ const footerLinkStructure = [
 const footerFallback = [
   ['About Us', 'Why Shanghai', 'Our Network', 'Care Team'],
   ['Hospitals', 'Specialties', 'Pricing Guide'],
-  ['How It Works', 'FAQ', 'Contact Us', 'WhatsApp Support'],
-  ['Privacy Policy', 'Terms of Service', 'Cookie Policy', 'Medical Disclaimer'],
+  ['How It Works', 'FAQ', 'Research Library', 'Contact Us', 'WhatsApp Support'],
+  ['Privacy Policy', 'Terms of Service', 'Editorial Policy', 'Medical Disclaimer'],
 ]
 
 const fallbackTitles = ['About', 'Treatments', 'Support', 'Legal']

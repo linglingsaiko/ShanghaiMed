@@ -33,14 +33,13 @@ export default function BlogDetail({ post }: BlogDetailProps) {
   }, [post, language])
   
   useEffect(() => {
-    const headingRegex = /<h([2-3])[^>]*>(.*?)<\/h[2-3]>/gi
+    const headingRegex = /<h([23])\s+id="(section-\d+)"[^>]*>([\s\S]*?)<\/h[23]>/gi
     const foundHeadings: { id: string; text: string; level: number }[] = []
     let match
     while ((match = headingRegex.exec(post.htmlContent || '')) !== null) {
       const level = parseInt(match[1])
-      const text = match[2].replace(/<[^>]*>/g, '').trim()
-      const id = text.toLowerCase().replace(/[^a-z0-9]+/g, '-')
-      foundHeadings.push({ id, text, level })
+      const text = match[3].replace(/<[^>]*>/g, '').trim()
+      foundHeadings.push({ id: match[2], text, level })
     }
     setHeadings(foundHeadings)
   }, [post.htmlContent])
@@ -197,12 +196,22 @@ export default function BlogDetail({ post }: BlogDetailProps) {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-base font-semibold text-gray-900 mb-1">Explore the Evidence</h3>
+                    <h3 className="text-base font-semibold text-gray-900 mb-1">
+                      {language === 'ja' ? 'エビデンスを見る' : 'Explore the Evidence'}
+                    </h3>
                     <p className="text-sm text-gray-700 mb-3">
-                      Our <Link href="/research" className="text-teal-700 font-medium hover:underline">Research Library</Link> collects {studiesCount} peer-reviewed studies on medical travel to China — covering patient experience, quality &amp; safety, cost comparisons, and more. Every entry includes study type, sample size, key findings, and stated limitations.
+                      {language === 'ja' ? (
+                        <>
+                          当社の<Link href="/research" className="text-teal-700 font-medium hover:underline">リサーチライブラリ</Link>には、中国への医療渡航に関する査読付き研究{studiesCount}本を収録しています——患者体験、品質と安全、費用比較などを網羅。各研究には研究デザイン、サンプルサイズ、主な知見、明記された限界が含まれています。
+                        </>
+                      ) : (
+                        <>
+                          Our <Link href="/research" className="text-teal-700 font-medium hover:underline">Research Library</Link> collects {studiesCount} peer-reviewed studies on medical travel to China — covering patient experience, quality &amp; safety, cost comparisons, and more. Every entry includes study type, sample size, key findings, and stated limitations.
+                        </>
+                      )}
                     </p>
                     <Link href="/research" className="inline-flex items-center text-sm font-medium text-teal-700 hover:text-teal-900 transition-colors">
-                      Browse {studiesCount} studies
+                      {language === 'ja' ? `${studiesCount}本の研究を見る` : `Browse ${studiesCount} studies`}
                       <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>

@@ -123,6 +123,13 @@ function renderMarkdownToHtml(content: string): string {
   html = html.replace(/^###\s+(.+)$/gm, '<h3>$1</h3>')
   html = html.replace(/^##\s+(.+)$/gm, '<h2>$1</h2>')
   html = html.replace(/^#\s+(.+)$/gm, '<h1>$1</h1>')
+
+  // 为 h2/h3 注入顺序化 id（日文标题无法可靠转写为 ASCII slug，用序号保证 TOC 可跳转）
+  let headingIndex = 0
+  html = html.replace(/<h([23])>([\s\S]*?)<\/h[23]>/g, (match, level, inner) => {
+    headingIndex += 1
+    return `<h${level} id="section-${headingIndex}">${inner}</h${level}>`
+  })
   
   // 引用块
   html = html.replace(/^>\s+(.+)$/gm, '<blockquote>$1</blockquote>')

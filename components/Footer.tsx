@@ -20,8 +20,8 @@ const footerLinkStructure = [
     hrefs: ['/#how-it-works', '/#faq', '/research', '/glossary', '/#contact', 'https://wa.me/8613818274110'],
   },
   {
-    keys: ['privacyPolicy', 'termsOfService', 'editorialPolicy', 'medicalDisclaimer'],
-    hrefs: ['#', '#', '/editorial-policy', '#'],
+    keys: ['privacyPolicy', 'termsOfService', 'refundPolicy', 'editorialPolicy', 'medicalDisclaimer'],
+    hrefs: ['/privacy-policy', '/terms-of-service', '/refund-policy', '/editorial-policy', '/medical-disclaimer'],
   },
 ]
 
@@ -30,7 +30,7 @@ const footerFallback = [
   ['About Us', 'Our Founder', 'Why Shanghai', 'Our Network', 'Care Team'],
   ['Hospitals', 'Specialties', 'Pricing Guide'],
   ['How It Works', 'FAQ', 'Research Library', 'Glossary', 'Contact Us', 'WhatsApp Support'],
-  ['Privacy Policy', 'Terms of Service', 'Editorial Policy', 'Medical Disclaimer'],
+  ['Privacy Policy', 'Terms of Service', 'Refund Policy', 'Editorial Policy', 'Medical Disclaimer'],
 ]
 
 const fallbackTitles = ['About', 'Treatments', 'Support', 'Legal']
@@ -158,6 +158,9 @@ const Footer: React.FC = () => {
               </p>
               <p className="text-xs text-gray-500 mt-1">
                 Room 101, Floor 1, No. 2555 Changyang Road, Yangpu District, Shanghai
+              </p>
+              <p className="text-xs text-gray-500 mt-1">
+                Email: <a href="mailto:hello@shanghaimedhealth.com" className="hover:text-white transition-colors">hello@shanghaimedhealth.com</a>
               </p>
             </div>
             <div className="flex items-center gap-6 text-sm text-gray-400">

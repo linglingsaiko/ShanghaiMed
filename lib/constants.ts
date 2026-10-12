@@ -281,7 +281,6 @@ export const navLinks = [
   { href: '#treatments', label: 'Hospital Network' },
   { href: '#care-team', label: 'Care Team' },
   { href: '#pricing', label: 'Pricing' },
-  { href: '/founder', label: 'About' },
   { href: '#insights', label: 'Blog' },
   { href: '#contact', label: 'Contact' },
 ]

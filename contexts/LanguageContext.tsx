@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react'
 
-type Language = 'en' | 'ja' | 'ar' | 'ru' | 'mn'
+type Language = 'en' | 'ja'
 
 interface LanguageContextType {
   language: Language
@@ -420,7 +420,7 @@ export const translations = {
         },
         {
           title: 'Legal',
-          links: ['Privacy Policy', 'Terms of Service', 'Editorial Policy', 'Medical Disclaimer'],
+          links: ['Privacy Policy', 'Terms of Service', 'Refund Policy', 'Editorial Policy', 'Medical Disclaimer'],
         },
       ],
       rights: 'All rights reserved.',
@@ -851,7 +851,7 @@ export const translations = {
         },
         {
           title: '法的事項',
-          links: ['プライバシーポリシー', '利用規約', '編集ポリシー', '医療免責事項'],
+          links: ['プライバシーポリシー', '利用規約', '返金ポリシー', '編集ポリシー', '医療免責事項'],
         },
       ],
       rights: 'All rights reserved.',
@@ -963,138 +963,6 @@ export const translations = {
       faqSubtitle: '上海での医療受け入れについて知っておくべきこと — 費用、病院の質、ビザ、保険、バイリンガルサポート。',
     },
   },
-  ar: {
-    nav: {
-      whyShanghai: 'لماذا شنغهاي',
-      howItWorks: 'كيف يعمل',
-      treatments: 'العلاج',
-      careTeam: 'فريق الرعاية',
-      trust: 'الثقة',
-      items: ['لماذا شنغهاي', 'كيف يعمل', 'شبكة المستشفيات', 'فريق الرعاية', 'الأسعار', 'من نحن', 'المدونة', 'اتصل بنا'],
-    },
-    hero: {
-      badge1: 'مستشفيات معتمدة للتأمين الدولي',
-      badge2: 'ممرضات مسجلات ثلاثيات اللغة',
-      badge3: 'دعم AI وبشري على مدار الساعة',
-      title: 'الرعاية الصحية في شنغهاي',
-      titleHighlight: 'مصممة حولك',
-      subtitle: 'تواصل مع أفضل المستشفيات في الصين وممرضات ثلاثيات اللغة ودعم الذكاء الاصطناعي على مدار الساعة — كل ذلك من خلال منصة واحدة.',
-      cta: 'ابدأ رحلتك الطبية',
-      testimonial: "I saved $45,000 on cardiac surgery vs. the US. Bilingual nurse support made it the best medical experience ever.",
-      testimonialAuthor: 'Michael T.',
-      testimonialRole: 'Cardiac Surgery, USA',
-    },
-    footer: {
-      tagline: 'نربط المرضى الدوليين بأفضل المؤسسات الطبية في شنغهاي والمتخصصين في الرعاية الصحية ثنائيي اللغة.',
-      columns: [
-        { title: 'من نحن', links: ['نبذة عنا', 'مؤسستنا', 'لماذا شنغهاي', 'شبكتنا', 'فريق الرعاية'] },
-        { title: 'العلاج', links: ['المستشفيات', 'التخصصات', 'دليل الأسعار'] },
-        { title: 'الدعم', links: ['كيف يعمل', 'الأسئلة الشائعة', 'مكتبة الأبحاث', 'قاموس المصطلحات', 'اتصل بنا', 'دعم واتساب'] },
-        { title: 'قانوني', links: ['سياسة الخصوصية', 'شروط الخدمة', 'سياسة التحرير', 'إخلاء مسؤولية طبية'] },
-      ],
-      rights: 'جميع الحقوق محفوظة.',
-      location: 'شنغهاي، الصين',
-    },
-    agentChat: {
-      welcome: 'مرحباً! أنا نافِي، مساعدك الطبي. اسألني عن المستشفيات أو العلاجات أو التكاليف أو التأشيرات أو التخطيط لرحلتك الطبية في شنغهاي.',
-      questions: [
-        'ماذا يشمل خدمتك المخصصة؟',
-        'كيف أحجز موعداً؟',
-        'ما تكلفة خدمتكم الفردية؟',
-      ],
-      inputPlaceholder: 'اسألني عن الرعاية الصحية في شنغهاي...',
-      chatTitle: 'نافِي · المساعد الطبي',
-      chatSubtitle: 'مساعد ذكاء اصطناعي على مدار الساعة',
-    },
-  },
-  ru: {
-    nav: {
-      whyShanghai: 'Почему Шанхай',
-      howItWorks: 'Как это работает',
-      treatments: 'Лечение',
-      careTeam: 'Команда care',
-      trust: 'Доверие',
-      items: ['Почему Шанхай', 'Как это работает', 'Сеть больниц', 'Команда care', 'Цены', 'О нас', 'Блог', 'Контакты'],
-    },
-    hero: {
-      badge1: 'Международные страховые больницы',
-      badge2: 'Трёхъязычные медсёстры',
-      badge3: 'Поддержка AI 24/7',
-      title: 'Здравоохранение в Шанхае',
-      titleHighlight: 'Создано для вас',
-      subtitle: 'Лучшие больницы Китая, трёхъязычные медсёстры и поддержка AI 24/7 — всё на одной платформе.',
-      cta: 'Начните медицинское путешествие',
-      testimonial: "I saved $45,000 on cardiac surgery vs. the US. Bilingual nurse support made it the best medical experience ever.",
-      testimonialAuthor: 'Michael T.',
-      testimonialRole: 'Cardiac Surgery, USA',
-    },
-    footer: {
-      tagline: 'Связываем международных пациентов с ведущими медицинскими учреждениями Шанхая и двуязычными специалистами.',
-      columns: [
-        { title: 'О нас', links: ['О компании', 'Основатель', 'Почему Шанхай', 'Наша сеть', 'Команда care'] },
-        { title: 'Лечение', links: ['Больницы', 'Специальности', 'Прайс-лист'] },
-        { title: 'Поддержка', links: ['Как это работает', 'FAQ', 'Библиотека исследований', 'Глоссарий', 'Контакты', 'Поддержка WhatsApp'] },
-        { title: 'Правовая информация', links: ['Политика конфиденциальности', 'Условия использования', 'Редакционная политика', 'Медицинский отказ от ответственности'] },
-      ],
-      rights: 'Все права защищены.',
-      location: 'Шанхай, Китай',
-    },
-    agentChat: {
-      welcome: 'Здравствуйте! Я Нави, ваш медицинский навигатор. Спрашивайте о больницах, лечении, стоимости, визах или планировании медицинской поездки в Шанхай.',
-      questions: [
-        'Что входит в персональную услугу?',
-        'Как записаться на приём?',
-        'Какова стоимость индивидуального обслуживания?',
-      ],
-      inputPlaceholder: 'Спросите о здравоохранении в Шанхае...',
-      chatTitle: 'Нави · Медицинский навигатор',
-      chatSubtitle: 'AI-помощник 24/7',
-    },
-  },
-  mn: {
-    nav: {
-      whyShanghai: 'Яагаад Шанхай',
-      howItWorks: 'Хэрхэн ажилладаг',
-      treatments: 'Эмчилгээ',
-      careTeam: 'Асаргах баг',
-      trust: 'Итгэлцэл',
-      items: ['Яагаад Шанхай', 'Хэрхэн ажилладаг', 'Эмнэлгүүдийн сүлжээ', 'Асаргах баг', 'Үнийн мэдээлэл', 'Бидний тухай', 'Блог', 'Холбоо барих'],
-    },
-    hero: {
-      badge1: 'Олон улсын даатгалын эмнэлгүүд',
-      badge2: '3 хэлтэй бүртгэлтэй эмнэлгийн ахлах мэргэжилтнүүд',
-      badge3: '24/7 AI + Хүний дэмжлэг',
-      title: 'Шанхайн эрүүл мэндийн үйлчилгээ',
-      titleHighlight: 'Таныг тоймлон бүтээсэн',
-      subtitle: 'Хятадын шилдэг эмнэлгүүд, 3 хэлтэй эмнэлгийн ахлах мэргэжилтнүүд, 24/7 AI дэмжлэг — бүгд нэг платформ дээр.',
-      cta: 'Эрүүл мэндийн аялалаа эхлүүлэх',
-      testimonial: "I saved $45,000 on cardiac surgery vs. the US. Bilingual nurse support made it the best medical experience ever.",
-      testimonialAuthor: 'Michael T.',
-      testimonialRole: 'Cardiac Surgery, USA',
-    },
-    footer: {
-      tagline: 'Олон улсын өвчтөнүүдийг Шанхайн дэлхийн жишигт нийцсэн эмнэлгийн байгууллагууд болон хоёр хэлтэй эрүүл мэндийн мэргэжилтнүүдтэй холбож байна.',
-      columns: [
-        { title: 'Бидний тухай', links: ['Бидний тухай', 'Үүсгэн байгуулагч', 'Яагаад Шанхай', 'Манай сүлжээ', 'Асаргах баг'] },
-        { title: 'Эмчилгээ', links: ['Эмнэлгүүд', 'Мэргэжлүүд', 'Үнийн гарын авлага'] },
-        { title: 'Дэмжлэг', links: ['Хэрхэн ажилладаг', 'ТБА', 'Судалгааны сан', 'Толь бичиг', 'Холбоо барих', 'WhatsApp дэмжлэг'] },
-        { title: 'Хууль эрх зүй', links: ['Нууцлалын бодлого', 'Үйлчилгээний нөхцөл', 'Редакцын бодлого', 'Эрүүл мэндийн хариуцлагаас татгалзах'] },
-      ],
-      rights: 'Бүх эрх хуулиар хамгаалагдсан.',
-      location: 'Шанхай, Хятад',
-    },
-    agentChat: {
-      welcome: 'Сайн байна уу! Би Нави, таны эрүүл мэндийн хөтөч. Шанхай дахь эмнэлэг, эмчилгээ, зардал, виз, эрүүл мэндийн аялалаа төлөвлөх талаар асуугаарай.',
-      questions: [
-        'Таны хувийн үйлчилгээнд юу багтдаг вэ?',
-        'Уулзалтыг хэрхэн товлох вэ?',
-        'Таны хувийн үйлчилгээний үнэ хэд вэ?',
-      ],
-      inputPlaceholder: 'Шанхайн эрүүл мэндийн тухай асуугаарай...',
-      chatTitle: 'Нави · Эрүүл мэндийн хөтөч',
-      chatSubtitle: '24/7 AI туслах',
-    },
-  },
 }
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
@@ -1104,8 +972,8 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   // 挂载完成后从 localStorage 恢复用户语言偏好
   useEffect(() => {
     const saved = localStorage.getItem('shanghaimed-lang')
-    if (saved === 'en' || saved === 'ja' || saved === 'ar' || saved === 'ru' || saved === 'mn') {
-      setLanguageState(saved as Language)
+    if (saved === 'en' || saved === 'ja') {
+      setLanguageState(saved)
     }
   }, [])
 
@@ -1114,28 +982,18 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     if (typeof window !== 'undefined') {
       localStorage.setItem('shanghaimed-lang', lang)
       document.documentElement.lang = lang
-      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr'
     }
   }
 
   useEffect(() => {
     document.documentElement.lang = language
-    document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr'
   }, [language])
 
   const resolveKey = (key: string): any => {
     const keys = key.split('.')
-    // Try current language first
     let value: any = translations[language]
     for (const k of keys) {
       value = value?.[k]
-    }
-    // Fallback to English for untranslated keys (YMYL safety)
-    if (value === undefined && language !== 'en') {
-      value = translations.en
-      for (const k of keys) {
-        value = value?.[k]
-      }
     }
     return value
   }

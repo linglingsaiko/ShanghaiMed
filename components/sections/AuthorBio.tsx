@@ -25,7 +25,7 @@ const text = {
 
 export default function AuthorBio({ author }: AuthorBioProps) {
   const { language } = useLanguage()
-  const t = text[language]
+  const t = text[language === 'ja' ? 'ja' : 'en']
 
   return (
     <div className="mt-8 pt-8 border-t border-gray-200">

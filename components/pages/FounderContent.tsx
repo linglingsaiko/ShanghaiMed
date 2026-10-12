@@ -165,9 +165,11 @@ const text = {
 
 export default function FounderContent() {
   const { language } = useLanguage()
-  const t = text[language]
-  const credentials = credentialsData[language]
-  const experience = experienceData[language]
+  // fallback to 'en' for languages that don't have content yet (YMYL: ar/ru/mn stay English)
+  const lang = language === 'ja' ? 'ja' : 'en'
+  const t = text[lang]
+  const credentials = credentialsData[lang]
+  const experience = experienceData[lang]
 
   return (
     <div className="min-h-screen bg-gray-50">

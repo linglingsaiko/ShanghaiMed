@@ -13,7 +13,7 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
 
-export const translations = {
+export const translations: Record<Language, any> = {
   en: {
     nav: {
       whyShanghai: 'Why Shanghai',

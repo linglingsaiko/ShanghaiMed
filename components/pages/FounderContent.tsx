@@ -22,7 +22,7 @@ const credentialsData: Record<'en' | 'ja', Credential[]> = {
       category: 'Nursing License',
     },
     {
-      title: 'Senior Registered Nurse (主管护师)',
+      title: 'Senior Registered Nurse',
       detail: 'Senior-level professional title within China’s national health professional ranking system, awarded by the Shanghai Municipal Health Commission',
       category: 'Professional Title',
     },
@@ -44,7 +44,7 @@ const credentialsData: Record<'en' | 'ja', Credential[]> = {
       category: '看護師免許',
     },
     {
-      title: '上級看護師（主管护师）',
+      title: '上級看護師',
       detail: '中国の国家衛生専門技術資格制度における上級の専門職称号。上海市衛生健康委員会より授与。',
       category: '専門職称号',
     },
@@ -104,7 +104,7 @@ const text = {
   en: {
     role: 'Founder & Medical Director',
     intro:
-      "ISPN-certified registered nurse, senior registered nurse (主管护师), and founder of ShanghaiMed. Over a decade of hands-on experience in premium healthcare operations and guiding international patients through Shanghai's healthcare system — from routine consultations to complex surgical coordination.",
+      "ISPN-certified registered nurse, senior registered nurse and founder of ShanghaiMed. Over a decade of hands-on experience in premium healthcare operations and guiding international patients through Shanghai's healthcare system — from routine consultations to complex surgical coordination.",
     whyTitle: 'Why I Founded ShanghaiMed',
     whyP1:
       "I spent over ten years working inside Shanghai's premium healthcare system — coordinating care for international patients, navigating hospital bureaucracy on their behalf, and watching the same preventable problems repeat: patients arriving without translated records, being routed to the wrong department, overpaying for services they didn't need, or leaving without understanding their own discharge instructions.",
@@ -120,7 +120,7 @@ const text = {
     experienceTitle: 'Areas of Experience',
     companyTitle: 'About the Company',
     companyP1:
-      'ShanghaiMed is operated by 上海可玲信息技术有限公司 (Shanghai Keling Information Technology Co., Ltd.), a company registered in Shanghai, China.',
+      'ShanghaiMed is operated by Shanghai Keling Information Technology Co., Ltd., a company registered in Shanghai, China.',
     companyP2:
       "We are a full-service medical tourism facilitator — not a broker. We charge patients a transparent concierge service fee and take zero commission from hospitals. Medical bills are paid directly to the hospital at the hospital's own published rates.",
     registeredName: 'Registered Name',
@@ -134,7 +134,7 @@ const text = {
   ja: {
     role: '創業者 兼 メディカルディレクター',
     intro:
-      'ISPN認定看護師、主管护师（上級看護師職位）、ShanghaiMed創業者。10年以上にわたり、ハイエンド医療機関の運営と、国際患者の上海での受診サポートに実務で携わってきました。日常的な診察から複雑な手術調整まで対応します。',
+      'ISPN認定看護師、ShanghaiMed創業者。10年以上にわたり、ハイエンド医療機関の運営と、国際患者の上海での受診サポートに実務で携わってきました。日常的な診察から複雑な手術調整まで対応します。',
     whyTitle: 'ShanghaiMedを創業した理由',
     whyP1:
       '私は10年以上、上海のハイエンド医療の現場で働いてきました。国際患者の受診を調整し、病院の手続きを代行する中で、同じ「防げたはずの問題」が繰り返されるのを目の当たりにしてきました。翻訳された診療記録を持たずに来院する患者、誤った科に回される患者、不要なサービスに過剰な費用を払う患者、退院時の指示を理解できないまま帰宅する患者——。',
@@ -150,7 +150,7 @@ const text = {
     experienceTitle: '経験分野',
     companyTitle: '会社情報',
     companyP1:
-      'ShanghaiMedは、中国上海で登記された上海可玲信息技术有限公司（Shanghai Keling Information Technology Co., Ltd.）により運営されています。',
+      'ShanghaiMedは、中国上海で登記されたShanghai Keling Information Technology Co., Ltd.により運営されています。',
     companyP2:
       '私たちは総合的な医療観光ファシリテーターであり、ブローカーではありません。患者様からは透明なコンシェルジュサービス料をいただき、病院からのコミッションは一切受け取りません。医療費は、病院が公表する料金で直接病院にお支払いいただきます。',
     registeredName: '登記名',
@@ -190,7 +190,7 @@ export default function FounderContent() {
             <div>
               <p className="text-sm text-teal-600 font-medium mb-2">{t.role}</p>
               <h1 className="text-4xl font-bold text-gray-900 mb-2">Sara Ma</h1>
-              <p className="text-lg text-gray-500">马玲玲</p>
+              <p className="text-lg text-gray-500">Ma Lingling</p>
               <p className="text-lg text-gray-600 mt-4 max-w-2xl">{t.intro}</p>
             </div>
           </div>
@@ -300,7 +300,7 @@ export default function FounderContent() {
           <div className="mt-6 pt-6 border-t grid md:grid-cols-2 gap-4 text-sm text-gray-600">
             <div>
               <dt className="font-medium text-gray-900">{t.registeredName}</dt>
-              <dd>上海可玲信息技术有限公司</dd>
+              <dd>Shanghai Keling Information Technology Co., Ltd.</dd>
               <dd>Shanghai Keling Information Technology Co., Ltd.</dd>
             </div>
             <div>
@@ -310,7 +310,7 @@ export default function FounderContent() {
             </div>
             <div>
               <dt className="font-medium text-gray-900">{t.legalRepresentative}</dt>
-              <dd>Ma Lingling (马玲玲)</dd>
+              <dd>Ma Lingling</dd>
             </div>
             <div>
               <dt className="font-medium text-gray-900">{t.languages}</dt>

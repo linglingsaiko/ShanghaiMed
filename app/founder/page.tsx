@@ -12,7 +12,7 @@ export default function FounderPage() {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: 'Sara Ma',
-    alternateName: '马玲玲',
+    alternateName: 'Ma Lingling',
     jobTitle: 'Founder',
     image: 'https://shanghaimedhealth.com/images/sara-ma-headshot.jpg',
     url: 'https://shanghaimedhealth.com/founder',

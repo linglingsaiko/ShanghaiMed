@@ -5,6 +5,7 @@ import Footer from '@/components/Footer'
 import WhatsAppFloat from '@/components/WhatsAppFloat'
 import AgentChat from '@/components/AgentChat'
 import { LanguageProvider } from '@/contexts/LanguageContext'
+import HtmlLangDirSetter from '@/components/HtmlLangDirSetter'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://shanghaimedhealth.com'
 
@@ -73,6 +74,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="antialiased">
         <LanguageProvider>
+          <HtmlLangDirSetter />
           <Header />
           <main>{children}</main>
           <Footer />

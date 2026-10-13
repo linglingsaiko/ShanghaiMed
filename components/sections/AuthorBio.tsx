@@ -11,13 +11,13 @@ interface AuthorBioProps {
 const text = {
   en: {
     writtenBy: 'Written by',
-    role: 'Founder & Senior Registered Nurse',
+    role: 'Founder & Chief Concierge',
     bio: "ISPN-certified registered nurse with 10+ years of experience in premium healthcare operations and guiding international patients through Shanghai's healthcare system. Founded ShanghaiMed to bridge the gap between world-class medical care and the patients who need it most.",
     learnMore: 'Learn more about Sara Ma',
   },
   ja: {
     writtenBy: '執筆者',
-    role: '創業者・上級看護師',
+    role: '創業者・チーフコンシェルジュ',
     bio: 'ISPN認定看護師。10年以上にわたりハイエンド医療機関の運営と、国際患者の上海での受診サポートに従事。世界水準の医療を、それを最も必要とする患者に届けるためShanghaiMedを創業。',
     learnMore: 'Sara Maについて詳しく見る',
   },

@@ -102,7 +102,7 @@ const experienceData: Record<'en' | 'ja', ExperienceItem[]> = {
 
 const text = {
   en: {
-    role: 'Founder & Senior Registered Nurse',
+    role: 'Founder & Chief Concierge',
     intro:
       "ISPN-certified registered nurse, senior registered nurse and founder of ShanghaiMed. Over a decade of hands-on experience in premium healthcare operations and guiding international patients through Shanghai's healthcare system — from routine consultations to complex surgical coordination.",
     whyTitle: 'Why I Founded ShanghaiMed',
@@ -132,7 +132,7 @@ const text = {
     ctaButton: 'Get in Touch',
   },
   ja: {
-    role: '創業者・上級看護師',
+    role: '創業者・チーフコンシェルジュ',
     intro:
       'ISPN認定看護師、ShanghaiMed創業者。10年以上にわたり、ハイエンド医療機関の運営と、国際患者の上海での受診サポートに実務で携わってきました。日常的な診察から複雑な手術調整まで対応します。',
     whyTitle: 'ShanghaiMedを創業した理由',

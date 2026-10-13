@@ -3,7 +3,7 @@ import FounderContent from '@/components/pages/FounderContent'
 
 export const metadata: Metadata = {
   title: 'About the Founder — Sara Ma | ShanghaiMed',
-  description: 'Sara Ma, Founder & Medical Director of ShanghaiMed. ISPN-certified registered nurse, senior registered nurse, and 10+ years of premium healthcare operations experience in Shanghai.',
+  description: 'Sara Ma, Founder & Senior Registered Nurse of ShanghaiMed. ISPN-certified registered nurse, senior registered nurse, and 10+ years of premium healthcare operations experience in Shanghai.',
   alternates: { canonical: 'https://shanghaimedhealth.com/founder' },
 }
 

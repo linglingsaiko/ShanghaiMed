@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react'
 
-type Language = 'en' | 'ja' | 'ar' | 'ru' | 'mn'
+export type Language = 'en' | 'ja' | 'ar' | 'ru' | 'mn'
 
 interface LanguageContextType {
   language: Language
@@ -1562,17 +1562,26 @@ export const translations: Record<Language, any> = {
   },
 }
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  // SSR 安全模式：初始渲染固定 'en'，保证服务端 HTML 与客户端首次渲染一致（避免 React 水合错误）
-  const [language, setLanguageState] = useState<Language>('en')
+export function LanguageProvider({ children, locale }: { children: ReactNode; locale?: Language }) {
+  // URL-driven mode: if locale prop is provided, use it directly (for [lang] routes)
+  // Fallback mode: start with 'en', then restore from localStorage (for root / routes)
+  const [language, setLanguageState] = useState<Language>(locale || 'en')
 
-  // 挂载完成后从 localStorage 恢复用户语言偏好
+  // In URL-driven mode, sync state when locale prop changes
   useEffect(() => {
+    if (locale) {
+      setLanguageState(locale)
+    }
+  }, [locale])
+
+  // In fallback mode, restore from localStorage on mount
+  useEffect(() => {
+    if (locale) return // skip localStorage in URL-driven mode
     const saved = localStorage.getItem('shanghaimed-lang')
     if (saved === 'en' || saved === 'ja' || saved === 'ar' || saved === 'ru' || saved === 'mn') {
       setLanguageState(saved as Language)
     }
-  }, [])
+  }, [locale])
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang)
@@ -1585,7 +1594,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     document.documentElement.lang = language
-    document.documentElement.dir = 'ltr'
+    document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr'
   }, [language])
 
   const resolveKey = (key: string): any => {

@@ -9,6 +9,7 @@ interface LanguageContextType {
   setLanguage: (lang: Language) => void
   t: (key: string) => string
   tArr: (key: string) => any[]
+  localePath: (path: string) => string
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
@@ -1609,8 +1610,16 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     return Array.isArray(value) ? value : []
   }
 
+  // URL 语言前缀：英文返回原路径，非英文返回 /${language} + path
+  // 跳过外部 URL 和锚点
+  const localePath = (path: string): string => {
+    if (language === 'en') return path
+    if (path.startsWith('http://') || path.startsWith('https://') || path.startsWith('#') || path.startsWith('mailto:')) return path
+    return `/${language}${path}`
+  }
+
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t, tArr }}>
+    <LanguageContext.Provider value={{ language, setLanguage, t, tArr, localePath }}>
       {children}
     </LanguageContext.Provider>
   )

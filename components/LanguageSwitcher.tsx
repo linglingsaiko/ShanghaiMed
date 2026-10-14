@@ -2,10 +2,14 @@
 
 import React, { useState, useRef, useEffect } from 'react'
 import { Globe } from 'lucide-react'
+import { useRouter, usePathname } from 'next/navigation'
 import { useLanguage } from '@/contexts/LanguageContext'
+import { localePath, getLocaleFromPathname } from '@/lib/i18n'
 
 const LanguageSwitcher: React.FC = () => {
-  const { language, setLanguage } = useLanguage()
+  const { language } = useLanguage()
+  const router = useRouter()
+  const pathname = usePathname()
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
 
@@ -29,6 +33,19 @@ const LanguageSwitcher: React.FC = () => {
 
   const current = options.find(o => o.value === language)!
 
+  const handleSwitch = (newLocale: string) => {
+    // Get the path without locale prefix
+    const currentLocale = getLocaleFromPathname(pathname)
+    const pathWithoutLocale = currentLocale === 'en' 
+      ? pathname 
+      : pathname.replace(/^\/[a-z]{2}(\/|$)/, '$1')
+    
+    // Navigate to new locale path
+    const newPath = localePath(newLocale as any, pathWithoutLocale)
+    router.push(newPath)
+    setOpen(false)
+  }
+
   return (
     <div ref={ref} className="relative">
       <button
@@ -45,10 +62,7 @@ const LanguageSwitcher: React.FC = () => {
           {options.map(option => (
             <button
               key={option.value}
-              onClick={() => {
-                setLanguage(option.value)
-                setOpen(false)
-              }}
+              onClick={() => handleSwitch(option.value)}
               className={`w-full text-left px-4 py-2 text-sm transition-colors ${
                 language === option.value
                   ? 'text-primary bg-primary/5 font-medium'

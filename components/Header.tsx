@@ -12,8 +12,10 @@ import { useLanguage } from '@/contexts/LanguageContext'
 const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const pathname = usePathname()
-  const isHomePage = pathname === '/'
-  const { tArr } = useLanguage()
+  const { tArr, language, localePath } = useLanguage()
+
+  const homePath = localePath('/')
+  const isHomePage = pathname === '/' || pathname === `/${language}`
 
   // 翻译表中的导航文案（与 navLinks 一一对应），缺失时回退到英文常量
   const navLabels = tArr('nav.items')
@@ -27,10 +29,9 @@ const Header: React.FC = () => {
     
     // 如果是锚点链接（以 # 开头）且不在主页，先跳转到主页并带锚点
     if (href.startsWith('#') && !isHomePage) {
-      window.location.href = `/${href}`
+      window.location.href = `${homePath}${href}`
       return false
-    }
-    
+    }    
     // 如果是主页的锚点链接，启用平滑滚动
     if (href.startsWith('#') && isHomePage) {
       const element = document.querySelector(href)
@@ -130,7 +131,7 @@ const Header: React.FC = () => {
                 ) : (
                   <Link
                     key={link.href}
-                    href={link.href}
+                    href={localePath(link.href)}
                     onClick={() => setMobileMenuOpen(false)}
                     className="text-base font-medium text-gray-600 hover:text-primary transition-colors py-2"
                   >

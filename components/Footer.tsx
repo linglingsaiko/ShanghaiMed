@@ -37,10 +37,11 @@ const fallbackTitles = ['About', 'Treatments', 'Support', 'Legal']
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear()
-  const { t, tArr, language } = useLanguage()
+  const { t, tArr, language, localePath } = useLanguage()
 
   const translatedColumns = tArr('footer.columns')
   const tagline = t('footer.tagline')
+
 
   // 日语版客服渠道为 LINE，链接与文案一起切换
   const getSupportHref = (href: string) =>
@@ -55,7 +56,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 lg:gap-12">
           {/* Brand Column */}
           <div className="col-span-2 md:col-span-4 lg:col-span-1">
-            <Link href="/" className="inline-block mb-4">
+            <Link href={localePath('/')} className="inline-block mb-4">
               <span className="text-2xl font-bold">
                 Shanghai<span className="text-accent">Med</span>
               </span>
@@ -132,7 +133,7 @@ const Footer: React.FC = () => {
                     return (
                       <li key={`${colIndex}-${linkIndex}`}>
                         <Link
-                          href={getSupportHref(column.hrefs[linkIndex])}
+                          href={localePath(getSupportHref(column.hrefs[linkIndex]))}
                           className="text-sm text-gray-400 hover:text-white transition-colors"
                         >
                           {label}

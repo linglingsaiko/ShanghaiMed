@@ -13,7 +13,9 @@ export default function HtmlLangDirSetter() {
 
   useEffect(() => {
     document.documentElement.lang = language
-    document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr'
+    // Arabic UI strings are still English-fallback; keep LTR layout until
+    // full Arabic content + logical-property RTL pass is done.
+    document.documentElement.dir = 'ltr'
   }, [language])
 
   return null

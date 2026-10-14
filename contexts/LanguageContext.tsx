@@ -1584,7 +1584,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     document.documentElement.lang = language
-    document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr'
+    document.documentElement.dir = 'ltr'
   }, [language])
 
   const resolveKey = (key: string): any => {

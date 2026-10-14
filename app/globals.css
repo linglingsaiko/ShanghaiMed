@@ -241,18 +241,10 @@ body {
 
 
 
-/* RTL support for Arabic */
-[dir="rtl"] {
-  text-align: right;
-  direction: rtl;
-}
-
-[dir="rtl"] .flex {
-  flex-direction: row-reverse;
-}
-
-[dir="rtl"] input,
-[dir="rtl"] textarea,
-[dir="rtl"] select {
-  text-align: right;
-}
+/*
+ * RTL support is intentionally disabled for now.
+ * The previous blanket rule `[dir="rtl"] .flex { flex-direction: row-reverse }`
+ * flipped every flex container including the Header nav, while Arabic UI
+ * strings still fall back to English. Re-enable with logical properties
+ * (margin-inline-start, etc.) only after full Arabic content translation.
+ */

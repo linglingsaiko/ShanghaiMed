@@ -52,6 +52,15 @@ export const metadata: Metadata = {
       'Connect with China\'s top hospitals, bilingual nurses, and 24/7 AI support.',
     images: ['/og-image.png'],
   },
+  alternates: {
+    languages: {
+      en: `${siteUrl}/`,
+      ja: `${siteUrl}/ja`,
+      ar: `${siteUrl}/ar`,
+      ru: `${siteUrl}/ru`,
+      mn: `${siteUrl}/mn`,
+    },
+  },
   robots: {
     index: true,
     follow: true,

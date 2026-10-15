@@ -202,7 +202,7 @@ export default function BlogDetail({ post }: BlogDetailProps) {
                     <p className="text-sm text-gray-700 mb-3">
                       {language === 'ja' ? (
                         <>
-                          当社の<Link href="/research" className="text-teal-700 font-medium hover:underline">リサーチライブラリ</Link>には、中国への医療渡航に関する査読付き研究{studiesCount}本を収録しています——患者体験、品質と安全、費用比較などを網羅。各研究には研究デザイン、サンプルサイズ、主な知見、明記された限界が含まれています。
+                          当社の<Link href={localePath('/research')} className="text-teal-700 font-medium hover:underline">リサーチライブラリ</Link>には、中国への医療渡航に関する査読付き研究{studiesCount}本を収録しています——患者体験、品質と安全、費用比較などを網羅。各研究には研究デザイン、サンプルサイズ、主な知見、明記された限界が含まれています。
                         </>
                       ) : (
                         <>

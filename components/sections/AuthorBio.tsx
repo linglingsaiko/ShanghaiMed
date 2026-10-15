@@ -46,7 +46,7 @@ export default function AuthorBio({ author }: AuthorBioProps) {
             <p className="text-sm text-teal-600 font-medium mb-3">{t.role}</p>
             <p className="text-sm text-gray-600 leading-relaxed">{t.bio}</p>
             <Link
-              href="/founder"
+              href={localePath('/founder')}
               className="inline-flex items-center mt-4 text-sm font-medium text-teal-600 hover:text-teal-700 transition-colors"
             >
               {t.learnMore}

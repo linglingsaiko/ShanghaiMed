@@ -409,7 +409,7 @@ export default function GlossaryPage() {
           <h2 className="text-lg font-semibold text-gray-900 mb-3">Go deeper</h2>
           <ul className="space-y-2 text-sm">
             <li>
-              <a href="/research" className="text-teal-700 font-medium hover:underline">
+              <a href={`${lp}/research`} className="text-teal-700 font-medium hover:underline">
                 Research Library
               </a>{' '}
               <span className="text-gray-600">

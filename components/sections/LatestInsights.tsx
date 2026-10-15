@@ -9,7 +9,7 @@ import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function LatestInsights() {
   const [posts, setPosts] = useState<BlogPost[]>([])
-  const { t, language } = useLanguage()
+  const { t, language, localePath } = useLanguage()
 
   useEffect(() => {
     const fetchPosts = async () => {

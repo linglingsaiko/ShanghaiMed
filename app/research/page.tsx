@@ -795,7 +795,9 @@ function generateJsonLd() {
   }
 }
 
-export default function ResearchPage() {
+export default function ResearchPage({ params }: { params?: { lang?: string } }) {
+  // re-exported under app/[lang]/research: prefix internal links with the locale
+  const lp = params?.lang && params.lang !== 'en' ? `/${params.lang}` : ''
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Schema.org Structured Data */}

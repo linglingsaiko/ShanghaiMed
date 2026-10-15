@@ -51,7 +51,7 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="bg-primary text-white">
-      <div className="section-container py-16">
+      <div className="section-container py-16" dir="ltr">
         {/* Footer Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 lg:gap-12">
           {/* Brand Column */}

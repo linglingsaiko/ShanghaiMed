@@ -46,10 +46,10 @@ const Header: React.FC = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100">
-      <nav className="section-container">
+      <nav className="section-container" dir="ltr">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 h-full bg-white">
+          <Link href={homePath} className="flex items-center gap-3 h-full bg-white">
             <div className="h-full bg-white pr-1">
               <Image
                 src="/images/logo.jpg"
@@ -83,7 +83,7 @@ const Header: React.FC = () => {
               ) : (
                 <Link
                   key={link.href}
-                  href={link.href}
+                  href={localePath(link.href)}
                   onClick={() => setMobileMenuOpen(false)}
                   className="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
                 >

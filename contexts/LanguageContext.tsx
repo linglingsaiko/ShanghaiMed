@@ -1,6 +1,8 @@
 'use client'
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react'
+import { usePathname } from 'next/navigation'
+import { getLocaleFromPathname } from '@/lib/i18n'
 
 export type Language = 'en' | 'ja' | 'ar' | 'ru' | 'mn'
 
@@ -1563,25 +1565,20 @@ export const translations: Record<Language, any> = {
 }
 
 export function LanguageProvider({ children, locale }: { children: ReactNode; locale?: Language }) {
-  // URL-driven mode: if locale prop is provided, use it directly (for [lang] routes)
-  // Fallback mode: start with 'en', then restore from localStorage (for root / routes)
-  const [language, setLanguageState] = useState<Language>(locale || 'en')
+  const pathname = usePathname()
+  // URL 是唯一真相：locale prop（[lang] 路由）> URL 前缀 > 'en'
+  // SSR 时 usePathname 可用，保证服务端渲染的链接也带正确语言前缀
+  const urlLocale = (pathname ? getLocaleFromPathname(pathname) : 'en') as Language
+  const [language, setLanguageState] = useState<Language>(locale || urlLocale)
 
-  // In URL-driven mode, sync state when locale prop changes
+  // locale prop 或 URL 变化时同步
   useEffect(() => {
     if (locale) {
       setLanguageState(locale)
+      return
     }
-  }, [locale])
-
-  // In fallback mode, restore from localStorage on mount
-  useEffect(() => {
-    if (locale) return // skip localStorage in URL-driven mode
-    const saved = localStorage.getItem('shanghaimed-lang')
-    if (saved === 'en' || saved === 'ja' || saved === 'ar' || saved === 'ru' || saved === 'mn') {
-      setLanguageState(saved as Language)
-    }
-  }, [locale])
+    setLanguageState((pathname ? getLocaleFromPathname(pathname) : 'en') as Language)
+  }, [locale, pathname])
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang)

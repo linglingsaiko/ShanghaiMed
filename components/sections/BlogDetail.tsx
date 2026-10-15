@@ -14,7 +14,7 @@ interface BlogDetailProps {
 }
 
 export default function BlogDetail({ post }: BlogDetailProps) {
-  const { language, t, tArr } = useLanguage()
+  const { language, t, tArr, localePath } = useLanguage()
   const studiesCount = 30 // Keep in sync with Research Library count
   const [showToc, setShowToc] = useState(false)
   const [headings, setHeadings] = useState<{ id: string; text: string; level: number }[]>([])
@@ -108,9 +108,9 @@ export default function BlogDetail({ post }: BlogDetailProps) {
   return (
     <div className="w-full max-w-6xl mx-auto px-4 py-8">
       <nav className="mb-6 flex items-center gap-2 text-sm text-gray-500">
-        <Link href="/" className="hover:text-primary">{t('blog.home')}</Link>
+        <Link href={localePath('/')} className="hover:text-primary">{t('blog.home')}</Link>
         <span>/</span>
-        <Link href="/blog" className="hover:text-primary">{t('blog.blogNav')}</Link>
+        <Link href={localePath('/blog')} className="hover:text-primary">{t('blog.blogNav')}</Link>
         <span>/</span>
         <span className="text-gray-700">{post.title}</span>
       </nav>
@@ -206,11 +206,11 @@ export default function BlogDetail({ post }: BlogDetailProps) {
                         </>
                       ) : (
                         <>
-                          Our <Link href="/research" className="text-teal-700 font-medium hover:underline">Research Library</Link> collects {studiesCount} peer-reviewed studies on medical travel to China — covering patient experience, quality &amp; safety, cost comparisons, and more. Every entry includes study type, sample size, key findings, and stated limitations.
+                          Our <Link href={localePath('/research')} className="text-teal-700 font-medium hover:underline">Research Library</Link> collects {studiesCount} peer-reviewed studies on medical travel to China — covering patient experience, quality &amp; safety, cost comparisons, and more. Every entry includes study type, sample size, key findings, and stated limitations.
                         </>
                       )}
                     </p>
-                    <Link href="/research" className="inline-flex items-center text-sm font-medium text-teal-700 hover:text-teal-900 transition-colors">
+                    <Link href={localePath('/research')} className="inline-flex items-center text-sm font-medium text-teal-700 hover:text-teal-900 transition-colors">
                       {language === 'ja' ? `${studiesCount}本の研究を見る` : `Browse ${studiesCount} studies`}
                       <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

@@ -313,7 +313,9 @@ const terms: GlossaryTerm[] = [
 
 const categories = Array.from(new Set(terms.map(t => t.category)))
 
-export default function GlossaryPage() {
+export default function GlossaryPage({ params }: { params?: { lang?: string } }) {
+  // re-exported under app/[lang]/glossary: prefix internal links with the locale
+  const lp = params?.lang && params.lang !== 'en' ? `/${params.lang}` : ''
   const definedTermSetJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'DefinedTermSet',
@@ -417,19 +419,19 @@ export default function GlossaryPage() {
               </span>
             </li>
             <li>
-              <a href="/editorial-policy" className="text-teal-700 font-medium hover:underline">
+              <a href={`${lp}/editorial-policy`} className="text-teal-700 font-medium hover:underline">
                 Editorial Policy
               </a>{' '}
               <span className="text-gray-600">— how we source, grade, and correct information.</span>
             </li>
             <li>
-              <a href="/founder" className="text-teal-700 font-medium hover:underline">
+              <a href={`${lp}/founder`} className="text-teal-700 font-medium hover:underline">
                 About the Founder
               </a>{' '}
               <span className="text-gray-600">— the clinical and operational background behind ShanghaiMed.</span>
             </li>
             <li>
-              <a href="/blog" className="text-teal-700 font-medium hover:underline">
+              <a href={`${lp}/blog`} className="text-teal-700 font-medium hover:underline">
                 Blog
               </a>{' '}
               <span className="text-gray-600">— practical guides for patients considering treatment in Shanghai.</span>

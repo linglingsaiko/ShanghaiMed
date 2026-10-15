@@ -927,10 +927,10 @@ export default function ResearchPage({ params }: { params?: { lang?: string } })
             Research behind the articles
           </h3>
           <p className="text-sm text-gray-700 mb-3">
-            Every article we publish is grounded in peer-reviewed evidence. The studies above form the evidence base for our <a href="/blog" className="text-teal-700 font-medium hover:underline">blog guides</a> on choosing hospitals, understanding costs, preparing for a dental or TCM visit, and navigating insurance. Read a guide first, then trace every claim back to the original research.
+            Every article we publish is grounded in peer-reviewed evidence. The studies above form the evidence base for our <a href={`${lp}/blog`} className="text-teal-700 font-medium hover:underline">blog guides</a> on choosing hospitals, understanding costs, preparing for a dental or TCM visit, and navigating insurance. Read a guide first, then trace every claim back to the original research.
           </p>
           <p className="text-xs text-gray-500">
-            Last reviewed: October 2026 · <a href="/editorial-policy" className="hover:underline">Editorial Policy</a> · <a href="/glossary" className="hover:underline">Medical tourism glossary</a>
+            Last reviewed: October 2026 · <a href={`${lp}/editorial-policy`} className="hover:underline">Editorial Policy</a> · <a href={`${lp}/glossary`} className="hover:underline">Medical tourism glossary</a>
           </p>
         </div>
 
@@ -941,7 +941,7 @@ export default function ResearchPage({ params }: { params?: { lang?: string } })
             This research library is maintained by ShanghaiMed for informational purposes only. It does not constitute medical advice, diagnosis, or treatment recommendations. The inclusion of a study does not imply endorsement of its conclusions. Patients considering medical treatment in China should consult with qualified healthcare providers and verify all information independently. ShanghaiMed may benefit from patients choosing to use its services after reading this page.
           </p>
           <p className="text-sm text-gray-500 mt-2">
-            See our <a href="/editorial-policy" className="text-teal-600 hover:underline">Editorial Policy</a> for how we handle sourcing, corrections, and conflicts of interest.
+            See our <a href={`${lp}/editorial-policy`} className="text-teal-600 hover:underline">Editorial Policy</a> for how we handle sourcing, corrections, and conflicts of interest.
           </p>
         </div>
       </div>

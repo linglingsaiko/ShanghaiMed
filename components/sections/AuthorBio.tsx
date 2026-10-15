@@ -24,7 +24,7 @@ const text = {
 }
 
 export default function AuthorBio({ author }: AuthorBioProps) {
-  const { language } = useLanguage()
+  const { language, localePath } = useLanguage()
   const t = text[language === 'ja' ? 'ja' : 'en']
 
   return (

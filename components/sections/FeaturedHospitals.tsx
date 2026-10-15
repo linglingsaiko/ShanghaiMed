@@ -3,11 +3,13 @@
 import React from 'react'
 import { ArrowRight, Shield } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
+import { useLanguage } from '@/contexts/LanguageContext'
 import Image from 'next/image'
 import Link from 'next/link'
 import { allHospitals, featuredHospitalIds } from '@/lib/constants'
 
 const FeaturedHospitals: React.FC = () => {
+  const { localePath } = useLanguage()
   const featuredHospitals = featuredHospitalIds
     .map(id => allHospitals.find(h => h.id === id))
     .filter((h): h is NonNullable<typeof h> => h != null)
@@ -80,7 +82,7 @@ const FeaturedHospitals: React.FC = () => {
                 </p>
 
                 <Link
-                  href="/why-shanghai"
+                  href={localePath('/why-shanghai')}
                   className="inline-flex items-center gap-2 text-accent font-medium text-sm hover:gap-3 transition-all"
                 >
                   Learn More

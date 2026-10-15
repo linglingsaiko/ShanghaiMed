@@ -3,7 +3,6 @@
 import React from 'react'
 import { ArrowRight, Shield } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
-import { useLanguage } from '@/contexts/LanguageContext'
 import Image from 'next/image'
 import Link from 'next/link'
 import { allHospitals, featuredHospitalIds } from '@/lib/constants'

@@ -1594,13 +1594,30 @@ export function LanguageProvider({ children, locale }: { children: ReactNode; lo
     document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr'
   }, [language])
 
+  // 非 YMYL 区块：纯 UI/导航/联系类，允许 ar/ru/mn 机器翻译直接显示
+  // 其余区块（医疗实质内容、价格、医院信息、资质、证言、FAQ 答案）一律 fallback 英文，
+  // 待母语审校后再逐区块放开
+  const MACHINE_TRANSLATABLE_SECTIONS = ['nav', 'insights', 'blog', 'contact', 'footer', 'agentChat']
+
   const resolveKey = (key: string): any => {
     const keys = key.split('.')
-    // YMYL fallback: ar/ru/mn fall back to en for medical/legal/price long text
-    const lang = language === 'ja' ? 'ja' : 'en'
+    const section = keys[0]
+    // ja: 完整翻译；ar/ru/mn: 仅白名单区块用机器翻译，其余 YMYL 内容 fallback en
+    const lang: Language =
+      language === 'ja' ||
+      (language !== 'en' && MACHINE_TRANSLATABLE_SECTIONS.includes(section))
+        ? language
+        : 'en'
     let value: any = translations[lang]
     for (const k of keys) {
       value = value?.[k]
+    }
+    // 机器翻译区块若某 key 意外缺失，二级兜底英文，不回显 key 字符串
+    if (value == null && language !== 'en' && language !== 'ja') {
+      value = translations.en
+      for (const k of keys) {
+        value = value?.[k]
+      }
     }
     return value
   }

@@ -293,51 +293,6 @@ export const statistics = [
   { value: '25%', label: 'Year-over-Year Growth', description: 'Source: Shanghai Municipal Health Commission, 2024' },
 ]
 
-// Testimonials
-// TODO: Replace with real patient testimonials before launch
-export const testimonials = [
-  {
-    id: 1,
-    name: 'Sarah Johnson',
-    country: 'United States',
-    treatment: 'Pediatric Cardiac Surgery',
-    quote: 'The care my child received at Shanghai Children\'s Medical Center was exceptional. The medical team was professional and compassionate throughout our journey.',
-    rating: 5,
-  },
-  {
-    id: 2,
-    name: 'Marcus Chen',
-    country: 'Singapore',
-    treatment: 'Spine Surgery',
-    quote: 'Xinhua Hospital provided world-class spine surgery. The international patient services made our stay comfortable and stress-free.',
-    rating: 5,
-  },
-  {
-    id: 3,
-    name: 'Elena Rodriguez',
-    country: 'Spain',
-    treatment: 'Gynecological Care',
-    quote: 'The personalized care at Jiahui International Hospital exceeded our expectations. Highly recommend for international patients.',
-    rating: 5,
-  },
-  {
-    id: 4,
-    name: 'James Wilson',
-    country: 'United Kingdom',
-    treatment: 'Cancer Treatment',
-    quote: 'Huashan Hospital\'s oncology department provided excellent care with cutting-edge treatments. The language support was outstanding.',
-    rating: 5,
-  },
-  {
-    id: 5,
-    name: 'Yuki Tanaka',
-    country: 'Japan',
-    treatment: 'TCM Therapy',
-    quote: 'Longhua Hospital introduced me to Traditional Chinese Medicine. The holistic approach helped me recover from my chronic condition.',
-    rating: 5,
-  },
-]
-
 // Social Proof Stats
 export const socialProofStats = [
   { value: '73,000+', label: "Shanghai's Int'l Patient Visits" },

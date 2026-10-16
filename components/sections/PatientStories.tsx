@@ -5,8 +5,10 @@ import { Shield, Users, FileText, Headphones } from 'lucide-react'
 import Card from '../ui/Card'
 import Button from '../ui/Button'
 import { trustPillars } from '@/lib/constants'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const TrustSection: React.FC = () => {
+  const { t } = useLanguage()
   const iconMap: Record<string, React.ElementType> = {
     Shield,
     Users,
@@ -20,14 +22,13 @@ const TrustSection: React.FC = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-accent font-semibold text-sm tracking-wider uppercase">
-            Why Choose Us
+            {t('trust.badge')}
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mt-4 mb-6">
-            Your Trusted Medical Tourism Partner
+            {t('trust.title')}
           </h2>
           <p className="text-gray-600 text-lg">
-            We provide professional, transparent, and reliable medical tourism
-            services in Shanghai. Here&apos;s what sets us apart.
+            {t('trust.subtitle')}
           </p>
         </div>
 
@@ -63,10 +64,10 @@ const TrustSection: React.FC = () => {
         {/* CTA */}
         <div className="text-center">
           <p className="text-gray-600 mb-4">
-            Ready to experience professional medical tourism services?
+            {t('trust.ctaText')}
           </p>
           <Button href="#contact" size="lg" className="group">
-            Start Your Medical Tourism
+            {t('trust.ctaButton')}
             <svg
               className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"
               fill="none"

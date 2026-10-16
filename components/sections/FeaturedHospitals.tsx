@@ -8,7 +8,7 @@ import Link from 'next/link'
 import { allHospitals, featuredHospitalIds } from '@/lib/constants'
 
 const FeaturedHospitals: React.FC = () => {
-  const { localePath } = useLanguage()
+  const { localePath, t } = useLanguage()
   const featuredHospitals = featuredHospitalIds
     .map(id => allHospitals.find(h => h.id === id))
     .filter((h): h is NonNullable<typeof h> => h != null)
@@ -18,13 +18,13 @@ const FeaturedHospitals: React.FC = () => {
       <div className="section-container">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <span className="text-accent font-semibold text-sm tracking-wider uppercase">
-            Hospital Network
+            {t('treatments.hospitalNetwork')}
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mt-4 mb-6">
-            Trusted Hospitals
+            {t('treatments.featuredTitle')}
           </h2>
           <p className="text-gray-600 text-lg">
-            China&apos;s top-ranked public hospitals with dedicated international departments
+            {t('treatments.featuredSubtitle')}
           </p>
         </div>
 
@@ -84,7 +84,7 @@ const FeaturedHospitals: React.FC = () => {
                   href={localePath('/why-shanghai')}
                   className="inline-flex items-center gap-2 text-accent font-medium text-sm hover:gap-3 transition-all"
                 >
-                  Learn More
+                  {t('treatments.learnMore')}
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>

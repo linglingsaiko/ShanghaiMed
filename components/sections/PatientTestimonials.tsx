@@ -2,24 +2,25 @@
 
 import React from 'react'
 import { Star } from 'lucide-react'
+import { useLanguage } from '@/contexts/LanguageContext'
 import Card from '../ui/Card'
 import { patientTestimonials, socialProofStats } from '@/lib/constants'
 
 const PatientTestimonials: React.FC = () => {
+  const { t } = useLanguage()
   return (
     <section className="py-20 lg:py-28 bg-white">
       <div className="section-container">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-accent font-semibold text-sm tracking-wider uppercase">
-            Success Stories
+            {t('testimonials.badge')}
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mt-4 mb-6">
-            What Our Patients Say
+            {t('testimonials.title')}
           </h2>
           <p className="text-gray-600 text-lg">
-            Real stories from real patients who transformed their health journey
-            with us.
+            {t('testimonials.subtitle')}
           </p>
         </div>
 
@@ -71,7 +72,7 @@ const PatientTestimonials: React.FC = () => {
                   {testimonial.treatment}
                 </span>
                 <span className="text-accent font-semibold">
-                  Saved {testimonial.savings}
+                  {t('testimonials.saved')} {testimonial.savings}
                 </span>
               </div>
             </Card>

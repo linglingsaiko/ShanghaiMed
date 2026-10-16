@@ -85,7 +85,7 @@ export default function RootLayout({
         <LanguageProvider>
           <HtmlLangDirSetter />
           <Header />
-          <main>{children}</main>
+          <main dir="ltr">{children}</main>
           <Footer />
           <WhatsAppFloat />
           <AgentChat />

@@ -188,6 +188,9 @@ const enTranslations = {
       modalPublicGradeA: 'Public Grade-A',
       modalInternationalPrivate: 'International Private',
       modalIns: 'Ins:',
+      featuredTitle: 'Trusted Hospitals',
+      featuredSubtitle: "China's top-ranked public hospitals with dedicated international departments",
+      learnMore: 'Learn More',
     },
     howItWorks: {
       title: 'Five Simple Steps',
@@ -209,6 +212,13 @@ const enTranslations = {
         { title: 'Receive Care', description: 'Your trilingual nurse provides in-person support throughout consultations, examinations, and treatment.' },
         { title: 'Follow-Up Care', description: 'We assist with medical records, follow-up appointments, prescription coordination, and remote consultations.' },
       ],
+    },
+    trust: {
+      badge: 'Why Choose Us',
+      title: 'Your Trusted Medical Tourism Partner',
+      subtitle: "We provide professional, transparent, and reliable medical tourism services in Shanghai. Here's what sets us apart.",
+      ctaText: 'Ready to experience professional medical tourism services?',
+      ctaButton: 'Start Your Medical Tourism',
     },
     pricing: {
       badge: 'Pricing',
@@ -981,7 +991,7 @@ export const translations: Record<Language, any> = {
     },
     hero: {
       badge1: 'مستشفيات التأمين الدولي',
-      badge2: 'ممرضات مسجلات ثلاثيات اللغة',
+      badge2: 'ممرضات مسجلات يتحدثن ثلاث لغات',
       badge3: 'دعم AI + بشري على مدار الساعة',
       title: 'الرعاية الصحية في شنغهاي',
       titleHighlight: 'مصممة حولك',
@@ -1007,8 +1017,21 @@ export const translations: Record<Language, any> = {
       transportation: 'ترتيبات النقل',
       medicalReports: 'ترجمة التقارير الطبية',
       emergencySupport: 'الدعم الطارئ',
-      services: enTranslations.careTeam.services,
-      credentials: enTranslations.careTeam.credentials,
+      services: [
+        { title: 'استشارة ما قبل العلاج', desc: 'مراجعة السجلات الطبية وشرح الإجراءات والتنسيق مع أطباء المستشفى المختصين.' },
+        { title: 'جدولة المواعيد', desc: 'ترتيب استشارات الأطباء والفحوصات التشخيصية وجلسات العلاج.' },
+        { title: 'الترجمة والتفسير', desc: 'ترجمة طبية فورية أثناء الاستشارات والإجراءات.' },
+        { title: 'الإرشاد داخل المستشفى', desc: 'مرافقتك في إجراءات القبول والخروج والدفع.' },
+        { title: 'دعم الخروج من المستشفى', desc: 'إرشادات الأدوية ومواعيد المتابعة وترجمة التقارير الطبية.' },
+        { title: 'دعم التأمين', desc: 'تقديم دعم إداري للتحقق من مزايا بوليصة التأمين وتأكيد تغطية المستشفى للتأمين.' },
+      ],
+      credentials: [
+        { title: 'ممرضات مسجلات مرخصات (RN)', desc: 'موثقات من هيئة الصحة بشنغهاي' },
+        { title: 'شهادة ثلاثية اللغة', desc: 'إجادة اليابانية والإنجليزية والصينية' },
+        { title: 'شهادة JLPT N1', desc: 'اختبار الكفاءة في اللغة اليابانية (المستوى الأعلى)' },
+        { title: 'الترجمة الطبية', desc: 'دعم ترجمة المستندات الطبية والترجمة الفورية في الموقع' },
+        { title: 'رعاية المرضى الدوليين', desc: 'خبرة تزيد على 5 سنوات' },
+      ],
     },
     pricing: {
       badge: 'الأسعار',
@@ -1163,7 +1186,210 @@ export const translations: Record<Language, any> = {
       howItWorksTitle: 'كيف يعمل',
       howItWorksSubtitle: 'عمليتنا المبسطة تجعل الوصول إلى الرعاية الصحية العالمية في شنغهاي سهلاً.',
       faqTitle: 'الأسئلة الشائعة',
-      faqSubtitle: 'كل ما تحتاج معرفته عن تلقي الرعاية الطبية في شنغهاي — التكاليف وجودة المستشفيات والتأمينات والدعم ثنائي اللغة.',
+      faqSubtitle: 'كل ما تحتاج معرفته عن تلقي الرعاية الطبية في شنغهاي — التكاليف وجودة المستشفيات والتأشيرات والتأمين والدعم ثنائي اللغة.',
+    },
+    // ── Why Shanghai (GLM→DS→K3 final) ──
+    whyShanghai: {
+      badge: 'لماذا شنغهاي',
+      title: 'رعاية صحية عالمية المستوى، مُيسَّرة للمرضى الدوليين',
+      subtitle: 'تتيح شنغهاي الوصول إلى مستشفيات رائدة وأطباء مختصين ذوي خبرة وأسعار شفافة ودعم شخصي للمرضى الدوليين.',
+      stats: [
+        { value: '73,000+', label: 'زيارات المرضى الدوليين إلى شنغهاي سنوياً' },
+        { value: '14', label: 'مستشفيات حكومية من الفئة 3A معتمدة في برامج السياحة الطبية التجريبية' },
+        { value: '90+', label: 'عدد الجنسيات التي نخدمها' },
+        { value: '25%', label: 'النمو السنوي' },
+      ],
+      healthSystem: {
+        title: 'نظام صحي معترف به دولياً',
+        items: [
+          'مستشفيات رائدة تخدم مرضى من جميع أنحاء العالم',
+          'أقسام دولية مخصصة تقدم خدماتها باللغة الإنجليزية',
+          'مستشفيات حكومية من الفئة 3A معتمدة لتقديم الخدمات الطبية الدولية',
+          'الوصول إلى أطباء مختصين في علاج الأورام وأمراض القلب والأعصاب وجراحة العظام وعلاج الخصوبة وغيرها',
+        ],
+      },
+      travelAccess: {
+        title: 'سهولة السفر والوصول إلى الرعاية الطبية',
+        items: [
+          'إمكانية العبور بدون تأشيرة لمدة 240 ساعة لمسافري العديد من الدول',
+          'دعم تأشيرة العلاج الطبي لخطط العلاج الممتدة',
+          'الاستقبال من المطار والمساعدة في التنقلات',
+          'تنسيق شامل من البداية إلى النهاية طوال رحلتك الصحية',
+        ],
+      },
+      pricing: {
+        title: 'رعاية صحية عالية الجودة بأسعار تنافسية',
+        subtitleLine1: 'لا يزال العديد من المرضى في الولايات المتحدة يواجهون تكاليف طبية كبيرة يدفعونها من جيوبهم رغم امتلاكهم تأميناً صحياً.',
+        subtitleLine2: 'تعكس الأرقام التكاليف النموذجية المدفوعة مباشرة من المريض، وقد تختلف حسب مقدم الخدمة والموقع الجغرافي وتغطية التأمين وخطة العلاج.',
+        tableService: 'الخدمة',
+        tableShanghai: 'شنغهاي',
+        tableUs: 'التكلفة النموذجية في الولايات المتحدة',
+        rows: [
+          { service: 'الفحص الصحي التنفيذي الشامل', shanghai: 'ابتداءً من 700 دولار', us: 'ابتداءً من 2,500 دولار' },
+          { service: 'فحص الرنين المغناطيسي', shanghai: 'ابتداءً من 300 دولار', us: 'ابتداءً من 1,000 دولار' },
+          { service: 'فحص التصوير المقطعي', shanghai: 'ابتداءً من 150 دولار', us: 'ابتداءً من 500 دولار' },
+          { service: 'استشارة طبيب مختص', shanghai: 'ابتداءً من 70 دولار', us: 'ابتداءً من 250 دولار' },
+          { service: 'علاج أطفال الأنابيب', shanghai: 'ابتداءً من 4,200 دولار', us: 'ابتداءً من 15,000 دولار' },
+          { service: 'زراعة الأسنان', shanghai: 'ابتداءً من 800 دولار', us: 'ابتداءً من 3,000 دولار' },
+        ],
+        valueTitle: 'لماذا يجد المرضى قيمة حقيقية في شنغهاي',
+        valueItems: [
+          'الوصول إلى مستشفيات وأطباء مختصين رائدين',
+          'أسعار شفافة قبل بدء العلاج',
+          'وصول أسرع للاستشارات والفحوصات والعلاج',
+          'تكاليف طبية أقل تُدفع مباشرة من المريض',
+          'دعم شخصي ثنائي اللغة طوال رحلة المريض',
+        ],
+        notesTitle: 'ملاحظات هامة',
+        notes: [
+          'الأسعار مذكورة لأغراض التوضيح فقط ولا تُعتبر عرض سعر رسمياً.',
+          'تُحدد الرسوم الطبية الفعلية من قبل المستشفى والطبيب المعالج وخطة العلاج.',
+          'تعكس الأسعار الأمريكية التكاليف النموذجية للدفع الذاتي وقد تختلف بشكل كبير حسب تغطية التأمين والموقع الجغرافي.',
+          'أسعار الصرف مذكورة للاسترشاد فقط وقد تتغير.',
+          'تتطلب حالات العلاج المعقدة والجراحات ورعاية الأورام والخدمات الإقامية عرضاً سعرياً فردياً بعد المراجعة الطبية.',
+        ],
+      },
+    },
+    // ── Process Flow ─
+    processFlow: {
+      badge: 'رحلتك',
+      title: 'من الاستفسار إلى الرعاية',
+      subtitle: 'جدول زمني كامل لتجربتك في السياحة الطبية بشنغهاي، مع دعم مهني في كل خطوة.',
+      phases: [
+        {
+          title: 'قبل وصولك',
+          items: [
+            { title: 'استفسار عبر الإنترنت', desc: 'يرد المساعد الذكي فوراً' },
+            { title: 'تقييم طبي', desc: 'جمع الأعراض والتوصية بالمستشفيات' },
+            { title: 'تقدير التكلفة', desc: 'أسعار شفافة للاستشارة والفحوصات الأساسية' },
+            { title: 'التأشيرة والسفر', desc: 'إرشادات العبور بدون تأشيرة لمدة 240 ساعة ونصائح السفر' },
+          ],
+        },
+        {
+          title: 'أثناء زيارتك',
+          items: [
+            { title: 'الاستقبال من المطار', desc: 'تستقبلك ممرضة تتحدث ثلاث لغات' },
+            { title: 'زيارة المستشفى', desc: 'استشارة وفحوصات برفقة ممرضة' },
+            { title: 'العلاج', desc: 'رعاية عالمية المستوى في مستشفيات رائدة' },
+            { title: 'الرعاية الإقامية', desc: 'دعم تمريضي مخصص (عند الحاجة)' },
+          ],
+        },
+        {
+          title: 'بعد زيارتك',
+          items: [
+            { title: 'الخروج والترجمة', desc: 'تقارير طبية باللغة الإنجليزية' },
+            { title: 'المتابعة', desc: 'دعم عن بُعد وتنسيق الوصفات الطبية' },
+          ],
+        },
+      ],
+    },
+    // ── Testimonials UI ──
+    testimonials: {
+      badge: 'قصص نجاح',
+      title: 'ماذا يقول مرضانا',
+      subtitle: 'قصص حقيقية من مرضى حقيقيين غيّروا مسارهم الصحي معنا.',
+      patientsServed: 'مرضى تمت خدمتهم',
+      countries: 'دولة',
+      satisfactionRate: 'نسبة الرضا',
+      totalSavings: 'إجمالي التوفير',
+      saved: 'تم توفيره',
+    },
+    // ── Treatments ──
+    treatments: {
+      title: 'مستشفيات شنغهاي الرائدة',
+      subtitle: 'الوصول إلى مستشفيات رائدة في مختلف مناطق شنغهاي، مع توصيات مصممة وفق احتياجاتك الطبية.',
+      hospitalNetwork: 'شبكة المستشفيات',
+      publicHospitals: 'المستشفيات الحكومية من الفئة 3A',
+      privateHospitals: 'المستشفيات الدولية الخاصة',
+      viewAll: 'عرض جميع المستشفيات',
+      keyDepartments: 'الأقسام الرئيسية',
+      certifications: 'الشهادات الدولية',
+      insurance: 'التأمين:',
+      all: 'الكل',
+      modalAllHospitals: 'جميع المستشفيات',
+      modalHospitalsAvailable: 'مستشفى متاح',
+      modalAll: 'جميع المستشفيات',
+      modalPublicGradeA: 'حكومي من الفئة 3A',
+      modalInternationalPrivate: 'دولي خاص',
+      modalIns: 'التأمين:',
+      featuredTitle: 'مستشفيات موثوقة',
+      featuredSubtitle: 'أفضل المستشفيات الحكومية الصينية مع أقسام دولية مخصصة',
+      learnMore: 'اقرأ المزيد',
+    },
+    // ── How It Works ──
+    howItWorks: {
+      title: 'خمس خطوات بسيطة',
+      subtitle: 'من استفسارك الأول إلى المتابعة بعد العلاج، ندعم كل خطوة في رحلتك الطبية بشنغهاي.',
+      badge: 'كيف يعمل',
+      simpleProcess: 'عملية بسيطة',
+      step1Title: 'استشارة المساعد الذكي',
+      step1Desc: 'يرد مساعدنا الذكي فوراً لفهم احتياجاتك.',
+      step2Title: 'تعيين فريق الرعاية',
+      step2Desc: 'تُعيَّن ممرضة خبيرة كمنسقة لرعايتك.',
+      step3Title: 'الوصول إلى شنغهاي',
+      step3Desc: 'دعم شامل يشمل النقل من المطار وحجز الفندق.',
+      step4Title: 'العلاج والتعافي',
+      step4Desc: 'تكامل سلس بين العلاج المتخصص والدعم ثلاثي اللغة والمتابعة بعد الرعاية.',
+      steps: [
+        { title: 'أرسل استفسارك', desc: 'املأ نموذج التواصل موضحاً احتياجاتك الطبية. مساعدنا الذكي متاح على مدار الساعة.' },
+        { title: 'تلقَّ الاستشارة', desc: 'خلال 24 ساعة، يوفر لك منسق بشري خيارات المستشفيات وتقديرات التكلفة.' },
+        { title: 'أكّد وسافر', desc: 'عندما تكون مستعداً للبدء، ننسق المواعيد وترتيبات السفر والدعم عند الوصول.' },
+        { title: 'تلقَّ الرعاية', desc: 'تقدم ممرضتك المتحدثة بثلاث لغات دعماً مباشراً طوال الاستشارات والفحوصات والعلاج.' },
+        { title: 'رعاية المتابعة', desc: 'نساعدك في السجلات الطبية ومواعيد المتابعة وتنسيق الوصفات الطبية والاستشارات عن بُعد.' },
+      ],
+    },
+    // ── Trust ──
+    trust: {
+      badge: 'لماذا تختارنا',
+      title: 'شريكك الموثوق في السياحة الطبية',
+      subtitle: 'نقدم خدمات سياحة طبية احترافية وشفافة وموثوقة في شنغهاي. إليك ما يميزنا.',
+      ctaText: 'هل أنت مستعد لتجربة خدمات سياحة طبية احترافية؟',
+      ctaButton: 'ابدأ سياحتك الطبية',
+    },
+    // ── Blog UI ──
+    blog: {
+      title: 'المدونة',
+      subtitle: 'اكتشف مقالات عن الرعاية الصحية في شنغهاي والسياحة الطبية والصحة العامة.',
+      filterContent: 'تصفية المحتوى',
+      searchPlaceholder: 'ابحث عن مقالات...',
+      search: 'بحث',
+      clearFilters: 'مسح عوامل التصفية',
+      categories: 'التصنيفات',
+      popularTags: 'الوسوم الشائعة',
+      noArticles: 'لا توجد مقالات تطابق معايير بحثك.',
+      minRead: 'دقيقة قراءة',
+      previous: 'السابق',
+      next: 'التالي',
+      home: 'الرئيسية',
+      blogNav: 'المدونة',
+      shareLabel: 'مشاركة:',
+      previousArticle: 'المقال السابق',
+      nextArticle: 'المقال التالي',
+      toc: 'جدول المحتويات',
+      tocHide: 'إخفاء',
+      tocShow: 'عرض',
+      subscribeTitle: 'الاشتراك في النشرة البريدية',
+      subscribeDesc: 'احصل على أحدث النصائح الصحية والتحديثات في بريدك الإلكتروني.',
+      emailPlaceholder: 'بريدك الإلكتروني',
+      subscribe: 'اشترك',
+      subscribed: '✓ تم الاشتراك بنجاح! شكراً لانضمامك إلى نشرتنا البريدية.',
+      shareArticle: 'شارك هذا المقال',
+      subscribeSuccessTitle: 'تم الاشتراك بنجاح!',
+      subscribeSuccessDesc: 'شكراً لاشتراكك في نشرتنا البريدية. ستتلقى أحدث النصائح الصحية والتحديثات.',
+      close: 'إغلاق',
+      alertEmailRequired: 'يرجى إدخال بريدك الإلكتروني',
+      alertSubscribeFail: 'فشل الاشتراك. يرجى المحاولة لاحقاً.',
+      alertError: 'حدث خطأ. يرجى المحاولة لاحقاً.',
+      pageHeaderTitle: 'مقالات صحية',
+      pageHeaderSubtitle: 'اكتشف مقالات عن السياحة الطبية والخدمات الصحية ونصائح العافية في شنغهاي',
+      relatedArticles: 'مقالات ذات صلة',
+      recommendedHospitals: 'مستشفيات موصى بها',
+      learnMore: 'اقرأ المزيد',
+      insurancePartnersLabel: 'شركاء التأمين',
+      bookTitle: 'احجز استشارة مجانية',
+      bookDesc: 'منسقونا الطبيون جاهزون لمساعدتك في اختيار المستشفى وخيارات العلاج وترتيبات السفر.',
+      whatsappConsult: 'استشارة عبر WhatsApp',
+      requestQuote: 'اطلب عرض سعر',
     },
   },
   // ── Russian (standard, CIS/Central Asia) ── UI strings only; medical/legal/price text falls back to en (YMYL) ──
@@ -1594,10 +1820,9 @@ export function LanguageProvider({ children, locale }: { children: ReactNode; lo
     document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr'
   }, [language])
 
-  // 非 YMYL 区块：纯 UI/导航/联系类，允许 ar/ru/mn 机器翻译直接显示
-  // 其余区块（医疗实质内容、价格、医院信息、资质、证言、FAQ 答案）一律 fallback 英文，
-  // 待母语审校后再逐区块放开
-  const MACHINE_TRANSLATABLE_SECTIONS = ['nav', 'insights', 'blog', 'contact', 'footer', 'agentChat']
+  // ar: 全量阿拉伯语翻译（经 GLM→DS→K3 三模型交叉验证 + 海湾本地化终审）
+  // ru/mn: 仅白名单区块显示机器翻译，其余 YMYL 内容 fallback 英文
+  const MACHINE_TRANSLATABLE_SECTIONS = ['nav', 'whyShanghai', 'processFlow', 'careTeam', 'hero', 'testimonials', 'treatments', 'howItWorks', 'trust', 'pricing', 'insights', 'blog', 'faq', 'contact', 'footer', 'agentChat', 'pages']
 
   const resolveKey = (key: string): any => {
     const keys = key.split('.')

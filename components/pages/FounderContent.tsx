@@ -14,7 +14,7 @@ interface ExperienceItem {
   detail: string
 }
 
-const credentialsData: Record<'en' | 'ja' | 'ar', Credential[]> = {
+const credentialsData: Record<'en' | 'ja' | 'ar' | 'ru', Credential[]> = {
   en: [
     {
       title: 'ISPN — International Standards for Professional Nurses',
@@ -81,9 +81,31 @@ const credentialsData: Record<'en' | 'ja' | 'ar', Credential[]> = {
       category: 'رخصة تمريض',
     },
   ],
+  ru: [
+    {
+      title: 'ISPN — Международные стандарты для профессиональных медсестёр',
+      detail: 'Международная сертификация для дипломированных медсестёр, выдается Международным обществом медсестёр в области онкологической помощи и связанными организациями',
+      category: 'Медицинская лицензия',
+    },
+    {
+      title: 'Медсестра высшей категории (主管护师)',
+      detail: 'Высшее профессиональное звание в национальной китайской системе квалификации медицинских работников, присуждается Шанхайской муниципальной комиссией по здравоохранению',
+      category: 'Профессиональное звание',
+    },
+    {
+      title: 'JLPT N1 — Экзамен по японскому языку, уровень N1',
+      detail: 'Высший уровень сертификации японского языка, выдается Japan Foundation и Japan Educational Exchanges and Services',
+      category: 'Языковой сертификат',
+    },
+    {
+      title: 'Дипломированная медсестра (RN), Китай',
+      detail: 'Лицензия выдана Шанхайской муниципальной комиссией по здравоохранению',
+      category: 'Медицинская лицензия',
+    },
+  ],
 }
 
-const experienceData: Record<'en' | 'ja' | 'ar', ExperienceItem[]> = {
+const experienceData: Record<'en' | 'ja' | 'ar' | 'ru', ExperienceItem[]> = {
   en: [
     {
       area: 'International Patient Coordination',
@@ -136,6 +158,24 @@ const experienceData: Record<'en' | 'ja' | 'ar', ExperienceItem[]> = {
     {
       area: 'عمليات السياحة العلاجية',
       detail: 'بنيت مسارات تشغيلية تشمل إرشاد التأشيرات، والدفع المباشر للتأمين (Cigna وAllianz وAXA وBupa)، وتنسيق الإقامة، ودعم المرضى بالذكاء الاصطناعي على مدار الساعة عبر Navi، موجّهتنا الطبية.',
+    },
+  ],
+  ru: [
+    {
+      area: 'Координация международных пациентов',
+      detail: 'Координировала комплексные лечебные поездки для пациентов из стран Ближнего Востока, Юго-Восточной Азии, Европы, Северной Америки и других регионов — от первичной консультации до выписки и послеоперационного наблюдения.',
+    },
+    {
+      area: 'Сопровождение в больницах и медицинский перевод',
+      detail: 'Обеспечивала устный медицинский перевод на английский, японский и китайский языки для международных пациентов в шанхайских больницах высшей категории 3A (三甲). Дополнительные языки — через проверенных профессиональных переводчиков.',
+    },
+    {
+      area: 'Операционное управление в премиальной медицине',
+      detail: 'Более 10 лет операционного управления в ведущих частных медицинских учреждениях Шанхая — проектирование маршрутов лечения, оптимизация пациентского опыта и координация межотделенческих медицинских программ.',
+    },
+    {
+      area: 'Операции медицинского туризма',
+      detail: 'Выстроила операционные процессы: консультации по визам, прямое страховое урегулирование (Cigna, Allianz, AXA, Bupa), организация проживания и круглосуточная ИИ-поддержка пациентов через нашего медицинского навигатора Navi.',
     },
   ],
 }
@@ -231,12 +271,42 @@ const text = {
     ctaBody: 'すべてのメッセージに私自身が目を通しています。営業チームも台本もありません。',
     ctaButton: 'お問い合わせ',
   },
+  ru: {
+    role: 'Основатель и главный консьерж',
+    intro:
+      'Дипломированная медсестра с международной сертификацией ISPN, медсестра высшей категории и основатель ShanghaiMed. Более десяти лет практического опыта в операционном управлении премиальной медициной и сопровождении международных пациентов в системе здравоохранения Шанхая — от плановых консультаций до координации сложных хирургических операций.',
+    whyTitle: 'Почему я основала ShanghaiMed',
+    whyP1:
+      'Более десяти лет я работала внутри шанхайской системы премиальной медицины — координировала лечение международных пациентов, проходила вместо них больничную бюрократию и видела одни и те же предотвратимые проблемы: пациенты приезжают без переведённых медицинских записей, попадают не в то отделение, переплачивают за ненужные услуги или уезжают, не понимая собственных инструкций по выписке.',
+    whyP2:
+      'Больницы были превосходны. Проблема никогда не заключалась в качестве медицины — она была в отсутствии человека, который понимает и клиническую сторону, и сторону пациента и способен соединить их на родном языке пациента.',
+    whyP3:
+      'ShanghaiMed существует, чтобы закрыть этот разрыв. Мы берём прозрачную сервисную плату, не получаем комиссий от больниц и относимся к каждому пациенту так, как я относилась бы к члену семьи, попадающему в незнакомую систему в чужой стране.',
+    credentialsTitle: 'Профессиональные квалификации',
+    verifiedTitle: 'Подтверждённые сертификаты',
+    nurseCertName: 'Сертификат права осуществления медсестринской практики',
+    ispnCertName: 'Сертификат об успешном прохождении ISPN',
+    certFootnote: 'Нажмите, чтобы просмотреть подтверждённые квалификации. Конфиденциальная информация скрыта для защиты персональных данных.',
+    experienceTitle: 'Сфера опыта',
+    companyTitle: 'О компании',
+    companyP1:
+      'ShanghaiMed управляется компанией Shanghai Keling Information Technology Co., Ltd., зарегистрированной в Шанхае, Китай.',
+    companyP2:
+      'Мы — полноценный фасилитатор медицинского туризма, а не брокер. Мы берём с пациентов прозрачную плату за консьерж-услуги и не получаем никаких комиссий от больниц. Медицинские счета оплачиваются напрямую больнице по её собственным опубликованным тарифам.',
+    registeredName: 'Зарегистрированное наименование',
+    registeredAddress: 'Юридический адрес',
+    legalRepresentative: 'Законный представитель',
+    languages: 'Языки',
+    ctaTitle: 'Есть вопрос?',
+    ctaBody: 'Я лично читаю каждое сообщение. Никаких отделов продаж и готовых скриптов.',
+    ctaButton: 'Связаться с нами',
+  },
 }
 
 export default function FounderContent() {
   const { language } = useLanguage()
-  // ja/ar fully translated; ru/mn fall back to English (YMYL)
-  const lang = language === 'ja' ? 'ja' : language === 'ar' ? 'ar' : 'en'
+  // ja/ar/ru fully translated; mn falls back to English (YMYL)
+  const lang = language === 'ja' ? 'ja' : language === 'ar' ? 'ar' : language === 'ru' ? 'ru' : 'en'
   const t = text[lang]
   const credentials = credentialsData[lang]
   const experience = experienceData[lang]
@@ -315,7 +385,7 @@ export default function FounderContent() {
                 <div>
                   <p className="text-sm font-medium text-gray-900">{t.nurseCertName}</p>
                   <p className="text-xs text-gray-500">
-                    {language === 'ja' ? '上海市衛生健康委員会' : language === 'ar' ? 'لجنة شنغهاي البلدية للصحة' : 'Shanghai Municipal Health Commission'}
+                    {language === 'ja' ? '上海市衛生健康委員会' : language === 'ar' ? 'لجنة شنغهاي البلدية للصحة' : language === 'ru' ? 'Шанхайская муниципальная комиссия по здравоохранению' : 'Shanghai Municipal Health Commission'}
                   </p>
                 </div>
                 <svg className="w-4 h-4 text-gray-400 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -371,12 +441,11 @@ export default function FounderContent() {
             <div>
               <dt className="font-medium text-gray-900">{t.registeredName}</dt>
               <dd>Shanghai Keling Information Technology Co., Ltd.</dd>
-              <dd>Shanghai Keling Information Technology Co., Ltd.</dd>
             </div>
             <div>
               <dt className="font-medium text-gray-900">{t.registeredAddress}</dt>
-              <dd>{language === 'ja' ? '長陽路2555号1階101室' : language === 'ar' ? 'الغرفة 101، الطابق الأول، رقم 2555 طريق تشانغيانغ' : 'Room 101, Floor 1, No. 2555 Changyang Road'}</dd>
-              <dd>{language === 'ja' ? '中国上海市楊浦区' : language === 'ar' ? 'منطقة يانغبو، شنغهاي، الصين' : 'Yangpu District, Shanghai, China'}</dd>
+              <dd>{language === 'ja' ? '長陽路2555号1階101室' : language === 'ar' ? 'الغرفة 101، الطابق الأول، رقم 2555 طريق تشانغيانغ' : language === 'ru' ? 'Комната 101, 1-й этаж, д. 2555, дорога Чанъян' : 'Room 101, Floor 1, No. 2555 Changyang Road'}</dd>
+              <dd>{language === 'ja' ? '中国上海市楊浦区' : language === 'ar' ? 'منطقة يانغبو، شنغهاي، الصين' : language === 'ru' ? 'район Янпу, Шанхай, Китай' : 'Yangpu District, Shanghai, China'}</dd>
             </div>
             <div>
               <dt className="font-medium text-gray-900">{t.legalRepresentative}</dt>
@@ -384,7 +453,7 @@ export default function FounderContent() {
             </div>
             <div>
               <dt className="font-medium text-gray-900">{t.languages}</dt>
-              <dd>{language === 'ja' ? '英語・中国語・日本語' : language === 'ar' ? 'الإنجليزية، الصينية، اليابانية' : 'English, 中文, 日本語'}</dd>
+              <dd>{language === 'ja' ? '英語・中国語・日本語' : language === 'ar' ? 'الإنجليزية، الصينية، اليابانية' : language === 'ru' ? 'английский, китайский, японский' : 'English, 中文, 日本語'}</dd>
             </div>
           </div>
         </section>

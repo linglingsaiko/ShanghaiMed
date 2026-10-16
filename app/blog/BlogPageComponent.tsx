@@ -29,7 +29,7 @@ export default function BlogPageComponent({ searchParams }: BlogPageComponentPro
         category: searchParams.category,
         tag: searchParams.tag,
         search: searchParams.search,
-      }, undefined, language === 'ja' ? 'ja' : language === 'ar' ? 'ar' : undefined)
+      }, undefined, language === 'ja' ? 'ja' : language === 'ar' ? 'ar' : language === 'ru' ? 'ru' : undefined)
       setPosts(result.posts)
       setTotalPages(result.totalPages)
       setLoading(false)

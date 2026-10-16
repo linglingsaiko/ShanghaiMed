@@ -6,6 +6,8 @@ import { legalEn, legalContact } from '@/lib/content/legal.en'
 import { editorialEn } from '@/lib/content/editorial.en'
 import { legalAr, legalArContact } from '@/lib/content/legal.ar'
 import { editorialAr } from '@/lib/content/editorial.ar'
+import { legalRu, legalRuContact } from '@/lib/content/legal.ru'
+import { editorialRu } from '@/lib/content/editorial.ru'
 import type { LegalDoc } from '@/lib/content/types'
 
 type DocKey = 'privacy' | 'terms' | 'refund' | 'editorial'
@@ -22,6 +24,13 @@ const arDocs: Record<DocKey, LegalDoc> = {
   terms: legalAr.terms,
   refund: legalAr.refund,
   editorial: editorialAr,
+}
+
+const ruDocs: Record<DocKey, LegalDoc> = {
+  privacy: legalRu.privacy,
+  terms: legalRu.terms,
+  refund: legalRu.refund,
+  editorial: editorialRu,
 }
 
 // Localize the contact block (company kept in English; address + label translated)
@@ -42,7 +51,10 @@ export default function LegalContent({ docKey }: { docKey: DocKey }) {
   if (language === 'ar') {
     return <LegalDocView doc={withLocalizedContact(arDocs[docKey], legalArContact)} />
   }
-  // en / ja / ru / mn all fall back to the authoritative English legal text
+  if (language === 'ru') {
+    return <LegalDocView doc={withLocalizedContact(ruDocs[docKey], legalRuContact)} />
+  }
+  // en / ja / mn all fall back to the authoritative English legal text
   return (
     <LegalDocView
       doc={withLocalizedContact(enDocs[docKey], {

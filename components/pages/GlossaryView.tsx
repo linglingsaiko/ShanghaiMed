@@ -3,16 +3,18 @@
 import { useLanguage } from '@/contexts/LanguageContext'
 import { glossaryEn, glossaryEnUi } from '@/lib/content/glossary.en'
 import { glossaryAr, glossaryArCategories, glossaryArUi, type GlossaryTerm } from '@/lib/content/glossary.ar'
+import { glossaryRu, glossaryRuCategories, glossaryRuUi } from '@/lib/content/glossary.ru'
 
 export default function GlossaryView() {
   const { language, localePath } = useLanguage()
   const isAr = language === 'ar'
-  const terms: GlossaryTerm[] = isAr ? glossaryAr : glossaryEn
-  const ui = isAr ? glossaryArUi : glossaryEnUi
+  const isRu = language === 'ru'
+  const terms: GlossaryTerm[] = isAr ? glossaryAr : isRu ? glossaryRu : glossaryEn
+  const ui = isAr ? glossaryArUi : isRu ? glossaryRuUi : glossaryEnUi
 
   // Preserve the declared category order.
-  const categories = isAr
-    ? glossaryArCategories.filter(c => terms.some(t => t.category === c))
+  const categories = isAr || isRu
+    ? [...(isAr ? glossaryArCategories : glossaryRuCategories)].filter(c => terms.some(t => t.category === c))
     : Array.from(new Set(terms.map(t => t.category)))
 
   return (
@@ -23,7 +25,7 @@ export default function GlossaryView() {
           <p className="text-sm text-teal-600 font-medium mb-2">{ui.badge}</p>
           <h1 className="text-4xl font-bold text-gray-900 mb-4">{ui.title}</h1>
           <p className="text-lg text-gray-600">
-            {isAr ? glossaryArUi.intro(terms.length) : `${terms.length} ${glossaryEnUi.intro}`}
+            {isAr ? glossaryArUi.intro(terms.length) : `${terms.length} ${ui.intro}`}
           </p>
           <p className="text-sm text-gray-500 mt-4">{ui.lastReviewed}</p>
         </div>

@@ -181,44 +181,22 @@ function renderMarkdownToHtml(content: string): string {
   return html
 }
 
-// 日語版記事（slug.ja.md）で上書き読込（lang='ja' 時、ファイルが存在すれば）
-function applyJaOverride(post: BlogPost, id: string): BlogPost {
-  const jaPath = path.join(postsDirectory, id + '.ja.md')
+// Localized override (slug.{lang}.md) — loads the localized copy if the file exists
+function applyLangOverride(post: BlogPost, id: string, lang: string): BlogPost {
+  const langPath = path.join(postsDirectory, `${id}.${lang}.md`)
   try {
-    if (!fs.existsSync(jaPath)) return post
-    const jaContents = fs.readFileSync(jaPath, 'utf8')
-    const jaMatter = matter(jaContents)
+    if (!fs.existsSync(langPath)) return post
+    const langContents = fs.readFileSync(langPath, 'utf8')
+    const langMatter = matter(langContents)
     return {
       ...post,
-      title: jaMatter.data.title || post.title,
-      excerpt: jaMatter.data.excerpt || post.excerpt,
-      content: jaMatter.content || post.content,
-      htmlContent: renderMarkdownToHtml(jaMatter.content || ''),
-      readingTime: calculateReadingTime(jaMatter.content || ''),
-      seoTitle: jaMatter.data.seoTitle || post.seoTitle,
-      metaDescription: jaMatter.data.metaDescription || post.metaDescription,
-    } as BlogPost
-  } catch {
-    return post
-  }
-}
-
-// Arabic override (slug.ar.md)
-function applyArOverride(post: BlogPost, id: string): BlogPost {
-  const arPath = path.join(postsDirectory, id + '.ar.md')
-  try {
-    if (!fs.existsSync(arPath)) return post
-    const arContents = fs.readFileSync(arPath, 'utf8')
-    const arMatter = matter(arContents)
-    return {
-      ...post,
-      title: arMatter.data.title || post.title,
-      excerpt: arMatter.data.excerpt || post.excerpt,
-      content: arMatter.content || post.content,
-      htmlContent: renderMarkdownToHtml(arMatter.content || ''),
-      readingTime: calculateReadingTime(arMatter.content || ''),
-      seoTitle: arMatter.data.seoTitle || post.seoTitle,
-      metaDescription: arMatter.data.metaDescription || post.metaDescription,
+      title: langMatter.data.title || post.title,
+      excerpt: langMatter.data.excerpt || post.excerpt,
+      content: langMatter.content || post.content,
+      htmlContent: renderMarkdownToHtml(langMatter.content || ''),
+      readingTime: calculateReadingTime(langMatter.content || ''),
+      seoTitle: langMatter.data.seoTitle || post.seoTitle,
+      metaDescription: langMatter.data.metaDescription || post.metaDescription,
     } as BlogPost
   } catch {
     return post
@@ -234,7 +212,7 @@ export function getSortedPosts(lang?: string): BlogPost[] {
   }
   
   const allPostsData = fileNames
-    .filter(fileName => fileName.endsWith('.md') && !fileName.endsWith('.ja.md') && !fileName.endsWith('.ar.md'))
+    .filter(fileName => fileName.endsWith('.md') && !/\.(ja|ar|ru)\.md$/.test(fileName))
     .map(fileName => {
       const id = fileName.replace(/\.md$/, '')
       const fullPath = path.join(postsDirectory, fileName)
@@ -267,7 +245,7 @@ export function getSortedPosts(lang?: string): BlogPost[] {
         featured: matterResult.data.featured || false,
       } as BlogPost
       
-      return lang === 'ja' ? applyJaOverride(post, id) : lang === 'ar' ? applyArOverride(post, id) : post
+      return lang && lang !== 'en' ? applyLangOverride(post, id, lang) : post
     })
   
   return allPostsData.sort((a, b) => {
@@ -319,7 +297,7 @@ export function getPostSlugs(): string[] {
     return []
   }
   return fileNames
-    .filter(fileName => fileName.endsWith('.md') && !fileName.endsWith('.ja.md') && !fileName.endsWith('.ar.md'))
+    .filter(fileName => fileName.endsWith('.md') && !/\.(ja|ar|ru)\.md$/.test(fileName))
     .map(fileName => fileName.replace(/\.md$/, ''))
 }
 

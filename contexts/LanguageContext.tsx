@@ -465,6 +465,47 @@ const enTranslations = {
       faqTitle: 'Frequently Asked Questions',
       faqSubtitle: 'Everything you need to know about receiving medical care in Shanghai — costs, hospital quality, visas, insurance, and bilingual support.',
     },
+
+  // ── Medical Disclaimer (legal) ──
+  medicalDisclaimer: {
+    title: 'Medical Disclaimer',
+    lastUpdated: 'Last updated: October 12, 2026',
+    warning: 'ShanghaiMed is not a hospital, clinic or medical provider. We do not provide medical diagnosis, treatment, prescriptions or medical advice.',
+    whatWeAre: {
+      heading: 'What we are',
+      content: 'ShanghaiMed (operated by Shanghai Keling Information Technology Co., Ltd.) is a medical travel coordination and patient-navigation service. We help international patients plan and navigate medical visits to licensed public hospitals and specialists in Shanghai, China. Our role is logistical, linguistic and administrative.',
+    },
+    whatWeDoNotDo: {
+      heading: 'What we do not do',
+      item1: 'We do not diagnose medical conditions.',
+      item2: 'We do not prescribe medication.',
+      item3: 'We do not perform or direct medical procedures or treatments.',
+      item4: 'We do not guarantee clinical outcomes, waiting times, or the success of any treatment.',
+      item5: 'We are not a substitute for the professional judgement of a licensed physician.',
+    },
+    clinicalResponsibility: {
+      heading: 'Clinical responsibility',
+      content: 'All clinical decisions — including diagnosis, treatment plans, prescriptions, surgery, testing and hospital admission — are made independently by the treating hospital and its licensed physicians under their own professional responsibility and Chinese medical licences. Hospital and treatment fees are paid by the patient directly to the hospital under the hospital\u2019s own terms.',
+    },
+    contentInformational: {
+      heading: 'Content is informational only',
+      content: 'Articles, cost estimates, doctor profiles, specialty information and other content on this Website are provided for general informational and planning purposes. They are not medical advice. Health information changes quickly, and individual cases differ; always rely on your treating physician for decisions about your care.',
+    },
+    emergencies: {
+      heading: 'Emergencies',
+      content: 'In a medical emergency, contact your local emergency services immediately. In mainland China, dial 120 for ambulance and emergency medical care.',
+    },
+    noGuarantee: {
+      heading: 'No hospital-physician guarantee',
+      content: 'We make reasonable efforts to match patients with qualified hospitals and specialists based on the information provided. However, hospital schedules change, specific doctors cannot always be guaranteed, and final treatment decisions rest with the hospital.',
+    },
+    contact: {
+      heading: 'Contact',
+      company: 'Shanghai Keling Information Technology Co., Ltd.',
+      address: 'Room 101, Floor 1, No. 2555 Changyang Road, Yangpu District, Shanghai, China',
+      email: 'hello@shanghaimedhealth.com',
+    },
+  },
 }
 
 export const translations: Record<Language, any> = {
@@ -1392,6 +1433,47 @@ export const translations: Record<Language, any> = {
       requestQuote: 'اطلب عرض سعر',
     },
   },
+
+  // ── Medical Disclaimer (legal) ──
+  medicalDisclaimer: {
+    title: 'إخلاء مسؤولية طبية',
+    lastUpdated: 'آخر تحديث: 12 أكتوبر 2026',
+    warning: 'ShanghaiMed ليست مستشفى أو عيادة أو جهة طبية مقدمة للخدمة. نحن لا نقدم التشخيص الطبي أو العلاج أو الوصفات الطبية أو الاستشارات الطبية.',
+    whatWeAre: {
+      heading: 'من نحن',
+      content: 'ShanghaiMed (تديرها شركة Shanghai Keling Information Technology Co., Ltd.) هي خدمة لتنسيق السفر الطبي وإرشاد المرضى. نساعد المرضى الدوليين على التخطيط للزيارات الطبية وإتمامها في المستشفيات العامة المرخصة ولدى الأخصائيين في شنغهاي بالصين. دورنا لوجستي ولغوي وإداري.',
+    },
+    whatWeDoNotDo: {
+      heading: 'ما لا نقدمه',
+      item1: 'نحن لا نُشخّص الحالات الطبية.',
+      item2: 'نحن لا نصف الأدوية.',
+      item3: 'نحن لا نُجري أو نُوجّه أي إجراءات أو علاجات طبية.',
+      item4: 'نحن لا نضمن النتائج السريرية أو أوقات الانتظار أو نجاح أي علاج.',
+      item5: 'نحن لا نُعدّ بديلاً عن الحكم المهني لطبيب مرخص.',
+    },
+    clinicalResponsibility: {
+      heading: 'المسؤولية السريرية',
+      content: 'تتخذ جميع القرارات السريرية — بما في ذلك التشخيص وخطط العلاج والوصفات الطبية والجراحة والفحوصات ودخول المستشفى — بشكل مستقل من قبل المستشفى المعالج وأطبائه المرخصين ضمن مسؤوليتهم المهنية الخاصة وتراخيصهم الطبية الصينية. يدفع المريض رسوم المستشفى والعلاج مباشرة إلى المستشفى وفق شروطها الخاصة.',
+    },
+    contentInformational: {
+      heading: 'المحتوى لأغراض معلوماتية فقط',
+      content: 'تُقدَّم المقالات وتقديرات التكاليف وملفات الأطباء ومعلومات التخصصات وغيرها من المحتويات على هذا الموقع لأغراض المعلومات العامة والتخطيط فقط، وهي ليست استشارة طبية. المعلومات الصحية تتغير بسرعة، وتختلف الحالات الفردية؛ اعتمد دائمًا على طبيبك المعالج في القرارات المتعلقة برعايتك.',
+    },
+    emergencies: {
+      heading: 'حالات الطوارئ',
+      content: 'في حالة طوارئ طبية، تواصل فورًا مع خدمات الطوارئ المحلية لديك. في البر الرئيسي للصين، اتصل بالرقم 120 لطلب سيارة إسعاف والرعاية الطبية الطارئة.',
+    },
+    noGuarantee: {
+      heading: 'لا ضمان بشأن المستشفى أو الطبيب',
+      content: 'نبذل جهودًا معقولة لمطابقة المرضى مع مستشفيات وأخصائيين مؤهلين بناءً على المعلومات المقدمة. ومع ذلك، تتغير جداول المستشفيات، ولا يمكن دائمًا ضمان طبيب بعينه، وتبقى قرارات العلاج النهائية بيد المستشفى.',
+    },
+    contact: {
+      heading: 'تواصل معنا',
+      company: 'Shanghai Keling Information Technology Co., Ltd.',
+      address: 'الغرفة 101، الطابق الأول، رقم 2555 طريق تشانغيانغ، منطقة يانغبو، شنغهاي، الصين',
+      email: 'hello@shanghaimedhealth.com',
+    },
+  },
   // ── Russian (standard, CIS/Central Asia) ── UI strings only; medical/legal/price text falls back to en (YMYL) ──
   ru: {
     ...enTranslations,
@@ -1822,7 +1904,7 @@ export function LanguageProvider({ children, locale }: { children: ReactNode; lo
 
   // ar: 全量阿拉伯语翻译（经 GLM→DS→K3 三模型交叉验证 + 海湾本地化终审）
   // ru/mn: 仅白名单区块显示机器翻译，其余 YMYL 内容 fallback 英文
-  const MACHINE_TRANSLATABLE_SECTIONS = ['nav', 'whyShanghai', 'processFlow', 'careTeam', 'hero', 'testimonials', 'treatments', 'howItWorks', 'trust', 'pricing', 'insights', 'blog', 'faq', 'contact', 'footer', 'agentChat', 'pages']
+  const MACHINE_TRANSLATABLE_SECTIONS = ['nav', 'whyShanghai', 'processFlow', 'careTeam', 'hero', 'testimonials', 'treatments', 'howItWorks', 'trust', 'pricing', 'insights', 'blog', 'faq', 'contact', 'footer', 'agentChat', 'pages', 'medicalDisclaimer']
 
   const resolveKey = (key: string): any => {
     const keys = key.split('.')

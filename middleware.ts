@@ -1,8 +1,44 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
+// Bots blocked at server level (robots.txt is only advisory; these get hard 403)
+// - Training/scraping bots that ignore robots.txt
+// - SEO analysis bots used for competitor research (no SEO impact — Google ignores them)
+const BLOCKED_BOTS = [
+  'ccbot',
+  'bytespider',
+  'gptbot',
+  'claudebot',
+  'anthropic-ai',
+  'ahrefsbot',
+  'semrushbot',
+  'dotbot',
+  'mj12bot',
+  'petalbot',
+  'dataforseobot',
+  'serpstatbot',
+  'zoominfobot',
+  'gptfeed',
+  'scentbot',
+  'scrapy',
+  'python-requests',
+  'httpclient',
+  'curl/',
+  'wget',
+]
+
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
+
+  // --- Bot filtering (all routes) ---
+  const userAgent = (request.headers.get('user-agent') || '').toLowerCase()
+  if (userAgent && BLOCKED_BOTS.some(bot => userAgent.includes(bot))) {
+    return new NextResponse('Forbidden', {
+      status: 403,
+      headers: { 'x-robots-tag': 'noindex, nofollow' },
+    })
+  }
+
   const adminPassword = process.env.ADMIN_PASSWORD
 
   // Skip auth if no admin password is set (development mode)
@@ -68,5 +104,6 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/admin/:path*', '/api/blog/:path*'],
+  // Run on all pages/API except static assets
+  matcher: ['/((?!_next/static|_next/image|favicon.ico|images|.*\\.png$|.*\\.jpg$|.*\\.jpeg$|.*\\.svg$|.*\\.webp$|.*\\.ico$|.*\\.txt$|.*\\.xml$).*)'],
 }

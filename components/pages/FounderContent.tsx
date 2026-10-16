@@ -14,7 +14,7 @@ interface ExperienceItem {
   detail: string
 }
 
-const credentialsData: Record<'en' | 'ja', Credential[]> = {
+const credentialsData: Record<'en' | 'ja' | 'ar', Credential[]> = {
   en: [
     {
       title: 'ISPN — International Standards for Professional Nurses',
@@ -59,9 +59,31 @@ const credentialsData: Record<'en' | 'ja', Credential[]> = {
       category: '看護師免許',
     },
   ],
+  ar: [
+    {
+      title: 'ISPN — المعايير الدولية للممرضين المهنيين',
+      detail: 'شهادة دولية للممرضين المسجلين، تصدرها الجمعية الدولية لممرضي رعاية السرطان والجهات المنتسبة إليها',
+      category: 'رخصة تمريض',
+    },
+    {
+      title: 'ممرضة مسجلة كبيرة (主管护师)',
+      detail: 'لقب مهني رفيع ضمن نظام التصنيف الوطني الصيني للكوادر الصحية، تمنحه لجنة شنغهاي البلدية للصحة',
+      category: 'لقب مهني',
+    },
+    {
+      title: 'JLPT N1 — اختبار كفاءة اللغة اليابانية، المستوى N1',
+      detail: 'أعلى مستوى في شهادة اللغة اليابانية، تصدره مؤسسة اليابان وخدمات التبادل التعليمي اليابانية',
+      category: 'شهادة لغوية',
+    },
+    {
+      title: 'ممرضة مسجلة (RN)، الصين',
+      detail: 'مرخصة من لجنة شنغهاي البلدية للصحة',
+      category: 'رخصة تمريض',
+    },
+  ],
 }
 
-const experienceData: Record<'en' | 'ja', ExperienceItem[]> = {
+const experienceData: Record<'en' | 'ja' | 'ar', ExperienceItem[]> = {
   en: [
     {
       area: 'International Patient Coordination',
@@ -98,9 +120,57 @@ const experienceData: Record<'en' | 'ja', ExperienceItem[]> = {
       detail: 'ビザ案内、保険の直接請求（Cigna、Allianz、AXA、Bupa）、宿泊手配、医療ナビゲーター「Navi」によるAI 24時間サポートまで、業務フローを構築。',
     },
   ],
+  ar: [
+    {
+      area: 'تنسيق المرضى الدوليين',
+      detail: 'نسّقت رحلات طبية متكاملة للمرضى من الشرق الأوسط وجنوب شرق آسيا وأوروبا وأمريكا الشمالية ومناطق أخرى — من الاستشارة الأولى حتى الخروج من المستشفى ومتابعة ما بعد الجراحة.',
+    },
+    {
+      area: 'الإرشاد داخل المستشفيات والترجمة الطبية',
+      detail: 'قدّمت ترجمة طبية فورية بالإنجليزية واليابانية والماندرين للمرضى الدوليين في مستشفيات شنغهاي من الفئة 3A (三甲). وتُدعَم لغات إضافية عبر مترجمين مهنيين معتمدين.',
+    },
+    {
+      area: 'إدارة عمليات الرعاية الصحية الراقية',
+      detail: 'أكثر من 10 سنوات في الإدارة التشغيلية لدى أبرز المؤسسات الطبية الخاصة في شنغهاي — تصميم مسارات الرعاية، وتحسين تجربة المريض، وتنسيق البرامج الطبية العابرة للأقسام.',
+    },
+    {
+      area: 'عمليات السياحة العلاجية',
+      detail: 'بنيت مسارات تشغيلية تشمل إرشاد التأشيرات، والدفع المباشر للتأمين (Cigna وAllianz وAXA وBupa)، وتنسيق الإقامة، ودعم المرضى بالذكاء الاصطناعي على مدار الساعة عبر Navi، موجّهتنا الطبية.',
+    },
+  ],
 }
 
 const text = {
+  ar: {
+    role: 'المؤسِّسة وكبيرة موظفي المرافقة الطبية',
+    intro:
+      'ممرضة مسجلة حاصلة على شهادة ISPN، وممرضة مسجلة كبيرة، ومؤسِّسة ShanghaiMed. تتمتع بأكثر من عقد من الخبرة العملية في إدارة عمليات الرعاية الصحية الراقية وإرشاد المرضى الدوليين عبر منظومة شنغهاي الصحية — من الاستشارات الروتينية إلى تنسيق الجراحات المعقدة.',
+    whyTitle: 'لماذا أسستُ ShanghaiMed',
+    whyP1:
+      'أمضيت أكثر من عشر سنوات أعمل داخل منظومة الرعاية الصحية الراقية في شنغهاي — أنسّق رعاية المرضى الدوليين، وأجتاز البيروقراطية المستشفية نيابةً عنهم، وأشاهد المشكلات نفسها القابلة للتفادي تتكرر: مرضى يصلون بلا سجلات مترجمة، أو يُوجَّهون إلى القسم الخطأ، أو يدفعون أكثر من اللازم مقابل خدمات لا يحتاجونها، أو يغادرون دون فهم تعليمات خروجهم.',
+    whyP2:
+      'كانت المستشفيات ممتازة. لم تكن الفجوة في الجودة الطبية إطلاقًا — بل كانت في غياب شخص يفهم الجانب السريري وجانب المريض معًا، ويستطيع ربطهما بلغة المريض نفسها.',
+    whyP3:
+      'وُجدت ShanghaiMed لسد هذه الفجوة. نفرض رسوم خدمة شفافة، ولا نأخذ أي عمولة من المستشفيات، ونتعامل مع كل مريض كما كنتُ سأعامل فردًا من عائلتي يجتاز منظومة غير مألوفة في بلد أجنبي.',
+    credentialsTitle: 'المؤهلات المهنية',
+    verifiedTitle: 'شهادات موثَّقة',
+    nurseCertName: 'شهادة مزاولة مهنة التمريض',
+    ispnCertName: 'شهادة إنجاز ISPN',
+    certFootnote: 'انقر لعرض الشهادات الموثَّقة. حُجبت المعلومات الحساسة حمايةً للخصوصية.',
+    experienceTitle: 'مجالات الخبرة',
+    companyTitle: 'عن الشركة',
+    companyP1:
+      'تُدير ShanghaiMed شركةُ Shanghai Keling Information Technology Co., Ltd. المسجلة في شنغهاي بالصين.',
+    companyP2:
+      'نحن جهة تيسير سياحة طبية متكاملة الخدمات — ولسنا وسطاء. نفرض على المرضى رسوم خدمة مرافقة شفافة ولا نأخذ أي عمولة من المستشفيات. وتُدفع الفواتير الطبية مباشرة إلى المستشفى بالأسعار المعلنة لديها.',
+    registeredName: 'الاسم المسجل',
+    registeredAddress: 'العنوان المسجل',
+    legalRepresentative: 'الممثل القانوني',
+    languages: 'اللغات',
+    ctaTitle: 'لديك سؤال؟',
+    ctaBody: 'أقرأ كل رسالة شخصيًا. لا فريق مبيعات ولا نصوص جاهزة.',
+    ctaButton: 'تواصل معنا',
+  },
   en: {
     role: 'Founder & Chief Concierge',
     intro:
@@ -165,8 +235,8 @@ const text = {
 
 export default function FounderContent() {
   const { language } = useLanguage()
-  // fallback to 'en' for languages that don't have content yet (YMYL: ar/ru/mn stay English)
-  const lang = language === 'ja' ? 'ja' : 'en'
+  // ja/ar fully translated; ru/mn fall back to English (YMYL)
+  const lang = language === 'ja' ? 'ja' : language === 'ar' ? 'ar' : 'en'
   const t = text[lang]
   const credentials = credentialsData[lang]
   const experience = experienceData[lang]
@@ -245,7 +315,7 @@ export default function FounderContent() {
                 <div>
                   <p className="text-sm font-medium text-gray-900">{t.nurseCertName}</p>
                   <p className="text-xs text-gray-500">
-                    {language === 'ja' ? '上海市衛生健康委員会' : 'Shanghai Municipal Health Commission'}
+                    {language === 'ja' ? '上海市衛生健康委員会' : language === 'ar' ? 'لجنة شنغهاي البلدية للصحة' : 'Shanghai Municipal Health Commission'}
                   </p>
                 </div>
                 <svg className="w-4 h-4 text-gray-400 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -305,8 +375,8 @@ export default function FounderContent() {
             </div>
             <div>
               <dt className="font-medium text-gray-900">{t.registeredAddress}</dt>
-              <dd>{language === 'ja' ? '長陽路2555号1階101室' : 'Room 101, Floor 1, No. 2555 Changyang Road'}</dd>
-              <dd>{language === 'ja' ? '中国上海市楊浦区' : 'Yangpu District, Shanghai, China'}</dd>
+              <dd>{language === 'ja' ? '長陽路2555号1階101室' : language === 'ar' ? 'الغرفة 101، الطابق الأول، رقم 2555 طريق تشانغيانغ' : 'Room 101, Floor 1, No. 2555 Changyang Road'}</dd>
+              <dd>{language === 'ja' ? '中国上海市楊浦区' : language === 'ar' ? 'منطقة يانغبو، شنغهاي، الصين' : 'Yangpu District, Shanghai, China'}</dd>
             </div>
             <div>
               <dt className="font-medium text-gray-900">{t.legalRepresentative}</dt>
@@ -314,7 +384,7 @@ export default function FounderContent() {
             </div>
             <div>
               <dt className="font-medium text-gray-900">{t.languages}</dt>
-              <dd>{language === 'ja' ? '英語・中国語・日本語' : 'English, 中文, 日本語'}</dd>
+              <dd>{language === 'ja' ? '英語・中国語・日本語' : language === 'ar' ? 'الإنجليزية، الصينية، اليابانية' : 'English, 中文, 日本語'}</dd>
             </div>
           </div>
         </section>

@@ -22,7 +22,7 @@ keywords:
   - '''中医学病院'''
   - '''統合医療 上海'''
   - '''外国人向けTCM'''
-canonicalUrl: Canonical URL
+canonicalUrl: https://shanghaimedhealth.com/blog/traditional-chinese-medicine-in-shanghai-what-foreign-patients-should-expect
 ---
 本ガイドは、上海の医療を利用する国際患者のためのシリーズ第3弾です。まず『上海での医療は安全？』をお読みいただくか、先に『上海の健康診断』をご覧いただくことをおすすめします。
 

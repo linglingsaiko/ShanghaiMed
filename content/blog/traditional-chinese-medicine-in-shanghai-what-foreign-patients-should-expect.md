@@ -24,7 +24,7 @@ keywords:
   - '''Chinese medicine hospital'''
   - '''integrative medicine Shanghai'''
   - '''TCM for foreigners'''
-canonicalUrl: Canonical URL
+canonicalUrl: https://shanghaimedhealth.com/blog/traditional-chinese-medicine-in-shanghai-what-foreign-patients-should-expect
 ---
 This guide is the third in our series for international patients navigating healthcare in Shanghai. Start with our Is Shanghai Safe for Medical Treatment? or learn about Medical Checkups in Shanghai first.
 

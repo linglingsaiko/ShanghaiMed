@@ -24,7 +24,7 @@ keywords:
   - 'مستشفى طب صيني'
   - 'طب تكاملي شنغاي'
   - 'طب صيني تقليدي أجانب'
-canonicalUrl: Canonical URL
+canonicalUrl: https://shanghaimedhealth.com/blog/traditional-chinese-medicine-in-shanghai-what-foreign-patients-should-expect
 ---
 هذا الدليل هو الثالث في سلسلتنا للمرضى الدوليين الذين يتنقلون في الرعاية الصحية في شنغاي. ابدأ بقراءة "Is Shanghai Safe for Medical Treatment?" أو تعلم عن الفحوصات الطبية في شنغاي أولاً.
 

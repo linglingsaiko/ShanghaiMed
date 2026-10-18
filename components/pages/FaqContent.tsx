@@ -573,13 +573,310 @@ const jaFaqs: FaqItem[] = [
   },
 ]
 
+/* ==================== Russian Version ==================== */
+
+const ruFaqs: FaqItem[] = [
+  {
+    q: 'Сколько стоит лечение в Шанхае по сравнению с США?',
+    a: (
+      <>
+        <p className="mb-4">
+          Медицинские процедуры в Шанхае стоят на <strong>50–80% дешевле</strong>, чем в США. Конкретные примеры:
+        </p>
+        <div className="overflow-x-auto mb-4">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="bg-gray-100">
+                <th className="border border-gray-300 px-4 py-2 text-left">Процедура</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">Стоимость в США</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">Стоимость в Шанхае</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">Экономия</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ['Замена коленного сустава', '$30,000-$50,000', '$5,000-$10,000', '80%'],
+                ['Аортокоронарное шунтирование', '$80,000-$150,000', '$11,000-$21,000', '80%'],
+                ['МРТ (3 Тл)', '$1,200-$3,000', '$200-$400', '90%'],
+                ['Дентальный имплантат (на один зуб)', '$4,000-$6,000', '$800-$1,200', '80%'],
+                ['Цикл ЭКО (IVF)', '$12,000-$15,000', '$3,000-$5,000', '75%'],
+                ['Операция по удалению катаракты', '$3,500-$6,000', '$1,000-$2,000', '70%'],
+                ['Комплексный чек-ап', '$2,000-$5,000', '$300-$600', '88%'],
+              ].map((row, i) => (
+                <tr key={i}>
+                  {row.map((cell, j) => (
+                    <td key={j} className="border border-gray-300 px-4 py-2">{cell}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p>
+          Пакеты консьерж-сопровождения ShanghaiMed стоят <strong>$1,000 за 3 дня</strong> (Essential Care) или{' '}
+          <strong>$1,650 за 5 дней</strong> (Complex Care), они включают координацию с больницей, двуязычное сопровождение,
+          перевод и логистику. Стоимость лечения в больнице оплачивается отдельно по местным тарифам.
+        </p>
+      </>
+    ),
+  },
+  {
+    q: 'Безопасно ли медицинское путешествие в Шанхай для иностранных пациентов?',
+    a: (
+      <>
+        <p className="mb-4"><strong>Да.</strong> Ведущие больницы Шанхая соответствуют международным стандартам безопасности:</p>
+        <ul className="list-disc pl-6 mb-4 space-y-1">
+          <li><strong>Huashan Hospital</strong> (Fudan University) — Grade 3A (высшая категория больниц Китая), 24 международных страховых партнёра</li>
+          <li><strong>Ruijin Hospital</strong> (SJTU) — Grade 3A, национальный лидер в гематологии и CAR-T-клеточной терапии, National EMR Level 7</li>
+          <li><strong>Zhongshan Hospital</strong> (Fudan University) — Grade 3A, отдельный международный пациентский корпус</li>
+          <li><strong>Shanghai Ninth People&apos;s Hospital</strong> (SJTU) — Grade 3A, национальный центр стоматологии, челюстно-лицевой и пластической хирургии</li>
+          <li><strong>Longhua Hospital</strong> (Shanghai University of TCM) — Grade 3A, официальная пилотная больница медицинского туризма ТКМ</li>
+        </ul>
+        <p>
+          Эти больницы используют <strong>то же медицинское оборудование</strong> (Siemens, GE Healthcare, Philips) и{' '}
+          <strong>те же бренды имплантатов</strong> (Stryker, Zimmer, Straumann), что и больницы США. Многие ведущие врачи
+          стажировались в Johns Hopkins, Mayo Clinic и Cleveland Clinic.
+        </p>
+      </>
+    ),
+  },
+  {
+    q: 'С какими больницами Шанхая сотрудничает ShanghaiMed?',
+    a: (
+      <>
+        <p className="mb-4">
+          ShanghaiMed сотрудничает с <strong>14 государственными больницами класса А — пилотами медицинского туризма</strong> и{' '}
+          <strong>5 частными международными больницами</strong> — всего 19 учреждений, покрывающих все медицинские специальности:
+        </p>
+        <div className="overflow-x-auto mb-4">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="bg-gray-100">
+                <th className="border border-gray-300 px-4 py-2 text-left">Больница</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">Университет</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">Ключевая специальность</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ['Huashan Hospital', 'Fudan University', 'Нейрохирургия №1, дерматология №1'],
+                ["Children's Hospital", 'Fudan University', 'Неонатология, детская хирургия'],
+                ['Ruijin Hospital', 'SJTU', 'Гематология (CAR-T), эндокринология'],
+                ['Shanghai General Hospital', '—', 'Офтальмология, ЛОР, урология'],
+                ['Zhongshan Hospital', 'Fudan University', 'Кардиология, общая хирургия'],
+                ['Renji Hospital', 'SJTU', 'Гастроэнтерология №1, репродуктивная медицина'],
+                ['Longhua Hospital', 'Shanghai Univ. of TCM', 'Традиционная китайская медицина'],
+                ['IPMCH', 'China Welfare Institute', 'Репродуктивная медицина, акушерство'],
+                ["Shanghai Children's Medical Center", 'SJTU', 'Детская кардиохирургия'],
+                ["Sixth People's Hospital", '—', 'Ортопедия (реплантация конечностей с 1963 г.)'],
+                ['First Maternity & Infant Hospital', '—', 'Акушерство, фетальная медицина'],
+                ['Xinhua Hospital', 'SJTU', 'Педиатрия, дерматология'],
+                ['Huadong Hospital', 'Fudan University', 'Гериатрия, медосмотры'],
+                ["Ninth People's Hospital", 'SJTU', 'Стоматология №1, пластическая хирургия №1'],
+              ].map((row, i) => (
+                <tr key={i}>
+                  {row.map((cell, j) => (
+                    <td key={j} className="border border-gray-300 px-4 py-2">{cell}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p>
+          Плюс 5 частных международных больниц: Jiahui International (партнёрство с Mass General), United Family,
+          ParkwayHealth, SinoUnited Health (сотрудничество с Mayo Clinic и услуги «второго мнения») и Raffles Hospital.
+        </p>
+      </>
+    ),
+  },
+  {
+    q: 'Говорят ли врачи в Шанхае по-английски?',
+    a: (
+      <>
+        <p className="mb-4">
+          Многие ведущие врачи топовых больниц Шанхая прошли <strong>международную стажировку и говорят по-английски</strong>.
+          Врачи регулярно публикуются в англоязычных медицинских журналах и участвуют в международных конференциях.
+        </p>
+        <p className="mb-4">
+          Чтобы полностью исключить языковой барьер, ShanghaiMed предоставляет <strong>профессиональных двуязычных медицинских сопровождающих</strong> (англо-китайских), которые:
+        </p>
+        <ul className="list-disc pl-6 mb-4 space-y-1">
+          <li>Сопровождают вас на каждом приёме</li>
+          <li>Точно переводят медицинскую терминологию</li>
+          <li>Помогают с больничными документами и навигацией</li>
+          <li>Гарантируют, что вы полностью понимаете диагноз, план лечения и назначения</li>
+        </ul>
+        <p>Все медицинские документы, планы лечения и рецепты <strong>переводятся на английский язык</strong> для вашего архива.</p>
+      </>
+    ),
+  },
+  {
+    q: 'Как получить медицинскую визу в Китай?',
+    a: (
+      <>
+        <p className="mb-4">ShanghaiMed помогает с <strong>полным процессом оформления визы</strong>:</p>
+        <ol className="list-decimal pl-6 mb-4 space-y-1">
+          <li><strong>Первичная консультация</strong> (бесплатно, удалённо по видеосвязи)</li>
+          <li><strong>Медицинское приглашение</strong> — оформляется партнёрской больницей после консультации</li>
+          <li><strong>Подача на визу</strong> — вы предоставляете приглашение в посольство/консульство Китая</li>
+          <li><strong>Срок рассмотрения</strong> — обычно 2–4 недели</li>
+          <li><strong>Документальная поддержка</strong> — ShanghaiMed обеспечивает перевод всех необходимых документов</li>
+        </ol>
+        <p>
+          Китай предоставляет <strong>240-часовой безвизовый транзит</strong> гражданам 54 стран (включая США, Великобританию,
+          Канаду, Австралию и большинство стран ЕС), которого может быть достаточно для коротких медицинских поездок.
+        </p>
+      </>
+    ),
+  },
+  {
+    q: 'Что включено в пакет услуг ShanghaiMed?',
+    a: (
+      <>
+        <p className="mb-2"><strong>Пакет Essential Care — $1,000 / 3 дня</strong></p>
+        <ul className="list-disc pl-6 mb-4 space-y-1">
+          <li>Запись на приём в больницу (1 больница)</li>
+          <li>Двуязычное медицинское сопровождение (английский–китайский)</li>
+          <li>Медицинский перевод на всех приёмах</li>
+          <li>Местный трансфер в/из больницы</li>
+          <li>AI-навигатор: предварительная консультация и оценка стоимости</li>
+        </ul>
+        <p className="mb-2"><strong>Пакет Complex Care — $1,650 / 5 дней</strong></p>
+        <p className="mb-1">Всё, что включено в Essential Care, плюс:</p>
+        <ul className="list-disc pl-6 mb-4 space-y-1">
+          <li>Координация в нескольких больницах (2+ больниц)</li>
+          <li>Запись к профильным специалистам</li>
+          <li>Последующее наблюдение после лечения (30 дней, удалённые видеоприёмы)</li>
+          <li>Визовая поддержка и встреча в аэропорту</li>
+        </ul>
+        <p>
+          <strong>Что НЕ включено</strong> (оплачивается отдельно больнице по местным тарифам): стоимость лечения
+          (операция, лекарства, лабораторные анализы), проживание и международные перелёты.
+        </p>
+      </>
+    ),
+  },
+  {
+    q: 'Можно ли совместить лечение с туризмом в Шанхае?',
+    a: (
+      <>
+        <p className="mb-4">
+          <strong>Безусловно — в этом и заключается основная философия ShanghaiMed.</strong> Шанхай — самый международный город Китая, где можно посетить:
+        </p>
+        <ul className="list-disc pl-6 mb-4 space-y-1">
+          <li><strong>Набережную Вайтань (The Bund)</strong> — знаковая прибрежная променада</li>
+          <li><strong>Сад Юй (Yu Garden)</strong> — классический китайский сад возрастом 400 лет</li>
+          <li><strong>Шанхайскую башню</strong> — второе по высоте здание в мире (632 м)</li>
+          <li><strong>Shanghai Disneyland</strong> — самый большой замок Disney в мире</li>
+          <li><strong>Французскую концессию</strong> — тенистые улицы с кафе и бутиками</li>
+        </ul>
+        <p>
+          Многие пациенты планируют <strong>медицинский приём на 1–2-й день</strong>, а оставшиеся дни посвящают осмотру города.
+          ShanghaiMed помогает встроить медицинские приёмы в ваш маршрут, чтобы вы не теряли время отпуска.
+        </p>
+      </>
+    ),
+  },
+  {
+    q: 'Какие медицинские процедуры наиболее популярны у медицинских туристов в Шанхае?',
+    a: (
+      <>
+        <div className="overflow-x-auto mb-4">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="bg-gray-100">
+                <th className="border border-gray-300 px-4 py-2 text-left">Категория</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">Процедуры</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">Экономия</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">Ведущая больница</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ['Ортопедическая хирургия', 'Замена коленного/тазобедренного сустава, хирургия позвоночника', '80%', "Sixth People's / Huashan"],
+                ['Пластическая хирургия', 'Ринопластика, реконструкция лица', '70-80%', "Ninth People's Hospital"],
+                ['Стоматология', 'Имплантаты, коронки, ортодонтия', '70-80%', "Ninth People's Hospital"],
+                ['ТКМ', 'Иглоукалывание, фитотерапия, туйна', '75-80%', 'Longhua Hospital'],
+                ['Лечение онкологических заболеваний', 'Химиотерапия, CAR-T, иммунотерапия', '60-80%', 'Ruijin / Huashan'],
+                ['Кардиохирургия', 'Шунтирование, замена клапанов', '80%', 'Zhongshan Hospital'],
+                ['Лечение бесплодия', 'ЭКО (IVF), ИКСИ (ICSI)', '75%', 'Renji / IPMCH'],
+                ['Медицинский осмотр', 'Дневной executive-чек-ап', '88%', 'Huadong Hospital'],
+              ].map((row, i) => (
+                <tr key={i}>
+                  {row.map((cell, j) => (
+                    <td key={j} className="border border-gray-300 px-4 py-2">{cell}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </>
+    ),
+  },
+  {
+    q: 'Можно ли использовать международную медицинскую страховку?',
+    a: (
+      <>
+        <p className="mb-4">
+          Да. Партнёрские больницы ShanghaiMed имеют <strong>договоры прямого урегулирования счетов</strong> с крупнейшими международными
+          страховыми компаниями. Каждая больница принимает от 8 до 24 страховщиков:
+        </p>
+        <ul className="list-disc pl-6 mb-4 space-y-1">
+          <li>Huashan Hospital — 24 страховых партнёра</li>
+          <li>Shanghai Children's Medical Center — 23 страховых партнёра</li>
+          <li>Ruijin Hospital — 21 страховой партнёр</li>
+          <li>Renji Hospital — 20 страховых партнёров</li>
+        </ul>
+        <p>
+          Принимаемые страховые компании включают <strong>MSH, Bupa, Cigna, Aetna, AXA, Allianz, AIA, International SOS</strong> и других.
+          ShanghaiMed помогает с проверкой страхового покрытия и прямым урегулированием счетов до вашей поездки.
+        </p>
+      </>
+    ),
+  },
+  {
+    q: 'Что происходит после завершения лечения в Шанхае?',
+    a: (
+      <>
+        <p className="mb-4">ShanghaiMed обеспечивает <strong>комплексное сопровождение после лечения</strong>:</p>
+        <ul className="list-disc pl-6 mb-4 space-y-1">
+          <li><strong>Удалённые видеоконсультации</strong> с лечащим врачом (Complex Care)</li>
+          <li><strong>Переведённые медицинские документы</strong> — полная выписка, результаты анализов и список лекарств на английском языке</li>
+          <li><strong>Консультации по приёму лекарств</strong> — инструкции по дозировке, побочные эффекты и предупреждения о взаимодействии</li>
+          <li><strong>План восстановления</strong> — индивидуальный график и рекомендации по физической активности</li>
+          <li><strong>Координация с врачом на родине</strong> — (с вашего согласия) мы передаём медицинские документы вашему лечащему врачу</li>
+          <li><strong>Постоянная поддержка</strong> — наша команда остаётся на связи для вопросов после вашего возвращения домой</li>
+        </ul>
+        <p>Для пациентов пакета Complex Care последующее наблюдение продолжается в течение <strong>30 дней</strong> после лечения.</p>
+      </>
+    ),
+  },
+]
+
 /* ==================== Component ==================== */
 
 const FaqContent: React.FC = () => {
-  const { language } = useLanguage()
+  const { language, t } = useLanguage()
   const isJa = language === 'ja'
-  const faqs = isJa ? jaFaqs : enFaqs
+  const isRu = language === 'ru'
+  const faqs: FaqItem[] = isJa ? jaFaqs : isRu ? ruFaqs : enFaqs
 
+  const ctaKey = 'faqPage.cta'
+  const ctaTitle = t(`${ctaKey}.title`)
+  const defaultCta = {
+    title: 'Still have questions?',
+    text: 'Get a free, no-obligation consultation with ShanghaiMed. Our team responds within 24 hours.',
+    email: 'Email Us',
+    form: 'Contact Form',
+  }
+  const ruCta = {
+    title: ctaTitle !== `${ctaKey}.title` ? ctaTitle : defaultCta.title,
+    text: t(`${ctaKey}.text`) !== `${ctaKey}.text` ? t(`${ctaKey}.text`) : defaultCta.text,
+    email: t(`${ctaKey}.email`) !== `${ctaKey}.email` ? t(`${ctaKey}.email`) : defaultCta.email,
+    form: t(`${ctaKey}.form`) !== `${ctaKey}.form` ? t(`${ctaKey}.form`) : defaultCta.form,
+  }
   const cta = isJa
     ? {
         title: 'まだご質問がありますか？',
@@ -587,12 +884,9 @@ const FaqContent: React.FC = () => {
         email: 'メールで問い合わせる',
         form: 'お問い合わせフォーム',
       }
-    : {
-        title: 'Still have questions?',
-        text: 'Get a free, no-obligation consultation with ShanghaiMed. Our team responds within 24 hours.',
-        email: 'Email Us',
-        form: 'Contact Form',
-      }
+    : isRu
+    ? ruCta
+    : defaultCta
 
   return (
     <div className="space-y-8 max-w-4xl">

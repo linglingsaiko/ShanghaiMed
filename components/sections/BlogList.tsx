@@ -156,7 +156,7 @@ export default function BlogList({ posts, totalPages, currentPage, category, tag
                   <div className="p-6">
                     <div className="flex items-center gap-2 mb-3">
                       <span className="px-3 py-1 text-xs font-medium bg-green-100 text-green-700 rounded-full">
-                        {(() => { const k = 'blog.categoryNames.' + post.category; const v = t(k); return language === 'ja' && v !== k ? v : categories.find(c => c.id === post.category)?.name || post.category })()}
+                        {(() => { const k = 'blog.categoryNames.' + post.category; const v = t(k); return v !== k ? v : (categories.find(c => c.id === post.category)?.name || post.category) })()}
                       </span>
                     </div>
                     <h2 className="text-xl font-semibold text-gray-900 mb-2 line-clamp-2">
@@ -169,7 +169,7 @@ export default function BlogList({ posts, totalPages, currentPage, category, tag
                       <div className="flex items-center gap-4 text-sm text-gray-500">
                         <span className="flex items-center gap-1">
                           <Calendar className="h-4 w-4" />
-                          {new Date(post.publishDate).toLocaleDateString(language === 'ja' ? 'ja-JP' : 'en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+                          {new Date(post.publishDate).toLocaleDateString(language === 'ja' ? 'ja-JP' : language === 'ru' ? 'ru-RU' : 'en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
                         </span>
                         <span>{post.readingTime} {t('blog.minRead')}</span>
                       </div>

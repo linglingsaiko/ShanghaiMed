@@ -26,8 +26,8 @@ export default function BlogDetail({ post }: BlogDetailProps) {
   
   useEffect(() => {
     const fetchRelatedPosts = async () => {
-      setNextPost(await getNextPost(post, language === 'ja' ? 'ja' : undefined))
-      setPreviousPost(await getPreviousPost(post, language === 'ja' ? 'ja' : undefined))
+      setNextPost(await getNextPost(post, language === 'ja' ? 'ja' : language === 'ru' ? 'ru' : language === 'ar' ? 'ar' : undefined))
+      setPreviousPost(await getPreviousPost(post, language === 'ja' ? 'ja' : language === 'ru' ? 'ru' : language === 'ar' ? 'ar' : undefined))
     }
     fetchRelatedPosts()
   }, [post, language])
@@ -132,7 +132,7 @@ export default function BlogDetail({ post }: BlogDetailProps) {
             <div className="p-8">
               <div className="flex flex-wrap items-center gap-4 mb-4">
                 <span className="px-3 py-1 text-sm font-medium bg-green-100 text-green-700 rounded-full">
-                  {(() => { const k = 'blog.categoryNames.' + post.category; const v = t(k); return language === 'ja' && v !== k ? v : categories.find(c => c.id === post.category)?.name || post.category })()}
+                  {(() => { const k = 'blog.categoryNames.' + post.category; const v = t(k); return v !== k ? v : (categories.find(c => c.id === post.category)?.name || post.category) })()}
                 </span>
                 <span className="flex items-center gap-1 text-sm text-gray-500">
                   <User className="h-4 w-4" />
@@ -140,7 +140,7 @@ export default function BlogDetail({ post }: BlogDetailProps) {
                 </span>
                 <span className="flex items-center gap-1 text-sm text-gray-500">
                   <Calendar className="h-4 w-4" />
-                  {new Date(post.publishDate).toLocaleDateString(language === 'ja' ? 'ja-JP' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                  {new Date(post.publishDate).toLocaleDateString(language === 'ja' ? 'ja-JP' : language === 'ru' ? 'ru-RU' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
                 </span>
                 <span className="text-sm text-gray-500">{post.readingTime} {t('blog.minRead')}</span>
               </div>

@@ -18,7 +18,7 @@ export default function BlogCTA({ post }: BlogCTAProps) {
   
   useEffect(() => {
     const fetchRelated = async () => {
-      const posts = await getRelatedPosts(post, 3, language === 'ja' ? 'ja' : undefined)
+      const posts = await getRelatedPosts(post, 3, language === 'ja' ? 'ja' : language === 'ru' ? 'ru' : language === 'ar' ? 'ar' : undefined)
       setRelatedPosts(posts)
     }
     fetchRelated()
@@ -83,14 +83,14 @@ export default function BlogCTA({ post }: BlogCTAProps) {
                     loading="lazy"
                   />
                   <div className="absolute top-3 right-3 px-2 py-1 bg-primary text-white text-xs font-medium rounded">
-                    Tier 1
+                    {language === 'ru' ? 'Класс А' : 'Tier 1'}
                   </div>
                 </div>
                 <div className="p-5">
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">{language === 'ja' && hospital.nameJa ? hospital.nameJa : hospital.name}</h3>
                   <div className="flex flex-wrap gap-1 mb-3">
                     {hospital.specialties.slice(0, 3).map(specialty => {
-                      const tr = language === 'ja' ? tArr('hospitals.' + hospital.id + '.specialties') : []
+                      const tr = tArr('hospitals.' + hospital.id + '.specialties')
                       const i = hospital.specialties.indexOf(specialty)
                       return (
                         <span key={specialty} className="px-2 py-1 text-xs bg-gray-100 text-gray-600 rounded">
@@ -99,7 +99,7 @@ export default function BlogCTA({ post }: BlogCTAProps) {
                       )
                     })}
                   </div>
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-2">{(() => { const k = 'hospitals.' + hospital.id + '.description'; const v = t(k); return language === 'ja' && v !== k ? v : hospital.description })()}</p>
+                  <p className="text-gray-600 text-sm mb-4 line-clamp-2">{(() => { const k = 'hospitals.' + hospital.id + '.description'; const v = t(k); return v !== k ? v : hospital.description })()}</p>
                   <div className="flex items-center justify-between">
                     <span className="text-xs text-gray-500">{hospital.insurancePartners.length}+ {t('blog.insurancePartnersLabel')}</span>
                     <Link

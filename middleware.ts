@@ -32,6 +32,16 @@ const BLOCKED_BOTS = [
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
 
+  // Skip static assets & metadata files (matcher is intentionally broad; filter here)
+  if (
+    pathname.startsWith('/_next/') ||
+    pathname.startsWith('/images/') ||
+    pathname === '/favicon.ico' ||
+    /\.(png|jpe?g|svg|webp|ico|gif|txt|xml|json|css|js|map|woff2?|ttf|otf|mp4|webm|pdf)$/i.test(pathname)
+  ) {
+    return NextResponse.next()
+  }
+
   // --- Bot filtering (all routes) ---
   const userAgent = (request.headers.get('user-agent') || '').toLowerCase()
   if (userAgent && BLOCKED_BOTS.some(bot => userAgent.includes(bot))) {
@@ -106,6 +116,6 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  // Run on all pages/API except static assets
-  matcher: ['/((?!_next/static|_next/image|favicon.ico|images|.*\\.png$|.*\\.jpg$|.*\\.jpeg$|.*\\.svg$|.*\\.webp$|.*\\.ico$|.*\\.txt$|.*\\.xml$).*)'],
+  // Broad matcher; static assets are filtered inside the handler (reliable across Next.js versions)
+  matcher: ['/:path*'],
 }

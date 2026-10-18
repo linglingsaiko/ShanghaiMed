@@ -1,45 +1,17 @@
 # ShanghaiMed Robots.txt
 # https://shanghaimedhealth.com
 
-# === Traditional Search Engines ===
+# === Default rules for ALL crawlers ===
+# Allowed channels inherit this block (Google/Bing/Yandex/DuckDuckGo,
+# GEO acquisition: OAI-SearchBot, ChatGPT-User, PerplexityBot, Perplexity-User,
+# Claude-Web, Claude-User, plus social preview: facebookexternalhit,
+# meta-externalagent, TelegramBot, Twitterbot, LinkedInBot, WhatsApp).
+# NOTE: no dedicated "allow" blocks — a dedicated User-agent group overrides
+# this wildcard group and would silently un-disallow /admin/ and /api/.
 User-agent: *
 Allow: /
-Crawl-delay: 1
 Disallow: /admin/
 Disallow: /api/
-
-# === AI Search (GEO acquisition channels — ALLOWED) ===
-# ChatGPT Search / live fetch
-User-agent: OAI-SearchBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-# Perplexity answers
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: Perplexity-User
-Allow: /
-
-# Claude web search
-User-agent: Claude-Web
-Allow: /
-
-User-agent: Claude-User
-Allow: /
-
-# Social preview cards
-User-agent: facebookexternalhit
-Allow: /
-
-User-agent: meta-externalagent
-Allow: /
-
-# Google search (must stay open for SEO)
-User-agent: Googlebot
-Allow: /
 
 # === AI Training Crawlers (BLOCKED — no model training on our content) ===
 User-agent: GPTBot

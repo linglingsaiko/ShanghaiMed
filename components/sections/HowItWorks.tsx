@@ -29,7 +29,7 @@ const HowItWorks: React.FC = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mt-4 mb-6">
             {t('howItWorks.title')}
           </h2>
-          <p className="text-gray-600 text-lg whitespace-nowrap">
+          <p className="text-gray-600 text-lg">
             {t('howItWorks.subtitle')}
           </p>
         </div>
@@ -64,8 +64,8 @@ const HowItWorks: React.FC = () => {
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-xl font-bold text-primary mb-3 whitespace-nowrap">
-                    {title}
+                  <h3 className="text-lg md:text-xl font-bold text-primary mb-3 leading-snug min-h-[3.5rem] flex items-center justify-center">
+                    <span className="break-words">{title}</span>
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
                     {description}

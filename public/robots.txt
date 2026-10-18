@@ -5,6 +5,8 @@
 User-agent: *
 Allow: /
 Crawl-delay: 1
+Disallow: /admin/
+Disallow: /api/
 
 # === AI Search (GEO acquisition channels — ALLOWED) ===
 # ChatGPT Search / live fetch
@@ -91,7 +93,3 @@ Disallow: /
 
 # === Sitemap ===
 Sitemap: https://shanghaimedhealth.com/sitemap.xml
-
-# === Private Areas ===
-Disallow: /admin/
-Disallow: /api/

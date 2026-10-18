@@ -10,6 +10,8 @@ const BLOCKED_BOTS = [
   'gptbot',
   'claudebot',
   'anthropic-ai',
+  'google-extended',
+  'amazonbot',
   'ahrefsbot',
   'semrushbot',
   'dotbot',

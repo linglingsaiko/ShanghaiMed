@@ -2129,7 +2129,7 @@ export const translations: Record<Language, any> = {
       badge3: '24/7 AI + Хүний дэмжлэг',
       title: 'Шанхай дахь эрүүл мэндийн үйлчилгээ',
       titleHighlight: 'Танд зориулан бүтээсэн',
-      subtitle: 'Хятадын шилдэг эмнэлгүүд, 3 хэлтэй сувилагчид, 24/7 AI дэмжлэгтэй нэг платформоор холбогдоорой.',
+      subtitle: 'Хятадын тэргүүлэх эмнэлгүүд, 3 хэлтэй сувилагчид, 24/7 AI дэмжлэгтэй нэг платформоор холбогдоорой.',
       cta: 'Эрүүл мэндийн аялалаа эхлүүлэх',
       testimonial: enTranslations.hero.testimonial,
       testimonialAuthor: 'Michael T.',
@@ -2725,7 +2725,7 @@ export const translations: Record<Language, any> = {
     },
     pages: {
       treatmentsTitle: 'Эмчилгээ ба эмнэлгүүд',
-      treatmentsSubtitle: 'Шанхайн бүх мэргэжлийн шилдэг эмнэлэгт хүрэх боломж.',
+      treatmentsSubtitle: 'Шанхайн мэргэжлийн тэргүүлэх эмнэлгүүдэд хүрэх боломж.',
       contactTitle: 'Холбоо барих',
       contactSubtitle: 'Эрүүл мэндийн аялалаа өнөөдөр эхлүүлээрэй. Манай баг 24/7 туслахад бэлэн.',
       patientStoriesTitle: 'Өвчтөнүүдийн түүх',

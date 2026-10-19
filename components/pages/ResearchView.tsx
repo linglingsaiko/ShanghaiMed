@@ -4,6 +4,7 @@ import { useLanguage } from '@/contexts/LanguageContext'
 import { studies } from '@/lib/content/research.en'
 import { researchAr, researchArUi } from '@/lib/content/research.ar'
 import { researchRu, researchRuUi } from '@/lib/content/research.ru'
+import { researchMn, researchMnUi } from '@/lib/content/research.mn'
 
 const categoriesBase = [
   { key: 'patient-experience', enLabel: 'Patient Experience', count: 0 },
@@ -19,18 +20,18 @@ const categoryCounts = categoriesBase.map(c => ({
   count: studies.filter(s => s.category === c.key).length,
 }))
 
-type Loc = 'ar' | 'ru' | 'en'
+type Loc = 'ar' | 'ru' | 'mn' | 'en'
 
 export default function ResearchView() {
   const { language, localePath } = useLanguage()
-  const loc: Loc = language === 'ar' ? 'ar' : language === 'ru' ? 'ru' : 'en'
+  const loc: Loc = language === 'ar' ? 'ar' : language === 'ru' ? 'ru' : language === 'mn' ? 'mn' : 'en'
   const isAr = loc === 'ar'
-  const localized = loc !== 'en' // ar or ru use the localized UI bundle
-  const ui = isAr ? researchArUi : loc === 'ru' ? researchRuUi : null
-  const fields = isAr ? researchAr : loc === 'ru' ? researchRu : null
+  const localized = loc !== 'en' // ar / ru / mn use the localized UI bundle
+  const ui = isAr ? researchArUi : loc === 'ru' ? researchRuUi : loc === 'mn' ? researchMnUi : null
+  const fields = isAr ? researchAr : loc === 'ru' ? researchRu : loc === 'mn' ? researchMn : null
 
   const categories = [
-    { key: 'all', label: isAr ? 'الكل' : loc === 'ru' ? 'Все' : 'All', count: studies.length },
+    { key: 'all', label: isAr ? 'الكل' : loc === 'ru' ? 'Все' : loc === 'mn' ? 'Бүгд' : 'All', count: studies.length },
     ...categoryCounts.map(c => ({
       key: c.key,
       label: localized ? ui!.categoryLabels[c.key] : c.enLabel,

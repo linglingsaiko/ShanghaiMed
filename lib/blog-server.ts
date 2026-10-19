@@ -212,7 +212,7 @@ export function getSortedPosts(lang?: string): BlogPost[] {
   }
   
   const allPostsData = fileNames
-    .filter(fileName => fileName.endsWith('.md') && !/\.(ja|ar|ru)\.md$/.test(fileName))
+    .filter(fileName => fileName.endsWith('.md') && !/\.(ja|ar|ru|mn)\.md$/.test(fileName))
     .map(fileName => {
       const id = fileName.replace(/\.md$/, '')
       const fullPath = path.join(postsDirectory, fileName)
@@ -297,7 +297,7 @@ export function getPostSlugs(): string[] {
     return []
   }
   return fileNames
-    .filter(fileName => fileName.endsWith('.md') && !/\.(ja|ar|ru)\.md$/.test(fileName))
+    .filter(fileName => fileName.endsWith('.md') && !/\.(ja|ar|ru|mn)\.md$/.test(fileName))
     .map(fileName => fileName.replace(/\.md$/, ''))
 }
 

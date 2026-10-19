@@ -4,17 +4,19 @@ import { useLanguage } from '@/contexts/LanguageContext'
 import { glossaryEn, glossaryEnUi } from '@/lib/content/glossary.en'
 import { glossaryAr, glossaryArCategories, glossaryArUi, type GlossaryTerm } from '@/lib/content/glossary.ar'
 import { glossaryRu, glossaryRuCategories, glossaryRuUi } from '@/lib/content/glossary.ru'
+import { glossaryMn, glossaryMnCategories, glossaryMnUi } from '@/lib/content/glossary.mn'
 
 export default function GlossaryView() {
   const { language, localePath } = useLanguage()
   const isAr = language === 'ar'
   const isRu = language === 'ru'
-  const terms: GlossaryTerm[] = isAr ? glossaryAr : isRu ? glossaryRu : glossaryEn
-  const ui = isAr ? glossaryArUi : isRu ? glossaryRuUi : glossaryEnUi
+  const isMn = language === 'mn'
+  const terms: GlossaryTerm[] = isAr ? glossaryAr : isRu ? glossaryRu : isMn ? glossaryMn : glossaryEn
+  const ui = isAr ? glossaryArUi : isRu ? glossaryRuUi : isMn ? glossaryMnUi : glossaryEnUi
 
   // Preserve the declared category order.
-  const categories = isAr || isRu
-    ? [...(isAr ? glossaryArCategories : glossaryRuCategories)].filter(c => terms.some(t => t.category === c))
+  const categories = isAr || isRu || isMn
+    ? [...(isAr ? glossaryArCategories : isRu ? glossaryRuCategories : glossaryMnCategories)].filter(c => terms.some(t => t.category === c))
     : Array.from(new Set(terms.map(t => t.category)))
 
   return (

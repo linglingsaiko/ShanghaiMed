@@ -19,7 +19,7 @@ export default function BlogDetailComponent({ slug }: BlogDetailComponentProps) 
   useEffect(() => {
     const fetchPost = async () => {
       setLoading(true)
-      const result = await getPostBySlug(slug, language === 'ja' ? 'ja' : language === 'ar' ? 'ar' : language === 'ru' ? 'ru' : undefined)
+      const result = await getPostBySlug(slug, language === 'ja' ? 'ja' : language === 'ar' ? 'ar' : language === 'ru' ? 'ru' : language === 'mn' ? 'mn' : undefined)
       if (!result) {
         notFound()
         return

@@ -169,7 +169,7 @@ export default function BlogList({ posts, totalPages, currentPage, category, tag
                       <div className="flex items-center gap-4 text-sm text-gray-500">
                         <span className="flex items-center gap-1">
                           <Calendar className="h-4 w-4" />
-                          {new Date(post.publishDate).toLocaleDateString(language === 'ja' ? 'ja-JP' : language === 'ru' ? 'ru-RU' : 'en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+                          {new Date(post.publishDate).toLocaleDateString(language === 'ja' ? 'ja-JP' : language === 'ru' ? 'ru-RU' : language === 'mn' ? 'mn-MN' : 'en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
                         </span>
                         <span>{post.readingTime} {t('blog.minRead')}</span>
                       </div>

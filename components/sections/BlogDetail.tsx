@@ -26,8 +26,8 @@ export default function BlogDetail({ post }: BlogDetailProps) {
   
   useEffect(() => {
     const fetchRelatedPosts = async () => {
-      setNextPost(await getNextPost(post, language === 'ja' ? 'ja' : language === 'ru' ? 'ru' : language === 'ar' ? 'ar' : undefined))
-      setPreviousPost(await getPreviousPost(post, language === 'ja' ? 'ja' : language === 'ru' ? 'ru' : language === 'ar' ? 'ar' : undefined))
+      setNextPost(await getNextPost(post, language === 'ja' ? 'ja' : language === 'ru' ? 'ru' : language === 'ar' ? 'ar' : language === 'mn' ? 'mn' : undefined))
+      setPreviousPost(await getPreviousPost(post, language === 'ja' ? 'ja' : language === 'ru' ? 'ru' : language === 'ar' ? 'ar' : language === 'mn' ? 'mn' : undefined))
     }
     fetchRelatedPosts()
   }, [post, language])
@@ -140,7 +140,7 @@ export default function BlogDetail({ post }: BlogDetailProps) {
                 </span>
                 <span className="flex items-center gap-1 text-sm text-gray-500">
                   <Calendar className="h-4 w-4" />
-                  {new Date(post.publishDate).toLocaleDateString(language === 'ja' ? 'ja-JP' : language === 'ru' ? 'ru-RU' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                  {new Date(post.publishDate).toLocaleDateString(language === 'ja' ? 'ja-JP' : language === 'ru' ? 'ru-RU' : language === 'mn' ? 'mn-MN' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
                 </span>
                 <span className="text-sm text-gray-500">{post.readingTime} {t('blog.minRead')}</span>
               </div>

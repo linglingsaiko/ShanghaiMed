@@ -855,13 +855,293 @@ const ruFaqs: FaqItem[] = [
   },
 ]
 
+const mnFaqs: FaqItem[] = [
+  {
+    q: 'Шанхайд эмчлүүлэх нь АНУ-тай харьцуулахад ямар үнэтэй вэ?',
+    a: (
+      <>
+        <p className="mb-4">
+          Шанхайн эрүүл мэндийн журам АНУ-тай харьцуулахад <strong>50–80% хямд</strong> байдаг. Тодорхой жишээ:
+        </p>
+        <div className="overflow-x-auto mb-4">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="bg-gray-100">
+                <th className="border border-gray-300 px-4 py-2 text-left">Журам</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">АНУ-ын үнэ</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">Шанхайн үнэ</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">Хэмнэлт</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ['Өвдөгний үе солих', '$30,000-$50,000', '$5,000-$10,000', '80%'],
+                ['Зүрхний титэм судас залгах', '$80,000-$150,000', '$11,000-$21,000', '80%'],
+                ['MRI (3 Тл)', '$1,200-$3,000', '$200-$400', '90%'],
+                ['Шүдний суулгац (нэг шүд)', '$4,000-$6,000', '$800-$1,200', '80%'],
+                ['IVF үргүйдлийн эмчилгээний мөчлөг', '$12,000-$15,000', '$3,000-$5,000', '75%'],
+                ['Нүдний болор авах мэс засал', '$3,500-$6,000', '$1,000-$2,000', '70%'],
+                ['Иж бүрэн эрүүл мэндийн үзлэг', '$2,000-$5,000', '$300-$600', '88%'],
+              ].map((row, i) => (
+                <tr key={i}>
+                  {row.map((cell, j) => (
+                    <td key={j} className="border border-gray-300 px-4 py-2">{cell}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p>
+          ShanghaiMed консьерж үйлчилгээний багц <strong>3 өдөр $1,000</strong> (Үндсэн асрамж) эсвэл{' '}
+          <strong>5 өдөр $1,650</strong> (Нарийн төвөгтэй асрамж) бөгөөд эмнэлгийн зохицуулалт, 2 хэлтэй дагалдан явах,
+          орчуулга, логистик багтана. Эмнэлгийн эмчилгээний төлбөрийг орон нутгийн тарифаар тусад нь төлнө.
+        </p>
+      </>
+    ),
+  },
+  {
+    q: 'Гадаад өвчтөнд Шанхайд эрүүл мэндийн аялал хийхэд аюулгүй юу?',
+    a: (
+      <>
+        <p className="mb-4"><strong>Тийм.</strong> Шанхайн тэргүүлэх эмнэлгүүд олон улсын аюулгүй байдлын стандартад нийцдэг:</p>
+        <ul className="list-disc pl-6 mb-4 space-y-1">
+          <li><strong>Huashan Hospital</strong> (Fudan University) — Grade 3A (Хятадын эмнэлгийн дээд зэрэглэл), 24 олон улсын даатгалын түнш</li>
+          <li><strong>Ruijin Hospital</strong> (SJTU) — Grade 3A, цус судлал ба CAR-T эсийн эмчилгээний үндэсний тэргүүлэгч, National EMR Level 7</li>
+          <li><strong>Zhongshan Hospital</strong> (Fudan University) — Grade 3A, олон улсын өвчтөний тусгай байр</li>
+          <li><strong>Shanghai Ninth People&apos;s Hospital</strong> (SJTU) — Grade 3A, шүд, нүүр ам, гоёл сайхны мэс заслын үндэсний төв</li>
+          <li><strong>Longhua Hospital</strong> (Shanghai University of TCM) — Grade 3A, УАУ-ын эрүүл мэндийн аяллын албан ёсны туршилтын эмнэлэг</li>
+        </ul>
+        <p>
+          Эдгээр эмнэлгүүд АНУ-ын эмнэлгүүдэд ашигладаг <strong>ижил эрүүл мэндийн тоног төхөөрөмж</strong> (Siemens, GE Healthcare, Philips) болон{' '}
+          <strong>ижил имплантын брэндүүдийг</strong> (Stryker, Zimmer, Straumann) ашигладаг. Олон тэргүүлэх эмч нар
+          Johns Hopkins, Mayo Clinic, Cleveland Clinic-д мэргэжил дээшлүүлсэн.
+        </p>
+      </>
+    ),
+  },
+  {
+    q: 'ShanghaiMed ямар Шанхайн эмнэлгүүдтэй хамтран ажилладаг вэ?',
+    a: (
+      <>
+        <p className="mb-4">
+          ShanghaiMed <strong>А зэрэглэлийн эрүүл мэндийн аяллын туршилтын 14 төрийн эмнэлэг</strong> болон{' '}
+          <strong>5 хувийн олон улсын эмнэлэг</strong> — нийт 19 байгууллагатай хамтран ажиллаж, бүх эрүүл мэндийн мэргэжлийг хамарна:
+        </p>
+        <div className="overflow-x-auto mb-4">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="bg-gray-100">
+                <th className="border border-gray-300 px-4 py-2 text-left">Эмнэлэг</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">Их сургууль</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">Гол мэргэжил</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ['Huashan Hospital', 'Fudan University', 'Мэдрэлийн мэс засал №1, арьс өвчин №1'],
+                ["Children's Hospital", 'Fudan University', 'Нярайн анагаах ухаан, хүүхдийн мэс засал'],
+                ['Ruijin Hospital', 'SJTU', 'Цус судлал (CAR-T), дотор шүүрэл'],
+                ['Shanghai General Hospital', '—', 'Нүд, чих хамар хоолой, шээсний зам'],
+                ['Zhongshan Hospital', 'Fudan University', 'Зүрх судас, ерөнхий мэс засал'],
+                ['Renji Hospital', 'SJTU', 'Хоол боловсруулах зам №1, нөхөн үржихүй'],
+                ['Longhua Hospital', 'Shanghai Univ. of TCM', 'Уламжлалт Хятад анагаах ухаан'],
+                ['IPMCH', 'China Welfare Institute', 'Нөхөн үржихүй, эх барих'],
+                ["Shanghai Children's Medical Center", 'SJTU', 'Хүүхдийн зүрхний мэс засал'],
+                ["Sixth People's Hospital", '—', 'Яс шарас (1963 оноос мөч нөхөн суулгалт)'],
+                ['First Maternity & Infant Hospital', '—', 'Эх барих, ургийн анагаах ухаан'],
+                ['Xinhua Hospital', 'SJTU', 'Хүүхэд судлал, арьс өвчин'],
+                ['Huadong Hospital', 'Fudan University', 'Ахмад настан, эрүүл мэндийн үзлэг'],
+                ["Ninth People's Hospital", 'SJTU', 'Шүд №1, гоёл сайхны мэс засал №1'],
+              ].map((row, i) => (
+                <tr key={i}>
+                  {row.map((cell, j) => (
+                    <td key={j} className="border border-gray-300 px-4 py-2">{cell}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p>
+          Дээрээс нь 5 хувийн олон улсын эмнэлэг: Jiahui International (Mass General-тай түншлэл), United Family,
+          ParkwayHealth, SinoUnited Health (Mayo Clinic-тэй хамтын ажиллагаа ба «хоёр дахь санал» үйлчилгээ) болон Raffles Hospital.
+        </p>
+      </>
+    ),
+  },
+  {
+    q: 'Шанхайн эмч нар англиар ярьдаг уу?',
+    a: (
+      <>
+        <p className="mb-4">
+          Шанхайн тэргүүлэх эмнэлгүүдийн олон эмч нар <strong>олон улсын мэргэжил дээшлүүлэлт хийсэн бөгөөд англиар ярьдаг</strong>.
+          Эмч нар англи хэлний эрүүл мэндийн сэтгүүлд тогтмол нийтлэл бичиж, олон улсын хуралд оролцдог.
+        </p>
+        <p className="mb-4">
+          Хэлний бэрхшээлийг бүрэн арилгахын тулд ShanghaiMed <strong>мэргэжлийн 2 хэлтэй эрүүл мэндийн дагалдан явагчдыг</strong> (англи-хятад) үзүүлдэг ба тэд дараах зүйлсийг хийнэ:
+        </p>
+        <ul className="list-disc pl-6 mb-4 space-y-1">
+          <li>Уулзалт бүрт таныг дагалдана</li>
+          <li>Эрүүл мэндийн нэр томьёог үнэн зөв орчуулна</li>
+          <li>Эмнэлгийн бичиг баримт болон хөтөч байдлаар тусална</li>
+          <li>Онош, эмчилгээний төлөвлөгөө, жорыг бүрэн ойлгоход тусална</li>
+        </ul>
+        <p>Бүх эрүүл мэндийн бичиг баримт, эмчилгээний төлөвлөгөө, жор таны архивт зориулан <strong>англи хэл рүү орчуулагдана</strong>.</p>
+      </>
+    ),
+  },
+  {
+    q: 'Хятадад эрүүл мэндийн визийг хэрхэн авах вэ?',
+    a: (
+      <>
+        <p className="mb-4">ShanghaiMed <strong>виз авах бүрэн үйл явцад</strong> тусална:</p>
+        <ol className="list-decimal pl-6 mb-4 space-y-1">
+          <li><strong>Анхны зөвлөгөө</strong> (үнэгүй, зайнаас видео)</li>
+          <li><strong>Эрүүл мэндийн урилга</strong> — зөвлөгөөний дараа түнш эмнэлэг гаргана</li>
+          <li><strong>Виз мэдүүлэх</strong> — урилгыг Хятадын элчин/консулд өгнө</li>
+          <li><strong>Хянан шийдвэрлэх хугацаа</strong> — ихэвчлэн 2–4 долоо хоног</li>
+          <li><strong>Баримт бичгийн дэмжлэг</strong> — шаардлагатай бүх бичиг баримтын орчуулгыг ShanghaiMed хангана</li>
+        </ol>
+        <p>
+          Хятад нь 54 орны иргэдэд (АНУ, Их Британи, Канад, Австрали, ЕХ-ны ихэнх орон зэрэг) <strong>240 цагийн визгүй дамжин өнгөрөх</strong> боломж олгодог бөгөөд энэ нь богино эрүүл мэндийн аялалд хангалттай байж болно.
+        </p>
+      </>
+    ),
+  },
+  {
+    q: 'ShanghaiMed-ийн үйлчилгээний багцад юу багтдаг вэ?',
+    a: (
+      <>
+        <p className="mb-2"><strong>Үндсэн асрамжийн багц — $1,000 / 3 өдөр</strong></p>
+        <ul className="list-disc pl-6 mb-4 space-y-1">
+          <li>Эмнэлэгт уулзалт товлох (1 эмнэлэг)</li>
+          <li>2 хэлтэй эрүүл мэндийн дагалдан явах (англи-хятад)</li>
+          <li>Бүх уулзалт дээр эрүүл мэндийн орчуулга</li>
+          <li>Орон нутгийн эмнэлэг рүү/ээс тээвэр</li>
+          <li>AI навигатор: урьдчилсан зөвлөгөө ба зардлын тооцоо</li>
+        </ul>
+        <p className="mb-2"><strong>Нарийн төвөгтэй асрамжийн багц — $1,650 / 5 өдөр</strong></p>
+        <p className="mb-1">Үндсэн асрамжид багтсан бүх зүйлс, дээр нь:</p>
+        <ul className="list-disc pl-6 mb-4 space-y-1">
+          <li>Олон эмнэлгийн зохицуулалт (2+ эмнэлэг)</li>
+          <li>Мэргэшсэн мэргэжилтэн дээр очих товлолт</li>
+          <li>Эмчилгээний дараах хяналт (30 хоног, зайнаас видео уулзалт)</li>
+          <li>Визний дэмжлэг, нисэх онгоцны буудлаас тосох</li>
+        </ul>
+        <p>
+          <strong>Багтахгүй зүйлс</strong> (эмнэлэгт орон нутгийн тарифаар тусад нь төлнө): эмчилгээний зардал
+          (мэс засал, эм, лабораторийн шинжилгээ), байрлал болон олон улсын нислэг.
+        </p>
+      </>
+    ),
+  },
+  {
+    q: 'Шанхайд эмчилгээгээ аялал жуулчлалтай хослуулж болох уу?',
+    a: (
+      <>
+        <p className="mb-4">
+          <strong>Мэдээж — энэ нь ShanghaiMed-ийн үндсэн философи юм.</strong> Шанхай бол Хятадын хамгийн олон улсын хот бөгөөд дараах газруудаар зочилж болно:
+        </p>
+        <ul className="list-disc pl-6 mb-4 space-y-1">
+          <li><strong>Бунд (The Bund)</strong> — алдартай далайн эргийн зугаалгын газар</li>
+          <li><strong>Юй цэцэрлэг (Yu Garden)</strong> — 400 жилийн түүхтэй сонгодог хятад цэцэрлэг</li>
+          <li><strong>Шанхай цамхаг</strong> — дэлхийн хоёр дахь өндөр барилга (632 м)</li>
+          <li><strong>Shanghai Disneyland</strong> — дэлхийн хамгийн том Disney шилтгээн</li>
+          <li><strong>Францын концесс</strong> — кафе, дэлгүүр бүхий сүүдэрлэг гудамжууд</li>
+        </ul>
+        <p>
+          Олон өвчтөн <strong>эхний 1–2 өдөр эрүүл мэндийн уулзалтаа</strong> төлөвлөж, үлдсэн өдрүүдэд хотын үзэмжээр зочилдог.
+          ShanghaiMed таны амралтын цагийг үрэхгүй байхаар эрүүл мэндийн уулзалтуудыг маршрутад тань тохируулан оруулахад тусална.
+        </p>
+      </>
+    ),
+  },
+  {
+    q: 'Шанхайд эрүүл мэндийн жуулчдын дунд ямар эрүүл мэндийн журам түгээмэл байдаг вэ?',
+    a: (
+      <>
+        <div className="overflow-x-auto mb-4">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="bg-gray-100">
+                <th className="border border-gray-300 px-4 py-2 text-left">Ангилал</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">Журам</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">Хэмнэлт</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">Тэргүүлэх эмнэлэг</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ['Яс шарасны мэс засал', 'Өвдөг/түнхний үе солих, нурууны мэс засал', '80%', "Sixth People's / Huashan"],
+                ['Гоёл сайхны мэс засал', 'Хамар засах, нүүрний нөхөн сэргээлт', '70-80%', "Ninth People's Hospital"],
+                ['Шүдний эмчилгээ', 'Суулгац, титэм, гажиг засал', '70-80%', "Ninth People's Hospital"],
+                ['УАУ', 'Зүү төөнүүр, ургамлын эм, туйна массаж', '75-80%', 'Longhua Hospital'],
+                ['Хавдрын эмчилгээ', 'Хими эмчилгээ, CAR-T, дархлаа эмчилгээ', '60-80%', 'Ruijin / Huashan'],
+                ['Зүрхний мэс засал', 'Шунт тавих, хавхлага солих', '80%', 'Zhongshan Hospital'],
+                ['Үргүйдлийн эмчилгээ', 'IVF, ICSI', '75%', 'Renji / IPMCH'],
+                ['Эрүүл мэндийн үзлэг', 'Өдрийн удирдах ажилтны үзлэг', '88%', 'Huadong Hospital'],
+              ].map((row, i) => (
+                <tr key={i}>
+                  {row.map((cell, j) => (
+                    <td key={j} className="border border-gray-300 px-4 py-2">{cell}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </>
+    ),
+  },
+  {
+    q: 'Олон улсын эрүүл мэндийн даатгал ашиглаж болох уу?',
+    a: (
+      <>
+        <p className="mb-4">
+          Тийм. ShanghaiMed-ийн түнш эмнэлгүүд томоохон олон улсын даатгалын компаниудтай <strong>шууд төлбөр тооцооны гэрээтэй</strong>.
+          Эмнэлэг бүр 8-аас 24 даатгагч хүлээн авдаг:
+        </p>
+        <ul className="list-disc pl-6 mb-4 space-y-1">
+          <li>Huashan Hospital — 24 даатгалын түнш</li>
+          <li>Shanghai Children&apos;s Medical Center — 23 даатгалын түнш</li>
+          <li>Ruijin Hospital — 21 даатгалын түнш</li>
+          <li>Renji Hospital — 20 даатгалын түнш</li>
+        </ul>
+        <p>
+          Хүлээн авах даатгалын компаниудад <strong>MSH, Bupa, Cigna, Aetna, AXA, Allianz, AIA, International SOS</strong> болон бусад багтана.
+          ShanghaiMed таны аяллын өмнө даатгалын хамрах хүрээг шалгах, шууд төлбөр тооцоонд тусална.
+        </p>
+      </>
+    ),
+  },
+  {
+    q: 'Шанхайд эмчилгээ дууссаны дараа юу болдог вэ?',
+    a: (
+      <>
+        <p className="mb-4">ShanghaiMed <strong>эмчилгээний дараах иж бүрэн дагалдан явах</strong> үйлчилгээ үзүүлнэ:</p>
+        <ul className="list-disc pl-6 mb-4 space-y-1">
+          <li>Эмчлэгч эмчтэй <strong>зайнаас видео зөвлөгөө</strong> (Нарийн төвөгтэй асрамж)</li>
+          <li><strong>Орчуулагдсан эрүүл мэндийн баримт бичгүүд</strong> — иж бүрэн гарах бичиг, шинжилгээний хариу, эмийн жагсаалт англи хэл дээр</li>
+          <li><strong>Эм хэрэглэх зөвлөгөө</strong> — тун, гаж нөлөө, харилцан үйлчлэлийн сэрэмжлүүлэг</li>
+          <li><strong>Эдгэрэх төлөвлөгөө</strong> — хувь хүний хуваарь, биеийн тамирын зөвлөмж</li>
+          <li><strong>Эх орны эмчтэй зохицуулалт</strong> — (таны зөвшөөрлөөр) эрүүл мэндийн баримт бичгийг таны эмчлэгч эмчид илгээнэ</li>
+          <li><strong>Тогтмол дэмжлэг</strong> — гэртээ буцаж ирсний дараа ч асуултад хариулахын тулд манай баг холбоотой байна</li>
+        </ul>
+        <p>Нарийн төвөгтэй асрамжийн багцын өвчтнүүдийн хувьд эмчилгээний дараах хяналт <strong>30 хоног</strong> үргэлжилнэ.</p>
+      </>
+    ),
+  },
+]
+
 /* ==================== Component ==================== */
 
 const FaqContent: React.FC = () => {
   const { language, t } = useLanguage()
   const isJa = language === 'ja'
   const isRu = language === 'ru'
-  const faqs: FaqItem[] = isJa ? jaFaqs : isRu ? ruFaqs : enFaqs
+  const isMn = language === 'mn'
+  const faqs: FaqItem[] = isJa ? jaFaqs : isRu ? ruFaqs : isMn ? mnFaqs : enFaqs
 
   const ctaKey = 'faqPage.cta'
   const ctaTitle = t(`${ctaKey}.title`)
@@ -871,7 +1151,7 @@ const FaqContent: React.FC = () => {
     email: 'Email Us',
     form: 'Contact Form',
   }
-  const ruCta = {
+  const tCta = {
     title: ctaTitle !== `${ctaKey}.title` ? ctaTitle : defaultCta.title,
     text: t(`${ctaKey}.text`) !== `${ctaKey}.text` ? t(`${ctaKey}.text`) : defaultCta.text,
     email: t(`${ctaKey}.email`) !== `${ctaKey}.email` ? t(`${ctaKey}.email`) : defaultCta.email,
@@ -884,8 +1164,8 @@ const FaqContent: React.FC = () => {
         email: 'メールで問い合わせる',
         form: 'お問い合わせフォーム',
       }
-    : isRu
-    ? ruCta
+    : (isRu || isMn)
+    ? tCta
     : defaultCta
 
   return (

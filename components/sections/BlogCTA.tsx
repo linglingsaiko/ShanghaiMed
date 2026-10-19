@@ -18,7 +18,7 @@ export default function BlogCTA({ post }: BlogCTAProps) {
   
   useEffect(() => {
     const fetchRelated = async () => {
-      const posts = await getRelatedPosts(post, 3, language === 'ja' ? 'ja' : language === 'ru' ? 'ru' : language === 'ar' ? 'ar' : undefined)
+      const posts = await getRelatedPosts(post, 3, language === 'ja' ? 'ja' : language === 'ru' ? 'ru' : language === 'ar' ? 'ar' : language === 'mn' ? 'mn' : undefined)
       setRelatedPosts(posts)
     }
     fetchRelated()
@@ -83,7 +83,7 @@ export default function BlogCTA({ post }: BlogCTAProps) {
                     loading="lazy"
                   />
                   <div className="absolute top-3 right-3 px-2 py-1 bg-primary text-white text-xs font-medium rounded">
-                    {language === 'ru' ? 'Класс А' : 'Tier 1'}
+                    {language === 'ru' ? 'Класс А' : language === 'mn' ? 'А зэрэглэл' : 'Tier 1'}
                   </div>
                 </div>
                 <div className="p-5">

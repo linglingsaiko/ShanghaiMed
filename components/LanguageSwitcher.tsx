@@ -4,7 +4,7 @@ import React, { useState, useRef, useEffect } from 'react'
 import { Globe } from 'lucide-react'
 import { useRouter, usePathname } from 'next/navigation'
 import { useLanguage } from '@/contexts/LanguageContext'
-import { localePath, getLocaleFromPathname } from '@/lib/i18n'
+import { localePath, stripLocalePrefix } from '@/lib/i18n'
 
 const LanguageSwitcher: React.FC = () => {
   const { language } = useLanguage()
@@ -34,13 +34,8 @@ const LanguageSwitcher: React.FC = () => {
   const current = options.find(o => o.value === language)!
 
   const handleSwitch = (newLocale: string) => {
-    // Get the path without locale prefix
-    const currentLocale = getLocaleFromPathname(pathname)
-    const pathWithoutLocale = currentLocale === 'en' 
-      ? pathname 
-      : pathname.replace(/^\/[a-z]{2}(\/|$)/, '$1')
-    
-    // Navigate to new locale path
+    // Strip any locale prefix; empty result (locale home like /mn) falls back to '/'
+    const pathWithoutLocale = stripLocalePrefix(pathname) || '/'
     const newPath = localePath(newLocale as any, pathWithoutLocale)
     router.push(newPath)
     setOpen(false)

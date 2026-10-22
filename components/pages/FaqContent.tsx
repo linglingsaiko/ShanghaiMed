@@ -170,7 +170,7 @@ const enFaqs: FaqItem[] = [
     a: (
       <>
         <p className="mb-2"><strong>Health Checkup Concierge — $500 / 1 day</strong></p>
-        <p className="mb-1">All 13 concierge services for a single day, designed for executive health screenings and one-day clinic visits:</p>
+        <p className="mb-1">All 13 concierge services for a single day — for 1-day health checkup programs only:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li>1 full day of on-site ISPN-registered nurse accompaniment (daytime)</li>
           <li>Airport pickup &amp; drop-off</li>
@@ -179,7 +179,7 @@ const enFaqs: FaqItem[] = [
           <li>Insurance direct-billing coordination</li>
         </ul>
         <p className="mb-2"><strong>Essential Care Concierge — $1,000 / 3 days</strong></p>
-        <p className="mb-1">All 13 concierge services for multi-day medical visits:</p>
+        <p className="mb-1">All 13 concierge services — required for all specialist consultations and medical conditions:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li>3 full days of on-site ISPN-registered nurse accompaniment (daytime)</li>
           <li>Airport pickup &amp; drop-off, hotel coordination</li>
@@ -468,7 +468,7 @@ const jaFaqs: FaqItem[] = [
     a: (
       <>
         <p className="mb-2"><strong>健康診断コンシェルジュ — $500 / 1日間</strong></p>
-        <p className="mb-1">1日間の人間ドック・単科クリニック受診向け。13のコンシェルジュサービスがすべて含まれます：</p>
+        <p className="mb-1">人間ドック・健康診断専用（1日間パッケージのみ）。13のコンシェルジュサービスがすべて含まれます：</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li>ISPN認定看護師による1日間の現地同行（日中）</li>
           <li>空港送迎（到着・出発）</li>
@@ -477,7 +477,7 @@ const jaFaqs: FaqItem[] = [
           <li>保険ダイレクトビリング調整</li>
         </ul>
         <p className="mb-2"><strong>エッセンシャルケア・コンシェルジュ — $1,000 / 3日間</strong></p>
-        <p className="mb-1">複数日にわたる受診・診断・複数科受診向け：</p>
+        <p className="mb-1">すべての専門科受診・疾患に必須：</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li>ISPN認定三言語看護師による3日間の現地同行（日中）</li>
           <li>空港送迎・ホテル調整</li>
@@ -765,7 +765,7 @@ const ruFaqs: FaqItem[] = [
     a: (
       <>
         <p className="mb-2"><strong>Консьерж для чек-апа — $500 / 1 день</strong></p>
-        <p className="mb-1">Для комплексных медицинских обследований и однодневных визитов в клинику. Включает все 13 услуг консьерж-сервиса:</p>
+        <p className="mb-1">Только для однодневных программ чек-апа. Включает все 13 услуг консьерж-сервиса:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li>1 день очного сопровождения ISPN-сертифицированной медсестры (днём)</li>
           <li>Встреча и проводы в аэропорту</li>
@@ -774,7 +774,7 @@ const ruFaqs: FaqItem[] = [
           <li>Координация прямого выставления счетов через страховку</li>
         </ul>
         <p className="mb-2"><strong>Консьерж «Базовый уход» — $1,000 / 3 дня</strong></p>
-        <p className="mb-1">Для консультаций, диагностики и визитов к нескольким специалистам:</p>
+        <p className="mb-1">Обязателен для всех консультаций специалистов и заболеваний:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li>3 дня очного сопровождения ISPN-сертифицированной трёхъязычной медсестры (днём)</li>
           <li>Встреча и проводы в аэропорту, координация отеля</li>
@@ -1059,7 +1059,7 @@ const mnFaqs: FaqItem[] = [
     a: (
       <>
         <p className="mb-2"><strong>Эрүүл мэндийн үзлэгийн консьерж — $500 / 1 өдөр</strong></p>
-        <p className="mb-1">Нэг өдрийн дотор бүрэн эрүүл мэндийн үзлэг, нэг өдрийн клиник үзлэгт зориулагдсан. Консьержийн 13 үйлчилгээ бүгд багтана:</p>
+        <p className="mb-1">Зөвхөн 1 өдрийн эрүүл мэндийн үзлэгийн хөтөлбөрт зориулагдсан. Консьержийн 13 үйлчилгээ бүгд багтана:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li>ISPN гэрчилгээтэй сувилагчийн 1 өдөр биечлэн дагалдан явах (өдрийн цагаар)</li>
           <li>Нисэх буудлаас тосох, хүргэж өгөх</li>
@@ -1068,7 +1068,7 @@ const mnFaqs: FaqItem[] = [
           <li>Даатгалын шууд төлбөрийн зохицуулалт</li>
         </ul>
         <p className="mb-2"><strong>Үндсэн асрамжийн консьерж — $1,000 / 3 өдөр</strong></p>
-        <p className="mb-1">Зөвлөгөө, оношилгоо, олон мэргэжлийн эмчийн үзлэгт зориулагдсан:</p>
+        <p className="mb-1">Бүх мэргэжлийн эмчийн үзлэг ба өвчлөлд шаардлагатай:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li>ISPN гэрчилгээтэй гурван хэлтэй сувилагчийн 3 өдөр биечлэн дагалдан явах (өдрийн цагаар)</li>
           <li>Нисэх буудлаас тосох, хүргэж өгөх, буудлын зохицуулалт</li>

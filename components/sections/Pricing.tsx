@@ -101,9 +101,9 @@ const Pricing: React.FC = () => {
   ]
 
   const coreDescsFallback = [
-    'Best for executive health screenings and single-day clinic visits',
-    'Best for consultations, diagnostics, and multi-specialty visits',
-    'Best for surgery, inpatient procedures, and extended treatment plans',
+    'For 1-day health checkup programs only',
+    'Required for all specialist consultations and medical conditions',
+    'Required for surgery and inpatient procedures',
   ]
 
   const coreNamesFallback = [
@@ -122,7 +122,7 @@ const Pricing: React.FC = () => {
   const faqFallback = [
     {
       q: 'How much does a medical concierge service cost in Shanghai?',
-      a: "Our concierge packages are $500 for a 1-day Health Checkup visit, $1,000 for a 3-day Essential Care package, and $1,650 for a 5-day Surgery & Extended Care package. Every package includes a dedicated trilingual nurse and full concierge support — packages differ only in on-site accompaniment days. Extra companion hours beyond your package are available at $50/hour as an add-on. Medical fees are paid directly to hospitals — we do not charge hospital commissions.",
+      a: "Our concierge packages are $500 for a 1-day Health Checkup visit (health checkup programs only), $1,000 for a 3-day Essential Care package (required for all specialist consultations and medical conditions), and $1,650 for a 5-day Surgery & Extended Care package (required for surgery and inpatient procedures). Every package includes a dedicated trilingual nurse and full concierge support. Extra companion hours beyond your package are available at $50/hour as an add-on. Medical fees are paid directly to hospitals — we do not charge hospital commissions.",
     },
     {
       q: "What's included in the $1,000 Essential package?",

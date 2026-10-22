@@ -222,7 +222,7 @@ const enTranslations = {
     pricing: {
       badge: 'Pricing',
       title: 'Transparent Concierge Pricing',
-      subtitle: 'One clear fee for a dedicated trilingual nurse on the ground — every package is per person, includes full concierge support, and differs only by on-site accompaniment days. No hidden costs, no hospital commissions.',
+      subtitle: 'One clear fee for a dedicated trilingual nurse on the ground — every package is per person and includes full concierge support. No hidden costs, no hospital commissions.',
       freeTitle: 'Free Initial Consultation',
       freeDesc: 'Get the information you need to decide — before you commit to anything.',
       freeItems: [
@@ -233,7 +233,7 @@ const enTranslations = {
       ],
       freeLabel: 'FREE — Talk to Sara',
       servicePricingTitle: 'On-the-Ground Concierge Packages',
-      servicePricingDesc: 'Three packages to match your care needs — every package includes a dedicated trilingual nurse and full concierge support; choose by the number of on-site days.',
+      servicePricingDesc: 'Three packages matched to your care scenario — health checkups, specialist care, or surgery. Every package includes a dedicated trilingual nurse and full concierge support.',
       usdLabel: 'USD',
       popularBadge: 'MOST POPULAR',
       whatsIncluded: "What's included",
@@ -242,7 +242,7 @@ const enTranslations = {
       packages: [
         {
           name: 'Health Checkup Concierge',
-          description: 'Best for executive health screenings and single-day clinic visits',
+          description: 'For 1-day health checkup programs only',
           allItems: [
             '1 full-day on-site nurse accompaniment (daytime)',
             'Airport pickup & drop-off',
@@ -261,7 +261,7 @@ const enTranslations = {
         },
         {
           name: 'Essential Care Concierge',
-          description: 'Best for consultations, diagnostics, and multi-specialty visits',
+          description: 'Required for all specialist consultations and medical conditions',
           allItems: [
             '3 full days on-site nurse accompaniment (daytime)',
             'Airport pickup & drop-off',
@@ -280,7 +280,7 @@ const enTranslations = {
         },
         {
           name: 'Surgery & Extended Care Concierge',
-          description: 'Best for surgery, inpatient procedures, and extended treatment plans',
+          description: 'Required for surgery and inpatient procedures',
           allItems: [
             '5 full days on-site nurse accompaniment (pre-op, surgery day & post-op)',
             'Airport pickup & drop-off',
@@ -309,7 +309,7 @@ const enTranslations = {
       socialProof: 'Trusted by international patients. No hidden fees — concierge pricing is quoted upfront and medical fees are paid directly to hospitals.',
       faqTitle: 'Quick Answers',
       faqItems: [
-        { q: 'How much does a medical concierge service cost in Shanghai?', a: 'Our concierge packages are $500 for a 1-day Health Checkup visit, $1,000 for a 3-day Essential Care package, and $1,650 for a 5-day Surgery & Extended Care package. Every package is priced per person and includes a dedicated trilingual nurse with full concierge support — packages differ only in on-site accompaniment days. Extra companion hours beyond your package are available at $50/hour as an add-on. Medical fees are paid directly to hospitals — we do not charge hospital commissions.' },
+        { q: 'How much does a medical concierge service cost in Shanghai?', a: 'Our concierge packages are $500 for a 1-day Health Checkup visit (health checkup programs only), $1,000 for a 3-day Essential Care package (required for all specialist consultations and medical conditions), and $1,650 for a 5-day Surgery & Extended Care package (required for surgery and inpatient procedures). Every package is priced per person and includes a dedicated trilingual nurse with full concierge support. Extra companion hours beyond your package are available at $50/hour as an add-on. Medical fees are paid directly to hospitals — we do not charge hospital commissions.' },
         { q: "What's included in the $1,000 Essential package?", a: 'The 3-day Essential package includes 3 full days (daytime) of on-site trilingual nurse accompaniment, airport pickup & drop-off, hotel coordination, bilingual medical interpretation during all appointments, medical report translation & summaries, doctor appointment scheduling, medication pickup coordination, hospital & specialist matching, local transportation & payment assistance, dedicated WhatsApp support throughout your stay, visa invitation letter support, 30-day post-care remote follow-up, and insurance direct-billing & pre-authorization support — 13 services total.' },
         { q: 'Can I use my international insurance in Shanghai hospitals?', a: "Yes. Shanghai's major international departments and Grade 3A hospitals accept many international insurance plans including Cigna, AXA, Allianz, MSH, and Bupa. We help with policy benefit checks, pre-authorization letters, and direct-billing coordination so you don't have to pay out of pocket and file claims yourself." },
         { q: 'Does the concierge fee include medical treatment costs?', a: "No. The concierge fee covers our on-the-ground support services only. Medical fees (doctor consultations, tests, medication, procedures, health screening packages, surgery) are paid directly to hospitals and clinics at local rates — we do not mark up medical costs and we do not receive commissions from hospitals. This separation keeps our recommendations fully independent." },
@@ -770,7 +770,7 @@ export const translations: Record<Language, any> = {
     pricing: {
       badge: '料金',
       title: '透明なコンシェルジュ料金',
-      subtitle: '専任の三言語対応看護師が現地同行する明確なお一人様料金 — どのパッケージもフルコンシェルジュ対応が含まれ、違いは看護師が同行する日数だけです。隠れた費用はなく、病院からのコミッションもいただきません。',
+      subtitle: '専任の三言語対応看護師が現地同行する明確なお一人様料金 — どのパッケージもフルコンシェルジュ対応が含まれます。隠れた費用はなく、病院からのコミッションもいただきません。',
       freeTitle: '初回相談無料',
       freeDesc: 'ご決断の前に、必要な情報をすべてご提供します。',
       freeItems: [
@@ -781,7 +781,7 @@ export const translations: Record<Language, any> = {
       ],
       freeLabel: '無料 — Saraに相談する',
       servicePricingTitle: '現地コンシェルジュパッケージ',
-      servicePricingDesc: '診療内容に合わせて3つのパッケージからお選びください。いずれも専任の三言語看護師によるフルサポートが含まれ、現地同行日数のみが異なります。',
+      servicePricingDesc: '健康診断・専門診療・手術——ケアの目的に応じた3つのパッケージ。いずれも専任の三言語看護師によるフルサポートが含まれます。',
       usdLabel: '米ドル',
       popularBadge: '一番人気',
       whatsIncluded: '含まれるサービス',
@@ -790,7 +790,7 @@ export const translations: Record<Language, any> = {
       packages: [
         {
           name: '健康診断コンシェルジュ',
-          description: '人間ドック・健康診断、1日完結のクリニック受診に最適',
+          description: '1日間の健康診断プログラム専用',
           allItems: [
             '1日間の看護師現地同行（日中）',
             '空港送迎（到着・出発）',
@@ -809,7 +809,7 @@ export const translations: Record<Language, any> = {
         },
         {
           name: 'エッセンシャルケア・コンシェルジュ',
-          description: '診察・検査・複数科受診に最適',
+          description: 'すべての専門科受診・疾患に必須',
           allItems: [
             '3日間の看護師現地同行（日中）',
             '空港送迎（到着・出発）',
@@ -828,7 +828,7 @@ export const translations: Record<Language, any> = {
         },
         {
           name: '手術・延長ケア・コンシェルジュ',
-          description: '手術、入院を伴う処置、長期の治療計画に最適',
+          description: '手術・入院治療に必須',
           allItems: [
             '5日間の看護師現地同行（術前・手術当日・術後）',
             '空港送迎（到着・出発）',
@@ -857,7 +857,7 @@ export const translations: Record<Language, any> = {
       socialProof: '世界各国の患者様にご利用いただいています。隠れた料金は一切なく、コンシェルジュ料金は事前にご提示。医療費は病院へ直接お支払いいただきます。',
       faqTitle: 'よくあるご質問',
       faqItems: [
-        { q: '上海の医療コンシェルジュサービスはいくらですか？', a: 'コンシェルジュパッケージは、1日間の健康診断コンシェルジュが500米ドル、3日間のエッセンシャルケアが1,000米ドル、5日間の手術・延長ケアが1,650米ドルです。いずれもお一人様料金で、専任の三言語看護師によるフルコンシェルジュサポートが含まれます。パッケージの違いは現地同行日数のみです。パッケージを超える同伴時間は追加オプションとして1時間50米ドルで承ります。医療費は病院へ直接お支払いいただきます。病院からのコミッションはいただきません。' },
+        { q: '上海の医療コンシェルジュサービスはいくらですか？', a: 'コンシェルジュパッケージは、1日間の健康診断コンシェルジュが500米ドル（健康診断プログラム専用）、3日間のエッセンシャルケアが1,000米ドル（すべての専門科受診・疾患に適用）、5日間の手術・延長ケアが1,650米ドル（手術・入院治療に適用）です。いずれもお一人様料金で、専任の三言語看護師によるフルコンシェルジュサポートが含まれます。パッケージを超える同伴時間は追加オプションとして1時間50米ドルで承ります。医療費は病院へ直接お支払いいただきます。病院からのコミッションはいただきません。' },
         { q: '1,000米ドルのエッセンシャルパッケージには何が含まれますか？', a: '3日間エッセンシャルパッケージには、3日間（日中）の三言語看護師現地同行、空港送迎、ホテル調整、すべての診察での二言語医療通訳、診療レポート翻訳・サマリー、診察予約調整、お薬の受け取り調整、病院・専門医マッチング、現地移動・会計サポート、滞在中のLINE専用サポート、ビザ招聘状サポート、帰国後30日間の遠隔フォローアップ、保険ダイレクトビリング・事前承認サポートが含まれます（全13項目）。' },
         { q: '上海の病院で海外保険は使えますか？', a: 'はい。上海の主要な国際部や三甲病院では、Cigna、AXA、Allianz、MSH、Bupaなど多くの海外保険がご利用いただけます。保険適用範囲の確認、事前承認状の取得、ダイレクトビリングの調整までサポートし、自己負担で後から請求する手間を省きます。' },
         { q: 'コンシェルジュ料金に治療費は含まれますか？', a: 'いいえ。コンシェルジュ料金は現地でのサポートサービスのみをカバーしています。医療費（診察代・検査代・薬代・処置代・健診パッケージ・手術費用など）は病院やクリニックへ直接現地料金でお支払いいただきます。私どもは医療費に上乗せせず、病院からのコミッションも受け取りません。この分離により、常に中立的な推薦を行うことができます。' },
@@ -1221,7 +1221,7 @@ export const translations: Record<Language, any> = {
     pricing: {
       badge: 'الأسعار',
       title: 'أسعار الكونسيرج الشفافة',
-      subtitle: 'رسوم واضحة لممرضة ثلاثية اللغة مخصصة معك على الأرض — كل باقة بسعر للشخص الواحد وتشمل دعم الكونسيرج الكامل، والفرق الوحيد هو عدد أيام المرافقة. بدون تكاليف خفية، بدون عمولات من المستشفيات.',
+      subtitle: 'رسوم واضحة لممرضة ثلاثية اللغة مخصصة معك على الأرض — كل باقة بسعر للشخص الواحد وتشمل دعم الكونسيرج الكامل. بدون تكاليف خفية، بدون عمولات من المستشفيات.',
       freeTitle: 'استشارة أولية مجانية',
       freeDesc: 'احصل على المعلومات التي تحتاجها لاتخاذ قرارك — قبل الالتزام بأي شيء.',
       freeItems: [
@@ -1232,7 +1232,7 @@ export const translations: Record<Language, any> = {
       ],
       freeLabel: 'مجاني — تحدث مع سارة',
       servicePricingTitle: 'باقات الكونسيرج الميداني',
-      servicePricingDesc: 'ثلاث باقات تناسب احتياجات الرعاية الخاصة بك — كل باقة تشمل ممرضة ثلاثية اللغة مخصصة ودعم كونسيرج كامل؛ اختر حسب عدد الأيام الميدانية.',
+      servicePricingDesc: 'ثلاث باقات مصممة لسيناريو رعايتك — الفحص الصحي، أو الرعاية التخصصية، أو الجراحة. كل باقة تشمل ممرضة ثلاثية اللغة مخصصة ودعم كونسيرج كامل.',
       usdLabel: 'دولار أمريكي',
       popularBadge: 'الأكثر شعبية',
       whatsIncluded: 'المشمول في الباقة',
@@ -1712,7 +1712,7 @@ export const translations: Record<Language, any> = {
     pricing: {
       badge: 'Цены',
       title: 'Прозрачные цены на консьерж-сервис',
-      subtitle: 'Одна понятная цена за персональную трёхъязычную медсестру на месте — каждый пакет рассчитан на одного человека, включает полную консьерж-поддержку и отличается только количеством дней очного сопровождения. Никаких скрытых платежей, никаких комиссий от больниц.',
+      subtitle: 'Одна понятная цена за персональную трёхъязычную медсестру на месте — каждый пакет рассчитан на одного человека и включает полную консьерж-поддержку. Никаких скрытых платежей, никаких комиссий от больниц.',
       freeTitle: 'Бесплатная первичная консультация',
       freeDesc: 'Получите всю информацию для принятия решения — до того как что-либо оплачивать.',
       freeItems: [
@@ -1723,7 +1723,7 @@ export const translations: Record<Language, any> = {
       ],
       freeLabel: 'БЕСПЛАТНО — Написать Саре',
       servicePricingTitle: 'Пакеты консьерж-сопровождения',
-      servicePricingDesc: 'Три пакета под разные задачи — каждый включает персональную трёхъязычную медсестру и полную консьерж-поддержку; выбирайте по количеству дней сопровождения.',
+      servicePricingDesc: 'Три пакета под разные сценарии — чек-ап, специализированная помощь или хирургия. Каждый включает персональную трёхъязычную медсестру и полную консьерж-поддержку.',
       usdLabel: 'долларов США',
       popularBadge: 'САМЫЙ ПОПУЛЯРНЫЙ',
       whatsIncluded: 'Что включено',
@@ -1732,7 +1732,7 @@ export const translations: Record<Language, any> = {
       packages: [
         {
           name: 'Консьерж для чек-апа',
-          description: 'Для комплексных медицинских обследований и однодневных визитов в клинику',
+          description: 'Только для однодневных программ чек-апа',
           allItems: [
             '1 день очного сопровождения медсестры (днём)',
             'Встреча и проводы в аэропорту',
@@ -1751,7 +1751,7 @@ export const translations: Record<Language, any> = {
         },
         {
           name: 'Консьерж «Базовый уход»',
-          description: 'Для консультаций, диагностики и визитов к нескольким специалистам',
+          description: 'Обязателен для всех консультаций специалистов и заболеваний',
           allItems: [
             '3 дня очного сопровождения медсестры (днём)',
             'Встреча и проводы в аэропорту',
@@ -1770,7 +1770,7 @@ export const translations: Record<Language, any> = {
         },
         {
           name: 'Консьерж «Хирургия и расширенный уход»',
-          description: 'Для операций, стационарных процедур и длительных планов лечения',
+          description: 'Обязателен для операций и стационарного лечения',
           allItems: [
             '5 дней очного сопровождения медсестры (до операции, день операции и после)',
             'Встреча и проводы в аэропорту',
@@ -1799,7 +1799,7 @@ export const translations: Record<Language, any> = {
       socialProof: 'Нам доверяют международные пациенты. Никаких скрытых платежей — цена консьерж-сервиса оговаривается заранее, медицинские расходы оплачиваются напрямую больницам.',
       faqTitle: 'Быстрые ответы',
       faqItems: [
-        { q: 'Сколько стоит медицинский консьерж-сервис в Шанхае?', a: 'Пакеты стоят 500 долларов за 1-дневный консьерж для чек-апа, 1 000 долларов за 3-дневный пакет «Базовый уход» и 1 650 долларов за 5-дневный пакет «Хирургия и расширенный уход». Каждый пакет рассчитан на одного человека и включает персональную трёхъязычную медсестру с полной консьерж-поддержкой; пакеты отличаются только количеством дней очного сопровождения. Дополнительные часы сверх пакета доступны по цене 50 долларов в час. Медицинские расходы оплачиваются напрямую больницам; мы не получаем комиссий от медицинских учреждений.' },
+        { q: 'Сколько стоит медицинский консьерж-сервис в Шанхае?', a: 'Пакеты стоят 500 долларов за 1-дневный консьерж для чек-апа (только для программ чек-апа), 1 000 долларов за 3-дневный пакет «Базовый уход» (обязателен для всех консультаций специалистов и заболеваний) и 1 650 долларов за 5-дневный пакет «Хирургия и расширенный уход» (обязателен для операций и стационарного лечения). Каждый пакет рассчитан на одного человека и включает персональную трёхъязычную медсестру с полной консьерж-поддержкой. Дополнительные часы сверх пакета доступны по цене 50 долларов в час. Медицинские расходы оплачиваются напрямую больницам; мы не получаем комиссий от медицинских учреждений.' },
         { q: 'Что включено в базовый пакет за 1 000 долларов?', a: '3-дневный пакет «Базовый уход» включает 3 полных дня (днём) очного сопровождения трёхъязычной медсестры, встречу и проводы в аэропорту, помощь с координацией отеля, двуязычный медицинский перевод во время всех приёмов, перевод и резюме медицинских заключений, запись на приёмы, получение лекарств, подбор больницы и специалиста, помощь с транспортом и оплатой, выделенную поддержку в WhatsApp на всё время пребывания, помощь с визовым приглашением, 30 дней удалённого сопровождения после лечения и поддержку по прямому выставлению счетов и предварительной авторизации по страховке — всего 13 услуг.' },
         { q: 'Можно ли использовать международную страховку в больницах Шанхая?', a: 'Да. Крупные международные отделения и больницы категории 3А в Шанхае принимают многие международные страховые планы, включая Cigna, AXA, Allianz, MSH и Bupa. Мы помогаем с проверкой покрытия, получением писем предварительной авторизации и координацией прямого выставления счетов, чтобы вам не приходилось платить из своего кармана и потом подавать заявление на возмещение.' },
         { q: 'Включает ли стоимость консьерж-сервиса медицинские расходы?', a: 'Нет. Стоимость консьерж-сервиса покрывает только нашу очную поддержку на месте. Медицинские расходы (консультации врачей, анализы, лекарства, процедуры, пакеты чек-апа, операции) оплачиваются напрямую больнице или клинике по местным ценам. Мы не делаем наценок на медицинские услуги и не получаем комиссий от больниц. Такое разделение позволяет нам всегда давать независимые рекомендации.' },
@@ -2664,7 +2664,7 @@ export const translations: Record<Language, any> = {
     pricing: {
       badge: 'Үнэ',
       title: 'Ил тод консьержийн үнэ',
-      subtitle: 'Таныг дагалдан явах тусгай гурван хэлтэй сувилагчийн тодорхой төлбөр — багц бүр нэг хүнд зориулагдсан, бүрэн консьерж дэмжлэг багтсан бөгөөд ялгаа нь зөвхөн дагалдан явах өдрийн тоо. Далд зардал байхгүй, эмнэлгээс комисс авдаггүй.',
+      subtitle: 'Таныг дагалдан явах тусгай гурван хэлтэй сувилагчийн тодорхой төлбөр — багц бүр нэг хүнд зориулагдсан, бүрэн консьерж дэмжлэг багтсан. Далд зардал байхгүй, эмнэлгээс комисс авдаггүй.',
       freeTitle: 'Үнэгүй анхны зөвлөгөө',
       freeDesc: 'Шийдвэр гаргахаасаа өмнө хэрэгтэй бүх мэдээллээ аваарай — ямар нэгэн үүрэг амлалтгүйгээр.',
       freeItems: [
@@ -2675,7 +2675,7 @@ export const translations: Record<Language, any> = {
       ],
       freeLabel: 'ҮНЭГҮЙ — Саратай ярих',
       servicePricingTitle: 'Газар дээрх консьерж багцууд',
-      servicePricingDesc: 'Тусламж хэрэгцээндээ тохируулан гурван багцаас сонгоно уу — багц бүрт тусгай гурван хэлтэй сувилагч, бүрэн консьерж дэмжлэг багтсан; зөвхөн өдрийн тоогоор ялгаатай.',
+      servicePricingDesc: 'Эрүүл мэндийн үзлэг, мэргэжлийн эмчилгээ, мэс засал гэх мэт зорилгод нийцсэн гурван багц — багц бүрт тусгай гурван хэлтэй сувилагч, бүрэн консьерж дэмжлэг багтсан.',
       usdLabel: 'ам.доллар',
       popularBadge: 'ХАМГИЙН ИХ СОНГОДОГ',
       whatsIncluded: 'Багт багтсан зүйлс',
@@ -2684,7 +2684,7 @@ export const translations: Record<Language, any> = {
       packages: [
         {
           name: 'Эрүүл мэндийн үзлэгийн консьерж',
-          description: 'Нэг өдрийн дотор бүрэн эрүүл мэндийн үзлэг, клиник үзлэгт тохиромжтой',
+          description: 'Зөвхөн 1 өдрийн эрүүл мэндийн үзлэгийн хөтөлбөрт',
           allItems: [
             '1 өдөр сувилагч биечлэн дагалдан явах (өдрийн цагаар)',
             'Нисэх буудлаас тосох, хүргэж өгөх',
@@ -2703,7 +2703,7 @@ export const translations: Record<Language, any> = {
         },
         {
           name: 'Үндсэн асрамжийн консьерж',
-          description: 'Зөвлөгөө, оношилгоо, олон мэргэжилтэнд үзүүлэхэд тохиромжтой',
+          description: 'Бүх мэргэжлийн эмчийн үзлэг ба өвчлөлд шаардлагатай',
           allItems: [
             '3 өдөр сувилагч биечлэн дагалдан явах (өдрийн цагаар)',
             'Нисэх буудлаас тосох, хүргэж өгөх',
@@ -2722,7 +2722,7 @@ export const translations: Record<Language, any> = {
         },
         {
           name: 'Мэс засал ба сунгасан асрамжийн консьерж',
-          description: 'Мэс засал, хэвтүүлэн эмчлэх ажилбар, урт хугацааны эмчилгээнд тохиромжтой',
+          description: 'Мэс засал ба хэвтүүлэн эмчлэхэд шаардлагатай',
           allItems: [
             '5 өдөр сувилагч биечлэн дагалдан явах (мэс заслын өмнө, мэс заслын өдөр, дараа)',
             'Нисэх буудлаас тосох, хүргэж өгөх',
@@ -2751,7 +2751,7 @@ export const translations: Record<Language, any> = {
       socialProof: 'Олон улсын өвчтөнүүд бидэнд итгэдэг. Далд төлбөр байхгүй — консьержийн үнийг урьдчилан тодорхой хэлж өгнө, эмнэлгийн зардлыг эмнэлэгт шууд төлнө.',
       faqTitle: 'Товч хариултууд',
       faqItems: [
-        { q: 'Шанхайд эмнэлгийн консьерж үйлчилгээ хэр үнэтэй вэ?', a: 'Багцууд 1 өдрийн эрүүл мэндийн үзлэгт 500 ам.доллар, 3 өдрийн үндсэн асрамжид 1,000 ам.доллар, 5 өдрийн мэс засал ба сунгасан асрамжид 1,650 ам.доллар байна. Багц бүр нэг хүнд зориулагдсан бөгөөд тусгай гурван хэлтэй сувилагч бүхий бүрэн консьерж дэмжлэг багтана; багцуудын ялгаа нь зөвхөн биечлэн дагалдан явах өдрийн тоо. Багцаас хэтэрсэн цаг нэмэлтээр цаг тутамд 50 ам.доллар. Эмнэлгийн зардлыг эмнэлэгт шууд төлнө; бид эмнэлгээс комисс авдаггүй.' },
+        { q: 'Шанхайд эмнэлгийн консьерж үйлчилгээ хэр үнэтэй вэ?', a: 'Багцууд 1 өдрийн эрүүл мэндийн үзлэгт 500 ам.доллар (зөвхөн эрүүл мэндийн үзлэгийн хөтөлбөрт), 3 өдрийн үндсэн асрамжид 1,000 ам.доллар (бүх мэргэжлийн эмчийн үзлэг ба өвчлөлд шаардлагатай), 5 өдрийн мэс засал ба сунгасан асрамжид 1,650 ам.доллар (мэс засал ба хэвтүүлэн эмчлэхэд шаардлагатай) байна. Багц бүр нэг хүнд зориулагдсан бөгөөд тусгай гурван хэлтэй сувилагч бүхий бүрэн консьерж дэмжлэг багтана. Багцаас хэтэрсэн цаг нэмэлтээр цаг тутамд 50 ам.доллар. Эмнэлгийн зардлыг эмнэлэгт шууд төлнө; бид эмнэлгээс комисс авдаггүй.' },
         { q: '1000 долларын үндсэн багцад юу багтдаг вэ?', a: '3 өдрийн үндсэн багцад 3 бүтэн өдөр (өдрийн цагаар) гурван хэлтэй сувилагч биечлэн дагалдан явах, нисэх буудлын уулзалт, буудлын зохицуулалт, бүх зөвлөгөөний үеийн хоёр хэлний орчуулга, эмнэлгийн тайлангийн орчуулга, эмчийн цаг захиалга, эмийн зохицуулалт, эмнэлэг ба мэргэжилтний тохирол, тээвэр төлбөрийн туслалцаа, хугацааны тусгай WhatsApp дэмжлэг, визний урилга, эмчилгээний дараах 30 хоногийн зайнаас хяналт, даатгалын шууд төлбөр ба урьдчилсан зөвшөөрлийн дэмжлэг багтана (нийт 13 үйлчилгээ).' },
         { q: 'Шанхайн эмнэлгүүдэд олон улсын даатгалаа ашиглаж болох уу?', a: 'Тийм. Шанхайн томоохон олон улсын тасгууд ба 3А зэрэглэлийн эмнэлгүүд Cigna, AXA, Allianz, MSH, Bupa зэрэг олон улсын даатгалуудыг хүлээн авдаг. Бид танд даатгалын хамрах хүрээг шалгах, урьдчилсан зөвшөөрлийн захидал авах, шууд төлбөрийн зохицуулалт хийхэд тусална — халааснаасаа төлж дараа нь нөхөн төлүүлэх шаардлагагүй.' },
         { q: 'Консьержийн үнэд эмчилгээний зардал багтдаг уу?', a: 'Үгүй. Консьержийн төлбөр зөвхөн газар дээрх дэмжлэг үйлчилгээг хамарна. Эмнэлгийн зардал (эмчийн зөвлөгөө, шинжилгээ, эм, эмчилгээ, эрүүл мэндийн үзлэгийн багц, мэс засал) эмнэлэг эсвэл клиникт орон нутгийн үнээр шууд төлөгдөнө. Бид эмнэлгийн үйлчилгээнд нэмэлт үнэлгээ хийдэггүй, эмнэлгээс комисс авдаггүй. Энэхүү тусгаарлалт нь бидэнд үргэлж бие даасан зөвлөмж өгөх боломжийг олгодог.' },

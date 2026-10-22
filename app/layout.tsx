@@ -174,6 +174,7 @@ export default function RootLayout({
                     itemListElement: [
                       {
                         '@type': 'Offer',
+                        name: 'Free Initial Consultation',
                         itemOffered: {
                           '@type': 'Service',
                           name: 'Free Initial Consultation',
@@ -187,9 +188,17 @@ export default function RootLayout({
                           '@type': 'ServiceChannel',
                           serviceUrl: 'https://wa.me/message/VUS2JQZ7E52ZH1',
                         },
+                        includesService: [
+                          'Top specialist matching with Shanghai Grade 3A hospital professors',
+                          'Transparent treatment cost estimate',
+                          'Hospital recommendation based on condition',
+                          'Confidential case review by ISPN-certified nurse',
+                          'No payment required; no obligation to purchase',
+                        ],
                       },
                       {
                         '@type': 'Offer',
+                        name: 'Essential Care Concierge',
                         itemOffered: {
                           '@type': 'Service',
                           name: 'Essential Care Concierge',
@@ -198,9 +207,25 @@ export default function RootLayout({
                         },
                         price: '1000',
                         priceCurrency: 'USD',
+                        includesService: [
+                          'Airport pickup or drop-off',
+                          'Bilingual medical companion (English-Chinese)',
+                          'Hospital appointment scheduling',
+                          'Hotel coordination assistance',
+                          'Translation of all medical documents',
+                          'Translation during doctor appointments',
+                          'Guidance through hospital registration and payment',
+                          'Visa assistance documentation',
+                          'Local SIM card setup',
+                          'Alipay/WeChat Pay activation help',
+                          'WeChat/WhatsApp messaging support',
+                          'Post-care remote follow-up',
+                          'Insurance direct-billing & pre-authorization help',
+                        ],
                       },
                       {
                         '@type': 'Offer',
+                        name: 'Complex Care Concierge',
                         itemOffered: {
                           '@type': 'Service',
                           name: 'Complex Care Concierge',
@@ -209,9 +234,20 @@ export default function RootLayout({
                         },
                         price: '1650',
                         priceCurrency: 'USD',
+                        includesService: [
+                          'Everything in Essential Care Concierge',
+                          'Multi-hospital visit coordination',
+                          'Multiple specialist appointment booking',
+                          'Treatment plan comparison across hospitals',
+                          'Medical records transfer between doctors',
+                          '30-day post-treatment follow-up',
+                          'Sharing medical records with home-country physician',
+                          'Insurance direct-billing & pre-authorization help',
+                        ],
                       },
                       {
                         '@type': 'Offer',
+                        name: 'Extra Companion Hours',
                         itemOffered: {
                           '@type': 'Service',
                           name: 'Extra Companion Hours',
@@ -221,6 +257,11 @@ export default function RootLayout({
                         price: '50',
                         priceCurrency: 'USD',
                         unitCode: 'HUR',
+                        includesService: [
+                          'Additional bilingual medical companion hours',
+                          'Add-on to Essential Care or Complex Care package only',
+                          'Not sold as standalone service',
+                        ],
                       },
                     ],
                   },

@@ -1,29 +1,29 @@
 'use client'
 
 import React from 'react'
-import { CheckCircle, Stethoscope, Bed, Languages, Heart, Clipboard, Calendar, Map, FileText, Phone, Users } from 'lucide-react'
+import { CheckCircle, Stethoscope } from 'lucide-react'
 import Card from '../ui/Card'
-import Badge from '../ui/Badge'
-import { nurseServices, nurseCredentials } from '@/lib/constants'
+import { nurseServices } from '@/lib/constants'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 const CareTeam: React.FC = () => {
   const { t, tArr } = useLanguage()
-  const iconMap: Record<string, React.ElementType> = {
-    Clipboard,
-    Calendar,
-    Languages,
-    Map,
-    FileText,
-    Phone,
-    Stethoscope,
-    Bed,
-    Heart,
-  }
 
-  // 翻译表数据（缺失时回退英文常量）
   const translatedServices = tArr('careTeam.services')
   const translatedCredentials = tArr('careTeam.credentials')
+
+  // Credentials fallback (hard facts, verifiable)
+  const credentialsFallback = [
+    { name: 'Licensed Registered Nurses (RN)', detail: 'Verified by Shanghai Health Commission' },
+    { name: 'Trilingual Certification', detail: 'Fluent in English, Japanese, and Chinese' },
+    { name: 'JLPT N1 Certified', detail: '日本語能力試験 N1 — Japanese-Language Proficiency Test (highest level)' },
+    { name: 'Medical Interpretation', detail: 'Clinical terminology, documentation, and on-site interpretation' },
+    { name: 'International Patient Care', detail: '10+ years experience at Shanghai\'s top hospitals' },
+  ]
+
+  const credentials = translatedCredentials.length === credentialsFallback.length
+    ? translatedCredentials
+    : credentialsFallback
 
   return (
     <section id="care-team" className="py-20 lg:py-28 bg-gray-50">
@@ -41,10 +41,9 @@ const CareTeam: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-start">
-          {/* Left Column — ISPN Credentials + Who We Are */}
-          <div className="space-y-6">
-            {/* Credentials Card */}
+        <div className="grid lg:grid-cols-5 gap-8 items-start">
+          {/* Left Column — Credentials (2 cols wide) */}
+          <div className="lg:col-span-2">
             <Card className="p-8">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-accent rounded-xl flex items-center justify-center">
@@ -57,70 +56,41 @@ const CareTeam: React.FC = () => {
                   <p className="text-sm text-gray-500">
                     {t('careTeam.ispnDesc')}
                   </p>
-                  <p className="text-xs text-accent mt-1">
+                  <p className="text-xs text-accent mt-1 font-semibold">
                     {t('careTeam.ispnIssuer')}
                   </p>
                 </div>
               </div>
 
-              <ul className="space-y-3">
-                {(translatedCredentials.length === nurseCredentials.length
-                  ? translatedCredentials
-                  : nurseCredentials
-                ).map((credential, index) => (
+              <ul className="space-y-4">
+                {credentials.map((credential, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
                     <div>
-                      <span className="text-gray-700 font-medium">{credential.name}</span>
+                      <span className="text-gray-800 font-semibold text-sm">{credential.name}</span>
                       {credential.detail && (
-                        <p className="text-sm text-gray-500">{credential.detail}</p>
+                        <p className="text-xs text-gray-500 mt-0.5 leading-relaxed">{credential.detail}</p>
                       )}
                     </div>
                   </li>
                 ))}
               </ul>
             </Card>
-
-            {/* Who Accompanies You Card — balances left column height */}
-            <Card className="p-8 bg-gradient-to-br from-primary to-[#082C42] text-white">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-white/15 rounded-xl flex items-center justify-center">
-                  <Users className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold">Who Accompanies You</h3>
-              </div>
-              <p className="text-white/80 text-sm leading-relaxed mb-4">
-                Every ShanghaiMed companion is a licensed RN registered with the Shanghai Health Commission — not a sales agent, not a translator with no medical background. Your nurse understands clinical terminology, hospital procedures, and the unwritten rules that make Shanghai's public hospitals move faster.
-              </p>
-              <div className="grid grid-cols-3 gap-3 text-center">
-                <div className="bg-white/10 rounded-lg py-3">
-                  <div className="text-2xl font-bold text-white">EN/JP/CN</div>
-                  <div className="text-[11px] text-white/70 mt-1">Trilingual</div>
-                </div>
-                <div className="bg-white/10 rounded-lg py-3">
-                  <div className="text-2xl font-bold text-white">ISPN</div>
-                  <div className="text-[11px] text-white/70 mt-1">Certified</div>
-                </div>
-                <div className="bg-white/10 rounded-lg py-3">
-                  <div className="text-2xl font-bold text-white">10+</div>
-                  <div className="text-[11px] text-white/70 mt-1">Years Experience</div>
-                </div>
-              </div>
-            </Card>
           </div>
 
-          {/* Right Column — Nursing Services (wrapped in a Card for visual balance) */}
-          <div>
+          {/* Right Column — Services (3 cols wide) */}
+          <div className="lg:col-span-3">
             <Card className="p-8">
-              <h3 className="text-xl font-bold text-primary mb-6 flex items-center gap-3">
+              <div className="flex items-center gap-3 mb-6 pb-5 border-b border-gray-100">
                 <div className="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center">
                   <Stethoscope className="w-5 h-5 text-accent" />
                 </div>
-                {t('careTeam.servicesTitle')}
-              </h3>
-              <div className="grid sm:grid-cols-2 gap-4">
+                <h3 className="text-xl font-bold text-primary">
+                  {t('careTeam.servicesTitle')}
+                </h3>
+              </div>
+              <div className="grid sm:grid-cols-2 gap-x-8 gap-y-5">
                 {nurseServices.map((service, index) => {
-                  const Icon = iconMap[service.icon] || Clipboard
                   const translated = translatedServices[index]
                   const title =
                     translatedServices.length === nurseServices.length && translated?.title
@@ -131,14 +101,11 @@ const CareTeam: React.FC = () => {
                       ? translated.description
                       : service.description
                   return (
-                    <div key={index} className="p-4 rounded-xl bg-gray-50 hover:bg-accent/5 transition-colors border border-transparent hover:border-accent/20">
-                      <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center mb-3">
-                        <Icon className="w-5 h-5 text-accent" />
-                      </div>
-                      <h4 className="font-semibold text-primary text-sm mb-1.5">
+                    <div key={index}>
+                      <h4 className="font-semibold text-primary text-sm mb-1">
                         {title}
                       </h4>
-                      <p className="text-xs text-gray-600 leading-relaxed">
+                      <p className="text-xs text-gray-500 leading-relaxed">
                         {description}
                       </p>
                     </div>

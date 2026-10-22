@@ -1,53 +1,39 @@
 'use client'
 
 import React from 'react'
-import { Check, Clock, Calendar, Phone, Plane, Building2, FileText, Car, MessageCircle, Info, AlertCircle } from 'lucide-react'
+import Link from 'next/link'
+import { Check, Clock, Calendar, Phone, Plane, Building2, FileText, Car, MessageCircle, Info, Shield, ArrowRight } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 const Pricing: React.FC = () => {
-  const { t, tArr } = useLanguage()
+  const { t, tArr, localePath } = useLanguage()
 
-  const packageIcons = [Clock, Calendar, Calendar, Calendar]
+  // 3 packages: Essential Care / Complex Care / Extra Companion Hours (add-on, last)
   const packages = [
-    {
-      priceUsd: '$200',
-      icon: Clock,
-      type: 'addon',
-    },
-    {
-      priceUsd: '$350',
-      icon: Calendar,
-      type: 'addon',
-    },
     {
       priceUsd: '$1,000',
       icon: Calendar,
       type: 'core',
-      tier: 'Standard',
       popular: true,
     },
     {
       priceUsd: '$1,650',
       icon: Calendar,
       type: 'core',
-      tier: 'Extended',
       popular: false,
+    },
+    {
+      priceUsd: '$50',
+      icon: Clock,
+      type: 'addon',
+      perUnit: '/hour',
     },
   ]
 
-  const includedServices = [
-    { icon: Plane },
-    { icon: Building2 },
-    { icon: Phone },
-    { icon: MessageCircle },
-    { icon: FileText },
-    { icon: Calendar },
-    { icon: Car },
-    { icon: Phone },
-    { icon: Car },
-    { icon: MessageCircle },
-    { icon: FileText },
-    { icon: Phone },
+  const includedServiceIcons = [
+    Plane, Building2, Phone, MessageCircle, FileText,
+    Calendar, Car, Phone, Car, MessageCircle, FileText, Phone,
+    Shield, // #13 Insurance
   ]
 
   const includedFallback = [
@@ -63,34 +49,39 @@ const Pricing: React.FC = () => {
     'WeChat / WhatsApp support',
     'Visa assistance',
     'Post-Care Remote Follow-up',
+    'Insurance direct-billing & pre-authorization help',
   ]
 
-  const freeConsultationItems = [
+  const freeItemsFallback = [
     'Medical needs assessment',
     'Hospital & specialist recommendations',
     'Estimated medical budget',
     'Insurance direct billing guidance',
-    'Shanghai healthcare system overview',
     'General patient questions',
   ]
 
-  const importantNotes = [
+  const notesFallback = [
     'Medical expenses are paid directly to hospitals or clinics.',
     'Emergency medical services are not included.',
     'Nighttime support may require additional fees.',
     'We are an independent medical concierge service, not a medical provider.',
   ]
 
-  // 翻译表数据（缺失时回退英文）
+  const packageNameFallback = ['Essential Care Concierge', 'Complex Care Concierge', 'Extra Companion Hours']
+  const packageDurationFallback = ['Up to 8 hours/day × 3 days (daytime)', 'Up to 8 hours/day × 5 days (daytime)', '$50 per hour']
+  const packageDescFallback = ['Meets routine medical needs', 'For complex medical procedures / multi-department visits', 'Add-on to 3-Day / 5-Day packages only — not sold separately']
+
   const translatedPackages = tArr('pricing.packages')
   const translatedFreeItems = tArr('pricing.freeItems')
   const translatedIncludedItems = tArr('pricing.includedItems')
   const translatedNotes = tArr('pricing.notes')
 
-  const getPackage = (index: number, key: 'name' | 'duration' | 'description', fallback: string) =>
-    translatedPackages.length === packages.length && translatedPackages[index]?.[key]
-      ? translatedPackages[index][key]
-      : fallback
+  const getPkg = (index: number, key: 'name' | 'duration' | 'description', fallback: string) => {
+    if (translatedPackages.length === packages.length && translatedPackages[index]?.[key]) {
+      return translatedPackages[index][key]
+    }
+    return fallback
+  }
 
   return (
     <section id="pricing" className="py-20 md:py-28 bg-gray-50">
@@ -115,7 +106,7 @@ const Pricing: React.FC = () => {
               <h3 className="text-2xl md:text-3xl font-bold mb-2">{t('pricing.freeTitle')}</h3>
               <p className="text-white/80 mb-4">{t('pricing.freeDesc')}</p>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {(translatedFreeItems.length > 0 ? translatedFreeItems : freeConsultationItems).map((item, index) => (
+                {(translatedFreeItems.length > 0 ? translatedFreeItems : freeItemsFallback).map((item, index) => (
                   <li key={index} className="flex items-center gap-2">
                     <Check className="w-5 h-5 text-accent flex-shrink-0" />
                     <span className="text-sm">{item}</span>
@@ -124,9 +115,13 @@ const Pricing: React.FC = () => {
               </ul>
             </div>
             <div className="flex-shrink-0">
-              <span className="inline-block bg-accent text-primary font-bold text-lg px-6 py-3 rounded-full">
+              <Link
+                href={localePath('/free-consultation')}
+                className="inline-flex items-center gap-2 bg-accent text-primary font-bold text-base px-6 py-3 rounded-full hover:bg-accent/90 transition-colors"
+              >
                 {t('pricing.freeLabel')}
-              </span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
           </div>
         </div>
@@ -135,18 +130,22 @@ const Pricing: React.FC = () => {
         <div className="mb-16">
           <h3 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-10">{t('pricing.servicePricingTitle')}</h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {packages.map((pkg, index) => (
               <div
                 key={index}
                 className={`relative bg-white rounded-2xl p-6 shadow-lg border-2 transition-all hover:shadow-xl ${
-                  pkg.type === 'core' ? 'border-accent' : pkg.type === 'addon' ? 'border-gray-200' : 'border-transparent'
+                  pkg.type === 'core'
+                    ? pkg.popular
+                      ? 'border-accent scale-[1.02]'
+                      : 'border-gray-200'
+                    : 'border-gray-300 bg-gray-50'
                 }`}
               >
                 {/* Popular Badge */}
-                {pkg.popular && (
+                {pkg.type === 'core' && pkg.popular && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <span className="bg-accent text-primary text-xs font-bold px-4 py-1 rounded-full">
+                    <span className="bg-accent text-white text-xs font-bold px-4 py-1 rounded-full">
                       {t('pricing.popularBadge')}
                     </span>
                   </div>
@@ -161,23 +160,18 @@ const Pricing: React.FC = () => {
                   </div>
                 )}
 
-                {/* Package Badge - Green background */}
-                {pkg.type === 'core' && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <span className="bg-accent text-white text-sm font-bold px-4 py-1 rounded-full">
-                      {t('pricing.packageBadge')}
-                    </span>
-                  </div>
-                )}
-
-                <h4 className="text-lg font-bold text-gray-900 mb-2">{getPackage(index, 'name', index === 0 ? 'Half-Day Add-On' : index === 1 ? 'Full-Day Add-On' : index === 2 ? 'Essential Care Concierge' : 'Complex Care Concierge')}</h4>
-                <div className="mb-3">
+                <h4 className="text-lg font-bold text-gray-900 mb-2">{getPkg(index, 'name', packageNameFallback[index])}</h4>
+                <div className="mb-3 flex items-baseline">
                   <span className="text-3xl font-bold text-primary">{pkg.priceUsd}</span>
-                  <span className="text-gray-500 text-sm ml-1">{t('pricing.currency')}</span>
+                  {pkg.perUnit ? (
+                    <span className="text-gray-500 text-sm ml-1">{pkg.perUnit}</span>
+                  ) : (
+                    <span className="text-gray-500 text-sm ml-1">{t('pricing.currency')}</span>
+                  )}
                 </div>
-                <p className="text-sm text-gray-600 mb-2">{getPackage(index, 'duration', index === 0 ? 'Up to 4 hours (daytime)' : index === 1 ? 'Up to 8 hours (daytime)' : index === 2 ? 'Up to 8 hours/day × 3 days (daytime)' : 'Up to 8 hours/day × 5 days (daytime)')}</p>
-                <p className={`text-xs ${pkg.type === 'addon' ? 'text-amber-600' : 'text-amber-600'}`}>
-                  {getPackage(index, 'description', index === 0 || index === 1 ? 'Only available as add-on to 3-Day / 5-Day packages' : index === 2 ? 'Meets routine medical needs' : 'For complex medical procedures / multi-department visits')}
+                <p className="text-sm text-gray-600 mb-2">{getPkg(index, 'duration', packageDurationFallback[index])}</p>
+                <p className={`text-xs ${pkg.type === 'addon' ? 'text-gray-500 italic' : 'text-amber-600'}`}>
+                  {getPkg(index, 'description', packageDescFallback[index])}
                 </p>
               </div>
             ))}
@@ -203,12 +197,11 @@ const Pricing: React.FC = () => {
           <h3 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-10">{t('pricing.includedTitle')}</h3>
           <p className="text-center text-gray-600 mb-8">{t('pricing.includedDesc')}</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {includedServices.map((service, index) => {
-              const text =
-                translatedIncludedItems.length === includedServices.length && translatedIncludedItems[index]
-                  ? translatedIncludedItems[index]
-                  : includedFallback[index]
-              const Icon = service.icon
+            {includedServiceIcons.map((Icon, index) => {
+              const items = translatedIncludedItems.length === includedServiceIcons.length
+                ? translatedIncludedItems
+                : includedFallback
+              const text = items[index] || includedFallback[index]
               return (
                 <div
                   key={index}
@@ -231,7 +224,7 @@ const Pricing: React.FC = () => {
             <h3 className="text-lg font-bold text-gray-900">{t('pricing.notesTitle')}</h3>
           </div>
           <ul className="space-y-2">
-            {(translatedNotes.length > 0 ? translatedNotes : importantNotes).map((note, index) => (
+            {(translatedNotes.length > 0 ? translatedNotes : notesFallback).map((note, index) => (
               <li key={index} className="flex items-start gap-2 text-gray-700 text-sm">
                 <span className="text-gray-400 mt-1">•</span>
                 {note}

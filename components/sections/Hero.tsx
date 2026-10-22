@@ -9,7 +9,7 @@ import { events } from '@/lib/analytics'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 const Hero: React.FC = () => {
-  const { t } = useLanguage()
+  const { t, localePath } = useLanguage()
 
   const stats = [
     t('hero.badge1'),
@@ -53,7 +53,7 @@ const Hero: React.FC = () => {
           {/* CTA Button - Right-aligned */}
           <div className="mb-4 flex justify-end">
             <Link
-              href="#contact"
+              href={localePath('/free-consultation')}
               className="inline-flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 border-2 border-white text-white font-semibold text-base md:text-lg rounded-full hover:bg-white hover:text-primary transition-all duration-300 whitespace-nowrap"
             >
               {t('hero.cta')}

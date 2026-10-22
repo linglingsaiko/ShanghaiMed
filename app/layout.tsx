@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     template: '%s | ShanghaiMed',
   },
   description:
-    'Free, confidential medical consultation with top Shanghai specialists. Connect with 19 partner hospitals including all Shanghai Grade 3A public hospitals and 5 international hospitals. Transparent pricing — Health Checkup Concierge $500/1 day, Essential Care Concierge $1,000/3 days, extra companion hours $50/hour. ISPN-certified trilingual nurses, insurance direct billing, and 24/7 support.',
+    'Free, confidential medical consultation with top Shanghai specialists. Connect with 19 partner hospitals including all Shanghai Grade 3A public hospitals and 5 international hospitals. Transparent pricing — Health Checkup Concierge $500/1 day, Essential Care Concierge $1,000/3 days, Surgery & Extended Care Concierge $1,650/5 days, extra companion hours $50/hour. ISPN-certified trilingual nurses, insurance direct billing, and 24/7 support.',
   keywords: [
     'Shanghai medical tourism',
     'free medical consultation Shanghai',
@@ -202,14 +202,14 @@ export default function RootLayout({
                           '@type': 'Service',
                           name: 'Essential Care Concierge',
                           serviceType: 'Medical concierge package',
-                          description: '$1,000 / 3 days of on-site ISPN-registered nurse accompaniment (daytime). Both packages include the same 13 concierge services; the only difference is the number of days of on-site nurse accompaniment. Includes airport pickup & drop-off, hotel coordination, bilingual medical interpretation, medical report translation, appointment scheduling, medication pickup assistance, hospital & specialist matching, local transportation & payment help, dedicated WhatsApp support, visa invitation letter support, 30-day post-care remote follow-up, and insurance direct-billing & pre-authorization support.',
+                          description: '$1,000 / 3 days of on-site ISPN-registered trilingual nurse accompaniment (daytime). Designed for consultations, diagnostics, and multi-specialty visits. Includes airport pickup & drop-off, hotel coordination, bilingual medical interpretation during all appointments, medical report translation, appointment scheduling, medication pickup assistance, hospital & specialist matching, local transportation & payment help, dedicated WhatsApp support, visa invitation letter support, 30-day post-care remote follow-up, and insurance direct-billing & pre-authorization support.',
                         },
                         price: '1000',
                         priceCurrency: 'USD',
                         includesService: [
+                          '3 full days on-site nurse accompaniment (daytime)',
                           'Airport pickup & drop-off',
                           'Hotel coordination assistance',
-                          'On-site nurse accompaniment — 3 days (daytime)',
                           'Bilingual medical interpretation',
                           'Medical report translation & summaries',
                           'Doctor appointment scheduling',
@@ -229,14 +229,14 @@ export default function RootLayout({
                           '@type': 'Service',
                           name: 'Health Checkup Concierge',
                           serviceType: 'Medical concierge package',
-                          description: '$500 / 1 day of on-site ISPN-registered nurse accompaniment (daytime). Both packages include the same 13 concierge services; the only difference is the number of days of on-site nurse accompaniment. Designed for comprehensive executive health screenings and one-day clinic visits. Includes airport pickup & drop-off, hotel coordination, bilingual medical interpretation, health checkup report translation and result explanation, appointment scheduling, medication coordination, insurance direct-billing support, and 30-day post-checkup follow-up.',
+                          description: '$500 / 1 day of on-site ISPN-registered trilingual nurse accompaniment (daytime). Designed for comprehensive executive health screenings and single-day clinic visits. Includes airport pickup & drop-off, hotel coordination, bilingual medical interpretation, health checkup report translation and result explanation, appointment scheduling, medication coordination, insurance direct-billing support, and 30-day post-checkup follow-up.',
                         },
                         price: '500',
                         priceCurrency: 'USD',
                         includesService: [
+                          '1 full-day on-site nurse accompaniment (daytime)',
                           'Airport pickup & drop-off',
                           'Hotel coordination assistance',
-                          'On-site nurse accompaniment — 1 day (daytime)',
                           'Bilingual medical interpretation',
                           'Health checkup report translation & result explanation',
                           'Clinic appointment scheduling',
@@ -251,12 +251,42 @@ export default function RootLayout({
                       },
                       {
                         '@type': 'Offer',
+                        name: 'Surgery & Extended Care Concierge',
+                        itemOffered: {
+                          '@type': 'Service',
+                          name: 'Surgery & Extended Care Concierge',
+                          serviceType: 'Medical concierge package',
+                          description: '$1,650 / 5 days of on-site ISPN-registered trilingual nurse accompaniment covering pre-op, surgery day, and post-op. Designed for surgery, inpatient procedures, and extended treatment plans. Includes all services of the Essential Care package plus surgery-specific support: pre-admission coordination, inpatient check-ins, surgery-day nurse accompaniment, family communication & progress updates, 60-day post-care remote follow-up, and insurance coordination for surgical deposits and pre-authorization.',
+                        },
+                        price: '1650',
+                        priceCurrency: 'USD',
+                        includesService: [
+                          '5 full days on-site nurse accompaniment (pre-op, surgery day & post-op)',
+                          'Airport pickup & drop-off',
+                          'Hotel & extended-stay coordination',
+                          'Bilingual medical interpretation (including surgery-day support)',
+                          'Full medical report translation & surgical summary',
+                          'Surgeon appointment & pre-admission scheduling',
+                          'Pre-surgery preparation & admission coordination',
+                          'Medication pickup & post-op prescription coordination',
+                          'Hospital & surgeon matching',
+                          'Inpatient check-ins during hospital stay',
+                          'Local transportation & payment assistance',
+                          'Dedicated WhatsApp support throughout your stay',
+                          'Medical visa invitation letter support',
+                          'Family communication & progress updates',
+                          '60-day post-care remote follow-up',
+                          'Insurance direct-billing, pre-authorization & surgical deposit coordination',
+                        ],
+                      },
+                      {
+                        '@type': 'Offer',
                         name: 'Extra Companion Hours',
                         itemOffered: {
                           '@type': 'Service',
                           name: 'Extra Companion Hours',
                           serviceType: 'Add-on companion hours',
-                          description: 'Additional bilingual companion hours. Add-on to Health Checkup (1-day) or Essential Care (3-day) packages only; not sold separately.',
+                          description: 'Additional bilingual companion hours. Add-on to Health Checkup (1-day), Essential Care (3-day), or Surgery & Extended Care (5-day) packages only; not sold separately.',
                         },
                         price: '50',
                         priceCurrency: 'USD',
@@ -278,7 +308,7 @@ export default function RootLayout({
                       name: 'How much does medical treatment cost in Shanghai compared to the US?',
                       acceptedAnswer: {
                         '@type': 'Answer',
-                        text: 'Medical procedures in Shanghai cost 50-80% less than in the US. Examples: knee replacement $5,000-$10,000 (US: $30,000-$50,000), cardiac bypass $11,000-$21,000 (US: $80,000-$150,000), MRI scan (3T) $300-$500 (US: $1,200-$3,000), dental implant per tooth $800-$1,200 (US: $4,000-$6,000), IVF cycle $4,200-$6,000 (US: $15,000+), cataract surgery $1,000-$2,000 (US: $3,500-$6,000), executive health screening from $700 (US: $2,500+). ShanghaiMed concierge service packages are $500 for a 1-day Health Checkup Concierge or $1,000 for a 3-day Essential Care Concierge. Both packages include the same 13 concierge services — airport pickup, hotel coordination, on-site ISPN-registered nurse accompaniment, bilingual medical interpretation, medical report translation, appointment scheduling, medication assistance, insurance direct-billing support, and more. The only difference is the number of days of on-site nurse accompaniment. Hospital and clinic treatment costs (including health checkup packages starting from ~$700) are billed separately at local rates; ShanghaiMed does not charge hospital commissions.',
+                        text: 'Medical procedures in Shanghai cost 50-80% less than in the US. Examples: knee replacement $5,000-$10,000 (US: $30,000-$50,000), cardiac bypass $11,000-$21,000 (US: $80,000-$150,000), MRI scan (3T) $300-$500 (US: $1,200-$3,000), dental implant per tooth $800-$1,200 (US: $4,000-$6,000), IVF cycle $4,200-$6,000 (US: $15,000+), cataract surgery $1,000-$2,000 (US: $3,500-$6,000), executive health screening from $700 (US: $2,500+). ShanghaiMed concierge service packages are $500 for a 1-day Health Checkup Concierge, $1,000 for a 3-day Essential Care Concierge, and $1,650 for a 5-day Surgery & Extended Care Concierge covering pre-op, surgery day, and post-op support. Hospital and clinic treatment costs (including health checkup packages starting from ~$700) are billed separately at local rates; ShanghaiMed does not charge hospital commissions.',
                       },
                     },
                     {
@@ -318,7 +348,7 @@ export default function RootLayout({
                       name: 'What is included in the ShanghaiMed service package?',
                       acceptedAnswer: {
                         '@type': 'Answer',
-                        text: 'ShanghaiMed offers two concierge packages, both including the same 13 services — the only difference is the number of days of on-site nurse accompaniment. Health Checkup Concierge ($500 / 1 day) includes 1 full day of ISPN-registered nurse accompaniment for executive health screenings and one-day clinic visits, plus airport pickup & drop-off, hotel coordination, bilingual medical interpretation, health checkup report translation and result explanation, insurance direct-billing coordination, and 30-day post-checkup follow-up. Essential Care Concierge ($1,000 / 3 days) includes 3 full days of on-site nurse accompaniment for consultations, diagnostics, and visits to multiple specialists, plus airport pickup & drop-off, hotel coordination, bilingual medical interpretation at all appointments, medical report translation, medication pickup assistance, appointment scheduling, hospital & specialist matching, local transportation & payment help, dedicated WhatsApp support, visa invitation letter support, insurance direct-billing & pre-authorization support, and 30-day post-treatment follow-up. NOT included (paid directly to providers at local rates): medical fees (doctor consultations, tests, medication, procedures, and health checkup packages starting from ~$700), accommodation, and international flights. Emergency medical services are not included in concierge packages.',
+                        text: 'ShanghaiMed offers three concierge packages. Health Checkup Concierge ($500 / 1 day) is designed for executive health screenings and single-day clinic visits and includes 1 full day of ISPN-registered trilingual nurse accompaniment, airport pickup & drop-off, hotel coordination, bilingual medical interpretation, health checkup report translation with result explanation, insurance coordination, and 30-day post-checkup follow-up. Essential Care Concierge ($1,000 / 3 days) is for consultations, diagnostics, and visits to multiple specialists and includes 3 full days of on-site accompaniment, airport pickup & drop-off, hotel coordination, bilingual interpretation at all appointments, medical report translation, medication pickup assistance, appointment scheduling, hospital & specialist matching, local transportation & payment help, dedicated WhatsApp support, visa invitation letter support, insurance direct-billing & pre-authorization support, and 30-day post-treatment follow-up. Surgery & Extended Care Concierge ($1,650 / 5 days) covers pre-op, surgery day, and post-op for surgical and inpatient cases and includes all Essential Care services plus pre-admission coordination, surgery-day nurse accompaniment, inpatient check-ins, family progress updates, 60-day post-care follow-up, and insurance coordination for surgical deposits. NOT included (paid directly to providers at local rates): medical fees (doctor consultations, tests, medication, procedures, and health checkup packages starting from ~$700), accommodation, and international flights. Emergency medical services are not included in concierge packages.',
                       },
                     },
                     {
@@ -342,7 +372,7 @@ export default function RootLayout({
                       name: 'Can I use my international health insurance?',
                       acceptedAnswer: {
                         '@type': 'Answer',
-                        text: 'Yes. ShanghaiMed partner hospitals have direct settlement agreements with major international insurers, ranging from 8 to 24 insurers per hospital: Huashan Hospital has 24 insurance partners, Shanghai Children\'s Medical Center 23, Ruijin Hospital 21, and Renji Hospital 20. Accepted insurers include MSH, Bupa, Cigna, Aetna, AXA, Allianz, AIA, and International SOS. ShanghaiMed assists with insurance verification and direct settlement before your trip.',
+                        text: 'Yes. ShanghaiMed partner hospitals have direct settlement agreements with major international insurers, ranging from 8 to 24 insurers per hospital: Huashan Hospital has 24 insurance partners, Shanghai Children\'s Medical Center 23, Ruijin Hospital 21, and Renji Hospital 20. Accepted insurers include MSH, Bupa, Cigna, Aetna, AXA, Allianz, AIA, and International SOS. ShanghaiMed helps patients with policy benefit checks, pre-authorization letters, and direct-billing coordination — including surgical deposits and inpatient cases — so patients do not have to pay out of pocket and file reimbursement claims themselves. 19 partner hospitals support direct billing.',
                       },
                     },
                     {
@@ -358,7 +388,7 @@ export default function RootLayout({
                       name: 'How much does a medical concierge service cost in Shanghai?',
                       acceptedAnswer: {
                         '@type': 'Answer',
-                        text: "ShanghaiMed's concierge packages start at $500 for a 1-day Health Checkup Concierge and $1,000 for a 3-day Essential Care Concierge. Both packages include the same 13 concierge services; the only difference is the number of days of on-site nurse accompaniment. Extra companion hours beyond the package are available at $50/hour as an add-on to concierge packages only and are not sold separately. Medical fees are paid directly to hospitals or clinics — ShanghaiMed does not charge hospital commissions.",
+                        text: "ShanghaiMed's concierge packages start at $500 for a 1-day Health Checkup Concierge, $1,000 for a 3-day Essential Care Concierge, and $1,650 for a 5-day Surgery & Extended Care Concierge covering pre-op, surgery day, and post-op support. Extra companion hours beyond the package are available at $50/hour as an add-on to concierge packages only and are not sold separately. Medical fees are paid directly to hospitals or clinics — ShanghaiMed does not charge hospital commissions.",
                       },
                     },
                     {
@@ -367,14 +397,6 @@ export default function RootLayout({
                       acceptedAnswer: {
                         '@type': 'Answer',
                         text: "The 3-day Essential Care Concierge package ($1,000 USD) includes all 13 concierge services: airport pickup & drop-off; hotel coordination assistance; 3 full days of on-site accompaniment by an ISPN-certified trilingual nurse (daytime); bilingual medical interpretation during all appointments; medical report translation and summaries; doctor appointment scheduling; medication pickup and coordination; hospital and specialist matching; local transportation, payment, and on-the-ground guidance; dedicated WhatsApp support throughout your stay; visa invitation letter support; 30-day post-care remote follow-up; and insurance direct-billing and pre-authorization support.",
-                      },
-                    },
-                    {
-                      '@type': 'Question',
-                      name: 'Can I use my international insurance in Shanghai hospitals?',
-                      acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: "Yes. Shanghai's major Grade 3A hospitals and international departments accept many international insurance plans including Cigna, AXA, Allianz, MSH, and Bupa. ShanghaiMed helps patients with policy benefit checks, pre-authorization letters, and direct-billing coordination so patients do not have to pay out of pocket and file reimbursement claims themselves. 19 partner hospitals support direct billing.",
                       },
                     },
                     {
@@ -390,7 +412,15 @@ export default function RootLayout({
                       name: 'How much is a comprehensive health checkup in Shanghai, and what does the $500 Health Checkup Concierge cover?',
                       acceptedAnswer: {
                         '@type': 'Answer',
-                        text: "Executive health screenings at leading Shanghai Grade 3A hospitals and premium international clinics start from around $700 (compared to $2,500+ in the U.S.), with premium packages ranging up to $1,500+ depending on scope. The $500 Health Checkup Concierge package includes all 13 ShanghaiMed concierge services — airport pickup & drop-off, hotel coordination, 1 full day of bilingual ISPN-registered nurse accompaniment, medical interpretation, health checkup report translation with result explanation, insurance coordination, and 30-day post-checkup follow-up. The health checkup fee itself (from ~$700) is paid directly to the clinic at local rates.",
+                        text: "Executive health screenings at leading Shanghai Grade 3A hospitals and premium international clinics start from around $700 (compared to $2,500+ in the U.S.), with premium packages ranging up to $1,500+ depending on scope. The $500 Health Checkup Concierge package includes 13 ShanghaiMed concierge services — airport pickup & drop-off, hotel coordination, 1 full day of bilingual ISPN-registered nurse accompaniment, medical interpretation, health checkup report translation with result explanation, insurance coordination, and 30-day post-checkup follow-up. The health checkup fee itself (from ~$700) is paid directly to the clinic at local rates.",
+                      },
+                    },
+                    {
+                      '@type': 'Question',
+                      name: 'Is there a concierge package for surgery or extended treatment in Shanghai?',
+                      acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: "Yes. The Surgery & Extended Care Concierge ($1,650 USD / 5 days) covers pre-op preparation, surgery day, and post-op support for surgical and inpatient cases. It includes all services from the Essential Care package plus pre-admission coordination, surgery-day nurse accompaniment, inpatient check-ins during hospital stay, family communication & progress updates, 60-day post-care remote follow-up, and insurance direct-billing coordination including surgical deposit and pre-authorization support. Surgical procedure fees are paid directly to the hospital at local rates — typically 50-80% less than in the US for procedures such as knee replacement ($5,000-$10,000 vs US $30,000-$50,000), cardiac bypass ($11,000-$21,000 vs US $80,000-$150,000), and cataract surgery ($1,000-$2,000 vs US $3,500-$6,000).",
                       },
                     },
                   ],

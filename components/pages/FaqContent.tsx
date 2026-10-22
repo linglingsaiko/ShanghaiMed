@@ -48,9 +48,17 @@ const enFaqs: FaqItem[] = [
           </table>
         </div>
         <p>
-          ShanghaiMed's concierge service packages are <strong>$500 for 1 day</strong> (Health Checkup Concierge),{' '}
-          <strong>$1,000 for 3 days</strong> (Essential Care Concierge), and{' '}
-          <strong>$1,650 for 5 days</strong> (Surgery &amp; Extended Care Concierge). Extra companion hours beyond your package are available at <strong>$50/hour</strong> as an add-on only. Hospital and clinic treatment costs (including health checkup packages starting from ~$700) are billed separately at local rates; ShanghaiMed does not charge hospital commissions.
+          ShanghaiMed offers a <strong>free no-obligation initial consultation</strong>, a standalone{' '}
+          <strong>on-site hospital escort at $50/hour</strong> (minimum 2 hours, English-Chinese interpretation only),
+          and three concierge service packages: <strong>$500 for 1 day (daytime)</strong> (Health Checkup Concierge,
+          for 1-day health checkup programs only), <strong>$1,000 for 3 days (daytime)</strong> (Essential Care Concierge,
+          required for all specialist consultations and medical conditions), and{' '}
+          <strong>$1,650 for 5 days (daytime)</strong> (Surgery &amp; Extended Care Concierge, required for surgery and
+          inpatient procedures). Additional companion hours beyond package days are available at <strong>$50/hour</strong>.
+          Airport pickup &amp; drop-off uses a standard sedan; special vehicles (wheelchair-accessible van, 7-seater, etc.)
+          are arranged at additional cost. Interpretation in languages other than English requires an interpreter at
+          additional cost. Hospital and clinic treatment costs (including health checkup packages starting from ~$700)
+          are billed separately at local rates; ShanghaiMed does not charge hospital commissions.
         </p>
       </>
     ),
@@ -169,40 +177,81 @@ const enFaqs: FaqItem[] = [
     q: 'What is included in the ShanghaiMed service package?',
     a: (
       <>
-        <p className="mb-2"><strong>Health Checkup Concierge — $500 / 1 day</strong></p>
-        <p className="mb-1">All 13 concierge services for a single day — for 1-day health checkup programs only:</p>
+        <p className="mb-2"><strong>Free Initial Consultation — $0</strong></p>
+        <p className="mb-1">No-obligation decision-stage conversation — 4 services:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
-          <li>1 full day of on-site ISPN-registered nurse accompaniment (daytime)</li>
+          <li>Medical needs assessment</li>
+          <li>Hospital &amp; specialist recommendations</li>
+          <li>Estimated medical budget</li>
+          <li>Insurance guidance</li>
+        </ul>
+        <p className="mb-2"><strong>On-site Hospital Escort — $50/hour (minimum 2 hours)</strong></p>
+        <p className="mb-1">Standalone service for patients who already booked their own appointment — 4 services:</p>
+        <ul className="list-disc pl-6 mb-4 space-y-1">
+          <li>On-site escort companion at the hospital</li>
+          <li>English–Chinese on-site medical interpretation (other languages at additional cost)</li>
+          <li>On-site queue, payment and medication pickup assistance</li>
+          <li>Check-in message on visit day</li>
+        </ul>
+        <p className="mb-4 text-sm text-amber-700 bg-amber-50 p-3 rounded">
+          <strong>Note:</strong> The escort is not necessarily a licensed nurse. Hourly escort does NOT include appointment scheduling, doctor matching, airport pickup, report translation, visa support, insurance pre-authorization, languages other than English, or post-visit follow-up — those are covered by concierge packages.
+        </p>
+        <p className="mb-2"><strong>Health Checkup Concierge — $500 / 1 day (daytime)</strong></p>
+        <p className="mb-1">13 concierge services — for 1-day health checkup programs only:</p>
+        <ul className="list-disc pl-6 mb-4 space-y-1">
+          <li>1 full day of on-site ISPN-registered trilingual nurse accompaniment (daytime)</li>
           <li>Airport pickup &amp; drop-off</li>
-          <li>Bilingual medical translation at the clinic</li>
+          <li>Hotel coordination assistance</li>
+          <li>Bilingual medical interpretation at the clinic</li>
           <li>Health checkup report translation and result explanation</li>
+          <li>Doctor appointment scheduling</li>
+          <li>Medication pickup and coordination</li>
+          <li>Hospital &amp; specialist matching</li>
+          <li>Local transportation, payment, and on-the-ground guidance</li>
+          <li>Dedicated WhatsApp support throughout your stay</li>
+          <li>Visa invitation letter support</li>
+          <li>30-day post-checkup remote follow-up</li>
           <li>Insurance support</li>
         </ul>
-        <p className="mb-2"><strong>Essential Care Concierge — $1,000 / 3 days</strong></p>
-        <p className="mb-1">All 13 concierge services — required for all specialist consultations and medical conditions:</p>
+        <p className="mb-2"><strong>Essential Care Concierge — $1,000 / 3 days (daytime) ✓ Most commonly chosen</strong></p>
+        <p className="mb-1">13 concierge services — required for all specialist consultations and medical conditions:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
-          <li>3 full days of on-site ISPN-registered nurse accompaniment (daytime)</li>
-          <li>Airport pickup &amp; drop-off, hotel coordination</li>
-          <li>Bilingual medical translation at all appointments</li>
-          <li>Medical report translation, medication pickup assistance</li>
-          <li>Hospital &amp; specialist matching, appointment scheduling</li>
+          <li>3 full days of on-site ISPN-registered trilingual nurse accompaniment (daytime)</li>
+          <li>Airport pickup &amp; drop-off (standard sedan; special vehicles at additional cost)</li>
+          <li>Hotel coordination assistance</li>
+          <li>Bilingual medical interpretation at all appointments</li>
+          <li>Medical report translation and summaries</li>
+          <li>Doctor appointment scheduling</li>
+          <li>Medication pickup and coordination</li>
+          <li>Hospital &amp; specialist matching</li>
           <li>Local transportation, payment, and on-the-ground guidance</li>
-          <li>Dedicated WhatsApp support, visa invitation letter support</li>
-          <li>Insurance support, 30-day post-treatment follow-up</li>
+          <li>Dedicated WhatsApp support throughout your stay</li>
+          <li>Visa invitation letter support</li>
+          <li>30-day post-care remote follow-up</li>
+          <li>Insurance support</li>
         </ul>
-        <p className="mb-2"><strong>Surgery &amp; Extended Care Concierge — $1,650 / 5 days</strong></p>
-        <p className="mb-1">All Essential Care services plus surgery-specific support, covering pre-op, surgery day, and post-op:</p>
+        <p className="mb-2"><strong>Surgery &amp; Extended Care Concierge — $1,650 / 5 days (daytime)</strong></p>
+        <p className="mb-1">16 concierge services — required for surgery, inpatient procedures, and extended treatment plans. Includes all Essential Care services plus surgery-specific support:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
-          <li>5 full days of on-site nurse accompaniment (pre-op, surgery day &amp; post-op)</li>
+          <li>5 full days of on-site nurse accompaniment (daytime) — pre-op, surgery day &amp; post-op</li>
+          <li>Airport pickup &amp; drop-off (standard sedan; special vehicles at additional cost)</li>
+          <li>Hotel &amp; extended-stay coordination</li>
+          <li>Bilingual medical interpretation (including surgery day)</li>
+          <li>Full medical document translation &amp; surgical summary</li>
+          <li>Surgeon appointment &amp; pre-admission coordination</li>
           <li>Pre-surgery preparation &amp; admission coordination</li>
-          <li>Surgery-day nurse accompaniment &amp; inpatient check-ins</li>
-          <li>Family communication &amp; progress updates during hospital stay</li>
-          <li>Full surgical report translation &amp; post-op prescription coordination</li>
-          <li>Insurance &amp; surgical deposit coordination</li>
+          <li>Medication pickup &amp; post-op prescription coordination</li>
+          <li>Hospital &amp; surgeon matching</li>
+          <li>Inpatient check-ins during hospital stay</li>
+          <li>Local transportation, payment, and on-the-ground guidance</li>
+          <li>Dedicated WhatsApp support throughout your stay</li>
+          <li>Medical visa invitation letter support</li>
+          <li>Family communication &amp; progress updates</li>
           <li>60-day post-care remote follow-up</li>
+          <li>Insurance &amp; surgical deposit coordination</li>
         </ul>
         <p>
-          <strong>What's NOT included</strong> (billed separately at local rates): Medical treatment costs paid directly to hospitals/clinics (doctor consultations, tests, medication, procedures, and health checkup packages starting from ~$700), accommodation, and international flights. Emergency medical services are not included.
+          <strong>What's NOT included</strong> (billed separately at local rates): Medical treatment costs paid directly to hospitals/clinics (doctor consultations, tests, medication, procedures, and health checkup packages starting from ~$700), accommodation, and international flights. Emergency medical services are not included in concierge packages — in a medical emergency call 120 immediately.
         </p>
       </>
     ),
@@ -282,7 +331,9 @@ const enFaqs: FaqItem[] = [
         </ul>
         <p>
           Accepted insurers include <strong>MSH, Bupa, Cigna, Aetna, AXA, Allianz, AIA, International SOS,</strong> and more.
-          ShanghaiMed assists with insurance verification and direct settlement before your trip.
+          ShanghaiMed provides insurance support including policy benefit checks and pre-authorization letters. Where direct
+          billing is available we coordinate with the hospital on your behalf; otherwise patients pay the hospital directly
+          and claim reimbursement with our documentation support.
         </p>
       </>
     ),
@@ -300,7 +351,45 @@ const enFaqs: FaqItem[] = [
           <li><strong>Home-country coordination</strong> — we share your medical records with your primary care physician (with consent)</li>
           <li><strong>Ongoing support</strong> — our team remains available for questions after you return home</li>
         </ul>
-        <p>Follow-up continues for <strong>30 days</strong> after your treatment.</p>
+        <p>Follow-up continues for <strong>30 days</strong> after your treatment (60 days for surgery packages).</p>
+      </>
+    ),
+  },
+  {
+    q: 'Is the initial consultation really free? What does it cover?',
+    a: (
+      <>
+        <p className="mb-4">
+          <strong>Yes.</strong> The initial consultation with Sara via WhatsApp is completely free and carries no
+          obligation. On the call, we assess your medical needs, recommend suitable hospitals and specialists, give you a
+          realistic budget estimate for treatment, and explain how insurance works.
+        </p>
+        <p>
+          This is a decision-stage conversation; on-site services (nurse accompaniment, appointment booking, verbal
+          interpretation) begin once you book an hourly escort or a concierge package.
+        </p>
+      </>
+    ),
+  },
+  {
+    q: 'Can I book just an on-site hospital escort without a full concierge package?',
+    a: (
+      <>
+        <p className="mb-4">
+          <strong>Yes.</strong> On-site hospital escort is available as a standalone service at <strong>$50/hour</strong>{' '}
+          with a <strong>2-hour minimum</strong>. This is for patients who have already booked their own doctor
+          appointment and only need an English-speaking companion on-site for queues, payment, medication pickup, and
+          basic on-the-spot questions.
+        </p>
+        <p className="mb-4">
+          The escort is <strong>not necessarily a licensed nurse</strong>, and interpretation is{' '}
+          <strong>English–Chinese only</strong> (other languages require an interpreter at additional cost).
+        </p>
+        <p>
+          Hourly escort does <strong>NOT</strong> include appointment scheduling, doctor matching, airport pickup,
+          report translation, visa support, insurance pre-authorization, or post-visit follow-up — those are covered by
+          concierge packages ($500/$1,000/$1,650).
+        </p>
       </>
     ),
   },
@@ -346,9 +435,7 @@ const jaFaqs: FaqItem[] = [
           </table>
         </div>
         <p>
-          ShanghaiMedのコンシェルジュサービスパッケージは<strong>1日間$500</strong>（健康診断コンシェルジュ）、
-          <strong>3日間$1,000</strong>（エッセンシャルケア・コンシェルジュ）、
-          <strong>5日間$1,650</strong>（手術・延長ケア・コンシェルジュ）です。パッケージに含まれる時間を超える追加同伴時間は<strong>$50/時間</strong>のアドオンとしてご利用いただけます（単体販売はしておりません）。病院・クリニックでの治療費（約$700からの人間ドックパッケージを含む）は別途現地価格で請求され、ShanghaiMedは病院からのコミッションを一切受け取りません。
+          ShanghaiMedでは<strong>無料・義務なしの初回コンサルテーション</strong>、<strong>院内時間制同伴サービス$50/時間</strong>（最低2時間、英中通訳のみ）、そして3つのコンシェルジュパッケージを提供しています：<strong>1日間（日中）$500</strong>（健康診断コンシェルジュ、1日人間ドックプログラム専用）、<strong>3日間（日中）$1,000</strong>（エッセンシャルケア・コンシェルジュ、すべての専門科受診・疾患に必須）、<strong>5日間（日中）$1,650</strong>（手術・延長ケア・コンシェルジュ、手術・入院・長期治療に必須）。パッケージ日数を超える追加同伴時間は<strong>$50/時間</strong>で承ります。空港送迎は標準セダン車です。車椅子対応バン、7人乗り車など特別車両は追加料金がかかります。英語以外の言語での通訳は通訳者手配料が別途かかります。病院・クリニックでの治療費（約$700からの人間ドックパッケージを含む）は別途現地価格で請求され、ShanghaiMedは病院からのコミッションを一切受け取りません。
         </p>
       </>
     ),
@@ -467,20 +554,47 @@ const jaFaqs: FaqItem[] = [
     q: 'ShanghaiMedのサービスパッケージには何が含まれていますか？',
     a: (
       <>
-        <p className="mb-2"><strong>健康診断コンシェルジュ — $500 / 1日間</strong></p>
+        <p className="mb-2"><strong>無料初回コンサルテーション — $0</strong></p>
+        <p className="mb-1">義務なしの意思決定段階のご相談 — 4サービス：</p>
+        <ul className="list-disc pl-6 mb-4 space-y-1">
+          <li>医療ニーズの評価</li>
+          <li>病院・専門医のご提案</li>
+          <li>想定医療費のお見積り</li>
+          <li>保険のご案内</li>
+        </ul>
+        <p className="mb-2"><strong>院内同伴サービス — $50/時間（最低2時間）</strong></p>
+        <p className="mb-1">すでにご自身で診察予約を済ませた方向けの単体サービス — 4サービス：</p>
+        <ul className="list-disc pl-6 mb-4 space-y-1">
+          <li>病院内での同伴スタッフ</li>
+          <li>英中現地医療通訳（その他の言語は追加料金）</li>
+          <li>院内での順番待ち・会計・薬の受け取り補助</li>
+          <li>受診当日のチェックインメッセージ</li>
+        </ul>
+        <p className="mb-4 text-sm text-amber-700 bg-amber-50 p-3 rounded">
+          <strong>ご注意：</strong>同伴スタッフは必ずしも資格を持つ看護師ではありません。時間制同伴には診察予約、医師マッチング、空港送迎、レポート翻訳、ビザサポート、保険事前承認、英語以外の言語、受診後フォローアップは<strong>含まれません</strong>。これらはコンシェルジュパッケージに含まれます。
+        </p>
+        <p className="mb-2"><strong>健康診断コンシェルジュ — $500 / 1日間（日中）</strong></p>
         <p className="mb-1">人間ドック・健康診断専用（1日間パッケージのみ）。13のコンシェルジュサービスがすべて含まれます：</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
-          <li>ISPN認定看護師による1日間の現地同行（日中）</li>
+          <li>ISPN認定三言語看護師による1日間の現地同行（日中）</li>
           <li>空港送迎（到着・出発）</li>
+          <li>ホテル調整支援</li>
           <li>クリニックでの二言語医療通訳</li>
           <li>人間ドックレポート翻訳・結果説明</li>
+          <li>医師の予約調整</li>
+          <li>薬の受け取り・調整支援</li>
+          <li>病院・専門医マッチング</li>
+          <li>現地移動・支払い・実務ガイド</li>
+          <li>滞在期間中の専用WhatsAppサポート</li>
+          <li>医療ビザ招聘状サポート</li>
+          <li>健診後30日間リモートフォローアップ</li>
           <li>保険サポート</li>
         </ul>
-        <p className="mb-2"><strong>エッセンシャルケア・コンシェルジュ — $1,000 / 3日間</strong></p>
-        <p className="mb-1">すべての専門科受診・疾患に必須：</p>
+        <p className="mb-2"><strong>エッセンシャルケア・コンシェルジュ — $1,000 / 3日間（日中） ✓ 最も選ばれています</strong></p>
+        <p className="mb-1">すべての専門科受診・疾患に必須。13のコンシェルジュサービス：</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li>ISPN認定三言語看護師による3日間の現地同行（日中）</li>
-          <li>空港送迎・ホテル調整</li>
+          <li>空港送迎（標準セダン。特別車両は追加料金）・ホテル調整</li>
           <li>全診察での二言語医療通訳</li>
           <li>診療レポート翻訳・薬の受け取り支援</li>
           <li>病院・専門医マッチング・予約調整</li>
@@ -488,19 +602,27 @@ const jaFaqs: FaqItem[] = [
           <li>WhatsApp専用サポート・医療ビザ招聘状サポート</li>
           <li>保険サポート、治療後30日間リモートフォローアップ</li>
         </ul>
-        <p className="mb-2"><strong>手術・延長ケア・コンシェルジュ — $1,650 / 5日間</strong></p>
-        <p className="mb-1">手術・入院・長期治療向け。エッセンシャルケアの全サービスに加え、手術特有のサポートを含みます：</p>
+        <p className="mb-2"><strong>手術・延長ケア・コンシェルジュ — $1,650 / 5日間（日中）</strong></p>
+        <p className="mb-1">手術・入院・長期治療に必須。エッセンシャルケアの全13サービスに加え、手術特有のサポート3点を含む計16サービス：</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
-          <li>ISPN認定三言語看護師による5日間の現地同行（術前・手術当日・術後）</li>
+          <li>ISPN認定三言語看護師による5日間の現地同行（日中）— 術前・手術当日・術後</li>
+          <li>空港送迎（標準セダン。特別車両は追加料金）・長期宿泊調整</li>
+          <li>手術当日を含む二言語医療通訳</li>
+          <li>医療文書全文翻訳・手術サマリー</li>
+          <li>執刀医予約・入院前調整</li>
           <li>術前準備・入院手続き調整</li>
-          <li>手術当日の看護師同行・入院中の様子伺い</li>
-          <li>ご家族への経過報告・コミュニケーション</li>
-          <li>手術レポート全文翻訳・術後処方箋調整</li>
-          <li>保険・手術デポジット調整</li>
+          <li>薬の受け取り・術後処方箋調整</li>
+          <li>病院・執刀医マッチング</li>
+          <li>入院中の病室訪問</li>
+          <li>現地移動・支払い・実務ガイド</li>
+          <li>滞在期間中の専用WhatsAppサポート</li>
+          <li>医療ビザ招聘状サポート</li>
+          <li>ご家族とのコミュニケーション・経過報告</li>
           <li>治療後60日間リモートフォローアップ</li>
+          <li>保険・手術デポジット調整</li>
         </ul>
         <p>
-          <strong>含まれないもの</strong>（現地価格で別途支払い）：病院・クリニックへ直接支払う医療費（診察料・検査料・薬代・処置費、および$700からの人間ドックパッケージ）、宿泊費、国際航空券。救急医療サービスは含まれません。
+          <strong>含まれないもの</strong>（現地価格で別途支払い）：病院・クリニックへ直接支払う医療費（診察料・検査料・薬代・処置費、および$700からの人間ドックパッケージ）、宿泊費、国際航空券。救急医療サービスはコンシェルジュパッケージに含まれません。緊急時は直ちに120番に通報し、最寄りの病院へ搬送してください。
         </p>
       </>
     ),
@@ -579,7 +701,7 @@ const jaFaqs: FaqItem[] = [
         </ul>
         <p>
           対応保険会社は<strong>MSH、Bupa、Cigna、Aetna、AXA、Allianz、AIA、International SOS</strong>など。
-          ShanghaiMedは渡航前の保険確認と直結精算のお手伝いをします。
+          ShanghaiMedは保険の福利厚生内容確認や事前承認状（プレオーソライゼーションレター）の取得など保険サポートを提供します。ダイレクトビリングが可能な場合は病院と調整し、対応していない場合は当社の書類作成サポートのもと病院に直接お支払いいただき、保険会社へ請求いただけます。
         </p>
       </>
     ),
@@ -598,6 +720,32 @@ const jaFaqs: FaqItem[] = [
           <li><strong>継続サポート</strong>— 帰国後も質問に対応するチーム体制</li>
         </ul>
         <p>治療後<strong>30日間</strong>フォローアップが継続されます。</p>
+      </>
+    ),
+  },
+  {
+    q: '無料コンサルテーションには何が含まれますか？予約の義務はありますか？',
+    a: (
+      <>
+        <p className="mb-4">
+          無料コンサルテーションは<strong>義務なし</strong>のビデオ通話で、医療ニーズの評価、適切な病院・専門医のご提案、想定医療費のお見積り、保険のご案内の4サービスを提供します。予約を確定する義務はなく、話を聞いてから判断いただけます。
+        </p>
+        <p>
+          空港送迎、予約手配、現地同伴、診察の予約はコンシェルジュパッケージまたは時間制同伴サービスで提供されます。
+        </p>
+      </>
+    ),
+  },
+  {
+    q: '$50/時間の時間制同伴サービスは単体で利用できますか？何が含まれていないのですか？',
+    a: (
+      <>
+        <p className="mb-4">
+          はい、時間制同伴は<strong>単体でご購入いただけます</strong>（最低2時間）。すでにご自身で診察予約を済ませ、当日の通訳と院内ガイドだけが必要な方向けです。同伴者は必ずしも資格を持つ看護師ではありません。通訳は英中のみです（その他の言語は追加料金）。
+        </p>
+        <p className="mb-4">
+          時間制同伴には以下は<strong>含まれません</strong>：診察予約、医師マッチング、空港送迎、医療レポート翻訳、ビザ招聘状サポート、保険事前承認、英語以外の言語での通訳、受診後フォローアップ。これらのサービスが必要な場合はコンシェルジュパッケージをお選びください。
+        </p>
       </>
     ),
   },
@@ -643,9 +791,7 @@ const ruFaqs: FaqItem[] = [
           </table>
         </div>
         <p>
-          Пакеты консьерж-сервиса ShanghaiMed стоят <strong>$500 за 1 день</strong> (Консьерж для чек-апа),{' '}
-          <strong>$1,000 за 3 дня</strong> (Базовый уход) и{' '}
-          <strong>$1,650 за 5 дней</strong> (Консьерж для хирургии и длительного лечения). Дополнительные часы сопровождения сверх пакета доступны как опция по <strong>$50/час</strong> и не продаются отдельно. Стоимость лечения в больнице или клинике (включая пакеты медицинских обследований от ~$700) оплачивается отдельно по местным тарифам; ShanghaiMed не получает комиссий от больниц.
+          ShanghaiMed предлагает <strong>бесплатную ни к чему не обязывающую вводную консультацию</strong>, <strong>почасовое сопровождение в больнице $50/час</strong> (минимум 2 часа, только англо-китайский перевод) и три пакета консьерж-сервиса: <strong>$500 за 1 день (днём)</strong> (Консьерж для чек-апа — только для однодневных программ медицинских осмотров), <strong>$1,000 за 3 дня (днём)</strong> (Базовый уход — обязателен для всех консультаций специалистов и заболеваний) и <strong>$1,650 за 5 дней (днём)</strong> (Консьерж для хирургии — обязателен для операций, госпитализаций и длительных программ лечения). Дополнительные часы сопровождения сверх дней пакета доступны по <strong>$50/час</strong>. Трансфер из/в аэропорт предоставляется на стандартном седане; специальные транспортные средства (автомобили для инвалидных колясок, 7-местные автомобили и т. д.) оплачиваются дополнительно. Перевод на языки, кроме английского, требует отдельного переводчика за дополнительную плату. Стоимость лечения в больнице или клинике (включая пакеты чек-апа от ~$700) оплачивается отдельно по местным тарифам; ShanghaiMed не получает комиссий от больниц.
         </p>
       </>
     ),
@@ -764,40 +910,75 @@ const ruFaqs: FaqItem[] = [
     q: 'Что включено в пакет услуг ShanghaiMed?',
     a: (
       <>
-        <p className="mb-2"><strong>Консьерж для чек-апа — $500 / 1 день</strong></p>
+        <p className="mb-2"><strong>Бесплатная вводная консультация — $0</strong></p>
+        <p className="mb-1">Ни к чему не обязывающая консультация для принятия решения — 4 услуги:</p>
+        <ul className="list-disc pl-6 mb-4 space-y-1">
+          <li>Оценка ваших медицинских потребностей</li>
+          <li>Рекомендации по больницам и специалистам</li>
+          <li>Ориентировочная оценка медицинских расходов</li>
+          <li>Консультация по страховке</li>
+        </ul>
+        <p className="mb-2"><strong>Почасовое сопровождение в больнице — $50/час (минимум 2 часа)</strong></p>
+        <p className="mb-1">Отдельная услуга для пациентов, которые уже записались на приём самостоятельно — 4 услуги:</p>
+        <ul className="list-disc pl-6 mb-4 space-y-1">
+          <li>Сопровождающий на территории больницы</li>
+          <li>Англо-китайский медицинский перевод на приёме (другие языки — дополнительная плата)</li>
+          <li>Помощь с очередями, оплатой и получением лекарств в больнице</li>
+          <li>Check-in сообщение в день приёма</li>
+        </ul>
+        <p className="mb-4 text-sm text-amber-700 bg-amber-50 p-3 rounded">
+          <strong>Важно:</strong> сопровождающий не обязательно является лицензированной медсестрой. Почасовое сопровождение <strong>НЕ включает</strong> запись на приём, подбор врача, трансфер из аэропорта, перевод медицинских заключений, визовую поддержку, предавторизацию по страховке, перевод на языки кроме английского и пост-лечебное наблюдение. Эти услуги предоставляются в рамках пакетов консьержа.
+        </p>
+        <p className="mb-2"><strong>Консьерж для чек-апа — $500 / 1 день (днём)</strong></p>
         <p className="mb-1">Только для однодневных программ чек-апа. Включает все 13 услуг консьерж-сервиса:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
-          <li>1 день очного сопровождения ISPN-сертифицированной медсестры (днём)</li>
+          <li>1 день очного сопровождения ISPN-сертифицированной трёхъязычной медсестры (днём)</li>
           <li>Встреча и проводы в аэропорту</li>
+          <li>Координация отеля</li>
           <li>Двуязычный медицинский перевод в клинике</li>
           <li>Перевод отчёта чек-апа и разъяснение результатов</li>
+          <li>Запись на приём к врачу</li>
+          <li>Помощь с получением лекарств и координация назначений</li>
+          <li>Подбор больницы и специалиста</li>
+          <li>Помощь с транспортом, оплатой и ориентацией на месте</li>
+          <li>Выделенная линия поддержки в WhatsApp на время поездки</li>
+          <li>Поддержка с медицинским приглашением на визу</li>
+          <li>30 дней пост-чекапного удалённого наблюдения</li>
           <li>Страховая поддержка</li>
         </ul>
-        <p className="mb-2"><strong>Консьерж «Базовый уход» — $1,000 / 3 дня</strong></p>
-        <p className="mb-1">Обязателен для всех консультаций специалистов и заболеваний:</p>
+        <p className="mb-2"><strong>Консьерж «Базовый уход» — $1,000 / 3 дня (днём) ✓ Выбирается чаще всего</strong></p>
+        <p className="mb-1">Обязателен для всех консультаций специалистов и заболеваний. Включает 13 услуг:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li>3 дня очного сопровождения ISPN-сертифицированной трёхъязычной медсестры (днём)</li>
-          <li>Встреча и проводы в аэропорту, координация отеля</li>
+          <li>Встреча и проводы в аэропорту (стандартный седан; специальные автомобили за дополнительную плату), координация отеля</li>
           <li>Двуязычный медицинский перевод на всех приёмах</li>
           <li>Перевод медицинских заключений, помощь с получением лекарств</li>
           <li>Подбор больницы и специалиста, запись на приёмы</li>
           <li>Помощь с транспортом, оплатой и ориентацией на месте</li>
           <li>Выделенная поддержка в WhatsApp, поддержка с медицинским приглашением на визу</li>
-          <li>Страховая поддержка, 30 дней пост-лечебного наблюдения</li>
+          <li>Страховая поддержка, 30 дней пост-лечебного удалённого наблюдения</li>
         </ul>
-        <p className="mb-2"><strong>Консьерж для хирургии и длительного лечения — $1,650 / 5 дней</strong></p>
-        <p className="mb-1">Для хирургических случаев, госпитализации и расширенных программ лечения. Включает все услуги «Базового ухода» плюс специализированную хирургическую поддержку:</p>
+        <p className="mb-2"><strong>Консьерж для хирургии и длительного лечения — $1,650 / 5 дней (днём)</strong></p>
+        <p className="mb-1">Обязателен для операций, госпитализаций и длительных программ лечения. Включает все 13 услуг «Базового ухода» плюс 3 специализированные хирургические услуги, всего 16:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
-          <li>5 дней очного сопровождения медсестры (до операции, в день операции и после)</li>
+          <li>5 дней очного сопровождения ISPN-сертифицированной трёхъязычной медсестры (днём) — до, в день и после операции</li>
+          <li>Встреча и проводы в аэропорту (стандартный седан; специальные автомобили за дополнительную плату), координация долгосрочного проживания</li>
+          <li>Двуязычный медицинский перевод включая день операции</li>
+          <li>Полный перевод медицинских документов, включая хирургическое заключение</li>
+          <li>Запись к хирургу, координация предоперационной подготовки</li>
           <li>Предоперационная подготовка и координация госпитализации</li>
-          <li>Сопровождение медсестры в день операции и визиты во время госпитализации</li>
+          <li>Помощь с получением лекарств, координация послеоперационных назначений</li>
+          <li>Подбор больницы и хирурга</li>
+          <li>Визиты в палату во время госпитализации</li>
+          <li>Помощь с транспортом, оплатой и ориентацией на месте</li>
+          <li>Выделенная линия поддержки в WhatsApp на время поездки</li>
+          <li>Поддержка с медицинским приглашением на визу</li>
           <li>Общение с семьёй и обновления о ходе лечения</li>
-          <li>Полный перевод хирургического отчёта и координация послеоперационных рецептов</li>
-          <li>Страховая поддержка и координация хирургического депозита</li>
           <li>60 дней пост-лечебного удалённого наблюдения</li>
+          <li>Страховая поддержка и координация хирургического депозита</li>
         </ul>
         <p>
-          <strong>Что НЕ включено</strong> (оплачивается напрямую по местным тарифам): медицинские расходы в больнице/клинике (консультации врачей, анализы, лекарства, процедуры и пакеты чек-апа от ~$700), проживание и международные перелёты. Экстренная медицинская помощь не включена.
+          <strong>Что НЕ включено</strong> (оплачивается напрямую по местным тарифам): медицинские расходы в больнице/клинике (консультации врачей, анализы, лекарства, процедуры и пакеты чек-апа от ~$700), проживание и международные перелёты. Экстренная медицинская помощь не покрывается пакетами консьержа. При неотложной ситуации немедленно звоните 120 и обращайтесь в ближайшую больницу.
         </p>
       </>
     ),
@@ -876,7 +1057,7 @@ const ruFaqs: FaqItem[] = [
         </ul>
         <p>
           Принимаемые страховые компании включают <strong>MSH, Bupa, Cigna, Aetna, AXA, Allianz, AIA, International SOS</strong> и других.
-          ShanghaiMed помогает с проверкой страхового покрытия и прямым урегулированием счетов до вашей поездки.
+          ShanghaiMed предоставляет страховую поддержку, помогая проверить покрытие по вашему полису и получить письма предавторизации. Если прямой биллинг доступен, мы координируем его с больницей; если нет — вы оплачиваете услуги напрямую больнице и подаёте заявление на возмещение с нашей документальной поддержкой.
         </p>
       </>
     ),
@@ -895,6 +1076,32 @@ const ruFaqs: FaqItem[] = [
           <li><strong>Постоянная поддержка</strong> — наша команда остаётся на связи для вопросов после вашего возвращения домой</li>
         </ul>
         <p>Последующее наблюдение продолжается в течение <strong>30 дней</strong> после лечения.</p>
+      </>
+    ),
+  },
+  {
+    q: 'Что включает бесплатная консультация? Обязательно ли потом что-то заказывать?',
+    a: (
+      <>
+        <p className="mb-4">
+          Бесплатная консультация проводится по видеосвязи и <strong>ни к чему вас не обязывает</strong>. Вы получите оценку медицинских потребностей, рекомендации по больницам и специалистам, ориентировочную оценку расходов и консультацию по страховке — всего 4 услуги. Вы не обязаны бронировать пакет после консультации.
+        </p>
+        <p>
+          Трансфер из аэропорта, запись на приёмы, очное сопровождение и организация приёма предоставляются в рамках консьерж-пакетов или почасового сопровождения.
+        </p>
+      </>
+    ),
+  },
+  {
+    q: 'Можно ли заказать почасовое сопровождение отдельно? Что оно НЕ включает?',
+    a: (
+      <>
+        <p className="mb-4">
+          Да, почасовое сопровождение продаётся <strong>отдельно</strong> (минимум 2 часа). Это подходит пациентам, которые уже сами записались на приём и нуждаются только в переводчике и навигации по больнице в день визита. Сопровождающий не обязательно является лицензированной медсестрой. Перевод только англо-китайский (другие языки — за дополнительную плату).
+        </p>
+        <p className="mb-4">
+          Почасовое сопровождение <strong>НЕ включает</strong>: запись на приём, подбор врача, трансфер из аэропорта, перевод медицинских заключений, визовую поддержку, предавторизацию по страховке, перевод на языки кроме английского и пост-лечебное наблюдение. Если вам нужны эти услуги, выберите один из консьерж-пакетов.
+        </p>
       </>
     ),
   },
@@ -938,9 +1145,7 @@ const mnFaqs: FaqItem[] = [
           </table>
         </div>
         <p>
-          ShanghaiMed консьерж үйлчилгээний багц <strong>1 өдөр $500</strong> (Эрүүл мэндийн үзлэгийн консьерж),{' '}
-          <strong>3 өдөр $1,000</strong> (Үндсэн асрамжийн консьерж) болон{' '}
-          <strong>5 өдөр $1,650</strong> (Мэс засал ба уртасгасан асрамжийн консьерж) юм. Багцад багтсан хугацаанаас хэтэрсэн нэмэлт дагалдан явах цагийг <strong>$50/цаг</strong>-ийн нэмэлт үйлчилгээгээр авах боломжтой бөгөөд дангаар нь борлуулдаггүй. Эмнэлэг, клиникийн эмчилгээний зардал (~$700-аас эхлэх эрүүл мэндийн үзлэгийн багц орно) орон нутгийн тарифаар тусад нь төлөгдөнө; ShanghaiMed эмнэлгүүдээс комисс авдаггүй.
+          ShanghaiMed <strong>үнэгүй, ямар нэгэн үүрэг хүлээлгүй анхны зөвлөгөө</strong>, <strong>цагийн дагалдан явах үйлчилгээ $50/цаг</strong> (хамгийн багадаа 2 цаг, зөвхөн англи-хятад орчуулга) болон 3 консьерж багцыг санал болгодог: <strong>1 өдөр $500</strong> (Эрүүл мэндийн үзлэгийн консьерж, зөвхөн 1 өдрийн эрүүл мэндийн үзлэгт), <strong>3 өдөр $1,000</strong> (Үндсэн асрамжийн консьерж, бүх мэргэжлийн эмчийн үзлэг ба өвчлөлд шаардлагатай) болон <strong>5 өдөр $1,650</strong> (Мэс засал ба уртасгасан асрамжийн консьерж, мэс засал, хэвтэн эмчлүүлэх, уртасгасан эмчилгээнд шаардлагатай). Багцын өдрөөс хэтэрсэн нэмэлт цагийг <strong>$50/цаг</strong>-аар авах боломжтой. Нисэх буудлын тосож, хүргэх нь стандарт седан машинаар; тэргэнцрийн тэрэг, 7 хүний суудалтай машин гэх мэт тусгай тээврийн хэрэгсэл нэмэлт төлбөртэй. Англи хэлнээс бусад хэл дээрх орчуулга нь орчуулагчийг нэмэлт төлбөрөөр авах шаардлагатай. Эмнэлэг, клиникийн эмчилгээний зардал (~$700-аас эхлэх эрүүл мэндийн үзлэгийн багц орно) орон нутгийн тарифаар тусад нь төлөгдөнө; ShanghaiMed эмнэлгүүдээс комисс авдаггүй.
         </p>
       </>
     ),
@@ -1058,40 +1263,75 @@ const mnFaqs: FaqItem[] = [
     q: 'ShanghaiMed-ийн үйлчилгээний багцад юу багтдаг вэ?',
     a: (
       <>
-        <p className="mb-2"><strong>Эрүүл мэндийн үзлэгийн консьерж — $500 / 1 өдөр</strong></p>
+        <p className="mb-2"><strong>Үнэгүй анхны зөвлөгөө — $0</strong></p>
+        <p className="mb-1">Шийдвэр гаргах үе шатанд зориулсан ямар нэгэн үүрэг хүлээлгүй зөвлөгөө — 4 үйлчилгээ:</p>
+        <ul className="list-disc pl-6 mb-4 space-y-1">
+          <li>Эрүүл мэндийн хэрэгцээний үнэлгээ</li>
+          <li>Эмнэлэг ба мэргэжлийн эмчийн санал</li>
+          <li>Эмнэлгийн зардлын ойролцоо тооцоолол</li>
+          <li>Даатгалын зөвлөгөө</li>
+        </ul>
+        <p className="mb-2"><strong>Эмнэлэг дэх цагийн дагалдан явах — $50/цаг (хамгийн багадаа 2 цаг)</strong></p>
+        <p className="mb-1">Аль хэдийн өөрсдөө цаг захиалсан хүмүүст зориулсан бие даасан үйлчилгээ — 4 үйлчилгээ:</p>
+        <ul className="list-disc pl-6 mb-4 space-y-1">
+          <li>Эмнэлгийн байр дотор дагалдан явагч</li>
+          <li>Англи-хятад эмнэлгийн орчуулга (бусад хэл — нэмэлт төлбөр)</li>
+          <li>Эмнэлэг дэх дараалал, төлбөр, эм хүлээн авахад туслах</li>
+          <li>Уулзалтын өдрийн check-in зурвас</li>
+        </ul>
+        <p className="mb-4 text-sm text-amber-700 bg-amber-50 p-3 rounded">
+          <strong>Анхаар:</strong> Дагалдан явагч нь заавал лицензтэй сувилагч байх албагүй. Цагийн дагалдан явахад <strong>дараах зүйлс БАГТАХГҮЙ</strong>: цаг захиалга, эмч сонгох, нисэх буудлын тосолт, эмнэлгийн тайлангийн орчуулга, визний дэмжлэг, даатгалын урьдчилсан зөвшөөрөл, англи хэлнээс бусад хэл дээрх орчуулга, эмчилгээний дараах хяналт. Эдгээр үйлчилгээ консьерж багцад багтана.
+        </p>
+        <p className="mb-2"><strong>Эрүүл мэндийн үзлэгийн консьерж — $500 / 1 өдөр (өдрийн цагаар)</strong></p>
         <p className="mb-1">Зөвхөн 1 өдрийн эрүүл мэндийн үзлэгийн хөтөлбөрт зориулагдсан. Консьержийн 13 үйлчилгээ бүгд багтана:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
-          <li>ISPN гэрчилгээтэй сувилагчийн 1 өдөр биечлэн дагалдан явах (өдрийн цагаар)</li>
+          <li>ISPN гэрчилгээтэй гурван хэлтэй сувилагчийн 1 өдөр биечлэн дагалдан явах (өдрийн цагаар)</li>
           <li>Нисэх буудлаас тосох, хүргэж өгөх</li>
+          <li>Буудлын зохицуулалтын дэмжлэг</li>
           <li>Клиник дээр хоёр хэлний эмнэлгийн орчуулга</li>
           <li>Үзлэгийн тайлан орчуулах, үр дүн тайлбарлах</li>
+          <li>Эмчийн цаг захиалга</li>
+          <li>Эм хүлээн авах, жорын зохицуулалтын туслалцаа</li>
+          <li>Эмнэлэг ба мэргэжлийн эмч сонгох</li>
+          <li>Орон нутгийн тээвэр, төлбөр, чиглүүлэгч</li>
+          <li>Аяллын үеийн тусгай WhatsApp дэмжлэг</li>
+          <li>Эмнэлгийн визний урилгын дэмжлэг</li>
+          <li>Үзлэгийн дараах 30 хоногийн зайнаас хяналт</li>
           <li>Даатгалын дэмжлэг</li>
         </ul>
-        <p className="mb-2"><strong>Үндсэн асрамжийн консьерж — $1,000 / 3 өдөр</strong></p>
-        <p className="mb-1">Бүх мэргэжлийн эмчийн үзлэг ба өвчлөлд шаардлагатай:</p>
+        <p className="mb-2"><strong>Үндсэн асрамжийн консьерж — $1,000 / 3 өдөр (өдрийн цагаар) ✓ Хамгийн их сонгогддог багц</strong></p>
+        <p className="mb-1">Бүх мэргэжлийн эмчийн үзлэг ба өвчлөлд шаардлагатай. 13 үйлчилгээ:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li>ISPN гэрчилгээтэй гурван хэлтэй сувилагчийн 3 өдөр биечлэн дагалдан явах (өдрийн цагаар)</li>
-          <li>Нисэх буудлаас тосох, хүргэж өгөх, буудлын зохицуулалт</li>
+          <li>Нисэх буудлаас тосох, хүргэж өгөх (стандарт седан; тусгай машин нэмэлт төлбөр), буудлын зохицуулалт</li>
           <li>Бүх уулзалт дээр хоёр хэлний эмнэлгийн орчуулга</li>
           <li>Эмнэлгийн тайлан орчуулах, эм хүлээн авах туслалцаа</li>
           <li>Эмнэлэг ба мэргэжлийн эмч сонгох, цаг захиалга</li>
-          <li>Орон нутгийн тээвэр, төлбөр, газар дээрх чиглүүлэгч</li>
+          <li>Орон нутгийн тээвэр, төлбөр, чиглүүлэгч</li>
           <li>Тусгай WhatsApp дэмжлэг, эмнэлгийн визний урилгын дэмжлэг</li>
-          <li>Даатгалын дэмжлэг, эмчилгээний дараах 30 хоногийн хяналт</li>
+          <li>Даатгалын дэмжлэг, эмчилгээний дараах 30 хоногийн зайнаас хяналт</li>
         </ul>
-        <p className="mb-2"><strong>Мэс засал ба уртасгасан асрамжийн консьерж — $1,650 / 5 өдөр</strong></p>
-        <p className="mb-1">Мэс засал, хэвтэн эмчлүүлэх, уртасгасан эмчилгээнд зориулагдсан. Үндсэн асрамжийн бүх үйлчилгээнээс гадна мэс заслын тусгай дэмжлэг багтана:</p>
+        <p className="mb-2"><strong>Мэс засал ба уртасгасан асрамжийн консьерж — $1,650 / 5 өдөр (өдрийн цагаар)</strong></p>
+        <p className="mb-1">Мэс засал, хэвтэн эмчлүүлэх, уртасгасан эмчилгээнд шаардлагатай. Үндсэн асрамжийн 13 үйлчилгээнээс гадна мэс заслын 3 тусгай дэмжлэг, нийт 16 үйлчилгээ:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
-          <li>Сувилагчийн 5 өдөр биечлэн дагалдан явах (мэс заслын өмнөх, мэс заслын өдөр, мэс заслын дараах)</li>
+          <li>ISPN гэрчилгээтэй гурван хэлтэй сувилагчийн 5 өдөр биечлэн дагалдан явах (өдрийн цагаар) — мэс заслын өмнөх, өдөр, дараах</li>
+          <li>Нисэх буудлаас тосох, хүргэж өгөх (стандарт седан; тусгай машин нэмэлт төлбөр), урт хугацааны байрлалын зохицуулалт</li>
+          <li>Мэс заслын өдрийг оролцуулан хоёр хэлний эмнэлгийн орчуулга</li>
+          <li>Эмнэлгийн баримт бичгийн бүрэн орчуулга, мэс заслын тайлан</li>
+          <li>Мэс засалч эмчийн цаг захиалга, хэвтэхээс өмнөх зохицуулалт</li>
           <li>Мэс заслын өмнөх бэлтгэл ба хэвтэн эмчлүүлэх зохицуулалт</li>
-          <li>Мэс заслын өдөр сувилагч дагалдан явах, хэвтэх үеийн эргэлт</li>
+          <li>Эм хүлээн авах, мэс заслын дараах жорын зохицуулалт</li>
+          <li>Эмнэлэг ба мэс засалч сонгох</li>
+          <li>Хэвтэх үеийн өрөөнд эргэлт</li>
+          <li>Орон нутгийн тээвэр, төлбөр, чиглүүлэгч</li>
+          <li>Аяллын үеийн тусгай WhatsApp дэмжлэг</li>
+          <li>Эмнэлгийн визний урилгын дэмжлэг</li>
           <li>Гэр бүлийнхэнтэй харилцах ба явцын мэдээллээр хангах</li>
-          <li>Мэс заслын тайланг бүрэн орчуулах, мэс заслын дараах жорын зохицуулалт</li>
-          <li>Даатгал ба мэс заслын барьцааны зохицуулалт</li>
           <li>Эмчилгээний дараах 60 хоногийн зайнаас хяналт</li>
+          <li>Даатгал ба мэс заслын барьцааны зохицуулалт</li>
         </ul>
         <p>
-          <strong>Багтахгүй зүйлс</strong> (орон нутгийн тарифаар шууд төлнө): эмнэлэг/клиникт төлөх эмнэлгийн зардал (эмчийн зөвлөгөө, шинжилгээ, эм, эмчилгээ, ~$700-аас эхлэх эрүүл мэндийн үзлэгийн багц), байрлал болон олон улсын нислэг. Яаралтай тусламжийн эмнэлгийн үйлчилгээ багтахгүй.
+          <strong>Багтахгүй зүйлс</strong> (орон нутгийн тарифаар шууд төлнө): эмнэлэг/клиникт төлөх эмнэлгийн зардал (эмчийн зөвлөгөө, шинжилгээ, эм, эмчилгээ, ~$700-аас эхлэх эрүүл мэндийн үзлэгийн багц), байрлал болон олон улсын нислэг. Яаралтай тусламжийн эмнэлгийн үйлчилгээ консьерж багцад багтахгүй. Яаралтай тохиолдолд 120 руу нэн даруй залгаж, хамгийн ойрын эмнэлэгт хандана уу.
         </p>
       </>
     ),
@@ -1170,7 +1410,7 @@ const mnFaqs: FaqItem[] = [
         </ul>
         <p>
           Хүлээн авах даатгалын компаниудад <strong>MSH, Bupa, Cigna, Aetna, AXA, Allianz, AIA, International SOS</strong> болон бусад багтана.
-          ShanghaiMed таны аяллын өмнө даатгалын хамрах хүрээг шалгах, шууд төлбөр тооцоонд тусална.
+          ShanghaiMed даатгалын дэмжлэг үзүүлж, таны бодлогын хамрах хүрээг шалгаж, урьдчилсан зөвшөөрлийн захидал авахад тусална. Шууд төлбөр тооцоо хийх боломжтой бол бид эмнэлэгтэй зохицуулна; боломжгүй бол та эмнэлэгт шууд төлж, манай баримт бичгийн дэмжлэгээр даатгалд нөхөн төлбөр хүснэ.
         </p>
       </>
     ),
@@ -1189,6 +1429,32 @@ const mnFaqs: FaqItem[] = [
           <li><strong>Тогтмол дэмжлэг</strong> — гэртээ буцаж ирсний дараа ч асуултад хариулахын тулд манай баг холбоотой байна</li>
         </ul>
         <p>Эмчилгээний дараах хяналт <strong>30 хоног</strong> үргэлжилнэ.</p>
+      </>
+    ),
+  },
+  {
+    q: 'Үнэгүй зөвлөгөөнд юу багтдаг вэ? Зайлшгүй ямар нэгэн зүйл захиалах шаардлагатай юу?',
+    a: (
+      <>
+        <p className="mb-4">
+          Үнэгүй зөвлөгөө видео дуудлагаар явагдах бөгөөд <strong>таныг ямар нэгэн зүйлд үүрэг хүлээлгэхгүй</strong>. Та эрүүл мэндийн хэрэгцээний үнэлгээ, эмнэлэг ба мэргэжлийн эмчийн санал, зардлын ойролцоо тооцоолол, даатгалын зөвлөгөө — 4 үйлчилгээг авна. Зөвлөгөөний дараа зайлшгүй багц захиалах шаардлагагүй.
+        </p>
+        <p>
+          Нисэх буудлын тосолт, цаг захиалга, биечлэн дагалдан явах, уулзалт зохион байгуулах үйлчилгээг консьерж багц эсвэл цагийн дагалдан явах үйлчилгээнд үзүүлнэ.
+        </p>
+      </>
+    ),
+  },
+  {
+    q: 'Цагийн дагалдан явах үйлчилгээг дангаар захиалж болох уу? Юу багтдаггүй вэ?',
+    a: (
+      <>
+        <p className="mb-4">
+          Тийм, цагийн дагалдан явахыг <strong>дангаар захиалж</strong> болно (хамгийн багадаа 2 цаг). Энэ нь өөрсдөө цаг захиалчихсан, тухайн өдөр зөвхөн орчуулагч ба эмнэлэг доторх чиглүүлэгч хэрэгтэй хүмүүст тохиромжтой. Дагалдан явагч нь заавал лицензтэй сувилагч байх албагүй. Орчуулга зөвхөн англи-хятад (бусад хэл — нэмэлт төлбөр).
+        </p>
+        <p className="mb-4">
+          Цагийн дагалдан явахад <strong>дараах зүйлс БАГТАХГҮЙ</strong>: цаг захиалга, эмч сонгох, нисэх буудлын тосолт, эмнэлгийн тайлан орчуулга, визний дэмжлэг, даатгалын урьдчилсан зөвшөөрөл, англи хэлнээс бусад хэл дээрх орчуулга, эмчилгээний дараах хяналт. Хэрэв танд эдгээр үйлчилгээ хэрэгтэй бол консьерж багцаас сонгоно уу.
+        </p>
       </>
     ),
   },

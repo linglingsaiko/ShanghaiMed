@@ -276,7 +276,7 @@ const enTranslations = {
     freeConsultation: {
       badge: 'Free Consultation',
       title: 'Book Your Free Medical Consultation',
-      subtitle: 'Talk to our medical team before you travel — get matched with top specialists, receive a personalized treatment plan, and understand costs upfront.',
+      subtitle: "Talk to our medical team before you travel — we'll match you with the right specialists, plan your medical trip around your needs, and give you a clear cost estimate upfront.",
       specialistMatchTitle: 'Top Specialist Matching',
       specialistMatchDesc: 'We connect you with leading professors and chief physicians at Shanghai\'s top Grade 3A hospitals — matching your specific condition to the right specialist for your case.',
       specialistMatchPoints: [
@@ -775,7 +775,7 @@ export const translations: Record<Language, any> = {
     freeConsultation: {
       badge: '無料相談',
       title: '無料医療相談を予約する',
-      subtitle: '渡航前に医療チームとお話しください — トップ専門医とのマッチング、パーソナライズされた治療計画、明確な費用感を事前にご提供します。',
+      subtitle: '渡航前に医療チームがご相談を承ります — 症状に合った専門医をご紹介し、ご要望に沿った医療渡航プランを作成、明確な費用見積もりを事前にご提示します。',
       specialistMatchTitle: 'トップ専門医マッチング',
       specialistMatchDesc: '上海のトップ三甲（Grade 3A）病院に在籍する一流の教授・主任医師をご紹介 — お近くの病院ではなく、あなたの症状に最も適した専門医をご案内します。',
       specialistMatchPoints: [
@@ -1154,7 +1154,7 @@ export const translations: Record<Language, any> = {
     freeConsultation: {
       badge: 'استشارة مجانية',
       title: 'احجز استشارتك الطبية المجانية',
-      subtitle: 'تحدث مع فريقنا الطبي قبل السفر — سنوصلك بأفضل المتخصصين، ونزودك بخطة علاج شخصية وتقدير واضح للتكاليف مسبقاً.',
+      subtitle: 'تحدث مع فريقنا الطبي قبل السفر — سنطابقك مع المتخصصين المناسبين، ونخطط لرحلتك الطبية وفق احتياجاتك، ونزودك بتقدير واضح للتكاليف مسبقاً.',
       specialistMatchTitle: 'مطابقة مع كبار المتخصصين',
       specialistMatchDesc: 'نوصلك مع كبار الأساتذة ورؤساء الأقسام في أفضل مستشفيات شنغهاي من الفئة 3A — لنطابق حالتك الخاصة مع المتخصص الأنسب لحالتك.',
       specialistMatchPoints: [
@@ -1669,7 +1669,7 @@ export const translations: Record<Language, any> = {
     freeConsultation: {
       badge: 'Бесплатная консультация',
       title: 'Запишитесь на бесплатную медицинскую консультацию',
-      subtitle: 'Поговорите с нашей медицинской командой до поездки — мы подберём лучших специалистов, составим индивидуальный план лечения и предоставим прозрачную смету.',
+      subtitle: 'Поговорите с нашей медицинской командой до поездки — мы подберём подходящих специалистов, спланируем вашу медицинскую поездку под ваши нужды и предоставим прозрачную оценку стоимости заранее.',
       specialistMatchTitle: 'Подбор лучших специалистов',
       specialistMatchDesc: 'Мы соединяем вас с ведущими профессорами и заведующими отделениями лучших шанхайских больниц категории 3A — подбираем специалиста именно под ваше конкретное заболевание.',
       specialistMatchPoints: [
@@ -2572,7 +2572,7 @@ export const translations: Record<Language, any> = {
     freeConsultation: {
       badge: 'Үнэгүй зөвлөгөө',
       title: 'Үнэгүй эмнэлгийн зөвлөгөө захиалах',
-      subtitle: 'Аялахаасаа өмнө манай эмнэлгийн багтай ярилцаарай — шилдэг мэргэжилтнүүдтэй холбогдож, хувьчилсан эмчилгээний төлөвлөгөө, ил тод зардлын тооцоог урьдчилан аваарай.',
+      subtitle: 'Аялахаасаа өмнө манай эмнэлгийн багтай ярилцаарай — тохирох мэргэжилтнийг санал болгож, таны хэрэгцээнд нийцүүлэн эмнэлгийн аяллын төлөвлөгөө гаргаж, зардлын тодорхой тооцоог урьдчилан өгнө.',
       specialistMatchTitle: 'Шилдэг мэргэжилтэнтэй тохируулах',
       specialistMatchDesc: 'Бид таныг Шанхайн шилдэг 3А зэрэглэлийн эмнэлгүүдийн нэр хүндтэй профессорууд, тэнхимийн эрхлэгчидтэй холбоно — таны өвчин тус бүрд тохирох мэргэжилтнийг санал болгоно.',
       specialistMatchPoints: [

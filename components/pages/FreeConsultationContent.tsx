@@ -9,12 +9,13 @@ import {
 import { useLanguage } from '@/contexts/LanguageContext'
 
 const WHATSAPP_LINK = 'https://wa.me/8613818274110'
-const WECHAT_LINK = 'https://work.weixin.qq.com/ca/cawcde1431152cb927'
+const LINE_LINK = 'https://line.me/ti/p/cD_Ed4GHBM'
 
 export default function FreeConsultationContent() {
   const { t, tArr, localePath, language } = useLanguage()
   const isJapanese = language === 'ja'
-  const primaryLink = isJapanese ? 'https://line.me/ti/p/cD_Ed4GHBM' : WHATSAPP_LINK
+  const primaryLink = isJapanese ? LINE_LINK : WHATSAPP_LINK
+  const primaryLabel = isJapanese ? 'LINEで相談する' : 'Chat on WhatsApp'
 
   const badges = tArr('freeConsultation.badges')
   const badgeFallback = [
@@ -52,20 +53,9 @@ export default function FreeConsultationContent() {
               className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1fb855] text-white font-semibold px-7 py-3.5 rounded-full shadow-lg transition-all hover:shadow-xl hover:-translate-y-0.5"
             >
               <MessageCircle className="w-5 h-5" />
-              {isJapanese ? 'LINEで相談する' : 'Chat on WhatsApp'}
+              {primaryLabel}
               <ArrowRight className="w-4 h-4" />
             </a>
-            {!isJapanese && (
-              <a
-                href={WECHAT_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-white text-primary border-2 border-primary font-semibold px-7 py-3.5 rounded-full hover:bg-primary/5 transition-colors"
-              >
-                <MessageCircle className="w-5 h-5" />
-                WeChat (企业微信)
-              </a>
-            )}
           </div>
 
           {/* Three trust badges */}

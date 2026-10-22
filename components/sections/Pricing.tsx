@@ -138,17 +138,28 @@ const Pricing: React.FC = () => {
           <h3 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-10">{t('pricing.servicePricingTitle')}</h3>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {packages.map((pkg, index) => (
-              <div
+            {packages.map((pkg, index) => {
+              const isCore = pkg.type === 'core'
+              const cardHref = isCore
+                ? `${primaryLink}?text=${encodeURIComponent(pkg.ctaMsg || '')}`
+                : undefined
+              const CardTag: any = isCore ? 'a' : 'div'
+              return (
+              <CardTag
                 key={index}
-                className={`relative bg-white rounded-2xl p-6 shadow-lg border-2 transition-all hover:shadow-xl flex flex-col ${
-                  pkg.type === 'core'
-                    ? 'border-accent'
+                {...(isCore ? {
+                  href: cardHref,
+                  target: '_blank',
+                  rel: 'noopener noreferrer',
+                } : {})}
+                className={`relative bg-white rounded-2xl p-6 shadow-lg border-2 transition-all ${
+                  isCore
+                    ? 'border-accent hover:shadow-xl hover:-translate-y-1 cursor-pointer'
                     : 'border-gray-300 bg-gray-50'
                 }`}
               >
                 {/* Top Badge */}
-                {pkg.type === 'core' && (
+                {isCore && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap">
                     <span className="bg-accent text-white text-xs font-bold px-4 py-1 rounded-full">
                       {index === 0 ? t('pricing.popularBadge') : 'Best for Complex Cases'}
@@ -175,27 +186,11 @@ const Pricing: React.FC = () => {
                   )}
                 </div>
                 <p className="text-sm text-gray-600 mb-2">{getPkg(index, 'duration', packageDurationFallback[index])}</p>
-                <p className={`text-xs mb-5 ${pkg.type === 'addon' ? 'text-gray-500 italic' : 'text-amber-600'}`}>
+                <p className={`text-xs ${pkg.type === 'addon' ? 'text-gray-500 italic' : 'text-amber-600'}`}>
                   {getPkg(index, 'description', packageDescFallback[index])}
                 </p>
-
-                {/* CTA button for core packages */}
-                {pkg.type === 'core' && (
-                  <div className="mt-auto pt-2">
-                    <a
-                      href={`${primaryLink}?text=${encodeURIComponent(pkg.ctaMsg || '')}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex w-full items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1fb855] text-white font-semibold px-5 py-2.5 rounded-full text-sm transition-all hover:shadow-md"
-                    >
-                      <MessageCircle className="w-4 h-4" />
-                      {primaryLabel}
-                      <ArrowRight className="w-3.5 h-3.5" />
-                    </a>
-                  </div>
-                )}
-              </div>
-            ))}
+              </CardTag>
+            )})}
           </div>
         </div>
 

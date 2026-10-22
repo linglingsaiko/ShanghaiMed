@@ -147,7 +147,7 @@ const enTranslations = {
         { name: 'Trilingual Certification', detail: 'Fluent in Japanese, English, and Chinese' },
         { name: 'JLPT N1 Certified', detail: '日本語能力試験 N1 — Japanese-Language Proficiency Test (highest level)' },
         { name: 'Medical Interpretation', detail: 'Supports medical document translation and on-site interpretation' },
-        { name: 'International Patient Care', detail: '5+ years experience' },
+        { name: 'International Patient Care', detail: '10+ years experience' },
       ],
     },
     hero: {
@@ -666,7 +666,7 @@ export const translations: Record<Language, any> = {
         { name: '三か国語認定', detail: '日本語・英語・中国語に堪能' },
         { name: '日本語能力試験N1（JLPT N1）', detail: '日本語能力試験の最高レベル（N1）認定' },
         { name: '医療通訳', detail: '医療文書の翻訳・対面通訳に対応' },
-        { name: '国際患者ケア', detail: '5年以上の経験' },
+        { name: '国際患者ケア', detail: '10年以上の経験' },
       ],
     },
     hero: {
@@ -1117,7 +1117,7 @@ export const translations: Record<Language, any> = {
         { name: 'شهادة ثلاثية اللغة', detail: 'إجادة اليابانية والإنجليزية والصينية' },
         { name: 'شهادة JLPT N1', detail: 'اختبار الكفاءة في اللغة اليابانية (المستوى الأعلى)' },
         { name: 'الترجمة الطبية', detail: 'دعم ترجمة المستندات الطبية والترجمة الفورية في الموقع' },
-        { name: 'رعاية المرضى الدوليين', detail: 'خبرة تزيد على 5 سنوات' },
+        { name: 'رعاية المرضى الدوليين', detail: 'خبرة تزيد على 10 سنوات' },
       ],
     },
     pricing: {
@@ -1609,7 +1609,7 @@ export const translations: Record<Language, any> = {
         { name: 'Трёхъязычная сертификация', detail: 'Свободное владение японским, английским и китайским языками' },
         { name: 'Сертификат JLPT N1', detail: '日本語能力試験 N1 — экзамен по японскому языку (высший уровень)' },
         { name: 'Медицинский перевод', detail: 'Поддержка перевода медицинских документов и устного перевода на месте' },
-        { name: 'Обслуживание иностранных пациентов', detail: 'Более 5 лет опыта' },
+        { name: 'Обслуживание иностранных пациентов', detail: 'Более 10 лет опыта' },
       ],
     },
     pricing: {
@@ -2511,7 +2511,7 @@ export const translations: Record<Language, any> = {
         { name: '3 хэлний гэрчилгээ', detail: 'Япон, Англи, Хятад хэлний чөлөөт мэдлэг' },
         { name: 'JLPT N1 гэрчилгээ', detail: '日本語能力試験 N1 — Япон хэлний түвшин тогтоох шалгалт (хамгийн дээд түвшин)' },
         { name: 'Эрүүл мэндийн орчуулга', detail: 'Эрүүл мэндийн баримт бичгийн орчуулга болон газар дээрх хэлмэрчлэлийг дэмжинэ' },
-        { name: 'Олон улсын өвчтөний тусламж', detail: '5+ жилийн туршлага' },
+        { name: 'Олон улсын өвчтөний тусламж', detail: '10+ жилийн туршлага' },
       ],
     },
 

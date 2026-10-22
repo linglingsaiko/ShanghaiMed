@@ -5,8 +5,13 @@ import Link from 'next/link'
 import { Check, Clock, Calendar, Phone, Plane, Building2, FileText, Car, MessageCircle, Info, Shield, ArrowRight } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 
+const WHATSAPP_LINK = 'https://wa.me/8613818274110'
+
 const Pricing: React.FC = () => {
-  const { t, tArr, localePath } = useLanguage()
+  const { t, tArr, localePath, language } = useLanguage()
+  const isJapanese = language === 'ja'
+  const primaryLink = isJapanese ? 'https://line.me/ti/p/cD_Ed4GHBM' : WHATSAPP_LINK
+  const primaryLabel = isJapanese ? 'LINEで相談' : 'Chat on WhatsApp'
 
   // 3 packages: Essential Care / Complex Care / Extra Companion Hours (add-on, last)
   const packages = [
@@ -15,12 +20,14 @@ const Pricing: React.FC = () => {
       icon: Calendar,
       type: 'core',
       popular: true,
+      ctaMsg: "Hi Sara, I'm interested in the Essential Care Concierge ($1,000 / 3-day package). Can you share more details?",
     },
     {
       priceUsd: '$1,650',
       icon: Calendar,
       type: 'core',
-      popular: false,
+      popular: true,
+      ctaMsg: "Hi Sara, I'm interested in the Complex Care Concierge ($1,650 / 5-day package). Can you share more details?",
     },
     {
       priceUsd: '$50',
@@ -134,19 +141,17 @@ const Pricing: React.FC = () => {
             {packages.map((pkg, index) => (
               <div
                 key={index}
-                className={`relative bg-white rounded-2xl p-6 shadow-lg border-2 transition-all hover:shadow-xl ${
+                className={`relative bg-white rounded-2xl p-6 shadow-lg border-2 transition-all hover:shadow-xl flex flex-col ${
                   pkg.type === 'core'
-                    ? pkg.popular
-                      ? 'border-accent scale-[1.02]'
-                      : 'border-gray-200'
+                    ? 'border-accent'
                     : 'border-gray-300 bg-gray-50'
                 }`}
               >
-                {/* Popular Badge */}
-                {pkg.type === 'core' && pkg.popular && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                {/* Top Badge */}
+                {pkg.type === 'core' && (
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap">
                     <span className="bg-accent text-white text-xs font-bold px-4 py-1 rounded-full">
-                      {t('pricing.popularBadge')}
+                      {index === 0 ? t('pricing.popularBadge') : 'Best for Complex Cases'}
                     </span>
                   </div>
                 )}
@@ -170,9 +175,25 @@ const Pricing: React.FC = () => {
                   )}
                 </div>
                 <p className="text-sm text-gray-600 mb-2">{getPkg(index, 'duration', packageDurationFallback[index])}</p>
-                <p className={`text-xs ${pkg.type === 'addon' ? 'text-gray-500 italic' : 'text-amber-600'}`}>
+                <p className={`text-xs mb-5 ${pkg.type === 'addon' ? 'text-gray-500 italic' : 'text-amber-600'}`}>
                   {getPkg(index, 'description', packageDescFallback[index])}
                 </p>
+
+                {/* CTA button for core packages */}
+                {pkg.type === 'core' && (
+                  <div className="mt-auto pt-2">
+                    <a
+                      href={`${primaryLink}?text=${encodeURIComponent(pkg.ctaMsg || '')}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex w-full items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1fb855] text-white font-semibold px-5 py-2.5 rounded-full text-sm transition-all hover:shadow-md"
+                    >
+                      <MessageCircle className="w-4 h-4" />
+                      {primaryLabel}
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </a>
+                  </div>
+                )}
               </div>
             ))}
           </div>

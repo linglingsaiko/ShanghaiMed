@@ -176,7 +176,7 @@ const enFaqs: FaqItem[] = [
           <li>Airport pickup &amp; drop-off</li>
           <li>Bilingual medical translation at the clinic</li>
           <li>Health checkup report translation and result explanation</li>
-          <li>Insurance direct-billing coordination</li>
+          <li>Insurance support</li>
         </ul>
         <p className="mb-2"><strong>Essential Care Concierge — $1,000 / 3 days</strong></p>
         <p className="mb-1">All 13 concierge services — required for all specialist consultations and medical conditions:</p>
@@ -188,7 +188,7 @@ const enFaqs: FaqItem[] = [
           <li>Hospital &amp; specialist matching, appointment scheduling</li>
           <li>Local transportation, payment, and on-the-ground guidance</li>
           <li>Dedicated WhatsApp support, visa invitation letter support</li>
-          <li>Insurance direct-billing &amp; pre-authorization support, 30-day post-treatment follow-up</li>
+          <li>Insurance support, 30-day post-treatment follow-up</li>
         </ul>
         <p className="mb-2"><strong>Surgery &amp; Extended Care Concierge — $1,650 / 5 days</strong></p>
         <p className="mb-1">All Essential Care services plus surgery-specific support, covering pre-op, surgery day, and post-op:</p>
@@ -198,7 +198,7 @@ const enFaqs: FaqItem[] = [
           <li>Surgery-day nurse accompaniment &amp; inpatient check-ins</li>
           <li>Family communication &amp; progress updates during hospital stay</li>
           <li>Full surgical report translation &amp; post-op prescription coordination</li>
-          <li>Insurance direct-billing, pre-authorization &amp; surgical deposit coordination</li>
+          <li>Insurance &amp; surgical deposit coordination</li>
           <li>60-day post-care remote follow-up</li>
         </ul>
         <p>
@@ -474,7 +474,7 @@ const jaFaqs: FaqItem[] = [
           <li>空港送迎（到着・出発）</li>
           <li>クリニックでの二言語医療通訳</li>
           <li>人間ドックレポート翻訳・結果説明</li>
-          <li>保険ダイレクトビリング調整</li>
+          <li>保険サポート</li>
         </ul>
         <p className="mb-2"><strong>エッセンシャルケア・コンシェルジュ — $1,000 / 3日間</strong></p>
         <p className="mb-1">すべての専門科受診・疾患に必須：</p>
@@ -486,7 +486,7 @@ const jaFaqs: FaqItem[] = [
           <li>病院・専門医マッチング・予約調整</li>
           <li>現地での移動・支払い・実務ガイド</li>
           <li>WhatsApp専用サポート・医療ビザ招聘状サポート</li>
-          <li>保険ダイレクトビリング・事前承認サポート、治療後30日間リモートフォローアップ</li>
+          <li>保険サポート、治療後30日間リモートフォローアップ</li>
         </ul>
         <p className="mb-2"><strong>手術・延長ケア・コンシェルジュ — $1,650 / 5日間</strong></p>
         <p className="mb-1">手術・入院・長期治療向け。エッセンシャルケアの全サービスに加え、手術特有のサポートを含みます：</p>
@@ -496,7 +496,7 @@ const jaFaqs: FaqItem[] = [
           <li>手術当日の看護師同行・入院中の様子伺い</li>
           <li>ご家族への経過報告・コミュニケーション</li>
           <li>手術レポート全文翻訳・術後処方箋調整</li>
-          <li>保険ダイレクトビリング・事前承認・手術デポジット調整</li>
+          <li>保険・手術デポジット調整</li>
           <li>治療後60日間リモートフォローアップ</li>
         </ul>
         <p>
@@ -771,7 +771,7 @@ const ruFaqs: FaqItem[] = [
           <li>Встреча и проводы в аэропорту</li>
           <li>Двуязычный медицинский перевод в клинике</li>
           <li>Перевод отчёта чек-апа и разъяснение результатов</li>
-          <li>Координация прямого выставления счетов через страховку</li>
+          <li>Страховая поддержка</li>
         </ul>
         <p className="mb-2"><strong>Консьерж «Базовый уход» — $1,000 / 3 дня</strong></p>
         <p className="mb-1">Обязателен для всех консультаций специалистов и заболеваний:</p>
@@ -783,7 +783,7 @@ const ruFaqs: FaqItem[] = [
           <li>Подбор больницы и специалиста, запись на приёмы</li>
           <li>Помощь с транспортом, оплатой и ориентацией на месте</li>
           <li>Выделенная поддержка в WhatsApp, поддержка с медицинским приглашением на визу</li>
-          <li>Поддержка по прямому выставлению счетов и предварительной авторизации по страховке, 30 дней пост-лечебного наблюдения</li>
+          <li>Страховая поддержка, 30 дней пост-лечебного наблюдения</li>
         </ul>
         <p className="mb-2"><strong>Консьерж для хирургии и длительного лечения — $1,650 / 5 дней</strong></p>
         <p className="mb-1">Для хирургических случаев, госпитализации и расширенных программ лечения. Включает все услуги «Базового ухода» плюс специализированную хирургическую поддержку:</p>
@@ -793,7 +793,7 @@ const ruFaqs: FaqItem[] = [
           <li>Сопровождение медсестры в день операции и визиты во время госпитализации</li>
           <li>Общение с семьёй и обновления о ходе лечения</li>
           <li>Полный перевод хирургического отчёта и координация послеоперационных рецептов</li>
-          <li>Координация прямого расчёта со страховкой, предварительной авторизации и хирургического депозита</li>
+          <li>Страховая поддержка и координация хирургического депозита</li>
           <li>60 дней пост-лечебного удалённого наблюдения</li>
         </ul>
         <p>
@@ -1065,7 +1065,7 @@ const mnFaqs: FaqItem[] = [
           <li>Нисэх буудлаас тосох, хүргэж өгөх</li>
           <li>Клиник дээр хоёр хэлний эмнэлгийн орчуулга</li>
           <li>Үзлэгийн тайлан орчуулах, үр дүн тайлбарлах</li>
-          <li>Даатгалын шууд төлбөрийн зохицуулалт</li>
+          <li>Даатгалын дэмжлэг</li>
         </ul>
         <p className="mb-2"><strong>Үндсэн асрамжийн консьерж — $1,000 / 3 өдөр</strong></p>
         <p className="mb-1">Бүх мэргэжлийн эмчийн үзлэг ба өвчлөлд шаардлагатай:</p>
@@ -1077,7 +1077,7 @@ const mnFaqs: FaqItem[] = [
           <li>Эмнэлэг ба мэргэжлийн эмч сонгох, цаг захиалга</li>
           <li>Орон нутгийн тээвэр, төлбөр, газар дээрх чиглүүлэгч</li>
           <li>Тусгай WhatsApp дэмжлэг, эмнэлгийн визний урилгын дэмжлэг</li>
-          <li>Даатгалын шууд төлбөр ба урьдчилсан зөвшөөрлийн дэмжлэг, эмчилгээний дараах 30 хоногийн хяналт</li>
+          <li>Даатгалын дэмжлэг, эмчилгээний дараах 30 хоногийн хяналт</li>
         </ul>
         <p className="mb-2"><strong>Мэс засал ба уртасгасан асрамжийн консьерж — $1,650 / 5 өдөр</strong></p>
         <p className="mb-1">Мэс засал, хэвтэн эмчлүүлэх, уртасгасан эмчилгээнд зориулагдсан. Үндсэн асрамжийн бүх үйлчилгээнээс гадна мэс заслын тусгай дэмжлэг багтана:</p>
@@ -1087,7 +1087,7 @@ const mnFaqs: FaqItem[] = [
           <li>Мэс заслын өдөр сувилагч дагалдан явах, хэвтэх үеийн эргэлт</li>
           <li>Гэр бүлийнхэнтэй харилцах ба явцын мэдээллээр хангах</li>
           <li>Мэс заслын тайланг бүрэн орчуулах, мэс заслын дараах жорын зохицуулалт</li>
-          <li>Даатгалын шууд төлбөр, урьдчилсан зөвшөөрөл ба мэс заслын барьцааны зохицуулалт</li>
+          <li>Даатгал ба мэс заслын барьцааны зохицуулалт</li>
           <li>Эмчилгээний дараах 60 хоногийн зайнаас хяналт</li>
         </ul>
         <p>

@@ -63,7 +63,7 @@ const Pricing: React.FC = () => {
       'Dedicated WhatsApp support throughout your stay',
       'Visa invitation letter support',
       '30-day post-care remote follow-up',
-      'Insurance direct-billing & pre-authorization support',
+      'Insurance support',
     ],
     [ // $1,000 — 3-day Essential
       '3 full days on-site nurse accompaniment (daytime)',
@@ -78,7 +78,7 @@ const Pricing: React.FC = () => {
       'Dedicated WhatsApp support throughout your stay',
       'Visa invitation letter support',
       '30-day post-care remote follow-up',
-      'Insurance direct-billing & pre-authorization support',
+      'Insurance support',
     ],
     [ // $1,650 — 5-day Surgery & Extended
       '5 full days on-site nurse accompaniment (pre-op, surgery day & post-op)',
@@ -96,7 +96,7 @@ const Pricing: React.FC = () => {
       'Medical visa invitation letter support',
       'Family communication & progress updates',
       '60-day post-care remote follow-up',
-      'Insurance direct-billing, pre-authorization & surgical deposit coordination',
+      'Insurance & surgical deposit coordination',
     ],
   ]
 
@@ -116,7 +116,7 @@ const Pricing: React.FC = () => {
     'Medical needs assessment',
     'Hospital & specialist recommendations',
     'Estimated medical budget',
-    'Insurance direct-billing guidance',
+    'Insurance guidance',
   ]
 
   const faqFallback = [
@@ -126,7 +126,7 @@ const Pricing: React.FC = () => {
     },
     {
       q: "What's included in the $1,000 Essential package?",
-      a: 'The 3-day Essential package includes airport pickup & drop-off, hotel coordination, up to 8 hours/day of in-person nurse accompaniment for 3 full days (daytime), bilingual medical interpretation during all appointments, medical report translation & summaries, doctor appointment scheduling, medication pickup coordination, hospital & specialist matching, local transportation & payment assistance, dedicated WhatsApp support throughout your stay, visa invitation letter support, 30-day post-care remote follow-up, and insurance direct-billing & pre-authorization support — 13 services total.',
+      a: 'The 3-day Essential package includes airport pickup & drop-off, hotel coordination, up to 8 hours/day of in-person nurse accompaniment for 3 full days (daytime), bilingual medical interpretation during all appointments, medical report translation & summaries, doctor appointment scheduling, medication pickup coordination, hospital & specialist matching, local transportation & payment assistance, dedicated WhatsApp support throughout your stay, visa invitation letter support, 30-day post-care remote follow-up, and insurance support — 13 services total.',
     },
     {
       q: 'Can I use my international insurance in Shanghai hospitals?',

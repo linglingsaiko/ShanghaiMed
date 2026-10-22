@@ -192,7 +192,7 @@ export default function RootLayout({
                           'Medical needs assessment',
                           'Hospital & specialist recommendations',
                           'Estimated medical budget',
-                          'Insurance direct-billing guidance',
+                          'Insurance guidance',
                         ],
                       },
                       {
@@ -202,7 +202,7 @@ export default function RootLayout({
                           '@type': 'Service',
                           name: 'Essential Care Concierge',
                           serviceType: 'Medical concierge package',
-                          description: '$1,000 / 3 days of on-site ISPN-registered trilingual nurse accompaniment (daytime). Required for all specialist consultations and medical conditions. Includes airport pickup & drop-off, hotel coordination, bilingual medical interpretation during all appointments, medical report translation, appointment scheduling, medication pickup assistance, hospital & specialist matching, local transportation & payment help, dedicated WhatsApp support, visa invitation letter support, 30-day post-care remote follow-up, and insurance direct-billing & pre-authorization support.',
+                          description: '$1,000 / 3 days of on-site ISPN-registered trilingual nurse accompaniment (daytime). Required for all specialist consultations and medical conditions. Includes airport pickup & drop-off, hotel coordination, bilingual medical interpretation during all appointments, medical report translation, appointment scheduling, medication pickup assistance, hospital & specialist matching, local transportation & payment help, dedicated WhatsApp support, visa invitation letter support, 30-day post-care remote follow-up, and insurance support.',
                         },
                         price: '1000',
                         priceCurrency: 'USD',
@@ -219,7 +219,7 @@ export default function RootLayout({
                           'Dedicated WhatsApp support throughout your stay',
                           'Visa invitation letter support',
                           '30-day post-care remote follow-up',
-                          'Insurance direct-billing & pre-authorization support',
+                          'Insurance support',
                         ],
                       },
                       {
@@ -229,7 +229,7 @@ export default function RootLayout({
                           '@type': 'Service',
                           name: 'Health Checkup Concierge',
                           serviceType: 'Medical concierge package',
-                          description: '$500 / 1 day of on-site ISPN-registered trilingual nurse accompaniment (daytime). For 1-day health checkup programs only. Includes airport pickup & drop-off, hotel coordination, bilingual medical interpretation, health checkup report translation and result explanation, appointment scheduling, medication coordination, insurance direct-billing support, and 30-day post-checkup follow-up.',
+                          description: '$500 / 1 day of on-site ISPN-registered trilingual nurse accompaniment (daytime). For 1-day health checkup programs only. Includes airport pickup & drop-off, hotel coordination, bilingual medical interpretation, health checkup report translation and result explanation, appointment scheduling, medication coordination, insurance support, and 30-day post-checkup follow-up.',
                         },
                         price: '500',
                         priceCurrency: 'USD',
@@ -246,7 +246,7 @@ export default function RootLayout({
                           'Dedicated WhatsApp support throughout your stay',
                           'Visa invitation letter support',
                           '30-day post-checkup remote follow-up',
-                          'Insurance direct-billing & pre-authorization support',
+                          'Insurance support',
                         ],
                       },
                       {
@@ -256,7 +256,7 @@ export default function RootLayout({
                           '@type': 'Service',
                           name: 'Surgery & Extended Care Concierge',
                           serviceType: 'Medical concierge package',
-                          description: '$1,650 / 5 days of on-site ISPN-registered trilingual nurse accompaniment covering pre-op, surgery day, and post-op. For surgery, inpatient procedures, and extended treatment plans. Includes all services of the Essential Care package plus surgery-specific support: pre-admission coordination, inpatient check-ins, surgery-day nurse accompaniment, family communication & progress updates, 60-day post-care remote follow-up, and insurance coordination for surgical deposits and pre-authorization.',
+                          description: '$1,650 / 5 days of on-site ISPN-registered trilingual nurse accompaniment covering pre-op, surgery day, and post-op. For surgery, inpatient procedures, and extended treatment plans. Includes all services of the Essential Care package plus surgery-specific support: pre-admission coordination, inpatient check-ins, surgery-day nurse accompaniment, family communication & progress updates, 60-day post-care remote follow-up, and insurance & surgical deposit coordination.',
                         },
                         price: '1650',
                         priceCurrency: 'USD',
@@ -276,7 +276,7 @@ export default function RootLayout({
                           'Medical visa invitation letter support',
                           'Family communication & progress updates',
                           '60-day post-care remote follow-up',
-                          'Insurance direct-billing, pre-authorization & surgical deposit coordination',
+                          'Insurance & surgical deposit coordination',
                         ],
                       },
                       {
@@ -348,7 +348,7 @@ export default function RootLayout({
                       name: 'What is included in the ShanghaiMed service package?',
                       acceptedAnswer: {
                         '@type': 'Answer',
-                        text: 'ShanghaiMed offers three concierge packages. Health Checkup Concierge ($500 / 1 day) is for 1-day health checkup programs only and includes 1 full day of ISPN-registered trilingual nurse accompaniment, airport pickup & drop-off, hotel coordination, bilingual medical interpretation, health checkup report translation with result explanation, insurance coordination, and 30-day post-checkup follow-up. Essential Care Concierge ($1,000 / 3 days) is required for all specialist consultations and medical conditions and includes 3 full days of on-site accompaniment, airport pickup & drop-off, hotel coordination, bilingual interpretation at all appointments, medical report translation, medication pickup assistance, appointment scheduling, hospital & specialist matching, local transportation & payment help, dedicated WhatsApp support, visa invitation letter support, insurance direct-billing & pre-authorization support, and 30-day post-treatment follow-up. Surgery & Extended Care Concierge ($1,650 / 5 days) covers pre-op, surgery day, and post-op for surgical and inpatient cases and includes all Essential Care services plus pre-admission coordination, surgery-day nurse accompaniment, inpatient check-ins, family progress updates, 60-day post-care follow-up, and insurance coordination for surgical deposits. NOT included (paid directly to providers at local rates): medical fees (doctor consultations, tests, medication, procedures, and health checkup packages starting from ~$700), accommodation, and international flights. Emergency medical services are not included in concierge packages.',
+                        text: 'ShanghaiMed offers three concierge packages. Health Checkup Concierge ($500 / 1 day) is for 1-day health checkup programs only and includes 1 full day of ISPN-registered trilingual nurse accompaniment, airport pickup & drop-off, hotel coordination, bilingual medical interpretation, health checkup report translation with result explanation, insurance support, and 30-day post-checkup follow-up. Essential Care Concierge ($1,000 / 3 days) is required for all specialist consultations and medical conditions and includes 3 full days of on-site accompaniment, airport pickup & drop-off, hotel coordination, bilingual interpretation at all appointments, medical report translation, medication pickup assistance, appointment scheduling, hospital & specialist matching, local transportation & payment help, dedicated WhatsApp support, visa invitation letter support, insurance support, and 30-day post-treatment follow-up. Surgery & Extended Care Concierge ($1,650 / 5 days) covers pre-op, surgery day, and post-op for surgical and inpatient cases and includes all Essential Care services plus pre-admission coordination, surgery-day nurse accompaniment, inpatient check-ins, family progress updates, 60-day post-care follow-up, and insurance & surgical deposit coordination. NOT included (paid directly to providers at local rates): medical fees (doctor consultations, tests, medication, procedures, and health checkup packages starting from ~$700), accommodation, and international flights. Emergency medical services are not included in concierge packages.',
                       },
                     },
                     {
@@ -396,7 +396,7 @@ export default function RootLayout({
                       name: "What's included in the $1,000 Essential Care package?",
                       acceptedAnswer: {
                         '@type': 'Answer',
-                        text: "The 3-day Essential Care Concierge package ($1,000 USD) includes all 13 concierge services: airport pickup & drop-off; hotel coordination assistance; 3 full days of on-site accompaniment by an ISPN-certified trilingual nurse (daytime); bilingual medical interpretation during all appointments; medical report translation and summaries; doctor appointment scheduling; medication pickup and coordination; hospital and specialist matching; local transportation, payment, and on-the-ground guidance; dedicated WhatsApp support throughout your stay; visa invitation letter support; 30-day post-care remote follow-up; and insurance direct-billing and pre-authorization support.",
+                        text: "The 3-day Essential Care Concierge package ($1,000 USD) includes all 13 concierge services: airport pickup & drop-off; hotel coordination assistance; 3 full days of on-site accompaniment by an ISPN-certified trilingual nurse (daytime); bilingual medical interpretation during all appointments; medical report translation and summaries; doctor appointment scheduling; medication pickup and coordination; hospital and specialist matching; local transportation, payment, and on-the-ground guidance; dedicated WhatsApp support throughout your stay; visa invitation letter support; 30-day post-care remote follow-up; and insurance support.",
                       },
                     },
                     {
@@ -420,7 +420,7 @@ export default function RootLayout({
                       name: 'Is there a concierge package for surgery or extended treatment in Shanghai?',
                       acceptedAnswer: {
                         '@type': 'Answer',
-                        text: "Yes. The Surgery & Extended Care Concierge ($1,650 USD / 5 days) covers pre-op preparation, surgery day, and post-op support for surgical and inpatient cases. It includes all services from the Essential Care package plus pre-admission coordination, surgery-day nurse accompaniment, inpatient check-ins during hospital stay, family communication & progress updates, 60-day post-care remote follow-up, and insurance direct-billing coordination including surgical deposit and pre-authorization support. Surgical procedure fees are paid directly to the hospital at local rates — typically 50-80% less than in the US for procedures such as knee replacement ($5,000-$10,000 vs US $30,000-$50,000), cardiac bypass ($11,000-$21,000 vs US $80,000-$150,000), and cataract surgery ($1,000-$2,000 vs US $3,500-$6,000).",
+                        text: "Yes. The Surgery & Extended Care Concierge ($1,650 USD / 5 days) covers pre-op preparation, surgery day, and post-op support for surgical and inpatient cases. It includes all services from the Essential Care package plus pre-admission coordination, surgery-day nurse accompaniment, inpatient check-ins during hospital stay, family communication & progress updates, 60-day post-care remote follow-up, and insurance & surgical deposit coordination. Surgical procedure fees are paid directly to the hospital at local rates — typically 50-80% less than in the US for procedures such as knee replacement ($5,000-$10,000 vs US $30,000-$50,000), cardiac bypass ($11,000-$21,000 vs US $80,000-$150,000), and cataract surgery ($1,000-$2,000 vs US $3,500-$6,000).",
                       },
                     },
                   ],

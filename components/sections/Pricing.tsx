@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { Check, Clock, Calendar, ChevronDown, MessageCircle, Shield } from 'lucide-react'
+import { Check, Clock, ChevronDown, Shield } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 const WHATSAPP_LINK = 'https://wa.me/8613818274110'
@@ -16,23 +16,21 @@ const Pricing: React.FC = () => {
     ? 'LINEでこのプランについて相談 →'
     : 'Ask about this package on WhatsApp →'
 
-  // 3 packages: Essential Care (POPULAR) / Extended Care / Extra Hours (add-on)
+  // 2 core packages + add-on: $500 Health Checkup (1 day) / $1000 Essential (3 days, POPULAR) / $50/hour add-on
   const packages = [
+    {
+      priceUsd: '$500',
+      type: 'core',
+      popular: false,
+      highlight: false,
+      ctaMsg: "Hi Sara, I'm interested in the Health Checkup Concierge ($500 / 1-day package). Can you share more details?",
+    },
     {
       priceUsd: '$1,000',
       type: 'core',
       popular: true,
       highlight: true,
-      days: '3',
       ctaMsg: "Hi Sara, I'm interested in the Essential Care Concierge ($1,000 / 3-day package). Can you share more details?",
-    },
-    {
-      priceUsd: '$1,650',
-      type: 'core',
-      popular: false,
-      highlight: false,
-      days: '5',
-      ctaMsg: "Hi Sara, I'm interested in the Extended Care Concierge ($1,650 / 5-day package). Can you share more details?",
     },
     {
       priceUsd: '$50',
@@ -44,22 +42,34 @@ const Pricing: React.FC = () => {
   const includedFallback = [
     'Airport pickup & drop-off',
     'Hotel coordination assistance',
-    'In-person medical accompaniment (up to 8 hours/day)',
+    'On-site nurse accompaniment — 1 day (Health Checkup) / 3 days (Essential)',
     'Bilingual medical interpretation',
     'Medical report translation & summaries',
     'Doctor appointment scheduling',
     'Medication pickup & coordination',
     'Hospital & specialist matching',
     'Local transportation & payment assistance',
-    'Dedicated WeChat/WhatsApp support throughout your stay',
+    'Dedicated WhatsApp support throughout your stay',
     'Visa invitation letter support',
     '30-day post-care remote follow-up',
     'Insurance direct-billing & pre-authorization support',
   ]
 
   const coreHighlightsFallback = [
-    ['Airport pickup & drop-off', 'Bilingual medical interpretation', 'Medical report translation', '30-day post-care follow-up', 'Insurance billing support'],
-    ['Everything in the 3-day package', 'Up to 8 hours/day for 5 days', 'Multi-department visit coordination', 'Inpatient discharge support', 'Extended post-care follow-up'],
+    [
+      '1 full-day on-site nurse accompaniment (daytime)',
+      'Airport pickup & drop-off',
+      'Bilingual medical interpretation',
+      'Health screening report translation & explanation',
+      'Insurance direct-billing support',
+    ],
+    [
+      '3 full days on-site nurse accompaniment (daytime)',
+      'Airport pickup & drop-off',
+      'Bilingual medical interpretation',
+      '30-day post-care remote follow-up',
+      'Insurance direct-billing & pre-authorization',
+    ],
   ]
 
   const freeItemsFallback = [
@@ -72,15 +82,23 @@ const Pricing: React.FC = () => {
   const faqFallback = [
     {
       q: 'How much does a medical concierge service cost in Shanghai?',
-      a: 'Our escorted concierge packages start at $1,000 for a 3-day visit and $1,650 for a 5-day stay. Extra companion hours beyond your package are available at $50/hour as an add-on. Medical fees are paid directly to hospitals.',
+      a: "Our concierge packages start at $500 for a 1-day Health Checkup visit and $1,000 for a 3-day Essential Care package. Both packages include the same full set of concierge services — the only difference is the number of on-site nurse accompaniment days. Extra companion hours beyond your package are available at $50/hour as an add-on. Medical fees are paid directly to hospitals — we do not charge hospital commissions.",
     },
     {
       q: "What's included in the $1,000 Essential package?",
-      a: 'The 3-day Essential package includes airport pickup, up to 8 hours/day of in-person nurse accompaniment, bilingual medical interpretation during appointments, medical report translation, insurance direct-billing support, and 30 days of post-care follow-up. See the full service list below.',
+      a: 'The 3-day Essential package includes airport pickup & drop-off, hotel coordination, up to 8 hours/day of in-person nurse accompaniment for 3 full days, bilingual medical interpretation during all appointments, medical report translation & summaries, doctor appointment scheduling, medication pickup coordination, hospital & specialist matching, local transportation & payment assistance, dedicated WhatsApp support throughout your stay, visa invitation letter support, 30-day post-care remote follow-up, and insurance direct-billing & pre-authorization support. See the full 13-item service list below.',
     },
     {
       q: 'Can I use my international insurance in Shanghai hospitals?',
-      a: 'Yes. Shanghai\'s major international departments and Grade 3A hospitals accept many international insurance plans including Cigna, AXA, Allianz, MSH, and Bupa. We help with policy benefit checks, pre-authorization letters, and direct-billing coordination so you don\'t have to pay out of pocket and file claims yourself.',
+      a: "Yes. Shanghai's major international departments and Grade 3A hospitals accept many international insurance plans including Cigna, AXA, Allianz, MSH, and Bupa. We help with policy benefit checks, pre-authorization letters, and direct-billing coordination so you don't have to pay out of pocket and file claims yourself.",
+    },
+    {
+      q: 'Does the concierge fee include medical treatment costs?',
+      a: "No. The concierge fee covers Sara's on-the-ground support services only. Medical fees (doctor consultations, tests, medication, procedures, health screening packages) are paid directly to hospitals and clinics at local rates — we do not mark up medical costs and we do not receive commissions from hospitals. This separation keeps our recommendations fully independent.",
+    },
+    {
+      q: 'How much is a comprehensive health checkup in Shanghai, and what does the $500 package cover?',
+      a: "Executive health screenings in Shanghai start from $700 at Grade 3A hospitals and premier international clinics (vs $2,500+ in the U.S.), with premium packages ranging up to $1,500+ depending on depth. Our $500 Health Checkup Concierge includes all 13 concierge services — airport pickup, hotel coordination, bilingual nurse accompaniment for 1 full day, medical interpretation, report translation with explanation, insurance coordination, and 30-day follow-up. The $700+ medical screening fee is paid directly to the clinic.",
     },
   ]
 
@@ -126,22 +144,28 @@ const Pricing: React.FC = () => {
           </div>
         </div>
 
-        {/* Pricing Cards */}
+        {/* Pricing Cards — 2 core cards side by side */}
         <div className="mb-10">
           <h3 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-3">{t('pricing.servicePricingTitle')}</h3>
           <p className="text-center text-gray-500 text-sm mb-10">{t('pricing.servicePricingDesc')}</p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-start">
-            {packages.map((pkg, index) => {
-              const isCore = pkg.type === 'core'
-              const isAddon = pkg.type === 'addon'
-              const pkgName = t(`pricing.packages.${index}.name`) || (index === 0 ? 'Essential Care Concierge' : index === 1 ? 'Extended Care Concierge' : 'Extra Companion Hours')
-              const pkgDuration = t(`pricing.packages.${index}.duration`) || (index === 0 ? 'Up to 8 h/day × 3 days' : index === 1 ? 'Up to 8 h/day × 5 days' : '$50 per hour')
-              const pkgDesc = t(`pricing.packages.${index}.description`) || (index === 0 ? 'Best for short consultations, check-ups and single-specialty visits' : index === 1 ? 'For extended treatment, multi-department visits or inpatient stays' : 'Add-on only — not sold separately')
-              const ctaHref = isCore ? `${primaryLink}?text=${encodeURIComponent(pkg.ctaMsg || '')}` : undefined
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto items-start">
+            {packages.filter(p => p.type === 'core').map((pkg, index) => {
+              // index here is 0/1 within filtered core array; map back to packages index for translations
+              const pkgIdx = index === 0 ? 0 : 1
+              const fallbackNames = ['Health Checkup Concierge', 'Essential Care Concierge']
+              const fallbackDurations = ['1 full-day on-site accompaniment (daytime)', '3 full days on-site accompaniment (daytime)']
+              const fallbackDescs = [
+                'Best for executive health screenings and single-day clinic visits',
+                'Best for consultations, diagnostics, and multi-specialty visits',
+              ]
+              const pkgName = t(`pricing.packages.${pkgIdx}.name`) || fallbackNames[index]
+              const pkgDuration = t(`pricing.packages.${pkgIdx}.duration`) || fallbackDurations[index]
+              const pkgDesc = t(`pricing.packages.${pkgIdx}.description`) || fallbackDescs[index]
+              const ctaHref = `${primaryLink}?text=${encodeURIComponent(pkg.ctaMsg || '')}`
 
-              const highlights = tArr(`pricing.packages.${index}.highlights`)
-              const displayHighlights = (highlights && highlights.length >= 4) ? highlights : coreHighlightsFallback[index] || []
+              const highlights = tArr(`pricing.packages.${pkgIdx}.highlights`)
+              const displayHighlights = (highlights && highlights.length >= 4) ? highlights : coreHighlightsFallback[index]
 
               return (
                 <div
@@ -149,9 +173,7 @@ const Pricing: React.FC = () => {
                   className={`relative bg-white rounded-2xl p-6 shadow-sm transition-all ${
                     pkg.highlight
                       ? 'border-2 border-accent md:scale-105 md:shadow-lg z-10'
-                      : isCore
-                        ? 'border border-gray-200'
-                        : 'border border-gray-200 bg-gray-50'
+                      : 'border border-gray-200'
                   }`}
                 >
                   {/* Top Badge */}
@@ -162,65 +184,53 @@ const Pricing: React.FC = () => {
                       </span>
                     </div>
                   )}
-                  {!pkg.popular && isCore && (
-                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap">
-                      <span className="bg-gray-600 text-white text-xs font-medium px-4 py-1 rounded-full">
-                        {t('pricing.extendedBadge')}
-                      </span>
-                    </div>
-                  )}
-                  {isAddon && (
-                    <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                      <span className="bg-gray-400 text-white text-xs font-medium px-3 py-1 rounded-full">
-                        {t('pricing.addonBadge')}
-                      </span>
-                    </div>
-                  )}
 
                   <h4 className="text-lg font-bold text-gray-900 mb-2 mt-1">{pkgName}</h4>
                   <div className="mb-3 flex items-baseline">
                     <span className={`text-3xl font-bold ${pkg.highlight ? 'text-accent' : 'text-primary'}`}>{pkg.priceUsd}</span>
-                    {pkg.perUnit ? (
-                      <span className="text-gray-500 text-sm ml-1">{pkg.perUnit}</span>
-                    ) : (
-                      <span className="text-gray-500 text-sm ml-1">{t('pricing.usdLabel')}</span>
-                    )}
+                    <span className="text-gray-500 text-sm ml-1">{t('pricing.usdLabel')}</span>
                   </div>
+                  <p className="text-xs text-gray-400 italic mb-2">{t('pricing.perPerson')}</p>
                   <p className="text-sm text-gray-600 mb-1">{pkgDuration}</p>
-                  <p className={`text-xs mb-5 ${isAddon ? 'text-gray-500 italic' : 'text-amber-700'}`}>
-                    {pkgDesc}
-                  </p>
+                  <p className="text-xs text-amber-700 mb-5">{pkgDesc}</p>
 
                   {/* Core package highlights */}
-                  {isCore && displayHighlights.length > 0 && (
-                    <ul className="space-y-2 mb-5 pt-4 border-t border-gray-100">
-                      {displayHighlights.slice(0, 5).map((h: string, i: number) => (
-                        <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
-                          <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                          <span>{h}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
+                  <ul className="space-y-2 mb-5 pt-4 border-t border-gray-100">
+                    {displayHighlights.slice(0, 5).map((h: string, i: number) => (
+                      <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
+                        <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+                        <span>{h}</span>
+                      </li>
+                    ))}
+                  </ul>
 
-                  {/* Text-link CTA (only core packages) */}
-                  {isCore && (
-                    <a
-                      href={ctaHref}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block text-center text-sm font-semibold text-accent hover:text-accent/80 mt-2 pt-4 border-t border-gray-100 transition-colors"
-                    >
-                      {ctaTextLink}
-                    </a>
-                  )}
+                  {/* Text-link CTA */}
+                  <a
+                    href={ctaHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-center text-sm font-semibold text-accent hover:text-accent/80 mt-2 pt-4 border-t border-gray-100 transition-colors"
+                  >
+                    {ctaTextLink}
+                  </a>
                 </div>
               )
             })}
           </div>
+
+          {/* Add-on: Extra hours */}
+          <div className="max-w-3xl mx-auto mt-4">
+            <div className="bg-gray-50 border border-gray-200 rounded-xl px-5 py-3 flex items-center justify-between text-sm">
+              <div>
+                <span className="font-semibold text-gray-700">{t('pricing.addonTitle')}</span>
+                <span className="text-gray-500 ml-2">{t('pricing.addonDesc')}</span>
+              </div>
+              <span className="font-bold text-primary flex-shrink-0 ml-4">$50<span className="text-gray-500 font-normal text-xs">/hour</span></span>
+            </div>
+          </div>
         </div>
 
-        {/* Social Proof — right under price cards, when doubt is highest */}
+        {/* Social Proof */}
         <div className="text-center mb-12">
           <p className="text-sm text-gray-500">
             <Shield className="w-4 h-4 inline mr-1 -mt-0.5 text-accent" />
@@ -228,11 +238,25 @@ const Pricing: React.FC = () => {
           </p>
         </div>
 
+        {/* All 13 services — full expanded, both packages include all of these */}
+        <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm mb-10 max-w-3xl mx-auto">
+          <h3 className="text-lg font-bold text-gray-900 mb-2 text-center">{t('pricing.allServicesTitle')}</h3>
+          <p className="text-center text-gray-500 text-sm mb-6">{t('pricing.allServicesDesc')}</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2">
+            {(tArr('pricing.includedItems').length === 13 ? tArr('pricing.includedItems') : includedFallback).map((item, index) => (
+              <div key={index} className="flex items-start gap-2 py-1.5 text-sm text-gray-700">
+                <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+                <span>{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Mini FAQ — GEO core asset */}
         <div className="mb-12">
           <h3 className="text-xl font-bold text-gray-900 text-center mb-6">{t('pricing.faqTitle')}</h3>
           <div className="space-y-3 max-w-3xl mx-auto">
-            {(tArr('pricing.faqItems').length >= 3 ? tArr('pricing.faqItems') : faqFallback).map((item: any, index: number) => {
+            {(tArr('pricing.faqItems').length >= 5 ? tArr('pricing.faqItems') : faqFallback).map((item: any, index: number) => {
               const q = typeof item === 'string' ? item : item.q
               const a = typeof item === 'string' ? '' : item.a
               return (
@@ -250,28 +274,13 @@ const Pricing: React.FC = () => {
           </div>
         </div>
 
-        {/* All 13 services — <details> for SSR visibility */}
-        <div className="mb-10 max-w-3xl mx-auto">
-          <details className="bg-white rounded-xl border border-gray-200">
-            <summary className="cursor-pointer list-none px-5 py-4 flex items-center justify-center gap-2 font-semibold text-primary text-sm hover:text-accent transition-colors">
-              <span>{t('pricing.seeAllServices')}</span>
-              <ChevronDown className="w-4 h-4 transition-transform" />
-            </summary>
-            <div className="px-5 pb-5 pt-1 grid grid-cols-1 sm:grid-cols-2 gap-2 border-t border-gray-100">
-              {(tArr('pricing.includedItems').length === 13 ? tArr('pricing.includedItems') : includedFallback).map((item, index) => (
-                <div key={index} className="flex items-start gap-2 py-1.5 text-sm text-gray-700">
-                  <Check className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                  <span>{item}</span>
-                </div>
-              ))}
-            </div>
-          </details>
-        </div>
-
         {/* Footer fine print */}
-        <div className="text-center space-y-2 text-xs text-gray-500 max-w-2xl mx-auto">
+        <div className="text-center space-y-1 text-xs text-gray-500 max-w-2xl mx-auto">
           <p>
-            {t('pricing.extraHoursNote')}{' '}
+            {t('pricing.extraHoursNote')}
+          </p>
+          <p>
+            {t('pricing.emergencyNote')}{' '}
             <Link href={localePath('/refund-policy')} className="text-accent hover:underline">{t('pricing.refundPolicy')}</Link>
             {' · '}
             {t('pricing.independentDisclaimer')}
@@ -279,7 +288,7 @@ const Pricing: React.FC = () => {
         </div>
       </div>
 
-      {/* small CSS to hide default details marker */}
+      {/* hide default details marker */}
       <style jsx global>{`
         details > summary::-webkit-details-marker { display: none; }
         details > summary { list-style: none; }

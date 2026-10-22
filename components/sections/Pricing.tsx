@@ -243,33 +243,6 @@ const Pricing: React.FC = () => {
     },
   ]
 
-  const faqFallback = [
-    {
-      q: 'Is the initial consultation really free? What does it cover?',
-      a: 'Yes — the initial WhatsApp consultation with Sara is completely free with no obligation. On this call we assess your medical needs, recommend suitable hospitals and specialists, give you a realistic budget range for treatment, and explain how insurance works. It\u2019s a decision-stage conversation; on-site services (nurse accompaniment, appointment booking, in-person interpretation) begin when you book an hourly escort or a concierge package.',
-    },
-    {
-      q: 'Can I book just an on-site hospital escort without a full concierge package?',
-      a: 'Yes. Our on-site hospital escort is available standalone at $50/hour (minimum 2 hours). This is for patients who have already booked their own doctor appointment and only need an English-speaking companion to help with queues, payment, pharmacy pickup, and basic on-the-spot guidance. The escort is not necessarily a licensed nurse, and interpretation is English–Chinese only (other languages require an interpreter at additional cost). The hourly escort does not include appointment scheduling, doctor matching, airport pickup, report translation, visa support, or post-visit follow-up — those are covered by our concierge packages.',
-    },
-    {
-      q: 'How much does a medical concierge service cost in Shanghai?',
-      a: "Our concierge packages are $500 for a 1-day Health Checkup visit (health checkup programs only), $1,000 for a 3-day Essential Care package (required for all specialist consultations and medical conditions), and $1,650 for a 5-day Surgery & Extended Care package (required for surgery and inpatient procedures). Standalone on-site hospital escort is $50/hour (min. 2 hours). Every concierge package includes a dedicated trilingual nurse and full support. Extra companion hours beyond your package are available at $50/hour as an add-on. Medical fees are paid directly to hospitals — we do not charge hospital commissions.",
-    },
-    {
-      q: "What's included in the $1,000 Essential package?",
-      a: 'The 3-day Essential package includes 3 full days (daytime) of on-site trilingual nurse accompaniment, airport pickup & drop-off (standard vehicle — special vehicles such as wheelchair-accessible vans or larger cars can be arranged at extra cost), hotel coordination, bilingual medical interpretation during all appointments, medical report translation & summaries, doctor appointment scheduling, medication pickup coordination, hospital & specialist matching, local transportation & payment assistance, dedicated WhatsApp support throughout your stay, visa invitation letter support, 30-day post-care remote follow-up, and insurance support — 13 services total.',
-    },
-    {
-      q: 'Can I use my international insurance in Shanghai hospitals?',
-      a: "Shanghai's major international departments and Grade 3A hospitals accept many international insurance plans including Cigna, AXA, Allianz, MSH, and Bupa. We provide insurance support — including helping you check your policy benefits and obtaining pre-authorization letters. Where direct billing is available, we will coordinate with the hospital on your behalf; where it is not, you pay the hospital directly and claim reimbursement from your insurer with our documentation support.",
-    },
-    {
-      q: 'Does the concierge fee include medical costs?',
-      a: "No. ShanghaiMed charges an independent concierge fee for our coordination and accompaniment services. Medical fees — doctor consultations, tests, medication, procedures, and health checkup packages starting from around $700 — are paid directly to the hospital or clinic at local rates. We do not charge commissions from hospitals, and your concierge quote is presented upfront with no hidden fees.",
-    },
-  ]
-
   // ---- helpers ----
   const resolveArr = (key: string, fallback: string[]): string[] => {
     const v = tArr(key)
@@ -460,26 +433,16 @@ const Pricing: React.FC = () => {
           </p>
         </div>
 
-        {/* FAQ — GEO core asset */}
-        <div className="mb-10">
-          <h3 className="text-xl font-bold text-gray-900 text-center mb-5">{t('pricing.faqTitle')}</h3>
-          <div className="space-y-2.5">
-            {(tArr('pricing.faqItems').length >= 5 ? tArr('pricing.faqItems') : faqFallback).map((item: any, index: number) => {
-              const q = typeof item === 'string' ? item : item.q
-              const a = typeof item === 'string' ? '' : item.a
-              return (
-                <details key={index} className="bg-white rounded-xl border border-gray-200 group" open={index === 0}>
-                  <summary className="cursor-pointer list-none px-5 py-3.5 flex items-center justify-between font-semibold text-gray-900 text-[15px] hover:text-accent transition-colors">
-                    <span>{q}</span>
-                    <svg className="w-4 h-4 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-3" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
-                  </summary>
-                  <div className="px-5 pb-4 text-[14px] text-gray-600 leading-relaxed border-t border-gray-100 pt-3">
-                    {a}
-                  </div>
-                </details>
-              )
-            })}
-          </div>
+        {/* FAQ link CTA — full FAQ on dedicated /faq page to avoid duplication */}
+        <div className="mb-10 text-center">
+          <Link
+            href={localePath('/faq')}
+            className="inline-flex items-center gap-2 px-6 py-3 bg-white border border-gray-200 rounded-xl font-medium text-gray-700 hover:border-accent hover:text-accent transition-colors"
+          >
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" /></svg>
+            {t('pricing.viewAllFaq')}
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" /></svg>
+          </Link>
         </div>
 
         {/* Footer fine print */}
@@ -498,11 +461,6 @@ const Pricing: React.FC = () => {
           </p>
         </div>
       </div>
-
-      <style jsx global>{`
-        details > summary::-webkit-details-marker { display: none; }
-        details > summary { list-style: none; }
-      `}</style>
     </section>
   )
 }

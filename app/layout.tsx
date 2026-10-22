@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     'medical travel China',
     'Shanghai hospitals',
     'ISPN nurses',
-    'insurance direct billing Shanghai',
+    'insurance support Shanghai',
     'specialist matching Shanghai',
   ],
   authors: [{ name: 'ShanghaiMed' }],
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     siteName: 'ShanghaiMed',
     title: 'ShanghaiMed - World-Class Medical Care in Shanghai',
     description:
-      'Free, confidential consultation with top Shanghai specialists. 14 Grade 3A hospitals + 5 international hospitals. Transparent pricing from $1,000.',
+      'Free medical consultation, hospital escort from $50/hour, and concierge packages from $500. 14 Grade 3A + 5 international partner hospitals. ISPN-certified trilingual nurses and insurance support.',
     images: [
       {
         url: '/og-image.png',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'ShanghaiMed - World-Class Medical Care in Shanghai',
     description:
-      'Free consultation with top Shanghai specialists. Transparent pricing, insurance direct billing, trilingual nurses.',
+      'Free medical consultation, hospital escort from $50/hour, and concierge packages from $500. Transparent pricing, insurance support, trilingual nurses.',
     images: ['/og-image.png'],
   },
   alternates: {
@@ -394,7 +394,7 @@ export default function RootLayout({
                       name: 'Can I use my international health insurance?',
                       acceptedAnswer: {
                         '@type': 'Answer',
-                        text: 'Yes. ShanghaiMed partner hospitals have direct settlement agreements with major international insurers, ranging from 8 to 24 insurers per hospital: Huashan Hospital has 24 insurance partners, Shanghai Children\'s Medical Center 23, Ruijin Hospital 21, and Renji Hospital 20. Accepted insurers include MSH, Bupa, Cigna, Aetna, AXA, Allianz, AIA, and International SOS. ShanghaiMed provides insurance support including policy benefit checks and pre-authorization letters. Where direct billing is available, we coordinate with the hospital on your behalf; otherwise, patients pay the hospital directly and claim reimbursement from their insurer with our documentation support. 19 partner hospitals support direct billing.',
+                        text: 'Yes. ShanghaiMed partner hospitals have direct settlement agreements with major international insurers, ranging from 8 to 24 insurers per hospital: Huashan Hospital has 24 insurance partners, Shanghai Children\'s Medical Center 23, Ruijin Hospital 21, and Renji Hospital 20. Accepted insurers include MSH, Bupa, Cigna, Aetna, AXA, Allianz, AIA, and International SOS. ShanghaiMed provides insurance support including policy benefit checks and pre-authorization letters. Where direct billing is available, we coordinate with the hospital on your behalf; otherwise, patients pay the hospital directly and claim reimbursement from their insurer with our documentation support.',
                       },
                     },
                     {

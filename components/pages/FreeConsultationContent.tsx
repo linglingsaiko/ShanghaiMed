@@ -46,9 +46,9 @@ export default function FreeConsultationContent() {
   ]
   const points = tArr('freeConsultation.specialistMatchPoints')
   const pointsFallback = [
-    'Personalized specialist matching based on your medical condition and history',
-    'Access to professors and chief physicians at 14 Shanghai Grade 3A public hospitals',
-    'Direct coordination with 5 international hospitals for patients preferring international-standard care',
+    'Specialists matched to your specific medical condition — not the nearest or default option',
+    'Connect with the right professors and chief physicians across Shanghai\'s public Grade 3A hospitals based on your case',
+    'Priority access to leading international and private hospitals in Shanghai; appointments can typically be arranged on short notice',
     'Pre-consultation medical record review before you arrive in Shanghai',
   ]
 
@@ -150,14 +150,14 @@ export default function FreeConsultationContent() {
                   </span>
                   <ChevronRight className="w-5 h-5" />
                 </a>
-                <div className="flex items-center justify-between bg-white/10 text-white font-medium px-5 py-3.5 rounded-xl">
+                <div className="flex items-center justify-between bg-white/10 text-white/60 font-medium px-5 py-3.5 rounded-xl">
                   <span className="flex items-center gap-2">
                     <Phone className="w-5 h-5" />
-                    WeChat: shanghaimed
+                    WeChat: shanghaimed (link coming soon)
                   </span>
                 </div>
               </div>
-              <p className="text-white/60 text-xs mt-4">We respond within 24 hours.</p>
+              <p className="text-white/60 text-xs mt-4">We reply as quickly as possible, typically within a few hours during business hours (UTC+8).</p>
             </div>
           </div>
         </div>

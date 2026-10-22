@@ -49,7 +49,7 @@ const enFaqs: FaqItem[] = [
         </div>
         <p>
           ShanghaiMed's companion service packages are <strong>$1,000 for 3 days</strong> (Essential Care) or{' '}
-          <strong>$1,650 for 5 days</strong> (Complex Care), which cover hospital coordination, bilingual escort,
+          <strong>$1,650 for 5 days</strong> (Extended Care), which cover hospital coordination, bilingual escort,
           translation, and logistics. Hospital treatment costs are billed separately at local rates.
         </p>
       </>
@@ -177,7 +177,7 @@ const enFaqs: FaqItem[] = [
           <li>Local transportation to/from hospital</li>
           <li>AI-powered pre-consultation and cost estimation</li>
         </ul>
-        <p className="mb-2"><strong>Complex Care Package — $1,650 / 5 days</strong></p>
+        <p className="mb-2"><strong>Extended Care Package — $1,650 / 5 days</strong></p>
         <p className="mb-1">Everything in Essential Care, plus:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li>Multi-hospital coordination (2+ hospitals)</li>
@@ -278,14 +278,14 @@ const enFaqs: FaqItem[] = [
       <>
         <p className="mb-4">ShanghaiMed provides <strong>comprehensive post-treatment follow-up</strong>:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
-          <li><strong>Remote video check-ups</strong> with your treating doctor (Complex Care)</li>
+          <li><strong>Remote video check-ups</strong> with your treating doctor (Extended Care)</li>
           <li><strong>Translated medical records</strong> — full discharge summary, test results, and medication list in English</li>
           <li><strong>Medication guidance</strong> — dosage instructions, side effects, and interaction warnings</li>
           <li><strong>Recovery planning</strong> — personalized timeline and activity recommendations</li>
           <li><strong>Home-country coordination</strong> — we share your medical records with your primary care physician (with consent)</li>
           <li><strong>Ongoing support</strong> — our team remains available for questions after you return home</li>
         </ul>
-        <p>For Complex Care patients, follow-up continues for <strong>30 days</strong> after treatment.</p>
+        <p>For Extended Care patients, follow-up continues for <strong>30 days</strong> after treatment.</p>
       </>
     ),
   },
@@ -614,7 +614,7 @@ const ruFaqs: FaqItem[] = [
         </div>
         <p>
           Пакеты консьерж-сопровождения ShanghaiMed стоят <strong>$1,000 за 3 дня</strong> (Essential Care) или{' '}
-          <strong>$1,650 за 5 дней</strong> (Complex Care), они включают координацию с больницей, двуязычное сопровождение,
+          <strong>$1,650 за 5 дней</strong> (Extended Care), они включают координацию с больницей, двуязычное сопровождение,
           перевод и логистику. Стоимость лечения в больнице оплачивается отдельно по местным тарифам.
         </p>
       </>
@@ -742,7 +742,7 @@ const ruFaqs: FaqItem[] = [
           <li>Местный трансфер в/из больницы</li>
           <li>AI-навигатор: предварительная консультация и оценка стоимости</li>
         </ul>
-        <p className="mb-2"><strong>Пакет Complex Care — $1,650 / 5 дней</strong></p>
+        <p className="mb-2"><strong>Пакет Extended Care — $1,650 / 5 дней</strong></p>
         <p className="mb-1">Всё, что включено в Essential Care, плюс:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li>Координация в нескольких больницах (2+ больниц)</li>
@@ -842,14 +842,14 @@ const ruFaqs: FaqItem[] = [
       <>
         <p className="mb-4">ShanghaiMed обеспечивает <strong>комплексное сопровождение после лечения</strong>:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
-          <li><strong>Удалённые видеоконсультации</strong> с лечащим врачом (Complex Care)</li>
+          <li><strong>Удалённые видеоконсультации</strong> с лечащим врачом (Extended Care)</li>
           <li><strong>Переведённые медицинские документы</strong> — полная выписка, результаты анализов и список лекарств на английском языке</li>
           <li><strong>Консультации по приёму лекарств</strong> — инструкции по дозировке, побочные эффекты и предупреждения о взаимодействии</li>
           <li><strong>План восстановления</strong> — индивидуальный график и рекомендации по физической активности</li>
           <li><strong>Координация с врачом на родине</strong> — (с вашего согласия) мы передаём медицинские документы вашему лечащему врачу</li>
           <li><strong>Постоянная поддержка</strong> — наша команда остаётся на связи для вопросов после вашего возвращения домой</li>
         </ul>
-        <p>Для пациентов пакета Complex Care последующее наблюдение продолжается в течение <strong>30 дней</strong> после лечения.</p>
+        <p>Для пациентов пакета Extended Care последующее наблюдение продолжается в течение <strong>30 дней</strong> после лечения.</p>
       </>
     ),
   },

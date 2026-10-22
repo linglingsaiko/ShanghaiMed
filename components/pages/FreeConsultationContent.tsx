@@ -5,9 +5,12 @@ import Link from 'next/link'
 import {
   CheckCircle, Shield, Lock, CreditCard,
   Stethoscope, Award, Building2, ChevronRight,
-  MessageCircle, Phone, ArrowRight, Star,
+  MessageCircle, ArrowRight, Star,
 } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
+
+const WHATSAPP_LINK = 'https://wa.me/8613818274110'
+const WECHAT_LINK = 'https://work.weixin.qq.com/ca/cawcde1431152cb927'
 
 // Static hospital lists (used for visual display; full network described in copy)
 const publicHospitals = [
@@ -36,7 +39,10 @@ const privateHospitals = [
 ]
 
 export default function FreeConsultationContent() {
-  const { t, tArr, localePath } = useLanguage()
+  const { t, tArr, localePath, language } = useLanguage()
+  const isJapanese = language === 'ja'
+  const primaryLink = isJapanese ? 'https://line.me/ti/p/cD_Ed4GHBM' : WHATSAPP_LINK
+  const primaryLabel = isJapanese ? 'LINE' : 'WhatsApp'
 
   const badges = tArr('freeConsultation.badges')
   const badgeFallback = [
@@ -75,7 +81,7 @@ export default function FreeConsultationContent() {
             {t('freeConsultation.subtitle')}
           </p>
           <a
-            href="https://wa.me/message/VUS2JQZ7E52ZH1"
+            href={primaryLink}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1fb855] text-white font-semibold px-8 py-4 rounded-full shadow-lg transition-all hover:shadow-xl hover:-translate-y-0.5"
@@ -139,23 +145,29 @@ export default function FreeConsultationContent() {
               <p className="text-white/85 text-sm mb-6">{t('freeConsultation.ctaDesc')}</p>
               <div className="space-y-3">
                 <a
-                  href="https://wa.me/message/VUS2JQZ7E52ZH1"
+                  href={primaryLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-between bg-white text-primary font-semibold px-5 py-3.5 rounded-xl hover:bg-accent hover:text-primary transition-colors"
                 >
                   <span className="flex items-center gap-2">
                     <MessageCircle className="w-5 h-5" />
-                    WhatsApp
+                    {primaryLabel}
                   </span>
                   <ChevronRight className="w-5 h-5" />
                 </a>
-                <div className="flex items-center justify-between bg-white/10 text-white/60 font-medium px-5 py-3.5 rounded-xl">
+                <a
+                  href={WECHAT_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between bg-white/15 text-white font-medium px-5 py-3.5 rounded-xl hover:bg-white/25 transition-colors"
+                >
                   <span className="flex items-center gap-2">
-                    <Phone className="w-5 h-5" />
-                    WeChat: shanghaimed (link coming soon)
+                    <MessageCircle className="w-5 h-5" />
+                    WeChat (企业微信)
                   </span>
-                </div>
+                  <ChevronRight className="w-5 h-5" />
+                </a>
               </div>
               <p className="text-white/60 text-xs mt-4">We reply as quickly as possible, typically within a few hours during business hours (UTC+8).</p>
             </div>
@@ -230,7 +242,7 @@ export default function FreeConsultationContent() {
           </h2>
           <p className="text-gray-600 mb-8">{t('freeConsultation.ctaDesc')}</p>
           <a
-            href="https://wa.me/message/VUS2JQZ7E52ZH1"
+            href={primaryLink}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1fb855] text-white font-semibold px-8 py-4 rounded-full shadow-lg transition-all"

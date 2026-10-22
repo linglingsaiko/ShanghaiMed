@@ -355,7 +355,7 @@ export const nurseCredentials = [
   { name: 'Trilingual Certification', detail: 'Fluent in Japanese, English, and Chinese' },
   { name: 'JLPT N1 Certified', detail: '日本語能力試験 N1 — Japanese-Language Proficiency Test (highest level)' },
   { name: 'Medical Interpretation', detail: 'Supports medical document translation and on-site interpretation' },
-  { name: 'International Patient Care', detail: '5+ years experience' },
+  { name: 'International Patient Care', detail: '10+ years experience' },
 ]
 
 // Trust Pillars

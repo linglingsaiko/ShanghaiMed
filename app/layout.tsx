@@ -114,7 +114,7 @@ export default function RootLayout({
                   telephone: '+86 131-6228-1901',
                   sameAs: [
                     'https://www.youtube.com/@linglingma-r9u6b',
-                    'https://wa.me/message/VUS2JQZ7E52ZH1',
+                    'https://wa.me/8613818274110',
                   ],
                   address: {
                     '@type': 'PostalAddress',
@@ -186,7 +186,7 @@ export default function RootLayout({
                         url: `${siteUrl}/free-consultation`,
                         availableChannel: {
                           '@type': 'ServiceChannel',
-                          serviceUrl: 'https://wa.me/message/VUS2JQZ7E52ZH1',
+                          serviceUrl: 'https://wa.me/8613818274110',
                         },
                         includesService: [
                           'Top specialist matching with Shanghai Grade 3A hospital professors',

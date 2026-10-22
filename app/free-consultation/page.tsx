@@ -36,7 +36,7 @@ export default function FreeConsultationPage() {
       availableChannel: {
         '@type': 'ServiceChannel',
         availableLanguage: ['English', 'Chinese', 'Japanese', 'Arabic', 'Russian', 'Mongolian'],
-        serviceUrl: 'https://wa.me/message/VUS2JQZ7E52ZH1',
+        serviceUrl: 'https://wa.me/8613818274110',
       },
     },
   }

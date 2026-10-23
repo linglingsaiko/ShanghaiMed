@@ -515,6 +515,14 @@ export default function RootLayout({
                     },
                     {
                       '@type': 'Question',
+                      name: 'What are your booking terms and cancellation policy?',
+                      acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: "A booking deposit is required to begin coordination. Deposit and cancellation terms are outlined in each client's individual service agreement before any payment is due. Cases involving medical emergencies, visa denials, or force majeure are reviewed individually.",
+                      },
+                    },
+                    {
+                      '@type': 'Question',
                       name: 'Can I bring family members or my own interpreter?',
                       acceptedAnswer: {
                         '@type': 'Answer',

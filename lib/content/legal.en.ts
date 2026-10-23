@@ -95,7 +95,7 @@ export const legalEn: Record<string, LegalDoc> = {
       },
       {
         title: '2. Acceptance of terms',
-        body: ['By accessing https://shanghaimedhealth.com (the "Website") or engaging ShanghaiMed\u2019s services, including engagement of our services, you agree to be bound by these Terms of Service and our Privacy Policy. If you do not agree, please do not use the Website or our services.'],
+        body: ['By accessing https://shanghaimedhealth.com (the "Website") or engaging ShanghaiMed\u2019s services, including payment of any deposit or coordination fee, you agree to be bound by these Terms of Service and our Privacy Policy. If you do not agree, please do not use the Website or our services.'],
       },
       {
         title: '3. Our services',
@@ -123,7 +123,7 @@ export const legalEn: Record<string, LegalDoc> = {
         title: '5. Engagement, quotes and payment',
         items: [
           'A written quote and service plan will be provided to you before any payment is due.',
-          'Specific booking terms, including any applicable deposits, are detailed in your individual service agreement.',
+          'A booking deposit is required to secure appointments and begin coordination. Specific terms, including deposit amounts and applicable conditions, are detailed in your individual service agreement.',
           'Coordination fees may be paid by the card payment links or international bank transfer methods we provide. Hospital and clinical fees are paid directly to the treating hospital and are never collected or held by ShanghaiMed.',
           'Invoices are issued by Shanghai Keling Information Technology Co., Ltd. in accordance with Chinese law.',
         ],

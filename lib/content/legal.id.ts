@@ -95,7 +95,7 @@ export const legalId: Record<string, LegalDoc> = {
       },
       {
         title: '2. Penerimaan syarat',
-        body: ['Dengan mengakses https://shanghaimedhealth.com ("Situs Web") atau menggunakan layanan ShanghaiMed, termasuk pengikatan layanan kami, Anda setuju untuk terikat oleh Syarat Layanan ini serta Kebijakan Privasi kami. Jika Anda tidak setuju, mohon jangan menggunakan Situs Web atau layanan kami.'],
+        body: ['Dengan mengakses https://shanghaimedhealth.com ("Situs Web") atau menggunakan layanan ShanghaiMed, termasuk pembayaran deposit apa pun atau biaya koordinasi, Anda setuju untuk terikat oleh Syarat Layanan ini serta Kebijakan Privasi kami. Jika Anda tidak setuju, mohon jangan menggunakan Situs Web atau layanan kami.'],
       },
       {
         title: '3. Layanan kami',
@@ -123,7 +123,7 @@ export const legalId: Record<string, LegalDoc> = {
         title: '5. Pengikatan, penawaran, dan pembayaran',
         items: [
           'Penawaran tertulis dan rencana layanan akan diberikan kepada Anda sebelum pembayaran apa pun jatuh tempo.',
-          'Ketentuan pemesanan spesifik, termasuk deposit apa pun yang berlaku, dirinci dalam perjanjian layanan individu Anda.',
+          'Deposit pemesanan diperlukan untuk mengamankan janji temu dan memulai koordinasi. Ketentuan spesifik, termasuk jumlah deposit dan ketentuan yang berlaku, dirinci dalam perjanjian layanan individu Anda.',
           'Biaya koordinasi dapat dibayar melalui tautan pembayaran kartu atau metode transfer bank internasional yang kami sediakan. Biaya rumah sakit dan klinis dibayarkan langsung ke rumah sakit yang merawat dan tidak pernah dikumpulkan atau disimpan oleh ShanghaiMed.',
           'Faktur diterbitkan oleh Shanghai Keling Information Technology Co., Ltd. sesuai dengan hukum Tiongkok.',
         ],

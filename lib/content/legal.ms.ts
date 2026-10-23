@@ -95,7 +95,7 @@ export const legalMs: Record<string, LegalDoc> = {
       },
       {
         title: '2. Penerimaan syarat',
-        body: ['Dengan mengakses https://shanghaimedhealth.com ("Laman Web") atau menggunakan perkhidmatan ShanghaiMed, termasuk penglibatan perkhidmatan kami, anda bersetuju untuk terikat dengan Syarat Perkhidmatan ini serta Dasar Privasi kami. Jika anda tidak bersetuju, sila jangan gunakan Laman Web atau perkhidmatan kami.'],
+        body: ['Dengan mengakses https://shanghaimedhealth.com ("Laman Web") atau menggunakan perkhidmatan ShanghaiMed, termasuk pembayaran sebarang deposit atau yuran koordinasi, anda bersetuju untuk terikat dengan Syarat Perkhidmatan ini serta Dasar Privasi kami. Jika anda tidak bersetuju, sila jangan gunakan Laman Web atau perkhidmatan kami.'],
       },
       {
         title: '3. Perkhidmatan kami',
@@ -123,7 +123,7 @@ export const legalMs: Record<string, LegalDoc> = {
         title: '5. Penglibatan, sebut harga dan pembayaran',
         items: [
           'Sebut harga bertulis dan pelan perkhidmatan akan diberikan kepada anda sebelum sebarang pembayaran perlu dibuat.',
-          'Terma tempahan khusus, termasuk sebarang deposit yang berkenaan, diperincikan dalam perjanjian perkhidmatan individu anda.',
+          'Deposit tempahan diperlukan untuk memastikan temujanji dan memulakan koordinasi. Terma khusus, termasuk jumlah deposit dan syarat-syarat yang berkenaan, diperincikan dalam perjanjian perkhidmatan individu anda.',
           'Yuran penyelarasan boleh dibayar melalui pautan pembayaran kad atau kaedah pindahan bank antarabangsa yang kami sediakan. Yuran hospital dan klinikal dibayar terus kepada hospital yang merawat dan tidak sekali-kali dikutip atau dipegang oleh ShanghaiMed.',
           'Invois dikeluarkan oleh Shanghai Keling Information Technology Co., Ltd. mengikut undang-undang China.',
         ],

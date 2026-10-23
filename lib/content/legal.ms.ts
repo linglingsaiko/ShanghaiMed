@@ -63,7 +63,7 @@ export const legalMs: Record<string, LegalDoc> = {
       },
       {
         title: '7. Hak anda',
-        body: ['Anda boleh meminta akses kepada, pembetulan, atau pemadaman maklumat peribadi anda (tertakluk kepada kewajipan pengekalan undang-undang), dan anda boleh menarik balik persetujuan terhadap pemprosesan pada bila-bila masa dengan menghubungi kami. Kami akan bertindak balas dalam tempoh yang munasabah seperti yang dikehendaki oleh undang-undang.'],
+        body: ['anda boleh meminta akses kepada, pembetulan, atau pemadaman maklumat peribadi anda (tertakluk kepada kewajipan pengekalan undang-undang), dan anda boleh menarik balik persetujuan terhadap pemprosesan pada bila-bila masa dengan menghubungi kami. Kami akan bertindak balas dalam tempoh yang munasabah seperti yang dikehendaki oleh undang-undang.'],
       },
       {
         title: '8. Keselamatan',
@@ -71,7 +71,7 @@ export const legalMs: Record<string, LegalDoc> = {
       },
       {
         title: '9. Kuki',
-        body: ['Kami menggunakan kuki penting untuk memastikan laman web berfungsi dan mungkin menggunakan kuki analitik terhad untuk memahami cara pelawat menggunakan laman tersebut. Anda boleh mengawal kuki melalui tetapan pelayar anda; melumpuhkan kuki penting boleh menjejaskan fungsi laman web.'],
+        body: ['Kami menggunakan kuki penting untuk memastikan laman web berfungsi dan mungkin menggunakan kuki analitik terhad untuk memahami cara pelawat menggunakan laman tersebut. anda boleh mengawal kuki melalui tetapan pelayar anda; melumpuhkan kuki penting boleh menjejaskan fungsi laman web.'],
       },
       {
         title: '10. Kanak-kanak',
@@ -144,7 +144,7 @@ export const legalMs: Record<string, LegalDoc> = {
       },
       {
         title: '8. Pembatalan dan penjadualan semula',
-        body: ['Terma pembatalan dan penjadualan semula dinyatakan dalam Dasar Bayaran Balik kami. Anda harus mengesahkan tempahan perjalanan hanya selepas temujanji hospital disahkan secara bertulis oleh ShanghaiMed.'],
+        body: ['Terma pembatalan dan penjadualan semula dinyatakan dalam Dasar Bayaran Balik kami. anda harus mengesahkan tempahan perjalanan hanya selepas temujanji hospital disahkan secara bertulis oleh ShanghaiMed.'],
       },
       {
         title: '9. Harta intelek',
@@ -166,11 +166,11 @@ export const legalMs: Record<string, LegalDoc> = {
       },
       {
         title: '12. Tanggung rugi',
-        body: ['Anda bersetuju untuk menanggung rugi ShanghaiMed terhadap kerugian, tuntutan atau liabiliti yang timbul daripada pelanggaran anda sendiri terhadap Syarat ini, pemberian maklumat palsu atau mengelirukan oleh anda, atau keputusan anda mengenai rawatan klinikal atau perjalanan.'],
+        body: ['anda bersetuju untuk menanggung rugi ShanghaiMed terhadap kerugian, tuntutan atau liabiliti yang timbul daripada pelanggaran anda sendiri terhadap Syarat ini, pemberian maklumat palsu atau mengelirukan oleh anda, atau keputusan anda mengenai rawatan klinikal atau perjalanan.'],
       },
       {
         title: '13. Undang-undang dan bahasa yang mengawal',
-        body: ['Syarat ini ditadbir oleh undang-undang Republik Rakyat China. Versi Bahasa Inggeris ini disediakan untuk kemudahan anda; sekiranya berlaku sebarang ketidakselarasan, versi bahasa Cina akan diguna pakai setakat yang dikehendaki oleh undang-undang yang terpakai.'],
+        body: ['Syarat ini ditadbir oleh undang-undang Republik Rakyat China. Versi Bahasa Inggeris ini disediakan untuk kemudahan anda; sekiranya berlaku sebarang ketidakselarasan, versi bahasa China akan diguna pakai setakat yang dikehendaki oleh undang-undang yang terpakai.'],
       },
       {
         title: '14. Penyelesaian pertikaian',

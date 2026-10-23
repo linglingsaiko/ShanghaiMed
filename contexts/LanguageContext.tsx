@@ -3521,18 +3521,18 @@ export const translations: Record<Language, any> = {
             }
           ],
           valueTitle: 'Mengapa Pesakit Mencari Nilai di Shanghai',
-          valueItems: ['Akses ke hospital dan pakar terkemuka', 'Harga yang telus sebelum rawatan', 'Akses lebih pantas ke konsultasi, pengimejan dan rawatan', 'Kos kesihatan out-of-pocket yang lebih rendah', 'Sokongan bilingual Inggeris–Cina yang diperibadikan sepanjang perjalanan pesakit'],
+          valueItems: ['Akses ke hospital dan pakar terkemuka', 'Harga yang telus sebelum rawatan', 'Akses lebih pantas ke konsultasi, pengimejan dan rawatan', 'Kos kesihatan out-of-pocket yang lebih rendah', 'Sokongan bilingual Inggeris–China yang diperibadikan sepanjang perjalanan pesakit'],
           notesTitle: 'Nota Penting',
           notes: ['Harga diberikan untuk tujuan ilustrasi sahaja dan tidak merupakan sebut harga.', 'Yuran perubatan sebenar ditentukan oleh hospital, doktor dan pelan rawatan.', 'Harga A.S. menggambarkan kos self-pay tipikal dan mungkin berbeza secara signifikan berdasarkan perlindungan insurans dan lokasi.', 'Kadar pertukaran adalah untuk rujukan sahaja dan mungkin berubah-ubah.', 'Rawatan kompleks, pembedahan, penjagaan kanser dan perkhidmatan pesakit dalam memerlukan sebut harga individu selepas semakan perubatan.']
         }
       },
       processFlow: {
-        badge: 'Perjalanan Anda',
+        badge: 'Perjalanan anda',
         title: 'Dari Pertanyaan hingga Penjagaan',
         subtitle: 'Garis masa lengkap pengalaman pelancongan perubatan anda di Shanghai, dengan sokongan profesional di setiap langkah.',
         phases: [
           {
-            phase: 'Sebelum Ketibaan Anda',
+            phase: 'Sebelum Ketibaan anda',
             steps: [
               {
                 title: 'Pertanyaan Dalam Talian',
@@ -3553,11 +3553,11 @@ export const translations: Record<Language, any> = {
             ]
           },
           {
-            phase: 'Semasa Lawatan Anda',
+            phase: 'Semasa Lawatan anda',
             steps: [
               {
                 title: 'Jemputan Lapangan Terbang',
-                description: 'Jururawat bilingual Inggeris–Cina menemui anda'
+                description: 'Jururawat bilingual Inggeris–China menemui anda'
               },
               {
                 title: 'Lawatan Hospital',
@@ -3574,7 +3574,7 @@ export const translations: Record<Language, any> = {
             ]
           },
           {
-            phase: 'Selepas Lawatan Anda',
+            phase: 'Selepas Lawatan anda',
             steps: [
               {
                 title: 'Discaj & Terjemahan',
@@ -3589,7 +3589,7 @@ export const translations: Record<Language, any> = {
         ]
       },
       careTeam: {
-        title: 'Jururawat Berdaftar Bilingual Inggeris–Cina',
+        title: 'Jururawat Berdaftar Bilingual Inggeris–China',
         subtitle: 'Rakan penjagaan kesihatan yang berdedikasi di setiap peringkat perjalanan perubatan anda di Shanghai.',
         badge: 'Pasukan Penjagaan',
         expertTeam: 'Pasukan Penjagaan Pakar',
@@ -3598,7 +3598,7 @@ export const translations: Record<Language, any> = {
         ispnIssuer: 'Diperakui oleh CGFNS (USA)',
         credentialsTitle: 'Kelayakan Jururawat',
         servicesTitle: 'Perkhidmatan Kejururawatan Kami',
-        nursingCare: 'Penjagaan Kejururawatan Bilingual Inggeris–Cina',
+        nursingCare: 'Penjagaan Kejururawatan Bilingual Inggeris–China',
         appointmentCoordination: 'Koordinasi Temujanji',
         translationServices: 'Perkhidmatan Terjemahan',
         transportation: 'Pengaturan Pengangkutan',
@@ -3636,8 +3636,8 @@ export const translations: Record<Language, any> = {
             detail: 'Disahkan oleh Shanghai Health Commission'
           },
           {
-            name: 'Pensijilan Dwibahasa (Inggeris–Cina)',
-            detail: 'Fasih berbahasa Inggeris dan Cina'
+            name: 'Pensijilan Dwibahasa (Inggeris–China)',
+            detail: 'Fasih berbahasa Inggeris dan China'
           },
           {
             name: 'JLPT N1 Certified',
@@ -3655,11 +3655,11 @@ export const translations: Record<Language, any> = {
       },
       hero: {
         badge1: 'Hospital Insurans Antarabangsa',
-        badge2: 'Jururawat Berdaftar Bilingual Inggeris–Cina',
+        badge2: 'Jururawat Berdaftar Bilingual Inggeris–China',
         badge3: 'Sokongan AI + Manusia 24/7',
         title: 'Penjagaan Kesihatan di Shanghai',
-        titleHighlight: 'Direka Untuk Anda',
-        subtitle: 'Berhubung dengan hospital terkemuka China, jururawat bilingual Inggeris–Cina, dan sokongan AI 24/7 — semuanya melalui satu platform.',
+        titleHighlight: 'Direka Untuk anda',
+        subtitle: 'Berhubung dengan hospital terkemuka China, jururawat bilingual Inggeris–China, dan sokongan AI 24/7 — semuanya melalui satu platform.',
         cta: 'Tempah Konsultasi Percuma'
       },
       testimonials: {
@@ -3706,7 +3706,7 @@ export const translations: Record<Language, any> = {
         step3Title: 'Ketibaan di Shanghai',
         step3Desc: 'Sokongan lengkap termasuk pemindahan lapangan terbang dan tempahan hotel.',
         step4Title: 'Rawatan & Pemulihan',
-        step4Desc: 'Integrasi rawatan pakar yang lancar, sokongan bilingual Inggeris–Cina dan susulan selepas penjagaan.',
+        step4Desc: 'Integrasi rawatan pakar yang lancar, sokongan bilingual Inggeris–China dan susulan selepas penjagaan.',
         steps: [
           {
             title: 'Hantar Pertanyaan',
@@ -3722,7 +3722,7 @@ export const translations: Record<Language, any> = {
           },
           {
             title: 'Terima Rawatan',
-            description: 'Jururawat bilingual Inggeris–Cina anda memberikan sokongan secara peribadi sepanjang konsultasi, pemeriksaan dan rawatan.'
+            description: 'Jururawat bilingual Inggeris–China anda memberikan sokongan secara peribadi sepanjang konsultasi, pemeriksaan dan rawatan.'
           },
           {
             title: 'Penjagaan Susulan',
@@ -3732,10 +3732,10 @@ export const translations: Record<Language, any> = {
       },
       trust: {
         badge: 'Mengapa Memilih Kami',
-        title: 'Rakan Kongsi Pelancongan Perubatan Anda Yang Boleh Dipercayai',
+        title: 'Rakan Kongsi Pelancongan Perubatan anda Yang Boleh Dipercayai',
         subtitle: 'Kami menyediakan perkhidmatan pelancongan perubatan yang profesional, telus dan boleh dipercayai di Shanghai. Inilah yang membezakan kami.',
         ctaText: 'Bersedia untuk merasai perkhidmatan pelancongan perubatan yang profesional?',
-        ctaButton: 'Mulakan Pelancongan Perubatan Anda'
+        ctaButton: 'Mulakan Pelancongan Perubatan anda'
       },
       pricing: {
         badge: 'Harga',
@@ -3759,9 +3759,9 @@ export const translations: Record<Language, any> = {
           name: 'Pengiring Hospital di Tapak',
           subtitle: 'Untuk pesakit yang sudah menempah doktor sendiri.',
           scope: 'Ditempah dan dibayar mengikut jam, tersedia secara berasingan <em style="font-style:italic;color:#7b8c99">atau</em> sebagai tambahan kepada mana-mana pakej.',
-          items: ['Rakan pengiring di tapak di hospital', 'Interpretasi perubatan di tapak bilingual Inggeris–Cina · bahasa lain caj tambahan', 'Bimbingan segera (giliran, pembayaran, pengambilan farmasi)', 'Mesej daftar masuk hari yang sama selepas lawatan'],
+          items: ['Rakan pengiring di tapak di hospital', 'Interpretasi perubatan di tapak bilingual Inggeris–China · bahasa lain caj tambahan', 'Bimbingan segera (giliran, pembayaran, pengambilan farmasi)', 'Mesej daftar masuk hari yang sama selepas lawatan'],
           itemsLabel: 'Apa yang disertakan — 4 perkhidmatan',
-          callout: '<strong>Had skop:</strong> Pengiring setiap jam hanyalah pendamping di tapak dan interpretasi Inggeris–Cina sahaja. Ia <strong>tidak</strong> termasuk penjadualan temujanji, pemadanan doktor, jemputan lapangan terbang, terjemahan laporan, sokongan visa, pra-kebenaran insurans, interpretasi dalam bahasa selain bahasa Inggeris atau susulan selepas rawatan.',
+          callout: '<strong>Had skop:</strong> Pengiring setiap jam hanyalah pendamping di tapak dan interpretasi Inggeris–China sahaja. Ia <strong>tidak</strong> termasuk penjadualan temujanji, pemadanan doktor, jemputan lapangan terbang, terjemahan laporan, sokongan visa, pra-kebenaran insurans, interpretasi dalam bahasa selain bahasa Inggeris atau susulan selepas rawatan.',
           cta: 'Tempah pengiring setiap jam'
         },
         checkupCard: {
@@ -3780,21 +3780,21 @@ export const translations: Record<Language, any> = {
             unit: 'setiap orang · 1 hari (waktu siang)',
             description: 'Untuk program pemeriksaan kesihatan 1 hari sahaja.',
             itemsLabel: 'Apa yang disertakan — 13 perkhidmatan',
-            allItems: ['Jururawat di tapak sehari penuh (waktu siang)', 'Bantuan koordinasi hotel', 'Terjemahan & penerangan laporan pemeriksaan kesihatan', 'Pengambilan & penghantaran ubat', 'Bantuan pengangkutan tempatan & pembayaran', 'Sokongan surat jemputan visa', 'Sokongan insurans', 'Jemputan & hantaran lapangan terbang · sedan standard', 'Interpretasi perubatan di tapak bilingual Inggeris–Cina', 'Penjadualan temujanji doktor', 'Pemadanan hospital & pakar', 'Sokongan WhatsApp khusus', 'Susulan jauh 30 hari selepas pemeriksaan']
+            allItems: ['Jururawat di tapak sehari penuh (waktu siang)', 'Bantuan koordinasi hotel', 'Terjemahan & penerangan laporan pemeriksaan kesihatan', 'Pengambilan & penghantaran ubat', 'Bantuan pengangkutan tempatan & pembayaran', 'Sokongan surat jemputan visa', 'Sokongan insurans', 'Jemputan & hantaran lapangan terbang · sedan standard', 'Interpretasi perubatan di tapak bilingual Inggeris–China', 'Penjadualan temujanji doktor', 'Pemadanan hospital & pakar', 'Sokongan WhatsApp khusus', 'Susulan jauh 30 hari selepas pemeriksaan']
           },
           {
             name: 'Essential Care Concierge',
             unit: 'setiap orang · 3 hari (waktu siang)',
             description: 'Diperlukan untuk semua konsultasi pakar dan keadaan perubatan.',
             itemsLabel: 'Apa yang disertakan — 13 perkhidmatan',
-            allItems: ['Jururawat di tapak selama 3 hari (waktu siang)', 'Semakan rekod perubatan pra-lawatan', 'Pemadanan doktor & pakar', 'Penjadualan temujanji hospital', 'Jemputan & hantaran lapangan terbang · sedan standard', 'Koordinasi hotel & pengangkutan tempatan', 'Interpretasi perubatan di tapak bilingual Inggeris–Cina', 'Navigasi di tapak & bantuan pembayaran', 'Terjemahan laporan perubatan', 'Pengambilan & penghantaran ubat', 'Sokongan WhatsApp khusus sepanjang lawatan', 'Sokongan insurans · pra-kebenaran', 'Susulan jauh 30 hari selepas rawatan']
+            allItems: ['Jururawat di tapak selama 3 hari (waktu siang)', 'Semakan rekod perubatan pra-lawatan', 'Pemadanan doktor & pakar', 'Penjadualan temujanji hospital', 'Jemputan & hantaran lapangan terbang · sedan standard', 'Koordinasi hotel & pengangkutan tempatan', 'Interpretasi perubatan di tapak bilingual Inggeris–China', 'Navigasi di tapak & bantuan pembayaran', 'Terjemahan laporan perubatan', 'Pengambilan & penghantaran ubat', 'Sokongan WhatsApp khusus sepanjang lawatan', 'Sokongan insurans · pra-kebenaran', 'Susulan jauh 30 hari selepas rawatan']
           },
           {
             name: 'Surgery & Extended Care',
             unit: 'setiap orang · 5 hari (waktu siang)',
             description: 'Diperlukan untuk pembedahan dan prosedur pesakit dalam.',
             itemsLabel: 'Apa yang disertakan — 16 perkhidmatan',
-            allItems: ['Jururawat di tapak selama 5 hari (waktu siang)', 'Koordinasi pra-kemasukan', 'Pendampingan hari pembedahan', 'Lawatan semasa pesakit dalam', 'Komunikasi keluarga & kemas kini kemajuan', 'Semakan & taklimat rekod pra-pembedahan', 'Bimbingan pemilihan doktor & hospital', 'Jemputan & hantaran lapangan terbang · sedan standard', 'Sokongan hotel & penginapan lanjutan', 'Interpretasi perubatan di tapak bilingual Inggeris–Cina', 'Navigasi di tapak & bantuan pembayaran/bil', 'Terjemahan laporan pembedahan', 'Pengambilan & penghantaran ubat', 'Sokongan WhatsApp khusus', 'Koordinasi insurans & deposit pembedahan', 'Susulan 60 hari selepas rawatan']
+            allItems: ['Jururawat di tapak selama 5 hari (waktu siang)', 'Koordinasi pra-kemasukan', 'Pendampingan hari pembedahan', 'Lawatan semasa pesakit dalam', 'Komunikasi keluarga & kemas kini kemajuan', 'Semakan & taklimat rekod pra-pembedahan', 'Bimbingan pemilihan doktor & hospital', 'Jemputan & hantaran lapangan terbang · sedan standard', 'Sokongan hotel & penginapan lanjutan', 'Interpretasi perubatan di tapak bilingual Inggeris–China', 'Navigasi di tapak & bantuan pembayaran/bil', 'Terjemahan laporan pembedahan', 'Pengambilan & penghantaran ubat', 'Sokongan WhatsApp khusus', 'Koordinasi insurans & deposit pembedahan', 'Susulan 60 hari selepas rawatan']
           }
         ],
         faqTitle: 'Soalan Lazim Harga & Perkhidmatan',
@@ -3808,11 +3808,11 @@ export const translations: Record<Language, any> = {
           },
           {
             q: 'Bolehkah saya menempah pengiring setiap jam tanpa membeli pakej?',
-            a: 'Ya. <strong>Pengiring di tapak pada kadar $50/jam</strong> direka sebagai perkhidmatan kendiri untuk pesakit yang telah menempah doktor mereka sendiri dan hanya memerlukan sokongan pendamping di hospital. Ia juga tersedia sebagai tambahan untuk melanjutkan jam pendamping melebihi hari yang termasuk dalam pakej concierge. Nota: pengiring setiap jam meliputi kehadiran di tapak dan interpretasi Inggeris–Cina sahaja — penjadualan, pemadanan doktor, pemindahan lapangan terbang dan koordinasi insurans memerlukan pakej concierge. Sebagai tambahan kepada pakej concierge, jam pendamping tambahan melebihi hari yang termasuk juga dibilkan pada $50/jam.'
+            a: 'Ya. <strong>Pengiring di tapak pada kadar $50/jam</strong> direka sebagai perkhidmatan kendiri untuk pesakit yang telah menempah doktor mereka sendiri dan hanya memerlukan sokongan pendamping di hospital. Ia juga tersedia sebagai tambahan untuk melanjutkan jam pendamping melebihi hari yang termasuk dalam pakej concierge. Nota: pengiring setiap jam meliputi kehadiran di tapak dan interpretasi Inggeris–China sahaja — penjadualan, pemadanan doktor, pemindahan lapangan terbang dan koordinasi insurans memerlukan pakej concierge. Sebagai tambahan kepada pakej concierge, jam pendamping tambahan melebihi hari yang termasuk juga dibilkan pada $50/jam.'
           },
           {
             q: 'Apakah yang termasuk dalam pakej Essential $1,000?',
-            a: '<strong>Essential Care Concierge meliputi 3 hari pendamping siang penuh</strong>: semakan rekod perubatan pra-lawatan, pemadanan doktor, penjadualan pelbagai temujanji, interpretasi di tapak bilingual Inggeris–Cina di setiap lawatan, navigasi hospital, jemputan &amp; hantaran lapangan terbang dengan sedan standard (kenderaan khas dikenakan caj tambahan), terjemahan laporan perubatan, pengambilan &amp; penghantaran ubat, sokongan WhatsApp khusus sepanjang penginapan anda, sokongan insurans termasuk semakan manfaat polisi dan surat pra-kebenaran, serta susulan jauh 30 hari selepas rawatan. Pakej ini diperlukan untuk semua konsultasi pakar dan sebarang keadaan perubatan.'
+            a: '<strong>Essential Care Concierge meliputi 3 hari pendamping siang penuh</strong>: semakan rekod perubatan pra-lawatan, pemadanan doktor, penjadualan pelbagai temujanji, interpretasi di tapak bilingual Inggeris–China di setiap lawatan, navigasi hospital, jemputan &amp; hantaran lapangan terbang dengan sedan standard (kenderaan khas dikenakan caj tambahan), terjemahan laporan perubatan, pengambilan &amp; penghantaran ubat, sokongan WhatsApp khusus sepanjang penginapan anda, sokongan insurans termasuk semakan manfaat polisi dan surat pra-kebenaran, serta susulan jauh 30 hari selepas rawatan. Pakej ini diperlukan untuk semua konsultasi pakar dan sebarang keadaan perubatan.'
           },
           {
             q: 'Adakah anda mengendalikan insurans kesihatan?',
@@ -3827,8 +3827,8 @@ export const translations: Record<Language, any> = {
             a: 'Dalam kecemasan perubatan, <strong>hubungi 120 dengan segera</strong> dan pergi ke hospital terdekat — pakej concierge tidak termasuk perkhidmatan perubatan kecemasan. Sebaik sahaja anda berada di hospital, kami menawarkan <strong>koordinasi kecemasan di tapak 24/7</strong> dengan bayaran tambahan: <strong>Panggilan kecemasan $300 (tersedia 24/7, termasuk 4 jam pertama)</strong>, kemudian <strong>$100/jam</strong> untuk sokongan pendamping di tapak tambahan. Ini meliputi penghantaran segera, koordinasi jururawat kanan, komunikasi keluarga dan navigasi hospital semasa kecemasan. Hubungi Sara di WhatsApp secepat mungkin selepas menghubungi 120.'
           },
           {
-            q: 'Apakah bahasa yang disertakan? Adakah anda menyokong bahasa selain bahasa Inggeris dan Cina?',
-            a: 'Semua pakej concierge termasuk <strong>interpretasi perubatan di tapak bilingual Inggeris–Cina</strong>. Interpretasi Jepun–Cina disertakan untuk pelanggan berbahasa Jepun yang menempah melalui halaman Jepun. Jika anda memerlukan sokongan dalam <strong>bahasa lain</strong> (Arab, Rusia, Mongolia, Korea, Perancis, Sepanyol dsb.), jurubahasa khusus boleh diaturkan dengan kos tambahan — kadar adalah berdasarkan harga pasaran tempatan Shanghai untuk bahasa tersebut. Sila nyatakan keperluan bahasa anda apabila berbual dengan Sara supaya kami boleh memberikan sebut harga yang tepat.'
+            q: 'Apakah bahasa yang disertakan? Adakah anda menyokong bahasa selain bahasa Inggeris dan China?',
+            a: 'Semua pakej concierge termasuk <strong>interpretasi perubatan di tapak bilingual Inggeris–China</strong>. Interpretasi Jepun–China disertakan untuk pelanggan berbahasa Jepun yang menempah melalui halaman Jepun. Jika anda memerlukan sokongan dalam <strong>bahasa lain</strong> (Arab, Rusia, Mongolia, Korea, Perancis, Sepanyol dsb.), jurubahasa khusus boleh diaturkan dengan kos tambahan — kadar adalah berdasarkan harga pasaran tempatan Shanghai untuk bahasa tersebut. Sila nyatakan keperluan bahasa anda apabila berbual dengan Sara supaya kami boleh memberikan sebut harga yang tepat.'
           },
           {
             q: 'Apakah polisi bayaran balik dan pembatalan anda?',
@@ -3845,7 +3845,7 @@ export const translations: Record<Language, any> = {
       },
       freeConsultation: {
         badge: 'Konsultasi Percuma',
-        title: 'Tempah Konsultasi Perubatan Percuma Anda',
+        title: 'Tempah Konsultasi Perubatan Percuma anda',
         subtitle: 'Bercakap dengan pasukan perubatan kami sebelum anda berangkat — kami akan memadankan anda dengan pakar yang sesuai, merancang perjalanan perubatan anda mengikut keperluan anda dan memberikan anggaran kos yang jelas di awal.',
         specialistMatchTitle: 'Pemadanan Pakar Terbaik',
         specialistMatchDesc: 'Kami menghubungkan anda dengan profesor dan ketua doktor terkemuka di hospital Grade 3A utama Shanghai — memadankan keadaan khusus anda dengan pakar yang sesuai untuk kes anda.',
@@ -3864,7 +3864,7 @@ export const translations: Record<Language, any> = {
             desc: 'Maklumat perubatan anda kekal peribadi dan tidak akan dikongsi tanpa kebenaran'
           }
         ],
-        ctaTitle: 'Mulakan Konsultasi Percuma Anda',
+        ctaTitle: 'Mulakan Konsultasi Percuma anda',
         ctaDesc: 'Hubungi kami di WhatsApp — pasukan perubatan kami akan membalas secepat mungkin, biasanya dalam beberapa jam pada waktu perniagaan.',
         ctaButton: 'Sembang di WhatsApp',
         hospitalNetworkTitle: 'Rangkaian Hospital Kami',
@@ -3929,7 +3929,7 @@ export const translations: Record<Language, any> = {
           'health-checkups': 'Pemeriksaan Kesihatan',
           'preventive-healthcare': 'Penjagaan Kesihatan Pencegahan',
           'medical-tourism': 'Pelancongan Perubatan',
-          'traditional-chinese-medicine': 'Perubatan Tradisional Cina',
+          'traditional-chinese-medicine': 'Perubatan Tradisional China',
           'shanghai-hospitals': 'Hospital Shanghai',
           'expat-healthcare': 'Penjagaan Kesihatan Ekspatriat',
           'patient-stories': 'Cerita Pesakit',
@@ -3950,7 +3950,7 @@ export const translations: Record<Language, any> = {
             answer: 'Ya, kami menyediakan bantuan visa untuk rawatan perubatan. Bagi negara yang layak, kami juga boleh membantu mengaturkan kemasukan transit tanpa visa 240 jam ke Shanghai.'
           },
           {
-            question: 'Bagaimana jika saya tidak bertutur bahasa Cina?',
+            question: 'Bagaimana jika saya tidak bertutur bahasa China?',
             answer: 'Semua penyelaras jururawat kami menyediakan terjemahan masa nyata semasa konsultasi perubatan. Laporan perubatan boleh disediakan dalam bahasa Inggeris atau bahasa pilihan anda.'
           },
           {
@@ -3970,9 +3970,9 @@ export const translations: Record<Language, any> = {
         whatsappDesc: 'Sembang terus dengan penyelaras jururawat kami. Dapatkan jawapan peribadi dalam bahasa Inggeris, Jepun atau Arab.'
       },
       contact: {
-        title: 'Mulakan Pelancongan Perubatan Anda Hari Ini',
+        title: 'Mulakan Pelancongan Perubatan anda Hari Ini',
         subtitle: 'Dapatkan konsultasi percuma daripada pasukan perubatan kami. AI Navigator kami bertindak balas serta-merta. Penyelaras manusia membuat susulan dalam masa 24 jam.',
-        cta: 'Mulakan Pelancongan Perubatan Anda Hari Ini',
+        cta: 'Mulakan Pelancongan Perubatan anda Hari Ini',
         badge: 'Hubungi',
         whatsappTitle: 'WhatsApp',
         whatsappDesc: 'AI Navigator 24/7 + Respons Manusia 24 jam',
@@ -4023,7 +4023,7 @@ export const translations: Record<Language, any> = {
           plastic: 'Pembedahan Plastik',
           other: 'Lain-lain'
         },
-        messageLabel: 'Mesej Anda',
+        messageLabel: 'Mesej anda',
         messagePlaceholder: 'Sila huraikan keadaan perubatan atau pertanyaan anda...',
         submit: 'Dapatkan Konsultasi Percuma',
         submitting: 'Menghantar...',
@@ -4034,7 +4034,7 @@ export const translations: Record<Language, any> = {
         alertFail: 'Gagal menghantar mesej. Sila cuba lagi atau hubungi kami melalui WhatsApp.'
       },
       footer: {
-        tagline: 'Menghubungkan pesakit antarabangsa dengan institusi perubatan bertaraf dunia Shanghai dan profesional penjagaan kesihatan bilingual Inggeris–Cina.',
+        tagline: 'Menghubungkan pesakit antarabangsa dengan institusi perubatan bertaraf dunia Shanghai dan profesional penjagaan kesihatan bilingual Inggeris–China.',
         columns: [
           {
             title: 'Mengenai',
@@ -4077,7 +4077,7 @@ export const translations: Record<Language, any> = {
         howItWorksTitle: 'Bagaimana Ia Berfungsi',
         howItWorksSubtitle: 'Proses kami yang diperkemas memudahkan akses kepada penjagaan perubatan bertaraf dunia di Shanghai.',
         faqTitle: 'Soalan Lazim',
-        faqSubtitle: 'Semua yang anda perlu tahu tentang menerima penjagaan perubatan di Shanghai — kos, kualiti hospital, visa, insurans dan sokongan bilingual Inggeris–Cina.'
+        faqSubtitle: 'Semua yang anda perlu tahu tentang menerima penjagaan perubatan di Shanghai — kos, kualiti hospital, visa, insurans dan sokongan bilingual Inggeris–China.'
       },
       medicalDisclaimer: {
         title: 'Penafian Perubatan',
@@ -4156,7 +4156,7 @@ export const translations: Record<Language, any> = {
           insuranceStatus: 'Insurans Antarabangsa'
         },
         longhua: {
-          description: 'Hospital Perubatan Tradisional Cina terulung. Perintis rasmi pelancongan perubatan TCM. Akupunktur, terapi herba dan pemulihan TCM.',
+          description: 'Hospital Perubatan Tradisional China terulung. Perintis rasmi pelancongan perubatan TCM. Akupunktur, terapi herba dan pemulihan TCM.',
           specialties: ['Onkologi TCM', 'Ortopedik TCM', 'Pembedahan TCM'],
           internationalFeatures: 'Hospital perintis rasmi pelancongan perubatan TCM, 18 penyedia insurans diterima',
           insuranceStatus: 'Insurans Antarabangsa'

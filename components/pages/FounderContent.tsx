@@ -165,7 +165,7 @@ const credentialsData: Record<'en' | 'ja' | 'ar' | 'ru' | 'mn' | 'ms' | 'id', Cr
     },
     {
       title: 'Perawat Terdaftar (RN), Tiongkok',
-      detail: 'Dilisensikan oleh Komisi Kesehatan Kota Shanghai',
+      detail: 'Berlisensi dari Komisi Kesehatan Kota Shanghai',
       category: 'Lisensi Keperawatan',
     },
   ],
@@ -269,7 +269,7 @@ const experienceData: Record<'en' | 'ja' | 'ar' | 'ru' | 'mn' | 'ms' | 'id', Exp
     },
     {
       area: 'Navigasi Hospital & Terjemahan Perubatan',
-      detail: 'Menyediakan tafsiran perubatan masa nyata dalam Bahasa Inggeris, Bahasa Jepun, dan Bahasa Mandarin untuk pesakit antarabangsa di hospital Grade 3A (三甲) Shanghai. Bahasa tambahan disokong melalui penterjemah profesional yang telah ditapis.',
+      detail: 'Menyediakan tafsiran perubatan masa nyata dalam Bahasa Inggeris, Bahasa Jepun dan Bahasa Mandarin untuk pesakit antarabangsa di hospital Grade 3A (三甲) Shanghai. Bahasa-bahasa lain boleh diatur melalui penterjemah profesional yang telah disahkan.',
     },
     {
       area: 'Operasi Penjagaan Kesihatan Premium',
@@ -287,7 +287,7 @@ const experienceData: Record<'en' | 'ja' | 'ar' | 'ru' | 'mn' | 'ms' | 'id', Exp
     },
     {
       area: 'Navigasi Rumah Sakit & Penerjemahan Medis',
-      detail: 'Menyediakan penerjemahan medis waktu nyata dalam Bahasa Inggris, Bahasa Jepang, dan Bahasa Mandarin untuk pasien internasional di rumah sakit Grade 3A (三甲) Shanghai. Bahasa tambahan didukung melalui penerjemah profesional yang telah diverifikasi.',
+      detail: 'Menyediakan penerjemahan medis waktu nyata dalam Bahasa Inggris, Bahasa Jepang dan Bahasa Mandarin untuk pasien internasional di rumah sakit Grade 3A (三甲) Shanghai. Bahasa-bahasa lain dapat diatur melalui penerjemah profesional yang telah diverifikasi.',
     },
     {
       area: 'Operasional Layanan Kesehatan Premium',
@@ -457,11 +457,11 @@ const text = {
       'Jururawat berdaftar bertauliah ISPN, jururawat berdaftar kanan dan pengasas ShanghaiMed. Lebih sedekad pengalaman praktikal dalam operasi penjagaan kesihatan premium dan membimbing pesakit antarabangsa melalui sistem penjagaan kesihatan Shanghai — dari konsultasi rutin hingga penyelarasan pembedahan kompleks.',
     whyTitle: 'Mengapa Saya Mengasaskan ShanghaiMed',
     whyP1:
-      'Saya menghabiskan lebih sepuluh tahun bekerja di dalam sistem penjagaan kesihatan premium Shanghai — menyelaraskan penjagaan untuk pesakit antarabangsa, mengemudi birokrasi hospital bagi pihak mereka, dan melihat masalah boleh cegah yang sama berulang: pesakit tiba tanpa rekod yang diterjemahkan, dihalakan ke jabatan yang salah, membayar lebih untuk perkhidmatan yang tidak mereka perlukan, atau pulang tanpa memahami arahan pelepasan mereka sendiri.',
+      'Saya menghabiskan lebih sepuluh tahun bekerja dalam sistem penjagaan kesihatan premium Shanghai — menyelaraskan penjagaan untuk pesakit antarabangsa, mengemudi birokrasi hospital bagi pihak mereka, dan melihat masalah yang sama berulang yang boleh dicegah: pesakit tiba tanpa rekod yang telah diterjemahkan, dihalakan ke jabatan yang salah, membayar lebih untuk perkhidmatan yang tidak mereka perlukan, atau pulang tanpa memahami arahan keluar mereka sendiri.',
     whyP2:
-      'Hospital-hospital tersebut adalah cemerlang. Jurangnya bukan pada kualiti perubatan — ia adalah ketiadaan seseorang yang memahami kedua-dua pihak klinikal dan pihak pesakit, dan yang dapat merapatkannya dalam bahasa pesakit sendiri.',
+      'Hospital-hospital ini adalah cemerlang. Jurangnya bukan pada kualiti perubatan — sebaliknya ketiadaan seseorang yang memahami kedua-dua sudut klinikal dan sudut pandangan pesakit, dan yang dapat merapatkannya dalam bahasa pesakit sendiri.',
     whyP3:
-      'ShanghaiMed wujud untuk merapatkan jurang tersebut. Kami mengenakan yuran perkhidmatan yang telus, tidak mengambil sebarang komisen daripada hospital, dan melayan setiap pesakit sebagaimana saya melayan ahli keluarga yang mengemudi sistem yang tidak biasa di negara asing.',
+      'ShanghaiMed diwujudkan untuk merapatkan jurang tersebut. Kami mengenakan yuran perkhidmatan yang telus, tidak mengambil sebarang komisen daripada hospital, dan melayan setiap pesakit sebagaimana saya melayan ahli keluarga yang mengemudi sistem yang tidak biasa di negara asing.',
     credentialsTitle: 'Kelayakan Profesional',
     verifiedTitle: 'Kelayakan Yang Disahkan',
     nurseCertName: 'Sijil Amalan Jururawat',
@@ -487,11 +487,11 @@ const text = {
       'Perawat terdaftar bersertifikasi ISPN, perawat terdaftar senior dan pendiri ShanghaiMed. Lebih dari satu dekade pengalaman praktis dalam operasional layanan kesehatan premium dan membimbing pasien internasional melalui sistem layanan kesehatan Shanghai — dari konsultasi rutin hingga koordinasi pembedahan kompleks.',
     whyTitle: 'Mengapa Saya Mendirikan ShanghaiMed',
     whyP1:
-      'Saya menghabiskan lebih dari sepuluh tahun bekerja di dalam sistem layanan kesehatan premium Shanghai — mengoordinasikan perawatan untuk pasien internasional, menavigasi birokrasi rumah sakit atas nama mereka, dan melihat masalah yang dapat dicegah yang sama terulang: pasien tiba tanpa rekam medis yang diterjemahkan, diarahkan ke departemen yang salah, membayar lebih untuk layanan yang tidak mereka butuhkan, atau pulang tanpa memahami instruksi pemulangan mereka sendiri.',
+      'Saya menghabiskan lebih dari sepuluh tahun bekerja dalam sistem layanan kesehatan premium Shanghai — mengoordinasikan perawatan untuk pasien internasional, menavigasi birokrasi rumah sakit atas nama mereka, dan melihat masalah yang dapat dicegah yang sama terulang: pasien tiba tanpa rekam medis yang diterjemahkan, diarahkan ke departemen yang salah, membayar lebih untuk layanan yang tidak mereka butuhkan, atau pulang tanpa memahami instruksi pemulangan mereka sendiri.',
     whyP2:
-      'Rumah sakit-rumah sakit tersebut sangat baik. Kesenjangannya tidak pernah pada kualitas medis — melainkan pada tidak adanya seseorang yang memahami sisi klinis dan sisi pasien, dan yang dapat menjembatani keduanya dalam bahasa pasien sendiri.',
+      'Rumah sakit-rumah sakit tersebut sangat baik. Kesenjangannya bukan pada kualitas medis — melainkan tidak adanya seseorang yang memahami sisi klinis dan sudut pandang pasien, serta dapat menjembatani keduanya dalam bahasa pasien sendiri.',
     whyP3:
-      'ShanghaiMed hadir untuk menutup kesenjangan tersebut. Kami mengenakan biaya layanan yang transparan, tidak mengambil komisi apa pun dari rumah sakit, dan memperlakukan setiap pasien sebagaimana saya memperlakukan anggota keluarga yang menavigasi sistem yang tidak dikenal di negara asing.',
+      'ShanghaiMed hadir untuk menjembatani kesenjangan tersebut. Kami mengenakan biaya layanan yang transparan, tidak mengambil komisi apa pun dari rumah sakit, dan memperlakukan setiap pasien sebagaimana saya memperlakukan anggota keluarga yang menavigasi sistem yang asing di negara asing.',
     credentialsTitle: 'Kualifikasi Profesional',
     verifiedTitle: 'Kredensial Terverifikasi',
     nurseCertName: 'Sertifikat Praktik Keperawatan',

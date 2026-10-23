@@ -45,7 +45,7 @@ export const researchMsUi = {
     'medical-tourism': 'Pelancongan Perubatan',
     'quality-safety': 'Kualiti & Keselamatan',
     'cost-value': 'Kos & Nilai',
-    tcm: 'Perubatan Tradisional Cina',
+    tcm: 'Perubatan Tradisional China',
     dental: 'Pergigian',
     checkup: 'Pemeriksaan Kesihatan',
   } as Record<string, string>,
@@ -61,7 +61,7 @@ export const researchMsUi = {
 export const researchMs: Record<number, StudyMsFields> = {
   1: {
     type: 'Tinjauan keratan rentas',
-    population: '171 pesakit luar (92 Cina + 79 antarabangsa) di Hospital Renji, Shanghai',
+    population: '171 pesakit luar (92 China + 79 antarabangsa) di Hospital Renji, Shanghai',
     focus: 'Permintaan & kepuasan pesakit',
     finding:
       'Pesakit antarabangsa menilai proses rawatan perubatan tertinggi (min 4.56/5). Kelayakan institusi merupakan kawasan "permintaan tinggi, kepuasan rendah" yang paling biasa, mencadangkan ruang untuk penambahbaikan dalam mengkomunikasikan kelayakan hospital.',
@@ -80,7 +80,7 @@ export const researchMs: Record<number, StudyMsFields> = {
     population: '164 pelajar antarabangsa Asia merentasi 3 bandar (Beijing, Nanning, Baise)',
     focus: 'Penentu kepuasan',
     finding:
-      'Kepuasan keseluruhan terhadap perkhidmatan perubatan Cina (8.04/10) adalah jauh lebih tinggi berbanding di negara asal pelajar (6.96/10). Kemudahan pendaftaran, kualiti kemudahan, dan responsif kakitangan merupakan pemacu kepuasan utama.',
+      'Kepuasan keseluruhan terhadap perkhidmatan perubatan China (8.04/10) adalah jauh lebih tinggi berbanding di negara asal pelajar (6.96/10). Kemudahan pendaftaran, kualiti kemudahan, dan responsif kakitangan merupakan pemacu kepuasan utama.',
     limitation: 'Tiga bandar sahaja; populasi pelajar mungkin tidak mewakili pelancong perubatan umum; tiada ukuran hasil klinikal.',
   },
   4: {
@@ -101,10 +101,10 @@ export const researchMs: Record<number, StudyMsFields> = {
   },
   6: {
     type: 'Kaedah campuran (kumpulan fokus + tinjauan)',
-    population: '352 profesional pelancongan perubatan; data pesakit dari China, Rusia, Jepun (160 responden Cina)',
+    population: '352 profesional pelancongan perubatan; data pesakit dari China, Rusia, Jepun (160 responden China)',
     focus: 'Keutamaan pesakit negara sasaran',
     finding:
-      'Pesakit Cina yang melawat Korea terutamanya mendapatkan perubatan dalaman (35%), pemeriksaan kesihatan (21%), dan pembedahan plastik (21%). Pesakit Cina menunjukkan kesetiaan yang kuat kepada institusi yang mereka lawati secara tetap. Kualiti penjagaan kesihatan dan sumber pelancongan dinilai penting dan memuaskan.',
+      'Pesakit China yang melawat Korea terutamanya mendapatkan perubatan dalaman (35%), pemeriksaan kesihatan (21%), dan pembedahan plastik (21%). Pesakit China menunjukkan kesetiaan yang kuat kepada institusi yang mereka lawati secara tetap. Kualiti penjagaan kesihatan dan sumber pelancongan dinilai penting dan memuaskan.',
     limitation: 'Dijalankan di Busan, Korea; penemuan mencerminkan konteks pelancongan perubatan Korea, bukan khusus untuk China.',
   },
   7: {
@@ -112,7 +112,7 @@ export const researchMs: Record<number, StudyMsFields> = {
     population: 'Pesakit asing dari pelbagai negara (China, Mongolia, Timur Tengah, CIS, AS, Rusia)',
     focus: 'Kepuasan pesakit peringkat nasional',
     finding:
-      'Kepuasan keseluruhan ialah 89.9%. Pesakit Cina melaporkan kepuasan 83.6% — yang terendah dalam kalangan kewarganegaraan yang ditinjau — dengan teknologi perubatan sebagai keutamaan utama mereka. Pesakit CIS melaporkan kepuasan tertinggi (93.8%).',
+      'Kepuasan keseluruhan ialah 89.9%. Pesakit China melaporkan kepuasan 83.6% — yang terendah dalam kalangan kewarganegaraan yang ditinjau — dengan teknologi perubatan sebagai keutamaan utama mereka. Pesakit CIS melaporkan kepuasan tertinggi (93.8%).',
     limitation: 'Data khusus Korea; mungkin tidak mencerminkan pengalaman pesakit di China; metrik kepuasan berbeza mengikut metodologi tinjauan.',
   },
   8: {
@@ -265,15 +265,15 @@ export const researchMs: Record<number, StudyMsFields> = {
     focus: 'Keberkesanan akupunktur untuk skiatik kronik',
     finding:
       'Kumpulan akupunktur menunjukkan pengurangan kesakitan yang jauh lebih besar (VAS: -30.8 mm berbanding -14.9 mm, P<.001) dan peningkatan fungsi (ODI: -13.0 berbanding -4.9 mata, P<.001) berbanding akupunktur palsu. Manfaat berterusan melalui susulan 52 minggu. Tiada kejadian buruk yang serius berlaku.',
-    limitation: 'Dijalankan hanya di hospital Cina; populasi pesakit adalah orang Cina; hasil mungkin tidak digeneralisasikan kepada etnik atau tetapan penjagaan kesihatan lain.',
+    limitation: 'Dijalankan hanya di hospital China; populasi pesakit adalah orang China; hasil mungkin tidak digeneralisasikan kepada etnik atau tetapan penjagaan kesihatan lain.',
   },
   27: {
     type: 'Ujian terkawal plasebo terbuta',
     population: '60 pesakit dengan IBS yang mantap di hospital pengajar Eropah',
     focus: 'Keberkesanan akupunktur untuk IBS',
     finding:
-      'Tiada perbezaan signifikan secara statistik antara akupunktur (tindak balas 40.7%) dan akupunktur palsu (tindak balas 31.2%). Kedua-dua kumpulan bertambah baik dengan ketara daripada garis dasar, mencadangkan kesan plasebo/konteks yang kuat. Akupunktur tradisional Cina secara relatifnya tidak berkesan untuk IBS dalam tetapan hospital Eropah ini.',
-    limitation: 'Sampel kecil (N=60); satu pusat; tetapan Eropah mungkin tidak mencerminkan hasil di hospital TCM Cina dengan penjagaan bersepadu.',
+      'Tiada perbezaan signifikan secara statistik antara akupunktur (tindak balas 40.7%) dan akupunktur palsu (tindak balas 31.2%). Kedua-dua kumpulan bertambah baik dengan ketara daripada garis dasar, mencadangkan kesan plasebo/konteks yang kuat. Akupunktur tradisional China secara relatifnya tidak berkesan untuk IBS dalam tetapan hospital Eropah ini.',
+    limitation: 'Sampel kecil (N=60); satu pusat; tetapan Eropah mungkin tidak mencerminkan hasil di hospital TCM China dengan penjagaan bersepadu.',
   },
   28: {
     type: 'Tinjauan literatur',
@@ -281,28 +281,28 @@ export const researchMs: Record<number, StudyMsFields> = {
     focus: 'Daya tarikan & bukti TCM',
     finding:
       'Terapi TCM (akupunktur, urutan tuina, perubatan herba) semakin dicari oleh pesakit antarabangsa untuk pengurusan penyakit kronik dan pemulihan. Peranan TCM dalam pelancongan perubatan global semakin berkembang sebagai kelebihan daya saing yang tersendiri untuk China.',
-    limitation: 'Banyak kajian asas diterbitkan hanya dalam pangkalan data Cina; kualiti metodologi berbeza-beza; keberkesanan TCM untuk banyak keadaan masih dalam penyiasatan.',
+    limitation: 'Banyak kajian asas diterbitkan hanya dalam pangkalan data China; kualiti metodologi berbeza-beza; keberkesanan TCM untuk banyak keadaan masih dalam penyiasatan.',
   },
   29: {
     type: 'Protokol RCT (pelbagai pusat, antarabangsa)',
     population: 'Pendaftaran terancang merentasi tapak di China dan Jepun (Universiti Tokyo Ariake)',
     focus: 'Akupunktur untuk gejala kardiovaskular',
     finding:
-      'Protokol menghuraikan kesan analgesik fisiologi akupunktur yang diperhatikan dalam pesakit Cina dengan angina stabil. Mekanisme yang dicadangkan melibatkan pengawalan turun sistem saraf autonomi. Kerjasama antarabangsa merangkumi institusi penyelidikan Jepun, mencerminkan penyelidikan TCM rentas sempadan yang semakin berkembang.',
+      'Protokol menghuraikan kesan analgesik fisiologi akupunktur yang diperhatikan dalam pesakit China dengan angina stabil. Mekanisme yang dicadangkan melibatkan pengawalan turun sistem saraf autonomi. Kerjasama antarabangsa merangkumi institusi penyelidikan Jepun, mencerminkan penyelidikan TCM rentas sempadan yang semakin berkembang.',
     limitation: 'Protokol sahaja — hasil belum diterbitkan pada masa entri ini; penemuan adalah awal.',
   },
   30: {
     type: 'Analisis dasar',
-    population: 'Dokumen dasar kerajaan Cina dan laporan industri',
+    population: 'Dokumen dasar kerajaan China dan laporan industri',
     focus: 'TCM sebagai pembeza pelancongan perubatan',
     finding:
-      'Kerajaan Cina telah meletakkan TCM sebagai cadangan jualan unik untuk pelancongan perubatan masuk. Dasar TCM nasional (2021–2035) secara eksplisit menyokong perkhidmatan TCM antarabangsa. Zon perintis Hainan Boao Lecheng mengintegrasikan TCM dengan pelancongan perubatan konvensional. TCM disebut sebagai faktor utama yang membezakan China daripada Thailand, India, dan Turki.',
+      'Kerajaan China telah meletakkan TCM sebagai cadangan jualan unik untuk pelancongan perubatan masuk. Dasar TCM nasional (2021–2035) secara eksplisit menyokong perkhidmatan TCM antarabangsa. Zon perintis Hainan Boao Lecheng mengintegrasikan TCM dengan pelancongan perubatan konvensional. TCM disebut sebagai faktor utama yang membezakan China daripada Thailand, India, dan Turki.',
     limitation: 'Analisis dasar; sumber kerajaan mungkin melebih-lebihkan peranan TCM; bukti klinikal untuk banyak rawatan TCM masih terhad mengikut piawaian Barat.',
   },
   31: {
     type: 'Kajian kohort retrospektif',
     population: '90 subjek, 428 implan di pejabat pergigian swasta di luar bandar China; susulan min 453 hari',
-    focus: 'Kemandirian implan dan kehilangan tulang marginal dalam populasi Cina luar bandar',
+    focus: 'Kemandirian implan dan kehilangan tulang marginal dalam populasi China luar bandar',
     finding:
       'Terapi implan pergigian menunjukkan kadar kemandirian yang tinggi (100%) dan kehilangan tulang marginal yang minimum (min 0.10 mm). Umur, lokasi implan (rahang bawah > rahang atas), dan diameter implan yang lebih lebar dikaitkan dengan peningkatan kehilangan tulang.',
     limitation: 'Satu amalan swasta di luar bandar China; reka bentuk retrospektif; tiada perbandingan dengan populasi bandar.',

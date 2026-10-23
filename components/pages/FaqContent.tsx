@@ -1866,7 +1866,7 @@ const msFaqs: FaqItem[] = [
     a: (
       <>
         <p className="mb-4">
-          Prosedur perubatan di Shanghai menelan kos <strong>50-80% kurang</strong> berbanding di AS. Berikut ialah contoh khusus:
+          Prosedur perubatan di Shanghai mencecah kos <strong>50-80% lebih rendah</strong> berbanding di AS. Berikut ialah contoh khusus:
         </p>
         <div className="overflow-x-auto mb-4">
           <table className="w-full text-sm border-collapse">
@@ -1898,18 +1898,18 @@ const msFaqs: FaqItem[] = [
           </table>
         </div>
         <p>
-          ShanghaiMed menawarkan <strong>konsultasi awal percuma tanpa obligasi</strong>, perkhidmatan
-          <strong> pengiring hospital di lokasi secara berasingan pada $50/jam</strong> (ditempah dan dibayar mengikut jam;
-          tafsiran Inggeris–Cina; bahasa lain tersedia dengan kos tambahan), dan tiga pakej perkhidmatan concierge:{' '}
+          ShanghaiMed menawarkan <strong>konsultasi awal percuma tanpa sebarang obligasi</strong>; perkhidmatan
+          <strong>pengiring hospital di tapak secara berasingan pada $50/jam</strong> (ditempah dan dibayar mengikut jam;
+          tafsiran Inggeris–Mandarin; bahasa lain tersedia dikenakan bayaran tambahan), dan tiga pakej perkhidmatan concierge:{' '}
           <strong>$500 untuk 1 hari (siang hari)</strong> (Health Checkup Concierge, untuk program pemeriksaan kesihatan
-          1 hari sahaja), <strong>$1,000 untuk 3 hari (siang hari)</strong> (Essential Care Concierge — diperlukan untuk
+          1 hari), <strong>$1,000 untuk 3 hari (siang hari)</strong> (Essential Care Concierge — diperlukan untuk
           semua konsultasi pakar dan keadaan perubatan), dan <strong>$1,650 untuk 5 hari (siang hari)</strong> (Surgery
           &amp; Extended Care Concierge — diperlukan untuk pembedahan dan prosedur pesakit dalam). Jam pengiring tambahan
           melebihi hari pakej tersedia pada <strong>$50/jam</strong>. Pengambilan &amp; penghantaran lapangan terbang
           menggunakan sedan standard; kumpulan yang lebih besar yang memerlukan kenderaan 7 tempat duduk, van kerusi
-          roda, atau tempat duduk kanak-kanak diatur dengan kos tambahan. Semua pakej termasuk tafsiran perubatan
-          Inggeris–Cina di lokasi; tafsiran dalam bahasa lain diatur atas permintaan pada kadar pasaran tempatan, yang
-          disebut harga semasa konsultasi. Sokongan kecemasan di lokasi tersedia <strong>24/7 dengan bayaran tambahan</strong>
+          roda, atau tempat duduk kanak-kanak diatur dikenakan bayaran tambahan. Semua pakej termasuk tafsiran perubatan
+          Inggeris–Mandarin di lokasi; tafsiran dalam bahasa lain diatur atas permintaan pada kadar pasaran tempatan, yang
+          disebut harga semasa konsultasi. Sokongan kecemasan di tapak disediakan <strong>24/7 dengan bayaran tambahan</strong>
           — <strong>panggilan kecemasan $300 (termasuk 4 jam pertama), kemudian $100/jam</strong>. Kos rawatan hospital dan
           klinik (termasuk pakej pemeriksaan kesihatan bermula daripada ~$700) dibil secara berasingan pada kadar tempatan;
           ShanghaiMed tidak mengenakan komisen hospital.
@@ -1921,7 +1921,7 @@ const msFaqs: FaqItem[] = [
     q: 'Adakah pelancongan perubatan di Shanghai selamat untuk pesakit antarabangsa?',
     a: (
       <>
-        <p className="mb-4"><strong>Ya.</strong> Hospital terkemuka Shanghai memenuhi piawaian keselamatan antarabangsa:</p>
+        <p className="mb-4"><strong>Ya.</strong> Hospital terkemuka di Shanghai memenuhi piawaian keselamatan antarabangsa:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li><strong>Huashan Hospital</strong> (Universiti Fudan) — Grade 3A (penarafan hospital tertinggi China), 24 rakan kongsi insurans antarabangsa</li>
           <li><strong>Ruijin Hospital</strong> (SJTU) — Grade 3A, peneraju kebangsaan dalam hematologi dan terapi sel CAR-T, EMR Nasional Tahap 7</li>
@@ -1942,7 +1942,7 @@ const msFaqs: FaqItem[] = [
     a: (
       <>
         <p className="mb-4">
-          ShanghaiMed bekerjasama dengan <strong>14 hospital awam perintis pelancongan perubatan Gred A</strong> dan{' '}
+          ShanghaiMed bekerjasama dengan <strong>14 hospital awam perintis pelancongan perubatan Grade 3A</strong> dan{' '}
           <strong>5 hospital antarabangsa swasta</strong> — sejumlah 19 institusi meliputi setiap kepakaran perubatan:
         </p>
         <div className="overflow-x-auto mb-4">
@@ -1962,7 +1962,7 @@ const msFaqs: FaqItem[] = [
                 ['Shanghai General Hospital', '—', 'Oftalmologi, ENT, Urologi'],
                 ['Zhongshan Hospital', 'Fudan University', 'Kardiovaskular, Pembedahan Am'],
                 ['Renji Hospital', 'SJTU', 'Gastroenterologi #1, Perubatan Reproduktif'],
-                ['Longhua Hospital', 'Shanghai Univ. of TCM', 'Perubatan Tradisional Cina'],
+                ['Longhua Hospital', 'Shanghai Univ. of TCM', 'Perubatan Tradisional China'],
                 ['IPMCH', 'China Welfare Institute', 'Perubatan Reproduktif, Obstetrik'],
                 ["Shanghai Children's Medical Center", 'SJTU', 'Pembedahan Jantung Pediatrik'],
                 ["Sixth People's Hospital", '—', 'Ortopedik (pemindahan anggota sejak 1963)'],
@@ -1992,17 +1992,17 @@ const msFaqs: FaqItem[] = [
     a: (
       <>
         <p className="mb-4">
-          Ramai doktor kanan di hospital terkemuka Shanghai mempunyai <strong>latihan antarabangsa dan bertutur dalam bahasa Inggeris</strong>.
-          Doktor kerap menerbitkan dalam jurnal perubatan berbahasa Inggeris dan menghadiri persidangan antarabangsa.
+          Ramai doktor kanan di hospital terkemuka di Shanghai mempunyai <strong>latihan antarabangsa dan bertutur dalam bahasa Inggeris</strong>.
+          Doktor-doktor ini kerap menerbitkan karya dalam jurnal perubatan berbahasa Inggeris dan menghadiri persidangan antarabangsa.
         </p>
         <p className="mb-4">
           Untuk menjamin tiada jurang komunikasi, ShanghaiMed menyediakan <strong>pendamping perubatan
-          Inggeris–Cina profesional</strong> yang:
+          Inggeris–Mandarin profesional</strong> yang:
         </p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li>Mengiringi anda ke setiap temujanji</li>
-          <li>Menterjemah terminologi perubatan dengan tepat</li>
-          <li>Membantu dengan kertas kerja hospital dan navigasi</li>
+          <li>Menterjemah istilah perubatan dengan tepat</li>
+          <li>Membantu dengan urusan pentadbiran hospital dan navigasi</li>
           <li>Memastikan anda memahami sepenuhnya diagnosis, pelan rawatan, dan ubat-ubatan anda</li>
         </ul>
         <p>Semua dokumen perubatan, pelan rawatan, dan preskripsi <strong>diterjemahkan ke dalam bahasa Inggeris</strong> untuk rekod anda.</p>
@@ -2013,17 +2013,17 @@ const msFaqs: FaqItem[] = [
     q: 'Bagaimanakah saya mendapatkan visa perubatan untuk China?',
     a: (
       <>
-        <p className="mb-4">ShanghaiMed membantu dengan <strong>proses visa yang lengkap</strong>:</p>
+        <p className="mb-4">ShanghaiMed membantu dengan <strong>proses visa secara menyeluruh</strong>:</p>
         <ol className="list-decimal pl-6 mb-4 space-y-1">
           <li><strong>Konsultasi awal</strong> (percuma, dari jauh melalui panggilan video)</li>
-          <li><strong>Surat jemputan perubatan</strong> — dikeluarkan oleh hospital rakan kongsi selepas konsultasi</li>
+          <li><strong>Surat jemputan perubatan</strong> — dikeluarkan oleh hospital rakan niaga selepas konsultasi</li>
           <li><strong>Permohonan visa</strong> — anda menyerahkan surat jemputan kepada kedutaan/konsulat China</li>
-          <li><strong>Masa pemprosesan</strong> — biasanya 2-4 minggu</li>
+          <li><strong>Tempoh pemprosesan</strong> — biasanya 2-4 minggu</li>
           <li><strong>Sokongan dokumen</strong> — ShanghaiMed menyediakan terjemahan semua dokumen yang diperlukan</li>
         </ol>
         <p>
           China menawarkan <strong>pengecualian visa transit 240 jam</strong> untuk warganegara 54 negara (termasuk AS, UK,
-          Kanada, Australia, dan kebanyakan negara EU), yang mungkin mencukupi untuk perjalanan perubatan yang lebih singkat.
+          Kanada, Australia, dan kebanyakan negara EU), yang boleh memadai untuk perjalanan perubatan yang singkat.
         </p>
       </>
     ),
@@ -2033,87 +2033,87 @@ const msFaqs: FaqItem[] = [
     a: (
       <>
         <p className="mb-2"><strong>Konsultasi Awal Percuma — $0</strong></p>
-        <p className="mb-1">Perbualan peringkat keputusan tanpa obligasi — 4 perkhidmatan:</p>
+        <p className="mb-1">Perbualan peringkat keputusan tanpa sebarang obligasi — 4 perkhidmatan:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li>Penilaian keperluan perubatan</li>
           <li>Cadangan hospital &amp; pakar</li>
           <li>Anggaran belanjawan perubatan</li>
           <li>Panduan insurans</li>
         </ul>
-        <p className="mb-2"><strong>Pengiring Hospital di Lokasi — $50/jam</strong></p>
-        <p className="mb-1">Ditempah dan dibayar mengikut jam; tersedia secara kendiri atau sebagai tambahan kepada mana-mana pakej. 4 perkhidmatan:</p>
+        <p className="mb-2"><strong>Pengiring Hospital di Tapak — $50/jam</strong></p>
+        <p className="mb-1">Ditempah dan dibayar mengikut jam penggunaan; tersedia secara kendiri atau sebagai tambahan kepada mana-mana pakej. 4 perkhidmatan:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
-          <li>Pendamping di lokasi di hospital</li>
-          <li>Tafsiran perubatan Inggeris–Cina di lokasi (bahasa lain dengan kos tambahan)</li>
+          <li>Pendamping di tapak di hospital</li>
+          <li>Tafsiran perubatan Inggeris–Mandarin di lokasi (bahasa lain dikenakan bayaran tambahan)</li>
           <li>Bantuan beratur, pembayaran, dan pengambilan ubat di lokasi</li>
           <li>Mesej daftar masuk pada hari lawatan</li>
         </ul>
         <p className="mb-4 text-sm text-amber-700 bg-amber-50 p-3 rounded">
-          <strong>Nota:</strong> Pengiring setiap jam TIDAK termasuk penjadualan temujanji, padanan doktor, pengambilan lapangan terbang, terjemahan laporan, sokongan visa, pra-kebenaran insurans, tafsiran dalam bahasa selain Inggeris, atau susulan selepas lawatan — tersebut diliputi oleh pakej concierge. Untuk perancangan rawatan mendalam atau perjalanan berbilang temujanji, pakej concierge diperlukan.
+          <strong>Nota:</strong> Pengiring setiap jam TIDAK termasuk penjadualan temujanji, padanan doktor, pengambilan lapangan terbang, terjemahan laporan, sokongan visa, pra-kebenaran insurans, tafsiran dalam bahasa selain Bahasa Inggeris, atau susulan selepas lawatan — perkhidmatan tersebut dilindungi oleh pakej concierge. Untuk perancangan rawatan mendalam atau perjalanan berbilang temujanji, pakej concierge diperlukan.
         </p>
         <p className="mb-2"><strong>Health Checkup Concierge — $500 / 1 hari (siang hari)</strong></p>
-        <p className="mb-1">13 perkhidmatan concierge — untuk program pemeriksaan kesihatan 1 hari sahaja:</p>
+        <p className="mb-1">13 perkhidmatan concierge — untuk program pemeriksaan kesihatan 1 hari:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li>1 hari penuh pengiringan jururawat berdaftar ISPN di lokasi (siang hari)</li>
           <li>Pengambilan &amp; penghantaran lapangan terbang</li>
           <li>Bantuan penyelarasan hotel</li>
-          <li>Tafsiran perubatan Inggeris–Cina di klinik</li>
+          <li>Tafsiran perubatan Inggeris–Mandarin di klinik</li>
           <li>Terjemahan laporan pemeriksaan kesihatan dan penjelasan keputusan</li>
           <li>Penjadualan temujanji doktor</li>
           <li>Pengambilan &amp; penghantaran ubat</li>
-          <li>Padanan hospital &amp; pakar</li>
-          <li>Pengangkutan tempatan, pembayaran, dan bimbingan di lapangan</li>
-          <li>Sokongan WhatsApp berdedikasi sepanjang penginapan anda</li>
+          <li>Pemadanan hospital &amp; pakar</li>
+          <li>Pengangkutan tempatan, pembayaran, dan panduan di lapangan</li>
+          <li>Sokongan WhatsApp khas sepanjang penginapan anda</li>
           <li>Sokongan surat jemputan visa</li>
-          <li>Susulan jauh 30 hari selepas pemeriksaan</li>
+          <li>Susulan jarak jauh 30 hari selepas pemeriksaan</li>
           <li>Sokongan insurans</li>
         </ul>
         <p className="mb-2"><strong>Essential Care Concierge — $1,000 / 3 hari (siang hari) ✓ Paling biasa dipilih</strong></p>
-        <p className="mb-1">13 perkhidmatan concierge — diperlukan untuk semua konsultasi pakar dan keadaan perubatan:</p>
+        <p className="mb-1">13 perkhidmatan concierge — diperlukan untuk semua konsultasi pakar dan keadaan perubatan kompleks:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li>3 hari penuh pengiringan jururawat berdaftar ISPN di lokasi (siang hari)</li>
           <li>Pengambilan &amp; penghantaran lapangan terbang</li>
           <li>Bantuan penyelarasan hotel</li>
-          <li>Tafsiran perubatan Inggeris–Cina di semua temujanji</li>
+          <li>Tafsiran perubatan Inggeris–Mandarin di semua temujanji</li>
           <li>Terjemahan dan ringkasan laporan perubatan</li>
           <li>Penjadualan temujanji doktor</li>
           <li>Pengambilan &amp; penghantaran ubat</li>
-          <li>Padanan hospital &amp; pakar</li>
-          <li>Pengangkutan tempatan, pembayaran, dan bimbingan di lapangan</li>
-          <li>Sokongan WhatsApp berdedikasi sepanjang penginapan anda</li>
+          <li>Pemadanan hospital &amp; pakar</li>
+          <li>Pengangkutan tempatan, pembayaran, dan panduan di lapangan</li>
+          <li>Sokongan WhatsApp khas sepanjang penginapan anda</li>
           <li>Sokongan surat jemputan visa</li>
-          <li>Susulan jauh 30 hari selepas penjagaan</li>
+          <li>Susulan jarak jauh 30 hari selepas penjagaan</li>
           <li>Sokongan insurans · pra-kebenaran</li>
         </ul>
         <p className="mb-2"><strong>Surgery &amp; Extended Care Concierge — $1,650 / 5 hari (siang hari)</strong></p>
         <p className="mb-1">16 perkhidmatan concierge — diperlukan untuk pembedahan, prosedur pesakit dalam, dan pelan rawatan lanjutan. Termasuk semua perkhidmatan Essential Care serta sokongan khusus pembedahan:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
-          <li>5 hari penuh pengiringan jururawat di lokasi (siang hari) — pra-op, hari pembedahan &amp; pasca-op</li>
+          <li>5 hari penuh pendampingan jururawat di tapak (siang hari) — pra-op, hari pembedahan &amp; pasca-op</li>
           <li>Pengambilan &amp; penghantaran lapangan terbang</li>
           <li>Penyelarasan hotel &amp; penginapan lanjutan</li>
-          <li>Tafsiran perubatan Inggeris–Cina (termasuk hari pembedahan)</li>
+          <li>Tafsiran perubatan Inggeris–Mandarin (termasuk hari pembedahan)</li>
           <li>Terjemahan dokumen perubatan penuh &amp; taklimat pembedahan</li>
           <li>Temujanji pakar bedah &amp; penyelarasan pra-kemasukan</li>
           <li>Persediaan pra-pembedahan &amp; penyelarasan kemasukan</li>
           <li>Pengambilan &amp; penghantaran ubat</li>
-          <li>Padanan hospital &amp; pakar bedah</li>
-          <li>Lawatan pesakit dalam semasa penginapan hospital</li>
-          <li>Pengangkutan tempatan, bantuan pembayaran/bil, dan bimbingan di lapangan</li>
-          <li>Sokongan WhatsApp berdedikasi sepanjang penginapan anda</li>
+          <li>Pemadanan hospital &amp; pakar bedah</li>
+          <li>Lawatan pesakit dalam sepanjang penginapan di hospital</li>
+          <li>Pengangkutan tempatan, bantuan pembayaran/bil, dan panduan di lapangan</li>
+          <li>Sokongan WhatsApp khas sepanjang penginapan anda</li>
           <li>Sokongan surat jemputan visa perubatan</li>
           <li>Komunikasi keluarga &amp; kemas kini kemajuan</li>
           <li>Susulan jauh 60 hari selepas penjagaan</li>
           <li>Insurans · pra-kebenaran &amp; penyelarasan deposit pembedahan</li>
         </ul>
-        <p className="mb-2"><strong>Sokongan kecemasan di lokasi — tersedia 24/7 dengan bayaran tambahan</strong></p>
+        <p className="mb-2"><strong>Sokongan kecemasan di tapak — tersedia 24/7 dengan bayaran tambahan</strong></p>
         <p className="mb-4">
           <strong>$300 panggilan kecemasan (tersedia 24/7, termasuk 4 jam pertama), kemudian $100/jam.</strong>{' '}
           Sokongan kecemasan meliputi situasi selepas waktu kerja, hujung minggu, atau penjagaan akut yang memerlukan
-          pengiringan jururawat di lokasi di luar jadual concierge yang dirancang. Dalam kecemasan perubatan yang mengancam nyawa,
+          pendampingan jururawat di tapak di luar jadual concierge yang telah ditetapkan. Dalam kecemasan perubatan yang mengancam nyawa,
           hubungi 120 (nombor ambulans nasional China) dahulu.
         </p>
         <p>
-          <strong>Apa yang TIDAK termasuk</strong> (dibil secara berasingan pada kadar tempatan): Kos rawatan perubatan yang dibayar terus ke hospital/klinik (konsultasi doktor, ujian, ubat-ubatan, prosedur, dan pakej pemeriksaan kesihatan bermula daripada ~$700), penginapan, penerbangan antarabangsa, tafsiran dalam bahasa selain Inggeris, dan naik taraf kenderaan untuk kumpulan yang lebih besar. ShanghaiMed tidak mengenakan komisen hospital.
+          <strong>Apa yang TIDAK termasuk</strong> (dibil secara berasingan pada kadar tempatan): Kos rawatan perubatan yang perlu dibayar terus ke hospital/klinik (konsultasi doktor, ujian, ubat-ubatan, prosedur, dan pakej pemeriksaan kesihatan bermula daripada ~$700), penginapan, penerbangan antarabangsa, tafsiran dalam bahasa selain Bahasa Inggeris, dan naik taraf kenderaan untuk rombongan yang lebih besar. ShanghaiMed tidak mengenakan komisen hospital.
         </p>
       </>
     ),
@@ -2123,18 +2123,18 @@ const msFaqs: FaqItem[] = [
     a: (
       <>
         <p className="mb-4">
-          <strong>Sudah tentu — inilah falsafah teras ShanghaiMed.</strong> Shanghai ialah bandar paling antarabangsa di China dengan:
+          <strong>Sudah tentu — inilah falsafah teras ShanghaiMed.</strong> Shanghai ialah bandar paling bertaraf antarabangsa di China dengan:
         </p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li><strong>The Bund</strong> — persiaran tepi air ikonik</li>
-          <li><strong>Yu Garden</strong> — taman Cina klasik berusia 400 tahun</li>
+          <li><strong>Yu Garden</strong> — taman tradisional China yang berusia 400 tahun</li>
           <li><strong>Shanghai Tower</strong> — bangunan kedua tertinggi di dunia (632m)</li>
           <li><strong>Shanghai Disneyland</strong> — istana Disney terbesar di dunia</li>
           <li><strong>French Concession</strong> — jalan yang dibarisi pokok dengan kafe dan butik</li>
         </ul>
         <p>
-          Ramai pesakit menjadualkan <strong>temujanji perubatan pada Hari 1-2</strong>, kemudian menghabiskan baki hari meneroka
-          bandar. ShanghaiMed membantu anda mengintegrasikan temujanji perubatan ke dalam jadual perjalanan anda supaya anda tidak
+          Ramai pesakit menyusun jadual <strong>temujanji perubatan pada Hari 1-2</strong>, kemudian menghabiskan baki hari meneroka
+          bandar. ShanghaiMed membantu anda menyelaraskan temujanji perubatan dengan jadual perjalanan anda supaya anda tidak
           membuang masa percutian.
         </p>
       </>
@@ -2182,20 +2182,20 @@ const msFaqs: FaqItem[] = [
     a: (
       <>
         <p className="mb-4">
-          Ya. Hospital rakan kongsi ShanghaiMed mempunyai <strong>perjanjian penyelesaian terus</strong> dengan penanggung insurans
-          antarabangsa utama. Perlindungan berkisar dari 8 hingga 24 penanggung insurans setiap hospital:
+          Ya. Hospital rakan kongsi ShanghaiMed mempunyai <strong>perjanjian bil terus</strong> dengan penanggung insurans
+          antarabangsa utama. Liputan melibatkan 8 hingga 24 penanggung insurans setiap hospital:
         </p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
-          <li>Huashan Hospital — 24 rakan kongsi insurans</li>
-          <li>Shanghai Children&apos;s Medical Center — 23 rakan kongsi insurans</li>
-          <li>Ruijin Hospital — 21 rakan kongsi insurans</li>
-          <li>Renji Hospital — 20 rakan kongsi insurans</li>
+          <li>Huashan Hospital — 24 rakan niaga insurans</li>
+          <li>Shanghai Children&apos;s Medical Center — 23 rakan niaga insurans</li>
+          <li>Ruijin Hospital — 21 rakan niaga insurans</li>
+          <li>Renji Hospital — 20 rakan niaga insurans</li>
         </ul>
         <p>
           Penanggung insurans yang diterima termasuk <strong>MSH, Bupa, Cigna, Aetna, AXA, Allianz, AIA, International SOS,</strong> dan banyak lagi.
-          ShanghaiMed menyediakan sokongan insurans termasuk semakan manfaat polisi dan surat pra-kebenaran. Di mana penyelesaian
-          terus tersedia kami menyelaraskan dengan hospital bagi pihak anda; jika tidak pesakit membayar hospital secara terus
-          dan menuntut pembayaran balik dengan sokongan dokumentasi kami.
+          ShanghaiMed menyediakan sokongan insurans termasuk semakan manfaat polisi dan surat pra-kebenaran. Di mana kemudahan bil terus
+          tersedia, kami menyelaraskan dengan hospital bagi pihak anda; jika tidak pesakit membayar hospital secara terus
+          dan menuntut bayaran balik dengan bantuan dokumentasi kami.
         </p>
       </>
     ),
@@ -2206,29 +2206,28 @@ const msFaqs: FaqItem[] = [
       <>
         <p className="mb-4">ShanghaiMed menyediakan <strong>susulan selepas rawatan yang komprehensif</strong>:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
-          <li><strong>Pemeriksaan video dari jauh</strong> dengan doktor yang merawat anda</li>
-          <li><strong>Rekod perubatan yang diterjemahkan</strong> — ringkasan keluar penuh, keputusan ujian, dan senarai ubat dalam bahasa Inggeris</li>
-          <li><strong>Panduan ubat-ubatan</strong> — arahan dos, kesan sampingan, dan amaran interaksi</li>
+          <li><strong>Pemeriksaan video jarak jauh</strong> dengan doktor yang merawat anda</li>
+          <li><strong>Rekod perubatan yang telah diterjemahkan</strong> — ringkasan keluar penuh, keputusan ujian, dan senarai ubat dalam bahasa Inggeris</li>
+          <li><strong>Panduan pengambilan ubat</strong> — arahan dos, kesan sampingan, dan amaran interaksi</li>
           <li><strong>Perancangan pemulihan</strong> — garis masa peribadi dan cadangan aktiviti</li>
-          <li><strong>Penyelarasan negara asal</strong> — kami berkongsi rekod perubatan anda dengan doktor penjagaan primer anda (dengan persetujuan)</li>
-          <li><strong>Sokongan berterusan</strong> — pasukan kami kekal tersedia untuk soalan selepas anda pulang ke rumah</li>
+          <li><strong>Penyelarasan dengan doktor di negara asal</strong> — kami berkongsi rekod perubatan anda dengan doktor penjagaan primer anda (dengan persetujuan)</li>
+          <li><strong>Sokongan berterusan</strong> — pasukan kami sentiasa tersedia untuk soalan selepas anda pulang ke rumah</li>
         </ul>
         <p>Susulan berterusan selama <strong>30 hari</strong> selepas rawatan anda (60 hari untuk pakej pembedahan).</p>
       </>
     ),
   },
   {
-    q: 'Adakah konsultasi awal benar-benar percuma? Apakah yang diliputinya?',
+    q: 'Adakah konsultasi awal percuma sepenuhnya? Apakah yang diliputinya?',
     a: (
       <>
         <p className="mb-4">
-          <strong>Ya.</strong> Konsultasi awal dengan Sara melalui WhatsApp adalah benar-benar percuma dan tidak membawa
-          sebarang obligasi. Semasa panggilan, kami menilai keperluan perubatan anda, mengesyorkan hospital dan pakar yang sesuai,
+          <strong>Ya.</strong> Konsultasi awal dengan Sara melalui WhatsApp adalah percuma sepenuhnya dan tanpa sebarang obligasi. Semasa panggilan, kami menilai keperluan perubatan anda, mengesyorkan hospital dan pakar yang sesuai,
           memberikan anggaran belanjawan yang realistik untuk rawatan, dan menerangkan cara insurans berfungsi.
         </p>
         <p>
-          Ini ialah perbualan peringkat keputusan; perkhidmatan di lokasi (pengiringan jururawat, tempahan temujanji,
-          tafsiran lisan) bermula sebaik sahaja anda menempah pengiring setiap jam atau pakej concierge.
+          Ini merupakan perbualan peringkat keputusan; perkhidmatan di lokasi (pengiringan jururawat, tempahan temujanji,
+          tafsiran lisan) bermula apabila anda menempah pengiring setiap jam atau pakej concierge.
         </p>
       </>
     ),
@@ -2239,18 +2238,17 @@ const msFaqs: FaqItem[] = [
       <>
         <p className="mb-4">
           <strong>Ya.</strong> Pengiring hospital di lokasi tersedia sebagai perkhidmatan kendiri pada <strong>$50/jam</strong>,
-          ditempah dan dibayar mengikut jam. Ia juga tersedia sebagai tambahan kepada mana-mana pakej concierge untuk jam tambahan
-          atau temujanji tambahan. Ini adalah untuk pesakit yang telah menempah temujanji doktor mereka sendiri dan hanya
-          memerlukan pendamping perubatan Inggeris–Cina di lokasi untuk beratur, pembayaran, pengambilan ubat, dan soalan
-          asas di lokasi.
+          ditempah dan dibayar mengikut jam. Ia juga tersedia sebagai tambahan kepada mana-mana pakej concierge untuk jam-jam tambahan
+          atau temujanji tambahan. Ini sesuai untuk pesakit yang telah menempah temujanji doktor mereka sendiri dan hanya
+          memerlukan pendamping perubatan Inggeris–Mandarin di lokasi untuk beratur, pembayaran, pengambilan ubat, dan soalan asas di tapak.
         </p>
         <p className="mb-4">
-          Tafsiran adalah <strong>Inggeris–Cina</strong>;
-          bahasa lain diatur atas permintaan dengan kos tambahan, yang disebut harga semasa konsultasi.
+          Tafsiran adalah <strong>Inggeris–Mandarin</strong>;
+          bahasa lain diatur atas permintaan dikenakan bayaran tambahan, yang disebutkan harganya semasa konsultasi.
         </p>
         <p>
           Pengiring setiap jam <strong>TIDAK</strong> termasuk penjadualan temujanji, padanan doktor, pengambilan lapangan terbang,
-          terjemahan laporan, sokongan visa, pra-kebenaran insurans, atau susulan selepas lawatan — tersebut diliputi oleh
+          terjemahan laporan, sokongan visa, pra-kebenaran insurans, atau susulan selepas lawatan — perkhidmatan tersebut dilindungi oleh
           pakej concierge ($500/$1,000/$1,650).
         </p>
       </>
@@ -2266,7 +2264,7 @@ const idFaqs: FaqItem[] = [
     a: (
       <>
         <p className="mb-4">
-          Prosedur medis di Shanghai berbiaya <strong>50-80% lebih murah</strong> dibandingkan di AS. Berikut adalah contoh spesifik:
+          Prosedur medis di Shanghai berbiaya <strong>50–80% lebih rendah</strong> dibandingkan di AS. Berikut adalah contoh spesifik:
         </p>
         <div className="overflow-x-auto mb-4">
           <table className="w-full text-sm border-collapse">
@@ -2298,9 +2296,9 @@ const idFaqs: FaqItem[] = [
           </table>
         </div>
         <p>
-          ShanghaiMed menawarkan <strong>konsultasi awal gratis tanpa kewajiban</strong>, layanan
-          <strong> pendamping rumah sakit di lokasi mandiri seharga $50/jam</strong> (dipesan dan dibayar per jam;
-          interpretasi Inggris–Tiongkok; bahasa lain tersedia dengan biaya tambahan), dan tiga paket layanan concierge:{' '}
+          ShanghaiMed menawarkan <strong>konsultasi awal gratis tanpa kewajiban apa pun</strong>, layanan
+          <strong>pendamping rumah sakit di lokasi secara mandiri seharga $50/jam</strong> (dipesan dan dibayar sesuai jam penggunaan;
+          interpretasi Inggris–Mandarin; bahasa lain tersedia dengan biaya tambahan), dan tiga paket layanan concierge:{' '}
           <strong>$500 untuk 1 hari (siang hari)</strong> (Health Checkup Concierge, khusus untuk program pemeriksaan kesehatan
           1 hari), <strong>$1,000 untuk 3 hari (siang hari)</strong> (Essential Care Concierge — diperlukan untuk
           semua konsultasi spesialis dan kondisi medis), dan <strong>$1,650 untuk 5 hari (siang hari)</strong> (Surgery
@@ -2308,7 +2306,7 @@ const idFaqs: FaqItem[] = [
           di luar hari paket tersedia dengan tarif <strong>$50/jam</strong>. Penjemputan &amp; pengantaran bandara
           menggunakan sedan standar; rombongan lebih besar yang membutuhkan kendaraan 7 kursi, van kursi roda, atau kursi
           anak diatur dengan biaya tambahan. Semua paket mencakup interpretasi medis
-          Inggris–Tiongkok di lokasi; interpretasi dalam bahasa lain diatur atas permintaan dengan tarif pasar lokal, yang
+          Inggris–Mandarin di lokasi; interpretasi dalam bahasa lain diatur atas permintaan dengan tarif pasar lokal, yang
           dikutip selama konsultasi. Dukungan darurat di lokasi tersedia <strong>24/7 dengan biaya tambahan</strong>
           — <strong>panggilan darurat $300 (termasuk 4 jam pertama), kemudian $100/jam</strong>. Biaya perawatan rumah sakit dan
           klinik (termasuk paket pemeriksaan kesehatan mulai dari ~$700) ditagih terpisah sesuai tarif lokal;
@@ -2321,7 +2319,7 @@ const idFaqs: FaqItem[] = [
     q: 'Apakah wisata medis di Shanghai aman untuk pasien internasional?',
     a: (
       <>
-        <p className="mb-4"><strong>Ya.</strong> Rumah sakit terkemuka Shanghai memenuhi standar keamanan internasional:</p>
+        <p className="mb-4"><strong>Ya.</strong> Rumah sakit terkemuka di Shanghai memenuhi standar keamanan internasional:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li><strong>Huashan Hospital</strong> (Universitas Fudan) — Grade 3A (peringkat rumah sakit tertinggi Tiongkok), 24 mitra asuransi internasional</li>
           <li><strong>Ruijin Hospital</strong> (SJTU) — Grade 3A, pemimpin nasional dalam hematologi dan terapi sel CAR-T, EMR Nasional Level 7</li>
@@ -2342,7 +2340,7 @@ const idFaqs: FaqItem[] = [
     a: (
       <>
         <p className="mb-4">
-          ShanghaiMed bermitra dengan <strong>14 rumah sakit publik percontohan wisata medis Grade-A</strong> dan{' '}
+          ShanghaiMed bermitra dengan <strong>14 rumah sakit publik percontohan wisata medis Grade 3A</strong> dan{' '}
           <strong>5 rumah sakit internasional swasta</strong> — total 19 institusi mencakup setiap spesialisasi medis:
         </p>
         <div className="overflow-x-auto mb-4">
@@ -2382,7 +2380,7 @@ const idFaqs: FaqItem[] = [
         </div>
         <p>
           Ditambah 5 rumah sakit internasional swasta: Jiahui International (afiliasi Mass General), United Family,
-          ParkwayHealth, SinoUnited Health (kolaborasi Mayo Clinic dan layanan pendapat kedua), dan Raffles Hospital.
+          ParkwayHealth, SinoUnited Health (kolaborasi Mayo Clinic dan layanan opini kedua), dan Raffles Hospital.
         </p>
       </>
     ),
@@ -2392,16 +2390,16 @@ const idFaqs: FaqItem[] = [
     a: (
       <>
         <p className="mb-4">
-          Banyak dokter senior di rumah sakit terkemuka Shanghai memiliki <strong>pelatihan internasional dan berbicara bahasa Inggris</strong>.
-          Dokter secara rutin menerbitkan artikel di jurnal medis berbahasa Inggris dan menghadiri konferensi internasional.
+          Banyak dokter senior di rumah sakit terkemuka di Shanghai memiliki <strong>pelatihan internasional dan berbicara bahasa Inggris</strong>.
+          Para dokter ini secara rutin menerbitkan karya di jurnal medis berbahasa Inggris dan menghadiri konferensi internasional.
         </p>
         <p className="mb-4">
           Untuk menjamin tidak ada kesenjangan komunikasi, ShanghaiMed menyediakan <strong>pendamping medis
-          Inggris–Tiongkok profesional</strong> yang:
+          Inggris–Mandarin profesional</strong> yang:
         </p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li>Mendampingi Anda ke setiap janji temu</li>
-          <li>Menerjemahkan terminologi medis secara akurat</li>
+          <li>Menerjemahkan istilah medis secara akurat</li>
           <li>Membantu urusan administrasi rumah sakit dan navigasi</li>
           <li>Memastikan Anda memahami sepenuhnya diagnosis, rencana pengobatan, dan obat-obatan Anda</li>
         </ul>
@@ -2413,17 +2411,17 @@ const idFaqs: FaqItem[] = [
     q: 'Bagaimana cara mendapatkan visa medis untuk Tiongkok?',
     a: (
       <>
-        <p className="mb-4">ShanghaiMed membantu <strong>proses visa secara lengkap</strong>:</p>
+        <p className="mb-4">ShanghaiMed membantu <strong>proses visa secara menyeluruh</strong>:</p>
         <ol className="list-decimal pl-6 mb-4 space-y-1">
           <li><strong>Konsultasi awal</strong> (gratis, jarak jauh melalui panggilan video)</li>
           <li><strong>Surat undangan medis</strong> — dikeluarkan oleh rumah sakit mitra setelah konsultasi</li>
           <li><strong>Pengajuan visa</strong> — Anda menyerahkan surat undangan ke kedutaan/konsulat Tiongkok</li>
-          <li><strong>Waktu pemrosesan</strong> — biasanya 2-4 minggu</li>
+          <li><strong>Lama pemrosesan</strong> — biasanya 2-4 minggu</li>
           <li><strong>Dukungan dokumen</strong> — ShanghaiMed menyediakan terjemahan semua dokumen yang diperlukan</li>
         </ol>
         <p>
-          Tiongkok menawarkan <strong>pengecualian visa transit 240 jam</strong> untuk warga negara dari 54 negara (termasuk AS, Inggris,
-          Kanada, Australia, dan sebagian besar negara UE), yang mungkin cukup untuk perjalanan medis yang lebih singkat.
+          Tiongkok menawarkan <strong>pembebasan visa transit 240 jam</strong> untuk warga negara dari 54 negara (termasuk AS, Inggris,
+          Kanada, Australia, dan sebagian besar negara UE), yang dapat cukup untuk perjalanan medis singkat.
         </p>
       </>
     ),
@@ -2433,7 +2431,7 @@ const idFaqs: FaqItem[] = [
     a: (
       <>
         <p className="mb-2"><strong>Konsultasi Awal Gratis — $0</strong></p>
-        <p className="mb-1">Percakapan tahap keputusan tanpa kewajiban — 4 layanan:</p>
+        <p className="mb-1">Percakapan tahap keputusan tanpa kewajiban apa pun — 4 layanan:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li>Penilaian kebutuhan medis</li>
           <li>Rekomendasi rumah sakit &amp; spesialis</li>
@@ -2444,24 +2442,24 @@ const idFaqs: FaqItem[] = [
         <p className="mb-1">Dipesan dan dibayar per jam; tersedia secara mandiri atau sebagai tambahan untuk paket mana pun. 4 layanan:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li>Pendamping di lokasi di rumah sakit</li>
-          <li>Interpretasi medis Inggris–Tiongkok di lokasi (bahasa lain dengan biaya tambahan)</li>
+          <li>Interpretasi medis Inggris–Mandarin di lokasi (bahasa lain dengan biaya tambahan)</li>
           <li>Bantuan antrean, pembayaran, dan pengambilan obat di lokasi</li>
           <li>Pesan check-in pada hari kunjungan</li>
         </ul>
         <p className="mb-4 text-sm text-amber-700 bg-amber-50 p-3 rounded">
-          <strong>Catatan:</strong> Pendamping per jam TIDAK termasuk penjadwalan janji temu, pencocokan dokter, penjemputan bandara, penerjemahan laporan, dukungan visa, pra-otorisasi asuransi, interpretasi dalam bahasa selain Inggris, atau tindak lanjut pasca-kunjungan — hal-hal tersebut dicakup oleh paket concierge. Untuk perencanaan pengobatan mendalam atau perjalanan dengan banyak janji temu, paket concierge diperlukan.
+          <strong>Catatan:</strong> Pendamping per jam TIDAK termasuk penjadwalan janji temu, pencocokan dokter, penjemputan bandara, penerjemahan laporan, dukungan visa, pra-otorisasi asuransi, interpretasi dalam bahasa selain Bahasa Inggris, atau tindak lanjut pasca-kunjungan — hal-hal tersebut dicakup dalam paket concierge. Untuk perencanaan pengobatan mendalam atau perjalanan dengan banyak janji temu, paket concierge diperlukan.
         </p>
         <p className="mb-2"><strong>Health Checkup Concierge — $500 / 1 hari (siang hari)</strong></p>
-        <p className="mb-1">13 layanan concierge — khusus untuk program pemeriksaan kesehatan 1 hari:</p>
+        <p className="mb-1">13 layanan concierge — khusus untuk program pemeriksaan kesehatan 1 hari</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
-          <li>1 hari penuh pendampingan perawat terdaftar ISPN di lokasi (siang hari)</li>
+          <li>1 hari penuh pendampingan perawat terdaftar bersertifikat ISPN di lokasi (siang hari)</li>
           <li>Penjemputan &amp; pengantaran bandara</li>
           <li>Bantuan koordinasi hotel</li>
-          <li>Interpretasi medis Inggris–Tiongkok di klinik</li>
+          <li>Interpretasi medis Inggris–Mandarin di klinik</li>
           <li>Penerjemahan laporan pemeriksaan kesehatan dan penjelasan hasil</li>
           <li>Penjadwalan janji temu dokter</li>
           <li>Pengambilan &amp; pengantaran obat</li>
-          <li>Pencocokan rumah sakit &amp; spesialis</li>
+          <li>Pemadanan rumah sakit &amp; spesialis</li>
           <li>Transportasi lokal, pembayaran, dan bimbingan di lapangan</li>
           <li>Dukungan WhatsApp khusus selama Anda menginap</li>
           <li>Dukungan surat undangan visa</li>
@@ -2469,16 +2467,16 @@ const idFaqs: FaqItem[] = [
           <li>Dukungan asuransi</li>
         </ul>
         <p className="mb-2"><strong>Essential Care Concierge — $1,000 / 3 hari (siang hari) ✓ Paling sering dipilih</strong></p>
-        <p className="mb-1">13 layanan concierge — diperlukan untuk semua konsultasi spesialis dan kondisi medis:</p>
+        <p className="mb-1">13 layanan concierge — diperlukan untuk semua konsultasi spesialis dan kondisi medis kompleks:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
-          <li>3 hari penuh pendampingan perawat terdaftar ISPN di lokasi (siang hari)</li>
+          <li>3 hari penuh pendampingan perawat terdaftar bersertifikat ISPN di lokasi (siang hari)</li>
           <li>Penjemputan &amp; pengantaran bandara</li>
           <li>Bantuan koordinasi hotel</li>
-          <li>Interpretasi medis Inggris–Tiongkok di semua janji temu</li>
+          <li>Interpretasi medis Inggris–Mandarin di semua janji temu</li>
           <li>Penerjemahan dan ringkasan laporan medis</li>
           <li>Penjadwalan janji temu dokter</li>
           <li>Pengambilan &amp; pengantaran obat</li>
-          <li>Pencocokan rumah sakit &amp; spesialis</li>
+          <li>Pemadanan rumah sakit &amp; spesialis</li>
           <li>Transportasi lokal, pembayaran, dan bimbingan di lapangan</li>
           <li>Dukungan WhatsApp khusus selama Anda menginap</li>
           <li>Dukungan surat undangan visa</li>
@@ -2486,17 +2484,17 @@ const idFaqs: FaqItem[] = [
           <li>Dukungan asuransi · pra-otorisasi</li>
         </ul>
         <p className="mb-2"><strong>Surgery &amp; Extended Care Concierge — $1,650 / 5 hari (siang hari)</strong></p>
-        <p className="mb-1">16 layanan concierge — diperlukan untuk pembedahan, prosedur rawat inap, dan rencana pengobatan yang diperpanjang. Mencakup semua layanan Essential Care ditambah dukungan khusus pembedahan:</p>
+        <p className="mb-1">16 layanan concierge — diperlukan untuk pembedahan, prosedur rawat inap, dan rencana pengobatan lanjutan. Mencakup semua layanan Essential Care ditambah dukungan khusus pembedahan:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li>5 hari penuh pendampingan perawat di lokasi (siang hari) — pra-op, hari pembedahan &amp; pasca-op</li>
           <li>Penjemputan &amp; pengantaran bandara</li>
           <li>Koordinasi hotel &amp; penginapan jangka panjang</li>
-          <li>Interpretasi medis Inggris–Tiongkok (termasuk hari pembedahan)</li>
+          <li>Interpretasi medis Inggris–Mandarin (termasuk hari pembedahan)</li>
           <li>Penerjemahan dokumen medis lengkap &amp; pengarahan bedah</li>
           <li>Janji temu dokter bedah &amp; koordinasi pra-pendaftaran</li>
           <li>Persiapan pra-pembedahan &amp; koordinasi pendaftaran</li>
           <li>Pengambilan &amp; pengantaran obat</li>
-          <li>Pencocokan rumah sakit &amp; dokter bedah</li>
+          <li>Pemadanan rumah sakit &amp; dokter bedah</li>
           <li>Kunjungan rawat inap selama di rumah sakit</li>
           <li>Transportasi lokal, bantuan pembayaran/tagihan, dan bimbingan di lapangan</li>
           <li>Dukungan WhatsApp khusus selama Anda menginap</li>
@@ -2509,11 +2507,11 @@ const idFaqs: FaqItem[] = [
         <p className="mb-4">
           <strong>$300 panggilan darurat (tersedia 24/7, mencakup 4 jam pertama), kemudian $100/jam.</strong>{' '}
           Dukungan darurat mencakup situasi setelah jam kerja, akhir pekan, atau perawatan akut yang membutuhkan
-          pendampingan perawat di lokasi di luar jadwal concierge yang direncanakan. Dalam keadaan darurat medis yang mengancam jiwa,
+          pendampingan perawat di lokasi di luar jadwal concierge yang telah ditentukan. Dalam keadaan darurat medis yang mengancam jiwa,
           hubungi 120 (nomor ambulans nasional Tiongkok) terlebih dahulu.
         </p>
         <p>
-          <strong>Apa yang TIDAK termasuk</strong> (ditagih terpisah sesuai tarif lokal): Biaya pengobatan medis yang dibayar langsung ke rumah sakit/klinik (konsultasi dokter, tes, obat-obatan, prosedur, dan paket pemeriksaan kesehatan mulai dari ~$700), akomodasi, penerbangan internasional, interpretasi dalam bahasa selain Inggris, dan upgrade kendaraan untuk rombongan yang lebih besar. ShanghaiMed tidak mengenakan komisi rumah sakit.
+          <strong>Apa yang TIDAK termasuk</strong> (ditagih terpisah sesuai tarif lokal): Biaya pengobatan medis yang dibayar langsung ke rumah sakit/klinik (konsultasi dokter, tes, obat-obatan, prosedur, dan paket pemeriksaan kesehatan mulai dari ~$700), akomodasi, penerbangan internasional, interpretasi dalam bahasa selain Bahasa Inggris, dan upgrade kendaraan untuk rombongan yang lebih besar. ShanghaiMed tidak mengenakan komisi rumah sakit.
         </p>
       </>
     ),
@@ -2523,18 +2521,18 @@ const idFaqs: FaqItem[] = [
     a: (
       <>
         <p className="mb-4">
-          <strong>Tentu saja — inilah filosofi inti ShanghaiMed.</strong> Shanghai adalah kota paling internasional di Tiongkok dengan:
+          <strong>Tentu saja — inilah filosofi inti ShanghaiMed.</strong> Shanghai adalah kota paling bertaraf internasional di Tiongkok dengan:
         </p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li><strong>The Bund</strong> — kawasan pejalan kaki tepi sungai yang ikonik</li>
-          <li><strong>Yu Garden</strong> — taman klasik Tiongkok berusia 400 tahun</li>
+          <li><strong>Yu Garden</strong> — taman tradisional Tiongkok berusia 400 tahun</li>
           <li><strong>Shanghai Tower</strong> — gedung tertinggi kedua di dunia (632m)</li>
           <li><strong>Shanghai Disneyland</strong> — istana Disney terbesar di dunia</li>
           <li><strong>French Concession</strong> — jalan-jalan dengan deretan pohon, kafe, dan butik</li>
         </ul>
         <p>
-          Banyak pasien menjadwalkan <strong>janji temu medis pada Hari 1-2</strong>, kemudian menghabiskan hari-hari tersisa menjelajahi
-          kota. ShanghaiMed membantu Anda mengintegrasikan janji temu medis ke dalam rencana perjalanan sehingga Anda tidak
+          Banyak pasien menyusun jadwal <strong>janji temu medis pada Hari 1-2</strong>, kemudian menghabiskan hari-hari tersisa menjelajahi
+          kota. ShanghaiMed membantu Anda menyelaraskan janji temu medis dengan rencana perjalanan sehingga Anda tidak
           membuang waktu liburan.
         </p>
       </>
@@ -2582,8 +2580,8 @@ const idFaqs: FaqItem[] = [
     a: (
       <>
         <p className="mb-4">
-          Ya. Rumah sakit mitra ShanghaiMed memiliki <strong>perjanjian penyelesaian langsung</strong> dengan perusahaan asuransi
-          internasional utama. Cakupan berkisar dari 8 hingga 24 perusahaan asuransi per rumah sakit:
+          Ya. Rumah sakit mitra ShanghaiMed memiliki <strong>perjanjian penagihan langsung</strong> dengan perusahaan asuransi
+          internasional utama. Cakupan melibatkan 8 hingga 24 perusahaan asuransi per rumah sakit:
         </p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li>Huashan Hospital — 24 mitra asuransi</li>
@@ -2593,9 +2591,9 @@ const idFaqs: FaqItem[] = [
         </ul>
         <p>
           Perusahaan asuransi yang diterima mencakup <strong>MSH, Bupa, Cigna, Aetna, AXA, Allianz, AIA, International SOS,</strong> dan banyak lagi.
-          ShanghaiMed menyediakan dukungan asuransi termasuk pengecekan manfaat polis dan surat pra-otorisasi. Di mana penyelesaian
-          langsung tersedia, kami berkoordinasi dengan rumah sakit atas nama Anda; selain itu pasien membayar rumah sakit secara langsung
-          dan mengajukan klaim penggantian dengan dukungan dokumentasi kami.
+          ShanghaiMed menyediakan dukungan asuransi termasuk pengecekan manfaat polis dan surat pra-otorisasi. Jika layanan penagihan langsung
+          tersedia, kami berkoordinasi dengan rumah sakit atas nama Anda; selain itu pasien membayar rumah sakit secara langsung
+          dan mengajukan klaim penggantian dengan bantuan dokumentasi kami.
         </p>
       </>
     ),
@@ -2607,11 +2605,11 @@ const idFaqs: FaqItem[] = [
         <p className="mb-4">ShanghaiMed menyediakan <strong>tindak lanjut pasca-pengobatan yang komprehensif</strong>:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li><strong>Pemeriksaan video jarak jauh</strong> dengan dokter yang merawat Anda</li>
-          <li><strong>Rekam medis yang diterjemahkan</strong> — ringkasan keluar lengkap, hasil tes, dan daftar obat dalam bahasa Inggris</li>
-          <li><strong>Panduan pengobatan</strong> — instruksi dosis, efek samping, dan peringatan interaksi</li>
+          <li><strong>Rekam medis yang telah diterjemahkan</strong> — ringkasan keluar lengkap, hasil tes, dan daftar obat dalam bahasa Inggris</li>
+          <li><strong>Panduan penggunaan obat</strong> — instruksi dosis, efek samping, dan peringatan interaksi</li>
           <li><strong>Perencanaan pemulihan</strong> — garis waktu personal dan rekomendasi aktivitas</li>
-          <li><strong>Koordinasi di negara asal</strong> — kami membagikan rekam medis Anda kepada dokter perawatan primer Anda (dengan persetujuan)</li>
-          <li><strong>Dukungan berkelanjutan</strong> — tim kami tetap tersedia untuk pertanyaan setelah Anda pulang ke rumah</li>
+          <li><strong>Koordinasi dengan dokter di negara asal</strong> — kami membagikan rekam medis Anda kepada dokter perawatan primer Anda (dengan persetujuan)</li>
+          <li><strong>Dukungan berkelanjutan</strong> — tim kami selalu tersedia untuk pertanyaan setelah Anda pulang ke rumah</li>
         </ul>
         <p>Tindak lanjut berlangsung selama <strong>30 hari</strong> setelah pengobatan Anda (60 hari untuk paket pembedahan).</p>
       </>
@@ -2622,12 +2620,12 @@ const idFaqs: FaqItem[] = [
     a: (
       <>
         <p className="mb-4">
-          <strong>Ya.</strong> Konsultasi awal dengan Sara melalui WhatsApp benar-benar gratis dan tidak membawa
+          <strong>Ya.</strong> Konsultasi awal dengan Sara melalui WhatsApp gratis sepenuhnya dan tanpa
           kewajiban apa pun. Dalam panggilan tersebut, kami menilai kebutuhan medis Anda, merekomendasikan rumah sakit dan spesialis yang sesuai,
           memberikan estimasi anggaran yang realistis untuk pengobatan, dan menjelaskan cara kerja asuransi.
         </p>
         <p>
-          Ini adalah percakapan tahap keputusan; layanan di lokasi (pendampingan perawat, pemesanan janji temu,
+          Ini merupakan percakapan tahap keputusan; layanan di lokasi (pendampingan perawat, pemesanan janji temu,
           interpretasi lisan) dimulai setelah Anda memesan pendamping per jam atau paket concierge.
         </p>
       </>
@@ -2639,18 +2637,17 @@ const idFaqs: FaqItem[] = [
       <>
         <p className="mb-4">
           <strong>Ya.</strong> Pendamping rumah sakit di lokasi tersedia sebagai layanan mandiri dengan tarif <strong>$50/jam</strong>,
-          dipesan dan dibayar per jam. Layanan ini juga tersedia sebagai tambahan untuk paket concierge mana pun untuk jam tambahan
-          atau janji temu tambahan. Ini diperuntukkan bagi pasien yang sudah memesan janji temu dokter sendiri dan hanya
-          membutuhkan pendamping medis Inggris–Tiongkok di lokasi untuk antrean, pembayaran, pengambilan obat, dan pertanyaan
-          mendasar di lokasi.
+          dipesan dan dibayar sesuai jam penggunaan. Layanan ini juga tersedia sebagai tambahan pada paket concierge mana pun untuk jam tambahan
+          atau janji temu tambahan. Ini cocok untuk pasien yang sudah memesan janji temu dokter sendiri dan hanya
+          membutuhkan pendamping medis Inggris–Mandarin di lokasi untuk antrean, pembayaran, pengambilan obat, dan pertanyaan mendasar di lokasi.
         </p>
         <p className="mb-4">
-          Interpretasi adalah <strong>Inggris–Tiongkok</strong>;
-          bahasa lain diatur atas permintaan dengan biaya tambahan, yang dikutip selama konsultasi.
+          Interpretasi adalah <strong>Inggris–Mandarin</strong>;
+          bahasa lain diatur atas permintaan dengan biaya tambahan, yang harganya ditentukan pada saat konsultasi.
         </p>
         <p>
           Pendamping per jam <strong>TIDAK</strong> termasuk penjadwalan janji temu, pencocokan dokter, penjemputan bandara,
-          penerjemahan laporan, dukungan visa, pra-otorisasi asuransi, atau tindak lanjut pasca-kunjungan — hal-hal tersebut dicakup oleh
+          penerjemahan laporan, dukungan visa, pra-otorisasi asuransi, atau tindak lanjut pasca-kunjungan — hal-hal tersebut dicakup dalam
           paket concierge ($500/$1,000/$1,650).
         </p>
       </>

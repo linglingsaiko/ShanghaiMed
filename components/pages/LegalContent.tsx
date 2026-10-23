@@ -16,47 +16,41 @@ import { legalId, legalIdContact } from '@/lib/content/legal.id'
 import { editorialId } from '@/lib/content/editorial.id'
 import type { LegalDoc } from '@/lib/content/types'
 
-type DocKey = 'privacy' | 'terms' | 'refund' | 'editorial'
+type DocKey = 'privacy' | 'terms' | 'editorial'
 
 const enDocs: Record<DocKey, LegalDoc> = {
   privacy: legalEn.privacy,
   terms: legalEn.terms,
-  refund: legalEn.refund,
   editorial: editorialEn,
 }
 
 const arDocs: Record<DocKey, LegalDoc> = {
   privacy: legalAr.privacy,
   terms: legalAr.terms,
-  refund: legalAr.refund,
   editorial: editorialAr,
 }
 
 const ruDocs: Record<DocKey, LegalDoc> = {
   privacy: legalRu.privacy,
   terms: legalRu.terms,
-  refund: legalRu.refund,
   editorial: editorialRu,
 }
 
 const mnDocs: Record<DocKey, LegalDoc> = {
   privacy: legalMn.privacy,
   terms: legalMn.terms,
-  refund: legalMn.refund,
   editorial: editorialMn,
 }
 
 const msDocs: Record<DocKey, LegalDoc> = {
   privacy: legalMs.privacy,
   terms: legalMs.terms,
-  refund: legalMs.refund,
   editorial: editorialMs,
 }
 
 const idDocs: Record<DocKey, LegalDoc> = {
   privacy: legalId.privacy,
   terms: legalId.terms,
-  refund: legalId.refund,
   editorial: editorialId,
 }
 

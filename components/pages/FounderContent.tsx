@@ -316,6 +316,8 @@ const text = {
     verifiedTitle: 'شهادات موثَّقة',
     nurseCertName: 'شهادة مزاولة مهنة التمريض',
     ispnCertName: 'شهادة إنجاز ISPN',
+    jlptCertName: 'شهادة JLPT N1 (اختبار كفاءة اللغة اليابانية، المستوى الأعلى)',
+    jlptCertIssuer: 'خدمات التبادل التعليمي اليابانية / مؤسسة اليابان',
     certFootnote: 'انقر لعرض الشهادات الموثَّقة. حُجبت المعلومات الحساسة حمايةً للخصوصية.',
     experienceTitle: 'مجالات الخبرة',
     companyTitle: 'عن الشركة',
@@ -346,6 +348,8 @@ const text = {
     verifiedTitle: 'Verified Credentials',
     nurseCertName: 'Nurse Practicing Certificate',
     ispnCertName: 'ISPN Certificate of Achievement',
+    jlptCertName: 'JLPT N1 Certificate (Japanese-Language Proficiency Test)',
+    jlptCertIssuer: 'Japan Educational Exchanges and Services / Japan Foundation',
     certFootnote: 'Click to view verified credentials. Sensitive information redacted for privacy.',
     experienceTitle: 'Areas of Experience',
     companyTitle: 'About the Company',
@@ -376,6 +380,8 @@ const text = {
     verifiedTitle: '資格証明（確認済み）',
     nurseCertName: '看護師執業証書',
     ispnCertName: 'ISPN資格認定証',
+    jlptCertName: 'JLPT N1 認定証（日本語能力試験 最高レベル）',
+    jlptCertIssuer: '日本国際教育支援協会／国際交流基金',
     certFootnote: 'クリックすると資格証明をご確認いただけます。個人情報はプライバシー保護のため黒塗り処理しています。',
     experienceTitle: '経験分野',
     companyTitle: '会社情報',
@@ -406,6 +412,8 @@ const text = {
     verifiedTitle: 'Подтверждённые сертификаты',
     nurseCertName: 'Сертификат права осуществления медсестринской практики',
     ispnCertName: 'Сертификат об успешном прохождении ISPN',
+    jlptCertName: 'Сертификат JLPT N1 (Экзамен по японскому языку, высший уровень)',
+    jlptCertIssuer: 'Японская служба образовательных обменов / Японский фонд',
     certFootnote: 'Нажмите, чтобы просмотреть подтверждённые квалификации. Конфиденциальная информация скрыта для защиты персональных данных.',
     experienceTitle: 'Сфера опыта',
     companyTitle: 'О компании',
@@ -436,6 +444,8 @@ const text = {
     verifiedTitle: 'Баталгаажсан гэрчилгээ',
     nurseCertName: 'Сувилагчийн үйл ажиллагааны гэрчилгээ',
     ispnCertName: 'ISPN амжилтын гэрчилгээ',
+    jlptCertName: 'JLPT N1 гэрчилгээ (Япон хэлний шалгалт, дээд түвшин)',
+    jlptCertIssuer: 'Японы Боловсролын Солилцооны Үйлчилгээ / Япон Сан',
     certFootnote: 'Баталгаажсан итгэмжлэлийг үзэхийн тулд дарна уу. Хувийн мэдээллийг хамгаалах үүднээс эмзэг мэдээллийг далдалсан.',
     experienceTitle: 'Туршлагын чиглэл',
     companyTitle: 'Компанийн тухай',
@@ -466,6 +476,8 @@ const text = {
     verifiedTitle: 'Kelayakan Yang Disahkan',
     nurseCertName: 'Sijil Amalan Jururawat',
     ispnCertName: 'Sijil Pencapaian ISPN',
+    jlptCertName: 'Sijil JLPT N1 (Ujian Kecekapan Bahasa Jepun, Tahap Tertinggi)',
+    jlptCertIssuer: 'Japan Educational Exchanges and Services / Japan Foundation',
     certFootnote: 'Klik untuk melihat kelayakan yang disahkan. Maklumat sensitif telah disunting untuk privasi.',
     experienceTitle: 'Bidang Pengalaman',
     companyTitle: 'Mengenai Syarikat',
@@ -496,6 +508,8 @@ const text = {
     verifiedTitle: 'Kredensial Terverifikasi',
     nurseCertName: 'Sertifikat Praktik Keperawatan',
     ispnCertName: 'Sertifikat Pencapaian ISPN',
+    jlptCertName: 'Sertifikat JLPT N1 (Tes Kemahiran Bahasa Jepang, Tingkat Tertinggi)',
+    jlptCertIssuer: 'Japan Educational Exchanges and Services / Japan Foundation',
     certFootnote: 'Klik untuk melihat kredensial terverifikasi. Informasi sensitif disunting untuk privasi.',
     experienceTitle: 'Bidang Pengalaman',
     companyTitle: 'Tentang Perusahaan',
@@ -622,6 +636,18 @@ export default function FounderContent() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
               </a>
+
+              <div className="flex items-center gap-3 p-4 border rounded-lg">
+                <div className="flex-shrink-0 w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-gray-900">{t.jlptCertName}</p>
+                  <p className="text-xs text-gray-500">{t.jlptCertIssuer}</p>
+                </div>
+              </div>
             </div>
             <p className="text-xs text-gray-400 mt-3 text-center">{t.certFootnote}</p>
           </div>
@@ -663,7 +689,7 @@ export default function FounderContent() {
             </div>
             <div>
               <dt className="font-medium text-gray-900">{t.languages}</dt>
-              <dd>{language === 'ja' ? '英語・中国語・日本語' : language === 'ar' ? 'الإنجليزية، الصينية، اليابانية' : language === 'ru' ? 'английский, китайский, японский' : language === 'mn' ? 'English, 中文, 日本語' : language === 'ms' ? 'English, 中文, 日本語' : language === 'id' ? 'English, 中文, 日本語' : 'English, 中文, 日本語'}</dd>
+              <dd>{language === 'ja' ? '英語・中国語・日本語（コア）。その他の言語はプロの通訳者ネットワークを通じて対応可能' : language === 'ar' ? 'الإنجليزية والصينية واليابانية (اللغات الأساسية). تتوفر لغات أخرى عبر شبكة المترجمين الفوريين المحترفين' : language === 'ru' ? 'Английский, китайский, японский (основные). Другие языки — через сеть профессиональных переводчиков' : language === 'mn' ? 'English, 中文, 日本語 (үндсэн). Бусад хэлийг мэргэжлийн орчуулагчийн сүлжээгээр дамжуулан ашиглах боломжтой' : language === 'ms' ? 'English, 中文, 日本語 (teras). Bahasa lain boleh diatur melalui rangkaian jurubahasa profesional' : language === 'id' ? 'English, 中文, 日本語 (inti). Bahasa lain tersedia melalui jaringan penerjemah profesional' : 'English, Mandarin Chinese, Japanese (core team). Additional languages available through our professional medical interpreter network — Malay, Indonesian, Arabic, Russian, Mongolian, Korean, French, Spanish, German, and more.'}</dd>
             </div>
           </div>
         </section>

@@ -95,7 +95,7 @@ export const legalMs: Record<string, LegalDoc> = {
       },
       {
         title: '2. Penerimaan syarat',
-        body: ['Dengan mengakses https://shanghaimedhealth.com ("Laman Web") atau menggunakan perkhidmatan ShanghaiMed, termasuk pembayaran sebarang deposit atau yuran penyelarasan, anda bersetuju untuk terikat dengan Syarat Perkhidmatan ini serta Dasar Privasi dan Dasar Bayaran Balik kami. Jika anda tidak bersetuju, sila jangan gunakan Laman Web atau perkhidmatan kami.'],
+        body: ['Dengan mengakses https://shanghaimedhealth.com ("Laman Web") atau menggunakan perkhidmatan ShanghaiMed, termasuk penglibatan perkhidmatan kami, anda bersetuju untuk terikat dengan Syarat Perkhidmatan ini serta Dasar Privasi kami. Jika anda tidak bersetuju, sila jangan gunakan Laman Web atau perkhidmatan kami.'],
       },
       {
         title: '3. Perkhidmatan kami',
@@ -123,7 +123,7 @@ export const legalMs: Record<string, LegalDoc> = {
         title: '5. Penglibatan, sebut harga dan pembayaran',
         items: [
           'Sebut harga bertulis dan pelan perkhidmatan akan diberikan kepada anda sebelum sebarang pembayaran perlu dibuat.',
-          'Deposit tempahan diperlukan untuk menjamin slot pakar, temujanji hospital, ketersediaan jurubahasa dan tetingkap perjalanan yang dipersetujui. Penglibatan hanya disahkan selepas Deposit diterima oleh ShanghaiMed. Terma deposit dan bayaran balik dinyatakan dalam Dasar Bayaran Balik kami.',
+          'Terma tempahan khusus, termasuk sebarang deposit yang berkenaan, diperincikan dalam perjanjian perkhidmatan individu anda.',
           'Yuran penyelarasan boleh dibayar melalui pautan pembayaran kad atau kaedah pindahan bank antarabangsa yang kami sediakan. Yuran hospital dan klinikal dibayar terus kepada hospital yang merawat dan tidak sekali-kali dikutip atau dipegang oleh ShanghaiMed.',
           'Invois dikeluarkan oleh Shanghai Keling Information Technology Co., Ltd. mengikut undang-undang China.',
         ],
@@ -144,7 +144,7 @@ export const legalMs: Record<string, LegalDoc> = {
       },
       {
         title: '8. Pembatalan dan penjadualan semula',
-        body: ['Terma pembatalan dan penjadualan semula dinyatakan dalam Dasar Bayaran Balik kami. anda harus mengesahkan tempahan perjalanan hanya selepas temujanji hospital disahkan secara bertulis oleh ShanghaiMed.'],
+        body: ['Terma pembatalan dan penjadualan semula diperincikan dalam perjanjian perkhidmatan individu anda. anda harus mengesahkan tempahan perjalanan hanya selepas temujanji hospital disahkan secara bertulis oleh ShanghaiMed.'],
       },
       {
         title: '9. Harta intelek',
@@ -181,72 +181,6 @@ export const legalMs: Record<string, LegalDoc> = {
         body: ['Kami mungkin mengemas kini Syarat ini dari semasa ke semasa. Versi yang diterbitkan di Laman Web pada tarikh anda menggunakan perkhidmatan kami terpakai untuk penglibatan tersebut. Penggunaan berterusan Laman Web selepas perubahan disiarkan merupakan penerimaan Syarat yang dikemas kini.'],
       },
       { title: '16. Hubungi', contact: true },
-    ],
-  },
-
-  refund: {
-    title: 'Dasar Bayaran Balik',
-    lastUpdated: 'Kemaskini terakhir: 12 Oktober 2026',
-    sections: [
-      {
-        title: '1. Skop',
-        body: [
-          'Dasar Bayaran Balik ini terpakai kepada yuran penyelarasan perkhidmatan yang dikenakan oleh ShanghaiMed (Shanghai Keling Information Technology Co., Ltd.). Ia TIDAK terpakai kepada yuran yang dikenakan terus oleh hospital, doktor, klinik atau penyedia pihak ketiga yang lain (contohnya pemeriksaan, rawatan, ubat-ubatan, kemasukan atau deposit hospital), yang dibayar oleh pesakit terus kepada hospital yang merawat di bawah peraturan bayaran balik dan bil hospital tersebut sendiri.',
-          'ShanghaiMed tidak sekali-kali menerima atau memegang yuran hospital atau klinikal. Kami tidak boleh mengeluarkan bayaran balik bagi jumlah yang dibayar terus kepada hospital; sebarang permintaan bayaran balik bagi caj hospital mesti dibuat kepada hospital secara terus.',
-        ],
-      },
-      {
-        title: '2. Dua kategori yuran',
-        items: [
-          { lead: 'Yuran penyelarasan ShanghaiMed', text: '— yuran yang kami kenakan untuk semakan kes, terjemahan rekod perubatan, pemadanan hospital/pakar, penjadualan temujanji, sokongan visa dan logistik, pengiringan dwi-bahasa dan penyelarasan susulan. Dikutip oleh Shanghai Keling Information Technology Co., Ltd.' },
-          { lead: 'Yuran hospital / klinikal', text: '— semua caj perubatan, pemeriksaan, rawatan, ubat-ubatan dan hospital yang dibayar terus oleh pesakit kepada hospital yang merawat. ShanghaiMed tidak mengutip atau memegang dana ini dan tidak bertanggungjawab ke atas keputusan bayaran balik hospital.' },
-        ],
-      },
-      {
-        title: '3. Deposit tempahan',
-        body: ['Deposit tempahan tidak boleh dibayar balik ("Deposit") diperlukan untuk mengunci slot pakar, temujanji hospital, ketersediaan jurubahasa dan tetingkap perjalanan yang dipersetujui.'],
-        items: [
-          'Setelah kerja penyelarasan dimulakan (contohnya terjemahan rekod perubatan, pemadanan hospital/pakar, tempahan temujanji atau sokongan jemputan visa telah dilaksanakan), Deposit tidak boleh dibayar balik, kerana slot dan sumber pihak ketiga telah ditempah bagi pihak anda dan tidak boleh dilepaskan kepada pesakit lain.',
-          'Jika ShanghaiMed tidak dapat menyediakan perkhidmatan yang dipersetujui atas sebab yang berpunca daripada kami, Deposit akan dibayar balik sepenuhnya.',
-        ],
-      },
-      {
-        title: '4. Pembatalan oleh pesakit',
-        items: [
-          { lead: 'Lebih daripada 30 hari sebelum tarikh mula perkhidmatan yang dijadualkan, sebelum sebarang kerja penyelarasan dimulakan:', text: ' Deposit boleh dibayar balik tolak kos pihak ketiga tidak boleh dipulih yang telah ditanggung dan yuran pemprosesan pembayaran tidak boleh dipulih.' },
-          { lead: 'Dalam tempoh 30 hari dari tarikh mula perkhidmatan yang dijadualkan, atau setelah kerja penyelarasan dimulakan:', text: ' Deposit tidak boleh dibayar balik; sebarang baki selebihnya bagi perkhidmatan yang belum disampaikan mungkin dibayar balik sebahagiannya mengikut budi bicara kami berdasarkan kerja yang telah disiapkan.' },
-          { lead: 'Tidak hadir atau perubahan lewat yang tidak dapat diuruskan oleh hospital:', text: ' yuran penyelarasan tidak boleh dibayar balik.' },
-        ],
-      },
-      {
-        title: '5. Penjadualan semula',
-        body: ['Kami akan membuat usaha munasabah untuk menjadualkan semula lawatan anda sekali tanpa yuran penyelarasan tambahan, tertakluk kepada ketersediaan hospital dan pakar. Jika penjadualan semula memerlukan kerja penyelarasan baharu yang ketara atau kos pihak ketiga baharu, kami akan memaklumkan anda terlebih dahulu.'],
-      },
-      {
-        title: '6. Penolakan visa',
-        body: ['Penolakan visa tidak secara automatik melayakkan anda mendapat bayaran balik. Di mana dokumen sokongan visa yang disediakan oleh kami adalah betul dan lengkap, terma Deposit standard di atas terpakai. Dalam kes penolakan visa, kami akan, di mana mungkin, menjadualkan semula perkhidmatan sekali tanpa yuran penyelarasan tambahan.'],
-      },
-      {
-        title: '7. Sebab perubatan',
-        body: ['Jika anda tidak dapat mengembara atas sebab perubatan (disokong oleh dokumentasi daripada doktor yang merawat anda), kami akan mempertimbangkan bayaran balik separa berdasarkan kes demi kes selepas menolak kos pihak ketiga yang telah ditanggung. Kami tidak bertanggungjawab ke atas perubahan keadaan klinikal yang timbul antara tempahan dan lawatan anda.'],
-      },
-      {
-        title: '8. Yuran pemprosesan dan mata wang',
-        body: ['Yuran dan caj yang dikenakan oleh penyedia pembayaran (pemprosesan kad, penukaran mata wang atau yuran bank/pindahan wayar) tidak boleh dipulih dan boleh ditolak daripada sebarang bayaran balik yang diluluskan. Bayaran balik akan dibuat dalam mata wang asal pembayaran kepada kaedah pembayaran asal, biasanya dalam tempoh 10–20 hari perniagaan selepas kelulusan.'],
-      },
-      {
-        title: '9. Caj balik (chargeback)',
-        body: ['Kami berhasrat untuk menyelesaikan sebarang kebimbangan secara terus dan cepat. Jika anda tidak berpuas hati dengan mana-mana aspek perkhidmatan kami, sila hubungi kami sebelum memulakan caj balik kad supaya kami dapat bekerjasama dengan anda untuk menangani isu tersebut. Caj balik tidak mengatasi Dasar ini dan boleh menjejaskan amaun yang akhirnya perlu dibayar selepas semakan oleh rangkaian pembayaran.'],
-      },
-      {
-        title: '10. Cara meminta bayaran balik',
-        body: ['E-mel hello@shanghaimedhealth.com dengan nama penuh anda, rujukan tempahan dan sebab permintaan bayaran balik. Kami akan mengakui permintaan anda dalam tempoh 5 hari perniagaan dan memberikan keputusan selepas semakan.'],
-      },
-      {
-        title: '11. Perubahan kepada Dasar ini',
-        body: ['Kami mungkin mengemas kini Dasar Bayaran Balik ini dari semasa ke semasa. Versi yang berkuat kuasa pada tarikh anda membayar Deposit terpakai untuk penglibatan tersebut melainkan perubahan diperlukan oleh undang-undang.'],
-      },
-      { title: '12. Hubungi', contact: true },
     ],
   },
 }

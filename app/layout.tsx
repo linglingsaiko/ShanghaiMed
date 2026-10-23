@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     template: '%s | ShanghaiMed',
   },
   description:
-    'Free, confidential medical consultation with top Shanghai specialists. Connect with 19 partner hospitals including all Shanghai Grade 3A public hospitals and 5 international hospitals. Transparent pricing — Free consultation, On-site Hospital Escort $50/hour (standalone or add-on), Health Checkup Concierge $500/1 day, Essential Care Concierge $1,000/3 days, Surgery & Extended Care Concierge $1,650/5 days. English-Chinese & Japanese-Chinese medical interpretation, insurance support, and 24/7 emergency on-site assistance.',
+    'Independent, ISPN nurse-founded medical concierge for international patients in Shanghai. End-to-end coordination with 19 Grade 3A public hospitals (including 3 TCM university hospitals) and international private hospitals — medical records, hospital matching, visa support, airport pickup, bilingual nurse accompaniment, insurance direct billing, post-treatment follow-up. Transparent pricing: free consultation, on-site escort from $50/hour, concierge packages from $500. No hospital commissions. English, Chinese, Japanese, plus interpreter network for Arabic, Russian, Malay, Indonesian, and more.',
   keywords: [
     'Shanghai medical tourism',
     'free medical consultation Shanghai',
@@ -511,14 +511,6 @@ export default function RootLayout({
                       acceptedAnswer: {
                         '@type': 'Answer',
                         text: "All packages include English-Chinese on-site medical interpretation. Japanese-Chinese interpretation is also included at no extra cost — just specify Japanese at booking. Through Shanghai's extensive professional interpreter network (one of the most linguistically diverse cities in the world), we can arrange qualified medical interpreters for virtually any language — Arabic, Russian, Mongolian, Malay, Indonesian, Korean, French, Spanish, German, Portuguese, and many others. Interpreter rates depend on language rarity and medical terminology requirements. Tell Sara which language you need during consultation and she will match the right interpreter and quote the exact price before booking.",
-                      },
-                    },
-                    {
-                      '@type': 'Question',
-                      name: 'What is the cancellation and refund policy?',
-                      acceptedAnswer: {
-                        '@type': 'Answer',
-                        text: "The initial consultation is free with no obligation. Concierge service terms (including cancellation terms and applicable fees) are detailed in your individual service agreement before any payment is required. Emergency medical situations, visa denials, and force-majeure cases are always reviewed individually. We recommend purchasing travel insurance that covers trip interruption.",
                       },
                     },
                     {

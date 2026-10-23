@@ -340,10 +340,9 @@ const enTranslations = {
         { q: 'Are medical fees included in concierge pricing?', a: 'No. The concierge fee is for our coordination and companion services only. <strong>Medical fees (doctor consultations, hospital charges, lab tests, medications, surgery) are paid directly to the hospital at local rates</strong>. We provide you with a clear cost estimate before you arrive, and you will know the hospital\'s published prices before each procedure. We do not charge hospital commissions.' },
         { q: 'Do you support emergency or after-hours situations?', a: 'In a medical emergency, <strong>call 120 immediately</strong> and go to the nearest hospital — concierge packages do not include emergency medical services. Once you are at the hospital, we offer <strong>24/7 emergency on-site coordination</strong> at an additional fee: <strong>$300 emergency call-out (available 24/7, includes the first 4 hours)</strong>, then <strong>$100/hour</strong> for additional on-site companion support. This covers urgent dispatch, senior nurse coordination, family communication, and hospital navigation during the emergency. Contact Sara on WhatsApp as soon as possible after calling 120.' },
         { q: 'What languages are included? Do you support languages other than English and Chinese?', a: 'All concierge packages include <strong>English–Chinese on-site medical interpretation</strong>. Japanese–Chinese interpretation is included for Japanese-speaking clients booking via the Japanese page. If you need support in <strong>any other language</strong> (Arabic, Russian, Mongolian, Korean, French, Spanish, etc.), a dedicated interpreter can be arranged at an additional cost — rates are based on local Shanghai market pricing for that language. Please mention your language needs when you chat with Sara so we can give you an accurate quote.' },
-        { q: 'What is your refund and cancellation policy?', a: 'Cancellations made <strong>14 or more days</strong> before your scheduled arrival receive a full refund minus a small processing fee. Cancellations within <strong>14 days</strong> are eligible for a partial refund, as some hospital and logistics arrangements may already have been made. Same-day cancellations and no-shows are non-refundable. Cases involving genuine medical emergencies or visa denials with documentation are reviewed individually — we do our best to be fair. Specific refund terms will be included in your booking confirmation.' },
+
         { q: 'Can I bring family members or my own interpreter?', a: '<strong>Yes — bringing family members or your own interpreter is welcome at no extra charge.</strong> Our nurse-escort focuses on medical coordination, hospital navigation, and interpretation regardless of party size. If you are traveling with a larger group and need a larger vehicle (e.g., a van instead of a standard sedan for airport pickup), an upgrade fee may apply based on vehicle type and availability. Let Sara know your group size when booking so we can arrange the right transport.' },
       ],
-      refundPolicy: 'Refund Policy',
       medicalDisclaimer: 'Medical Disclaimer',
       independentDisclaimer: 'ShanghaiMed operates as an independent concierge service provider; we do not practice medicine and our nurses do not replace your treating doctors.',
     },
@@ -535,7 +534,7 @@ const enTranslations = {
         },
         {
           title: 'Legal',
-          links: ['Privacy Policy', 'Terms of Service', 'Refund Policy', 'Editorial Policy', 'Medical Disclaimer'],
+          links: ['Privacy Policy', 'Terms of Service', 'Editorial Policy', 'Medical Disclaimer'],
         },
       ],
       rights: 'All rights reserved.',
@@ -917,10 +916,8 @@ export const translations: Record<Language, any> = {
         { q: 'コンシェルジュ料金に医療費は含まれますか？', a: 'いいえ。コンシェルジュ料金は調整・同行サービスの対価です。<strong>医療費（診察代・入院費・検査代・薬代・手術費）は病院へ現地料金で直接お支払いいただきます</strong>。ご渡航前に明確な費用見積もりをお出しし、各処置の前に病院の公示価格をご確認いただけます。病院からのコミッションはいただきません。' },
         { q: '救急や時間外には対応していますか？', a: '救急医療の場合は<strong>直ちに120番に通報</strong>し、最寄りの病院へ搬送されてください — コンシェルジュパッケージに救急医療サービスは含まれません。病院に到着後、<strong>24時間365日の緊急現地調整</strong>を追加料金でご提供します：<strong>緊急出動300米ドル（24時間対応、最初の4時間を含む）</strong>、その後の現地同行サポートは<strong>1時間100米ドル</strong>。緊急派遣、シニア看護師の調整、ご家族への連絡、救急時の院内ナビゲーションをカバーします。120番通報後、できるだけ早くSaraまでLINEでご連絡ください。' },
         { q: '対応言語は何ですか？日本語以外の言語も対応できますか？', a: 'すべてのコンシェルジュパッケージに<strong>日中医療現場通訳</strong>が含まれます。<strong>その他の言語</strong>（英語・アラビア語・ロシア語・モンゴル語・韓国語・フランス語・スペイン語など）が必要な場合は、専門の通訳者を追加料金で手配可能です — 料金は上海のその言語の市場相場に基づきます。Saraとのチャットで必要な言語をお知らせいただければ、正確なお見積もりをご提示します。' },
-        { q: '返金・キャンセルポリシーを教えてください。', a: '渡航予定日の<strong>14日以上前</strong>のキャンセルは、少額の手数料を差し引いて全額返金いたします。<strong>14日を切ってから</strong>のキャンセルは、病院や物流面での手配がすでに進行している場合があるため、一部返金となります。当日キャンセルおよびノーショーは返金対象外です。真の救急事態やビザ却下（書類要）は個別に審査いたします — できる限り公正に対応いたします。具体的な返金条件は予約確認書に記載いたします。' },
         { q: '家族や自分の通訳を連れて行ってもいいですか？', a: '<strong>はい — ご家族やご自身の通訳の同伴を歓迎します（追加料金なし）。</strong>当方の看護師は、人数に関わらず医療調整・院内ナビゲーション・通訳に専念します。大人数でご旅行のため大型車両が必要な場合（例：空港送迎で標準セダンではなくバンが必要など）、車種・手配状況に応じてアップグレード料金が発生する場合があります。ご予約時に人数をSaraまでお知らせください。適切な送迎を手配いたします。' },
       ],
-      refundPolicy: '返金ポリシー',
       medicalDisclaimer: '医療免責事項',
       independentDisclaimer: 'ShanghaiMedは独立系コンシェルジュサービス事業者です。医療行為は行わず、当方の看護師は主治医に代わるものではありません。',
     },
@@ -1112,7 +1109,7 @@ export const translations: Record<Language, any> = {
         },
         {
           title: '法的事項',
-          links: ['プライバシーポリシー', '利用規約', '返金ポリシー', '編集ポリシー', '医療免責事項'],
+          links: ['プライバシーポリシー', '利用規約', '編集ポリシー', '医療免責事項'],
         },
       ],
       rights: 'All rights reserved.',
@@ -1438,10 +1435,8 @@ export const translations: Record<Language, any> = {
         { q: 'هل الرسوم الطبية مشمولة في أسعار الكونسيرج؟', a: 'لا. رسوم الكونسيرج مخصصة لخدمات التنسيق والمرافقة لدينا فقط. <strong>الرسوم الطبية (استشارات الأطباء، رسوم المستشفى، الفحوصات المخبرية، الأدوية، الجراحة) تُدفع مباشرة للمستشفى بالأسعار المحلية</strong>. نقدم لك تقديراً واضحاً للتكلفة قبل وصولك، وستعرف الأسعار المنشورة للمستشفى قبل كل إجراء. لا نتقاضى عمولات من المستشفيات.' },
         { q: 'هل تدعمون حالات الطوارئ أو الأوقات خارج الدوام؟', a: 'في حالة طارئة طبية، <strong>اتصل برقم 120 فوراً</strong> واذهب إلى أقرب مستشفى — باقات الكونسيرج لا تشمل خدمات الطوارئ الطبية. بمجرد وصولك إلى المستشفى، نقدم <strong>تنسيقاً ميدانياً للطوارئ على مدار الساعة</strong> مقابل رسوم إضافية: <strong>$300 رسوم استدعاء طوارئ (متاح على مدار الساعة، يشمل أول 4 ساعات)</strong>، ثم <strong>$100/الساعة</strong> لدعم المرافقة الميدانية الإضافي. يغطي ذلك الإرسال العاجل، تنسيق الممرضة الأولى، التواصل مع الأسرة، والتنقل في المستشفى أثناء الطوارئ. تواصل مع Sara على WhatsApp في أسرع وقت ممكن بعد الاتصال بـ 120.' },
         { q: 'ما اللغات المشمولة؟ هل تدعمون لغات غير الإنجليزية والصينية؟', a: 'تشمل جميع باقات الكونسيرج <strong>ترجمة طبية ميدانية بين الإنجليزية–الصينية</strong>. الترجمة بين اليابانية–الصينية مشمولة للعملاء الناطقين باليابانية الذين يحجزون عبر الصفحة اليابانية. إذا كنت تحتاج إلى دعم <strong>بلغة أخرى</strong> (العربية، الروسية، المنغولية، الكورية، الفرنسية، الإسبانية، إلخ)، يمكن ترتيب مترجم مخصص بتكلفة إضافية — تستند الأسعار إلى أسعار السوق المحلية في شنغهاي لتلك اللغة. يرجى ذكر احتياجاتك اللغوية عند الدردشة مع Sara حتى نتمكن من تقديم عرض أسعار دقيق.' },
-        { q: 'ما هي سياسة الاسترداد والإلغاء؟', a: 'الإلغاءات التي تتم <strong>قبل 14 يوماً أو أكثر</strong> من موعد وصولك المحدد تحصل على استرداد كامل مطروحاً منه رسوم معالجة صغيرة. الإلغاءات خلال <strong>14 يوماً</strong> مؤهلة لاسترداد جزئي، حيث قد يكون قد تم ترتيب بعض المستشفيات والخدمات اللوجستية بالفعل. إلغاءات نفس اليوم وعدم الحضور غير قابلة للاسترداد. تُراجع الحالات التي تنطوي على حالات طارئة طبية حقيقية أو رفض تأشيرات موثقة بشكل فردي — نبذل قصارى جهدنا لنكون منصفين. ستُدرج شروط الاسترداد المحددة في تأكيد الحجز الخاص بك.' },
         { q: 'هل يمكنني إحضار أفراد العائلة أو مترجمي الخاص؟', a: '<strong>نعم — إحضار أفراد العائلة أو مترجمك الخاص مرحب به دون أي رسوم إضافية.</strong> يركز مرافق الممرضة لدينا على التنسيق الطبي والتنقل في المستشفى والترجمة بغض النظر عن حجم المجموعة. إذا كنت تسافر مع مجموعة أكبر وتحتاج إلى مركبة أكبر (مثل شاحنة بدلاً من سيارة سيدان عادية للاستقبال من المطار)، قد تُطبق رسوم ترقية بناءً على نوع المركبة وتوافرها. أبلغ Sara بحجم مجموعتك عند الحجز حتى نتمكن من ترتيب النقل المناسب.' },
       ],
-      refundPolicy: 'سياسة الاسترداد',
       medicalDisclaimer: 'إخلاء مسؤولية طبية',
       independentDisclaimer: 'تعمل ShanghaiMed كمزود خدمة كونسيرج مستقل؛ لا نزاول الطب وممرضاتنا لا يحللن محل أطبائك المعالجين.',
     },
@@ -2161,10 +2156,8 @@ export const translations: Record<Language, any> = {
         { q: 'Включает ли стоимость консьерж-услуг медицинские расходы?', a: 'Нет. ShanghaiMed взимает независимую плату за координацию и сопровождение. Медицинские расходы — консультации врачей, анализы, лекарства, процедуры и пакеты чек-апа (от примерно 700 долл.) — оплачиваются напрямую больнице или клинике по местным тарифам. Мы не берём комиссий с больниц; цена консьерж-услуг указывается заранее и не содержит скрытых платежей.' },
         { q: 'Как организована экстренная и ночная медицинская помощь?', a: 'Экстренная помощь доступна круглосуточно (24/7). Срочный вызов стоит 300 долл. (включает первые 4 часа), далее — 100 долл./час, независимо от времени суток. При угрожающем жизни состоянии немедленно звоните 120 и обращайтесь в ближайшую больницу; скорая помощь в Китае работает на китайском языке — мы можем координировать связь с больницей сразу после вашего звонка.' },
         { q: 'Что если мне нужен перевод на язык, кроме английского и японского?', a: 'Перевод на английский и японский включён во все пакеты. Для других языков (арабский, русский, монгольский, корейский, французский и т.д.) мы нанимаем дополнительного переводчика по рыночным тарифам Шанхая, которые зависят от редкости языка и требований к медицинской терминологии. Сообщите Саре нужный язык при консультации, и она назовёт точную стоимость перед бронированием.' },
-        { q: 'Какова политика отмены и возврата?', a: 'Отмена более чем за 14 дней до приезда — полный возврат за вычетом небольшого административного сбора. При отмене в течение 14 дней до приезда возвращается часть суммы в зависимости от уже понесённых расходов (предварительная запись к врачам, перевод документов). Неявка или отмена в день приезда не подлежат возврату. Экстренные медицинские ситуации, отказ в визе и другие форс-мажорные случаи рассматриваются индивидуально.' },
         { q: 'Могу ли я приехать с семьёй или привезти своего переводчика?', a: 'Конечно. Сопровождение членов семьи и возможность использовать собственного переводчика не требуют дополнительной оплаты. Наша медсестра координирует медицинскую часть независимо от размера группы. Единственное исключение: если для вашей группы требуется автомобиль большего размера (например, минивэн для 4+ человек), разница в стоимости транспорта покрывается дополнительно.' },
       ],
-      refundPolicy: 'Политика возврата',
       medicalDisclaimer: 'Медицинский дисклеймер',
       independentDisclaimer: 'ShanghaiMed — независимый поставщик консьерж-услуг; мы не занимаемся медицинской практикой и наши медсёстры не заменяют лечащих врачей.',
     },
@@ -2302,7 +2295,7 @@ export const translations: Record<Language, any> = {
         },
         {
           title: 'Правовая информация',
-          links: ['Политика конфиденциальности', 'Условия использования', 'Политика возврата средств', 'Редакционная политика', 'Медицинский отказ от ответственности'],
+          links: ['Политика конфиденциальности', 'Условия использования', 'Редакционная политика', 'Медицинский отказ от ответственности'],
         },
       ],
       rights: 'Все права защищены.',
@@ -3144,10 +3137,7 @@ export const translations: Record<Language, any> = {
         { q: 'Консьержийн үнэд эмнэлгийн зардал багтдаг уу?', a: 'Үгүй. ShanghaiMed нь зохицуулалт, дагалдан явах үйлчилгээний тусдаа төлбөр авдаг. Эмнэлгийн зардал — эмчийн зөвлөгөө, шинжилгээ, эм, эмчилгээ, эрүүл мэндийн үзлэгийн багц (700 ам.доллараас) — эмнэлэг эсвэл клиникт орон нутгийн тарифаар шууд төлөгдөнө. Бид эмнэлгээс комисс авдаггүй, консьержийн үнийг урьдчилан тодорхой зааж, далд төлбөргүй.' },
         { q: 'Яаралтай болон шөнийн эмнэлгийн тусламж хэрхэн зохион байгуулагддаг вэ?', a: 'Яаралтай тусламж 24/7 боломжтой. Яаралтай дуудлага 300 ам.доллар (эхний 4 цаг багтсан), дараа нь цагийн 100 ам.доллар, өдөр шөнө ялгалгүй. Амь насанд аюултай нөхцөлд яаралтай 120 руу залгаж, ойрын эмнэлэгт хандана уу; Хятадын түргэн тусламж хятад хэлээр ажилладаг — дуудлагын дараа бид эмнэлэгтэй харилцах харилцааг нэн даруй зохицуулж чадна.' },
         { q: 'Англи, япон хэлнээс бусад хэлний орчуулга хэрэгтэй бол яах вэ?', a: 'Англи, япон хэлний орчуулга бүх багцад багтсан. Бусад хэл (араб, орос, солонгос, франц гэх мэт)-ийн хувьд нэмэлт орчуулагчийг тухайн хэлний ховордолт, эмнэлгийн нэр томъёоны шаардлагаас хамааран Шанхайн зах зээлийн ханшаар хөлслөнө. Зөвлөгөөний үед Сараад хэлээ хэлвэл захиалахын өмнө яг тодорхой үнийг хэлж өгнө.' },
-        { q: 'Цуцлах болон буцаан олголтын бодлого юу вэ?', a: 'Ирэхээс 14-өөс дээш хоногийн өмнө цуцалбал бүрэн буцаан олголт (бага хэмжээний захиргааны хураамж хасагдана). Ирэхээс 14 хоногийн дотор цуцалбал аль хэдийн гарсан зардал (эмчийн цаг, бичиг баримт орчуулга) -аас хамаарч хэсэгчлэн буцаана. Ирэх өдөр цуцлах эсвэл ирэхгүй бол буцаан олголтгүй. Эмнэлгийн яаралтай байдал, визнээс татгалзсан болон бусад давагдашгүй хүчин зүйлийн тохиолдлуудыг тус тусад нь авч үзнэ.' },
-        { q: 'Гэр бүлийнхэнтэйгээ ирж болох уу? Өөрийн орчуулагч авчирч болох уу?', a: 'Мэдээж. Гэр бүлийн гишүүд дагалдан явах болон өөрийн орчуулагч ашиглах нь нэмэлт төлбөргүй. Манай сувилагч бүлгийн хэмжээнээс үл хамааран эмнэлгийн зохицуулалтыг хариуцна. Цорын ганц үл хамаарах зүйл: танай бүлэгт илүү том машин (жишээлбэл, 4+ хүнд минивэн) шаардлагатай бол тээврийн зардлын зөрүүг нэмэлтээр төлнө.' },
       ],
-      refundPolicy: 'Буцаан олголтын бодлого',
       medicalDisclaimer: 'Эмнэлгийн мэдэгдэл',
       independentDisclaimer: 'ShanghaiMed нь бие даасан консьерж үйлчилгээ үзүүлэгч; бид эмнэлгийн үйл ажиллагаа эрхэлдэггүй, манай сувилагч нар эмчлэгч эмчийг орлохгүй.',
     },
@@ -3839,7 +3829,6 @@ export const translations: Record<Language, any> = {
             a: '<strong>Ya — membawa ahli keluarga atau jurubahasa sendiri dialu-alukan tanpa caj tambahan.</strong> Jururawat pendamping kami menumpukan pada koordinasi perubatan, navigasi hospital dan interpretasi tanpa mengira saiz kumpulan. Jika anda mengembara dengan kumpulan yang lebih besar dan memerlukan kenderaan yang lebih besar (cth. van berbanding sedan standard untuk jemputan lapangan terbang), bayaran naik taraf mungkin dikenakan berdasarkan jenis kenderaan dan ketersediaan. Beritahu Sara saiz kumpulan anda semasa menempah supaya kami boleh mengaturkan pengangkutan yang sesuai.'
           }
         ],
-        refundPolicy: 'Polisi Bayaran Balik',
         medicalDisclaimer: 'Penafian Perubatan',
         independentDisclaimer: 'ShanghaiMed beroperasi sebagai penyedia perkhidmatan concierge bebas; kami tidak mengamalkan perubatan dan jururawat kami tidak menggantikan doktor yang merawat anda.'
       },
@@ -4050,7 +4039,7 @@ export const translations: Record<Language, any> = {
           },
           {
             title: 'Perundangan',
-            links: ['Dasar Privasi', 'Syarat Perkhidmatan', 'Polisi Bayaran Balik', 'Dasar Editorial', 'Penafian Perubatan']
+            links: ['Dasar Privasi', 'Syarat Perkhidmatan', 'Dasar Editorial', 'Penafian Perubatan']
           }
         ],
         rights: 'Hak cipta terpelihara.',
@@ -4636,7 +4625,6 @@ export const translations: Record<Language, any> = {
             a: '<strong>Ya — membawa anggota keluarga atau penerjemah sendiri dipersilakan tanpa biaya tambahan.</strong> Pendamping perawat kami berfokus pada koordinasi medis, navigasi rumah sakit, dan interpretasi tanpa memandang ukuran rombongan. Jika Anda bepergian dengan rombongan lebih besar dan membutuhkan kenderaan yang lebih besar (misalnya, van alih-alih sedan standar untuk penjemputan bandara), biaya peningkatan mungkin berlaku tergantung jenis kenderaan dan ketersediaan. Beri tahu Sara ukuran rombongan Anda saat memesan agar kami dapat mengatur transportasi yang tepat.'
           }
         ],
-        refundPolicy: 'Kebijakan Pengembalian Dana',
         medicalDisclaimer: 'Pernyataan Penyangkalan Medis',
         independentDisclaimer: 'ShanghaiMed beroperasi sebagai penyedia layanan concierge independen; kami tidak mempraktikkan kedokteran dan perawat kami tidak menggantikan dokter yang merawat Anda.'
       },
@@ -4847,7 +4835,7 @@ export const translations: Record<Language, any> = {
           },
           {
             title: 'Hukum',
-            links: ['Kebijakan Privasi', 'Syarat Layanan', 'Kebijakan Pengembalian Dana', 'Kebijakan Editorial', 'Pernyataan Penyangkalan Medis']
+            links: ['Kebijakan Privasi', 'Syarat Layanan', 'Kebijakan Editorial', 'Pernyataan Penyangkalan Medis']
           }
         ],
         rights: 'Hak cipta dilindungi.',

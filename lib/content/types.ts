@@ -1,4 +1,4 @@
-// Shared types for legal / policy pages (privacy, terms, refund, editorial, disclaimer)
+// Shared types for legal / policy pages (privacy, terms, editorial, disclaimer)
 // Content lives in lib/content/legal.ts and is selected by locale.
 
 export interface LegalSubsection {

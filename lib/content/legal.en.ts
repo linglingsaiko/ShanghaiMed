@@ -95,7 +95,7 @@ export const legalEn: Record<string, LegalDoc> = {
       },
       {
         title: '2. Acceptance of terms',
-        body: ['By accessing https://shanghaimedhealth.com (the "Website") or engaging ShanghaiMed\u2019s services, including payment of any deposit or coordination fee, you agree to be bound by these Terms of Service and our Privacy Policy and Refund Policy. If you do not agree, please do not use the Website or our services.'],
+        body: ['By accessing https://shanghaimedhealth.com (the "Website") or engaging ShanghaiMed\u2019s services, including engagement of our services, you agree to be bound by these Terms of Service and our Privacy Policy. If you do not agree, please do not use the Website or our services.'],
       },
       {
         title: '3. Our services',
@@ -123,7 +123,7 @@ export const legalEn: Record<string, LegalDoc> = {
         title: '5. Engagement, quotes and payment',
         items: [
           'A written quote and service plan will be provided to you before any payment is due.',
-          'A booking deposit is required to secure appointments and coordination resources. The engagement is confirmed only after the Deposit has been received by ShanghaiMed. Deposit and refund terms are set out in our Refund Policy.',
+          'Specific booking terms, including any applicable deposits, are detailed in your individual service agreement.',
           'Coordination fees may be paid by the card payment links or international bank transfer methods we provide. Hospital and clinical fees are paid directly to the treating hospital and are never collected or held by ShanghaiMed.',
           'Invoices are issued by Shanghai Keling Information Technology Co., Ltd. in accordance with Chinese law.',
         ],
@@ -144,7 +144,7 @@ export const legalEn: Record<string, LegalDoc> = {
       },
       {
         title: '8. Cancellation and rescheduling',
-        body: ['Cancellation and rescheduling terms are set out in our Refund Policy. You should confirm travel bookings only after hospital appointments are confirmed in writing by ShanghaiMed.'],
+        body: ['Cancellation and rescheduling terms are detailed in your individual service agreement. You should confirm travel bookings only after hospital appointments are confirmed in writing by ShanghaiMed.'],
       },
       {
         title: '9. Intellectual property',
@@ -181,72 +181,6 @@ export const legalEn: Record<string, LegalDoc> = {
         body: ['We may update these Terms from time to time. The version published on the Website on the date you engage our services applies to that engagement. Continued use of the Website after changes are posted constitutes acceptance of the updated Terms.'],
       },
       { title: '16. Contact', contact: true },
-    ],
-  },
-
-  refund: {
-    title: 'Refund Policy',
-    lastUpdated: 'Last updated: October 12, 2026',
-    sections: [
-      {
-        title: '1. Scope',
-        body: [
-          'This Refund Policy applies to the service coordination fees charged by ShanghaiMed (Shanghai Keling Information Technology Co., Ltd.). It does NOT apply to fees charged directly by hospitals, doctors, clinics or other third-party providers (for example examination, treatment, medication, admission or hospital deposits), which are paid by the patient directly to the treating hospital under that hospital\u2019s own refund and billing rules.',
-          'ShanghaiMed never receives or holds hospital or clinical fees. We cannot issue refunds for amounts paid directly to hospitals; any refund request for hospital charges must be made to the hospital directly.',
-        ],
-      },
-      {
-        title: '2. Two categories of fees',
-        items: [
-          { lead: 'ShanghaiMed coordination fee', text: '— the fee we charge for case review, medical-record translation, hospital/specialist matching, appointment scheduling, visa and logistics support, bilingual accompaniment and follow-up coordination. Collected by Shanghai Keling Information Technology Co., Ltd.' },
-          { lead: 'Hospital / clinical fees', text: '— all medical, examination, treatment, medication and hospital charges paid directly by the patient to the treating hospital. ShanghaiMed does not collect or hold these funds and is not responsible for the hospital\u2019s refund decisions.' },
-        ],
-      },
-      {
-        title: '3. Booking deposit',
-        body: ['A non-refundable booking deposit (the "Deposit") is required to lock in specialist slots, hospital appointments, interpreter availability and the agreed travel window.'],
-        items: [
-          'Once coordination work has commenced (for example medical-record translation, hospital/specialist matching, appointment booking or visa invitation support has been carried out), the Deposit is non-refundable, because third-party slots and resources have been reserved on your behalf and cannot be released to other patients.',
-          'If ShanghaiMed is unable to provide the agreed service for reasons attributable to us, the Deposit will be refunded in full.',
-        ],
-      },
-      {
-        title: '4. Cancellation by the patient',
-        items: [
-          { lead: 'More than 30 days before the scheduled service start date, before any coordination work has commenced:', text: ' the Deposit is refundable minus non-recoverable third-party costs already incurred and non-recoverable payment-processing fees.' },
-          { lead: 'Within 30 days of the scheduled service start date, or after coordination work has commenced:', text: ' the Deposit is non-refundable; any remaining balance for services not yet delivered may be partially refunded at our discretion based on work already completed.' },
-          { lead: 'No-show or late changes that cannot be accommodated by the hospital:', text: ' coordination fees are non-refundable.' },
-        ],
-      },
-      {
-        title: '5. Rescheduling',
-        body: ['We will make reasonable efforts to reschedule your visit once at no extra coordination fee, subject to hospital and specialist availability. If rescheduling requires significant new coordination work or new third-party costs, we will inform you in advance.'],
-      },
-      {
-        title: '6. Visa refusal',
-        body: ['A visa refusal does not automatically entitle you to a refund. Where the visa support documentation provided by us was correct and complete, the standard Deposit terms above apply. In the case of a visa refusal we will, where possible, reschedule the service once at no additional coordination fee.'],
-      },
-      {
-        title: '7. Medical reasons',
-        body: ['If you are unable to travel on medical grounds (supported by documentation from your treating physician), we will consider a partial refund on a case-by-case basis after deducting third-party costs already incurred. We are not responsible for changes in clinical condition that arise between booking and your visit.'],
-      },
-      {
-        title: '8. Processing fees and currency',
-        body: ['Fees and charges levied by payment providers (card processing, currency conversion or bank/wire fees) are non-recoverable and may be deducted from any approved refund. Refunds will be made in the original currency of payment to the original payment method, normally within 10–20 business days of approval.'],
-      },
-      {
-        title: '9. Chargebacks',
-        body: ['We aim to resolve any concern directly and quickly. If you are dissatisfied with any aspect of our service, please contact us before initiating a card chargeback so we can work with you to address the issue. A chargeback does not override this Policy and may affect the amount ultimately due after review by the payment network.'],
-      },
-      {
-        title: '10. How to request a refund',
-        body: ['Email hello@shanghaimedhealth.com with your full name, booking reference and the reason for the refund request. We will acknowledge your request within 5 business days and provide a decision after review.'],
-      },
-      {
-        title: '11. Changes to this Policy',
-        body: ['We may update this Refund Policy from time to time. The version in effect on the date you pay the Deposit applies to that engagement unless a change is required by law.'],
-      },
-      { title: '12. Contact', contact: true },
     ],
   },
 }

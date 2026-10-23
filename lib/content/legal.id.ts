@@ -95,7 +95,7 @@ export const legalId: Record<string, LegalDoc> = {
       },
       {
         title: '2. Penerimaan syarat',
-        body: ['Dengan mengakses https://shanghaimedhealth.com ("Situs Web") atau menggunakan layanan ShanghaiMed, termasuk pembayaran deposit atau biaya koordinasi apa pun, Anda setuju untuk terikat oleh Syarat Layanan ini serta Kebijakan Privasi dan Kebijakan Pengembalian Dana kami. Jika Anda tidak setuju, mohon jangan menggunakan Situs Web atau layanan kami.'],
+        body: ['Dengan mengakses https://shanghaimedhealth.com ("Situs Web") atau menggunakan layanan ShanghaiMed, termasuk pengikatan layanan kami, Anda setuju untuk terikat oleh Syarat Layanan ini serta Kebijakan Privasi kami. Jika Anda tidak setuju, mohon jangan menggunakan Situs Web atau layanan kami.'],
       },
       {
         title: '3. Layanan kami',
@@ -123,7 +123,7 @@ export const legalId: Record<string, LegalDoc> = {
         title: '5. Pengikatan, penawaran, dan pembayaran',
         items: [
           'Penawaran tertulis dan rencana layanan akan diberikan kepada Anda sebelum pembayaran apa pun jatuh tempo.',
-          'Deposit pemesanan diperlukan untuk mengamankan slot spesialis, janji temu rumah sakit, ketersediaan penerjemah, dan jendela perjalanan yang disepakati. Pengikatan hanya dikonfirmasi setelah Deposit diterima oleh ShanghaiMed. Ketentuan deposit dan pengembalian dana diatur dalam Kebijakan Pengembalian Dana kami.',
+          'Ketentuan pemesanan spesifik, termasuk deposit apa pun yang berlaku, dirinci dalam perjanjian layanan individu Anda.',
           'Biaya koordinasi dapat dibayar melalui tautan pembayaran kartu atau metode transfer bank internasional yang kami sediakan. Biaya rumah sakit dan klinis dibayarkan langsung ke rumah sakit yang merawat dan tidak pernah dikumpulkan atau disimpan oleh ShanghaiMed.',
           'Faktur diterbitkan oleh Shanghai Keling Information Technology Co., Ltd. sesuai dengan hukum Tiongkok.',
         ],
@@ -144,7 +144,7 @@ export const legalId: Record<string, LegalDoc> = {
       },
       {
         title: '8. Pembatalan dan penjadwalan ulang',
-        body: ['Ketentuan pembatalan dan penjadwalan ulang diatur dalam Kebijakan Pengembalian Dana kami. Anda sebaiknya mengonfirmasi pemesanan perjalanan hanya setelah janji temu rumah sakit dikonfirmasi secara tertulis oleh ShanghaiMed.'],
+        body: ['Ketentuan pembatalan dan penjadwalan ulang dirinci dalam perjanjian layanan individu Anda. Anda sebaiknya mengonfirmasi pemesanan perjalanan hanya setelah janji temu rumah sakit dikonfirmasi secara tertulis oleh ShanghaiMed.'],
       },
       {
         title: '9. Kekayaan intelektual',
@@ -181,72 +181,6 @@ export const legalId: Record<string, LegalDoc> = {
         body: ['Kami dapat memperbarui Syarat ini dari waktu ke waktu. Versi yang diterbitkan di Situs Web pada tanggal Anda menggunakan layanan kami berlaku untuk pengikatan tersebut. Penggunaan Situs Web secara berkelanjutan setelah perubahan diposting merupakan penerimaan atas Syarat yang diperbarui.'],
       },
       { title: '16. Kontak', contact: true },
-    ],
-  },
-
-  refund: {
-    title: 'Kebijakan Pengembalian Dana',
-    lastUpdated: 'Terakhir diperbarui: 12 Oktober 2026',
-    sections: [
-      {
-        title: '1. Ruang lingkup',
-        body: [
-          'Kebijakan Pengembalian Dana ini berlaku untuk biaya koordinasi layanan yang dikenakan oleh ShanghaiMed (Shanghai Keling Information Technology Co., Ltd.). Kebijakan ini TIDAK berlaku untuk biaya yang dikenakan langsung oleh rumah sakit, dokter, klinik, atau penyedia pihak ketiga lainnya (misalnya pemeriksaan, pengobatan, obat-obatan, pendaftaran, atau deposit rumah sakit), yang dibayar oleh pasien langsung ke rumah sakit yang merawat sesuai aturan pengembalian dana dan penagihan rumah sakit itu sendiri.',
-          'ShanghaiMed tidak pernah menerima atau menyimpan biaya rumah sakit atau klinis. Kami tidak dapat mengeluarkan pengembalian dana untuk jumlah yang dibayar langsung ke rumah sakit; permintaan pengembalian dana untuk biaya rumah sakit harus diajukan ke rumah sakit secara langsung.',
-        ],
-      },
-      {
-        title: '2. Dua kategori biaya',
-        items: [
-          { lead: 'Biaya koordinasi ShanghaiMed', text: '— biaya yang kami kenakan untuk peninjauan kasus, penerjemahan rekam medis, pencocokan rumah sakit/spesialis, penjadwalan janji temu, dukungan visa dan logistik, pendampingan bilingual, dan koordinasi tindak lanjut. Dikumpulkan oleh Shanghai Keling Information Technology Co., Ltd.' },
-          { lead: 'Biaya rumah sakit / klinis', text: '— semua biaya medis, pemeriksaan, pengobatan, obat-obatan, dan rumah sakit yang dibayar langsung oleh pasien ke rumah sakit yang merawat. ShanghaiMed tidak mengumpulkan atau menyimpan dana ini dan tidak bertanggung jawab atas keputusan pengembalian dana rumah sakit.' },
-        ],
-      },
-      {
-        title: '3. Deposit pemesanan',
-        body: ['Deposit pemesanan yang tidak dapat dikembalikan ("Deposit") diperlukan untuk mengunci slot spesialis, janji temu rumah sakit, ketersediaan penerjemah, dan jendela perjalanan yang disepakati.'],
-        items: [
-          'Setelah pekerjaan koordinasi dimulai (misalnya penerjemahan rekam medis, pencocokan rumah sakit/spesialis, pemesanan janji temu, atau dukungan surat undangan visa telah dilakukan), Deposit tidak dapat dikembalikan, karena slot dan sumber daya pihak ketiga telah dipesan atas nama Anda dan tidak dapat dilepaskan ke pasien lain.',
-          'Jika ShanghaiMed tidak dapat menyediakan layanan yang disepakati karena alasan yang disebabkan oleh kami, Deposit akan dikembalikan sepenuhnya.',
-        ],
-      },
-      {
-        title: '4. Pembatalan oleh pasien',
-        items: [
-          { lead: 'Lebih dari 30 hari sebelum tanggal mulai layanan yang dijadwalkan, sebelum pekerjaan koordinasi apa pun dimulai:', text: ' Deposit dapat dikembalikan dikurangi biaya pihak ketiga yang tidak dapat dipulihkan yang telah dikeluarkan dan biaya pemrosesan pembayaran yang tidak dapat dipulihkan.' },
-          { lead: 'Dalam 30 hari dari tanggal mulai layanan yang dijadwalkan, atau setelah pekerjaan koordinasi dimulai:', text: ' Deposit tidak dapat dikembalikan; sisa saldo untuk layanan yang belum disampaikan dapat dikembalikan sebagian atas kebijakan kami berdasarkan pekerjaan yang telah diselesaikan.' },
-          { lead: 'Tidak hadir atau perubahan mendadak yang tidak dapat diakomodasi oleh rumah sakit:', text: ' biaya koordinasi tidak dapat dikembalikan.' },
-        ],
-      },
-      {
-        title: '5. Penjadwalan ulang',
-        body: ['Kami akan melakukan upaya yang wajar untuk menjadwalkan ulang kunjungan Anda satu kali tanpa biaya koordinasi tambahan, tergantung pada ketersediaan rumah sakit dan spesialis. Jika penjadwalan ulang memerlukan pekerjaan koordinasi baru yang signifikan atau biaya pihak ketiga baru, kami akan memberi tahu Anda sebelumnya.'],
-      },
-      {
-        title: '6. Penolakan visa',
-        body: ['Penolakan visa tidak secara otomatis memberi hak atas pengembalian dana. Jika dokumen dukungan visa yang kami berikan sudah benar dan lengkap, ketentuan Deposit standar di atas berlaku. Dalam kasus penolakan visa, kami akan, jika memungkinkan, menjadwalkan ulang layanan satu kali tanpa biaya koordinasi tambahan.'],
-      },
-      {
-        title: '7. Alasan medis',
-        body: ['Jika Anda tidak dapat melakukan perjalanan karena alasan medis (didukung oleh dokumentasi dari dokter yang merawat Anda), kami akan mempertimbangkan pengembalian dana sebagian berdasarkan kasus per kasus setelah dikurangi biaya pihak ketiga yang telah dikeluarkan. Kami tidak bertanggung jawab atas perubahan kondisi klinis yang muncul antara pemesanan dan kunjungan Anda.'],
-      },
-      {
-        title: '8. Biaya pemrosesan dan mata uang',
-        body: ['Biaya dan beban yang dikenakan oleh penyedia pembayaran (pemrosesan kartu, konversi mata uang, atau biaya bank/wire transfer) tidak dapat dipulihkan dan dapat dipotong dari pengembalian dana yang disetujui. Pengembalian dana akan dilakukan dalam mata uang pembayaran asli ke metode pembayaran asli, biasanya dalam waktu 10–20 hari kerja setelah persetujuan.'],
-      },
-      {
-        title: '9. Tagihan balik (chargeback)',
-        body: ['Kami bertujuan untuk menyelesaikan masalah apa pun secara langsung dan cepat. Jika Anda tidak puas dengan aspek layanan kami, silakan hubungi kami sebelum memulai chargeback kartu agar kami dapat bekerja sama dengan Anda untuk mengatasi masalah tersebut. Chargeback tidak mengesampingkan Kebijakan ini dan dapat memengaruhi jumlah yang akhirnya jatuh tempo setelah peninjauan oleh jaringan pembayaran.'],
-      },
-      {
-        title: '10. Cara meminta pengembalian dana',
-        body: ['Kirim email ke hello@shanghaimedhealth.com dengan nama lengkap Anda, referensi pemesanan, dan alasan permintaan pengembalian dana. Kami akan mengonfirmasi permintaan Anda dalam 5 hari kerja dan memberikan keputusan setelah peninjauan.'],
-      },
-      {
-        title: '11. Perubahan pada Kebijakan ini',
-        body: ['Kami dapat memperbarui Kebijakan Pengembalian Dana ini dari waktu ke waktu. Versi yang berlaku pada tanggal Anda membayar Deposit berlaku untuk pengikatan tersebut kecuali perubahan diwajibkan oleh hukum.'],
-      },
-      { title: '12. Kontak', contact: true },
     ],
   },
 }

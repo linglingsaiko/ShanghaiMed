@@ -433,16 +433,17 @@ const Pricing: React.FC = () => {
           </p>
         </div>
 
-        {/* FAQ link CTA — full FAQ on dedicated /faq page to avoid duplication */}
+        {/* FAQ link CTA — single FAQ entry point on homepage, points to dedicated /faq page */}
         <div className="mb-10 text-center">
           <Link
             href={localePath('/faq')}
-            className="inline-flex items-center gap-2 px-6 py-3 bg-white border border-gray-200 rounded-xl font-medium text-gray-700 hover:border-accent hover:text-accent transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-accent/8 border border-accent/20 rounded-xl font-medium text-accent hover:bg-accent/15 hover:border-accent/40 transition-colors"
           >
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" /></svg>
             {t('pricing.viewAllFaq')}
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" /></svg>
           </Link>
+          <p className="mt-2 text-xs text-gray-500">{t('pricing.faqLinkDesc')}</p>
         </div>
 
         {/* Footer fine print */}

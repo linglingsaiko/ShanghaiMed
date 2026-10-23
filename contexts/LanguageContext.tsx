@@ -334,6 +334,7 @@ const enTranslations = {
       socialProof: 'Trusted by international patients. No hidden fees — concierge pricing is quoted upfront and medical fees are paid directly to hospitals.',
       faqTitle: 'Frequently asked questions',
       viewAllFaq: 'See all pricing & service FAQs',
+      faqLinkDesc: 'Pricing, insurance, visas, payments, and medical care — over a dozen questions answered',
       faqItems: [
         { q: 'Is the initial consultation really free? What does it cover?', a: "Yes — the initial WhatsApp consultation with Sara is completely free with no obligation. On this call we assess your medical needs, recommend suitable hospitals and specialists, give you a realistic budget range for treatment, and explain how insurance works. It's a decision-stage conversation; on-site services (nurse accompaniment, appointment booking, in-person interpretation) begin when you book an hourly escort or a concierge package." },
         { q: 'Can I book just an on-site hospital escort without a full concierge package?', a: 'Yes. Our on-site hospital escort is available standalone at $50/hour (minimum 2 hours). This is for patients who have already booked their own doctor appointment and only need an English-speaking companion to help with queues, payment, pharmacy pickup, and basic on-the-spot guidance. The escort is not necessarily a licensed nurse, and interpretation is English–Chinese only (other languages require an interpreter at additional cost). The hourly escort does not include appointment scheduling, doctor matching, airport pickup, report translation, visa support, or post-visit follow-up — those are covered by our concierge packages.' },
@@ -912,6 +913,7 @@ export const translations: Record<Language, any> = {
       socialProof: '世界各国の患者様にご利用いただいています。隠れた料金は一切なく、コンシェルジュ料金は事前にご提示。医療費は病院へ直接お支払いいただきます。',
       faqTitle: 'よくあるご質問',
       viewAllFaq: '料金・サービスのFAQをすべて見る',
+      faqLinkDesc: '料金、保険、ビザ、お支払い、診療について—10以上のよくある質問に回答',
       faqItems: [
         { q: '初回相談は本当に無料ですか？何が相談できますか？', a: 'はい。SaraによるWhatsApp初回相談は完全無料・義務なしです。医療ニーズの評価、適切な病院・専門医のご提案、治療費の現実的な予算感、保険の仕組みのご説明を差し上げます。あくまでご検討段階のご相談であり、現地サービス（看護師同行・予約手配・対面通訳）は時間制アテンドまたはコンシェルジュパッケージのご予約後に開始いたします。' },
         { q: 'フルパッケージを契約せず、病院内アテンドだけを依頼できますか？', a: 'はい。病院内アテンドは単体で1時間50米ドル（最低2時間）からご利用いただけます。ご自身ですでに医師の予約をお取りいただいている患者様が、英語のできる同伴者による順番待ち・会計・薬の受け取り・院内の簡単なご案内のみを必要とされる場合に適しています。アテンドスタッフは必ずしも看護師免許を保有しておらず、通訳は英語・中国語のみです（その他の言語は追加費用で通訳者を手配いたします）。時間制アテンドには予約手配・医師マッチング・空港送迎・レポート翻訳・ビザサポート・受診後フォローアップは含まれません — これらはコンシェルジュパッケージが対応いたします。' },
@@ -1295,6 +1297,7 @@ export const translations: Record<Language, any> = {
       socialProof: enTranslations.pricing.socialProof,
       faqTitle: 'الأسئلة الشائعة',
       viewAllFaq: 'عرض جميع الأسئلة الشائعة حول الأسعار والخدمات',
+      faqLinkDesc: enTranslations.pricing.faqLinkDesc,
       faqItems: enTranslations.pricing.faqItems,
       extraHoursNote: enTranslations.pricing.extraHoursNote,
       emergencyNote: enTranslations.pricing.emergencyNote,
@@ -1876,6 +1879,7 @@ export const translations: Record<Language, any> = {
       socialProof: 'Нам доверяют международные пациенты. Никаких скрытых платежей — цена консьерж-сервиса оговаривается заранее, медицинские расходы оплачиваются напрямую больницам.',
       faqTitle: 'Часто задаваемые вопросы',
       viewAllFaq: 'Посмотреть все вопросы о ценах и услугах',
+      faqLinkDesc: 'Цены, страховка, визы, оплата и медицинское обслуживание — ответы на более чем десяток вопросов',
       faqItems: [
         { q: 'Действительно ли первичная консультация бесплатна? Что она покрывает?', a: 'Да — первичная консультация с Сарой в WhatsApp полностью бесплатна и ни к чему не обязывает. На звонке мы оценим ваши медицинские потребности, порекомендуем подходящие больницы и специалистов, дадим реалистичную оценку бюджета на лечение и объясним, как работает страховка. Это разговор на этапе принятия решения; очные услуги (сопровождение медсестры, запись на приём, устный перевод) начинаются после бронирования почасового сопровождения или консьерж-пакета.' },
         { q: 'Можно ли заказать только очное сопровождение в больнице без полного консьерж-пакета?', a: 'Да. Очное сопровождение в больнице доступно как отдельная услуга за 50 долларов/час (минимум 2 часа). Это подходит пациентам, которые уже самостоятельно записались к врачу и нуждаются только в англоязычном сопровождающем для помощи с очередями, оплатой, получением лекарств и базовыми вопросами на месте. Сопровождающий не обязательно является дипломированной медсестрой, перевод осуществляется только с английского на китайский (другие языки — за дополнительную плату). Почасовое сопровождение не включает запись к врачам, подбор специалиста, трансфер из аэропорта, перевод заключений, визовую поддержку и последующее наблюдение — это покрывается консьерж-пакетами.' },
@@ -2858,6 +2862,7 @@ export const translations: Record<Language, any> = {
       socialProof: 'Олон улсын өвчтөнүүд бидэнд итгэдэг. Далд төлбөр байхгүй — консьержийн үнийг урьдчилан тодорхой хэлж өгнө, эмнэлгийн зардлыг эмнэлэгт шууд төлнө.',
       faqTitle: 'Түгээмэл асуултууд',
       viewAllFaq: 'Үнэ болон үйлчилгээний түгээмэл асуултуудыг бүгдийг нь харах',
+      faqLinkDesc: 'Үнэ, даатгал, виз, төлбөр, эрүүл мэндийн тусламж — 10 гаруй нийтлэг асуултанд хариулт',
       faqItems: [
         { q: 'Анхны зөвлөгөө үнэхээр үнэгүй юу? Юуг хамардаг вэ?', a: 'Тийм — Саратай WhatsApp дээр хийх анхны зөвлөгөө бүрэн үнэгүй бөгөөд ямар нэгэн үүрэг хүлээхгүй. Дуудлагаар бид таны эрүүл мэндийн хэрэгцээг үнэлж, тохирох эмнэлэг, мэргэжилтнүүдийг санал болгож, эмчилгээний төсвийн бодит тооцоог өгч, даатгал хэрхэн ажилладгийг тайлбарлана. Энэ нь шийдвэр гаргах үе шатны яриа юм; газар дээрх үйлчилгээ (сувилагч дагалдан явах, цаг захиалах, аман орчуулга) цагийн дагалдан явах эсвэл консьерж багц захиалсны дараа эхэлнэ.' },
         { q: 'Зөвхөн эмнэлэгт дагалдан явах үйлчилгээг консьерж багцгүйгээр захиалж болох уу?', a: 'Тийм. Эмнэлэгт биечлэн дагалдан явах үйлчилгээг цагийн 50 ам.доллараар (хамгийн багадаа 2 цаг) бие даасан үйлчилгээ болгон авах боломжтой. Энэ нь өөрсдөө эмчийн цаг захиалсан бөгөөд дараалал, төлбөр, эм авах, газар дээрх энгийн асуултуудад туслах англи хэлтэй дагалдан явагч хэрэгтэй өвчтөнүүдэд тохиромжтой. Дагалдан явагч нь заавал зөвшөөрөлтэй сувилагч байх албагүй, зөвхөн англи–хятад орчуулга хийнэ (бусад хэл нэмэлт төлбөртэй). Цагийн дагалдан явах үйлчилгээнд эмчийн цаг захиалах, мэргэжилтэн тохируулах, нисэх буудлын тээвэр, тайлан орчуулах, визний дэмжлэг, эмчилгээний дараах хяналт багтахгүй — эдгээрийг консьерж багцуудад багтаасан.' },

@@ -15,7 +15,7 @@ const CareTeam: React.FC = () => {
   // Credentials fallback (hard facts, verifiable)
   const credentialsFallback = [
     { name: 'Licensed Registered Nurses (RN)', detail: 'Verified by Shanghai Health Commission' },
-    { name: 'Trilingual Certification', detail: 'Fluent in English, Japanese, and Chinese' },
+    { name: 'Multilingual Certification', detail: 'Fluent in English and Chinese' },
     { name: 'JLPT N1 Certified', detail: '日本語能力試験 N1 — Japanese-Language Proficiency Test (highest level)' },
     { name: 'Medical Interpretation', detail: 'Clinical terminology, documentation, and on-site interpretation' },
     { name: 'International Patient Care', detail: '10+ years experience at Shanghai\'s top hospitals' },

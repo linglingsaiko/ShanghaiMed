@@ -270,7 +270,7 @@ const Pricing: React.FC = () => {
 
   return (
     <section id="pricing" className="py-16 md:py-24" style={{ background: '#f6f8fb' }}>
-      <div className="section-container">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="text-center mb-10">
           <span className="inline-block text-[11px] font-bold tracking-[0.18em] uppercase text-[#007d5a] bg-[#e6f7f0] px-3 py-1.5 rounded-full mb-3">

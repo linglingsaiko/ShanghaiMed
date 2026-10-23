@@ -279,7 +279,7 @@ const Pricing: React.FC = () => {
           <h2 className="text-[clamp(32px,4.5vw,48px)] font-extrabold tracking-tight text-[#0d1f2d] leading-tight mb-3">
             {t('pricing.title')}
           </h2>
-          <p className="text-[17px] text-[#3e5668] max-w-xl mx-auto leading-relaxed">
+          <p className="text-[17px] text-[#3e5668] max-w-2xl mx-auto leading-relaxed">
             {t('pricing.subtitle')}
           </p>
         </div>

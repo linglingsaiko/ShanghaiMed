@@ -270,7 +270,7 @@ const Pricing: React.FC = () => {
 
   return (
     <section id="pricing" className="py-16 md:py-24" style={{ background: '#f6f8fb' }}>
-      <div className="max-w-[1140px] mx-auto px-4 sm:px-6">
+      <div className="section-container">
         {/* Section Header */}
         <div className="text-center mb-10">
           <span className="inline-block text-[11px] font-bold tracking-[0.18em] uppercase text-[#007d5a] bg-[#e6f7f0] px-3 py-1.5 rounded-full mb-3">
@@ -344,7 +344,7 @@ const Pricing: React.FC = () => {
           cards.filter(c => c.kind === 'hourly' || c.kind === 'checkup'),
           cards.filter(c => c.kind === 'essential' || c.kind === 'surgery'),
         ].map((row, rIdx) => (
-          <div key={rIdx} className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-[760px] mx-auto mb-5 items-stretch">
+          <div key={rIdx} className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5 items-stretch">
             {row.map(card => {
               const name = resolveT(card.nameKey, card.nameFallback)
               const subtitle = resolveT(card.subtitleKey, card.subtitleFallback)
@@ -425,7 +425,7 @@ const Pricing: React.FC = () => {
         ))}
 
         {/* Integrated Pricing FAQ — 9 questions */}
-        <div className="mt-12 max-w-[760px] mx-auto">
+        <div className="mt-12">
           <h2 className="text-[22px] font-bold text-center text-[#0d1f2d] tracking-tight mb-1.5">
             {t('pricing.faqTitle')}
           </h2>

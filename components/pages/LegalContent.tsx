@@ -10,6 +10,10 @@ import { legalRu, legalRuContact } from '@/lib/content/legal.ru'
 import { editorialRu } from '@/lib/content/editorial.ru'
 import { legalMn, legalMnContact } from '@/lib/content/legal.mn'
 import { editorialMn } from '@/lib/content/editorial.mn'
+import { legalMs, legalMsContact } from '@/lib/content/legal.ms'
+import { editorialMs } from '@/lib/content/editorial.ms'
+import { legalId, legalIdContact } from '@/lib/content/legal.id'
+import { editorialId } from '@/lib/content/editorial.id'
 import type { LegalDoc } from '@/lib/content/types'
 
 type DocKey = 'privacy' | 'terms' | 'refund' | 'editorial'
@@ -42,6 +46,20 @@ const mnDocs: Record<DocKey, LegalDoc> = {
   editorial: editorialMn,
 }
 
+const msDocs: Record<DocKey, LegalDoc> = {
+  privacy: legalMs.privacy,
+  terms: legalMs.terms,
+  refund: legalMs.refund,
+  editorial: editorialMs,
+}
+
+const idDocs: Record<DocKey, LegalDoc> = {
+  privacy: legalId.privacy,
+  terms: legalId.terms,
+  refund: legalId.refund,
+  editorial: editorialId,
+}
+
 // Localize the contact block (company kept in English; address + label translated)
 function withLocalizedContact(doc: LegalDoc, contact: { company: string; address: string; email: string; label: string }): LegalDoc {
   return {
@@ -65,6 +83,12 @@ export default function LegalContent({ docKey }: { docKey: DocKey }) {
   }
   if (language === 'mn') {
     return <LegalDocView doc={withLocalizedContact(mnDocs[docKey], legalMnContact)} />
+  }
+  if (language === 'ms') {
+    return <LegalDocView doc={withLocalizedContact(msDocs[docKey], legalMsContact)} />
+  }
+  if (language === 'id') {
+    return <LegalDocView doc={withLocalizedContact(idDocs[docKey], legalIdContact)} />
   }
   // en / ja fall back to the authoritative English legal text
   return (

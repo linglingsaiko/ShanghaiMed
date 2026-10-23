@@ -1,9 +1,9 @@
 // i18n helper functions
 // URL-driven locale system (replaces localStorage-based LanguageContext)
 
-export type Locale = 'en' | 'ja' | 'ar' | 'ru' | 'mn';
+export type Locale = 'en' | 'ja' | 'ar' | 'ru' | 'mn' | 'ms' | 'id';
 
-export const LOCALES: Locale[] = ['en', 'ja', 'ar', 'ru', 'mn'];
+export const LOCALES: Locale[] = ['en', 'ja', 'ar', 'ru', 'mn', 'ms', 'id'];
 
 export const DEFAULT_LOCALE: Locale = 'en';
 

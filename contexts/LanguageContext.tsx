@@ -4,7 +4,7 @@ import React, { createContext, useContext, useState, useEffect, ReactNode } from
 import { usePathname } from 'next/navigation'
 import { getLocaleFromPathname } from '@/lib/i18n'
 
-export type Language = 'en' | 'ja' | 'ar' | 'ru' | 'mn'
+export type Language = 'en' | 'ja' | 'ar' | 'ru' | 'mn' | 'ms' | 'id'
 
 interface LanguageContextType {
   language: Language
@@ -3446,6 +3446,1601 @@ export const translations: Record<Language, any> = {
       faqSubtitle: 'Шанхай дахь эрүүл мэндийн тусламж авах талаар мэдэх шаардлагатай бүх зүйл — зардал, эмнэлгийн чанар, виз, даатгал, 2 хэлтэй дэмжлэг.',
     },
   },
+  ms: {
+      nav: {
+        whyShanghai: 'Mengapa Shanghai',
+        howItWorks: 'Bagaimana Ia Berfungsi',
+        treatments: 'Rawatan',
+        careTeam: 'Pasukan Penjagaan',
+        trust: 'Kepercayaan',
+        items: ['Mengapa Shanghai', 'Bagaimana Ia Berfungsi', 'Rangkaian Hospital', 'Pasukan Penjagaan', 'Harga', 'Blog', 'Hubungi Kami']
+      },
+      whyShanghai: {
+        badge: 'Mengapa Shanghai',
+        title: 'Penjagaan Kesihatan Bertaraf Dunia, Dipermudahkan untuk Pesakit Antarabangsa',
+        subtitle: 'Shanghai menawarkan akses ke hospital terkemuka, pakar berpengalaman, harga telus dan sokongan peribadi untuk pesakit antarabangsa.',
+        stats: [
+          {
+            label: 'Lawatan Pesakit Antarabangsa Tahunan Shanghai'
+          },
+          {
+            label: 'Hospital Perintis Pelancongan Perubatan Grade-A Awam'
+          },
+          {
+            label: 'Warganegara yang Dilayan'
+          },
+          {
+            label: 'Pertumbuhan Tahunan'
+          }
+        ],
+        healthSystem: {
+          title: 'Sistem Penjagaan Kesihatan Yang Diiktiraf Di Peringkat Antarabangsa',
+          items: ['Hospital terkemuka yang melayani pesakit dari seluruh dunia', 'Jabatan antarabangsa khusus dengan perkhidmatan berbahasa Inggeris', 'Hospital Grade 3A awam yang ditetapkan untuk perkhidmatan perubatan antarabangsa', 'Akses kepada pakar dalam onkologi, kardiologi, neurologi, ortopedik, rawatan kesuburan dan banyak lagi']
+        },
+        travelAccess: {
+          title: 'Perjalanan dan Akses Perubatan Yang Mudah',
+          items: ['Transit tanpa visa 240 jam tersedia untuk pelancong dari banyak negara', 'Sokongan visa perubatan untuk pelan rawatan lanjutan', 'Perkhidmatan jemputan lapangan terbang dan bantuan pengangkutan', 'Koordinasi menyeluruh sepanjang perjalanan kesihatan anda']
+        },
+        pricing: {
+          title: 'Penjagaan Kesihatan Berkualiti Tinggi pada Harga Berdaya Saing',
+          subtitleLine1: 'Ramai pesakit dari A.S. masih menanggung kos kesihatan out-of-pocket yang besar walaupun mempunyai perlindungan insurans.',
+          subtitleLine2: 'Angka menggambarkan kos out-of-pocket tipikal dan mungkin berbeza mengikut penyedia, lokasi, perlindungan insurans dan pelan rawatan.',
+          tableService: 'Perkhidmatan',
+          tableShanghai: 'Shanghai',
+          tableUs: 'Kos Tipikal A.S.',
+          rows: [
+            {
+              service: 'Pemeriksaan Kesihatan Eksekutif',
+              shanghai: 'Dari $700',
+              us: 'Dari $2,500'
+            },
+            {
+              service: 'Imbasan MRI',
+              shanghai: 'Dari $300',
+              us: 'Dari $1,000'
+            },
+            {
+              service: 'Imbasan CT',
+              shanghai: 'Dari $150',
+              us: 'Dari $500'
+            },
+            {
+              service: 'Konsultasi Pakar',
+              shanghai: 'Dari $70',
+              us: 'Dari $250'
+            },
+            {
+              service: 'Rawatan IVF',
+              shanghai: 'Dari $4,200',
+              us: 'Dari $15,000'
+            },
+            {
+              service: 'Implan Pergigian',
+              shanghai: 'Dari $800',
+              us: 'Dari $3,000'
+            }
+          ],
+          valueTitle: 'Mengapa Pesakit Mencari Nilai di Shanghai',
+          valueItems: ['Akses ke hospital dan pakar terkemuka', 'Harga yang telus sebelum rawatan', 'Akses lebih pantas ke konsultasi, pengimejan dan rawatan', 'Kos kesihatan out-of-pocket yang lebih rendah', 'Sokongan bilingual Inggeris–Cina yang diperibadikan sepanjang perjalanan pesakit'],
+          notesTitle: 'Nota Penting',
+          notes: ['Harga diberikan untuk tujuan ilustrasi sahaja dan tidak merupakan sebut harga.', 'Yuran perubatan sebenar ditentukan oleh hospital, doktor dan pelan rawatan.', 'Harga A.S. menggambarkan kos self-pay tipikal dan mungkin berbeza secara signifikan berdasarkan perlindungan insurans dan lokasi.', 'Kadar pertukaran adalah untuk rujukan sahaja dan mungkin berubah-ubah.', 'Rawatan kompleks, pembedahan, penjagaan kanser dan perkhidmatan pesakit dalam memerlukan sebut harga individu selepas semakan perubatan.']
+        }
+      },
+      processFlow: {
+        badge: 'Perjalanan Anda',
+        title: 'Dari Pertanyaan hingga Penjagaan',
+        subtitle: 'Garis masa lengkap pengalaman pelancongan perubatan anda di Shanghai, dengan sokongan profesional di setiap langkah.',
+        phases: [
+          {
+            phase: 'Sebelum Ketibaan Anda',
+            steps: [
+              {
+                title: 'Pertanyaan Dalam Talian',
+                description: 'AI Navigator bertindak balas serta-merta'
+              },
+              {
+                title: 'Penilaian Perubatan',
+                description: 'Mengumpul simptom, mengesyorkan hospital'
+              },
+              {
+                title: 'Anggaran Kos',
+                description: 'Harga telus untuk konsultasi & ujian asas'
+              },
+              {
+                title: 'Visa & Perjalanan',
+                description: 'Panduan transit tanpa visa/240j, tip perjalanan'
+              }
+            ]
+          },
+          {
+            phase: 'Semasa Lawatan Anda',
+            steps: [
+              {
+                title: 'Jemputan Lapangan Terbang',
+                description: 'Jururawat bilingual Inggeris–Cina menemui anda'
+              },
+              {
+                title: 'Lawatan Hospital',
+                description: 'Konsultasi & ujian diiringi jururawat'
+              },
+              {
+                title: 'Rawatan',
+                description: 'Penjagaan bertaraf dunia di hospital terkemuka'
+              },
+              {
+                title: 'Penjagaan Pesakit Dalam',
+                description: 'Sokongan kejururawatan khusus (jika diperlukan)'
+              }
+            ]
+          },
+          {
+            phase: 'Selepas Lawatan Anda',
+            steps: [
+              {
+                title: 'Discaj & Terjemahan',
+                description: 'Laporan perubatan dalam bahasa Inggeris'
+              },
+              {
+                title: 'Susulan',
+                description: 'Sokongan jauh, koordinasi preskripsi'
+              }
+            ]
+          }
+        ]
+      },
+      careTeam: {
+        title: 'Jururawat Berdaftar Bilingual Inggeris–Cina',
+        subtitle: 'Rakan penjagaan kesihatan yang berdedikasi di setiap peringkat perjalanan perubatan anda di Shanghai.',
+        badge: 'Pasukan Penjagaan',
+        expertTeam: 'Pasukan Penjagaan Pakar',
+        ispnCertified: 'Bertauliah ISPN',
+        ispnDesc: 'Piawaian Antarabangsa untuk Jururawat Profesional',
+        ispnIssuer: 'Diperakui oleh CGFNS (USA)',
+        credentialsTitle: 'Kelayakan Jururawat',
+        servicesTitle: 'Perkhidmatan Kejururawatan Kami',
+        nursingCare: 'Penjagaan Kejururawatan Bilingual Inggeris–Cina',
+        appointmentCoordination: 'Koordinasi Temujanji',
+        translationServices: 'Perkhidmatan Terjemahan',
+        transportation: 'Pengaturan Pengangkutan',
+        medicalReports: 'Terjemahan Laporan Perubatan',
+        emergencySupport: 'Sokongan Kecemasan',
+        services: [
+          {
+            title: 'Konsultasi Pra-Rawatan',
+            description: 'Menyemak rekod perubatan, menerangkan prosedur dan menyelaraskan dengan pakar hospital.'
+          },
+          {
+            title: 'Penjadualan Temujanji',
+            description: 'Mengatur konsultasi doktor, ujian diagnostik dan sesi rawatan.'
+          },
+          {
+            title: 'Terjemahan & Interpretasi',
+            description: 'Interpretasi perubatan masa nyata semasa konsultasi dan prosedur.'
+          },
+          {
+            title: 'Navigasi Hospital',
+            description: 'Membimbing sepanjang proses kemasukan, daftar keluar dan pembayaran.'
+          },
+          {
+            title: 'Sokongan Selepas Discaj',
+            description: 'Arahan ubat, temujanji susulan dan terjemahan laporan perubatan.'
+          },
+          {
+            title: 'Sokongan Insurans',
+            description: 'Memberi sokongan pentadbiran untuk semakan manfaat polisi & pengesahan perlindungan insurans hospital'
+          }
+        ],
+        credentials: [
+          {
+            name: 'Jururawat Berdaftar (RN) Berlesen',
+            detail: 'Disahkan oleh Shanghai Health Commission'
+          },
+          {
+            name: 'Pensijilan Dwibahasa (Inggeris–Cina)',
+            detail: 'Fasih berbahasa Inggeris dan Cina'
+          },
+          {
+            name: 'JLPT N1 Certified',
+            detail: '日本語能力試験 N1 — Japanese-Language Proficiency Test (tahap tertinggi)'
+          },
+          {
+            name: 'Interpretasi Perubatan',
+            detail: 'Menyokong terjemahan dokumen perubatan dan interpretasi di tapak'
+          },
+          {
+            name: 'Penjagaan Pesakit Antarabangsa',
+            detail: 'Pengalaman 10+ tahun'
+          }
+        ]
+      },
+      hero: {
+        badge1: 'Hospital Insurans Antarabangsa',
+        badge2: 'Jururawat Berdaftar Bilingual Inggeris–Cina',
+        badge3: 'Sokongan AI + Manusia 24/7',
+        title: 'Penjagaan Kesihatan di Shanghai',
+        titleHighlight: 'Direka Untuk Anda',
+        subtitle: 'Berhubung dengan hospital terkemuka China, jururawat bilingual Inggeris–Cina, dan sokongan AI 24/7 — semuanya melalui satu platform.',
+        cta: 'Tempah Konsultasi Percuma'
+      },
+      testimonials: {
+        badge: 'Cerita Pesakit',
+        title: 'Kata Pesakit Kami',
+        subtitle: 'Cerita benar daripada pesakit sebenar yang telah mengubah perjalanan kesihatan mereka bersama kami.',
+        patientsServed: 'Pesakit Dilayan',
+        countries: 'Negara',
+        satisfactionRate: 'Kadar Kepuasan',
+        totalSavings: 'Jumlah Penjimatan',
+        saved: 'Dijimatkan'
+      },
+      treatments: {
+        title: 'Hospital Terkemuka Shanghai',
+        subtitle: 'Akses hospital terkemuka di seluruh Shanghai, dengan cadangan yang disesuaikan dengan keperluan perubatan anda.',
+        hospitalNetwork: 'Rangkaian Hospital',
+        publicHospitals: 'Hospital Awam Gred 3A',
+        privateHospitals: 'Hospital Antarabangsa Swasta',
+        viewAll: 'Lihat Semua Hospital',
+        keyDepartments: 'Jabatan Utama',
+        certifications: 'Pensijilan Antarabangsa',
+        insurance: 'Insurans:',
+        all: 'Semua',
+        modalAllHospitals: 'Semua Hospital',
+        modalHospitalsAvailable: 'hospital tersedia',
+        modalAllGradeA: 'akses kepada semua hospital Grade 3A Shanghai',
+        modalAll: 'Semua Hospital',
+        modalPublicGradeA: 'Awam Grade-A',
+        modalInternationalPrivate: 'Swasta Antarabangsa',
+        modalIns: 'Ins:',
+        featuredTitle: 'Hospital Terpercaya',
+        featuredSubtitle: 'Hospital awam terkemuka China dengan jabatan antarabangsa khusus',
+        learnMore: 'Ketahui Lebih Lanjut'
+      },
+      howItWorks: {
+        title: 'Lima Langkah Mudah',
+        subtitle: 'Dari pertanyaan pertama anda hingga susulan selepas rawatan, kami menyokong setiap langkah perjalanan perubatan anda di Shanghai.',
+        badge: 'Bagaimana Ia Berfungsi',
+        simpleProcess: 'Proses Mudah',
+        step1Title: 'Konsultasi AI',
+        step1Desc: 'AI Navigator kami bertindak balas serta-merta untuk memahami keperluan anda.',
+        step2Title: 'Penugasan Pasukan Penjagaan',
+        step2Desc: 'Seorang jururawat berpengalaman akan ditugaskan sebagai penyelaras penjagaan anda.',
+        step3Title: 'Ketibaan di Shanghai',
+        step3Desc: 'Sokongan lengkap termasuk pemindahan lapangan terbang dan tempahan hotel.',
+        step4Title: 'Rawatan & Pemulihan',
+        step4Desc: 'Integrasi rawatan pakar yang lancar, sokongan bilingual Inggeris–Cina dan susulan selepas penjagaan.',
+        steps: [
+          {
+            title: 'Hantar Pertanyaan',
+            description: 'Isi borang hubungan kami dengan keperluan perubatan anda. AI navigator kami tersedia 24/7.'
+          },
+          {
+            title: 'Terima Konsultasi',
+            description: 'Dalam masa 24 jam, penyelaras manusia akan memberikan pilihan hospital dan anggaran kos.'
+          },
+          {
+            title: 'Sahkan & Berangkat',
+            description: 'Setelah anda bersedia untuk meneruskan, kami menyelaraskan temujanji, logistik perjalanan dan sokongan ketibaan.'
+          },
+          {
+            title: 'Terima Rawatan',
+            description: 'Jururawat bilingual Inggeris–Cina anda memberikan sokongan secara peribadi sepanjang konsultasi, pemeriksaan dan rawatan.'
+          },
+          {
+            title: 'Penjagaan Susulan',
+            description: 'Kami membantu dengan rekod perubatan, temujanji susulan, koordinasi preskripsi dan konsultasi jauh.'
+          }
+        ]
+      },
+      trust: {
+        badge: 'Mengapa Memilih Kami',
+        title: 'Rakan Kongsi Pelancongan Perubatan Anda Yang Boleh Dipercayai',
+        subtitle: 'Kami menyediakan perkhidmatan pelancongan perubatan yang profesional, telus dan boleh dipercayai di Shanghai. Inilah yang membezakan kami.',
+        ctaText: 'Bersedia untuk merasai perkhidmatan pelancongan perubatan yang profesional?',
+        ctaButton: 'Mulakan Pelancongan Perubatan Anda'
+      },
+      pricing: {
+        badge: 'Harga',
+        eyebrow: 'Tiada Bayaran Tersembunyi',
+        title: 'Harga Concierge',
+        subtitle: 'Satu yuran concierge yang telus bagi setiap orang. Yuran perubatan dibayar terus ke hospital pada kadar tempatan — kami tidak mengenakan komisen hospital.',
+        usdLabel: 'USD',
+        whatsIncluded: 'Apa yang disertakan',
+        freeCard: {
+          name: 'Konsultasi Awal Percuma',
+          subtitle: 'Dapatkan maklumat yang anda perlukan sebelum komited — tiada kewajipan, tiada bayaran.',
+          badge: 'Percuma',
+          unit: 'Percuma',
+          scope: 'Bercakap dengan Sara terlebih dahulu — tiada kewajipan, tiada bayaran.',
+          items: ['Penilaian keperluan perubatan', 'Cadangan hospital & pakar', 'Anggaran kos rawatan', 'Panduan insurans'],
+          itemsLabel: 'Apa yang anda dapat — 4 perkhidmatan',
+          callout: '<strong>Peringkat keputusan sahaja.</strong> Panggilan percuma ini membantu anda menentukan hospital, doktor dan julat bajet yang sesuai. Perkhidmatan di tapak bermula apabila anda menempah pengiring setiap jam atau pakej concierge.',
+          cta: 'Sembang dengan Sara di WhatsApp'
+        },
+        hourlyCard: {
+          name: 'Pengiring Hospital di Tapak',
+          subtitle: 'Untuk pesakit yang sudah menempah doktor sendiri.',
+          scope: 'Ditempah dan dibayar mengikut jam, tersedia secara berasingan <em style="font-style:italic;color:#7b8c99">atau</em> sebagai tambahan kepada mana-mana pakej.',
+          items: ['Rakan pengiring di tapak di hospital', 'Interpretasi perubatan di tapak bilingual Inggeris–Cina · bahasa lain caj tambahan', 'Bimbingan segera (giliran, pembayaran, pengambilan farmasi)', 'Mesej daftar masuk hari yang sama selepas lawatan'],
+          itemsLabel: 'Apa yang disertakan — 4 perkhidmatan',
+          callout: '<strong>Had skop:</strong> Pengiring setiap jam hanyalah pendamping di tapak dan interpretasi Inggeris–Cina sahaja. Ia <strong>tidak</strong> termasuk penjadualan temujanji, pemadanan doktor, jemputan lapangan terbang, terjemahan laporan, sokongan visa, pra-kebenaran insurans, interpretasi dalam bahasa selain bahasa Inggeris atau susulan selepas rawatan.',
+          cta: 'Tempah pengiring setiap jam'
+        },
+        checkupCard: {
+          subtitle: 'Jururawat khusus untuk satu hari.'
+        },
+        essentialCard: {
+          subtitle: 'Koordinasi lengkap merangkumi temujanji, interpretasi, insurans dan logistik.'
+        },
+        surgeryCard: {
+          subtitle: 'Sokongan terkoordinasi sepanjang pembedahan dan penginapan pesakit dalam.'
+        },
+        essentialBadge: 'Paling Kerap Dipilih',
+        packages: [
+          {
+            name: 'Health Checkup Concierge',
+            unit: 'setiap orang · 1 hari (waktu siang)',
+            description: 'Untuk program pemeriksaan kesihatan 1 hari sahaja.',
+            itemsLabel: 'Apa yang disertakan — 13 perkhidmatan',
+            allItems: ['Jururawat di tapak sehari penuh (waktu siang)', 'Bantuan koordinasi hotel', 'Terjemahan & penerangan laporan pemeriksaan kesihatan', 'Pengambilan & penghantaran ubat', 'Bantuan pengangkutan tempatan & pembayaran', 'Sokongan surat jemputan visa', 'Sokongan insurans', 'Jemputan & hantaran lapangan terbang · sedan standard', 'Interpretasi perubatan di tapak bilingual Inggeris–Cina', 'Penjadualan temujanji doktor', 'Pemadanan hospital & pakar', 'Sokongan WhatsApp khusus', 'Susulan jauh 30 hari selepas pemeriksaan']
+          },
+          {
+            name: 'Essential Care Concierge',
+            unit: 'setiap orang · 3 hari (waktu siang)',
+            description: 'Diperlukan untuk semua konsultasi pakar dan keadaan perubatan.',
+            itemsLabel: 'Apa yang disertakan — 13 perkhidmatan',
+            allItems: ['Jururawat di tapak selama 3 hari (waktu siang)', 'Semakan rekod perubatan pra-lawatan', 'Pemadanan doktor & pakar', 'Penjadualan temujanji hospital', 'Jemputan & hantaran lapangan terbang · sedan standard', 'Koordinasi hotel & pengangkutan tempatan', 'Interpretasi perubatan di tapak bilingual Inggeris–Cina', 'Navigasi di tapak & bantuan pembayaran', 'Terjemahan laporan perubatan', 'Pengambilan & penghantaran ubat', 'Sokongan WhatsApp khusus sepanjang lawatan', 'Sokongan insurans · pra-kebenaran', 'Susulan jauh 30 hari selepas rawatan']
+          },
+          {
+            name: 'Surgery & Extended Care',
+            unit: 'setiap orang · 5 hari (waktu siang)',
+            description: 'Diperlukan untuk pembedahan dan prosedur pesakit dalam.',
+            itemsLabel: 'Apa yang disertakan — 16 perkhidmatan',
+            allItems: ['Jururawat di tapak selama 5 hari (waktu siang)', 'Koordinasi pra-kemasukan', 'Pendampingan hari pembedahan', 'Lawatan semasa pesakit dalam', 'Komunikasi keluarga & kemas kini kemajuan', 'Semakan & taklimat rekod pra-pembedahan', 'Bimbingan pemilihan doktor & hospital', 'Jemputan & hantaran lapangan terbang · sedan standard', 'Sokongan hotel & penginapan lanjutan', 'Interpretasi perubatan di tapak bilingual Inggeris–Cina', 'Navigasi di tapak & bantuan pembayaran/bil', 'Terjemahan laporan pembedahan', 'Pengambilan & penghantaran ubat', 'Sokongan WhatsApp khusus', 'Koordinasi insurans & deposit pembedahan', 'Susulan 60 hari selepas rawatan']
+          }
+        ],
+        faqTitle: 'Soalan Lazim Harga & Perkhidmatan',
+        faqSub: 'Soalan lazim tentang harga, skop, insurans dan situasi khas.',
+        viewAllFaq: 'Lihat semua Soalan Lazim harga & perkhidmatan',
+        faqLinkDesc: 'Harga, insurans, visa, pembayaran dan penjagaan perubatan — soalan lazim terjawab',
+        faqItems: [
+          {
+            q: 'Adakah konsultasi percuma itu benar-benar percuma?',
+            a: 'Ya. Konsultasi awal anda melalui WhatsApp adalah <strong>percuma sepenuhnya tanpa sebarang kewajipan</strong>. Kami menilai keperluan perubatan anda, mengesyorkan hospital dan pakar, memberikan anggaran kos dan menerangkan pilihan insurans — semuanya sebelum anda membayar apa-apa. Perkhidmatan di tapak bermula hanya apabila anda menempah pengiring setiap jam atau pakej concierge.'
+          },
+          {
+            q: 'Bolehkah saya menempah pengiring setiap jam tanpa membeli pakej?',
+            a: 'Ya. <strong>Pengiring di tapak pada kadar $50/jam</strong> direka sebagai perkhidmatan kendiri untuk pesakit yang telah menempah doktor mereka sendiri dan hanya memerlukan sokongan pendamping di hospital. Ia juga tersedia sebagai tambahan untuk melanjutkan jam pendamping melebihi hari yang termasuk dalam pakej concierge. Nota: pengiring setiap jam meliputi kehadiran di tapak dan interpretasi Inggeris–Cina sahaja — penjadualan, pemadanan doktor, pemindahan lapangan terbang dan koordinasi insurans memerlukan pakej concierge. Sebagai tambahan kepada pakej concierge, jam pendamping tambahan melebihi hari yang termasuk juga dibilkan pada $50/jam.'
+          },
+          {
+            q: 'Apakah yang termasuk dalam pakej Essential $1,000?',
+            a: '<strong>Essential Care Concierge meliputi 3 hari pendamping siang penuh</strong>: semakan rekod perubatan pra-lawatan, pemadanan doktor, penjadualan pelbagai temujanji, interpretasi di tapak bilingual Inggeris–Cina di setiap lawatan, navigasi hospital, jemputan &amp; hantaran lapangan terbang dengan sedan standard (kenderaan khas dikenakan caj tambahan), terjemahan laporan perubatan, pengambilan &amp; penghantaran ubat, sokongan WhatsApp khusus sepanjang penginapan anda, sokongan insurans termasuk semakan manfaat polisi dan surat pra-kebenaran, serta susulan jauh 30 hari selepas rawatan. Pakej ini diperlukan untuk semua konsultasi pakar dan sebarang keadaan perubatan.'
+          },
+          {
+            q: 'Adakah anda mengendalikan insurans kesihatan?',
+            a: 'Kami menyediakan <strong>sokongan insurans</strong>, termasuk menyemak manfaat polisi anda, membantu anda mendapatkan surat pra-kebenaran dan menyelaraskan dokumen hospital. Di mana syarikat insurans anda mempunyai pengaturan pengebilan terus dengan hospital, kami membantu menyelaraskan proses tersebut. Di mana pengebilan terus tidak tersedia, anda membayar hospital secara terus dan kami menyediakan dokumentasi yang diperlukan oleh syarikat insurans anda untuk pembayaran balik. Kami tidak menjamin perlindungan atau kelulusan pengebilan terus — keputusan dibuat oleh syarikat insurans anda.'
+          },
+          {
+            q: 'Adakah yuran perubatan termasuk dalam harga concierge?',
+            a: 'Tidak. Yuran concierge adalah untuk perkhidmatan koordinasi dan pendampingan kami sahaja. <strong>Yuran perubatan (konsultasi doktor, caj hospital, ujian makmal, ubat-ubatan, pembedahan) dibayar terus ke hospital pada kadar tempatan</strong>. Kami memberikan anda anggaran kos yang jelas sebelum anda tiba, dan anda akan mengetahui harga yang diterbitkan hospital sebelum setiap prosedur. Kami tidak mengenakan komisen hospital.'
+          },
+          {
+            q: 'Adakah anda menyokong situasi kecemasan atau selepas waktu kerja?',
+            a: 'Dalam kecemasan perubatan, <strong>hubungi 120 dengan segera</strong> dan pergi ke hospital terdekat — pakej concierge tidak termasuk perkhidmatan perubatan kecemasan. Sebaik sahaja anda berada di hospital, kami menawarkan <strong>koordinasi kecemasan di tapak 24/7</strong> dengan bayaran tambahan: <strong>Panggilan kecemasan $300 (tersedia 24/7, termasuk 4 jam pertama)</strong>, kemudian <strong>$100/jam</strong> untuk sokongan pendamping di tapak tambahan. Ini meliputi penghantaran segera, koordinasi jururawat kanan, komunikasi keluarga dan navigasi hospital semasa kecemasan. Hubungi Sara di WhatsApp secepat mungkin selepas menghubungi 120.'
+          },
+          {
+            q: 'Apakah bahasa yang disertakan? Adakah anda menyokong bahasa selain bahasa Inggeris dan Cina?',
+            a: 'Semua pakej concierge termasuk <strong>interpretasi perubatan di tapak bilingual Inggeris–Cina</strong>. Interpretasi Jepun–Cina disertakan untuk pelanggan berbahasa Jepun yang menempah melalui halaman Jepun. Jika anda memerlukan sokongan dalam <strong>bahasa lain</strong> (Arab, Rusia, Mongolia, Korea, Perancis, Sepanyol dsb.), jurubahasa khusus boleh diaturkan dengan kos tambahan — kadar adalah berdasarkan harga pasaran tempatan Shanghai untuk bahasa tersebut. Sila nyatakan keperluan bahasa anda apabila berbual dengan Sara supaya kami boleh memberikan sebut harga yang tepat.'
+          },
+          {
+            q: 'Apakah polisi bayaran balik dan pembatalan anda?',
+            a: 'Pembatalan yang dibuat <strong>14 hari atau lebih</strong> sebelum tarikh ketibaan yang dijadualkan menerima bayaran balik penuh selepas ditolak yuran pemprosesan yang kecil. Pembatalan dalam tempoh <strong>14 hari</strong> layak mendapat bayaran balik separa, kerana beberapa pengaturan hospital dan logistik mungkin telah dibuat. Pembatalan hari yang sama dan ketidakhadiran adalah tidak boleh dibayar balik. Kes yang melibatkan kecemasan perubatan sebenar atau penolakan visa dengan dokumentasi akan disemak secara individu — kami berusaha sebaik mungkin untuk berlaku adil. Terma bayaran balik khusus akan disertakan dalam pengesahan tempahan anda.'
+          },
+          {
+            q: 'Bolehkah saya membawa ahli keluarga atau jurubahasa sendiri?',
+            a: '<strong>Ya — membawa ahli keluarga atau jurubahasa sendiri dialu-alukan tanpa caj tambahan.</strong> Jururawat pendamping kami menumpukan pada koordinasi perubatan, navigasi hospital dan interpretasi tanpa mengira saiz kumpulan. Jika anda mengembara dengan kumpulan yang lebih besar dan memerlukan kenderaan yang lebih besar (cth. van berbanding sedan standard untuk jemputan lapangan terbang), bayaran naik taraf mungkin dikenakan berdasarkan jenis kenderaan dan ketersediaan. Beritahu Sara saiz kumpulan anda semasa menempah supaya kami boleh mengaturkan pengangkutan yang sesuai.'
+          }
+        ],
+        refundPolicy: 'Polisi Bayaran Balik',
+        medicalDisclaimer: 'Penafian Perubatan',
+        independentDisclaimer: 'ShanghaiMed beroperasi sebagai penyedia perkhidmatan concierge bebas; kami tidak mengamalkan perubatan dan jururawat kami tidak menggantikan doktor yang merawat anda.'
+      },
+      freeConsultation: {
+        badge: 'Konsultasi Percuma',
+        title: 'Tempah Konsultasi Perubatan Percuma Anda',
+        subtitle: 'Bercakap dengan pasukan perubatan kami sebelum anda berangkat — kami akan memadankan anda dengan pakar yang sesuai, merancang perjalanan perubatan anda mengikut keperluan anda dan memberikan anggaran kos yang jelas di awal.',
+        specialistMatchTitle: 'Pemadanan Pakar Terbaik',
+        specialistMatchDesc: 'Kami menghubungkan anda dengan profesor dan ketua doktor terkemuka di hospital Grade 3A utama Shanghai — memadankan keadaan khusus anda dengan pakar yang sesuai untuk kes anda.',
+        specialistMatchPoints: ['Pakar dipadankan dengan keadaan perubatan khusus anda — bukan pilihan lalai atau terdekat', 'Berhubung dengan profesor dan ketua doktor yang tepat di hospital Grade 3A awam Shanghai berdasarkan kes anda', 'Akses keutamaan ke hospital antarabangsa dan swasta terkemuka di Shanghai; temujanji biasanya boleh diaturkan dalam masa singkat', 'Semakan rekod perubatan pra-konsultasi sebelum anda tiba di Shanghai'],
+        badges: [
+          {
+            title: 'Tiada Bayaran Diperlukan',
+            desc: 'Konsultasi percuma, tiada yuran atau deposit pendahuluan'
+          },
+          {
+            title: 'Tiada Kewajipan Membeli',
+            desc: 'Berbual dengan kami tanpa tekanan untuk menempah sebarang perkhidmatan'
+          },
+          {
+            title: 'Sulit',
+            desc: 'Maklumat perubatan anda kekal peribadi dan tidak akan dikongsi tanpa kebenaran'
+          }
+        ],
+        ctaTitle: 'Mulakan Konsultasi Percuma Anda',
+        ctaDesc: 'Hubungi kami di WhatsApp — pasukan perubatan kami akan membalas secepat mungkin, biasanya dalam beberapa jam pada waktu perniagaan.',
+        ctaButton: 'Sembang di WhatsApp',
+        hospitalNetworkTitle: 'Rangkaian Hospital Kami',
+        hospitalNetworkDesc: 'Kami bekerjasama dengan 14 hospital awam Grade 3A (peringkat teratas) dan 5 hospital antarabangsa di Shanghai. Di luar rakan kongsi yang diketengahkan ini, kami boleh mengaturkan temujanji di semua hospital tertiari awam di seluruh Shanghai.',
+        publicHospitals: 'Rakan Kongsi Awam Grade 3A (14)',
+        privateHospitals: 'Rakan Kongsi Hospital Antarabangsa (5)',
+        beyondTitle: 'Melangkaui Rangkaian Yang Diketengahkan',
+        beyondDesc: 'Jika keadaan anda memerlukan pakar di mana-mana hospital tertiari Shanghai yang lain — termasuk yang tidak disenaraikan di sini — kami boleh menyelaraskan temujanji bagi pihak anda. Beritahu kami keperluan perubatan anda dan kami akan memadankan anda dengan pakar yang sesuai.'
+      },
+      insights: {
+        badge: 'Blog',
+        title: 'Insight Terkini',
+        subtitle: 'Terokai artikel tentang penjagaan kesihatan di Shanghai, pelancongan perubatan dan kesejahteraan.',
+        readMore: 'Baca Lagi',
+        viewAll: 'Lihat Semua Artikel',
+        featured: '★ Pilihan Utama'
+      },
+      blog: {
+        title: 'Blog',
+        subtitle: 'Terokai artikel tentang penjagaan kesihatan di Shanghai, pelancongan perubatan dan kesejahteraan.',
+        filterContent: 'Tapis Kandungan',
+        searchPlaceholder: 'Cari artikel...',
+        search: 'Cari',
+        clearFilters: 'Kosongkan penapis',
+        categories: 'Kategori',
+        popularTags: 'Tag Popular',
+        noArticles: 'Tiada artikel ditemui sepadan dengan kriteria anda.',
+        minRead: 'min bacaan',
+        previous: 'Sebelumnya',
+        next: 'Seterusnya',
+        home: 'Laman Utama',
+        blogNav: 'Blog',
+        shareLabel: 'Kongsi:',
+        previousArticle: 'Artikel Sebelumnya',
+        nextArticle: 'Artikel Seterusnya',
+        toc: 'Isi Kandungan',
+        tocHide: 'Sembunyi',
+        tocShow: 'Tunjuk',
+        subscribeTitle: 'Langgan Surat Berita',
+        subscribeDesc: 'Dapatkan tip kesihatan dan kemas kini terkini terus ke peti masuk anda.',
+        emailPlaceholder: 'E-mel anda',
+        subscribe: 'Langgan',
+        subscribed: '✓ Berjaya melanggan! Terima kasih kerana menyertai surat berita kami.',
+        shareArticle: 'Kongsi artikel ini',
+        subscribeSuccessTitle: 'Langganan Berjaya!',
+        subscribeSuccessDesc: 'Terima kasih kerana melanggan surat berita kami. Anda akan menerima tip kesihatan dan kemas kini terkini.',
+        close: 'Tutup',
+        alertEmailRequired: 'Sila masukkan alamat e-mel anda',
+        alertSubscribeFail: 'Gagal melanggan. Sila cuba lagi kemudian.',
+        alertError: 'Ralat berlaku. Sila cuba lagi kemudian.',
+        pageHeaderTitle: 'Insight Penjagaan Kesihatan',
+        pageHeaderSubtitle: 'Terokai artikel tentang pelancongan perubatan, perkhidmatan penjagaan kesihatan dan tip kesejahteraan di Shanghai',
+        relatedArticles: 'Artikel Berkaitan',
+        recommendedHospitals: 'Hospital Disyorkan',
+        learnMore: 'Ketahui Lebih Lanjut',
+        insurancePartnersLabel: 'Rakan Kongsi Insurans',
+        bookTitle: 'Tempah Konsultasi Percuma',
+        bookDesc: 'Penyelaras perubatan kami bersedia membantu anda dengan pemilihan hospital, pilihan rawatan dan pengaturan perjalanan.',
+        whatsappConsult: 'Konsultasi WhatsApp',
+        requestQuote: 'Minta Sebut Harga',
+        categoryNames: {
+          'health-checkups': 'Pemeriksaan Kesihatan',
+          'preventive-healthcare': 'Penjagaan Kesihatan Pencegahan',
+          'medical-tourism': 'Pelancongan Perubatan',
+          'traditional-chinese-medicine': 'Perubatan Tradisional Cina',
+          'shanghai-hospitals': 'Hospital Shanghai',
+          'expat-healthcare': 'Penjagaan Kesihatan Ekspatriat',
+          'patient-stories': 'Cerita Pesakit',
+          'health-guides': 'Panduan Kesihatan'
+        }
+      },
+      faq: {
+        badge: 'Soalan Lazim',
+        title: 'Soalan Lazim',
+        subtitle: 'Semua yang anda perlu tahu tentang pelancongan perubatan di Shanghai.',
+        items: [
+          {
+            question: 'Bagaimana saya memulakan proses pelancongan perubatan?',
+            answer: 'Cukup isi borang hubungan kami dengan keadaan perubatan dan pilihan anda. Pasukan kami akan membalas dalam masa 24 jam dengan cadangan hospital dan anggaran kos.'
+          },
+          {
+            question: 'Adakah anda membantu dengan permohonan visa?',
+            answer: 'Ya, kami menyediakan bantuan visa untuk rawatan perubatan. Bagi negara yang layak, kami juga boleh membantu mengaturkan kemasukan transit tanpa visa 240 jam ke Shanghai.'
+          },
+          {
+            question: 'Bagaimana jika saya tidak bertutur bahasa Cina?',
+            answer: 'Semua penyelaras jururawat kami menyediakan terjemahan masa nyata semasa konsultasi perubatan. Laporan perubatan boleh disediakan dalam bahasa Inggeris atau bahasa pilihan anda.'
+          },
+          {
+            question: 'Bagaimana pembayaran berfungsi?',
+            answer: 'Anda membayar terus ke hospital. Bagi pemegang insurans, kami membantu dengan proses penyelesaian terus.'
+          },
+          {
+            question: 'Apakah jenis rawatan yang anda khususkan?',
+            answer: 'Kami menyokong pelbagai keperluan kesihatan, dari pemeriksaan pencegahan dan konsultasi pakar hingga ke penjagaan perubatan kompleks. Setiap pesakit mempunyai keperluan yang berbeza. Kami membantu mengenal pasti hospital, pakar dan laluan penjagaan yang paling sesuai untuk situasi anda.'
+          }
+        ],
+        stillTitle: 'Masih ada soalan?',
+        whatsappCta: 'Hubungi Kami di WhatsApp',
+        viewAll: 'Lihat Soalan Lazim Penuh',
+        viewAllDesc: 'Lihat semua jawapan tentang harga, insurans, visa, pembayaran dan penjagaan perubatan — lebih daripada sedozen soalan lazim.',
+        browseFaq: 'Lihat semua soalan',
+        whatsappDesc: 'Sembang terus dengan penyelaras jururawat kami. Dapatkan jawapan peribadi dalam bahasa Inggeris, Jepun atau Arab.'
+      },
+      contact: {
+        title: 'Mulakan Pelancongan Perubatan Anda Hari Ini',
+        subtitle: 'Dapatkan konsultasi percuma daripada pasukan perubatan kami. AI Navigator kami bertindak balas serta-merta. Penyelaras manusia membuat susulan dalam masa 24 jam.',
+        cta: 'Mulakan Pelancongan Perubatan Anda Hari Ini',
+        badge: 'Hubungi',
+        whatsappTitle: 'WhatsApp',
+        whatsappDesc: 'AI Navigator 24/7 + Respons Manusia 24 jam',
+        whatsapp: 'Sembang di WhatsApp',
+        lineTitle: 'LINE',
+        lineDesc: 'Sembang terus dengan penyelaras kami',
+        lineButton: 'Sembang di LINE',
+        lineIdLabel: 'LINE ID',
+        lineId: 'sara_shanghaimed',
+        lineScanHint: 'Imbas kod QR untuk menambah kami di LINE',
+        lineQrAlt: 'Kod QR LINE',
+        locationLabel: 'Lokasi',
+        locationValue: 'Shanghai, Republik Rakyat China',
+        responseLabel: 'Masa Respons',
+        responseValue: 'AI: Segera | Manusia: Dalam masa 24 jam',
+        emailLabel: 'E-mel',
+        nameLabel: 'Nama Penuh *',
+        namePlaceholder: 'Nama penuh anda',
+        emailLabel2: 'E-mel *',
+        emailPlaceholder: 'e-mel@anda.com',
+        countryLabel: 'Negara *',
+        countryPlaceholder: 'Pilih negara anda *',
+        otherCountry: 'Lain-lain',
+        otherCountryPlaceholder: 'Masukkan negara anda *',
+        countries: {
+          'United States': 'Amerika Syarikat',
+          'United Kingdom': 'United Kingdom',
+          Canada: 'Kanada',
+          Australia: 'Australia',
+          Japan: 'Jepun',
+          'South Korea': 'Korea Selatan',
+          Singapore: 'Singapura',
+          Germany: 'Jerman',
+          France: 'Perancis'
+        },
+        phoneLabel: 'Telefon / WhatsApp',
+        phonePlaceholder: 'Telefon / WhatsApp (pilihan)',
+        medicalNeedsLabel: 'Keperluan Perubatan *',
+        medicalNeedsPlaceholder: 'Pilih keperluan perubatan anda',
+        medicalNeeds: {
+          consultation: 'Konsultasi Perubatan',
+          cardiology: 'Kardiologi',
+          neurology: 'Neurologi',
+          oncology: 'Onkologi',
+          orthopedics: 'Ortopedik',
+          checkup: 'Pemeriksaan Kesihatan',
+          dental: 'Penjagaan Pergigian',
+          plastic: 'Pembedahan Plastik',
+          other: 'Lain-lain'
+        },
+        messageLabel: 'Mesej Anda',
+        messagePlaceholder: 'Sila huraikan keadaan perubatan atau pertanyaan anda...',
+        submit: 'Dapatkan Konsultasi Percuma',
+        submitting: 'Menghantar...',
+        successTitle: 'Terima Kasih!',
+        successMessage: 'Terima kasih! AI Navigator kami telah menerima pertanyaan anda dan pasukan kami akan membuat susulan dalam masa 24 jam. Anda juga boleh menghubungi kami di WhatsApp — kami akan membalas secepat mungkin.',
+        sendAnother: 'Hantar Mesej Lain',
+        privacyNote: 'Dengan menghantar borang ini, anda bersetuju dengan Dasar Privasi kami dan memberi kebenaran untuk dihubungi mengenai perkhidmatan perubatan kami.',
+        alertFail: 'Gagal menghantar mesej. Sila cuba lagi atau hubungi kami melalui WhatsApp.'
+      },
+      footer: {
+        tagline: 'Menghubungkan pesakit antarabangsa dengan institusi perubatan bertaraf dunia Shanghai dan profesional penjagaan kesihatan bilingual Inggeris–Cina.',
+        columns: [
+          {
+            title: 'Mengenai',
+            links: ['Tentang Kami', 'Pengasas Kami', 'Mengapa Shanghai', 'Rangkaian Kami', 'Pasukan Penjagaan']
+          },
+          {
+            title: 'Rawatan',
+            links: ['Hospital', 'Kepakaran', 'Panduan Harga']
+          },
+          {
+            title: 'Sokongan',
+            links: ['Bagaimana Ia Berfungsi', 'Soalan Lazim', 'Pusat Penyelidikan', 'Glosari', 'Hubungi Kami', 'Sokongan WhatsApp']
+          },
+          {
+            title: 'Perundangan',
+            links: ['Dasar Privasi', 'Syarat Perkhidmatan', 'Polisi Bayaran Balik', 'Dasar Editorial', 'Penafian Perubatan']
+          }
+        ],
+        rights: 'Hak cipta terpelihara.',
+        location: 'Shanghai, China'
+      },
+      agentChat: {
+        welcome: 'Helo! Saya Navi, pelayar perubatan anda. Tanya saya apa-apa tentang hospital, rawatan, kos, visa atau merancang perjalanan perubatan anda di Shanghai.',
+        questions: ['Apakah yang termasuk dalam perkhidmatan peribadi anda?', 'Bagaimana saya menempah temujanji?', 'Berapakah kos perkhidmatan satu-satu anda?'],
+        inputPlaceholder: 'Tanya saya tentang penjagaan kesihatan di Shanghai...',
+        chatTitle: 'Navi · Pelayar Perubatan',
+        chatSubtitle: 'Pembantu AI 24/7'
+      },
+      pages: {
+        treatmentsTitle: 'Rawatan & Hospital',
+        treatmentsSubtitle: 'Akses kepada institusi perubatan terbaik Shanghai merangkumi semua kepakaran.',
+        contactTitle: 'Hubungi Kami',
+        contactSubtitle: 'Mulakan perjalanan perubatan anda hari ini. Pasukan kami bersedia membantu 24/7.',
+        patientStoriesTitle: 'Cerita Pesakit',
+        patientStoriesSubtitle: 'Pengalaman sebenar daripada pesakit yang mempercayai kami dengan kesihatan mereka.',
+        whyShanghaiTitle: 'Mengapa Shanghai?',
+        whyShanghaiSubtitle: 'Shanghai telah muncul sebagai destinasi utama untuk pesakit antarabangsa yang mencari penjagaan perubatan bertaraf dunia pada harga yang mampu dimiliki.',
+        careTeamTitle: 'Pasukan Penjagaan Kami',
+        careTeamSubtitle: 'Jururawat bertauliah ISPN yang berdedikasi untuk kesihatan dan keselesaan anda.',
+        howItWorksTitle: 'Bagaimana Ia Berfungsi',
+        howItWorksSubtitle: 'Proses kami yang diperkemas memudahkan akses kepada penjagaan perubatan bertaraf dunia di Shanghai.',
+        faqTitle: 'Soalan Lazim',
+        faqSubtitle: 'Semua yang anda perlu tahu tentang menerima penjagaan perubatan di Shanghai — kos, kualiti hospital, visa, insurans dan sokongan bilingual Inggeris–Cina.'
+      },
+      medicalDisclaimer: {
+        title: 'Penafian Perubatan',
+        lastUpdated: 'Kemas kini terakhir: 12 Oktober 2026',
+        warning: 'ShanghaiMed bukanlah hospital, klinik atau penyedia perubatan. Kami tidak memberikan diagnosis perubatan, rawatan, preskripsi atau nasihat perubatan.',
+        whatWeAre: {
+          heading: 'Siapa kami',
+          content: 'ShanghaiMed (dikendalikan oleh Shanghai Keling Information Technology Co., Ltd.) adalah perkhidmatan koordinasi perjalanan perubatan dan navigasi pesakit. Kami membantu pesakit antarabangsa merancang dan menavigasi lawatan perubatan ke hospital awam berlesen dan pakar di Shanghai, China. Peranan kami adalah bersifat logistik, linguistik dan pentadbiran.'
+        },
+        whatWeDoNotDo: {
+          heading: 'Apa yang kami tidak lakukan',
+          item1: 'Kami tidak mendiagnosis keadaan perubatan.',
+          item2: 'Kami tidak mempreskripsikan ubat-ubatan.',
+          item3: 'Kami tidak menjalankan atau mengarahkan prosedur atau rawatan perubatan.',
+          item4: 'Kami tidak menjamin hasil klinikal, masa menunggu atau kejayaan mana-mana rawatan.',
+          item5: 'Kami bukan pengganti kepada pertimbangan profesional doktor berlesen.'
+        },
+        clinicalResponsibility: {
+          heading: 'Tanggungjawab klinikal',
+          content: 'Semua keputusan klinikal — termasuk diagnosis, pelan rawatan, preskripsi, pembedahan, ujian dan kemasukan hospital — dibuat secara bebas oleh hospital yang merawat dan doktor berlesen di bawah tanggungjawab profesional mereka sendiri dan lesen perubatan China. Bayaran hospital dan rawatan dibayar oleh pesakit terus ke hospital di bawah terma hospital itu sendiri.'
+        },
+        contentInformational: {
+          heading: 'Kandungan adalah untuk maklumat sahaja',
+          content: 'Artikel, anggaran kos, profil doktor, maklumat kepakaran dan kandungan lain di Laman Web ini disediakan untuk tujuan maklumat umum dan perancangan sahaja. Ia bukan nasihat perubatan. Maklumat kesihatan berubah dengan cepat, dan kes individu berbeza; sentiasa bergantung kepada doktor yang merawat anda untuk keputusan mengenai penjagaan anda.'
+        },
+        emergencies: {
+          heading: 'Kecemasan',
+          content: 'Dalam kecemasan perubatan, hubungi perkhidmatan kecemasan tempatan anda dengan segera. Di tanah besar China, dail 120 untuk ambulans dan penjagaan perubatan kecemasan.'
+        },
+        noGuarantee: {
+          heading: 'Tiada jaminan hospital-doktor',
+          content: 'Kami berusaha secara munasabah untuk memadankan pesakit dengan hospital dan pakar yang berkelayakan berdasarkan maklumat yang diberikan. Walau bagaimanapun, jadual hospital berubah, doktor tertentu tidak sentiasa dapat dijamin dan keputusan rawatan muktamad terletak pada hospital.'
+        },
+        contact: {
+          heading: 'Hubungi',
+          company: 'Shanghai Keling Information Technology Co., Ltd.',
+          address: 'Bilik 101, Tingkat 1, No. 2555 Changyang Road, Daerah Yangpu, Shanghai, China',
+          email: 'hello@shanghaimedhealth.com'
+        }
+      },
+      hospitals: {
+        huashan: {
+          description: 'Kedudukan #1 dalam dermatologi dan pembedahan saraf di seluruh negara. Salah satu hospital China yang paling diiktiraf di peringkat antarabangsa.',
+          specialties: ['Pembedahan Saraf', 'Dermatologi', 'Penyakit Berjangkit'],
+          internationalFeatures: 'Jabatan antarabangsa khusus, 24 penyedia insurans diterima',
+          insuranceStatus: 'Penyelesaian Terus'
+        },
+        'children-fudan': {
+          description: 'Pusat terkemuka untuk penjagaan neonatal dan penyakit jarang kanak-kanak.',
+          specialties: ['Neonatologi', 'Pembedahan Pediatrik', 'Perubatan Rawatan Rapi'],
+          internationalFeatures: 'Jabatan pediatrik antarabangsa sejak 1993, 19 penyedia insurans diterima',
+          insuranceStatus: 'Penyelesaian Terus'
+        },
+        ruijin: {
+          description: 'Perintis pemindahan sumsum tulang dan terapi CAR-T dengan hasil bertaraf dunia.',
+          specialties: ['Hematologi', 'Endokrinologi', 'Pembedahan Luka & Terbakar'],
+          internationalFeatures: 'Kadar remisi CAR-T 95.7%, wad antarabangsa khusus, 21 penyedia insurans diterima',
+          insuranceStatus: 'Penyelesaian Terus'
+        },
+        'shanghai-general': {
+          description: 'Salah satu hospital tertua dan paling berprestij di Shanghai. Jabatan oftalmologi dan urologi terkemuka.',
+          specialties: ['Oftalmologi', 'Urologi', 'ENT & Pembedahan Kepala-Leher'],
+          internationalFeatures: 'Pusat pesakit antarabangsa dengan kakitangan berbilang bahasa, 17 penyedia insurans diterima',
+          insuranceStatus: 'Insurans Antarabangsa'
+        },
+        zhongshan: {
+          description: 'Di bawah naungan Fudan University. Pusat kardiovaskular dengan bangunan pesakit antarabangsa berasingan dan kakitangan berbahasa Inggeris khusus.',
+          specialties: ['Pembedahan Am', 'Gastroenterologi', 'Perubatan Kardiovaskular'],
+          internationalFeatures: 'Bangunan pesakit antarabangsa bebas, 19 penyedia insurans diterima',
+          insuranceStatus: 'Insurans Antarabangsa'
+        },
+        renji: {
+          description: 'Di bawah naungan Shanghai Jiao Tong University. #1 gastroenterologi di seluruh negara selama 4 tahun berturut-turut. Pusat pemindahan hati terkemuka.',
+          specialties: ['Gastroenterologi', 'Perubatan Reproduktif', 'Reumatologi'],
+          internationalFeatures: 'Pusat perubatan reproduktif antarabangsa, 20 penyedia insurans diterima',
+          insuranceStatus: 'Insurans Antarabangsa'
+        },
+        longhua: {
+          description: 'Hospital Perubatan Tradisional Cina terulung. Perintis rasmi pelancongan perubatan TCM. Akupunktur, terapi herba dan pemulihan TCM.',
+          specialties: ['Onkologi TCM', 'Ortopedik TCM', 'Pembedahan TCM'],
+          internationalFeatures: 'Hospital perintis rasmi pelancongan perubatan TCM, 18 penyedia insurans diterima',
+          insuranceStatus: 'Insurans Antarabangsa'
+        },
+        ipmch: {
+          description: 'Di bawah naungan China Welfare Institute. Pusat terkemuka untuk kehamilan berisiko tinggi, perubatan janin dan perubatan reproduktif.',
+          specialties: ['Perubatan Reproduktif', 'Obstetrik', 'Ginekologi'],
+          internationalFeatures: 'Di bawah naungan China Welfare Institute, penjagaan bersalin antarabangsa, 19 penyedia insurans diterima',
+          insuranceStatus: 'Insurans Antarabangsa'
+        },
+        scmc: {
+          description: 'Di bawah naungan Shanghai Jiao Tong University. Pusat pembedahan jantung pediatrik terkemuka di China. Kerjasama dengan Project HOPE.',
+          specialties: ['Pembedahan Jantung Pediatrik', 'Hematologi-Onkologi Pediatrik', 'Pediatrik Tingkah Laku Perkembangan'],
+          internationalFeatures: 'Kerjasama dengan Project HOPE, pusat pediatrik antarabangsa, 23 penyedia insurans diterima',
+          insuranceStatus: 'Insurans Antarabangsa'
+        },
+        sixth: {
+          description: 'Perintis pembedahan pemasangan semula anggota sejak 1963. Pusat ortopedik dan endokrinologi terkemuka dengan pengiktirafan antarabangsa.',
+          specialties: ['Ortopedik', 'Endokrinologi & Metabolisme', 'Perubatan Sukan'],
+          internationalFeatures: 'Pusat pemasangan semula anggota pertama di dunia, 18 penyedia insurans diterima',
+          insuranceStatus: 'Insurans Antarabangsa'
+        },
+        'first-maternity': {
+          description: 'Hospital bersalin terulung di Shanghai. Penjagaan obstetrik dan neonatal komprehensif dengan sokongan pesakit antarabangsa.',
+          specialties: ['Obstetrik', 'Perubatan Janin', 'Perubatan Reproduktif'],
+          internationalFeatures: 'Perkhidmatan bersalin antarabangsa khusus, 18 penyedia insurans diterima',
+          insuranceStatus: 'Insurans Antarabangsa'
+        },
+        xinhua: {
+          description: 'Pusat terkemuka pembedahan tulang belakang dan pembedahan pediatrik dengan perkhidmatan antarabangsa penuh.',
+          specialties: ['Pediatrik', 'Dermatologi', 'Pembedahan Am'],
+          internationalFeatures: 'Jabatan antarabangsa komprehensif, 16 penyedia insurans diterima',
+          insuranceStatus: 'Insurans Antarabangsa'
+        },
+        huadong: {
+          description: 'Di bawah naungan Fudan University. Pusat perubatan geriatrik dan pemulihan terulung. Popular untuk program pemeriksaan kesihatan eksekutif.',
+          specialties: ['Perubatan Geriatrik', 'Perubatan Pemulihan', 'Nutrisi Klinikal'],
+          internationalFeatures: 'Pusat pemeriksaan kesihatan eksekutif, pemulihan antarabangsa, 17 penyedia insurans diterima',
+          insuranceStatus: 'Insurans Antarabangsa'
+        },
+        ninth: {
+          description: 'Hospital pergigian #1 di China. Jabatan Perubatan Antarabangsa khusus dibuka Januari 2024 di kampus Pudong dengan 100+ kerusi pergigian, CBCT, mikroskop dan peralatan laser. Pakar implan antarabangsa sepenuh masa Prof. Tonetti. Mekanisme MDT untuk kes kompleks. Telah merawat pesakit dari 40+ negara.',
+          specialties: ['Pembedahan Mulut/Pergigian #1', 'Pembedahan Plastik & Rekonstruktif', 'Pembedahan Mulut & Maksilofasial'],
+          internationalFeatures: 'Hospital pergigian terulung dengan 5 ahli akademi. Kedudukan #1 dalam pembedahan mulut dan pembedahan plastik di seluruh negara.',
+          insuranceStatus: 'Penyelesaian Terus (8 syarikat insurans, 21 perkongsian)'
+        },
+        jiahui: {
+          description: 'Hospital antarabangsa swasta terbesar di Shanghai dengan 500 katil. Berafiliasi dengan Massachusetts General Hospital. Pusat perubatan perkhidmatan penuh.',
+          specialties: ['Onkologi', 'Pembedahan', 'Perubatan Am'],
+          internationalFeatures: 'Gabungan dengan Massachusetts General Hospital, 500 katil',
+          insuranceStatus: '50+ Insurans Antarabangsa'
+        },
+        unicare: {
+          description: 'Sebahagian daripada Chindex Healthcare. Perkhidmatan penjagaan kesihatan komprehensif dengan penjagaan pesakit gaya Barat dan piawaian antarabangsa.',
+          specialties: ['Perubatan Keluarga', 'Obstetrik', 'Pediatrik'],
+          internationalFeatures: 'Jenama hospital antarabangsa yang telah mantap',
+          insuranceStatus: '50+ Insurans Antarabangsa'
+        },
+        parkway: {
+          description: 'Sebahagian daripada IHH Healthcare, salah satu kumpulan penjagaan kesihatan terbesar di dunia. Rangkaian insurans yang kukuh termasuk penyelesaian terus Prudential.',
+          specialties: ['Pelbagai Kepakaran', 'Perubatan Keluarga', 'Diagnostik'],
+          internationalFeatures: 'Kumpulan IHH Healthcare, pembayaran terus Prudential',
+          insuranceStatus: 'Pembayaran Terus Prudential'
+        },
+        shine: {
+          description: 'Ahli Mayo Clinic Care Network. Perkhidmatan kardiologi, gastroenterologi dan perubatan am komprehensif dengan piawaian antarabangsa.',
+          specialties: ['Kardiologi', 'Gastroenterologi', 'Perubatan Am'],
+          internationalFeatures: 'Perkongsian Mayo Clinic Care Network',
+          insuranceStatus: '40+ Syarikat Insurans Antarabangsa'
+        },
+        raffles: {
+          description: 'Sebahagian daripada kumpulan Surbana Jurong yang berpangkalan di Singapura. Menumpukan pada pelancongan perubatan dengan perkhidmatan pemeriksaan kesihatan yang komprehensif.',
+          specialties: ['Pemeriksaan Eksekutif', 'Perubatan Am', 'Pelancongan Perubatan'],
+          internationalFeatures: 'Kumpulan Surbana Jurong berpangkalan di Singapura',
+          insuranceStatus: 'Insurans Antarabangsa'
+        }
+      },
+      faqPage: {
+        cta: {
+          title: 'Masih ada soalan?',
+          text: 'Dapatkan konsultasi percuma ShanghaiMed tanpa sebarang kewajipan. Pasukan kami membalas dalam masa 24 jam.',
+          email: 'E-mel Kami',
+          form: 'Borang Hubungan'
+        }
+      }
+    },
+  id: {
+      nav: {
+        whyShanghai: 'Mengapa Shanghai',
+        howItWorks: 'Cara Kerja',
+        treatments: 'Layanan',
+        careTeam: 'Tim Perawatan',
+        trust: 'Kepercayaan',
+        items: ['Mengapa Shanghai', 'Cara Kerja', 'Jaringan Rumah Sakit', 'Tim Perawatan', 'Harga', 'Blog', 'Kontak']
+      },
+      whyShanghai: {
+        badge: 'Mengapa Shanghai',
+        title: 'Layanan Kesehatan Kelas Dunia, Dipermudah untuk Pasien Internasional',
+        subtitle: 'Shanghai menawarkan akses ke rumah sakit terkemuka, dokter spesialis berpengalaman, harga transparan, dan dukungan personal untuk pasien internasional.',
+        stats: [
+          {
+            label: 'Kunjungan Pasien Internasional Tahunan Shanghai'
+          },
+          {
+            label: 'Rumah Sakit Percontohan Wisata Medis Grade-A Negeri'
+          },
+          {
+            label: 'Kewarganegaraan yang Dilayani'
+          },
+          {
+            label: 'Pertumbuhan Tahunan'
+          }
+        ],
+        healthSystem: {
+          title: 'Sistem Layanan Kesehatan yang Diakui Secara Internasional',
+          items: ['Rumah sakit terkemuka yang melayani pasien dari seluruh dunia', 'Departemen internasional khusus dengan layanan berbahasa Inggris', 'Rumah sakit Grade 3A negeri yang ditujukan untuk layanan medis internasional', 'Akses ke dokter spesialis di bidang onkologi, kardiologi, neurologi, ortopedi, layanan kesuburan, dan lainnya']
+        },
+        travelAccess: {
+          title: 'Akses Perjalanan dan Layanan Medis yang Mudah',
+          items: ['Transit bebas visa 240 jam tersedia bagi wisatawan dari banyak negara', 'Bantuan visa medis untuk rencana perawatan jangka panjang', 'Penjemputan bandara dan bantuan transportasi', 'Koordinasi menyeluruh sepanjang perjalanan kesehatan Anda']
+        },
+        pricing: {
+          title: 'Layanan Kesehatan Berkualitas Tinggi dengan Harga Kompetitif',
+          subtitleLine1: 'Banyak pasien A.S. masih menanggung biaya kesehatan out-of-pocket yang signifikan meskipun memiliki asuransi.',
+          subtitleLine2: 'Angka mencerminkan biaya out-of-pocket tipikal dan dapat bervariasi tergantung penyedia, lokasi, cakupan asuransi, dan rencana perawatan.',
+          tableService: 'Layanan',
+          tableShanghai: 'Shanghai',
+          tableUs: 'Biaya Tipikal A.S.',
+          rows: [
+            {
+              service: 'Pemeriksaan Kesehatan Eksekutif',
+              shanghai: 'Mulai dari $700',
+              us: 'Mulai dari $2,500'
+            },
+            {
+              service: 'Pemindaian MRI',
+              shanghai: 'Mulai dari $300',
+              us: 'Mulai dari $1,000'
+            },
+            {
+              service: 'Pemindaian CT',
+              shanghai: 'Mulai dari $150',
+              us: 'Mulai dari $500'
+            },
+            {
+              service: 'Konsultasi Spesialis',
+              shanghai: 'Mulai dari $70',
+              us: 'Mulai dari $250'
+            },
+            {
+              service: 'Perawatan IVF',
+              shanghai: 'Mulai dari $4,200',
+              us: 'Mulai dari $15,000'
+            },
+            {
+              service: 'Implan Gigi',
+              shanghai: 'Mulai dari $800',
+              us: 'Mulai dari $3,000'
+            }
+          ],
+          valueTitle: 'Mengapa Pasien Merasakan Nilai di Shanghai',
+          valueItems: ['Akses ke rumah sakit dan dokter spesialis terkemuka', 'Harga transparan sebelum perawatan', 'Akses lebih cepat ke konsultasi, pencitraan, dan perawatan', 'Biaya kesehatan out-of-pocket yang lebih rendah', 'Dukungan dwibahasa Inggris–Tiongkok yang dipersonalisasi sepanjang perjalanan pasien'],
+          notesTitle: 'Catatan Penting',
+          notes: ['Harga disediakan untuk tujuan ilustrasi saja dan bukan merupakan penawaran.', 'Biaya medis aktual ditentukan oleh rumah sakit, dokter, dan rencana perawatan.', 'Harga A.S. mencerminkan biaya bayar mandiri tipikal dan dapat bervariasi secara signifikan berdasarkan cakupan asuransi dan lokasi.', 'Kurs valuta hanya untuk referensi dan dapat berfluktuasi.', 'Perawatan kompleks, operasi, perawatan kanker, dan layanan rawat inap memerlukan penawaran individual setelah peninjauan medis.']
+        }
+      },
+      processFlow: {
+        badge: 'Perjalanan Anda',
+        title: 'Dari Pertanyaan hingga Perawatan',
+        subtitle: 'Linimasa lengkap pengalaman wisata medis Anda di Shanghai, dengan dukungan profesional di setiap langkah.',
+        phases: [
+          {
+            phase: 'Sebelum Anda Tiba',
+            steps: [
+              {
+                title: 'Pertanyaan Online',
+                description: 'AI Navigator merespons seketika'
+              },
+              {
+                title: 'Penilaian Medis',
+                description: 'Mengumpulkan gejala, merekomendasikan rumah sakit'
+              },
+              {
+                title: 'Estimasi Biaya',
+                description: 'Harga transparan untuk konsultasi & tes dasar'
+              },
+              {
+                title: 'Visa & Perjalanan',
+                description: 'Panduan transit bebas visa/240j, tips perjalanan'
+              }
+            ]
+          },
+          {
+            phase: 'Selama Kunjungan Anda',
+            steps: [
+              {
+                title: 'Penjemputan Bandara',
+                description: 'Perawat dwibahasa Inggris–Tiongkok menyambut Anda'
+              },
+              {
+                title: 'Kunjungan Rumah Sakit',
+                description: 'Konsultasi & tes didampingi perawat'
+              },
+              {
+                title: 'Perawatan',
+                description: 'Layanan kelas dunia di rumah sakit terkemuka'
+              },
+              {
+                title: 'Perawatan Rawat Inap',
+                description: 'Dukungan keperawatan khusus (jika diperlukan)'
+              }
+            ]
+          },
+          {
+            phase: 'Setelah Kunjungan Anda',
+            steps: [
+              {
+                title: 'Pulang & Terjemahan',
+                description: 'Laporan medis berbahasa Inggris'
+              },
+              {
+                title: 'Tindak Lanjut',
+                description: 'Dukungan jarak jauh, koordinasi resep'
+              }
+            ]
+          }
+        ]
+      },
+      careTeam: {
+        title: 'Perawat Terdaftar Dwibahasa Inggris–Tiongkok',
+        subtitle: 'Rekan perawatan kesehatan yang berdedikasi di setiap tahap perjalanan medis Anda di Shanghai.',
+        badge: 'Tim Perawatan',
+        expertTeam: 'Tim Perawatan Ahli',
+        ispnCertified: 'Bersertifikat ISPN',
+        ispnDesc: 'Standar Internasional untuk Perawat Profesional',
+        ispnIssuer: 'Disertifikasi oleh CGFNS (USA)',
+        credentialsTitle: 'Kredensial Perawat',
+        servicesTitle: 'Layanan Keperawatan Kami',
+        nursingCare: 'Asuhan Keperawatan Dwibahasa Inggris–Tiongkok',
+        appointmentCoordination: 'Koordinasi Janji Temu',
+        translationServices: 'Layanan Penerjemahan',
+        transportation: 'Pengaturan Transportasi',
+        medicalReports: 'Penerjemahan Laporan Medis',
+        emergencySupport: 'Dukungan Darurat',
+        services: [
+          {
+            title: 'Konsultasi Pra-Perawatan',
+            description: 'Meninjau rekam medis, menjelaskan prosedur, dan berkoordinasi dengan dokter spesialis rumah sakit.'
+          },
+          {
+            title: 'Penjadwalan Janji Temu',
+            description: 'Mengatur konsultasi dokter, tes diagnostik, dan sesi perawatan.'
+          },
+          {
+            title: 'Penerjemahan & Interpretasi',
+            description: 'Interpretasi medis waktu nyata selama konsultasi dan prosedur.'
+          },
+          {
+            title: 'Navigasi Rumah Sakit',
+            description: 'Membimbing proses pendaftaran, checkout, dan pembayaran.'
+          },
+          {
+            title: 'Dukungan Pasca Pulang',
+            description: 'Instruksi obat, janji temu tindak lanjut, dan penerjemahan laporan medis.'
+          },
+          {
+            title: 'Dukungan Asuransi',
+            description: 'Memberikan dukungan administratif untuk pengecekan manfaat polis & konfirmasi cakupan asuransi rumah sakit'
+          }
+        ],
+        credentials: [
+          {
+            name: 'Perawat Terdaftar (RN) Berlisensi',
+            detail: 'Diverifikasi oleh Shanghai Health Commission'
+          },
+          {
+            name: 'Sertifikasi Dwi Bahasa (Inggris–Tiongkok)',
+            detail: 'Lancar berbahasa Inggris dan Tiongkok'
+          },
+          {
+            name: 'JLPT N1 Certified',
+            detail: '日本語能力試験 N1 — Japanese-Language Proficiency Test (tingkat tertinggi)'
+          },
+          {
+            name: 'Interpretasi Medis',
+            detail: 'Mendukung penerjemahan dokumen medis dan interpretasi di lokasi'
+          },
+          {
+            name: 'Perawatan Pasien Internasional',
+            detail: 'Pengalaman 10+ tahun'
+          }
+        ]
+      },
+      hero: {
+        badge1: 'Rumah Sakit Asuransi Internasional',
+        badge2: 'Perawat Terdaftar Dwibahasa Inggris–Tiongkok',
+        badge3: 'Dukungan AI + Manusia 24/7',
+        title: 'Layanan Kesehatan di Shanghai',
+        titleHighlight: 'Dirancang untuk Anda',
+        subtitle: 'Terhubung dengan rumah sakit ternama Tiongkok, perawat dwibahasa Inggris–Tiongkok, dan dukungan AI 24/7 — semuanya melalui satu platform.',
+        cta: 'Pesan Konsultasi Gratis'
+      },
+      testimonials: {
+        badge: 'Cerita Pasien',
+        title: 'Kata Pasien Kami',
+        subtitle: 'Cerita nyata dari pasien sejati yang mengubah perjalanan kesehatan mereka bersama kami.',
+        patientsServed: 'Pasien Dilayani',
+        countries: 'Negara',
+        satisfactionRate: 'Tingkat Kepuasan',
+        totalSavings: 'Total Penghematan',
+        saved: 'Hemat'
+      },
+      treatments: {
+        title: 'Rumah Sakit Terkemuka Shanghai',
+        subtitle: 'Akses rumah sakit terkemuka di seluruh Shanghai, dengan rekomendasi yang disesuaikan dengan kebutuhan medis Anda.',
+        hospitalNetwork: 'Jaringan Rumah Sakit',
+        publicHospitals: 'Rumah Sakit Negeri Kelas 3A',
+        privateHospitals: 'Rumah Sakit Internasional Swasta',
+        viewAll: 'Lihat Semua Rumah Sakit',
+        keyDepartments: 'Departemen Utama',
+        certifications: 'Sertifikasi Internasional',
+        insurance: 'Asuransi:',
+        all: 'Semua',
+        modalAllHospitals: 'Semua Rumah Sakit',
+        modalHospitalsAvailable: 'rumah sakit tersedia',
+        modalAllGradeA: 'akses ke semua rumah sakit Grade 3A Shanghai',
+        modalAll: 'Semua Rumah Sakit',
+        modalPublicGradeA: 'Negeri Grade-A',
+        modalInternationalPrivate: 'Swasta Internasional',
+        modalIns: 'Ins:',
+        featuredTitle: 'Rumah Sakit Terpercaya',
+        featuredSubtitle: 'Rumah sakit negeri teratas Tiongkok dengan departemen internasional khusus',
+        learnMore: 'Pelajari Lebih Lanjut'
+      },
+      howItWorks: {
+        title: 'Lima Langkah Sederhana',
+        subtitle: 'Dari pertanyaan pertama Anda hingga tindak lanjut pasca-perawatan, kami mendukung setiap langkah perjalanan medis Anda di Shanghai.',
+        badge: 'Cara Kerja',
+        simpleProcess: 'Proses Sederhana',
+        step1Title: 'Konsultasi AI',
+        step1Desc: 'AI Navigator kami merespons seketika untuk memahami kebutuhan Anda.',
+        step2Title: 'Penugasan Tim Perawatan',
+        step2Desc: 'Seorang perawat berpengalaman akan ditugaskan sebagai koordinator perawatan Anda.',
+        step3Title: 'Tiba di Shanghai',
+        step3Desc: 'Dukungan lengkap termasuk transfer bandara dan pemesanan hotel.',
+        step4Title: 'Perawatan & Pemulihan',
+        step4Desc: 'Integrasi perawatan spesialis yang mulus, dukungan dwibahasa Inggris–Tiongkok, dan tindak lanjut pasca-perawatan.',
+        steps: [
+          {
+            title: 'Kirim Pertanyaan',
+            description: 'Isi formulir kontak kami dengan kebutuhan medis Anda. AI navigator kami tersedia 24/7.'
+          },
+          {
+            title: 'Terima Konsultasi',
+            description: 'Dalam waktu 24 jam, koordinator manusia memberikan pilihan rumah sakit dan estimasi biaya.'
+          },
+          {
+            title: 'Konfirmasi & Berangkat',
+            description: 'Setelah Anda siap melanjutkan, kami mengoordinasikan janji temu, logistik perjalanan, dan dukungan kedatangan.'
+          },
+          {
+            title: 'Terima Perawatan',
+            description: 'Perawat dwibahasa Inggris–Tiongkok Anda memberikan dukungan tatap muka sepanjang konsultasi, pemeriksaan, dan perawatan.'
+          },
+          {
+            title: 'Perawatan Tindak Lanjut',
+            description: 'Kami membantu dengan rekam medis, janji temu tindak lanjut, koordinasi resep, dan konsultasi jarak jauh.'
+          }
+        ]
+      },
+      trust: {
+        badge: 'Mengapa Memilih Kami',
+        title: 'Mitra Wisata Medis Tepercaya Anda',
+        subtitle: 'Kami menyediakan layanan wisata medis yang profesional, transparan, dan tepercaya di Shanghai. Inilah yang membedakan kami.',
+        ctaText: 'Siap merasakan layanan wisata medis yang profesional?',
+        ctaButton: 'Mulai Wisata Medis Anda'
+      },
+      pricing: {
+        badge: 'Harga',
+        eyebrow: 'Tanpa Biaya Tersembunyi',
+        title: 'Harga Concierge',
+        subtitle: 'Satu biaya concierge yang transparan per orang. Biaya medis dibayarkan langsung ke rumah sakit dengan tarif lokal — kami tidak memungut komisi rumah sakit.',
+        usdLabel: 'USD',
+        whatsIncluded: 'Yang termasuk',
+        freeCard: {
+          name: 'Konsultasi Awal Gratis',
+          subtitle: 'Dapatkan informasi yang Anda butuhkan sebelum berkomitmen — tanpa kewajiban, tanpa pembayaran.',
+          badge: 'Gratis',
+          unit: 'Gratis',
+          scope: 'Bicara dengan Sara terlebih dahulu — tanpa kewajiban, tanpa pembayaran.',
+          items: ['Penilaian kebutuhan medis', 'Rekomendasi rumah sakit & spesialis', 'Estimasi biaya perawatan', 'Panduan asuransi'],
+          itemsLabel: 'Yang Anda dapatkan — 4 layanan',
+          callout: '<strong>Panggilan tahap keputusan saja.</strong> Panggilan gratis ini membantu Anda menentukan rumah sakit, dokter, dan rentang anggaran yang tepat. Layanan di lokasi dimulai saat Anda memesan pendamping per jam atau paket concierge.',
+          cta: 'Chat dengan Sara di WhatsApp'
+        },
+        hourlyCard: {
+          name: 'Pendamping Rumah Sakit di Lokasi',
+          subtitle: 'Untuk pasien yang sudah memesan dokter sendiri.',
+          scope: 'Dipesan dan dibayar per jam, tersedia secara mandiri <em style="font-style:italic;color:#7b8c99">atau</em> sebagai tambahan untuk paket apa pun.',
+          items: ['Rekan pendamping di lokasi di rumah sakit', 'Interpretasi medis di lokasi dwibahasa Inggris–Tiongkok · bahasa lain dikenakan biaya tambahan', 'Bimbingan langsung (antrean, pembayaran, pengambilan apotek)', 'Pesan konfirmasi hari yang sama setelah kunjungan'],
+          itemsLabel: 'Yang termasuk — 4 layanan',
+          callout: '<strong>Batas cakupan:</strong> Pendamping per jam hanya berupa pendamping di lokasi dan interpretasi Inggris–Tiongkok saja. Ini <strong>tidak</strong> termasuk penjadwalan janji temu, pencocokan dokter, penjemputan bandara, penerjemahan laporan, dukungan visa, pra-otorisasi asuransi, interpretasi dalam bahasa selain bahasa Inggris, atau tindak lanjut pasca-perawatan.',
+          cta: 'Pesan pendamping per jam'
+        },
+        checkupCard: {
+          subtitle: 'Perawat khusus untuk satu hari.'
+        },
+        essentialCard: {
+          subtitle: 'Koordinasi lengkap mencakup janji temu, interpretasi, asuransi, dan logistik.'
+        },
+        surgeryCard: {
+          subtitle: 'Dukungan terkoordinasi selama operasi dan masa rawat inap.'
+        },
+        essentialBadge: 'Paling Sering Dipilih',
+        packages: [
+          {
+            name: 'Health Checkup Concierge',
+            unit: 'per orang · 1 hari (siang hari)',
+            description: 'Hanya untuk program pemeriksaan kesehatan 1 hari.',
+            itemsLabel: 'Yang termasuk — 13 layanan',
+            allItems: ['Perawat di lokasi sehari penuh (siang hari)', 'Bantuan koordinasi hotel', 'Penerjemahan & penjelasan laporan skrining kesehatan', 'Pengambilan & pengantaran obat', 'Bantuan transportasi lokal & pembayaran', 'Bantuan surat undangan visa', 'Dukungan asuransi', 'Penjemputan & pengantaran bandara · sedan standar', 'Interpretasi medis di lokasi dwibahasa Inggris–Tiongkok', 'Penjadwalan janji temu dokter', 'Pencocokan rumah sakit & spesialis', 'Dukungan WhatsApp khusus', 'Tindak lanjut jarak jauh 30 hari pasca-pemeriksaan']
+          },
+          {
+            name: 'Essential Care Concierge',
+            unit: 'per orang · 3 hari (siang hari)',
+            description: 'Diperlukan untuk semua konsultasi spesialis dan kondisi medis.',
+            itemsLabel: 'Yang termasuk — 13 layanan',
+            allItems: ['Perawat di lokasi selama 3 hari (siang hari)', 'Peninjauan rekam medis pra-kunjungan', 'Pencocokan dokter & spesialis', 'Penjadwalan janji temu rumah sakit', 'Penjemputan & pengantaran bandara · sedan standar', 'Koordinasi hotel & transportasi lokal', 'Interpretasi medis di lokasi dwibahasa Inggris–Tiongkok', 'Navigasi di lokasi & bantuan pembayaran', 'Penerjemahan laporan medis', 'Pengambilan & pengantaran obat', 'Dukungan WhatsApp khusus selama kunjungan', 'Dukungan asuransi · pra-otorisasi', 'Tindak lanjut jarak jauh 30 hari pasca-perawatan']
+          },
+          {
+            name: 'Surgery & Extended Care',
+            unit: 'per orang · 5 hari (siang hari)',
+            description: 'Diperlukan untuk operasi dan prosedur rawat inap.',
+            itemsLabel: 'Yang termasuk — 16 layanan',
+            allItems: ['Perawat di lokasi selama 5 hari (siang hari)', 'Koordinasi pra-pendaftaran', 'Pendampingan hari operasi', 'Kunjungan rawat inap selama menginap', 'Komunikasi keluarga & pembaruan perkembangan', 'Peninjauan rekam & pengarahan pra-operasi', 'Panduan pemilihan dokter & rumah sakit', 'Penjemputan & pengantaran bandara · sedan standar', 'Dukungan hotel & menginap jangka panjang', 'Interpretasi medis di lokasi dwibahasa Inggris–Tiongkok', 'Navigasi di lokasi & bantuan pembayaran/tagihan', 'Penerjemahan laporan operasi', 'Pengambilan & pengantaran obat', 'Dukungan WhatsApp khusus', 'Koordinasi asuransi & deposit operasi', 'Tindak lanjut 60 hari pasca-perawatan']
+          }
+        ],
+        faqTitle: 'Tanya Jawab Harga & Layanan',
+        faqSub: 'Pertanyaan umum tentang harga, cakupan, asuransi, dan situasi khusus.',
+        viewAllFaq: 'Lihat semua tanya jawab harga & layanan',
+        faqLinkDesc: 'Harga, asuransi, visa, pembayaran, dan perawatan medis — jawaban atas pertanyaan umum',
+        faqItems: [
+          {
+            q: 'Apakah konsultasi gratis benar-benar gratis?',
+            a: 'Ya. Konsultasi awal Anda melalui WhatsApp sepenuhnya <strong>gratis tanpa kewajiban</strong>. Kami menilai kebutuhan medis Anda, merekomendasikan rumah sakit dan spesialis, memberikan estimasi biaya, dan menjelaskan opsi asuransi — semuanya sebelum Anda membayar apa pun. Layanan di lokasi dimulai hanya saat Anda memesan pendamping per jam atau paket concierge.'
+          },
+          {
+            q: 'Bisakah saya memesan pendamping per jam tanpa membeli paket?',
+            a: 'Ya. <strong>Pendamping di lokasi $50/jam</strong> dirancang sebagai layanan mandiri untuk pasien yang sudah memesan dokter sendiri dan hanya membutuhkan pendampingan di rumah sakit. Ini juga tersedia sebagai tambahan untuk menambah jam pendamping di luar hari yang termasuk dalam paket concierge. Catatan: pendamping per jam hanya mencakup kehadiran di lokasi dan interpretasi Inggris–Tiongkok — penjadwalan, pencocokan dokter, transfer bandara, dan koordinasi asuransi memerlukan paket concierge. Sebagai tambahan paket concierge, jam pendamping tambahan di luar hari yang termasuk juga dikenakan biaya $50/jam.'
+          },
+          {
+            q: 'Apa yang termasuk dalam paket Essential $1,000?',
+            a: '<strong>Essential Care Concierge mencakup 3 hari pendampingan siang penuh</strong>: peninjauan rekam medis pra-kunjungan, pencocokan dokter, penjadwalan multi-janji temu, interpretasi di lokasi dwibahasa Inggris–Tiongkok di setiap kunjungan, navigasi rumah sakit, penjemputan &amp; pengantaran bandara dengan sedan standar (kenderaan khusus dikenakan biaya tambahan), penerjemahan laporan medis, pengambilan &amp; pengantaran obat, dukungan WhatsApp khusus selama menginap, dukungan asuransi termasuk pengecekan manfaat polis dan surat pra-otorisasi, serta tindak lanjut jarak jauh 30 hari pasca-perawatan. Paket ini diperlukan untuk semua konsultasi spesialis dan kondisi medis apa pun.'
+          },
+          {
+            q: 'Apakah Anda menangani asuransi kesehatan?',
+            a: 'Kami menyediakan <strong>dukungan asuransi</strong>, termasuk mengecek manfaat polis Anda, membantu mendapatkan surat pra-otorisasi, dan mengoordinasikan dokumen rumah sakit. Di mana perusahaan asuransi Anda memiliki pengaturan penagihan langsung dengan rumah sakit, kami membantu mengoordinasikan prosesnya. Di mana penagihan langsung tidak tersedia, Anda membayar rumah sakit secara langsung dan kami menyediakan dokumentasi yang dibutuhkan perusahaan asuransi Anda untuk penggantian biaya. Kami tidak menjamin cakupan atau persetujuan penagihan langsung — keputusan dibuat oleh perusahaan asuransi Anda.'
+          },
+          {
+            q: 'Apakah biaya medis termasuk dalam harga concierge?',
+            a: 'Tidak. Biaya concierge hanyalah untuk layanan koordinasi dan pendampingan kami. <strong>Biaya medis (konsultasi dokter, biaya rumah sakit, tes laboratorium, obat-obatan, operasi) dibayar langsung ke rumah sakit dengan tarif lokal</strong>. Kami memberikan estimasi biaya yang jelas sebelum Anda tiba, dan Anda akan mengetahui harga yang dipublikasikan rumah sakit sebelum setiap prosedur. Kami tidak memungut komisi rumah sakit.'
+          },
+          {
+            q: 'Apakah Anda mendukung situasi darurat atau di luar jam kerja?',
+            a: 'Dalam keadaan darurat medis, <strong>segera hubungi 120</strong> dan pergi ke rumah sakit terdekat — paket concierge tidak mencakup layanan medis darurat. Setelah Anda berada di rumah sakit, kami menawarkan <strong>koordinasi darurat di lokasi 24/7</strong> dengan biaya tambahan: <strong>Panggilan darurat $300 (tersedia 24/7, termasuk 4 jam pertama)</strong>, kemudian <strong>$100/jam</strong> untuk dukungan pendamping di lokasi tambahan. Ini mencakup pengiriman segera, koordinasi perawat senior, komunikasi keluarga, dan navigasi rumah sakit selama darurat. Hubungi Sara di WhatsApp sesegera mungkin setelah menghubungi 120.'
+          },
+          {
+            q: 'Bahasa apa saja yang termasuk? Apakah Anda mendukung bahasa selain Inggris dan Tiongkok?',
+            a: 'Semua paket concierge mencakup <strong>interpretasi medis di lokasi dwibahasa Inggris–Tiongkok</strong>. Interpretasi Jepang–Tiongkok termasuk untuk klien berbahasa Jepang yang memesan melalui halaman Jepang. Jika Anda membutuhkan dukungan dalam <strong>bahasa lain</strong> (Arab, Rusia, Mongolia, Korea, Prancis, Spanyol, dsb.), penerjemah khusus dapat diatur dengan biaya tambahan — tarif didasarkan pada harga pasar lokal Shanghai untuk bahasa tersebut. Sebutkan kebutuhan bahasa Anda saat mengobrol dengan Sara agar kami dapat memberikan penawaran yang akurat.'
+          },
+          {
+            q: 'Bagaimana kebijakan pengembalian dana dan pembatalan Anda?',
+            a: 'Pembatalan yang dilakukan <strong>14 hari atau lebih</strong> sebelum tanggal kedatangan yang dijadwalkan menerima pengembalian dana penuh setelah dikurangi biaya pemrosesan kecil. Pembatalan dalam <strong>14 hari</strong> memenuhi syarat pengembalian dana sebagian, karena beberapa pengaturan rumah sakit dan logistik mungkin telah dilakukan. Pembatalan hari yang sama dan ketidakhadiran tidak dapat dikembalikan. Kasus yang melibatkan darurat medis nyata atau penolakan visa dengan dokumentasi akan ditinjau secara individual — kami berusaha sebaik mungkin untuk bersikap adil. Syarat pengembalian dana spesifik akan disertakan dalam konfirmasi pemesanan Anda.'
+          },
+          {
+            q: 'Bisakah saya membawa anggota keluarga atau penerjemah sendiri?',
+            a: '<strong>Ya — membawa anggota keluarga atau penerjemah sendiri dipersilakan tanpa biaya tambahan.</strong> Pendamping perawat kami berfokus pada koordinasi medis, navigasi rumah sakit, dan interpretasi tanpa memandang ukuran rombongan. Jika Anda bepergian dengan rombongan lebih besar dan membutuhkan kenderaan yang lebih besar (misalnya, van alih-alih sedan standar untuk penjemputan bandara), biaya peningkatan mungkin berlaku tergantung jenis kenderaan dan ketersediaan. Beri tahu Sara ukuran rombongan Anda saat memesan agar kami dapat mengatur transportasi yang tepat.'
+          }
+        ],
+        refundPolicy: 'Kebijakan Pengembalian Dana',
+        medicalDisclaimer: 'Pernyataan Penyangkalan Medis',
+        independentDisclaimer: 'ShanghaiMed beroperasi sebagai penyedia layanan concierge independen; kami tidak mempraktikkan kedokteran dan perawat kami tidak menggantikan dokter yang merawat Anda.'
+      },
+      freeConsultation: {
+        badge: 'Konsultasi Gratis',
+        title: 'Pesan Konsultasi Medis Gratis Anda',
+        subtitle: 'Bicaralah dengan tim medis kami sebelum Anda berangkat — kami akan mempertemukan Anda dengan spesialis yang tepat, merencanakan perjalanan medis sesuai kebutuhan Anda, dan memberikan estimasi biaya yang jelas di awal.',
+        specialistMatchTitle: 'Pencocokan Spesialis Terbaik',
+        specialistMatchDesc: 'Kami menghubungkan Anda dengan profesor dan dokter kepala terkemuka di rumah sakit Grade 3A utama Shanghai — mencocokkan kondisi spesifik Anda dengan spesialis yang tepat untuk kasus Anda.',
+        specialistMatchPoints: ['Spesialis dicocokkan dengan kondisi medis spesifik Anda — bukan pilihan default atau terdekat', 'Terhubung dengan profesor dan dokter kepala yang tepat di rumah sakit Grade 3A negeri Shanghai berdasarkan kasus Anda', 'Akses prioritas ke rumah sakit internasional dan swasta terkemuka di Shanghai; janji temu biasanya dapat diatur dalam waktu singkat', 'Peninjauan rekam medis pra-konsultasi sebelum Anda tiba di Shanghai'],
+        badges: [
+          {
+            title: 'Tanpa Pembayaran',
+            desc: 'Konsultasi gratis, tanpa biaya pendahuluan atau deposit'
+          },
+          {
+            title: 'Tanpa Kewajiban Membeli',
+            desc: 'Bicaralah dengan kami tanpa tekanan untuk memesan layanan apa pun'
+          },
+          {
+            title: 'Kerahasiaan',
+            desc: 'Informasi medis Anda tetap bersifat pribadi dan tidak pernah dibagikan tanpa persetujuan'
+          }
+        ],
+        ctaTitle: 'Mulai Konsultasi Gratis Anda',
+        ctaDesc: 'Hubungi kami di WhatsApp — tim medis kami akan membalas secepat mungkin, biasanya dalam beberapa jam pada jam kerja.',
+        ctaButton: 'Chat di WhatsApp',
+        hospitalNetworkTitle: 'Jaringan Rumah Sakit Kami',
+        hospitalNetworkDesc: 'Kami bermitra dengan 14 rumah sakit negeri Grade 3A (tingkat teratas) dan 5 rumah sakit internasional di Shanghai. Di luar mitra unggulan ini, kami dapat mengatur janji temu di semua rumah sakit tersier negeri di seluruh Shanghai.',
+        publicHospitals: 'Mitra Negeri Grade 3A (14)',
+        privateHospitals: 'Mitra Rumah Sakit Internasional (5)',
+        beyondTitle: 'Melampaui Jaringan Unggulan',
+        beyondDesc: 'Jika kondisi Anda memerlukan spesialis di rumah sakit tersier Shanghai lainnya — termasuk yang tidak tercantum di sini — kami dapat mengoordinasikan janji temu atas nama Anda. Beritahu kami kebutuhan medis Anda dan kami akan mempertemukan Anda dengan spesialis yang tepat.'
+      },
+      insights: {
+        badge: 'Blog',
+        title: 'Wawasan Terbaru',
+        subtitle: 'Temukan artikel tentang layanan kesehatan di Shanghai, wisata medis, dan kebugaran.',
+        readMore: 'Baca Selengkapnya',
+        viewAll: 'Lihat Semua Artikel',
+        featured: '★ Unggulan'
+      },
+      blog: {
+        title: 'Blog',
+        subtitle: 'Temukan artikel tentang layanan kesehatan di Shanghai, wisata medis, dan kebugaran.',
+        filterContent: 'Filter Konten',
+        searchPlaceholder: 'Cari artikel...',
+        search: 'Cari',
+        clearFilters: 'Hapus filter',
+        categories: 'Kategori',
+        popularTags: 'Tag Populer',
+        noArticles: 'Tidak ada artikel yang cocok dengan kriteria Anda.',
+        minRead: 'menit baca',
+        previous: 'Sebelumnya',
+        next: 'Berikutnya',
+        home: 'Beranda',
+        blogNav: 'Blog',
+        shareLabel: 'Bagikan:',
+        previousArticle: 'Artikel Sebelumnya',
+        nextArticle: 'Artikel Berikutnya',
+        toc: 'Daftar Isi',
+        tocHide: 'Sembunyikan',
+        tocShow: 'Tampilkan',
+        subscribeTitle: 'Berlangganan Newsletter',
+        subscribeDesc: 'Dapatkan tips kesehatan dan pembaruan terbaru yang dikirim ke kotak masuk Anda.',
+        emailPlaceholder: 'Email Anda',
+        subscribe: 'Berlangganan',
+        subscribed: '✓ Berhasil berlangganan! Terima kasih telah bergabung dengan newsletter kami.',
+        shareArticle: 'Bagikan artikel ini',
+        subscribeSuccessTitle: 'Berlangganan Berhasil!',
+        subscribeSuccessDesc: 'Terima kasih telah berlangganan newsletter kami. Anda akan menerima tips kesehatan dan pembaruan terbaru.',
+        close: 'Tutup',
+        alertEmailRequired: 'Silakan masukkan alamat email Anda',
+        alertSubscribeFail: 'Gagal berlangganan. Silakan coba lagi nanti.',
+        alertError: 'Terjadi kesalahan. Silakan coba lagi nanti.',
+        pageHeaderTitle: 'Wawasan Kesehatan',
+        pageHeaderSubtitle: 'Temukan artikel tentang wisata medis, layanan kesehatan, dan tips kebugaran di Shanghai',
+        relatedArticles: 'Artikel Terkait',
+        recommendedHospitals: 'Rumah Sakit yang Direkomendasikan',
+        learnMore: 'Pelajari Lebih Lanjut',
+        insurancePartnersLabel: 'Mitra Asuransi',
+        bookTitle: 'Pesan Konsultasi Gratis',
+        bookDesc: 'Koordinator medis kami siap membantu Anda dengan pemilihan rumah sakit, pilihan perawatan, dan pengaturan perjalanan.',
+        whatsappConsult: 'Konsultasi WhatsApp',
+        requestQuote: 'Minta Penawaran',
+        categoryNames: {
+          'health-checkups': 'Pemeriksaan Kesehatan',
+          'preventive-healthcare': 'Layanan Kesehatan Pencegahan',
+          'medical-tourism': 'Wisata Medis',
+          'traditional-chinese-medicine': 'Pengobatan Tradisional Tiongkok',
+          'shanghai-hospitals': 'Rumah Sakit Shanghai',
+          'expat-healthcare': 'Layanan Kesehatan Ekspatriat',
+          'patient-stories': 'Cerita Pasien',
+          'health-guides': 'Panduan Kesehatan'
+        }
+      },
+      faq: {
+        badge: 'FAQ',
+        title: 'Pertanyaan yang Sering Diajukan',
+        subtitle: 'Semua yang perlu Anda ketahui tentang wisata medis di Shanghai.',
+        items: [
+          {
+            question: 'Bagaimana cara memulai proses wisata medis?',
+            answer: 'Cukup isi formulir kontak kami dengan kondisi medis dan preferensi Anda. Tim kami akan merespons dalam 24 jam dengan rekomendasi rumah sakit dan estimasi biaya.'
+          },
+          {
+            question: 'Apakah Anda membantu dengan aplikasi visa?',
+            answer: 'Ya, kami menyediakan bantuan visa untuk perawatan medis. Untuk negara yang memenuhi syarat, kami juga dapat membantu mengatur masuk transit bebas visa 240 jam ke Shanghai.'
+          },
+          {
+            question: 'Bagaimana jika saya tidak berbicara bahasa Tiongkok?',
+            answer: 'Semua koordinator perawat kami menyediakan terjemahan waktu nyata selama konsultasi medis. Laporan medis dapat disediakan dalam bahasa Inggris atau bahasa pilihan Anda.'
+          },
+          {
+            question: 'Bagaimana cara kerja pembayaran?',
+            answer: 'Anda membayar langsung ke rumah sakit. Bagi pemegang asuransi, kami membantu proses penyelesaian langsung.'
+          },
+          {
+            question: 'Jenis perawatan apa yang Anda spesialisasikan?',
+            answer: 'Kami mendukung berbagai kebutuhan kesehatan, dari pemeriksaan pencegahan dan konsultasi spesialis hingga perawatan medis kompleks. Setiap pasien memiliki kebutuhan yang berbeda. Kami membantu mengidentifikasi rumah sakit, spesialis, dan jalur perawatan yang paling sesuai untuk situasi Anda.'
+          }
+        ],
+        stillTitle: 'Masih ada pertanyaan?',
+        whatsappCta: 'Hubungi Kami di WhatsApp',
+        viewAll: 'Lihat FAQ Lengkap',
+        viewAllDesc: 'Lihat semua jawaban tentang harga, asuransi, visa, pembayaran, dan perawatan medis — lebih dari selusin pertanyaan umum.',
+        browseFaq: 'Lihat semua pertanyaan',
+        whatsappDesc: 'Chat langsung dengan koordinator perawat kami. Dapatkan jawaban yang dipersonalisasi dalam bahasa Inggris, Jepang, atau Arab.'
+      },
+      contact: {
+        title: 'Mulai Wisata Medis Anda Hari Ini',
+        subtitle: 'Dapatkan konsultasi gratis dari tim medis kami. AI Navigator kami merespons seketika. Koordinator manusia menindaklanjuti dalam 24 jam.',
+        cta: 'Mulai Wisata Medis Anda Hari Ini',
+        badge: 'Kontak',
+        whatsappTitle: 'WhatsApp',
+        whatsappDesc: 'AI Navigator 24/7 + Respons Manusia 24 jam',
+        whatsapp: 'Chat di WhatsApp',
+        lineTitle: 'LINE',
+        lineDesc: 'Chat langsung dengan koordinator kami',
+        lineButton: 'Chat di LINE',
+        lineIdLabel: 'LINE ID',
+        lineId: 'sara_shanghaimed',
+        lineScanHint: 'Pindai kode QR untuk menambahkan kami di LINE',
+        lineQrAlt: 'Kode QR LINE',
+        locationLabel: 'Lokasi',
+        locationValue: 'Shanghai, Republik Rakyat Tiongkok',
+        responseLabel: 'Waktu Respons',
+        responseValue: 'AI: Seketika | Manusia: Dalam 24 jam',
+        emailLabel: 'Email',
+        nameLabel: 'Nama Lengkap *',
+        namePlaceholder: 'Nama lengkap Anda',
+        emailLabel2: 'Email *',
+        emailPlaceholder: 'email@anda.com',
+        countryLabel: 'Negara *',
+        countryPlaceholder: 'Pilih negara Anda *',
+        otherCountry: 'Lainnya',
+        otherCountryPlaceholder: 'Masukkan negara Anda *',
+        countries: {
+          'United States': 'Amerika Serikat',
+          'United Kingdom': 'Britania Raya',
+          Canada: 'Kanada',
+          Australia: 'Australia',
+          Japan: 'Jepang',
+          'South Korea': 'Korea Selatan',
+          Singapore: 'Singapura',
+          Germany: 'Jerman',
+          France: 'Prancis'
+        },
+        phoneLabel: 'Telepon / WhatsApp',
+        phonePlaceholder: 'Telepon / WhatsApp (opsional)',
+        medicalNeedsLabel: 'Kebutuhan Medis *',
+        medicalNeedsPlaceholder: 'Pilih kebutuhan medis Anda',
+        medicalNeeds: {
+          consultation: 'Konsultasi Medis',
+          cardiology: 'Kardiologi',
+          neurology: 'Neurologi',
+          oncology: 'Onkologi',
+          orthopedics: 'Ortopedi',
+          checkup: 'Pemeriksaan Kesehatan',
+          dental: 'Perawatan Gigi',
+          plastic: 'Bedah Plastik',
+          other: 'Lainnya'
+        },
+        messageLabel: 'Pesan Anda',
+        messagePlaceholder: 'Silakan jelaskan kondisi medis atau pertanyaan Anda...',
+        submit: 'Dapatkan Konsultasi Gratis',
+        submitting: 'Mengirim...',
+        successTitle: 'Terima Kasih!',
+        successMessage: 'Terima kasih! AI Navigator kami telah menerima pertanyaan Anda dan tim kami akan menindaklanjuti dalam 24 jam. Anda juga dapat menghubungi kami di WhatsApp — kami akan merespons secepat mungkin.',
+        sendAnother: 'Kirim Pesan Lain',
+        privacyNote: 'Dengan mengirimkan formulir ini, Anda menyetujui Kebijakan Privasi kami dan memberikan persetujuan untuk dihubungi mengenai layanan medis kami.',
+        alertFail: 'Gagal mengirim pesan. Silakan coba lagi atau hubungi kami melalui WhatsApp.'
+      },
+      footer: {
+        tagline: 'Menghubungkan pasien internasional dengan institusi medis kelas dunia Shanghai dan tenaga profesional kesehatan dwibahasa Inggris–Tiongkok.',
+        columns: [
+          {
+            title: 'Tentang',
+            links: ['Tentang Kami', 'Pendiri Kami', 'Mengapa Shanghai', 'Jaringan Kami', 'Tim Perawatan']
+          },
+          {
+            title: 'Layanan',
+            links: ['Rumah Sakit', 'Spesialisasi', 'Panduan Harga']
+          },
+          {
+            title: 'Dukungan',
+            links: ['Cara Kerja', 'FAQ', 'Pustaka Penelitian', 'Glosarium', 'Hubungi Kami', 'Dukungan WhatsApp']
+          },
+          {
+            title: 'Hukum',
+            links: ['Kebijakan Privasi', 'Syarat Layanan', 'Kebijakan Pengembalian Dana', 'Kebijakan Editorial', 'Pernyataan Penyangkalan Medis']
+          }
+        ],
+        rights: 'Hak cipta dilindungi.',
+        location: 'Shanghai, Tiongkok'
+      },
+      agentChat: {
+        welcome: 'Halo! Saya Navi, navigator medis Anda. Tanya saya apa saja tentang rumah sakit, perawatan, biaya, visa, atau merencanakan perjalanan medis Anda di Shanghai.',
+        questions: ['Apa yang termasuk dalam layanan personal Anda?', 'Bagaimana cara memesan janji temu?', 'Berapa biaya layanan satu lawan satu Anda?'],
+        inputPlaceholder: 'Tanya saya tentang layanan kesehatan di Shanghai...',
+        chatTitle: 'Navi · Navigator Medis',
+        chatSubtitle: 'Asisten AI 24/7'
+      },
+      pages: {
+        treatmentsTitle: 'Layanan & Rumah Sakit',
+        treatmentsSubtitle: 'Akses ke institusi medis terbaik Shanghai di semua spesialisasi.',
+        contactTitle: 'Hubungi Kami',
+        contactSubtitle: 'Mulai perjalanan medis Anda hari ini. Tim kami siap membantu 24/7.',
+        patientStoriesTitle: 'Cerita Pasien',
+        patientStoriesSubtitle: 'Pengalaman nyata dari pasien yang mempercayakan kesehatan mereka kepada kami.',
+        whyShanghaiTitle: 'Mengapa Shanghai?',
+        whyShanghaiSubtitle: 'Shanghai telah muncul sebagai destinasi utama bagi pasien internasional yang mencari layanan medis kelas dunia dengan harga terjangkau.',
+        careTeamTitle: 'Tim Perawatan Kami',
+        careTeamSubtitle: 'Perawat bersertifikat ISPN yang berdedikasi untuk kesehatan dan kenyamanan Anda.',
+        howItWorksTitle: 'Cara Kerja',
+        howItWorksSubtitle: 'Proses kami yang disederhanakan memudahkan akses ke layanan medis kelas dunia di Shanghai.',
+        faqTitle: 'Pertanyaan yang Sering Diajukan',
+        faqSubtitle: 'Semua yang perlu Anda ketahui tentang menerima perawatan medis di Shanghai — biaya, kualitas rumah sakit, visa, asuransi, dan dukungan dwibahasa Inggris–Tiongkok.'
+      },
+      medicalDisclaimer: {
+        title: 'Pernyataan Penyangkalan Medis',
+        lastUpdated: 'Terakhir diperbarui: 12 Oktober 2026',
+        warning: 'ShanghaiMed bukanlah rumah sakit, klinik, atau penyedia layanan medis. Kami tidak memberikan diagnosis medis, perawatan, resep, atau saran medis.',
+        whatWeAre: {
+          heading: 'Siapa kami',
+          content: 'ShanghaiMed (dioperasikan oleh Shanghai Keling Information Technology Co., Ltd.) adalah layanan koordinasi perjalanan medis dan navigasi pasien. Kami membantu pasien internasional merencanakan dan menavigasi kunjungan medis ke rumah sakit negeri berlisensi dan dokter spesialis di Shanghai, Tiongkok. Peran kami bersifat logistik, linguistik, dan administratif.'
+        },
+        whatWeDoNotDo: {
+          heading: 'Apa yang tidak kami lakukan',
+          item1: 'Kami tidak mendiagnosis kondisi medis.',
+          item2: 'Kami tidak meresepkan obat-obatan.',
+          item3: 'Kami tidak melakukan atau mengarahkan prosedur atau perawatan medis.',
+          item4: 'Kami tidak menjamin hasil klinis, waktu tunggu, atau keberhasilan perawatan apa pun.',
+          item5: 'Kami bukan pengganti pertimbangan profesional dokter berlisensi.'
+        },
+        clinicalResponsibility: {
+          heading: 'Tanggung jawab klinis',
+          content: 'Semua keputusan klinis — termasuk diagnosis, rencana perawatan, resep, operasi, pengujian, dan pendaftaran rumah sakit — dibuat secara mandiri oleh rumah sakit yang merawat dan dokter berlisensinya di bawah tanggung jawab profesional mereka sendiri dan lisensi medis Tiongkok. Biaya rumah sakit dan perawatan dibayar oleh pasien langsung ke rumah sakit berdasarkan ketentuan rumah sakit itu sendiri.'
+        },
+        contentInformational: {
+          heading: 'Konten bersifat informasional saja',
+          content: 'Artikel, estimasi biaya, profil dokter, informasi spesialisasi, dan konten lain di Situs Web ini disediakan untuk tujuan informasi umum dan perencanaan saja. Konten tersebut bukanlah saran medis. Informasi kesehatan berubah dengan cepat, dan kasus individu berbeda; selalu andalkan dokter yang merawat Anda untuk keputusan mengenai perawatan Anda.'
+        },
+        emergencies: {
+          heading: 'Keadaan Darurat',
+          content: 'Dalam keadaan darurat medis, segera hubungi layanan darurat setempat. Di Tiongkok daratan, hubungi 120 untuk ambulans dan perawatan medis darurat.'
+        },
+        noGuarantee: {
+          heading: 'Tidak ada jaminan rumah sakit-dokter',
+          content: 'Kami melakukan upaya wajar untuk mempertemukan pasien dengan rumah sakit dan spesialis yang memenuhi syarat berdasarkan informasi yang diberikan. Namun, jadwal rumah sakit dapat berubah, dokter tertentu tidak selalu dapat dijamin, dan keputusan perawatan akhir berada di tangan rumah sakit.'
+        },
+        contact: {
+          heading: 'Kontak',
+          company: 'Shanghai Keling Information Technology Co., Ltd.',
+          address: 'Kamar 101, Lantai 1, No. 2555 Changyang Road, Distrik Yangpu, Shanghai, Tiongkok',
+          email: 'hello@shanghaimedhealth.com'
+        }
+      },
+      hospitals: {
+        huashan: {
+          description: 'Peringkat #1 dalam dermatologi dan bedah saraf secara nasional. Salah satu rumah sakit Tiongkok yang paling diakui secara internasional.',
+          specialties: ['Bedah Saraf', 'Dermatologi', 'Penyakit Menular'],
+          internationalFeatures: 'Departemen internasional khusus, 24 penyedia asuransi diterima',
+          insuranceStatus: 'Penyelesaian Langsung'
+        },
+        'children-fudan': {
+          description: 'Pusat terkemuka untuk perawatan neonatal dan penyakit langka anak.',
+          specialties: ['Neonatologi', 'Bedah Anak', 'Kedokteran Perawatan Kritis'],
+          internationalFeatures: 'Departemen pediatrik internasional sejak 1993, 19 penyedia asuransi diterima',
+          insuranceStatus: 'Penyelesaian Langsung'
+        },
+        ruijin: {
+          description: 'Pelopor transplantasi sumsum tulang dan terapi CAR-T dengan hasil bertaraf dunia.',
+          specialties: ['Hematologi', 'Endokrinologi', 'Perawatan Luka & Luka Bakar'],
+          internationalFeatures: 'Tingkat remisi CAR-T 95,7%, bangsal internasional khusus, 21 penyedia asuransi diterima',
+          insuranceStatus: 'Penyelesaian Langsung'
+        },
+        'shanghai-general': {
+          description: 'Salah satu rumah sakit tertua dan paling prestisius di Shanghai. Departemen oftalmologi dan urologi terkemuka.',
+          specialties: ['Oftalmologi', 'Urologi', 'THT & Bedah Kepala-Leher'],
+          internationalFeatures: 'Pusat pasien internasional dengan staf multibahasa, 17 penyedia asuransi diterima',
+          insuranceStatus: 'Asuransi Internasional'
+        },
+        zhongshan: {
+          description: 'Berafiliasi dengan Fudan University. Pusat kardiovaskular dengan gedung pasien internasional tersendiri dan staf berbahasa Inggris khusus.',
+          specialties: ['Bedah Umum', 'Gastroenterologi', 'Kedokteran Kardiovaskular'],
+          internationalFeatures: 'Gedung pasien internasional independen, 19 penyedia asuransi diterima',
+          insuranceStatus: 'Asuransi Internasional'
+        },
+        renji: {
+          description: 'Berafiliasi dengan Shanghai Jiao Tong University. #1 gastroenterologi secara nasional selama 4 tahun berturut-turut. Pusat transplantasi hati terkemuka.',
+          specialties: ['Gastroenterologi', 'Kedokteran Reproduksi', 'Reumatologi'],
+          internationalFeatures: 'Pusat kedokteran reproduksi internasional, 20 penyedia asuransi diterima',
+          insuranceStatus: 'Asuransi Internasional'
+        },
+        longhua: {
+          description: 'Rumah sakit Pengobatan Tradisional Tiongkok utama. Percontohan resmi wisata medis TTM. Akupunktur, terapi herbal, dan rehabilitasi TTM.',
+          specialties: ['Onkologi TTM', 'Ortopedi TTM', 'Bedah TTM'],
+          internationalFeatures: 'Rumah sakit percontohan wisata medis TTM resmi, 18 penyedia asuransi diterima',
+          insuranceStatus: 'Asuransi Internasional'
+        },
+        ipmch: {
+          description: 'Berafiliasi dengan China Welfare Institute. Pusat terkemuka untuk kehamilan berisiko tinggi, kedokteran janin, dan kedokteran reproduksi.',
+          specialties: ['Kedokteran Reproduksi', 'Obstetri', 'Ginekologi'],
+          internationalFeatures: 'Berafiliasi dengan China Welfare Institute, perawatan bersalin internasional, 19 penyedia asuransi diterima',
+          insuranceStatus: 'Asuransi Internasional'
+        },
+        scmc: {
+          description: 'Berafiliasi dengan Shanghai Jiao Tong University. Pusat bedah jantung anak teratas di Tiongkok. Kemitraan dengan Project HOPE.',
+          specialties: ['Bedah Jantung Anak', 'Hematologi-Onkologi Anak', 'Pediatri Perkembangan Perilaku'],
+          internationalFeatures: 'Kemitraan dengan Project HOPE, pusat pediatrik internasional, 23 penyedia asuransi diterima',
+          insuranceStatus: 'Asuransi Internasional'
+        },
+        sixth: {
+          description: 'Pelopor bedah replantasi anggota tubuh sejak 1963. Pusat ortopedi dan endokrinologi terkemuka dengan pengakuan internasional.',
+          specialties: ['Ortopedi', 'Endokrinologi & Metabolisme', 'Kedokteran Olahraga'],
+          internationalFeatures: 'Pusat replantasi anggota tubuh pertama di dunia, 18 penyedia asuransi diterima',
+          insuranceStatus: 'Asuransi Internasional'
+        },
+        'first-maternity': {
+          description: 'Rumah sakit bersalin utama di Shanghai. Perawatan obstetri dan neonatal komprehensif dengan dukungan pasien internasional.',
+          specialties: ['Obstetri', 'Kedokteran Janin', 'Kedokteran Reproduksi'],
+          internationalFeatures: 'Layanan bersalin internasional khusus, 18 penyedia asuransi diterima',
+          insuranceStatus: 'Asuransi Internasional'
+        },
+        xinhua: {
+          description: 'Pusat bedah tulang belakang dan bedah anak terkemuka dengan layanan internasional lengkap.',
+          specialties: ['Pediatri', 'Dermatologi', 'Bedah Umum'],
+          internationalFeatures: 'Departemen internasional komprehensif, 16 penyedia asuransi diterima',
+          insuranceStatus: 'Asuransi Internasional'
+        },
+        huadong: {
+          description: 'Berafiliasi dengan Fudan University. Pusat kedokteran geriatri dan rehabilitasi utama. Populer untuk program pemeriksaan kesehatan eksekutif.',
+          specialties: ['Kedokteran Geriatri', 'Kedokteran Rehabilitasi', 'Nutrisi Klinis'],
+          internationalFeatures: 'Pusat pemeriksaan kesehatan eksekutif, rehabilitasi internasional, 17 penyedia asuransi diterima',
+          insuranceStatus: 'Asuransi Internasional'
+        },
+        ninth: {
+          description: 'Rumah sakit gigi #1 di Tiongkok. Departemen Kedokteran Internasional khusus dibuka Januari 2024 di kampus Pudong dengan 100+ kursi gigi, CBCT, mikroskop, dan peralatan laser. Spesialis implan internasional penuh waktu Prof. Tonetti. Mekanisme MDT untuk kasus kompleks. Telah merawat pasien dari 40+ negara.',
+          specialties: ['Bedah Mulut/Gigi #1', 'Bedah Plastik & Rekonstruktif', 'Bedah Mulut & Maksilofasial'],
+          internationalFeatures: 'Rumah sakit gigi utama dengan 5 akademisi. Peringkat #1 dalam bedah mulut dan bedah plastik secara nasional.',
+          insuranceStatus: 'Penyelesaian Langsung (8 asuransi, 21 kemitraan)'
+        },
+        jiahui: {
+          description: 'Rumah sakit internasional swasta terbesar di Shanghai dengan 500 tempat tidur. Berafiliasi dengan Massachusetts General Hospital. Pusat medis layanan lengkap.',
+          specialties: ['Onkologi', 'Bedah', 'Kedokteran Umum'],
+          internationalFeatures: 'Afiliasi dengan Massachusetts General Hospital, 500 tempat tidur',
+          insuranceStatus: '50+ Asuransi Internasional'
+        },
+        unicare: {
+          description: 'Bagian dari Chindex Healthcare. Layanan kesehatan komprehensif dengan perawatan pasien gaya Barat dan standar internasional.',
+          specialties: ['Kedokteran Keluarga', 'Obstetri', 'Pediatri'],
+          internationalFeatures: 'Merek rumah sakit internasional yang telah mapan',
+          insuranceStatus: '50+ Asuransi Internasional'
+        },
+        parkway: {
+          description: 'Bagian dari IHH Healthcare, salah satu grup layanan kesehatan terbesar di dunia. Jaringan asuransi yang kuat termasuk penyelesaian langsung Prudential.',
+          specialties: ['Multi-spesialisasi', 'Kedokteran Keluarga', 'Diagnostik'],
+          internationalFeatures: 'Grup IHH Healthcare, pembayaran langsung Prudential',
+          insuranceStatus: 'Pembayaran Langsung Prudential'
+        },
+        shine: {
+          description: 'Anggota Mayo Clinic Care Network. Layanan kardiologi, gastroenterologi, dan kedokteran umum komprehensif dengan standar internasional.',
+          specialties: ['Kardiologi', 'Gastroenterologi', 'Kedokteran Umum'],
+          internationalFeatures: 'Kemitraan Mayo Clinic Care Network',
+          insuranceStatus: '40+ Asuransi Internasional'
+        },
+        raffles: {
+          description: 'Bagian dari grup Surbana Jurong yang berbasis di Singapura. Fokus pada wisata medis dengan layanan pemeriksaan kesehatan komprehensif.',
+          specialties: ['Pemeriksaan Eksekutif', 'Kedokteran Umum', 'Wisata Medis'],
+          internationalFeatures: 'Grup Surbana Jurong berbasis di Singapura',
+          insuranceStatus: 'Asuransi Internasional'
+        }
+      },
+      faqPage: {
+        cta: {
+          title: 'Masih ada pertanyaan?',
+          text: 'Dapatkan konsultasi gratis ShanghaiMed tanpa kewajiban apa pun. Tim kami merespons dalam 24 jam.',
+          email: 'Email Kami',
+          form: 'Formulir Kontak'
+        }
+      }
+    },
+
 }
 
 export function LanguageProvider({ children, locale }: { children: ReactNode; locale?: Language }) {

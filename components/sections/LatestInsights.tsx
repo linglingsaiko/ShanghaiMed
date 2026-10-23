@@ -13,7 +13,7 @@ export default function LatestInsights() {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const allPosts = await getSortedPosts(language === 'ja' ? 'ja' : language === 'ru' ? 'ru' : language === 'ar' ? 'ar' : language === 'mn' ? 'mn' : undefined)
+      const allPosts = await getSortedPosts(language === 'ja' ? 'ja' : language === 'ru' ? 'ru' : language === 'ar' ? 'ar' : language === 'mn' ? 'mn' : language === 'ms' ? 'ms' : language === 'id' ? 'id' : undefined)
       const featuredPost = allPosts.find(p => p.featured)
       const latestPosts = allPosts.filter(p => !p.featured).slice(0, 2)
       if (featuredPost) {
@@ -73,7 +73,7 @@ export default function LatestInsights() {
                   <span className="flex items-center gap-1 text-sm text-gray-500">
                     <Calendar className="h-4 w-4" />
                     {new Date(post.publishDate).toLocaleDateString(
-                      language === 'ja' ? 'ja-JP' : language === 'ru' ? 'ru-RU' : language === 'mn' ? 'mn-MN' : 'en-US',
+                      language === 'ja' ? 'ja-JP' : language === 'ru' ? 'ru-RU' : language === 'mn' ? 'mn-MN' : language === 'ms' ? 'ms-MY' : language === 'id' ? 'id-ID' : 'en-US',
                       { year: 'numeric', month: 'short', day: 'numeric' }
                     )}
                   </span>

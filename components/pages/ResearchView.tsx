@@ -5,6 +5,8 @@ import { studies } from '@/lib/content/research.en'
 import { researchAr, researchArUi } from '@/lib/content/research.ar'
 import { researchRu, researchRuUi } from '@/lib/content/research.ru'
 import { researchMn, researchMnUi } from '@/lib/content/research.mn'
+import { researchMs, researchMsUi } from '@/lib/content/research.ms'
+import { researchId, researchIdUi } from '@/lib/content/research.id'
 
 const categoriesBase = [
   { key: 'patient-experience', enLabel: 'Patient Experience', count: 0 },
@@ -20,18 +22,19 @@ const categoryCounts = categoriesBase.map(c => ({
   count: studies.filter(s => s.category === c.key).length,
 }))
 
-type Loc = 'ar' | 'ru' | 'mn' | 'en'
+type Loc = 'ar' | 'ru' | 'mn' | 'ms' | 'id' | 'en'
 
 export default function ResearchView() {
   const { language, localePath } = useLanguage()
-  const loc: Loc = language === 'ar' ? 'ar' : language === 'ru' ? 'ru' : language === 'mn' ? 'mn' : 'en'
+  const loc: Loc = language === 'ar' ? 'ar' : language === 'ru' ? 'ru' : language === 'mn' ? 'mn' : language === 'ms' ? 'ms' : language === 'id' ? 'id' : 'en'
   const isAr = loc === 'ar'
-  const localized = loc !== 'en' // ar / ru / mn use the localized UI bundle
-  const ui = isAr ? researchArUi : loc === 'ru' ? researchRuUi : loc === 'mn' ? researchMnUi : null
-  const fields = isAr ? researchAr : loc === 'ru' ? researchRu : loc === 'mn' ? researchMn : null
+  const localized = loc !== 'en' // ar / ru / mn / ms / id use the localized UI bundle
+  const ui = isAr ? researchArUi : loc === 'ru' ? researchRuUi : loc === 'mn' ? researchMnUi : loc === 'ms' ? researchMsUi : loc === 'id' ? researchIdUi : null
+  const fields = isAr ? researchAr : loc === 'ru' ? researchRu : loc === 'mn' ? researchMn : loc === 'ms' ? researchMs : loc === 'id' ? researchId : null
 
+  const allLabel = isAr ? 'الكل' : loc === 'ru' ? 'Все' : loc === 'mn' ? 'Бүгд' : loc === 'ms' ? 'Semua' : loc === 'id' ? 'Semua' : 'All'
   const categories = [
-    { key: 'all', label: isAr ? 'الكل' : loc === 'ru' ? 'Все' : loc === 'mn' ? 'Бүгд' : 'All', count: studies.length },
+    { key: 'all', label: allLabel, count: studies.length },
     ...categoryCounts.map(c => ({
       key: c.key,
       label: localized ? ui!.categoryLabels[c.key] : c.enLabel,

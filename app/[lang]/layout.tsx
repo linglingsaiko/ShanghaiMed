@@ -32,7 +32,7 @@ const localeMetadata: Record<string, { title: string; description: string; ogLoc
 
 // Generate static params for non-English locales
 export function generateStaticParams() {
-  return [{ lang: 'ja' }, { lang: 'ar' }, { lang: 'ru' }, { lang: 'mn' }]
+  return [{ lang: 'ja' }, { lang: 'ar' }, { lang: 'ru' }, { lang: 'mn' }, { lang: 'ms' }, { lang: 'id' }]
 }
 
 export const dynamicParams = false
@@ -50,6 +50,8 @@ export function generateMetadata({ params }: { params: { lang: string } }): Meta
       ar: `${hreflangBase}/ar`,
       ru: `${hreflangBase}/ru`,
       mn: `${hreflangBase}/mn`,
+      ms: `${hreflangBase}/ms`,
+      id: `${hreflangBase}/id`,
     },
   }
 

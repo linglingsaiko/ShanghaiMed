@@ -29,6 +29,8 @@ const LanguageSwitcher: React.FC = () => {
     { value: 'ar' as const, label: 'العربية', display: 'العربية' },
     { value: 'ru' as const, label: 'Русский', display: 'Русский' },
     { value: 'mn' as const, label: 'Монгол', display: 'Монгол' },
+    { value: 'ms' as const, label: 'BM', display: 'Bahasa Melayu' },
+    { value: 'id' as const, label: 'ID', display: 'Bahasa Indonesia' },
   ]
 
   const current = options.find(o => o.value === language)!

@@ -14,7 +14,7 @@ interface ExperienceItem {
   detail: string
 }
 
-const credentialsData: Record<'en' | 'ja' | 'ar' | 'ru' | 'mn', Credential[]> = {
+const credentialsData: Record<'en' | 'ja' | 'ar' | 'ru' | 'mn' | 'ms' | 'id', Credential[]> = {
   en: [
     {
       title: 'ISPN — International Standards for Professional Nurses',
@@ -125,9 +125,53 @@ const credentialsData: Record<'en' | 'ja' | 'ar' | 'ru' | 'mn', Credential[]> = 
       category: 'Сувилахуйн лиценз',
     },
   ],
+  ms: [
+    {
+      title: 'ISPN — International Standards for Professional Nurses (Piawaian Antarabangsa untuk Jururawat Profesional)',
+      detail: 'Pensijilan antarabangsa untuk jururawat berdaftar, dikeluarkan oleh International Society of Nurses in Cancer Care dan badan-badan gabungan',
+      category: 'Lesen Kejururawatan',
+    },
+    {
+      title: 'Jururawat Berdaftar Kanan (主管护师)',
+      detail: 'Gelaran profesional peringkat kanan dalam sistem ranking profesional kesihatan negara China, dianugerahkan oleh Suruhanjaya Kesihatan Perbandaran Shanghai',
+      category: 'Gelaran Profesional',
+    },
+    {
+      title: 'JLPT N1 — Ujian Kecekapan Bahasa Jepun, Tahap N1',
+      detail: 'Tahap tertinggi pensijilan bahasa Jepun, dikeluarkan oleh Japan Foundation dan Japan Educational Exchanges and Services',
+      category: 'Pensijilan Bahasa',
+    },
+    {
+      title: 'Jururawat Berdaftar (RN), China',
+      detail: 'Dilesenkan oleh Suruhanjaya Kesihatan Perbandaran Shanghai',
+      category: 'Lesen Kejururawatan',
+    },
+  ],
+  id: [
+    {
+      title: 'ISPN — International Standards for Professional Nurses (Standar Internasional untuk Perawat Profesional)',
+      detail: 'Sertifikasi internasional untuk perawat terdaftar, dikeluarkan oleh International Society of Nurses in Cancer Care dan badan-badan afiliasinya',
+      category: 'Lisensi Keperawatan',
+    },
+    {
+      title: 'Perawat Terdaftar Senior (主管护师)',
+      detail: 'Gelar profesional tingkat senior dalam sistem peringkat profesional kesehatan nasional Tiongkok, dianugerahkan oleh Komisi Kesehatan Kota Shanghai',
+      category: 'Gelar Profesional',
+    },
+    {
+      title: 'JLPT N1 — Ujian Kemahiran Bahasa Jepang, Tingkat N1',
+      detail: 'Tingkat tertinggi sertifikasi bahasa Jepang, dikeluarkan oleh Japan Foundation dan Japan Educational Exchanges and Services',
+      category: 'Sertifikasi Bahasa',
+    },
+    {
+      title: 'Perawat Terdaftar (RN), Tiongkok',
+      detail: 'Dilisensikan oleh Komisi Kesehatan Kota Shanghai',
+      category: 'Lisensi Keperawatan',
+    },
+  ],
 }
 
-const experienceData: Record<'en' | 'ja' | 'ar' | 'ru' | 'mn', ExperienceItem[]> = {
+const experienceData: Record<'en' | 'ja' | 'ar' | 'ru' | 'mn' | 'ms' | 'id', ExperienceItem[]> = {
   en: [
     {
       area: 'International Patient Coordination',
@@ -216,6 +260,42 @@ const experienceData: Record<'en' | 'ja' | 'ar' | 'ru' | 'mn', ExperienceItem[]>
     {
       area: 'Эмнэлгийн аялал жуулчлалын үйл ажиллагаа',
       detail: 'Визийн зөвлөгөө, даатгалын шууд төлбөр (Cigna, Allianz, AXA, Bupa), байрны зохицуулалт, мөн манай эмнэлгийн чиглүүлэгч Navi-гаар дамжуулан өвчтөнд 24 цагийн хиймэл оюун ухааны дэмжлэг үзүүлэх зэрэг үйл ажиллагааны урсгалыг бий болгосон.',
+    },
+  ],
+  ms: [
+    {
+      area: 'Penyelarasan Pesakit Antarabangsa',
+      detail: 'Menyelaraskan perjalanan perubatan menyeluruh untuk pesakit dari Timur Tengah, Asia Tenggara, Eropah, Amerika Utara, dan rantau lain — dari konsultasi awal hingga pelepasan hospital dan susulan selepas pembedahan.',
+    },
+    {
+      area: 'Navigasi Hospital & Terjemahan Perubatan',
+      detail: 'Menyediakan tafsiran perubatan masa nyata dalam Bahasa Inggeris, Bahasa Jepun, dan Bahasa Mandarin untuk pesakit antarabangsa di hospital Grade 3A (三甲) Shanghai. Bahasa tambahan disokong melalui penterjemah profesional yang telah ditapis.',
+    },
+    {
+      area: 'Operasi Penjagaan Kesihatan Premium',
+      detail: 'Lebih 10 tahun pengurusan operasi di institusi perubatan swasta terkemuka Shanghai — mereka bentuk aliran kerja penjagaan, mengoptimumkan pengalaman pesakit, dan menyelaraskan program perubatan merentas jabatan.',
+    },
+    {
+      area: 'Operasi Pelancongan Perubatan',
+      detail: 'Membina aliran kerja operasi yang merangkumi panduan visa, pengebilan terus insurans (Cigna, Allianz, AXA, Bupa), penyelarasan penginapan, dan sokongan pesakit 24/7 dikuasakan AI melalui Navi, navigator perubatan kami.',
+    },
+  ],
+  id: [
+    {
+      area: 'Koordinasi Pasien Internasional',
+      detail: 'Mengkoordinasikan perjalanan medis menyeluruh untuk pasien dari Timur Tengah, Asia Tenggara, Eropa, Amerika Utara, dan wilayah lain — dari konsultasi awal hingga pemulangan dan tindak lanjut pascaoperasi.',
+    },
+    {
+      area: 'Navigasi Rumah Sakit & Penerjemahan Medis',
+      detail: 'Menyediakan penerjemahan medis waktu nyata dalam Bahasa Inggris, Bahasa Jepang, dan Bahasa Mandarin untuk pasien internasional di rumah sakit Grade 3A (三甲) Shanghai. Bahasa tambahan didukung melalui penerjemah profesional yang telah diverifikasi.',
+    },
+    {
+      area: 'Operasional Layanan Kesehatan Premium',
+      detail: 'Lebih dari 10 tahun manajemen operasional di institusi medis swasta terkemuka Shanghai — merancang alur kerja perawatan, mengoptimalkan pengalaman pasien, dan mengoordinasikan program medis lintas departemen.',
+    },
+    {
+      area: 'Operasional Pariwisata Medis',
+      detail: 'Membangun alur kerja operasional yang mencakup panduan visa, penagihan langsung asuransi (Cigna, Allianz, AXA, Bupa), koordinasi akomodasi, dan dukungan pasien 24/7 bertenaga AI melalui Navi, navigator medis kami.',
     },
   ],
 }
@@ -371,12 +451,72 @@ const text = {
     ctaBody: 'Би мессеж бүрийг өөрөө уншдаг. Борлуулалтын баг ч, бэлэн скрипт ч байхгүй.',
     ctaButton: 'Холбоо барих',
   },
+  ms: {
+    role: 'Pengasas & Ketua Concierge',
+    intro:
+      'Jururawat berdaftar bertauliah ISPN, jururawat berdaftar kanan dan pengasas ShanghaiMed. Lebih sedekad pengalaman praktikal dalam operasi penjagaan kesihatan premium dan membimbing pesakit antarabangsa melalui sistem penjagaan kesihatan Shanghai — dari konsultasi rutin hingga penyelarasan pembedahan kompleks.',
+    whyTitle: 'Mengapa Saya Mengasaskan ShanghaiMed',
+    whyP1:
+      'Saya menghabiskan lebih sepuluh tahun bekerja di dalam sistem penjagaan kesihatan premium Shanghai — menyelaraskan penjagaan untuk pesakit antarabangsa, mengemudi birokrasi hospital bagi pihak mereka, dan melihat masalah boleh cegah yang sama berulang: pesakit tiba tanpa rekod yang diterjemahkan, dihalakan ke jabatan yang salah, membayar lebih untuk perkhidmatan yang tidak mereka perlukan, atau pulang tanpa memahami arahan pelepasan mereka sendiri.',
+    whyP2:
+      'Hospital-hospital tersebut adalah cemerlang. Jurangnya bukan pada kualiti perubatan — ia adalah ketiadaan seseorang yang memahami kedua-dua pihak klinikal dan pihak pesakit, dan yang dapat merapatkannya dalam bahasa pesakit sendiri.',
+    whyP3:
+      'ShanghaiMed wujud untuk merapatkan jurang tersebut. Kami mengenakan yuran perkhidmatan yang telus, tidak mengambil sebarang komisen daripada hospital, dan melayan setiap pesakit sebagaimana saya melayan ahli keluarga yang mengemudi sistem yang tidak biasa di negara asing.',
+    credentialsTitle: 'Kelayakan Profesional',
+    verifiedTitle: 'Kelayakan Yang Disahkan',
+    nurseCertName: 'Sijil Amalan Jururawat',
+    ispnCertName: 'Sijil Pencapaian ISPN',
+    certFootnote: 'Klik untuk melihat kelayakan yang disahkan. Maklumat sensitif telah disunting untuk privasi.',
+    experienceTitle: 'Bidang Pengalaman',
+    companyTitle: 'Mengenai Syarikat',
+    companyP1:
+      'ShanghaiMed dikendalikan oleh Shanghai Keling Information Technology Co., Ltd., sebuah syarikat yang berdaftar di Shanghai, China.',
+    companyP2:
+      'Kami adalah pemudah cara pelancongan perubatan perkhidmatan penuh — bukan broker. Kami mengenakan yuran perkhidmatan concierge yang telus kepada pesakit dan tidak mengambil sebarang komisen daripada hospital. Bil perubatan dibayar terus kepada hospital pada kadar yang diterbitkan oleh hospital itu sendiri.',
+    registeredName: 'Nama Berdaftar',
+    registeredAddress: 'Alamat Berdaftar',
+    legalRepresentative: 'Wakil Undang-Undang',
+    languages: 'Bahasa',
+    ctaTitle: 'Ada soalan?',
+    ctaBody: 'Saya membaca setiap mesej secara peribadi. Tiada pasukan jualan, tiada skrip.',
+    ctaButton: 'Hubungi Kami',
+  },
+  id: {
+    role: 'Pendiri & Kepala Concierge',
+    intro:
+      'Perawat terdaftar bersertifikasi ISPN, perawat terdaftar senior dan pendiri ShanghaiMed. Lebih dari satu dekade pengalaman praktis dalam operasional layanan kesehatan premium dan membimbing pasien internasional melalui sistem layanan kesehatan Shanghai — dari konsultasi rutin hingga koordinasi pembedahan kompleks.',
+    whyTitle: 'Mengapa Saya Mendirikan ShanghaiMed',
+    whyP1:
+      'Saya menghabiskan lebih dari sepuluh tahun bekerja di dalam sistem layanan kesehatan premium Shanghai — mengoordinasikan perawatan untuk pasien internasional, menavigasi birokrasi rumah sakit atas nama mereka, dan melihat masalah yang dapat dicegah yang sama terulang: pasien tiba tanpa rekam medis yang diterjemahkan, diarahkan ke departemen yang salah, membayar lebih untuk layanan yang tidak mereka butuhkan, atau pulang tanpa memahami instruksi pemulangan mereka sendiri.',
+    whyP2:
+      'Rumah sakit-rumah sakit tersebut sangat baik. Kesenjangannya tidak pernah pada kualitas medis — melainkan pada tidak adanya seseorang yang memahami sisi klinis dan sisi pasien, dan yang dapat menjembatani keduanya dalam bahasa pasien sendiri.',
+    whyP3:
+      'ShanghaiMed hadir untuk menutup kesenjangan tersebut. Kami mengenakan biaya layanan yang transparan, tidak mengambil komisi apa pun dari rumah sakit, dan memperlakukan setiap pasien sebagaimana saya memperlakukan anggota keluarga yang menavigasi sistem yang tidak dikenal di negara asing.',
+    credentialsTitle: 'Kualifikasi Profesional',
+    verifiedTitle: 'Kredensial Terverifikasi',
+    nurseCertName: 'Sertifikat Praktik Keperawatan',
+    ispnCertName: 'Sertifikat Pencapaian ISPN',
+    certFootnote: 'Klik untuk melihat kredensial terverifikasi. Informasi sensitif disunting untuk privasi.',
+    experienceTitle: 'Bidang Pengalaman',
+    companyTitle: 'Tentang Perusahaan',
+    companyP1:
+      'ShanghaiMed dioperasikan oleh Shanghai Keling Information Technology Co., Ltd., perusahaan yang terdaftar di Shanghai, Tiongkok.',
+    companyP2:
+      'Kami adalah fasilitator pariwisata medis layanan penuh — bukan broker. Kami mengenakan biaya layanan concierge yang transparan kepada pasien dan tidak mengambil komisi apa pun dari rumah sakit. Tagihan medis dibayar langsung ke rumah sakit dengan tarif yang dipublikasikan oleh rumah sakit itu sendiri.',
+    registeredName: 'Nama Terdaftar',
+    registeredAddress: 'Alamat Terdaftar',
+    legalRepresentative: 'Wakil Hukum',
+    languages: 'Bahasa',
+    ctaTitle: 'Ada pertanyaan?',
+    ctaBody: 'Saya membaca setiap pesan secara pribadi. Tidak ada tim penjualan, tidak ada skrip.',
+    ctaButton: 'Hubungi Kami',
+  },
 }
 
 export default function FounderContent() {
   const { language } = useLanguage()
-  // ja/ar/ru/mn all have complete translated data (prose + credentials + experience)
-  const lang = language === 'ja' ? 'ja' : language === 'ar' ? 'ar' : language === 'ru' ? 'ru' : language === 'mn' ? 'mn' : 'en'
+  // ja/ar/ru/mn/ms/id all have complete translated data (prose + credentials + experience)
+  const lang = language === 'ja' ? 'ja' : language === 'ar' ? 'ar' : language === 'ru' ? 'ru' : language === 'mn' ? 'mn' : language === 'ms' ? 'ms' : language === 'id' ? 'id' : 'en'
   const t = text[lang]
   const credentials = credentialsData[lang]
   const experience = experienceData[lang]
@@ -455,7 +595,7 @@ export default function FounderContent() {
                 <div>
                   <p className="text-sm font-medium text-gray-900">{t.nurseCertName}</p>
                   <p className="text-xs text-gray-500">
-                    {language === 'ja' ? '上海市衛生健康委員会' : language === 'ar' ? 'لجنة شنغهاي البلدية للصحة' : language === 'ru' ? 'Шанхайская муниципальная комиссия по здравоохранению' : language === 'mn' ? 'Шанхай хотын Эрүүл Мэндийн Комисс' : 'Shanghai Municipal Health Commission'}
+                    {language === 'ja' ? '上海市衛生健康委員会' : language === 'ar' ? 'لجنة شنغهاي البلدية للصحة' : language === 'ru' ? 'Шанхайская муниципальная комиссия по здравоохранению' : language === 'mn' ? 'Шанхай хотын Эрүүл Мэндийн Комисс' : language === 'ms' ? 'Suruhanjaya Kesihatan Perbandaran Shanghai' : language === 'id' ? 'Komisi Kesehatan Kota Shanghai' : 'Shanghai Municipal Health Commission'}
                   </p>
                 </div>
                 <svg className="w-4 h-4 text-gray-400 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -514,8 +654,8 @@ export default function FounderContent() {
             </div>
             <div>
               <dt className="font-medium text-gray-900">{t.registeredAddress}</dt>
-              <dd>{language === 'ja' ? '長陽路2555号1階101室' : language === 'ar' ? 'الغرفة 101، الطابق الأول، رقم 2555 طريق تشانغيانغ' : language === 'ru' ? 'Комната 101, 1-й этаж, д. 2555, дорога Чанъян' : language === 'mn' ? '101-р өрөө, 1-р давхар, Чанъян замын 2555-р байр' : 'Room 101, Floor 1, No. 2555 Changyang Road'}</dd>
-              <dd>{language === 'ja' ? '中国上海市楊浦区' : language === 'ar' ? 'منطقة يانغبو، شنغهاي، الصين' : language === 'ru' ? 'район Янпу, Шанхай, Китай' : language === 'mn' ? 'Янпу дүүрэг, Шанхай, Хятад' : 'Yangpu District, Shanghai, China'}</dd>
+              <dd>{language === 'ja' ? '長陽路2555号1階101室' : language === 'ar' ? 'الغرفة 101، الطابق الأول، رقم 2555 طريق تشانغيانغ' : language === 'ru' ? 'Комната 101, 1-й этаж, д. 2555, дорога Чанъян' : language === 'mn' ? '101-р өрөө, 1-р давхар, Чанъян замын 2555-р байр' : language === 'ms' ? 'Bilik 101, Tingkat 1, No. 2555 Jalan Changyang' : language === 'id' ? 'Kamar 101, Lantai 1, No. 2555 Jalan Changyang' : 'Room 101, Floor 1, No. 2555 Changyang Road'}</dd>
+              <dd>{language === 'ja' ? '中国上海市楊浦区' : language === 'ar' ? 'منطقة يانغبو، شنغهاي، الصين' : language === 'ru' ? 'район Янпу, Шанхай, Китай' : language === 'mn' ? 'Янпу дүүрэг, Шанхай, Хятад' : language === 'ms' ? 'Daerah Yangpu, Shanghai, China' : language === 'id' ? 'Distrik Yangpu, Shanghai, Tiongkok' : 'Yangpu District, Shanghai, China'}</dd>
             </div>
             <div>
               <dt className="font-medium text-gray-900">{t.legalRepresentative}</dt>
@@ -523,7 +663,7 @@ export default function FounderContent() {
             </div>
             <div>
               <dt className="font-medium text-gray-900">{t.languages}</dt>
-              <dd>{language === 'ja' ? '英語・中国語・日本語' : language === 'ar' ? 'الإنجليزية، الصينية، اليابانية' : language === 'ru' ? 'английский, китайский, японский' : language === 'mn' ? 'English, 中文, 日本語' : 'English, 中文, 日本語'}</dd>
+              <dd>{language === 'ja' ? '英語・中国語・日本語' : language === 'ar' ? 'الإنجليزية، الصينية، اليابانية' : language === 'ru' ? 'английский, китайский, японский' : language === 'mn' ? 'English, 中文, 日本語' : language === 'ms' ? 'English, 中文, 日本語' : language === 'id' ? 'English, 中文, 日本語' : 'English, 中文, 日本語'}</dd>
             </div>
           </div>
         </section>

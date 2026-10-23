@@ -295,14 +295,14 @@ const Pricing: React.FC = () => {
           const ctaText = resolveT(free.ctaKey, free.ctaFallback)
           const ctaHref = free.ctaMsg ? `${primaryLink}?text=${encodeURIComponent(free.ctaMsg)}` : primaryLink
           return (
-            <div className="max-w-[760px] mx-auto mb-5">
+            <div className="mb-5">
               <article className={cardClasses(free)}>
                 {free.badgeFallback && (
                   <span className={`absolute -top-2.5 left-1/2 -translate-x-1/2 text-[10px] font-bold tracking-[0.12em] uppercase px-3 py-1 rounded-full whitespace-nowrap ${badgeClasses(free.badgeVariant)}`}>
                     {resolveT(free.badgeKey, free.badgeFallback)}
                   </span>
                 )}
-                <div className="grid md:grid-cols-[1fr_1.4fr] gap-6 md:gap-9 items-center">
+                <div className="grid md:grid-cols-[1fr_1.6fr] gap-6 md:gap-10 items-center">
                   <div>
                     <div className="mb-1.5">
                       <span className="text-[56px] font-extrabold leading-none tracking-tight text-[#007d5a] tabular-nums">{free.priceLabel}</span>

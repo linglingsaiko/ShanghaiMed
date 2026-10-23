@@ -49,16 +49,20 @@ const enFaqs: FaqItem[] = [
         </div>
         <p>
           ShanghaiMed offers a <strong>free no-obligation initial consultation</strong>, a standalone{' '}
-          <strong>on-site hospital escort at $50/hour</strong> (minimum 2 hours, English-Chinese interpretation only),
-          and three concierge service packages: <strong>$500 for 1 day (daytime)</strong> (Health Checkup Concierge,
-          for 1-day health checkup programs only), <strong>$1,000 for 3 days (daytime)</strong> (Essential Care Concierge,
-          required for all specialist consultations and medical conditions), and{' '}
-          <strong>$1,650 for 5 days (daytime)</strong> (Surgery &amp; Extended Care Concierge, required for surgery and
-          inpatient procedures). Additional companion hours beyond package days are available at <strong>$50/hour</strong>.
-          Airport pickup &amp; drop-off uses a standard sedan; special vehicles (wheelchair-accessible van, 7-seater, etc.)
-          are arranged at additional cost. Interpretation in languages other than English requires an interpreter at
-          additional cost. Hospital and clinic treatment costs (including health checkup packages starting from ~$700)
-          are billed separately at local rates; ShanghaiMed does not charge hospital commissions.
+          <strong>on-site hospital escort at $50/hour</strong> (booked and paid by the hour; English–Chinese
+          interpretation; other languages available at additional cost), and three concierge service packages:{' '}
+          <strong>$500 for 1 day (daytime)</strong> (Health Checkup Concierge, for 1-day health checkup programs only),{' '}
+          <strong>$1,000 for 3 days (daytime)</strong> (Essential Care Concierge — required for all specialist
+          consultations and medical conditions), and <strong>$1,650 for 5 days (daytime)</strong> (Surgery &amp;
+          Extended Care Concierge — required for surgery and inpatient procedures). Additional companion hours beyond
+          package days are available at <strong>$50/hour</strong>. Airport pickup &amp; drop-off uses a standard
+          sedan; larger groups requiring 7-seaters, wheelchair vans, or child seats are arranged at additional cost.
+          All packages include English–Chinese on-site medical interpretation (the Japanese-language version of this
+          page lists Japanese–Chinese interpretation); interpretation in other languages is arranged on request at
+          local market rates, quoted during consultation. Emergency on-site support is available <strong>24/7 for an
+          additional fee</strong> — <strong>$300 emergency call-out (includes first 4 hours), then $100/hour</strong>.
+          Hospital and clinic treatment costs (including health checkup packages starting from ~$700) are billed
+          separately at local rates; ShanghaiMed does not charge hospital commissions.
         </p>
       </>
     ),
@@ -142,7 +146,8 @@ const enFaqs: FaqItem[] = [
           Physicians regularly publish in English-language medical journals and attend international conferences.
         </p>
         <p className="mb-4">
-          To guarantee zero communication gaps, ShanghaiMed provides <strong>professional bilingual medical companions</strong> (English-Chinese) who:
+          To guarantee zero communication gaps, ShanghaiMed provides <strong>professional English–Chinese medical
+          companions</strong> (Japanese–Chinese in the Japanese-language version) who:
         </p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li>Accompany you to every appointment</li>
@@ -185,27 +190,27 @@ const enFaqs: FaqItem[] = [
           <li>Estimated medical budget</li>
           <li>Insurance guidance</li>
         </ul>
-        <p className="mb-2"><strong>On-site Hospital Escort — $50/hour (minimum 2 hours)</strong></p>
-        <p className="mb-1">Standalone service for patients who already booked their own appointment — 4 services:</p>
+        <p className="mb-2"><strong>On-site Hospital Escort — $50/hour</strong></p>
+        <p className="mb-1">Booked and paid by the hour; available standalone or as an add-on to any package. 4 services:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
-          <li>On-site escort companion at the hospital</li>
+          <li>On-site companion at the hospital</li>
           <li>English–Chinese on-site medical interpretation (other languages at additional cost)</li>
-          <li>On-site queue, payment and medication pickup assistance</li>
+          <li>On-site queue, payment, and medication pickup assistance</li>
           <li>Check-in message on visit day</li>
         </ul>
         <p className="mb-4 text-sm text-amber-700 bg-amber-50 p-3 rounded">
-          <strong>Note:</strong> The escort is not necessarily a licensed nurse. Hourly escort does NOT include appointment scheduling, doctor matching, airport pickup, report translation, visa support, insurance pre-authorization, languages other than English, or post-visit follow-up — those are covered by concierge packages.
+          <strong>Note:</strong> Hourly escort does NOT include appointment scheduling, doctor matching, airport pickup, report translation, visa support, insurance pre-authorization, interpretation in languages other than English, or post-visit follow-up — those are covered by concierge packages. For in-depth treatment planning or multi-appointment journeys, a concierge package is required.
         </p>
         <p className="mb-2"><strong>Health Checkup Concierge — $500 / 1 day (daytime)</strong></p>
         <p className="mb-1">13 concierge services — for 1-day health checkup programs only:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
-          <li>1 full day of on-site ISPN-registered trilingual nurse accompaniment (daytime)</li>
+          <li>1 full day of on-site ISPN-registered nurse accompaniment (daytime)</li>
           <li>Airport pickup &amp; drop-off</li>
           <li>Hotel coordination assistance</li>
-          <li>Bilingual medical interpretation at the clinic</li>
+          <li>English–Chinese on-site medical interpretation at the clinic</li>
           <li>Health checkup report translation and result explanation</li>
           <li>Doctor appointment scheduling</li>
-          <li>Medication pickup and coordination</li>
+          <li>Medication pickup &amp; delivery</li>
           <li>Hospital &amp; specialist matching</li>
           <li>Local transportation, payment, and on-the-ground guidance</li>
           <li>Dedicated WhatsApp support throughout your stay</li>
@@ -216,42 +221,49 @@ const enFaqs: FaqItem[] = [
         <p className="mb-2"><strong>Essential Care Concierge — $1,000 / 3 days (daytime) ✓ Most commonly chosen</strong></p>
         <p className="mb-1">13 concierge services — required for all specialist consultations and medical conditions:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
-          <li>3 full days of on-site ISPN-registered trilingual nurse accompaniment (daytime)</li>
-          <li>Airport pickup &amp; drop-off (standard sedan; special vehicles at additional cost)</li>
+          <li>3 full days of on-site ISPN-registered nurse accompaniment (daytime)</li>
+          <li>Airport pickup &amp; drop-off</li>
           <li>Hotel coordination assistance</li>
-          <li>Bilingual medical interpretation at all appointments</li>
+          <li>English–Chinese on-site medical interpretation at all appointments</li>
           <li>Medical report translation and summaries</li>
           <li>Doctor appointment scheduling</li>
-          <li>Medication pickup and coordination</li>
+          <li>Medication pickup &amp; delivery</li>
           <li>Hospital &amp; specialist matching</li>
           <li>Local transportation, payment, and on-the-ground guidance</li>
           <li>Dedicated WhatsApp support throughout your stay</li>
           <li>Visa invitation letter support</li>
           <li>30-day post-care remote follow-up</li>
-          <li>Insurance support</li>
+          <li>Insurance support · pre-authorization</li>
         </ul>
         <p className="mb-2"><strong>Surgery &amp; Extended Care Concierge — $1,650 / 5 days (daytime)</strong></p>
         <p className="mb-1">16 concierge services — required for surgery, inpatient procedures, and extended treatment plans. Includes all Essential Care services plus surgery-specific support:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li>5 full days of on-site nurse accompaniment (daytime) — pre-op, surgery day &amp; post-op</li>
-          <li>Airport pickup &amp; drop-off (standard sedan; special vehicles at additional cost)</li>
+          <li>Airport pickup &amp; drop-off</li>
           <li>Hotel &amp; extended-stay coordination</li>
-          <li>Bilingual medical interpretation (including surgery day)</li>
-          <li>Full medical document translation &amp; surgical summary</li>
+          <li>English–Chinese on-site medical interpretation (including surgery day)</li>
+          <li>Full medical document translation &amp; surgical briefing</li>
           <li>Surgeon appointment &amp; pre-admission coordination</li>
           <li>Pre-surgery preparation &amp; admission coordination</li>
-          <li>Medication pickup &amp; post-op prescription coordination</li>
+          <li>Medication pickup &amp; delivery</li>
           <li>Hospital &amp; surgeon matching</li>
           <li>Inpatient check-ins during hospital stay</li>
-          <li>Local transportation, payment, and on-the-ground guidance</li>
+          <li>Local transportation, payment/billing assistance, and on-the-ground guidance</li>
           <li>Dedicated WhatsApp support throughout your stay</li>
           <li>Medical visa invitation letter support</li>
           <li>Family communication &amp; progress updates</li>
           <li>60-day post-care remote follow-up</li>
-          <li>Insurance &amp; surgical deposit coordination</li>
+          <li>Insurance · pre-authorization &amp; surgical deposit coordination</li>
         </ul>
+        <p className="mb-2"><strong>Emergency on-site support — available 24/7 for an additional fee</strong></p>
+        <p className="mb-4">
+          <strong>$300 emergency call-out (available 24/7, includes first 4 hours), then $100/hour.</strong>{' '}
+          Emergency support covers urgent after-hours, weekend, or acute-care situations where on-site nurse
+          accompaniment is needed outside the planned concierge schedule. In a life-threatening medical emergency,
+          call 120 (China's national ambulance number) first.
+        </p>
         <p>
-          <strong>What's NOT included</strong> (billed separately at local rates): Medical treatment costs paid directly to hospitals/clinics (doctor consultations, tests, medication, procedures, and health checkup packages starting from ~$700), accommodation, and international flights. Emergency medical services are not included in concierge packages — in a medical emergency call 120 immediately.
+          <strong>What's NOT included</strong> (billed separately at local rates): Medical treatment costs paid directly to hospitals/clinics (doctor consultations, tests, medication, procedures, and health checkup packages starting from ~$700), accommodation, international flights, interpretation in languages other than English (Japanese in the Japanese version), and vehicle upgrades for larger groups. ShanghaiMed does not charge hospital commissions.
         </p>
       </>
     ),
@@ -376,14 +388,15 @@ const enFaqs: FaqItem[] = [
     a: (
       <>
         <p className="mb-4">
-          <strong>Yes.</strong> On-site hospital escort is available as a standalone service at <strong>$50/hour</strong>{' '}
-          with a <strong>2-hour minimum</strong>. This is for patients who have already booked their own doctor
-          appointment and only need an English-speaking companion on-site for queues, payment, medication pickup, and
-          basic on-the-spot questions.
+          <strong>Yes.</strong> On-site hospital escort is available as a standalone service at <strong>$50/hour</strong>,
+          booked and paid by the hour. It is also available as an add-on to any concierge package for extra hours or
+          additional appointments. This is for patients who have already booked their own doctor appointment and only
+          need an English–Chinese medical companion on-site for queues, payment, medication pickup, and basic
+          on-the-spot questions.
         </p>
         <p className="mb-4">
-          The escort is <strong>not necessarily a licensed nurse</strong>, and interpretation is{' '}
-          <strong>English–Chinese only</strong> (other languages require an interpreter at additional cost).
+          Interpretation is <strong>English–Chinese</strong> (Japanese–Chinese in the Japanese-language version);
+          other languages are arranged on request at additional cost, quoted during consultation.
         </p>
         <p>
           Hourly escort does <strong>NOT</strong> include appointment scheduling, doctor matching, airport pickup,

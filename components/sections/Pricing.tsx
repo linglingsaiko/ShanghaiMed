@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { Check, Shield } from 'lucide-react'
+import { Check, Shield, ArrowRight } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 const WHATSAPP_LINK = 'https://wa.me/8613818274110'
@@ -14,41 +14,38 @@ interface CardDef {
   kind: CardKind
   priceLabel: string
   unitKey?: string
-  unitFallback: string
+  unitFallback?: string
   badgeFallback?: string
-  badgeVariant?: 'free' | 'hourly' | ''
+  badgeVariant?: 'free' | 'pop'
   badgeKey?: string
   nameKey: string
   nameFallback: string
   subtitleKey: string
   subtitleFallback: string
-  scopeKey: string
-  scopeFallback: string
-  scopeVariant?: 'free' | 'hourly' | 'hard'
+  scopeKey?: string
+  scopeFallback?: string
   itemsKey: string
   itemsFallback: string[]
-  itemsLabelKey?: string
+  itemsCountLabelKey?: string
   itemsCountLabelFallback: string
-  footnoteKey?: string
-  footnoteFallback?: string
+  twoColItems?: boolean
   calloutKey?: string
   calloutFallback?: string
-  calloutVariant?: 'free' | 'warning' | ''
-  socialProofKey?: string
-  socialProofFallback?: string
+  calloutVariant?: 'green' | 'amber'
   ctaMsg?: string
   ctaKey?: string
   ctaFallback: string
-  ctaVariant?: 'muted' | 'gray' | 'primary'
+  ctaVariant?: 'muted' | 'ghost' | 'primary'
+  twoRowLayout?: boolean
 }
 
 const Pricing: React.FC = () => {
   const { t, tArr, localePath, language } = useLanguage()
   const isJapanese = language === 'ja'
   const primaryLink = isJapanese ? LINE_LINK : WHATSAPP_LINK
-  const ctaTextPaid = isJapanese ? 'LINEでこのプランについて相談 →' : 'Ask about this package on WhatsApp →'
 
-  // ---- FALLBACKS (EN) ----
+  const interpLabel = isJapanese ? '日中医療現場通訳' : 'English–Chinese on-site medical interpretation'
+
   const freeItemsFallback = [
     'Medical needs assessment',
     'Hospital & specialist recommendations',
@@ -57,118 +54,104 @@ const Pricing: React.FC = () => {
   ]
   const hourlyItemsFallback = [
     'On-site escort companion at the hospital',
-    'English–Chinese on-site medical interpretation',
+    `${interpLabel} · other languages extra`,
     'On-the-spot guidance (queue, payment, pharmacy pickup)',
     'Same-day check-in message after visit',
   ]
   const checkupItemsFallback = [
-    '1 full-day on-site nurse accompaniment (daytime)',
-    'Airport pickup & drop-off',
+    '1 full-day on-site nurse (daytime)',
     'Hotel coordination assistance',
-    'Bilingual medical interpretation',
     'Health screening report translation & explanation',
-    'Doctor appointment scheduling',
-    'Medication pickup & coordination',
-    'Hospital & specialist matching',
-    'Local transportation & payment assistance',
-    'Dedicated WhatsApp support throughout your stay',
+    'Medication pickup & delivery',
+    'Local transportation & payment help',
     'Visa invitation letter support',
-    '30-day post-checkup remote follow-up',
     'Insurance support',
+    'Airport pickup & drop-off · standard sedan',
+    interpLabel,
+    'Doctor appointment scheduling',
+    'Hospital & specialist matching',
+    'Dedicated WhatsApp support',
+    '30-day post-checkup remote follow-up',
   ]
   const essentialItemsFallback = [
-    '3 full days on-site nurse accompaniment (daytime)',
-    'Airport pickup & drop-off',
-    'Hotel coordination assistance',
-    'Bilingual medical interpretation during all appointments',
-    'Medical report translation & summaries',
-    'Doctor appointment scheduling',
-    'Medication pickup & coordination',
-    'Hospital & specialist matching',
-    'Local transportation & payment assistance',
-    'Dedicated WhatsApp support throughout your stay',
-    'Visa invitation letter support',
+    '3 days on-site nurse (daytime)',
+    'Pre-visit medical records review',
+    'Doctor & specialist matching',
+    'Hospital appointment scheduling',
+    'Airport pickup & drop-off · standard sedan',
+    'Hotel & local transport coordination',
+    interpLabel,
+    'On-site navigation & payment help',
+    'Medical report translation',
+    'Medication pickup & delivery',
+    'Dedicated WhatsApp support throughout',
+    'Insurance support · pre-authorization',
     '30-day post-care remote follow-up',
-    'Insurance support',
   ]
   const surgeryItemsFallback = [
-    '5 full days on-site nurse accompaniment (daytime) · pre-op, surgery day & post-op',
-    'Airport pickup & drop-off',
-    'Hotel & extended-stay coordination',
-    'Bilingual medical interpretation (including surgery-day support)',
-    'Full medical report translation & surgical summary',
-    'Surgeon appointment & pre-admission scheduling',
-    'Pre-surgery preparation & admission coordination',
-    'Medication pickup & post-op prescription coordination',
-    'Hospital & surgeon matching',
-    'Inpatient check-ins during hospital stay',
-    'Local transportation & payment assistance',
-    'Dedicated WhatsApp support throughout your stay',
-    'Medical visa invitation letter support',
+    '5 days on-site nurse (daytime)',
+    'Pre-admission coordination',
+    'Surgery-day accompaniment',
+    'Inpatient check-ins during stay',
     'Family communication & progress updates',
-    '60-day post-care remote follow-up',
+    'Pre-surgery records review & briefing',
+    'Doctor & hospital selection guidance',
+    'Airport pickup & drop-off · standard sedan',
+    'Hotel & extended-stay support',
+    interpLabel,
+    'On-site navigation & payment/billing assistance',
+    'Surgical report translation',
+    'Medication pickup & delivery',
+    'Dedicated WhatsApp support',
     'Insurance & surgical deposit coordination',
+    '60-day post-care follow-up',
   ]
 
   const cards: CardDef[] = [
     {
       kind: 'free',
       priceLabel: '$0',
-      unitKey: 'pricing.freeCard.unit',
-      unitFallback: 'Free',
       badgeKey: 'pricing.freeCard.badge',
-      badgeFallback: 'No commitment',
+      badgeFallback: 'Free',
       badgeVariant: 'free',
       nameKey: 'pricing.freeCard.name',
       nameFallback: 'Free Initial Consultation',
       subtitleKey: 'pricing.freeCard.subtitle',
-      subtitleFallback: 'Get the information you need to decide — before you commit.',
-      scopeKey: 'pricing.freeCard.scope',
-      scopeFallback: 'Talk to Sara first — no obligation, no payment.',
-      scopeVariant: 'free',
+      subtitleFallback: 'Get the information you need before you commit — no obligation, no payment.',
       itemsKey: 'pricing.freeCard.items',
       itemsFallback: freeItemsFallback,
-      itemsLabelKey: 'pricing.freeCard.itemsLabel',
+      itemsCountLabelKey: 'pricing.freeCard.itemsLabel',
       itemsCountLabelFallback: 'What you get — 4 services',
+      twoColItems: true,
       calloutKey: 'pricing.freeCard.callout',
-      calloutFallback:
-        'Decision-stage only. This free call helps you figure out the right hospital, doctor, and budget range. On-site services (accompaniment, booking, translation) start when you book an hourly escort or a concierge package.',
-      calloutVariant: 'free',
+      calloutFallback: '<strong>Decision-stage call only.</strong> This free call helps you figure out the right hospital, doctor, and budget range. On-site services begin when you book an hourly escort or a concierge package.',
+      calloutVariant: 'green',
       ctaKey: 'pricing.freeCard.cta',
-      ctaFallback: 'Chat with Sara on WhatsApp →',
+      ctaFallback: 'Chat with Sara on WhatsApp',
       ctaVariant: 'muted',
       ctaMsg: "Hi Sara, I'd like a free initial consultation about medical care in Shanghai.",
+      twoRowLayout: true,
     },
     {
       kind: 'hourly',
       priceLabel: '$50',
-      unitKey: 'pricing.hourlyCard.unit',
-      unitFallback: 'per hour · min. 2 hours',
-      badgeKey: 'pricing.hourlyCard.badge',
-      badgeFallback: 'Standalone escort',
-      badgeVariant: 'hourly',
       nameKey: 'pricing.hourlyCard.name',
       nameFallback: 'On-site Hospital Escort',
       subtitleKey: 'pricing.hourlyCard.subtitle',
       subtitleFallback: 'For patients who already booked their own doctor.',
       scopeKey: 'pricing.hourlyCard.scope',
-      scopeFallback: 'Hospital accompaniment only — booked and paid per hour.',
-      scopeVariant: 'hourly',
+      scopeFallback: 'Booked and paid by the hour, available standalone <em style="font-style:italic;color:#7b8c99">or</em> as an add-on to any package.',
       itemsKey: 'pricing.hourlyCard.items',
       itemsFallback: hourlyItemsFallback,
-      itemsLabelKey: 'pricing.hourlyCard.itemsLabel',
+      itemsCountLabelKey: 'pricing.hourlyCard.itemsLabel',
       itemsCountLabelFallback: "What's included — 4 services",
-      footnoteKey: 'pricing.hourlyCard.footnote',
-      footnoteFallback:
-        'Interpretation in languages other than English requires an interpreter at additional cost.',
       calloutKey: 'pricing.hourlyCard.callout',
-      calloutFallback:
-        "Scope boundary. Hourly escort is on-site companion and English interpretation service only. The escort is not necessarily a licensed nurse. It does not include appointment scheduling, doctor matching, airport pickup, report translation, visa support, pre-authorization, languages other than English, or post-care follow-up — these are covered by concierge packages.",
-      calloutVariant: 'warning',
+      calloutFallback: `<strong>Scope boundary:</strong> Hourly escort is on-site companion and ${isJapanese ? 'Japanese–Chinese' : 'English–Chinese'} interpretation only. It does <strong>not</strong> include appointment scheduling, doctor matching, airport pickup, report translation, visa support, insurance pre-authorization, interpretation in languages other than ${isJapanese ? 'Japanese' : 'English'}, or post-care follow-up.`,
+      calloutVariant: 'amber',
       ctaKey: 'pricing.hourlyCard.cta',
-      ctaFallback: 'Book hourly escort on WhatsApp →',
-      ctaVariant: 'gray',
-      ctaMsg: "Hi Sara, I'd like to book an on-site hospital escort at $50/hour (min. 2 hours).",
+      ctaFallback: 'Book hourly escort',
+      ctaVariant: 'ghost',
+      ctaMsg: "Hi Sara, I'd like to book an on-site hospital escort at $50/hour.",
     },
     {
       kind: 'checkup',
@@ -178,19 +161,15 @@ const Pricing: React.FC = () => {
       nameKey: 'pricing.packages.0.name',
       nameFallback: 'Health Checkup Concierge',
       subtitleKey: 'pricing.checkupCard.subtitle',
-      subtitleFallback: 'Dedicated trilingual nurse for a single day.',
+      subtitleFallback: 'Dedicated nurse for a single day.',
       scopeKey: 'pricing.packages.0.description',
       scopeFallback: 'For 1-day health checkup programs only.',
-      scopeVariant: 'hard',
       itemsKey: 'pricing.packages.0.allItems',
       itemsFallback: checkupItemsFallback,
-      itemsLabelKey: 'pricing.packages.0.itemsLabel',
+      itemsCountLabelKey: 'pricing.packages.0.itemsLabel',
       itemsCountLabelFallback: "What's included — 13 services",
-      footnoteKey: 'pricing.paidFootnote',
-      footnoteFallback:
-        'Airport pickup & drop-off uses a standard sedan; special vehicles (wheelchair-accessible van, 7-seater, etc.) can be arranged at extra cost.',
-      ctaFallback: ctaTextPaid,
-      ctaVariant: 'primary',
+      ctaFallback: isJapanese ? 'LINEでこのプランについて相談' : 'Ask about this package',
+      ctaVariant: 'ghost',
       ctaMsg: "Hi Sara, I'm interested in the Health Checkup Concierge ($500 / 1-day package). Can you share more details?",
     },
     {
@@ -201,20 +180,17 @@ const Pricing: React.FC = () => {
       nameKey: 'pricing.packages.1.name',
       nameFallback: 'Essential Care Concierge',
       subtitleKey: 'pricing.essentialCard.subtitle',
-      subtitleFallback: 'Dedicated trilingual nurse for multi-day medical visits.',
+      subtitleFallback: 'Complete coordination across appointments, interpretation, insurance, and logistics.',
       scopeKey: 'pricing.packages.1.description',
       scopeFallback: 'Required for all specialist consultations and medical conditions.',
-      scopeVariant: 'hard',
+      badgeKey: 'pricing.essentialBadge',
+      badgeFallback: 'Most Commonly Chosen',
+      badgeVariant: 'pop',
       itemsKey: 'pricing.packages.1.allItems',
       itemsFallback: essentialItemsFallback,
-      itemsLabelKey: 'pricing.packages.1.itemsLabel',
+      itemsCountLabelKey: 'pricing.packages.1.itemsLabel',
       itemsCountLabelFallback: "What's included — 13 services",
-      footnoteKey: 'pricing.paidFootnote',
-      footnoteFallback:
-        'Airport pickup & drop-off uses a standard sedan; special vehicles (wheelchair-accessible van, 7-seater, etc.) can be arranged at extra cost.',
-      socialProofKey: 'pricing.essentialSocialProof',
-      socialProofFallback: '✓ Most commonly chosen package for medical visits',
-      ctaFallback: ctaTextPaid,
+      ctaFallback: isJapanese ? 'LINEでこのプランについて相談' : 'Ask about this package',
       ctaVariant: 'primary',
       ctaMsg: "Hi Sara, I'm interested in the Essential Care Concierge ($1,000 / 3-day package). Can you share more details?",
     },
@@ -224,242 +200,292 @@ const Pricing: React.FC = () => {
       unitKey: 'pricing.packages.2.unit',
       unitFallback: 'per person · 5 days (daytime)',
       nameKey: 'pricing.packages.2.name',
-      nameFallback: 'Surgery & Extended Care Concierge',
+      nameFallback: 'Surgery & Extended Care',
       subtitleKey: 'pricing.surgeryCard.subtitle',
-      subtitleFallback: 'Dedicated trilingual nurse covering the full surgical journey.',
+      subtitleFallback: 'Coordinated support through surgery and inpatient stay.',
       scopeKey: 'pricing.packages.2.description',
       scopeFallback: 'Required for surgery and inpatient procedures.',
-      scopeVariant: 'hard',
       itemsKey: 'pricing.packages.2.allItems',
       itemsFallback: surgeryItemsFallback,
-      itemsLabelKey: 'pricing.packages.2.itemsLabel',
+      itemsCountLabelKey: 'pricing.packages.2.itemsLabel',
       itemsCountLabelFallback: "What's included — 16 services",
-      footnoteKey: 'pricing.paidFootnote',
-      footnoteFallback:
-        'Airport pickup & drop-off uses a standard sedan; special vehicles (wheelchair-accessible van, 7-seater, etc.) can be arranged at extra cost.',
-      ctaFallback: ctaTextPaid,
-      ctaVariant: 'primary',
-      ctaMsg: "Hi Sara, I'm interested in the Surgery & Extended Care Concierge ($1,650 / 5-day package). Can you share more details?",
+      ctaFallback: isJapanese ? 'LINEでこのプランについて相談' : 'Ask about this package',
+      ctaVariant: 'ghost',
+      ctaMsg: "Hi Sara, I'm interested in the Surgery & Extended Care package ($1,650 / 5-day). Can you share more details?",
     },
   ]
 
-  // ---- helpers ----
   const resolveArr = (key: string, fallback: string[]): string[] => {
     const v = tArr(key)
-    if (v && v.length >= fallback.length - 2) return v
+    if (v && v.length >= fallback.length - 3) return v
     return fallback
   }
-  const resolveT = (key: string, fallback: string): string => {
+  const resolveT = (key: string | undefined, fallback: string): string => {
+    if (!key) return fallback
     const v = t(key)
     if (!v || v === key) return fallback
     return v
   }
-
-  const cardBorderClass = (c: CardDef) => {
-    if (c.kind === 'essential') return 'border-2 border-accent shadow-lg z-10 bg-white'
-    if (c.kind === 'free') return 'border border-[#cfeadc] bg-gradient-to-b from-[#f4fbf7] to-white'
-    if (c.kind === 'hourly') return 'border border-[#d9dfe2] bg-gradient-to-b from-[#f6f8fa] to-white'
-    return 'border border-gray-200 bg-white'
+  const resolveHtml = (key: string | undefined, fallback: string): React.ReactNode => {
+    const raw = resolveT(key, fallback)
+    // dangerouslySetInnerHTML is used because fallbacks and translations contain <strong> and <em>
+    return <span dangerouslySetInnerHTML={{ __html: raw }} />
   }
 
-  const scopeColorClass = (variant?: string) => {
-    if (variant === 'free') return 'text-accent'
-    if (variant === 'hourly') return 'text-gray-500'
-    return 'text-amber-700'
+  const cardClasses = (c: CardDef) => {
+    const base = 'relative rounded-[20px] bg-white border shadow-sm transition-all duration-200 flex flex-col hover:-translate-y-1'
+    if (c.kind === 'free') {
+      return `${base} p-7 md:p-9 border-[#cfeadc] bg-gradient-to-b from-[#f2fbf6] to-white pt-9 hover:shadow-md`
+    }
+    if (c.kind === 'hourly') {
+      return `${base} p-7 md:p-8 border-[#d4dde3] bg-gradient-to-b from-[#f7f9fb] to-white pt-9 hover:shadow-md`
+    }
+    if (c.kind === 'essential') {
+      return `${base} p-8 md:p-9 border-2 border-accent pt-11 z-10 shadow-[0_8px_16px_rgba(0,179,126,0.10),0_24px_48px_rgba(0,179,126,0.14)] -translate-y-1 md:-translate-y-2 hover:-translate-y-2 md:hover:-translate-y-3 hover:shadow-[0_12px_24px_rgba(0,179,126,0.14),0_32px_64px_rgba(0,179,126,0.18)] bg-gradient-to-b from-[#f0faf5] to-white`
+    }
+    return `${base} p-7 md:p-8 border-[#e6ecf1] pt-9 hover:shadow-md`
   }
 
-  const ctaClass = (variant?: string) => {
-    if (variant === 'muted') return 'text-gray-500 hover:text-gray-600'
-    if (variant === 'gray') return 'text-gray-700 hover:text-gray-900'
-    return 'text-accent hover:text-accent/80'
+  const scopeColorClass = (c: CardDef) => {
+    if (c.kind === 'free') return 'text-accent'
+    if (c.kind === 'hourly') return 'text-[#486373]'
+    return 'text-accent-dark'
+  }
+
+  const ctaClasses = (variant?: string) => {
+    if (variant === 'muted') {
+      return 'text-[#7b8c99] border-[#e6ecf1] hover:text-[#3e5668] hover:border-[#b8c5cf] bg-transparent border'
+    }
+    if (variant === 'primary') {
+      return 'bg-accent text-white shadow-[0_2px_8px_rgba(0,179,126,0.25)] hover:bg-[#008a61] hover:shadow-[0_4px_12px_rgba(0,179,126,0.3)]'
+    }
+    return 'bg-transparent text-accent border-2 border-accent hover:bg-[#e6f7f0]'
+  }
+
+  const badgeClasses = (variant?: string) => {
+    if (variant === 'free') return 'bg-accent text-white'
+    if (variant === 'pop') return 'bg-gradient-to-r from-accent to-[#00c98d] text-white shadow-sm'
+    return 'bg-[#e8eff3] text-[#486373]'
   }
 
   return (
-    <section id="pricing" className="py-20 md:py-28 bg-gray-50">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="pricing" className="py-16 md:py-24" style={{ background: '#f6f8fb' }}>
+      <div className="max-w-[1140px] mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="text-center mb-10">
-          <span className="text-accent font-semibold text-sm tracking-wider uppercase">
-            {t('pricing.badge')}
+          <span className="inline-block text-[11px] font-bold tracking-[0.18em] uppercase text-[#007d5a] bg-[#e6f7f0] px-3 py-1.5 rounded-full mb-3">
+            {t('pricing.eyebrow')}
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-[clamp(32px,4.5vw,48px)] font-extrabold tracking-tight text-[#0d1f2d] leading-tight mb-3">
             {t('pricing.title')}
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-[17px] text-[#3e5668] max-w-xl mx-auto leading-relaxed">
             {t('pricing.subtitle')}
           </p>
         </div>
 
-        {/* Cards — single column */}
-        <div className="flex flex-col gap-5">
-          {cards.map((card, idx) => {
-            const name = resolveT(card.nameKey, card.nameFallback)
-            const subtitle = resolveT(card.subtitleKey, card.subtitleFallback)
-            const scope = resolveT(card.scopeKey, card.scopeFallback)
-            const items = resolveArr(card.itemsKey, card.itemsFallback)
-            const itemsLabel = card.itemsLabelKey ? resolveT(card.itemsLabelKey, card.itemsCountLabelFallback) : card.itemsCountLabelFallback
-            const footnote = card.footnoteKey
-              ? resolveT(card.footnoteKey, card.footnoteFallback || '')
-              : ''
-            const callout = card.calloutKey
-              ? resolveT(card.calloutKey, card.calloutFallback || '')
-              : ''
-            const socialProof = card.socialProofKey
-              ? resolveT(card.socialProofKey, card.socialProofFallback || '')
-              : ''
-            const ctaText = (() => {
-              if (card.ctaKey) return resolveT(card.ctaKey, card.ctaFallback)
-              return card.ctaFallback
-            })()
-            const ctaHref = card.ctaMsg
-              ? `${primaryLink}?text=${encodeURIComponent(card.ctaMsg)}`
-              : primaryLink
-
-            return (
-              <article
-                key={card.kind}
-                className={`relative rounded-2xl p-6 md:p-7 shadow-sm transition-all hover:shadow-md ${cardBorderClass(card)}`}
-              >
-                {/* Badge */}
-                {card.badgeFallback && (
-                  <div className="absolute -top-3 left-6 md:left-7">
-                    <span
-                      className={`text-[11px] font-bold tracking-widest uppercase px-3 py-1 rounded-full text-white ${
-                        card.badgeVariant === 'free'
-                          ? 'bg-gray-500'
-                          : card.badgeVariant === 'hourly'
-                          ? 'bg-slate-600'
-                          : 'bg-accent'
-                      }`}
+        {/* Row 1: Free */}
+        {(() => {
+          const free = cards.find(c => c.kind === 'free')!
+          const name = resolveT(free.nameKey, free.nameFallback)
+          const subtitle = resolveT(free.subtitleKey, free.subtitleFallback)
+          const items = resolveArr(free.itemsKey, free.itemsFallback)
+          const itemsLabel = resolveT(free.itemsCountLabelKey, free.itemsCountLabelFallback)
+          const callout = resolveT(free.calloutKey, free.calloutFallback || '')
+          const ctaText = resolveT(free.ctaKey, free.ctaFallback)
+          const ctaHref = free.ctaMsg ? `${primaryLink}?text=${encodeURIComponent(free.ctaMsg)}` : primaryLink
+          return (
+            <div className="max-w-[760px] mx-auto mb-5">
+              <article className={cardClasses(free)}>
+                {free.badgeFallback && (
+                  <span className={`absolute -top-2.5 left-1/2 -translate-x-1/2 text-[10px] font-bold tracking-[0.12em] uppercase px-3 py-1 rounded-full whitespace-nowrap ${badgeClasses(free.badgeVariant)}`}>
+                    {resolveT(free.badgeKey, free.badgeFallback)}
+                  </span>
+                )}
+                <div className="grid md:grid-cols-[1fr_1.4fr] gap-6 md:gap-9 items-center">
+                  <div>
+                    <div className="mb-1.5">
+                      <span className="text-[56px] font-extrabold leading-none tracking-tight text-[#007d5a] tabular-nums">{free.priceLabel}</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-[#0d1f2d] leading-tight mt-2">{name}</h3>
+                    <p className="text-[14px] text-[#7b8c99] leading-snug mt-1">{subtitle}</p>
+                    <a
+                      href={ctaHref} target="_blank" rel="noopener noreferrer"
+                      className={`mt-4 inline-flex items-center justify-center gap-1.5 px-4 py-3 rounded-xl font-semibold text-sm transition-all ${ctaClasses(free.ctaVariant)}`}
                     >
-                      {resolveT(card.badgeKey || '', card.badgeFallback)}
-                    </span>
+                      {ctaText}
+                      <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                    </a>
                   </div>
-                )}
-
-                {/* Card head */}
-                <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-3 md:gap-4">
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-gray-900 leading-tight">
-                      {name}
-                      <span className="block text-[13px] font-normal text-gray-500 mt-1">{subtitle}</span>
-                    </h3>
-                  </div>
-                  <div className="md:text-right flex-shrink-0">
-                    <div className="flex items-baseline md:justify-end">
-                      <span
-                        className={`text-[32px] md:text-3xl font-bold leading-none tracking-tight ${
-                          card.kind === 'essential' ? 'text-accent' : 'text-gray-900'
-                        }`}
-                      >
-                        {card.priceLabel}
-                      </span>
-                      {card.kind !== 'free' && (
-                        <span className="text-[15px] text-gray-500 font-medium ml-1">USD</span>
-                      )}
-                    </div>
-                    <div className="text-[13px] text-gray-500 font-medium mt-1">
-                      {card.unitKey ? resolveT(card.unitKey, card.unitFallback) : card.unitFallback}
+                  <div>
+                    <p className="text-[11px] font-bold tracking-[0.12em] uppercase text-[#7b8c99] mb-2.5">
+                      {itemsLabel}
+                    </p>
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-4">
+                      {items.map((item, i) => (
+                        <li key={i} className="relative pl-6 py-1 text-[13.5px] text-[#3e5668] leading-snug">
+                          <span className="absolute left-0 top-[7px] w-4 h-4 rounded-full bg-[#e6f7f0] text-[#007d5a] text-[11px] font-bold flex items-center justify-center">✓</span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="mt-3.5 rounded-xl px-3.5 py-3 text-[12.5px] leading-relaxed bg-[#e6f7f0] text-[#1f5f47] border-l-[3px] border-l-accent">
+                      <span dangerouslySetInnerHTML={{ __html: callout }} />
                     </div>
                   </div>
-                </div>
-
-                {/* Scope line */}
-                <p className={`mt-2 text-sm font-semibold ${scopeColorClass(card.scopeVariant)}`}>
-                  {scope}
-                </p>
-
-                {/* Social proof */}
-                {socialProof && (
-                  <p className="mt-1.5 text-[12.5px] text-accent font-semibold">{socialProof}</p>
-                )}
-
-                <div className="h-px bg-gray-100 my-4" />
-
-                {/* Service list */}
-                <p className="text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-3">
-                  {itemsLabel}
-                </p>
-                <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-1.5">
-                  {items.map((item, i) => (
-                    <li key={i} className="flex items-start gap-2 text-[13.5px] text-gray-700 leading-snug">
-                      <Check className="w-3.5 h-3.5 text-accent flex-shrink-0 mt-0.5" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                {/* Footnote (dashed) */}
-                {footnote && (
-                  <div className="mt-3.5 pt-3 border-t border-dashed border-gray-200 text-[12.5px] text-gray-500 leading-relaxed">
-                    {footnote}
-                  </div>
-                )}
-
-                {/* Callout */}
-                {callout && (
-                  <div
-                    className={`mt-3.5 rounded-lg px-3.5 py-2.5 text-[13px] leading-relaxed ${
-                      card.calloutVariant === 'free'
-                        ? 'bg-[#eaf5ee] border border-[#c6e3d2] text-[#23543d]'
-                        : 'bg-amber-50 border border-amber-200 text-amber-900'
-                    }`}
-                  >
-                    <strong>{callout}</strong>
-                  </div>
-                )}
-
-                {/* CTA */}
-                <div className="mt-4 pt-3 border-t border-gray-100">
-                  <a
-                    href={ctaHref}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`inline-flex items-center gap-1 text-sm font-semibold border-b-2 border-transparent pb-0.5 transition-colors ${ctaClass(card.ctaVariant)}`}
-                  >
-                    {ctaText}
-                  </a>
                 </div>
               </article>
-            )
-          })}
-        </div>
+            </div>
+          )
+        })()}
 
-        {/* Social Proof — no unsubstantiated country count */}
-        <div className="text-center mt-10 mb-10">
-          <p className="text-sm text-gray-500">
-            <Shield className="w-4 h-4 inline mr-1 -mt-0.5 text-accent" />
-            {t('pricing.socialProof')}
+        {/* Rows 2 & 3: 2-col grids */}
+        {[
+          cards.filter(c => c.kind === 'hourly' || c.kind === 'checkup'),
+          cards.filter(c => c.kind === 'essential' || c.kind === 'surgery'),
+        ].map((row, rIdx) => (
+          <div key={rIdx} className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-[760px] mx-auto mb-5 items-stretch">
+            {row.map(card => {
+              const name = resolveT(card.nameKey, card.nameFallback)
+              const subtitle = resolveT(card.subtitleKey, card.subtitleFallback)
+              const scope = card.scopeKey ? resolveT(card.scopeKey, card.scopeFallback || '') : ''
+              const items = resolveArr(card.itemsKey, card.itemsFallback)
+              const itemsLabel = resolveT(card.itemsCountLabelKey, card.itemsCountLabelFallback)
+              const callout = card.calloutKey ? resolveT(card.calloutKey, card.calloutFallback || '') : ''
+              const ctaText = card.ctaKey ? resolveT(card.ctaKey, card.ctaFallback) : card.ctaFallback
+              const ctaHref = card.ctaMsg
+                ? `${primaryLink}?text=${encodeURIComponent(card.ctaMsg)}`
+                : primaryLink
+              const isPriceLarge = card.kind === 'essential'
+              return (
+                <article key={card.kind} className={cardClasses(card)}>
+                  {card.badgeFallback && (
+                    <span className={`absolute -top-2.5 left-1/2 -translate-x-1/2 text-[10px] font-bold tracking-[0.12em] uppercase px-3 py-1 rounded-full whitespace-nowrap ${badgeClasses(card.badgeVariant)}`}>
+                      {resolveT(card.badgeKey, card.badgeFallback)}
+                    </span>
+                  )}
+                  <div className="mb-4">
+                    <h3 className="text-[17px] font-bold text-[#0d1f2d] leading-tight tracking-tight">{name}</h3>
+                    <p className="text-[13px] text-[#7b8c99] leading-snug mt-0.5">{subtitle}</p>
+                  </div>
+                  <div className="flex items-baseline gap-1.5 mt-3 mb-1">
+                    <span className={`font-extrabold leading-none tracking-tight text-[#0d1f2d] tabular-nums ${isPriceLarge ? 'text-[52px]' : 'text-[44px]'}`}>
+                      {card.priceLabel}
+                    </span>
+                    <span className="text-[16px] font-medium text-[#7b8c99]">USD</span>
+                  </div>
+                  {card.unitKey || card.kind !== 'free' ? (
+                    <p className="text-[13px] text-[#7b8c99] font-medium mt-[-2px] mb-2">
+                      {card.unitKey ? resolveT(card.unitKey, card.unitFallback || '') : (card.unitFallback || '')}
+                    </p>
+                  ) : null}
+                  {scope && (
+                    <p className={`text-[13px] font-semibold mb-3.5 pt-2 ${scopeColorClass(card)}`}>
+                      {card.scopeKey && card.scopeKey.startsWith('pricing.hourlyCard.scope')
+                        ? <span dangerouslySetInnerHTML={{ __html: scope }} />
+                        : scope}
+                    </p>
+                  )}
+                  <p className="text-[11px] font-bold tracking-[0.12em] uppercase text-[#7b8c99] mb-2.5 mt-2">
+                    {itemsLabel}
+                  </p>
+                  <ul className="flex-1">
+                    {items.map((item, i) => {
+                      const hasEm = item.includes(' · ')
+                      const [main, em] = hasEm ? item.split(' · ', 2) : [item, '']
+                      return (
+                        <li key={i} className="relative pl-6 py-1 text-[13.5px] text-[#3e5668] leading-snug">
+                          <span className="absolute left-0 top-[7px] w-4 h-4 rounded-full bg-[#e6f7f0] text-[#007d5a] text-[11px] font-bold flex items-center justify-center">✓</span>
+                          {main}
+                          {em && <em className="not-italic text-[#7b8c99] text-[12.5px]"> · {em}</em>}
+                        </li>
+                      )
+                    })}
+                  </ul>
+                  {callout && (
+                    <div className={`mt-4 rounded-xl px-3.5 py-3 text-[12.5px] leading-relaxed ${
+                      card.calloutVariant === 'green'
+                        ? 'bg-[#e6f7f0] text-[#1f5f47] border-l-[3px] border-l-accent'
+                        : 'bg-[#fdf3e4] text-[#7a4d12] border-l-[3px] border-l-[#b8741e]'
+                    }`}>
+                      <span dangerouslySetInnerHTML={{ __html: callout }} />
+                    </div>
+                  )}
+                  <a
+                    href={ctaHref} target="_blank" rel="noopener noreferrer"
+                    className={`mt-5 inline-flex w-full items-center justify-center gap-1.5 px-4 py-3 rounded-xl font-semibold text-sm transition-all ${ctaClasses(card.ctaVariant)}`}
+                  >
+                    {ctaText}
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </a>
+                </article>
+              )
+            })}
+          </div>
+        ))}
+
+        {/* Integrated Pricing FAQ — 9 questions */}
+        <div className="mt-12 max-w-[760px] mx-auto">
+          <h2 className="text-[22px] font-bold text-center text-[#0d1f2d] tracking-tight mb-1.5">
+            {t('pricing.faqTitle')}
+          </h2>
+          <p className="text-center text-[#7b8c99] text-sm mb-5">
+            {t('pricing.faqSub')}
           </p>
-        </div>
-
-        {/* FAQ link CTA — single FAQ entry point on homepage, points to dedicated /faq page */}
-        <div className="mb-10 text-center">
-          <Link
-            href={localePath('/faq')}
-            className="inline-flex items-center gap-2 px-6 py-3 bg-accent/8 border border-accent/20 rounded-xl font-medium text-accent hover:bg-accent/15 hover:border-accent/40 transition-colors"
-          >
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" /></svg>
-            {t('pricing.viewAllFaq')}
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" /></svg>
-          </Link>
-          <p className="mt-2 text-xs text-gray-500">{t('pricing.faqLinkDesc')}</p>
+          {(() => {
+            const items = tArr('pricing.faqItems') as any[]
+            // Safety: ensure fallback
+            const hasItems = Array.isArray(items) && items.length >= 9 && items.every((it: any) => it && it.q && it.a)
+            const faq: { q: string; a: string }[] = hasItems
+              ? items
+              : [
+                  { q: 'Is the free consultation really free?', a: 'Yes. Your initial consultation via WhatsApp is completely <strong>free with no obligation</strong>. We assess your medical needs, recommend hospitals and specialists, provide a cost estimate, and explain insurance options — all before you pay anything. On-site services begin only when you book an hourly escort or a concierge package.' },
+                  { q: 'Can I book hourly escort without buying a package?', a: `Yes. The <strong>$50/hour on-site escort</strong> is designed as a standalone service for patients who have already booked their own doctor and only need in-hospital companion support. It is also available as an add-on to extend companion hours beyond the days included in a concierge package. Note: hourly escort covers on-site presence and ${isJapanese ? 'Japanese–Chinese' : 'English–Chinese'} interpretation only — scheduling, doctor matching, airport transfer, and insurance coordination require a concierge package. As an add-on to concierge packages, extra companion hours beyond included days are also billed at $50/hour.` },
+                  { q: 'What does the $1,000 Essential package include?', a: `The <strong>Essential Care Concierge covers 3 full daytime companion days</strong>: pre-visit medical records review, doctor matching, multi-appointment scheduling, ${isJapanese ? 'Japanese–Chinese' : 'English–Chinese'} on-site interpretation at every visit, hospital navigation, airport pickup &amp; drop-off in a standard sedan (special vehicles cost extra), medical report translation, medication pickup &amp; delivery, dedicated WhatsApp support throughout your stay, insurance support including policy benefit checks and pre-authorization letters, and 30-day post-care follow-up. This package is required for all specialist consultations and any medical condition.` },
+                  { q: 'Do you handle health insurance?', a: 'We provide <strong>insurance support</strong>, including checking your policy benefits, helping you obtain pre-authorization letters, and coordinating hospital paperwork. Where your insurer has a direct-billing arrangement with the hospital, we help coordinate the process. Where direct billing is not available, you pay the hospital directly and we provide the documentation your insurer needs for reimbursement. We do not guarantee coverage or direct-billing approval — decisions are made by your insurer.' },
+                  { q: 'Are medical fees included in concierge pricing?', a: 'No. The concierge fee is for our coordination and companion services only. <strong>Medical fees (doctor consultations, hospital charges, lab tests, medications, surgery) are paid directly to the hospital at local rates</strong>. We provide you with a clear cost estimate before you arrive, and you will know the hospital\'s published prices before each procedure. We do not charge hospital commissions.' },
+                  { q: 'Do you support emergency or after-hours situations?', a: 'In a medical emergency, <strong>call 120 immediately</strong> and go to the nearest hospital — concierge packages do not include emergency medical services. Once you are at the hospital, we offer <strong>24/7 emergency on-site coordination</strong> at an additional fee: <strong>$300 emergency call-out (available 24/7, includes the first 4 hours)</strong>, then <strong>$100/hour</strong> for additional on-site companion support. This covers urgent dispatch, senior nurse coordination, family communication, and hospital navigation during the emergency. Contact Sara on WhatsApp as soon as possible after calling 120.' },
+                  { q: 'What languages are included? Do you support languages other than English and Chinese?', a: `All concierge packages include <strong>${isJapanese ? 'Japanese–Chinese' : 'English–Chinese'} on-site medical interpretation</strong>. ${isJapanese ? '' : 'Japanese–Chinese interpretation is included for Japanese-speaking clients booking via the Japanese page.'} If you need support in <strong>any other language</strong> (Arabic, Russian, Mongolian, Korean, French, Spanish, etc.), a dedicated interpreter can be arranged at an additional cost — rates are based on local Shanghai market pricing for that language. Please mention your language needs when you chat with Sara so we can give you an accurate quote.` },
+                  { q: 'What is your refund and cancellation policy?', a: 'Cancellations made <strong>14 or more days</strong> before your scheduled arrival receive a full refund minus a small processing fee. Cancellations within <strong>14 days</strong> are eligible for a partial refund, as some hospital and logistics arrangements may already have been made. Same-day cancellations and no-shows are non-refundable. Cases involving genuine medical emergencies or visa denials with documentation are reviewed individually — we do our best to be fair. Specific refund terms will be included in your booking confirmation.' },
+                  { q: 'Can I bring family members or my own interpreter?', a: '<strong>Yes — bringing family members or your own interpreter is welcome at no extra charge.</strong> Our nurse-escort focuses on medical coordination, hospital navigation, and interpretation regardless of party size. If you are traveling with a larger group and need a larger vehicle (e.g., a van instead of a standard sedan for airport pickup), an upgrade fee may apply based on vehicle type and availability. Let Sara know your group size when booking so we can arrange the right transport.' },
+                ]
+            return (
+              <div className="space-y-2.5">
+                {faq.map((item, i) => (
+                  <details
+                    key={i}
+                    className="group bg-white border border-[#e6ecf1] rounded-xl overflow-hidden transition-colors hover:border-[#cdd7de] [&[open]]:border-accent [&[open]]:shadow-[0_2px_8px_rgba(0,179,126,0.12)]"
+                    open={i === 0}
+                  >
+                    <summary className="list-none cursor-pointer px-4 py-3.5 flex items-center gap-2.5 font-semibold text-[14.5px] text-[#0d1f2d] marker:content-none">
+                      <span className="flex-shrink-0 w-6 h-6 rounded-full bg-[#e6f7f0] text-[#007d5a] flex items-center justify-center text-[13px] font-bold">
+                        {i + 1}
+                      </span>
+                      <span className="flex-1" dangerouslySetInnerHTML={{ __html: item.q }} />
+                      <span className="ml-auto text-[20px] font-light text-[#7b8c99] transition-transform group-open:rotate-45 group-open:text-[#007d5a] flex-shrink-0">+</span>
+                    </summary>
+                    <div className="px-[52px] pb-4 text-[13.5px] text-[#3e5668] leading-relaxed">
+                      <span dangerouslySetInnerHTML={{ __html: item.a }} />
+                    </div>
+                  </details>
+                ))}
+              </div>
+            )
+          })()}
         </div>
 
         {/* Footer fine print */}
-        <div className="text-center space-y-1 text-xs text-gray-500">
-          <p>
-            {t('pricing.extraHoursNote')}
+        <div className="mt-7 text-center space-y-1.5 text-[12.5px] text-[#7b8c99] leading-relaxed max-w-[760px] mx-auto">
+          <p className="flex items-center justify-center gap-1.5">
+            <Link href={localePath('/refund-policy')} className="text-[#007d5a] hover:underline">
+              {t('pricing.refundPolicy')}
+            </Link>
+            <span className="mx-1">·</span>
+            <Link href={localePath('/medical-disclaimer')} className="text-[#007d5a] hover:underline">
+              {t('pricing.medicalDisclaimer')}
+            </Link>
           </p>
-          <p>
-            {t('pricing.emergencyNote')}{' '}
-            <Link href={localePath('/refund-policy')} className="text-accent hover:underline">{t('pricing.refundPolicy')}</Link>
-            {' · '}
-            <Link href={localePath('/medical-disclaimer')} className="text-accent hover:underline">{t('pricing.medicalDisclaimer')}</Link>
-          </p>
-          <p>
-            {t('pricing.independentDisclaimer')}
-          </p>
+          <p>{t('pricing.independentDisclaimer')}</p>
         </div>
       </div>
     </section>

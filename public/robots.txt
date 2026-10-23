@@ -65,3 +65,8 @@ Disallow: /
 
 # === Sitemap ===
 Sitemap: https://shanghaimedhealth.com/sitemap.xml
+
+# === AI Content Map (for LLM/AI crawlers: OAI-SearchBot, ChatGPT-User,
+# PerplexityBot, Claude-Web, etc.) ===
+# Structured content map describing the site for AI retrieval systems.
+Llms-txt: https://shanghaimedhealth.com/llms.txt

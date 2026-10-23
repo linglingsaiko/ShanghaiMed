@@ -63,6 +63,8 @@ export const metadata: Metadata = {
       ar: `${siteUrl}/ar`,
       ru: `${siteUrl}/ru`,
       mn: `${siteUrl}/mn`,
+      ms: `${siteUrl}/ms`,
+      id: `${siteUrl}/id`,
     },
   },
   robots: {
@@ -75,6 +77,9 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
+  },
+  other: {
+    'llms-txt': '/llms.txt',
   },
 }
 

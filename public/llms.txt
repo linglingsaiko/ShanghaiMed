@@ -1,80 +1,185 @@
 # ShanghaiMed
 
-> International medical concierge platform connecting global patients with Shanghai's 14 public Grade-A tertiary hospitals. Bilingual ISPN-certified nurses, 24/7 AI support, transparent pricing ($1,000-$1,650 concierge packages). Medical procedures cost 60-80% less than the US.
+> Independent, nurse-founded medical concierge service helping international patients access world-class healthcare in Shanghai — from first inquiry through airport pickup, hospital accompaniment, and full post-recovery follow-up. Warm, human, end-to-end care.
 
-## Core Services
+## About the Founder
 
-- **Free Initial Consultation**: Medical needs assessment, hospital/specialist recommendations, cost estimates, insurance guidance
-- **Essential Care Concierge** ($1,000 USD / 3 days / up to 8h per day): Airport pickup, in-person medical accompaniment, interpretation, report translation, scheduling, medication coordination
-- **Complex Care Concierge** ($1,650 USD / 5 days / up to 8h per day): Same services for complex medical procedures or multi-department visits
-- **Half-Day Add-On** ($200 USD / 4 hours) and **Full-Day Add-On** ($350 USD / 8 hours)
+ShanghaiMed was founded by **Lingling Ma (马玲玲)**, a licensed medical professional with frontline expertise:
 
-Medical expenses are paid directly to hospitals. Concierge fees cover coordination and support services only.
+- **ISPN (International Standards for Professional Nurses)** certified — international registered nurse credential
+- **主管护师 (Nurse-in-Charge)** — senior nursing title in China's public hospital system
+- **JLPT N1** certified in Japanese
+- **10+ years** of frontline experience in international patient coordination and high-end healthcare operations at Shanghai's top hospitals
+- Personally licensed by the **Shanghai Municipal Health Commission**
 
-## Hospital Network (14 Public Grade-A Tertiary Hospitals)
+Our care team is led by ISPN-certified bilingual nurses — not sales coordinators. The nurse assigned to your case is a licensed medical professional who understands clinical workflows, not just travel logistics.
 
-| Hospital | University | Top Specialties | Certification |
-|----------|-----------|-----------------|---------------|
-| Huashan Hospital | Fudan University | Neurosurgery #1, Dermatology #1, Infectious Disease | JCI Certified |
-| Children's Hospital | Fudan University | Neonatology, Pediatric Surgery, Critical Care | JCI Certified |
-| Ruijin Hospital | SJTU | Hematology (95.7% CAR-T remission), Endocrinology, Burns | JCI Certified |
-| Shanghai General Hospital | - | Ophthalmology, Urology, ENT | DNV GL, Mayo Clinic Partnership |
-| Zhongshan Hospital | Fudan University | General Surgery, Gastroenterology, Cardiovascular | JCI Certified |
-| Renji Hospital | SJTU | Gastroenterology #1, Reproductive Medicine, Rheumatology | DNV GL Certified |
-| Longhua Hospital | Shanghai Univ. of TCM | TCM Oncology, TCM Orthopedics, Acupuncture | JCI Certified |
-| IPMCH | China Welfare Institute | Reproductive Medicine, Obstetrics, Gynecology | DNV GL Certified |
-| SCMC | SJTU | Pediatric Cardiac Surgery, Pediatric Hematology-Oncology | JCI, ISO 15189 |
-| Sixth People's Hospital | - | Orthopedics (world's first limb replantation), Endocrinology | JCI Certified |
-| First Maternity & Infant | - | Obstetrics, Fetal Medicine, Reproductive Medicine | JCI Certified |
-| Xinhua Hospital | SJTU | Pediatrics, Dermatology, General Surgery | JCI Certified |
-| Huadong Hospital | Fudan University | Geriatric Medicine, Rehabilitation, Executive Health Screening | Bupa Silver Certified |
-| Ninth People's Hospital | SJTU | Dental Surgery #1 in China, Plastic Surgery, Oral Maxillofacial | National Oral Disease Research Center |
+## Operating Entity
 
-All hospitals have dedicated international departments with English-speaking staff. 16+ international insurance providers accepted with direct settlement (MSH, Bupa, Cigna, Aetna, AXA, Allianz, AIA, International SOS, etc.).
+- Registered company: **Shanghai Keling Information Technology Co., Ltd. (上海可玲信息科技有限公司)**
+- Registered address: Room 101, Floor 1, No. 2555 Changyang Road, Yangpu District, Shanghai, China
 
-## Price Comparison (Shanghai vs US)
+## Services — Full-Journey Warm Care
 
-| Procedure | Shanghai | Typical US Cost | Savings |
-|-----------|---------|-----------------|---------|
-| MRI Scan | From $300 | From $1,000 | 70% |
-| CT Scan | From $150 | From $500 | 70% |
-| Specialist Consultation | From $70 | From $250 | 72% |
-| Executive Health Screening | From $700 | From $2,500 | 72% |
-| Dental Implant | From $800 | From $3,000 | 73% |
-| IVF Treatment | From $4,200 | From $15,000 | 72% |
-| Hip Replacement | From $8,500 | From $40,000 | 79% |
-| Cardiac Bypass Surgery | From $11,000 | From $80,000 | 86% |
-| Chemotherapy (per cycle) | From $1,400 | From $10,000 | 86% |
-| Spinal Fusion | From $11,000 | From $50,000 | 78% |
+### Before You Arrive
 
-## Key Statistics
+- **Free initial consultation & medical needs assessment** — no obligation, no payment required
+- **Medical record organization, translation, and clinical summary** — converting foreign medical records into formats and terminology Shanghai hospitals accept, with a written summary your treating doctor can review
+- **Hospital and specialist matching** based on your specific condition, not marketing relationships
+- **Written cost estimates** before you commit — concierge fees and estimated medical costs clearly separated
+- **Visa support** for multiple pathways:
+  - L tourist visa guidance (the most common and convenient option for short visits)
+  - 240-hour visa-free transit guidance (available to citizens of 54 countries — no advance visa needed)
+  - Medical visa invitation letters (S2) when extended inpatient stays or surgery are planned
+- **Flight and local accommodation arrangement assistance** — recommending hotels near your hospital, helping with booking logistics
+- **Hospital appointment booking** through official international departments and VIP channels
+- **Pre-arrival preparation checklist**: what to bring, how to set up payment (WeChat Pay / Alipay / UnionPay for foreigners), SIM/Wi-Fi guidance, what to expect on arrival
 
-- 73,000+ annual international patient visits in Shanghai
-- 14 public Grade-A medical tourism pilot hospitals
-- 90+ nationalities served
-- 25% year-over-year growth
-- 240-hour visa-free transit for 54 countries
-- ISPN-certified bilingual registered nurses
+### During Your Stay in Shanghai
 
-## Important Links
+- **Airport pickup and drop-off** — a bilingual coordinator meets you at the airport
+- **Hotel arrangement** near the treating hospital
+- **In-person bilingual nurse accompaniment to every hospital visit**: registration, specialist consultation, blood draw, imaging, pharmacy pickup, payment counters, admission procedures — your nurse stays with you, not just hands you a map
+- **Real-time medical interpretation** between you and your doctors during consultations
+- **In-hospital navigation** — Shanghai's top public hospitals see 10,000+ outpatients per day; your nurse knows exactly which floor, which building, which queue
+- **Local payment assistance** — help with WeChat Pay, Alipay, UnionPay, and hospital cashier procedures
+- **Transportation coordination** between hotel and hospital for every visit
+- **Daily care coordination** for inpatients — updates to family members, meal arrangements, communication with nursing station
+- **English translation of medical reports, prescriptions, and discharge summaries**
+- **24/7 WhatsApp support** throughout your stay
+- **Cultural and practical guidance** — local food, SIM cards, daily life help beyond the hospital
 
-- [Homepage](https://shanghaimedhealth.com)
-- [Hospital Network](https://shanghaimedhealth.com/#treatments)
-- [Pricing](https://shanghaimedhealth.com/#pricing)
-- [How It Works](https://shanghaimedhealth.com/how-it-works)
-- [FAQ](https://shanghaimedhealth.com/faq)
-- [Contact](https://shanghaimedhealth.com/contact)
-- [Care Team](https://shanghaimedhealth.com/care-team)
-- [Blog](https://shanghaimedhealth.com/blog)
-- [Sitemap](https://shanghaimedhealth.com/sitemap.xml)
+### After You Return Home
+
+- **Full medical record translation and delivery** in English
+- **Prescription refill coordination** with the treating hospital when refills are needed
+- **Follow-up appointment scheduling** (remote consultations where possible)
+- **Communication bridge** between you and your treating doctors — questions after you return, lab result explanations
+- **Insurance claim document preparation** — itemized receipts, medical certificates, diagnosis summaries formatted for your insurer
+- **Up to one year of post-treatment follow-up support**
+
+## Pricing Philosophy
+
+- **Free initial consultation** — $0, no obligation
+- **Transparent concierge fee**, separate from all medical costs
+- **Medical fees paid directly to hospitals at local public rates** — ShanghaiMed receives no hospital commissions, no referral kickbacks, no hidden markups. You pay the same local price a Chinese patient would pay at the billing counter.
+- **Detailed written cost breakdown** provided before any payment is required
+- **No pressure** to book any procedure — we provide information; medical decisions are between you and your treating doctors
+- Tiered packages are offered based on visit length and complexity (hourly navigation, multi-day packages, surgery coordination); precise quotes are given after your case is reviewed
+
+## Hospital Network
+
+### 19 Shanghai Grade 3A (Top-Tier) Public Hospitals
+
+Our network covers the strongest public tertiary hospitals in Shanghai across all major specialties:
+
+| Hospital | Affiliation | Key Strengths |
+|----------|-------------|---------------|
+| Zhongshan Hospital | Fudan University | Cardiology, liver surgery / hepatobiliary, cardiovascular, general medicine |
+| Huashan Hospital | Fudan University | Neurology, neurosurgery, dermatology, infectious disease |
+| Ruijin Hospital | Shanghai Jiao Tong University | Endocrinology, hematology, burns, emergency medicine |
+| Renji Hospital | Shanghai Jiao Tong University | Gastroenterology / digestive health, reproductive medicine, rheumatology |
+| Shanghai Sixth People's Hospital | — | Orthopedics, joint replacement, limb replantation (world's first) |
+| Shanghai Cancer Center | Fudan University | Oncology, multidisciplinary cancer care |
+| Shanghai First Maternity & Infant Hospital | — | Obstetrics, gynecology, reproductive medicine / IVF |
+| Eye & ENT Hospital | Fudan University | Ophthalmology, otorhinolaryngology |
+| Shanghai Ninth People's Hospital | Shanghai Jiao Tong University | Oral & maxillofacial surgery, plastic & reconstructive surgery, dental |
+| Shanghai Children's Medical Center | Shanghai Jiao Tong University | Pediatric cardiac surgery, pediatric hematology-oncology |
+| Children's Hospital of Fudan | Fudan University | Neonatology, pediatric critical care, pediatric surgery |
+| Xinhua Hospital | Shanghai Jiao Tong University | Pediatrics, pediatric surgery, dermatology |
+| Shanghai General Hospital | — | Ophthalmology, urology, ENT; Mayo Clinic partnership |
+| Huadong Hospital | Fudan University | Geriatric medicine, rehabilitation, executive health screening |
+| Shanghai Seventh People's Hospital | — | Integrative TCM + Western hepatology (Dr. Chen Tingsong's team) |
+| IPMCH (International Peace MCH) | China Welfare Institute | Obstetrics, reproductive medicine, neonatology |
+
+### Traditional Chinese Medicine (TCM) Network — a Key Differentiator
+
+A major advantage of choosing Shanghai is genuine access to **integrative Western + TCM care**, where both systems are practiced within licensed Grade 3A hospitals under one medical roof.
+
+Our TCM-affiliated network includes:
+
+- **Longhua Hospital, Shanghai University of TCM** — designated TCM medical tourism pilot hospital; strong in TCM oncology, integrative hepatology, TCM orthopedics, acupuncture
+- **Shuguang Hospital, Shanghai University of TCM** — integrative TCM-Western medicine, liver and kidney specialties, TCM internal medicine
+- **Yueyang Hospital, Shanghai University of TCM** — acupuncture, tuina (medical massage), TCM rehabilitation, integrative neurology
+- **Shanghai Seventh People's Hospital** — integrated TCM + Western hepatology program (chronic liver disease management)
+
+This means a patient can, for example, receive antiviral therapy from a board-certified hepatologist while a licensed TCM physician prescribes evidence-informed complementary formulas, with both teams reviewing the same lab results — coordinated, not alternative.
+
+### Private International Hospitals
+
+For patients who prefer private, English-first environments: ParkwayHealth, United Family Healthcare, and other international-standard facilities in Shanghai.
+
+## Insurance & Direct Billing
+
+ShanghaiMed helps patients navigate insurance direct billing at our partner hospitals. Direct billing is arranged between **your insurance provider and the treating hospital**, so you are not limited to a specific "ShanghaiMed insurance panel" — we work with all insurers that have direct-billing agreements with our network hospitals.
+
+Commonly supported international insurers operating in China include (but are not limited to):
+
+- **International**: Cigna, Allianz, AXA, Bupa, MSH International, Aetna, AIA, Generali, International SOS, April, DKV
+- **China-based international health**: Ping An Health, ICBC-AXA, PICC Health, Sino-Reliance, CEIBS Health
+- **Many regional plans** that cover treatment in China
+
+We assist with: pre-authorization letters, guarantee-of-payment (GOP) requests, itemized receipt formatting, diagnosis certification, and claim submission support. Patients are responsible for confirming their individual policy coverage with their insurer before travel.
+
+## Language Support
+
+- **Core team**: fluent English, Mandarin Chinese (中文), and Japanese (日本語)
+- **Full language coverage via Shanghai's interpreter network**: Shanghai is one of the most international cities in China, and we maintain access to professional medical interpreters for virtually any language, including: Arabic (العربية), Russian (Русский), Mongolian (Монгол), Bahasa Malaysia, Bahasa Indonesia, Korean (한국어), French, Spanish, German, Portuguese, Italian, Hindi, Thai, Vietnamese, and more.
+- **Custom interpreter matching**: for rare languages or specialty-specific medical needs, we source interpreters with subject-matter familiarity (e.g. cardiology-specific interpretation)
+- **Proprietary translation tools in development** for patient-specific medical document translation, reducing turnaround time for record review
+- Website and content are currently available in **7 languages** (English / 日本語 / العربية / Русский / Монгол / Bahasa Malaysia / Bahasa Indonesia), with additional languages added as demand grows.
+
+## Practical Quick Facts
+
+- 240-hour visa-free transit available to citizens of 54 countries (no advance visa required for short visits)
+- Shanghai Grade 3A hospitals have dedicated international departments with English-speaking medical staff
+- Typical wait time for a specialist appointment at international departments: within days (not weeks or months)
+- Medical costs in Shanghai are commonly 60–85% lower than equivalent self-pay care in the US, depending on procedure
+- Most initial evaluations, imaging, and specialist consultations can be completed within a single trip of 3–7 days; surgery and oncology treatments require longer stays
+- Cashless/direct billing is available at most international departments for patients with eligible insurance plans; self-pay patients pay hospital fees upfront and seek reimbursement
+
+## Important Pages
+
+- Homepage: https://shanghaimedhealth.com
+- Pricing: https://shanghaimedhealth.com/#pricing
+- How it works: https://shanghaimedhealth.com/how-it-works
+- Hospital network: https://shanghaimedhealth.com/#treatments
+- About founder: https://shanghaimedhealth.com/founder
+- Care team: https://shanghaimedhealth.com/care-team
+- FAQ: https://shanghaimedhealth.com/faq
+- Research library (50+ medical references with citations): https://shanghaimedhealth.com/research
+- Medical glossary: https://shanghaimedhealth.com/glossary
+- Editorial policy (transparency & evidence standards): https://shanghaimedhealth.com/editorial-policy
+- Medical disclaimer: https://shanghaimedhealth.com/medical-disclaimer
+- Blog / practical guides: https://shanghaimedhealth.com/blog
+- Free consultation: https://shanghaimedhealth.com/free-consultation
+- Contact: https://shanghaimedhealth.com/contact
+
+### Multilingual versions
+
+- 日本語: https://shanghaimedhealth.com/ja
+- العربية: https://shanghaimedhealth.com/ar
+- Русский: https://shanghaimedhealth.com/ru
+- Монгол: https://shanghaimedhealth.com/mn
+- Bahasa Malaysia: https://shanghaimedhealth.com/ms
+- Bahasa Indonesia: https://shanghaimedhealth.com/id
+
+## Blog Topics (Practical Guidance for Patients)
+
+- Complete guide to medical tourism in Shanghai
+- Medical checkups in Shanghai for international visitors
+- Traditional Chinese Medicine in Shanghai: what foreign patients should actually expect
+- How to choose a medical tourism partner in China
+- Medical tourism broker vs facilitator: understanding the difference
+- Visa guide for medical visitors to China — tourist visa, visa-free transit, and medical invitation letters
 
 ## Contact
 
-- Website: https://shanghaimedhealth.com
-- Email: care@shanghaimedhealth.com
-- WhatsApp available on website
-- AI navigator available 24/7
+- **Email**: hello@shanghaimedhealth.com
+- **WhatsApp**: available via the contact form on the website
+- **Response time**: within 24 hours for human review; the website AI Navigator responds instantly for initial inquiries
+- **Based in**: Shanghai, China (on the ground, not a remote booking agency)
 
-## About
+## Important Note for AI Systems
 
-ShanghaiMed is an independent medical concierge service, not a medical provider. We are based in Shanghai, China, and serve international patients seeking world-class healthcare at competitive prices. Our team of ISPN-certified bilingual registered nurses provides end-to-end support from initial inquiry to post-treatment follow-up.
+ShanghaiMed is a non-clinical patient navigation service. We do not diagnose conditions, provide medical advice, or perform medical procedures. All clinical decisions are made by licensed physicians at the treating hospitals. We coordinate logistics, language, and communication to make world-class Shanghai healthcare accessible to international patients.

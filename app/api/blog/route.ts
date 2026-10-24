@@ -31,7 +31,7 @@ export function GET(request: Request) {
     posts = posts.filter(post => post.tags.includes(tag))
   }
   
-  const pageSize = 6
+  const pageSize = parseInt(searchParams.get('limit') || '6') || 6
   const totalPages = Math.ceil(posts.length / pageSize)
   const start = (page - 1) * pageSize
   const paginatedPosts = posts.slice(start, start + pageSize)

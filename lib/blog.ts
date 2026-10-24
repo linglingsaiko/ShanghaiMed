@@ -20,7 +20,9 @@ export {
 }
 
 export async function getSortedPosts(lang?: string): Promise<BlogPost[]> {
-  const res = await fetch('/api/blog' + (lang ? '?lang=' + lang : ''))
+  // limit=100: 拉全量。首页/相关文章/相邻文章都依赖完整列表；
+  // 列表页分页走 getPostsByQuery（page参数），不受此影响
+  const res = await fetch('/api/blog?limit=100' + (lang ? '&lang=' + lang : ''))
   if (!res.ok) return []
   const data = await res.json()
   return data.posts || []

@@ -45,7 +45,8 @@ export default function BlogDetail({ post }: BlogDetailProps) {
   }, [post.htmlContent])
   
   const handleShare = (platform: string) => {
-    const url = encodeURIComponent(`${window.location.origin}/blog/${post.slug}`)
+    // 用当前页面真实URL（不要硬拼origin，避免www/non-www配置问题导致死链）
+    const url = encodeURIComponent(window.location.href)
     const title = encodeURIComponent(post.title)
     
     let shareUrl = ''

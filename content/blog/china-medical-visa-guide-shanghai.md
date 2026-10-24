@@ -43,9 +43,9 @@ If you only have 30 seconds, this decision tree covers most situations:
 | Already in China on any visa and a medical issue is discovered that needs treatment | **No exit required** — apply to convert/extend your visa domestically at the Exit-Entry Bureau | See §4 |
 | Treatment expected to exceed 180 days | **S1 visa → converted to a residence permit within 30 days of entry** | ❌ No |
 
-> **Important clarification:** China does not have a visa category literally named "Medical Visa." For planned medical treatment, the correct category is the **S2 (Short-term Private Affairs) visa with a medical treatment purpose**. Hospitals and visa agencies colloquially call this the "medical visa" — and functionally, that is exactly what it is.
->
-> — *Regulations on the Administration of the Entry and Exit of Foreign Nationals (2013 Order No. 637, as amended by State Council Order No. 814, effective October 1, 2025), Art. 6 (S2 category)*; [Chinese Embassy in Kazakhstan, Visa Application Notice (Apr 2026)](https://kz.china-embassy.gov.cn/chn/lsfw/zhengjian/qianzheng/202604/t20260424_11899222.htm)
+**Important clarification:** China does not have a visa category literally named "Medical Visa." For planned medical treatment, the correct category is the **S2 (Short-term Private Affairs) visa with a medical treatment purpose**. Hospitals and visa agencies colloquially call this the "medical visa" — and functionally, that is exactly what it is.
+
+— *Regulations on the Administration of the Entry and Exit of Foreign Nationals (2013 Order No. 637, as amended by State Council Order No. 814, effective October 1, 2025), Art. 6 (S2 category)*; [Chinese Embassy in Kazakhstan, Visa Application Notice (Apr 2026)](https://kz.china-embassy.gov.cn/chn/lsfw/zhengjian/qianzheng/202604/t20260424_11899222.htm)
 
 ---
 
@@ -57,7 +57,7 @@ Medical treatment falls under **S1/S2 — Private Affairs**. The "S" stands for 
 
 This distinction matters because Chinese immigration authorities take visa-purpose compliance seriously. **Article 81 of the Exit-Entry Administration Law** allows for deportation of foreigners who engage in activities inconsistent with their visa purpose. However — and this is a critical nuance that most online guides get wrong — the law also provides humane and practical mechanisms for handling medical situations that arise after entry. We cover these in Sections 4 and 5.
 
-> **Sources:** [Regulations on the Administration of the Entry and Exit of Foreign Nationals (2013 Order No. 637, as amended by State Council Order No. 814)](https://ch.china-embassy.gov.cn/ls_fw_s/flfgmqxy/202608/t20260821_12008307.htm); [Exit-Entry Administration Law of the PRC, Art. 81](http://www.jieyang.gov.cn/jyga/xxgk/zcfg/fgwj/content/post_1013208.html)
+**Sources:** [Regulations on the Administration of the Entry and Exit of Foreign Nationals (2013 Order No. 637, as amended by State Council Order No. 814)](https://ch.china-embassy.gov.cn/ls_fw_s/flfgmqxy/202608/t20260821_12008307.htm); [Exit-Entry Administration Law of the PRC, Art. 81](http://www.jieyang.gov.cn/jyga/xxgk/zcfg/fgwj/content/post_1013208.html)
 
 ---
 
@@ -95,9 +95,9 @@ Based on current requirements published by Chinese embassies and visa applicatio
 - If neither parent accompanies the minor: a notarized power of attorney is required
 - Photocopies of both parents' passports and legal status documents
 
-> **Practical note:** The invitation letter may be a fax, photocopy, or printed scan — an original is not required unless specifically requested by the consular officer. This means the hospital can email or fax the letter to you without international courier delays.
->
-> — *Sources:* [China Visa Application Service Center, Tashkent (S2 medical document requirements)](https://bio.visaforchina.cn/TAS4_ZH/qianzhengyewu/jichuzhishi/banliliucheng/552382671075020818.html); [Chinese Embassy in Kazakhstan (Apr 2026 update)](https://kz.china-embassy.gov.cn/chn/lsfw/zhengjian/qianzheng/202604/t20260424_11899222.htm); [Chinese Embassy in Cameroon (visa notice, Jun 2026)](https://cm.china-embassy.gov.cn/chn/lqfw/lszj/fhqz/202305/t20230511_11075268.htm)
+**Practical note:** The invitation letter may be a fax, photocopy, or printed scan — an original is not required unless specifically requested by the consular officer. This means the hospital can email or fax the letter to you without international courier delays.
+
+— *Sources:* [China Visa Application Service Center, Tashkent (S2 medical document requirements)](https://bio.visaforchina.cn/TAS4_ZH/qianzhengyewu/jichuzhishi/banliliucheng/552382671075020818.html); [Chinese Embassy in Kazakhstan (Apr 2026 update)](https://kz.china-embassy.gov.cn/chn/lsfw/zhengjian/qianzheng/202604/t20260424_11899222.htm); [Chinese Embassy in Cameroon (visa notice, Jun 2026)](https://cm.china-embassy.gov.cn/chn/lqfw/lszj/fhqz/202305/t20230511_11075268.htm)
 
 ### How to Apply
 
@@ -116,7 +116,7 @@ Two temporary policies remain in force and benefit medical travelers:
 1. **Visa fee reduction** — many nationalities pay reduced visa fees under the current extension.
 2. **Fingerprint exemption for short-term visas** — applicants for visas with a stay of 180 days or less are temporarily exempt from providing fingerprints in person (through December 31, 2026). Certain categories are permanently exempt: children under 14, adults over 70, diplomatic passport holders, applicants who have submitted fingerprints on the same passport at the same mission within the past 5 years, and applicants with missing/damaged fingers.
 
-> **Sources:** [Chinese Embassy in Laos (visa notice, Jun 2025)](https://la.china-embassy.gov.cn/lsfw/zshfl/lszjfhqz/202506/t20250621_11654570.htm); [Chinese Consulate General in St. Petersburg](https://saintpetersburg.china-consulate.gov.cn/chn/lsyw/lszj/fuqz/sbqzxz/)
+**Sources:** [Chinese Embassy in Laos (visa notice, Jun 2025)](https://la.china-embassy.gov.cn/lsfw/zshfl/lszjfhqz/202506/t20250621_11654570.htm); [Chinese Consulate General in St. Petersburg](https://saintpetersburg.china-consulate.gov.cn/chn/lsyw/lszj/fuqz/sbqzxz/)
 
 ### How to Get the Hospital Invitation Letter
 
@@ -133,7 +133,7 @@ The invitation letter is the document that unlocks the entire S2 process, and it
 
 If you anticipate multiple entries (e.g., staged surgeries, chemo cycles, or follow-up procedures), **the invitation letter must explicitly state the staged treatment plan and expected return dates**. This enables the consular officer to issue a multiple-entry S2 visa valid for 6–12 months.
 
-> **A note on public hospitals:** Shanghai's top Grade 3A public hospitals generally do not schedule definitive surgery without an in-person consultation. However, their International Medical Departments can issue invitation letters based on written records plus a video consultation. This is standard practice and is legally sufficient as the basis for S2 visa issuance.
+**A note on public hospitals:** Shanghai's top Grade 3A public hospitals generally do not schedule definitive surgery without an in-person consultation. However, their International Medical Departments can issue invitation letters based on written records plus a video consultation. This is standard practice and is legally sufficient as the basis for S2 visa issuance.
 
 ---
 
@@ -157,9 +157,9 @@ As of October 2026, holders of ordinary passports from **50 countries** may ente
 
 This policy is valid through **December 31, 2026** for 48 countries (including Sweden, added November 10, 2025); **Russia** is separately extended through **December 31, 2027**; **Brunei** has no expiration date.
 
-> ⚠️ **The critical detail for medical travelers:** The listed permitted purposes are business, tourism, family visits, exchange, and transit — **medical treatment is not listed**. This does not, however, mean you cannot see a doctor during a visit.
+⚠️ **The critical detail for medical travelers:** The listed permitted purposes are business, tourism, family visits, exchange, and transit — **medical treatment is not listed**. This does not, however, mean you cannot see a doctor during a visit.
 
-> **Sources:** [National Immigration Administration (NIA) announcements](https://en.nia.gov.cn/n147418/n147463/index.html); [Ministry of Culture and Tourism, notice on extending unilateral visa-free policy for Russia (May 2026)](https://www.mct.gov.cn/)
+**Sources:** [National Immigration Administration (NIA) announcements](https://en.nia.gov.cn/n147418/n147463/index.html); [Ministry of Culture and Tourism, notice on extending unilateral visa-free policy for Russia (May 2026)](https://www.mct.gov.cn/)
 
 **What visa-free entry works fine for:**
 - ✅ Health screenings, executive checkups, and preventive examinations (typically completed in 1–2 days, no admission required)
@@ -175,7 +175,7 @@ Most recently extended on August 20, 2026 (adding Kyrgyzstan and Vietnam), the 2
 
 The listed purposes are tourism, business, visits, and family — **not medical treatment**. This policy is designed for transit stays, and you should not plan medical treatment around it. If you are transiting through Shanghai and want to squeeze in a quick health checkup or dental visit during your 10-day window, this is practically workable. Do not use transit visa-free entry for planned medical treatment.
 
-> **Source:** [NIA Announcement No. 4 of 2026 (August 20, 2026)](https://en.nia.gov.cn/n147418/n147463/c180637/content.html)
+**Source:** [NIA Announcement No. 4 of 2026 (August 20, 2026)](https://en.nia.gov.cn/n147418/n147463/c180637/content.html)
 
 ### C. Bilateral Visa-Free Agreements — The Special Cases
 
@@ -193,13 +193,13 @@ Singapore also has a bilateral visa-free agreement with China (effective Februar
 
 For **Malaysian and Kazakhstani patients** — two of ShanghaiMed's key markets — this is a meaningful advantage: checkups, dental work, outpatient consultations, and even minor procedures can be completed entirely visa-free within 30 days.
 
-> **Sources:** [Ministry of Foreign Affairs, Table of Mutual Visa Exemption Agreements (updated May 29, 2026)](https://cs.mfa.gov.cn/zggmcgx/cgqzapecswlxk/ylb/202607/t20260716_11984014.html); [Chinese Embassy in Malaysia, visa-free notice](https://my.china-embassy.gov.cn/fwzc/lsyw/lszj/fhqz2024/sbqzxz/202506/t20250606_11642531.htm); [Chinese Embassy in Kazakhstan (Apr 2026 update)](https://kz.china-embassy.gov.cn/chn/lsfw/zhengjian/qianzheng/202604/t20260424_11899222.htm)
+**Sources:** [Ministry of Foreign Affairs, Table of Mutual Visa Exemption Agreements (updated May 29, 2026)](https://cs.mfa.gov.cn/zggmcgx/cgqzapecswlxk/ylb/202607/t20260716_11984014.html); [Chinese Embassy in Malaysia, visa-free notice](https://my.china-embassy.gov.cn/fwzc/lsyw/lszj/fhqz2024/sbqzxz/202506/t20250606_11642531.htm); [Chinese Embassy in Kazakhstan (Apr 2026 update)](https://kz.china-embassy.gov.cn/chn/lsfw/zhengjian/qianzheng/202604/t20260424_11899222.htm)
 
 ### D. The Hainan Regional Visa-Free Policy (61 Countries, 30 Days)
 
 Hainan province's visa-free policy explicitly includes "medical treatment" as a permitted purpose, reflecting Hainan's positioning as a medical tourism pilot zone (notably the Boao Lecheng International Medical Tourism Pilot Zone). However, this visa-free stay is limited to Hainan province only — it cannot be used to travel to Shanghai for treatment. We list it here for completeness.
 
-> **Source:** [NIA Regional Visa-Free Entry Policy (August 20, 2026)](https://en.nia.gov.cn/n147418/n147463/c180637/content.html)
+**Source:** [NIA Regional Visa-Free Entry Policy (August 20, 2026)](https://en.nia.gov.cn/n147418/n147463/c180637/content.html)
 
 ---
 
@@ -225,7 +225,7 @@ Here is what that means in practice:
 
 **Shanghai Exit-Entry Administration:** 1500 Minsheng Road, Pudong New Area. Processing: 7 working days for visa extensions/reissuance; 15 working days for residence permits. The national 24-hour multilingual hotline (Mandarin/Cantonese/English/Russian/Japanese/Korean) is **+86-12367**.
 
-> **Sources:** [Regulations on the Administration of the Entry and Exit of Foreign Nationals, Arts. 10, 16, 19](http://www.jieyang.gov.cn/jyga/xxgk/zcfg/fgwj/content/post_1013208.html); [Changchun Public Security Bureau, visa document guide (Jul 2026)](http://gaj.changchun.gov.cn/crj/gfqwzcwj/202607/t20260715_3500845.html); [NIA 12367 service platform](https://www.nia.gov.cn/)
+**Sources:** [Regulations on the Administration of the Entry and Exit of Foreign Nationals, Arts. 10, 16, 19](http://www.jieyang.gov.cn/jyga/xxgk/zcfg/fgwj/content/post_1013208.html); [Changchun Public Security Bureau, visa document guide (Jul 2026)](http://gaj.changchun.gov.cn/crj/gfqwzcwj/202607/t20260715_3500845.html); [NIA 12367 service platform](https://www.nia.gov.cn/)
 
 ---
 
@@ -237,7 +237,7 @@ For genuinely time-critical medical emergencies where there is no time to apply 
 
 **Emergency humanitarian visa processing** at Chinese embassies abroad applies to urgent situations: funerals, visiting critically ill relatives, or emergency medical treatment. With a hospital letter documenting the life-threatening urgency, processing can be expedited to **1–3 working days**, and in extreme cases same-day issuance. Contact the consular section of the nearest Chinese embassy by email before submitting, requesting urgent processing.
 
-> **Sources:** [Port Visa Issuance Service Guide, Fujian Provincial Public Security Department](https://gat.fj.gov.cn/ztzl/cryjfwwj/bsxz_28282/202110/t20211008_5700603.htm); [Port Visa Q&A, Changchun Public Security Bureau (Jul 2026)](http://gaj.changchun.gov.cn/crj/gfqwzcwj/202607/t20260715_3500839.html)
+**Sources:** [Port Visa Issuance Service Guide, Fujian Provincial Public Security Department](https://gat.fj.gov.cn/ztzl/cryjfwwj/bsxz_28282/202110/t20211008_5700603.htm); [Port Visa Q&A, Changchun Public Security Bureau (Jul 2026)](http://gaj.changchun.gov.cn/crj/gfqwzcwj/202607/t20260715_3500839.html)
 
 ---
 
@@ -262,7 +262,7 @@ Patients traveling with prescription medications should observe Chinese customs 
 - **Cannabis/CBD/THC in any form: strictly prohibited**
 - Traditional Chinese medicines containing endangered species ingredients (musk, tiger bone, rhino horn) are also prohibited
 
-> **Sources:** [Beijing Customs, personal medication FAQ (Aug 2026)](http://gdfs.customs.gov.cn/beijing_customs/2026-08/28/article_2026082903061837173.html); [Drug Administration Law Implementation Regulations (effective May 15, 2026)](https://www.nmpa.gov.cn/)
+**Sources:** [Beijing Customs, personal medication FAQ (Aug 2026)](http://gdfs.customs.gov.cn/beijing_customs/2026-08/28/article_2026082903061837173.html); [Drug Administration Law Implementation Regulations (effective May 15, 2026)](https://www.nmpa.gov.cn/)
 
 ### Treatment Exceeding 180 Days
 

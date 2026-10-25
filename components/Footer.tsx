@@ -17,7 +17,7 @@ const footerLinkStructure = [
   },
   {
     keys: ['howItWorks', 'faq', 'researchLibrary', 'glossary', 'contactUs', 'whatsappSupport'],
-    hrefs: ['/#how-it-works', '/#faq', '/research', '/glossary', '/#contact', 'https://wa.me/8613818274110'],
+    hrefs: ['/#how-it-works', '/#pricing', '/research', '/glossary', '/#contact', 'https://wa.me/8613818274110'],
   },
   {
     keys: ['privacyPolicy', 'termsOfService', 'editorialPolicy', 'medicalDisclaimer'],

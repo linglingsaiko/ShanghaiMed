@@ -123,10 +123,10 @@ const FeaturedHospitals: React.FC = () => {
                         href={hospital.internationalDeptUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-gray-500 text-xs hover:text-accent transition-colors"
+                        className="inline-flex items-center gap-1.5 text-accent font-medium text-sm hover:gap-2.5 transition-all"
                         title="Verify on hospital's official website"
                       >
-                        <ExternalLink className="w-3.5 h-3.5" />
+                        <ExternalLink className="w-4 h-4" />
                         Verify on hospital site
                       </a>
                     )}

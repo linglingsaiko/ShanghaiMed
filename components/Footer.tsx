@@ -158,6 +158,9 @@ const Footer: React.FC = () => {
                 Operated by Shanghai Keling Information Technology Co., Ltd.
               </p>
               <p className="text-xs text-gray-500 mt-1">
+                Unified Social Credit Code: 91310110MAKDNY7H7W
+              </p>
+              <p className="text-xs text-gray-500 mt-1">
                 Room 101, Floor 1, No. 2555 Changyang Road, Yangpu District, Shanghai
               </p>
               <p className="text-xs text-gray-500 mt-1">

@@ -258,7 +258,7 @@ export const tier2Hospitals: Hospital[] = [
     insuranceStatus: '50+ International Insurance',
     description: 'Part of Chindex Healthcare. Comprehensive healthcare services with western-style patient care and international standards.',
     image: '/images/shagnhai united family.png',
-    internationalDeptUrl: 'https://shanghai.ufh.com.cn/?lang=en',
+    internationalDeptUrl: 'https://shanghai.ufh.com.cn/locations?lang=en',
     internationalPhone: '400-639-3900',
   },
   {
@@ -273,7 +273,7 @@ export const tier2Hospitals: Hospital[] = [
     insuranceStatus: 'Prudential Direct Payment',
     description: 'Part of IHH Healthcare, one of the world\'s largest healthcare groups. Strong insurance network including Prudential direct settlement.',
     image: '/images/Parkway.jpeg',
-    internationalDeptUrl: 'https://www.parkwayshanghai.com/en/',
+    internationalDeptUrl: 'https://www.parkwayshanghai.com/en/international',
     internationalPhone: '400-819-6622',
   },
   {
@@ -303,7 +303,7 @@ export const tier2Hospitals: Hospital[] = [
     insuranceStatus: 'International Insurance',
     description: 'Part of Singapore\'s Raffles Medical Group. Focus on medical tourism with comprehensive health screening services.',
     image: '/images/raffles.jpeg',
-    internationalDeptUrl: 'https://www.rafflesmedicalgroup.com/clinic/raffles-hospital-shanghai/',
+    internationalDeptUrl: 'https://www.rafflesmedicalchina.com/en/site/shanghai-hospital/patient-services',
     internationalPhone: '+86-21-61293000',
   },
 ]

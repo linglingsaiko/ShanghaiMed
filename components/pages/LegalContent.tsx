@@ -16,42 +16,48 @@ import { legalId, legalIdContact } from '@/lib/content/legal.id'
 import { editorialId } from '@/lib/content/editorial.id'
 import type { LegalDoc } from '@/lib/content/types'
 
-type DocKey = 'privacy' | 'terms' | 'editorial'
+type DocKey = 'privacy' | 'terms' | 'editorial' | 'refund'
 
 const enDocs: Record<DocKey, LegalDoc> = {
   privacy: legalEn.privacy,
   terms: legalEn.terms,
   editorial: editorialEn,
+  refund: legalEn.refund,
 }
 
 const arDocs: Record<DocKey, LegalDoc> = {
   privacy: legalAr.privacy,
   terms: legalAr.terms,
   editorial: editorialAr,
+  refund: legalAr.refund,
 }
 
 const ruDocs: Record<DocKey, LegalDoc> = {
   privacy: legalRu.privacy,
   terms: legalRu.terms,
   editorial: editorialRu,
+  refund: legalRu.refund,
 }
 
 const mnDocs: Record<DocKey, LegalDoc> = {
   privacy: legalMn.privacy,
   terms: legalMn.terms,
   editorial: editorialMn,
+  refund: legalMn.refund,
 }
 
 const msDocs: Record<DocKey, LegalDoc> = {
   privacy: legalMs.privacy,
   terms: legalMs.terms,
   editorial: editorialMs,
+  refund: legalMs.refund,
 }
 
 const idDocs: Record<DocKey, LegalDoc> = {
   privacy: legalId.privacy,
   terms: legalId.terms,
   editorial: editorialId,
+  refund: legalId.refund,
 }
 
 // Localize the contact block (company kept in English; address + label translated)

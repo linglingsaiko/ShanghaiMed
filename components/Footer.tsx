@@ -30,7 +30,7 @@ const footerFallback = [
   ['About Us', 'Our Founder', 'Why Shanghai', 'Our Network', 'Care Team'],
   ['Hospitals', 'Specialties', 'Pricing Guide'],
   ['How It Works', 'FAQ', 'Research Library', 'Glossary', 'Contact Us', 'WhatsApp Support'],
-  ['Privacy Policy', 'Terms of Service', 'Editorial Policy', 'Medical Disclaimer'],
+  ['Privacy Policy', 'Terms of Service', 'Editorial Policy', 'Medical Disclaimer', 'Refund Policy'],
 ]
 
 const fallbackTitles = ['About', 'Treatments', 'Support', 'Legal']

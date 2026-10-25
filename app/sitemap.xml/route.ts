@@ -32,6 +32,7 @@ export async function GET() {
     { path: '/privacy-policy', changefreq: 'monthly', priority: '0.3' },
     { path: '/terms-of-service', changefreq: 'monthly', priority: '0.3' },
     { path: '/medical-disclaimer', changefreq: 'monthly', priority: '0.3' },
+    { path: '/refund-policy', changefreq: 'monthly', priority: '0.3' },
     { path: '/how-it-works', changefreq: 'monthly', priority: '0.7' },
     { path: '/treatments', changefreq: 'monthly', priority: '0.7' },
     { path: '/why-shanghai', changefreq: 'monthly', priority: '0.7' },

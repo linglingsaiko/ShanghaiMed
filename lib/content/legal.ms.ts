@@ -183,4 +183,80 @@ export const legalMs: Record<string, LegalDoc> = {
       { title: '16. Hubungi', contact: true },
     ],
   },
+
+  refund: {
+    title: 'Polisi Bayaran Balik',
+    lastUpdated: 'Kemaskini terakhir: 25 Oktober 2026',
+    sections: [
+      {
+        title: '1. Komitmen kami terhadap ketelusan',
+        body: [
+          'Kami percaya bahawa anda patut tahu dengan tepat apa yang anda bayar — dan apa yang berlaku jika keadaan tidak berjalan seperti yang dirancang — sebelum anda membuat sebarang komitmen.',
+          'Berikut adalah cara proses kami berfungsi:',
+        ],
+        items: [
+          'Anda menerima pelan rawatan lengkap, cadangan hospital, dan anggaran kos berperincian — sebelum sebarang bayaran diminta.',
+          'Deposit tempahan hanya diperlukan selepas anda menyemak dan mengesahkan pelan anda secara bertulis.',
+          'Perjanjian perkhidmatan individu anda — termasuk jumlah deposit, skop perkhidmatan, dan terma bayaran balik tertentu — disediakan dan ditandatangani sebelum sebarang bayaran dibuat.',
+          'Yuran hospital dan klinik sentiasa dibayar terus kepada hospital rawatan. ShanghaiMed tidak mengutip atau menyimpan yuran perubatan.',
+        ],
+      },
+      {
+        title: '2. Prinsip bayaran balik umum',
+        body: [
+          'Kami mengendalikan bayaran balik dengan adil dan telus. Satu prinsip terpakai merentas semua situasi: kos yang telah ditanggung (komitmen pihak ketiga dan kerja koordinasi yang telah disiapkan) ditolak pada kos sebenar, dan baki selebihnya dikembalikan.',
+          '«Koordinasi bermula» apabila kami pertama kali melaksanakan kerja koordinasi bagi pihak anda — contohnya: menterjemah rekod perubatan anda, menghubungi hospital, atau menjadualkan janji temu.',
+        ],
+        table: {
+          headers: ['Situasi', 'Pendekatan bayaran balik'],
+          rows: [
+            { cells: ['Jika anda membatalkan sebelum koordinasi bermula', 'Deposit dikembalikan sepenuhnya, tolak yuran pemprosesan pembayaran (biasanya 2–4%).'] },
+            { cells: ['Jika anda membatalkan selepas koordinasi bermula', 'Kos sebenar yang telah ditanggung bagi pihak anda — penjadualan janji temu, terjemahan rekod perubatan, koordinasi pentadbiran — ditolak pada kos sebenar. Baki selebihnya dikembalikan dengan pecahan berperincian.'] },
+            { cells: ['Jika hospital menolak kes anda', 'Baki selebihnya dikembalikan tolak kos sebenar yang ditanggung sehingga titik tersebut.'] },
+            { cells: ['Jika pelan rawatan didapati tidak sesuai', 'Baki selebihnya dikembalikan tolak kos sebenar yang ditanggung sehingga titik tersebut.'] },
+            { cells: ['Jika visa anda ditolak', 'Tiada pihak yang bersalah. Komitmen pihak ketiga yang telah dikunci bagi pihak anda (contohnya, pengangkutan khas, janji temu diagnostik yang ditempah awal) ditolak pada kos sebenar; kerja koordinasi yang disiapkan ditolak pada kos sebenar; baki selebihnya dikembalikan.'] },
+            { cells: ['Force majeure', 'Bencana alam, wabak, sekatan perjalanan kerajaan, dan peristiwa serupa di luar kawalan kedua-dua pihak dikendalikan di bawah prinsip yang sama: kos pihak ketiga pada kos, kerja koordinasi pada kos, baki dikembalikan.'] },
+          ],
+        },
+      },
+      {
+        title: '3. Komitmen pihak ketiga yang tidak boleh dikembalikan',
+        body: [
+          'Sesetengah perkhidmatan memerlukan kami untuk mengamankan tempahan dengan penyedia pihak ketiga terlebih dahulu. Sebaik sahaja tempahan ini dikunci, kos yang berkaitan tidak boleh dikembalikan, kerana pihak ketiga telah menempah sumber bagi pihak anda. Ini termasuk:',
+        ],
+        items: [
+          'Pengangkutan perubatan khas atau kenderaan boleh diakses yang disusun khusus untuk lawatan anda;',
+          'Janji temu diagnostik atau makmal yang ditempah awal dengan slot terhad;',
+          'Sebarang komitmen pihak ketiga lain yang memerlukan tempahan awal dan dinyatakan secara berperincian dalam perjanjian perkhidmatan anda.',
+        ],
+        closing: 'Perkara ini sentiasa didedahkan dalam perjanjian perkhidmatan individu anda sebelum pembayaran. Anda akan melihat dengan tepat item mana yang tidak boleh dikembalikan sebelum anda menandatangani.',
+      },
+      {
+        title: '4. Perjanjian perkhidmatan individu anda mengawal',
+        body: [
+          'Prinsip di atas mencerminkan pendekatan umum kami. Terma bayaran balik khusus anda — termasuk jumlah deposit, item boleh dikembalikan dan tidak boleh dikembalikan, garis masa, dan syarat yang berkenaan — dinyatakan secara terperinci dalam perjanjian perkhidmatan individu anda.',
+          'Perjanjian ini:',
+        ],
+        items: [
+          'Disediakan selepas pelan rawatan anda disahkan;',
+          'Dihantar kepada anda untuk semakan sebelum sebarang bayaran perlu dibayar;',
+          'Ditandatangani oleh kedua-dua pihak sebelum koordinasi bermula.',
+        ],
+        closing: 'Sekiranya terdapat perbezaan antara polisi umum ini dan perjanjian perkhidmatan bertanda tangan anda, perjanjian perkhidmatan diutamakan.',
+      },
+      {
+        title: '5. Cara memohon bayaran balik',
+        body: [
+          'Untuk memohon bayaran balik, hubungi kami secara bertulis melalui e-mel di hello@shanghaimedhealth.com atau melalui saluran sokongan WhatsApp khusus anda. Sila sertakan:',
+        ],
+        items: [
+          'Nama penuh dan rujukan tempahan anda;',
+          'Sebab permohonan bayaran balik;',
+          'Sebarang dokumen sokongan yang berkaitan (contohnya, notis penolakan visa, penilaian perubatan).',
+        ],
+        closing: 'Kami mengakui permohonan bayaran balik dalam tempoh 2 hari perniagaan dan memproses bayaran balik yang diluluskan dalam tempoh 5 hari perniagaan.',
+      },
+      { title: '6. Hubungi', contact: true },
+    ],
+  },
 }

@@ -183,4 +183,80 @@ export const legalEn: Record<string, LegalDoc> = {
       { title: '16. Contact', contact: true },
     ],
   },
+
+  refund: {
+    title: 'Refund Policy',
+    lastUpdated: 'Last updated: October 25, 2026',
+    sections: [
+      {
+        title: '1. Our commitment to transparency',
+        body: [
+          'We believe you should know exactly what you\'re paying for — and what happens if things don\'t go as planned — before you commit to anything.',
+          'Here\'s how our process works:',
+        ],
+        items: [
+          'You receive a full treatment plan, hospital recommendation, and itemised cost estimate — before any payment is requested.',
+          'A booking deposit is only required after you review and confirm your plan in writing.',
+          'Your individual service agreement — including deposit amount, scope of services, and specific refund terms — is prepared and signed before any payment is made.',
+          'Hospital and clinical fees are always paid directly to the treating hospital. ShanghaiMed does not collect or hold medical fees.',
+        ],
+      },
+      {
+        title: '2. General refund principles',
+        body: [
+          'We approach refunds fairly and transparently. One principle applies across all situations: costs already incurred (third-party commitments and completed coordination work) are deducted at cost, and the remaining balance is refunded.',
+          'Coordination begins when we first perform coordination work on your behalf — for example, translating your medical records, contacting a hospital, or scheduling an appointment.',
+        ],
+        table: {
+          headers: ['Situation', 'Refund approach'],
+          rows: [
+            { cells: ['If you cancel before coordination begins', 'The deposit is fully refunded, minus payment-processing fees (typically 2–4%).'] },
+            { cells: ['If you cancel after coordination begins', 'Actual costs already incurred on your behalf — appointment scheduling, medical-record translation, administrative coordination — are deducted at cost. The remaining balance is refunded, with an itemised breakdown.'] },
+            { cells: ['If the hospital declines your case', 'Actual costs incurred up to that point are deducted at cost. The remaining balance is refunded.'] },
+            { cells: ['If the treatment plan is found unsuitable', 'Actual costs incurred up to that point are deducted at cost. The remaining balance is refunded.'] },
+            { cells: ['If your visa is denied', 'Neither party is at fault. Third-party commitments already locked in on your behalf (e.g., special transport, pre-booked appointments) are charged at cost, and coordination work completed is deducted at cost. The remaining balance is refunded.'] },
+            { cells: ['Force majeure', 'Natural disasters, epidemics, government travel restrictions and similar events beyond either party\'s control are handled under the same principle: third-party costs at cost, coordination work at cost, remaining balance refunded.'] },
+          ],
+        },
+      },
+      {
+        title: '3. Non-refundable third-party commitments',
+        body: [
+          'Some services require us to secure bookings with third-party providers in advance. Once these are locked in, the associated costs are non-refundable, because the third party has reserved resources on your behalf. These include:',
+        ],
+        items: [
+          'Special medical transport or accessible vehicles arranged specifically for your visit;',
+          'Pre-booked diagnostic or laboratory appointments with limited slots;',
+          'Any other third-party commitment that requires advance booking and is clearly itemised in your service agreement.',
+        ],
+        closing: 'These items are always disclosed in your individual service agreement before payment. You will see exactly which line items are non-refundable before you sign.',
+      },
+      {
+        title: '4. Your individual service agreement governs',
+        body: [
+          'The principles above reflect our general approach. Your specific refund terms — including deposit amount, refundable and non-refundable items, timelines, and applicable conditions — are detailed in your individual service agreement.',
+          'This agreement is:',
+        ],
+        items: [
+          'Prepared after your treatment plan is confirmed;',
+          'Sent to you for review before any payment is due;',
+          'Signed by both parties before coordination begins.',
+        ],
+        closing: 'In the event of any difference between this general policy and your signed service agreement, the service agreement prevails.',
+      },
+      {
+        title: '5. How to request a refund',
+        body: [
+          'To request a refund, contact us in writing via email at hello@shanghaimedhealth.com or through your dedicated WhatsApp support channel. Please include:',
+        ],
+        items: [
+          'Your full name and booking reference;',
+          'The reason for the refund request;',
+          'Any relevant supporting documents (e.g., visa denial notice, medical assessment).',
+        ],
+        closing: 'We acknowledge refund requests within 2 business days and process approved refunds within 5 business days.',
+      },
+      { title: '6. Contact', contact: true },
+    ],
+  },
 }

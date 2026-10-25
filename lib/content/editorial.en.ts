@@ -88,7 +88,7 @@ export const editorialEn: LegalDoc = {
       title: 'About ShanghaiMed',
       boxed: true,
       body: [
-        'ShanghaiMed is operated by Shanghai Keling Information Technology Co., Ltd. (上海可玲信息科技术有限公司), registered in Shanghai, China. We are a medical tourism facilitator — we coordinate hospital appointments, medical record translation, logistics, and post-operative follow-up for international patients seeking treatment in Shanghai.',
+        'ShanghaiMed is operated by Shanghai Keling Information Technology Co., Ltd. (上海可玲信息技术有限公司), registered in Shanghai, China. We are a medical tourism facilitator — we coordinate hospital appointments, medical record translation, logistics, and post-operative follow-up for international patients seeking treatment in Shanghai.',
         'Our team brings over a decade of experience in premium healthcare operations in China. We charge a transparent concierge service fee and take zero commission from hospitals. Medical bills are paid directly to the hospital at their own rates.',
       ],
     },

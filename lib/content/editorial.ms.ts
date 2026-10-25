@@ -87,7 +87,7 @@ export const editorialMs: LegalDoc = {
       title: 'Tentang ShanghaiMed',
       boxed: true,
       body: [
-        'ShanghaiMed dikendalikan oleh Shanghai Keling Information Technology Co., Ltd. (上海可玲信息科技术有限公司), berdaftar di Shanghai, China. Kami ialah pemudah cara pelancongan perubatan — kami menyelaraskan temujanji hospital, terjemahan rekod perubatan, logistik, dan susulan selepas pembedahan untuk pesakit antarabangsa yang mendapatkan rawatan di Shanghai.',
+        'ShanghaiMed dikendalikan oleh Shanghai Keling Information Technology Co., Ltd. (上海可玲信息技术有限公司), berdaftar di Shanghai, China. Kami ialah pemudah cara pelancongan perubatan — kami menyelaraskan temujanji hospital, terjemahan rekod perubatan, logistik, dan susulan selepas pembedahan untuk pesakit antarabangsa yang mendapatkan rawatan di Shanghai.',
         'Pasukan kami membawa pengalaman lebih sedekad dalam operasi penjagaan kesihatan premium di China. Kami mengenakan bayaran perkhidmatan concierge yang telus dan tidak mengambil komisen daripada hospital. Bil perubatan dibayar terus ke hospital mengikut kadar mereka sendiri.',
       ],
     },

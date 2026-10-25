@@ -87,7 +87,7 @@ export const editorialId: LegalDoc = {
       title: 'Tentang ShanghaiMed',
       boxed: true,
       body: [
-        'ShanghaiMed dioperasikan oleh Shanghai Keling Information Technology Co., Ltd. (上海可玲信息科技术有限公司), terdaftar di Shanghai, Tiongkok. Kami adalah fasilitator wisata medis — kami mengoordinasikan janji temu rumah sakit, penerjemahan rekam medis, logistik, dan tindak lanjut pascaoperasi untuk pasien internasional yang mencari pengobatan di Shanghai.',
+        'ShanghaiMed dioperasikan oleh Shanghai Keling Information Technology Co., Ltd. (上海可玲信息技术有限公司), terdaftar di Shanghai, Tiongkok. Kami adalah fasilitator wisata medis — kami mengoordinasikan janji temu rumah sakit, penerjemahan rekam medis, logistik, dan tindak lanjut pascaoperasi untuk pasien internasional yang mencari pengobatan di Shanghai.',
         'Tim kami membawa pengalaman lebih dari satu dekade dalam operasi layanan kesehatan premium di Tiongkok. Kami mengenakan biaya layanan concierge yang transparan dan tidak mengambil komisi dari rumah sakit. Tagihan medis dibayarkan langsung ke rumah sakit sesuai tarif mereka sendiri.',
       ],
     },

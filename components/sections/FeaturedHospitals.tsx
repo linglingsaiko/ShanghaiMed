@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { ArrowRight, Shield } from 'lucide-react'
+import { ArrowRight, ExternalLink, Shield } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -110,13 +110,27 @@ const FeaturedHospitals: React.FC = () => {
                     {insuranceStatus}
                   </p>
 
-                  <Link
-                    href={localePath('/why-shanghai')}
-                    className="inline-flex items-center gap-2 text-accent font-medium text-sm hover:gap-3 transition-all"
-                  >
-                    {t('treatments.learnMore')}
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
+                  <div className="flex items-center gap-3 flex-wrap mb-0">
+                    <Link
+                      href={localePath('/why-shanghai')}
+                      className="inline-flex items-center gap-2 text-accent font-medium text-sm hover:gap-3 transition-all"
+                    >
+                      {t('treatments.learnMore')}
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
+                    {hospital.internationalDeptUrl && (
+                      <a
+                        href={hospital.internationalDeptUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-gray-500 text-xs hover:text-accent transition-colors"
+                        title="Verify on hospital's official website"
+                      >
+                        <ExternalLink className="w-3.5 h-3.5" />
+                        Verify on hospital site
+                      </a>
+                    )}
+                  </div>
                 </div>
               </article>
             )

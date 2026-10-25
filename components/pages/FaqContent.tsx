@@ -160,6 +160,38 @@ const enFaqs: FaqItem[] = [
     ),
   },
   {
+    q: 'How do you choose which doctor or specialist I see?',
+    a: (
+      <>
+        <p className="mb-4">
+          We do not maintain a fixed roster of doctors, because the <strong>right specialist depends on your
+          specific condition</strong> — your diagnosis, medical history, treatment preferences, and language needs
+          all matter. This personalised matching is core to our service.
+        </p>
+        <p className="mb-4">After reviewing your medical records, we:</p>
+        <ol className="list-decimal pl-6 mb-4 space-y-1">
+          <li>Identify <strong>2–3 suitable specialists</strong> at our partner hospitals whose clinical expertise,
+          published outcomes, and availability match your case</li>
+          <li>Share their <strong>full names, titles, hospital affiliations, and credentials</strong> with you — including
+          their professional rank (we only recommend specialists at the rank of <em>Associate Chief Physician</em> 副主任医师 or above at Grade 3A hospitals)</li>
+          <li>Provide the <strong>international patient department contact details</strong> of the relevant hospitals,
+          so you are welcome to verify the specialist and the appointment directly with the hospital if you wish</li>
+          <li>Discuss the options with you, and you make the final decision before anything is booked</li>
+        </ol>
+        <p className="mb-4">
+          You receive the doctor's full name and credentials <strong>before you pay any deposit or sign a service
+          agreement</strong>. We believe transparency about who treats you is a basic patient right, not an optional extra.
+        </p>
+        <p>
+          For more on how to verify our service, the hospitals we work with, and your treating doctor, read our article:{' '}
+          <a href="/blog/how-to-verify-a-medical-travel-agency" className="text-teal-600 underline hover:text-teal-700">
+            How to Verify a Medical Travel Agency (Including Us)
+          </a>.
+        </p>
+      </>
+    ),
+  },
+  {
     q: 'How do I get a medical visa for China?',
     a: (
       <>
@@ -172,8 +204,8 @@ const enFaqs: FaqItem[] = [
           <li><strong>Document support</strong> — ShanghaiMed provides translation of all required documents</li>
         </ol>
         <p>
-          China offers a <strong>240-hour transit visa exemption</strong> for citizens of 54 countries (including the US, UK,
-          Canada, Australia, and most EU nations), which may be sufficient for shorter medical trips.
+          China offers a <strong>240-hour (10-day) transit visa exemption</strong> for citizens of 57 countries (including the US, UK,
+          Canada, Australia, Japan, UAE, and most EU nations), which may be sufficient for short consultations, second opinions, or health checkups. For surgery, inpatient treatment, or stays longer than 10 days, a medical (M) visa is recommended.
         </p>
       </>
     ),

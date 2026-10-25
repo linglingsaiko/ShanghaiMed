@@ -11,6 +11,8 @@ export interface Hospital {
   insuranceStatus: string
   description: string
   image: string
+  internationalDeptUrl?: string
+  internationalPhone?: string
 }
 
 // Tier 1 - 14 Public Grade-A Medical Tourism Pilot Hospitals
@@ -27,6 +29,8 @@ export const tier1Hospitals: Hospital[] = [
     insuranceStatus: 'Direct Settlement',
     description: 'Ranked #1 in dermatology and neurosurgery nationwide. One of China\'s most internationally recognized hospitals.',
     image: '/images/华山.jpeg',
+    internationalDeptUrl: 'https://www.huashan.org.cn/info/4871/217031.htm',
+    internationalPhone: '+86-21-62483986',
   },
   {
     id: 'children-fudan',
@@ -40,6 +44,8 @@ export const tier1Hospitals: Hospital[] = [
     insuranceStatus: 'Direct Settlement',
     description: 'Leading center for neonatal care and pediatric rare diseases.',
     image: '/images/儿科医院.jpeg',
+    internationalDeptUrl: 'https://ch.shmu.edu.cn/main/department/intro/id/371/pid/37.html',
+    internationalPhone: '+86-21-64931507',
   },
   {
     id: 'ruijin',
@@ -53,6 +59,8 @@ export const tier1Hospitals: Hospital[] = [
     insuranceStatus: 'Direct Settlement',
     description: 'Pioneer in bone marrow transplantation and CAR-T therapy with world-leading outcomes.',
     image: '/images/瑞金.jpeg',
+    internationalDeptUrl: 'https://www.rjh.com.cn/2018RJPortal/txylbjzx/sy/txjj/index.shtml',
+    internationalPhone: '+86-21-64678970',
   },
   {
     id: 'shanghai-general',
@@ -66,6 +74,8 @@ export const tier1Hospitals: Hospital[] = [
     insuranceStatus: 'International Insurance',
     description: 'One of Shanghai\'s oldest and most prestigious hospitals. Leading ophthalmology and urology departments.',
     image: '/images/市一.png',
+    internationalDeptUrl: 'https://eng.shgh.cn/IMCC',
+    internationalPhone: '+86-21-63240090',
   },
   {
     id: 'zhongshan',
@@ -79,6 +89,8 @@ export const tier1Hospitals: Hospital[] = [
     insuranceStatus: 'International Insurance',
     description: 'Fudan University affiliated. Cardiovascular center with independent international patient building and dedicated English-speaking staff.',
     image: '/images/中山.png',
+    internationalDeptUrl: 'https://www.zs-hospital.sh.cn/guoji/',
+    internationalPhone: '400-626-0121',
   },
   {
     id: 'renji',
@@ -92,6 +104,8 @@ export const tier1Hospitals: Hospital[] = [
     insuranceStatus: 'International Insurance',
     description: 'Shanghai Jiao Tong University affiliated. #1 gastroenterology nationwide for 4 consecutive years. Leading liver transplant center.',
     image: '/images/仁济.jpeg',
+    internationalDeptUrl: 'https://www.renji.com/m/ims',
+    internationalPhone: '+86-21-68383408',
   },
   {
     id: 'longhua',
@@ -105,6 +119,8 @@ export const tier1Hospitals: Hospital[] = [
     insuranceStatus: 'International Insurance',
     description: 'Premier Traditional Chinese Medicine hospital. Official pilot for TCM medical tourism. Acupuncture, herbal therapy, and TCM rehabilitation.',
     image: '/images/龙华.jpg',
+    internationalDeptUrl: 'http://www.longhua.net/ywwz.htm',
+    internationalPhone: '+86-21-64385700',
   },
   {
     id: 'ipmch',
@@ -118,6 +134,8 @@ export const tier1Hospitals: Hospital[] = [
     insuranceStatus: 'International Insurance',
     description: 'Affiliated with China Welfare Institute. Leading center for high-risk pregnancy, fetal medicine, and reproductive medicine.',
     image: '/images/国妇婴.png',
+    internationalDeptUrl: 'https://www.ipmch.com.cn/Hospital/',
+    internationalPhone: '+86-21-64265988',
   },
   {
     id: 'scmc',
@@ -131,6 +149,8 @@ export const tier1Hospitals: Hospital[] = [
     insuranceStatus: 'International Insurance',
     description: 'Shanghai Jiao Tong University affiliated. Top pediatric cardiac surgery center in China. Partnership with Project HOPE.',
     image: '/images/儿中心.png',
+    internationalDeptUrl: 'https://www.scmc.com.cn/list/350.html',
+    internationalPhone: '+86-21-38626948',
   },
   {
     id: 'sixth',
@@ -144,6 +164,8 @@ export const tier1Hospitals: Hospital[] = [
     insuranceStatus: 'International Insurance',
     description: 'Pioneer in limb replantation surgery since 1963. Leading orthopedics and endocrinology center with international recognition.',
     image: '/images/六院.png',
+    internationalDeptUrl: 'https://english.6thhosp.com/Data/List/MedicalServices',
+    internationalPhone: '+86-21-24056318',
   },
   {
     id: 'first-maternity',
@@ -157,6 +179,8 @@ export const tier1Hospitals: Hospital[] = [
     insuranceStatus: 'International Insurance',
     description: 'Shanghai\'s premier maternity hospital. Comprehensive obstetric and neonatal care with international patient support.',
     image: '/images/一妇婴.png',
+    internationalDeptUrl: 'https://www.51mch.com/',
+    internationalPhone: '+86-21-968886',
   },
   {
     id: 'xinhua',
@@ -170,6 +194,8 @@ export const tier1Hospitals: Hospital[] = [
     insuranceStatus: 'International Insurance',
     description: 'Leading spine surgery and pediatric surgery center with full international services.',
     image: '/images/新华.png',
+    internationalDeptUrl: 'https://www.xinhuamed.com.cn/eng/',
+    internationalPhone: '+86-21-25078147',
   },
   {
     id: 'huadong',
@@ -183,6 +209,8 @@ export const tier1Hospitals: Hospital[] = [
     insuranceStatus: 'International Insurance',
     description: 'Fudan University affiliated. Premier geriatric medicine and rehabilitation center. Popular for executive health screening programs.',
     image: '/images/华东.png',
+    internationalDeptUrl: 'https://www.huadonghospital.com/',
+    internationalPhone: '+86-21-62483180',
   },
   {
     id: 'ninth',
@@ -196,6 +224,8 @@ export const tier1Hospitals: Hospital[] = [
     internationalFeatures: 'Premier dental hospital with 5 academicians. Ranked #1 in oral surgery and plastic surgery nationwide.',
     insuranceStatus: 'Direct Settlement (8 insurers, 21 partnerships)',
     description: 'China\'s #1 dental hospital. Dedicated International Medical Department opened Jan 2024 at Pudong campus with 100+ dental chairs, CBCT, microscopes, and laser equipment. Full-time international implant specialist Prof. Tonetti. MDT mechanism for complex cases. Treated patients from 40+ countries.',
+    internationalDeptUrl: 'https://www.9hospital.com.cn/list/11/guide.html',
+    internationalPhone: '+86-21-53314069',
   },
 ]
 
@@ -213,6 +243,8 @@ export const tier2Hospitals: Hospital[] = [
     insuranceStatus: '50+ International Insurance',
     description: 'Largest private international hospital in Shanghai with 500 beds. Affiliated with Massachusetts General Hospital. Full-service medical center.',
     image: '/images/jiahui.png',
+    internationalDeptUrl: 'https://www.jiahui.com/en',
+    internationalPhone: '400-868-3000',
   },
   {
     id: 'unicare',
@@ -226,6 +258,8 @@ export const tier2Hospitals: Hospital[] = [
     insuranceStatus: '50+ International Insurance',
     description: 'Part of Chindex Healthcare. Comprehensive healthcare services with western-style patient care and international standards.',
     image: '/images/shagnhai united family.png',
+    internationalDeptUrl: 'https://shanghai.ufh.com.cn/?lang=en',
+    internationalPhone: '400-639-3900',
   },
   {
     id: 'parkway',
@@ -239,6 +273,8 @@ export const tier2Hospitals: Hospital[] = [
     insuranceStatus: 'Prudential Direct Payment',
     description: 'Part of IHH Healthcare, one of the world\'s largest healthcare groups. Strong insurance network including Prudential direct settlement.',
     image: '/images/Parkway.jpeg',
+    internationalDeptUrl: 'https://www.parkwayshanghai.com/en/',
+    internationalPhone: '400-819-6622',
   },
   {
     id: 'shine',
@@ -252,6 +288,8 @@ export const tier2Hospitals: Hospital[] = [
     insuranceStatus: '40+ International Insurers',
     description: 'Member of Mayo Clinic Care Network. Comprehensive cardiology, gastroenterology and general medicine services with international standards.',
     image: '/images/sinounited.png',
+    internationalDeptUrl: 'https://www.suhhealth.com/',
+    internationalPhone: '400-186-2116',
   },
   {
     id: 'raffles',
@@ -261,10 +299,12 @@ export const tier2Hospitals: Hospital[] = [
     specialties: ['Executive Health', 'General Medicine', 'Medical Tourism'],
     certifications: [],
     insurancePartners: ['MSH', 'Cigna', 'Bupa', 'Allianz', 'AIA', 'AXA'],
-    internationalFeatures: 'Singapore-based Surbana Jurong group',
+    internationalFeatures: 'Singapore-based Raffles Medical Group',
     insuranceStatus: 'International Insurance',
-    description: 'Part of Singapore-based Surbana Jurong group. Focus on medical tourism with comprehensive health screening services.',
+    description: 'Part of Singapore\'s Raffles Medical Group. Focus on medical tourism with comprehensive health screening services.',
     image: '/images/raffles.jpeg',
+    internationalDeptUrl: 'https://www.rafflesmedicalgroup.com/clinic/raffles-hospital-shanghai/',
+    internationalPhone: '+86-21-61293000',
   },
 ]
 

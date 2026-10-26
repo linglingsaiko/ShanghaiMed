@@ -13,7 +13,7 @@ tags:
 author: Sara Ma, Founder
 date: '2026-10-25T08:00:00.000Z'
 featured: true
-featuredImage: /images/how-to-choose-medical-tourism-partner.jpg
+featuredImage: /images/how-to-verify-medical-travel-facilitator.jpg
 seoTitle: "How to Verify a Medical Travel Facilitator (Including Us) | ShanghaiMed"
 metaDescription: "A 5-step due diligence guide for checking any medical tourism facilitator — including ShanghaiMed. Verify company registration, hospital affiliations, the treating doctor, pricing, and follow-up care before you pay."
 keywords:
@@ -32,7 +32,7 @@ In this article, we give you a practical five-step checklist for verifying a med
 
 ## Why this article exists
 
-When choosing a medical travel facilitator, doing your due diligence is simply the right thing to do. Medical travel involves real clinical decisions, real money, and real trust.
+Choosing a medical travel facilitator means trusting someone with your health, your money, and your time. Doing your due diligence is simply the right thing to do.
 
 We decided to go one step further — not just telling you what to check, but actively providing all the information you need to complete those checks. Because we believe that letting clients verify us independently is more convincing than any marketing copy.
 
@@ -75,7 +75,7 @@ Our Hospital Network page lists each partner hospital with direct links to their
 2. Call or email the hospital's International Patient Department / International Medical Center directly
 3. Confirm that the hospital's international department accepts direct appointments and learn about their foreign patient process
 
-Hospitals are responsible for clinical care — they do not handle the facilitation services for foreign patients. Medical record translation, accommodation and transport, visa inquiries, insurance consultations — hospitals are not familiar with these matters and do not have the capacity to assist. That is why hospital international departments welcome patients referred through professional facilitators: communication costs are lower, patients are better prepared, and the clinical process runs smoothly. This is precisely why ShanghaiMed exists.
+Hospitals are responsible for clinical care — they do not handle the non-clinical logistics for foreign patients. Medical record translation, accommodation and transport, visa inquiries, insurance consultations — hospitals are not familiar with these matters and do not have the capacity to assist. That is why hospital international departments welcome patients referred through professional facilitators: communication costs are lower, patients are better prepared, and the clinical process runs smoothly. This is precisely why ShanghaiMed exists.
 
 ### Verify the doctor
 
@@ -83,7 +83,7 @@ We do not publish a fixed roster of doctors on this website, because **the right
 
 What we do commit to, in writing before you pay any deposit:
 - You receive your treating doctor's **full name, professional title, hospital affiliation, and credentials**
-- We prioritise recommending specialists at the rank of **Professor or Department Chair (科室主任)** at Grade 3A hospitals
+- We prioritise recommending specialists at the level of **Professor or Department Chair physician (科室主任医师)** at Grade 3A hospitals
 - You can — and are encouraged to — look up the doctor on the hospital's official website, on research databases like [PubMed](https://pubmed.ncbi.nlm.nih.gov), or by calling the hospital's international department to confirm the doctor's affiliation and appointment availability
 
 If a facilitator refuses to give you the treating doctor's name before you pay, that is a red flag. If they cannot tell you the doctor's professional rank or department, that is a red flag. If they pressure you to pay quickly "to secure the doctor's slot" without letting you verify first, walk away.
@@ -114,7 +114,7 @@ Things do not always go perfectly, even at excellent hospitals. Flights get dela
 - **Before arrival:** A full itinerary plan, including specialist appointment scheduling, estimated length of stay, hotel and transportation, translation arrangements, contingency contact numbers, and more
 - **During your stay:** 24/7 emergency on-site support is available for urgent medical situations (additional fee applies)
 - **After you return home:** 30–60 days of remote post-care follow-up
-- **Insurance coordination:** For patients with international insurance (Cigna, Bupa, Allianz, MSH, AXA, etc.), we assist with pre-authorisation and corresponding arrangements
+- **Insurance coordination:** For patients with international insurance (Cigna, Bupa, Allianz, MSH, AXA, etc.), we assist with pre-authorisation and related insurance arrangements
 
 ## Step 5: Talk to a real person before you pay
 

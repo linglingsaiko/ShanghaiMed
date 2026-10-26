@@ -14,13 +14,8 @@ export default function LatestInsights() {
   useEffect(() => {
     const fetchPosts = async () => {
       const allPosts = await getSortedPosts(language === 'ja' ? 'ja' : language === 'ru' ? 'ru' : language === 'ar' ? 'ar' : language === 'mn' ? 'mn' : language === 'ms' ? 'ms' : language === 'id' ? 'id' : undefined)
-      const featuredPost = allPosts.find(p => p.featured)
-      const latestPosts = allPosts.filter(p => !p.featured).slice(0, 2)
-      if (featuredPost) {
-        setPosts([featuredPost, ...latestPosts])
-      } else {
-        setPosts(allPosts.slice(0, 3))
-      }
+      // 按日期取最新3篇，featured标记仍正常显示
+      setPosts(allPosts.slice(0, 3))
     }
     fetchPosts()
   }, [language])

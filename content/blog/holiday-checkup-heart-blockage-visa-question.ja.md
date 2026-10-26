@@ -11,7 +11,7 @@ tags:
   - 'cardiac treatment China'
   - 'Shanghai medical tourism story'
 author: Sara Ma, Founder
-date: '2026-10-26T08:00:00.000Z'
+date: '2026-10-22T10:00:00.000Z'
 featured: false
 featuredImage: /images/holiday-checkup-heart-blockage-visa-story.jpg
 seoTitle: "休暇中の健診が75%の心臓冠動脈狭窄を発見：上海の患者ストーリー"

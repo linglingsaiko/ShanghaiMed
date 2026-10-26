@@ -11,7 +11,7 @@ tags:
   - 'Zeiss VisuMax Shanghai'
   - 'Shanghai eye surgery patient story'
 author: Sara Ma, Founder
-date: '2026-10-26T10:00:00.000Z'
+date: '2026-10-23T10:00:00.000Z'
 featured: false
 featuredImage: /images/smile-lasik-shanghai-patient-story.jpg
 seoTitle: "SMILE Eye Surgery in Shanghai: A Patient Story | ShanghaiMed"

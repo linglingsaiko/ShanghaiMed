@@ -11,7 +11,7 @@ tags:
   - 'cardiac treatment China'
   - 'Shanghai medical tourism story'
 author: Sara Ma, Founder
-date: '2026-10-26T08:00:00.000Z'
+date: '2026-10-22T10:00:00.000Z'
 featured: false
 featuredImage: /images/holiday-checkup-heart-blockage-visa-story.jpg
 seoTitle: "Медосмотр в отпуске выявил 75% закупорку сердечной артерии: история пациента в Шанхае"

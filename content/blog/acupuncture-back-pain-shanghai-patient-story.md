@@ -11,7 +11,7 @@ tags:
   - 'acupuncture medical tourism'
   - 'Shanghai wellness travel'
 author: Sara Ma, Founder
-date: '2026-10-26T15:00:00.000Z'
+date: '2026-10-26T10:00:00.000Z'
 featured: false
 featuredImage: /images/acupuncture-back-pain-shanghai-patient-story.jpg
 seoTitle: "Acupuncture for Back Pain in Shanghai: A Patient Story | ShanghaiMed"

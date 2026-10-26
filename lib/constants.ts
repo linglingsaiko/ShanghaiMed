@@ -73,7 +73,7 @@ export const tier1Hospitals: Hospital[] = [
     internationalFeatures: 'International patient center with multilingual staff, 17 accepted insurance providers',
     insuranceStatus: 'International Insurance',
     description: 'One of Shanghai\'s oldest and most prestigious hospitals. Leading ophthalmology and urology departments.',
-    image: '/images/市一.png',
+    image: '/images/市一.jpeg',
     internationalDeptUrl: 'https://eng.shgh.cn/IMCC',
     internationalPhone: '+86-21-63240090',
   },

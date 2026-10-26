@@ -100,4 +100,4 @@ Medical travel is rarely about one decision. It's a sequence of them — the dia
 
 If you're planning a checkup in Shanghai, start with our [guide to medical checkups for international visitors](/blog/the-complete-guide-to-medical-checkups-in-shanghai-for-international-visitors). If you need a medical visa or are wondering how stay extensions work, see our [China medical visa guide](/blog/china-medical-visa-guide-shanghai).
 
-*Note on privacy: To protect patient privacy, identifying details in this story have been changed or omitted. It is written to illustrate a typical medical travel scenario in Shanghai and the real processes involved — not as a specific individual's medical record. If you're in a similar situation, confirm the details with your hospital and the local exit-entry bureau.*
+*This account reflects a case our team has handled. Identifying details have been modified to protect privacy. The medical events, processes, and legal procedures described are based on real events.*

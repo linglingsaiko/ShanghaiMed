@@ -100,4 +100,4 @@ canonicalUrl: 'https://shanghaimedhealth.com/blog/holiday-checkup-heart-blockage
 
 上海での健診をご計画なら、まず[国際訪問者のための健診ガイド](/blog/the-complete-guide-to-medical-checkups-in-shanghai-for-international-visitors)をご覧ください。医療ビザが必要な場合や滞在延長の仕組みについて知りたい場合は、[中国医療ビザガイド](/blog/china-medical-visa-guide-shanghai)をご参照ください。
 
-*プライバシーに関する注記：患者のプライバシーを保護するため、この物語の識別情報は変更または省略されています。上海での典型的な医療渡航シナリオと実際のプロセスを説明するために書かれたものであり、特定個人の医療記録ではありません。同様の状況にある場合は、病院と地域の出入国管理局で詳細を確認してください。*
+*この記録は、当チームが実際に対応した事例を反映しています。プライバシー保護のため、識別情報は変更されています。記載されている医療事象、プロセス、法的手続きは実際の出来事に基づいています。*

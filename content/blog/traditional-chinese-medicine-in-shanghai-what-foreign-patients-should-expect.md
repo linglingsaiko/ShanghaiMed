@@ -32,7 +32,7 @@ Every year, more international patients arrive in Shanghai not just for world-cl
 
 If you've been curious about trying acupuncture, herbal medicine, or other TCM approaches during your time in Shanghai, this guide gives you the honest, practical picture—what works, where to go, what to expect, and how to do it safely.
 
-Why TCM Is Drawing International Patients
+## Why TCM Is Drawing International Patients
 
 Traditional Chinese Medicine isn't just a cultural artifact. In recent years, it's earned growing recognition from the World Health Organization, leading medical institutions, and clinical researchers worldwide.
 
@@ -47,11 +47,11 @@ Preventive wellness: TCM's emphasis on maintaining balance through diet, acupunc
 
 Shanghai offers a particular advantage: access to TCM within some of China's most advanced hospitals, where traditional practice meets modern medical infrastructure.
 
-Hospital-Based TCM vs. Private Clinics: A Critical Distinction
+## Hospital-Based TCM vs. Private Clinics: A Critical Distinction
 
 Before you book an appointment, understand this distinction—it matters for your safety and outcomes.
 
-Hospital-Based TCM (Where You Should Go)
+### Hospital-Based TCM (Where You Should Go)
 
 Shanghai is home to some of China's most prestigious TCM institutions:
 
@@ -67,37 +67,37 @@ Quality-controlled herbs: Hospital pharmacies source herbs under national qualit
 Integrated records: Your TCM treatment can be documented alongside your Western medical records, enabling real coordination between your doctors.
 Regulatory oversight: Hospital-based TCM falls under the same regulatory framework as all medical practice in China—far more rigorous than private wellness centers.
 
-Private TCM Clinics (Proceed With Caution)
+### Private TCM Clinics (Proceed With Caution)
 
 Shanghai has many private TCM and acupuncture clinics, some excellent and some problematic. Without a hospital's institutional oversight, due diligence falls on you. Red flags include practitioners unwilling to show credentials, clinics selling proprietary "secret formulas" without ingredient transparency, and clinics making cure claims for serious diseases.
 
 The short version: start with a hospital.
 
-Common Conditions Treated With TCM
+## Common Conditions Treated With TCM
 
 International patients typically come to TCM for specific, well-documented concerns:
 
-Pain Management
+### Pain Management
 
 Back pain, neck pain, and osteoarthritis are among the most researched TCM applications. Acupuncture has shown consistent benefits for chronic pain conditions in multiple clinical trials. For migraine sufferers who have tried everything, acupuncture offers a non-pharmaceutical option worth considering.
 
-Fertility Support
+### Fertility Support
 
 TCM is frequently used alongside assisted reproduction technologies. Acupuncture before and after embryo transfer has been studied for its potential to improve blood flow to the uterus and reduce stress during IVF cycles. Many fertility clinics in Shanghai actively partner with TCM practitioners for integrated care.
 
-Digestive Disorders
+### Digestive Disorders
 
 Conditions like irritable bowel syndrome (IBS), functional dyspepsia, and chronic gastritis respond well to TCM herbal formulas and dietary therapy. TCM approaches gut health through pattern diagnosis—treating root causes rather than suppressing symptoms.
 
-Stress, Anxiety, and Sleep Disorders
+### Stress, Anxiety, and Sleep Disorders
 
 Insomnia and anxiety are among the conditions where TCM and Western medicine can work beautifully together. Acupuncture and herbal formulas like Suan Zao Ren Tang have demonstrated benefits for sleep quality. TCM also offers mind-body practices (Tai Chi, Qigong) that help manage stress holistically.
 
-Post-Surgical and Post-Hospital Recovery
+### Post-Surgical and Post-Hospital Recovery
 
 After orthopedic surgery, stroke, or prolonged hospitalization, TCM rehabilitative therapies—acupuncture, herbal medicine, and therapeutic exercises—can support faster recovery of function and mobility. This integrated rehabilitation model is standard practice in many Shanghai hospitals.
 
-What Happens During a TCM Consultation
+## What Happens During a TCM Consultation
 
 If you've never experienced TCM, the first consultation may feel unfamiliar. Here's what to expect, explained in plain terms.
 
@@ -112,7 +112,7 @@ This process typically takes 20–40 minutes for an initial consultation. The do
 
 Treatment plans are individualized. Two patients with the same Western diagnosis may receive different TCM treatments based on their distinct patterns.
 
-Safety and Regulation
+## Safety and Regulation
 
 China regulates TCM rigorously at the national level. The National Administration of Traditional Chinese Medicine oversees licensing, education standards, and clinical practice guidelines. Hospital-based TCM practitioners hold licensed medical credentials and are subject to the same malpractice liability frameworks as Western medicine providers.
 
@@ -125,7 +125,7 @@ Reporting adverse events: China's pharmacovigilance system covers both Western a
 
 The takeaway: receiving TCM in a reputable Shanghai hospital is among the safest places globally to access this medicine.
 
-Combining TCM With Western Medicine
+## Combining TCM With Western Medicine
 
 One of the most valuable aspects of Shanghai's healthcare system is how naturally TCM and Western medicine integrate, especially in hospital settings.
 
@@ -139,11 +139,11 @@ Research programs actively study integration protocols, generating evidence for 
 
 If you're already receiving treatment from a Western medicine doctor in Shanghai, ask whether a TCM consultation would complement your current plan. Most doctors will either recommend it or explain why it may not be appropriate for your specific case.
 
-Costs and Treatment Duration
+## Costs and Treatment Duration
 
 One practical advantage of receiving TCM in Shanghai: it's significantly more affordable than in Western countries, while maintaining (in hospital settings) a higher standard of clinical oversight.
 
-TCM Costs: Shanghai vs. United States
+### TCM Costs: Shanghai vs. United States
 
 Service	Shanghai (USD)	United States (USD)
 Initial TCM consultation	$20–$42	$80–$250
@@ -166,7 +166,7 @@ Preventive wellness: Seasonal or monthly maintenance
 
 Most patients notice some response within 2–4 weeks of consistent treatment. If you don't notice any change after a month of regular treatment, discuss adjusting the approach with your doctor.
 
-Do I Need to Stay in Shanghai for the Entire Treatment?
+## Do I Need to Stay in Shanghai for the Entire Treatment?
 
 No—and this is one of the most common concerns we hear from international patients. The idea of spending months away from home for TCM treatment is enough to make many people rule it out entirely. The reality is more flexible:
 
@@ -186,29 +186,29 @@ Preventive wellness and sub-health conditions: Seasonal herbal prescriptions and
 
 The key is getting the initial diagnosis right in person—after that, continuity of care can be maintained across borders with proper coordination.
 
-Practical Tips for International Patients
+## Practical Tips for International Patients
 
 Navigating TCM in Shanghai as a foreign patient can feel overwhelming—the language barrier, unfamiliar medical systems, and cultural differences are real. Here's how to make it work, and why having a local medical coordinator matters.
 
-The Language Barrier Is Real—Plan for It
+### The Language Barrier Is Real—Plan for It
 
 While major TCM hospitals offer international patient departments with English-speaking coordinators, these services are not available at every department or every hospital. TCM consultations involve nuanced descriptions of symptoms, emotions, and bodily functions that machine translation often struggles with. Miscommunication can lead to incorrect pattern diagnosis—the foundation of effective TCM treatment.
 
 This is where a bilingual medical coordinator becomes essential: ensuring your symptoms are accurately conveyed, your questions are fully answered, and your treatment plan is clearly explained before you leave the consultation room.
 
-Insurance Is Complicated—Get Help With Paperwork
+### Insurance Is Complicated—Get Help With Paperwork
 
 Some international health insurance plans cover acupuncture and TCM, but coverage varies widely. In Shanghai's public hospitals, payment is typically out-of-pocket at point of service, with reimbursement submitted to your insurer afterward. You'll need properly formatted invoices in both Chinese and English, detailed treatment records, and correct diagnostic codes—any of which can be a stumbling point without local knowledge.
 
 A coordinator who understands both the Chinese hospital billing system and international insurance requirements can save you significant time and prevent claim rejections.
 
-Booking Appointments Is Not Straightforward
+### Booking Appointments Is Not Straightforward
 
 Most major hospitals use WeChat-based booking systems that require a Chinese phone number and WeChat account. Hospital websites are primarily in Chinese. International patient departments can be reached by email or phone, but response times vary, and explaining your medical needs in writing across a language gap has limits.
 
 For first-time visitors, having someone book the right department, with the right doctor, at the right hospital—based on your specific condition—is the difference between a productive visit and a wasted one.
 
-What to Bring
+### What to Bring
 
 Passport (required for registration)
 Any existing medical records or lab results
@@ -216,11 +216,11 @@ List of current medications and supplements
 Translation of relevant medical documents if available
 Comfortable, loose-fitting clothing for acupuncture sessions
 
-Coordinating TCM With Your Existing Care
+### Coordinating TCM With Your Existing Care
 
 If you're already seeing a Western medicine doctor—whether in Shanghai or back home—coordinating between TCM and conventional treatment requires clear communication between providers. TCM herbal formulas can interact with pharmaceuticals, and your Western doctor needs to know what herbs you're taking. A medical coordinator can bridge this gap, translating treatment plans and ensuring both sides of your care team are informed.
 
-Why International Patients Work With ShanghaiMed
+## Why International Patients Work With ShanghaiMed
 
 The challenges above—language, booking, insurance, care coordination—are exactly why international patients choose to work with ShanghaiMed rather than navigating Shanghai's medical system alone. Our team provides:
 

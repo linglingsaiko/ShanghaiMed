@@ -148,6 +148,20 @@ const TreatmentAreas: React.FC = () => {
                     )}
                   </div>
                 )}
+                {hospital.internationalDeptUrl && (
+                  <div className="mt-3">
+                    <a
+                      href={hospital.internationalDeptUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="inline-flex items-center gap-1.5 text-primary font-medium text-sm hover:underline"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      Verify on hospital website
+                    </a>
+                  </div>
+                )}
               </div>
             </Card>
           ))}

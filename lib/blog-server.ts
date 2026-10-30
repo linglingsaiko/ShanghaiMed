@@ -248,11 +248,9 @@ export function getSortedPosts(lang?: string): BlogPost[] {
       return lang && lang !== 'en' ? applyLangOverride(post, id, lang) : post
     })
   
-  return allPostsData.sort((a, b) => {
-    if (a.featured && !b.featured) return -1
-    if (!a.featured && b.featured) return 1
-    return new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()
-  })
+  return allPostsData.sort((a, b) =>
+    new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()
+  )
 }
 
 export function getPostBySlug(slug: string, lang?: string): BlogPost | undefined {

@@ -4,6 +4,9 @@ import path from 'path'
 import matter from 'gray-matter'
 import { getSortedPosts, calculateReadingTime } from '@/lib/blog-server'
 
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
+
 export function GET(request: Request) {
   const { searchParams } = new URL(request.url)
   const page = parseInt(searchParams.get('page') || '1')
@@ -36,7 +39,10 @@ export function GET(request: Request) {
   const start = (page - 1) * pageSize
   const paginatedPosts = posts.slice(start, start + pageSize)
   
-  return NextResponse.json({ posts: paginatedPosts, totalPages })
+  return NextResponse.json(
+    { posts: paginatedPosts, totalPages },
+    { headers: { 'Cache-Control': 'no-store, max-age=0' } }
+  )
 }
 
 export async function POST(request: Request) {

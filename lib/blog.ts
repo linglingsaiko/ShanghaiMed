@@ -22,7 +22,9 @@ export {
 export async function getSortedPosts(lang?: string): Promise<BlogPost[]> {
   // limit=100: 拉全量。首页/相关文章/相邻文章都依赖完整列表；
   // 列表页分页走 getPostsByQuery（page参数），不受此影响
-  const res = await fetch('/api/blog?limit=100' + (lang ? '&lang=' + lang : ''))
+  const res = await fetch('/api/blog?limit=100' + (lang ? '&lang=' + lang : ''), {
+    cache: 'no-store',
+  })
   if (!res.ok) return []
   const data = await res.json()
   return data.posts || []
@@ -47,7 +49,7 @@ export async function getPostsByQuery(params: BlogQueryParams, baseUrl?: string,
   if (params.search) apiUrl.searchParams.set('search', params.search)
   if (lang) apiUrl.searchParams.set('lang', lang)
   
-  const res = await fetch(apiUrl.toString())
+  const res = await fetch(apiUrl.toString(), { cache: 'no-store' })
   if (!res.ok) return { posts: [], totalPages: 0 }
   return res.json()
 }

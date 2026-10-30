@@ -21,7 +21,7 @@ keywords:
   - 医療ツーリズム 上海
   - 中国医療 外国人
   - 上海 国際病院
-canonicalUrl: 'https://shanghaimedhealth.com/blog/is-shanghai-a Good Place-medical-treatment'
+canonicalUrl: 'https://shanghaimedhealth.com/blog/is-shanghai-a-good-place-medical-treatment'
 ---
 上海は、静かにアジアで最も人気のある国際医療の目的地の一つになりました。治療のために上海への渡航をお考えの方——定期健康診断であれ、歯科治療であれ、もっと複雑な治療であれ——きっと疑問をお持ちでしょう。医療の質は高いのか？きちんと意思疎通はできるのか？費用はどのくらいかかるのか？保険は使えるのか？
 本ガイドは、こうした疑問すべてに回答します。上海の医療制度を熟知した友人からのアドバイスとしてお読みください。

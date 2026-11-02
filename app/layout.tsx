@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     siteName: 'ShanghaiMed',
     title: 'ShanghaiMed - World-Class Medical Care in Shanghai',
     description:
-      'Free medical consultation, hospital escort from $50/hour (standalone or add-on), and concierge packages from $500. 14 Grade 3A + 5 international partner hospitals. English-Chinese & Japanese-Chinese medical interpretation, insurance support, 24/7 emergency on-site assistance.',
+      'Free medical consultation, hospital escort from $50/hour (standalone or add-on), and concierge packages from $500. 14 Grade 3A + 5 international partner hospitals. English-Chinese & Japanese-Chinese medical interpretation, insurance support, optional 24/7 on-site coordination (not emergency medical care).',
     images: [
       {
         url: '/og-image.png',
@@ -122,7 +122,7 @@ export default function RootLayout({
                   logo: `${siteUrl}/logo.png`,
                   image: `${siteUrl}/og-image.png`,
                   email: 'hello@shanghaimedhealth.com',
-                  telephone: '+86 131-6228-1901',
+                  telephone: '+86 138-1827-4110',
                   foundingDate: '2026',
                   sameAs: [
                     'https://www.youtube.com/@linglingma-r9u6b',
@@ -444,7 +444,7 @@ export default function RootLayout({
                       name: 'What happens after my medical treatment in Shanghai?',
                       acceptedAnswer: {
                         '@type': 'Answer',
-                        text: 'ShanghaiMed provides comprehensive post-treatment follow-up: remote video check-ups with your treating doctor, translated medical records (full discharge summary, test results, and medication list in English), medication guidance on dosage, side effects, and interactions, personalized recovery planning, home-country coordination (sharing your medical records with your primary care physician with your consent), and ongoing support after you return home. Follow-up continues for 30 days after treatment.',
+                        text: 'ShanghaiMed provides comprehensive post-treatment follow-up: remote video check-ups with your treating doctor, translated medical records (full discharge summary, test results, and medication list in English), medication guidance on dosage, side effects, and interactions, personalized recovery planning, home-country coordination (sharing your medical records with your primary care physician with your consent), and ongoing support after you return home. Follow-up lasts 30 calendar days for Health Checkup Concierge and Essential Care Concierge, and 60 calendar days for Surgery & Extended Care Concierge.',
                       },
                     },
                     {

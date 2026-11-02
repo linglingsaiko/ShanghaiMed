@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import PageHeading from '@/components/PageHeading'
+import OurStandardsCrossLink from '@/components/pages/OurStandardsCrossLink'
 
 export const metadata: Metadata = {
   title: 'How It Works - Your Medical Journey in Shanghai',
@@ -9,11 +10,14 @@ export const metadata: Metadata = {
 
 export default function HowItWorksPage() {
   return (
-    <PageHeading
-      titleKey="pages.howItWorksTitle"
-      subtitleKey="pages.howItWorksSubtitle"
-      fallbackTitle="How It Works"
-      fallbackSubtitle="Our streamlined process makes it easy to access world-class medical care in Shanghai."
-    />
+    <>
+      <PageHeading
+        titleKey="pages.howItWorksTitle"
+        subtitleKey="pages.howItWorksSubtitle"
+        fallbackTitle="How It Works"
+        fallbackSubtitle="Our streamlined process makes it easy to access world-class medical care in Shanghai."
+      />
+      <OurStandardsCrossLink />
+    </>
   )
 }

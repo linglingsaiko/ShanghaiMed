@@ -85,6 +85,16 @@ export async function GET() {
     })
   })
 
+  // English-only trust page: never advertise translations that do not exist.
+  entries.push(urlEntry({
+    lang: 'en',
+    pathname: '/our-standards',
+    changefreq: 'monthly',
+    priority: '0.8',
+    lastmod: '2026-11-02',
+    locales: ['en'],
+  }))
+
   englishPosts.forEach(post => {
     const availableLocales = getAvailablePostLocales(post.slug) as Locale[]
     const pathname = `/blog/${post.slug}`

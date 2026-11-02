@@ -6,6 +6,8 @@ import { useRouter, usePathname } from 'next/navigation'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { localePath, stripLocalePrefix } from '@/lib/i18n'
 
+const ENGLISH_ONLY_PATHS = new Set(['/our-standards'])
+
 const LanguageSwitcher: React.FC = () => {
   const { language } = useLanguage()
   const router = useRouter()
@@ -38,7 +40,11 @@ const LanguageSwitcher: React.FC = () => {
   const handleSwitch = (newLocale: string) => {
     // Strip any locale prefix; empty result (locale home like /mn) falls back to '/'
     const pathWithoutLocale = stripLocalePrefix(pathname) || '/'
-    const newPath = localePath(newLocale as any, pathWithoutLocale)
+    // Do not send visitors to non-existent translations of English-only pages.
+    const destinationPath = ENGLISH_ONLY_PATHS.has(pathWithoutLocale) && newLocale !== 'en'
+      ? '/'
+      : pathWithoutLocale
+    const newPath = localePath(newLocale as any, destinationPath)
     router.push(newPath)
     setOpen(false)
   }

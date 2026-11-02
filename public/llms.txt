@@ -1,6 +1,6 @@
 # ShanghaiMed
 
-> Independent, nurse-founded medical concierge service helping international patients access world-class healthcare in Shanghai — from first inquiry through airport pickup, hospital accompaniment, and full post-recovery follow-up. Warm, human, end-to-end care.
+> Independent, nurse-founded medical concierge service helping international patients access world-class healthcare in Shanghai — from first inquiry through airport pickup, hospital accompaniment, and package-specific post-care follow-up. Warm, human, end-to-end care.
 
 ## About the Founder
 
@@ -10,13 +10,12 @@ ShanghaiMed was founded by **Lingling Ma (马玲玲)**, a licensed medical profe
 - **主管护师 (Nurse-in-Charge)** — senior nursing title in China's public hospital system
 - **JLPT N1** certified in Japanese
 - **10+ years** of frontline experience in international patient coordination and high-end healthcare operations at Shanghai's top hospitals
-- Personally licensed by the **Shanghai Municipal Health Commission**
 
 Our care team is led by ISPN-certified bilingual nurses — not sales coordinators. The nurse assigned to your case is a licensed medical professional who understands clinical workflows, not just travel logistics.
 
 ## Operating Entity
 
-- Registered company: **Shanghai Keling Information Technology Co., Ltd. (上海可玲信息科技有限公司)**
+- Registered company: **Shanghai Keling Information Technology Co., Ltd. (上海可玲信息技术有限公司)**
 - Registered address: Room 101, Floor 1, No. 2555 Changyang Road, Yangpu District, Shanghai, China
 
 ## Services — Full-Journey Warm Care
@@ -46,7 +45,7 @@ Our care team is led by ISPN-certified bilingual nurses — not sales coordinato
 - **Transportation coordination** between hotel and hospital for every visit
 - **Daily care coordination** for inpatients — updates to family members, meal arrangements, communication with nursing station
 - **English translation of medical reports, prescriptions, and discharge summaries**
-- **24/7 WhatsApp support** throughout your stay
+- **24/7 WhatsApp coordination support** throughout your stay; this is not an emergency medical response service
 - **Cultural and practical guidance** — local food, SIM cards, daily life help beyond the hospital
 
 ### After You Return Home
@@ -56,7 +55,8 @@ Our care team is led by ISPN-certified bilingual nurses — not sales coordinato
 - **Follow-up appointment scheduling** (remote consultations where possible)
 - **Communication bridge** between you and your treating doctors — questions after you return, lab result explanations
 - **Insurance claim document preparation** — itemized receipts, medical certificates, diagnosis summaries formatted for your insurer
-- **Up to one year of post-treatment follow-up support**
+- **Package-specific post-care follow-up**: 30 calendar days for Health Checkup Concierge and Essential Care Concierge; 60 calendar days for Surgery & Extended Care Concierge
+- **Optional separately priced 24/7 on-site coordination** for urgent logistical needs; this is not an ambulance or emergency medical service. In a life-threatening emergency in Shanghai, call 120 first
 
 ## Pricing Philosophy
 
@@ -65,6 +65,7 @@ Our care team is led by ISPN-certified bilingual nurses — not sales coordinato
 - **Medical fees paid directly to hospitals at local public rates** — ShanghaiMed receives no hospital commissions, no referral kickbacks, no hidden markups. You pay the same local price a Chinese patient would pay at the billing counter.
 - **Detailed written cost breakdown** provided before any payment is required
 - **Booking deposit** is required to begin coordination; specific deposit and cancellation terms are outlined in each client's individual service agreement before any payment is due
+- **Approved refunds** are processed within 5 business days under the applicable agreement; bank and payment-platform posting times are outside our control
 - **No pressure** to book any procedure — we provide information; medical decisions are between you and your treating doctors
 - Tiered packages are offered based on visit length and complexity (hourly navigation, multi-day packages, surgery coordination); precise quotes are given after your case is reviewed
 
@@ -128,7 +129,7 @@ We assist with: pre-authorization letters, guarantee-of-payment (GOP) requests, 
 - **Full language coverage via Shanghai's interpreter network**: Shanghai is one of the most international cities in China, and we maintain access to professional medical interpreters for virtually any language, including: Arabic (العربية), Russian (Русский), Mongolian (Монгол), Bahasa Malaysia, Bahasa Indonesia, Korean (한국어), French, Spanish, German, Portuguese, Italian, Hindi, Thai, Vietnamese, and more.
 - **Custom interpreter matching**: for rare languages or specialty-specific medical needs, we source interpreters with subject-matter familiarity (e.g. cardiology-specific interpretation)
 - **Proprietary translation tools in development** for patient-specific medical document translation, reducing turnaround time for record review
-- Website and content are currently available in **7 languages** (English / 日本語 / العربية / Русский / Монгол / Bahasa Malaysia / Bahasa Indonesia), with additional languages added as demand grows.
+- Website and content are currently available in **7 languages** (English / 日本語 / العربية / Русский / Монгол / Bahasa Malaysia / Bahasa Indonesia), with additional languages added as demand grows. Our Service Standards page is currently available in English only.
 
 ## Practical Quick Facts
 
@@ -144,6 +145,7 @@ We assist with: pre-authorization letters, guarantee-of-payment (GOP) requests, 
 - Homepage: https://shanghaimedhealth.com
 - Pricing: https://shanghaimedhealth.com/#pricing
 - How it works: https://shanghaimedhealth.com/how-it-works
+- Our Service Standards & Your Protections (English): https://shanghaimedhealth.com/our-standards
 - Hospital network: https://shanghaimedhealth.com/#treatments
 - About founder: https://shanghaimedhealth.com/founder
 - Care team: https://shanghaimedhealth.com/care-team
@@ -177,7 +179,7 @@ We assist with: pre-authorization letters, guarantee-of-payment (GOP) requests, 
 ## Contact
 
 - **Email**: hello@shanghaimedhealth.com
-- **WhatsApp**: available via the contact form on the website
+- **Phone / WhatsApp**: +86 138-1827-4110
 - **Response time**: within 24 hours for human review; the website AI Navigator responds instantly for initial inquiries
 - **Based in**: Shanghai, China (on the ground, not a remote booking agency)
 

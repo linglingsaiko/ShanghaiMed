@@ -1,16 +1,16 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
+import { getLocaleFromPathname } from '@/lib/i18n'
 
 // Bots blocked at server level (robots.txt is only advisory; these get hard 403)
-// - Training/scraping bots that ignore robots.txt
+// - Selected data-collection bots without a current acquisition priority
 // - SEO analysis bots used for competitor research (no SEO impact — Google ignores them)
+// GPTBot, ClaudeBot and Google-Extended intentionally remain allowed for
+// long-term AI visibility and Gemini grounding.
 const BLOCKED_BOTS = [
   'ccbot',
   'bytespider',
-  'gptbot',
-  'claudebot',
   'anthropic-ai',
-  'google-extended',
   'amazonbot',
   'ahrefsbot',
   'semrushbot',
@@ -31,6 +31,11 @@ const BLOCKED_BOTS = [
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
+  const requestHeaders = new Headers(request.headers)
+  requestHeaders.set('x-shanghaimed-locale', getLocaleFromPathname(pathname))
+  const next = () => NextResponse.next({
+    request: { headers: requestHeaders },
+  })
 
   // Skip static assets & metadata files (matcher is intentionally broad; filter here)
   if (
@@ -39,7 +44,7 @@ export function middleware(request: NextRequest) {
     pathname === '/favicon.ico' ||
     /\.(png|jpe?g|svg|webp|ico|gif|txt|xml|json|css|js|map|woff2?|ttf|otf|mp4|webm|pdf)$/i.test(pathname)
   ) {
-    return NextResponse.next()
+    return next()
   }
 
   // --- Bot filtering (all routes) ---
@@ -55,7 +60,7 @@ export function middleware(request: NextRequest) {
 
   // Skip auth if no admin password is set (development mode)
   if (!adminPassword) {
-    return NextResponse.next()
+    return next()
   }
 
   // Protect admin routes
@@ -65,7 +70,7 @@ export function middleware(request: NextRequest) {
 
     // Check if user is already authenticated via cookie
     if (sessionCookie?.value === adminPassword) {
-      return NextResponse.next()
+      return next()
     }
 
     // Check basic auth header
@@ -76,7 +81,7 @@ export function middleware(request: NextRequest) {
 
       if (password === adminPassword) {
         // Set session cookie for future requests
-        const response = NextResponse.next()
+        const response = next()
         response.cookies.set('admin-session', adminPassword, {
           httpOnly: true,
           secure: process.env.NODE_ENV === 'production',
@@ -112,7 +117,7 @@ export function middleware(request: NextRequest) {
     }
   }
 
-  return NextResponse.next()
+  return next()
 }
 
 export const config = {

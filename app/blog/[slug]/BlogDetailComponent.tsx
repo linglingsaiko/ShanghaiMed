@@ -1,52 +1,20 @@
-'use client'
-
-import { useEffect, useState } from 'react'
-import { getPostBySlug } from '@/lib/blog'
 import BlogDetail from '@/components/sections/BlogDetail'
-import { notFound } from 'next/navigation'
 import type { BlogPost } from '@/lib/types'
-import { useLanguage } from '@/contexts/LanguageContext'
 
 interface BlogDetailComponentProps {
-  slug: string
+  post: BlogPost
+  previousPost?: BlogPost
+  nextPost?: BlogPost
 }
 
-export default function BlogDetailComponent({ slug }: BlogDetailComponentProps) {
-  const [post, setPost] = useState<BlogPost | null>(null)
-  const [loading, setLoading] = useState(true)
-  const { language } = useLanguage()
-  
-  useEffect(() => {
-    const fetchPost = async () => {
-      setLoading(true)
-      const result = await getPostBySlug(slug, language === 'ja' ? 'ja' : language === 'ar' ? 'ar' : language === 'ru' ? 'ru' : language === 'mn' ? 'mn' : language === 'ms' ? 'ms' : language === 'id' ? 'id' : undefined)
-      if (!result) {
-        notFound()
-        return
-      }
-      setPost(result)
-      setLoading(false)
-    }
-    
-    fetchPost()
-  }, [slug, language])
-  
-  if (loading) {
-    return (
-      <div className="bg-gray-50 min-h-screen flex items-center justify-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
-      </div>
-    )
-  }
-  
-  if (!post) {
-    notFound()
-    return null
-  }
-  
+export default function BlogDetailComponent({
+  post,
+  previousPost,
+  nextPost,
+}: BlogDetailComponentProps) {
   return (
     <div className="bg-gray-50 min-h-screen">
-      <BlogDetail post={post} />
+      <BlogDetail post={post} previousPost={previousPost} nextPost={nextPost} />
     </div>
   )
 }

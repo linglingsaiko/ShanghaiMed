@@ -1,83 +1,126 @@
+import type { Metadata } from 'next'
+import { notFound } from 'next/navigation'
 import BlogDetailComponent from './BlogDetailComponent'
-import { getPostBySlug } from '@/lib/blog-server'
+import {
+  getAvailablePostLocales,
+  getNextPost,
+  getPostBySlug,
+  getSortedPosts,
+  getPreviousPost,
+  hasPostLocale,
+} from '@/lib/blog-server'
+import {
+  languageAlternates,
+  localizedUrl,
+  OG_LOCALES,
+  resolvePublicLocale,
+  SITE_URL,
+} from '@/lib/public-seo'
+import type { Locale } from '@/lib/i18n'
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://shanghaimedhealth.com'
+type BlogDetailPageProps = { params: { slug: string; lang?: string } }
 
-export default function BlogDetailPage({ params }: { params: { slug: string } }) {
-  const post = getPostBySlug(params.slug)
+function absoluteImageUrl(image: string): string {
+  return new URL(image, SITE_URL).toString()
+}
 
-  const blogPostingJsonLd = post
-    ? {
-        '@context': 'https://schema.org',
-        '@type': 'BlogPosting',
-        headline: post.seoTitle || post.title,
-        description: post.metaDescription || post.excerpt,
-        ...(post.featuredImage ? { image: `${baseUrl}${post.featuredImage}` } : {}),
-        datePublished: new Date(post.publishDate).toISOString(),
-        dateModified: new Date(post.publishDate).toISOString(),
-        author: {
-          '@type': 'Person',
-          name: 'Sara Ma',
-          jobTitle: 'Founder',
-          url: `${baseUrl}/founder`,
-        },
-        publisher: {
-          '@type': 'Organization',
-          name: 'ShanghaiMed',
-          logo: { '@type': 'ImageObject', url: `${baseUrl}/logo.png` },
-        },
-        mainEntityOfPage: {
-          '@type': 'WebPage',
-          '@id': `${baseUrl}/blog/${post.slug}`,
-        },
-        keywords: (post.keywords || []).join(', '),
-      }
-    : null
+export default function BlogDetailPage({ params }: BlogDetailPageProps) {
+  const lang = resolvePublicLocale(params.lang)
+  if (!hasPostLocale(params.slug, lang)) notFound()
+
+  const post = getPostBySlug(params.slug, lang)
+  if (!post) notFound()
+
+  const articleUrl = localizedUrl(lang, `/blog/${post.slug}`)
+  const previousPost = getPreviousPost(post, lang)
+  const nextPost = getNextPost(post, lang)
+  const blogPostingJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.seoTitle || post.title,
+    description: post.metaDescription || post.excerpt,
+    ...(post.featuredImage ? { image: absoluteImageUrl(post.featuredImage) } : {}),
+    datePublished: new Date(post.publishDate).toISOString(),
+    dateModified: new Date(post.publishDate).toISOString(),
+    inLanguage: lang,
+    url: articleUrl,
+    author: {
+      '@type': 'Person',
+      name: 'Sara Ma',
+      jobTitle: 'Founder',
+      url: `${SITE_URL}/founder`,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'ShanghaiMed',
+      logo: { '@type': 'ImageObject', url: `${SITE_URL}/logo.png` },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': articleUrl,
+    },
+    articleSection: post.category,
+    keywords: (post.keywords || []).join(', '),
+  }
 
   return (
     <>
-      {blogPostingJsonLd && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingJsonLd) }}
-        />
-      )}
-      <BlogDetailComponent slug={params.slug} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingJsonLd) }}
+      />
+      <BlogDetailComponent post={post} previousPost={previousPost} nextPost={nextPost} />
     </>
   )
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  const post = getPostBySlug(params.slug)
-  
-  if (!post) {
-    return {
-      title: 'Blog | ShanghaiMed',
-      description: 'Healthcare articles in Shanghai',
-    }
+export function generateMetadata({ params }: BlogDetailPageProps): Metadata {
+  const lang = resolvePublicLocale(params.lang)
+  if (!hasPostLocale(params.slug, lang)) {
+    return { title: 'Article not found', robots: { index: false, follow: false } }
   }
-  
+
+  const post = getPostBySlug(params.slug, lang)
+  if (!post) {
+    return { title: 'Article not found', robots: { index: false, follow: false } }
+  }
+
+  const title = post.seoTitle || post.title
+  const description = post.metaDescription || post.excerpt
+  const articlePath = `/blog/${post.slug}`
+  const articleUrl = localizedUrl(lang, articlePath)
+  const availableLocales = getAvailablePostLocales(post.slug) as Locale[]
+  const images = post.featuredImage ? [absoluteImageUrl(post.featuredImage)] : []
+
   return {
-    title: post.seoTitle || post.title,
-    description: post.metaDescription || post.excerpt,
+    title,
+    description,
     keywords: (post.keywords || []).join(', '),
+    alternates: {
+      canonical: articleUrl,
+      languages: languageAlternates(articlePath, availableLocales),
+    },
     openGraph: {
-      title: post.seoTitle || post.title,
-      description: post.metaDescription || post.excerpt,
-      images: post.featuredImage ? [post.featuredImage] : [],
+      title,
+      description,
+      url: articleUrl,
+      locale: OG_LOCALES[lang],
+      siteName: 'ShanghaiMed',
+      images,
       type: 'article',
+      publishedTime: new Date(post.publishDate).toISOString(),
+      modifiedTime: new Date(post.publishDate).toISOString(),
     },
     twitter: {
       card: 'summary_large_image',
-      title: post.seoTitle || post.title,
-      description: post.metaDescription || post.excerpt,
-      images: post.featuredImage ? [post.featuredImage] : [],
+      title,
+      description,
+      images,
     },
+    robots: { index: true, follow: true },
   }
 }
 
-export async function generateStaticParams() {
-  const { getPostSlugs } = await import('@/lib/blog-server')
-  const slugs = getPostSlugs()
-  return slugs.map(slug => ({ slug }))
+export function generateStaticParams() {
+  return getSortedPosts().map(post => ({ slug: post.slug }))
 }

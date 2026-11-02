@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import { ArrowLeft, ArrowRight, Calendar, User, Tag, Share2, Linkedin, Facebook, Twitter, List } from 'lucide-react'
 import type { BlogPost } from '@/lib/types'
-import { getNextPost, getPreviousPost, categories } from '@/lib/blog'
+import { categories } from '@/lib/blog-shared'
 import BlogCTA from './BlogCTA'
 import AuthorBio from './AuthorBio'
 import Link from 'next/link'
@@ -11,26 +11,18 @@ import { useLanguage } from '@/contexts/LanguageContext'
 
 interface BlogDetailProps {
   post: BlogPost
+  previousPost?: BlogPost
+  nextPost?: BlogPost
 }
 
-export default function BlogDetail({ post }: BlogDetailProps) {
-  const { language, t, tArr, localePath } = useLanguage()
+export default function BlogDetail({ post, previousPost, nextPost }: BlogDetailProps) {
+  const { language, t, localePath } = useLanguage()
   const studiesCount = 30 // Keep in sync with Research Library count
   const [showToc, setShowToc] = useState(false)
   const [headings, setHeadings] = useState<{ id: string; text: string; level: number }[]>([])
-  const [nextPost, setNextPost] = useState<BlogPost | undefined>(undefined)
-  const [previousPost, setPreviousPost] = useState<BlogPost | undefined>(undefined)
   const [email, setEmail] = useState('')
   const [subscribed, setSubscribed] = useState(false)
   const [showSuccessModal, setShowSuccessModal] = useState(false)
-  
-  useEffect(() => {
-    const fetchRelatedPosts = async () => {
-      setNextPost(await getNextPost(post, language === 'ja' ? 'ja' : language === 'ru' ? 'ru' : language === 'ar' ? 'ar' : language === 'mn' ? 'mn' : undefined))
-      setPreviousPost(await getPreviousPost(post, language === 'ja' ? 'ja' : language === 'ru' ? 'ru' : language === 'ar' ? 'ar' : language === 'mn' ? 'mn' : undefined))
-    }
-    fetchRelatedPosts()
-  }, [post, language])
   
   useEffect(() => {
     const headingRegex = /<h([23])\s+id="(section-\d+)"[^>]*>([\s\S]*?)<\/h[23]>/gi
@@ -141,7 +133,7 @@ export default function BlogDetail({ post }: BlogDetailProps) {
                 </span>
                 <span className="flex items-center gap-1 text-sm text-gray-500">
                   <Calendar className="h-4 w-4" />
-                  {new Date(post.publishDate).toLocaleDateString(language === 'ja' ? 'ja-JP' : language === 'ru' ? 'ru-RU' : language === 'mn' ? 'mn-MN' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                  {new Date(post.publishDate).toLocaleDateString(language === 'ja' ? 'ja-JP' : language === 'ar' ? 'ar-SA' : language === 'ru' ? 'ru-RU' : language === 'mn' ? 'mn-MN' : language === 'ms' ? 'ms-MY' : language === 'id' ? 'id-ID' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
                 </span>
                 <span className="text-sm text-gray-500">{post.readingTime} {t('blog.minRead')}</span>
               </div>
@@ -228,7 +220,7 @@ export default function BlogDetail({ post }: BlogDetailProps) {
                     {post.tags.map(tag => (
                       <Link
                         key={tag}
-                        href={`/blog?tag=${encodeURIComponent(tag)}`}
+                        href={localePath(`/blog?tag=${encodeURIComponent(tag)}`)}
                         className="px-3 py-1 text-sm bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200 transition-colors"
                       >
                         {tag}
@@ -242,7 +234,7 @@ export default function BlogDetail({ post }: BlogDetailProps) {
           
           <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
             {previousPost && (
-              <Link href={`/blog/${previousPost.slug}`} className="group bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition-shadow">
+              <Link href={localePath(`/blog/${previousPost.slug}`)} className="group bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition-shadow">
                 <div className="flex items-center gap-3">
                   <ArrowLeft className="h-5 w-5 text-gray-400 group-hover:text-primary transition-colors" />
                   <div>
@@ -256,7 +248,7 @@ export default function BlogDetail({ post }: BlogDetailProps) {
             )}
             
             {nextPost && (
-              <Link href={`/blog/${nextPost.slug}`} className="group bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition-shadow ml-auto md:ml-0">
+              <Link href={localePath(`/blog/${nextPost.slug}`)} className="group bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition-shadow ml-auto md:ml-0">
                 <div className="flex items-center gap-3">
                   <div className="text-right">
                     <span className="text-sm text-gray-500">{t('blog.nextArticle')}</span>

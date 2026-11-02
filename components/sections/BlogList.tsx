@@ -1,9 +1,9 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Search, Filter, Tag, Calendar, ArrowRight } from 'lucide-react'
 import type { BlogPost, Category } from '@/lib/types'
-import { categories, getAllTags } from '@/lib/blog'
+import { categories } from '@/lib/blog-shared'
 import Link from 'next/link'
 import { useLanguage } from '@/contexts/LanguageContext'
 
@@ -14,53 +14,60 @@ interface BlogListProps {
   category?: string
   tag?: string
   search?: string
+  allTags: string[]
 }
 
-export default function BlogList({ posts, totalPages, currentPage, category, tag, search }: BlogListProps) {
-  const { language, t, tArr } = useLanguage()
+export default function BlogList({
+  posts,
+  totalPages,
+  currentPage,
+  category,
+  tag,
+  search,
+  allTags,
+}: BlogListProps) {
+  const { language, t, localePath } = useLanguage()
   const [searchQuery, setSearchQuery] = useState(search || '')
   const [selectedCategory, setSelectedCategory] = useState(category || '')
   const [selectedTag, setSelectedTag] = useState(tag || '')
-  const [allTags, setAllTags] = useState<string[]>([])
-  
-  useEffect(() => {
-    const loadTags = async () => {
-      const tags = await getAllTags()
-      setAllTags(tags)
-    }
-    loadTags()
-  }, [])
-  
+
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault()
     const params = new URLSearchParams()
     if (searchQuery) params.set('search', searchQuery)
     if (selectedCategory) params.set('category', selectedCategory)
     if (selectedTag) params.set('tag', selectedTag)
-    window.location.href = `/blog?${params.toString()}`
+    window.location.href = localePath(`/blog?${params.toString()}`)
   }
-  
+
   const clearFilters = () => {
     setSelectedCategory('')
     setSelectedTag('')
     setSearchQuery('')
-    window.location.href = '/blog'
+    window.location.href = localePath('/blog')
   }
-  
+
   const hasFilters = selectedCategory || selectedTag || searchQuery
-  
+  const dateLocale = language === 'ja' ? 'ja-JP'
+    : language === 'ar' ? 'ar-SA'
+    : language === 'ru' ? 'ru-RU'
+    : language === 'mn' ? 'mn-MN'
+    : language === 'ms' ? 'ms-MY'
+    : language === 'id' ? 'id-ID'
+    : 'en-US'
+
   return (
     <div className="w-full max-w-6xl mx-auto px-4 py-8">
       <div className="mb-8">
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{t('blog.title')}</h1>
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{t('blog.title')}</h2>
         <p className="text-gray-600">{t('blog.subtitle')}</p>
       </div>
-      
+
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
         <div className="lg:col-span-1">
           <div className="bg-white rounded-xl shadow-sm p-6 sticky top-8">
             <h2 className="text-lg font-semibold text-gray-900 mb-4">{t('blog.filterContent')}</h2>
-            
+
             <form onSubmit={handleSearch} className="mb-6">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
@@ -76,7 +83,7 @@ export default function BlogList({ posts, totalPages, currentPage, category, tag
                 {t('blog.search')}
               </button>
             </form>
-            
+
             {hasFilters && (
               <button
                 onClick={clearFilters}
@@ -86,7 +93,7 @@ export default function BlogList({ posts, totalPages, currentPage, category, tag
                 {t('blog.clearFilters')}
               </button>
             )}
-            
+
             <div className="mb-6">
               <h3 className="text-sm font-medium text-gray-700 mb-3 flex items-center gap-2">
                 <Filter className="h-4 w-4" />
@@ -96,7 +103,7 @@ export default function BlogList({ posts, totalPages, currentPage, category, tag
                 {categories.map((cat: Category) => (
                   <li key={cat.id}>
                     <Link
-                      href={`/blog?category=${cat.slug}`}
+                      href={localePath(`/blog?category=${cat.slug}`)}
                       className={`block px-3 py-2 rounded-lg text-sm transition-colors ${
                         selectedCategory === cat.slug
                           ? 'bg-primary/10 text-primary'
@@ -109,7 +116,7 @@ export default function BlogList({ posts, totalPages, currentPage, category, tag
                 ))}
               </ul>
             </div>
-            
+
             <div>
               <h3 className="text-sm font-medium text-gray-700 mb-3 flex items-center gap-2">
                 <Tag className="h-4 w-4" />
@@ -119,7 +126,7 @@ export default function BlogList({ posts, totalPages, currentPage, category, tag
                 {allTags.slice(0, 10).map(tag => (
                   <Link
                     key={tag}
-                    href={`/blog?tag=${encodeURIComponent(tag)}`}
+                    href={localePath(`/blog?tag=${encodeURIComponent(tag)}`)}
                     className={`px-3 py-1 text-xs rounded-full transition-colors ${
                       selectedTag === tag
                         ? 'bg-primary text-white'
@@ -133,7 +140,7 @@ export default function BlogList({ posts, totalPages, currentPage, category, tag
             </div>
           </div>
         </div>
-        
+
         <div className="lg:col-span-3">
           {posts.length === 0 ? (
             <div className="text-center py-16">
@@ -160,7 +167,7 @@ export default function BlogList({ posts, totalPages, currentPage, category, tag
                       </span>
                     </div>
                     <h2 className="text-xl font-semibold text-gray-900 mb-2 line-clamp-2">
-                      <Link href={`/blog/${post.slug}`} className="hover:text-primary transition-colors">
+                      <Link href={localePath(`/blog/${post.slug}`)} className="hover:text-primary transition-colors">
                         {post.title}
                       </Link>
                     </h2>
@@ -169,12 +176,12 @@ export default function BlogList({ posts, totalPages, currentPage, category, tag
                       <div className="flex items-center gap-4 text-sm text-gray-500">
                         <span className="flex items-center gap-1">
                           <Calendar className="h-4 w-4" />
-                          {new Date(post.publishDate).toLocaleDateString(language === 'ja' ? 'ja-JP' : language === 'ru' ? 'ru-RU' : language === 'mn' ? 'mn-MN' : language === 'ms' ? 'ms-MY' : language === 'id' ? 'id-ID' : 'en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+                          {new Date(post.publishDate).toLocaleDateString(dateLocale, { year: 'numeric', month: 'short', day: 'numeric' })}
                         </span>
                         <span>{post.readingTime} {t('blog.minRead')}</span>
                       </div>
                       <Link
-                        href={`/blog/${post.slug}`}
+                        href={localePath(`/blog/${post.slug}`)}
                         className="flex items-center gap-1 text-primary text-sm font-medium hover:gap-2 transition-all"
                       >
                         {t('insights.readMore')} <ArrowRight className="h-4 w-4" />
@@ -194,13 +201,13 @@ export default function BlogList({ posts, totalPages, currentPage, category, tag
               ))}
             </div>
           )}
-          
+
           {totalPages > 1 && (
             <div className="mt-8 flex justify-center">
               <nav className="flex items-center gap-2">
                 {currentPage > 1 && (
                   <Link
-                    href={`/blog?page=${currentPage - 1}${category ? `&category=${category}` : ''}${tag ? `&tag=${tag}` : ''}${search ? `&search=${search}` : ''}`}
+                    href={localePath(`/blog?page=${currentPage - 1}${category ? `&category=${category}` : ''}${tag ? `&tag=${tag}` : ''}${search ? `&search=${search}` : ''}`)}
                     className="px-4 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
                   >
                     {t('blog.previous')}
@@ -209,7 +216,7 @@ export default function BlogList({ posts, totalPages, currentPage, category, tag
                 {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
                   <Link
                     key={page}
-                    href={`/blog?page=${page}${category ? `&category=${category}` : ''}${tag ? `&tag=${tag}` : ''}${search ? `&search=${search}` : ''}`}
+                    href={localePath(`/blog?page=${page}${category ? `&category=${category}` : ''}${tag ? `&tag=${tag}` : ''}${search ? `&search=${search}` : ''}`)}
                     className={`px-4 py-2 rounded-lg transition-colors ${
                       page === currentPage
                         ? 'bg-primary text-white'
@@ -221,7 +228,7 @@ export default function BlogList({ posts, totalPages, currentPage, category, tag
                 ))}
                 {currentPage < totalPages && (
                   <Link
-                    href={`/blog?page=${currentPage + 1}${category ? `&category=${category}` : ''}${tag ? `&tag=${tag}` : ''}${search ? `&search=${search}` : ''}`}
+                    href={localePath(`/blog?page=${currentPage + 1}${category ? `&category=${category}` : ''}${tag ? `&tag=${tag}` : ''}${search ? `&search=${search}` : ''}`)}
                     className="px-4 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
                   >
                     {t('blog.next')}

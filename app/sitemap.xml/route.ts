@@ -1,29 +1,60 @@
-import { getSortedPosts, getCategories } from '@/lib/blog-server'
+import { getAvailablePostLocales, getSortedPosts } from '@/lib/blog-server'
+import { languageAlternates, localizedUrl, PUBLIC_LOCALES, SITE_URL } from '@/lib/public-seo'
+import type { Locale } from '@/lib/i18n'
+
+function escapeXml(value: string): string {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;')
+}
+
+function alternateLinks(pathname: string, locales: Locale[] = PUBLIC_LOCALES): string {
+  return Object.entries(languageAlternates(pathname, locales))
+    .map(([lang, href]) => `    <xhtml:link rel="alternate" hreflang="${lang}" href="${escapeXml(href)}" />`)
+    .join('\n')
+}
+
+function urlEntry({
+  lang,
+  pathname,
+  changefreq,
+  priority,
+  lastmod,
+  locales,
+  image,
+}: {
+  lang: Locale
+  pathname: string
+  changefreq: string
+  priority: string
+  lastmod?: string
+  locales?: Locale[]
+  image?: { url: string; caption: string }
+}): string {
+  return `  <url>
+    <loc>${escapeXml(localizedUrl(lang, pathname))}</loc>${lastmod ? `
+    <lastmod>${lastmod}</lastmod>` : ''}
+    <changefreq>${changefreq}</changefreq>
+    <priority>${priority}</priority>
+${alternateLinks(pathname, locales)}${image ? `
+    <image:image>
+      <image:loc>${escapeXml(image.url)}</image:loc>
+      <image:caption>${escapeXml(image.caption)}</image:caption>
+    </image:image>` : ''}
+  </url>`
+}
 
 export async function GET() {
-  const posts = getSortedPosts()
-  const categories = getCategories()
+  const englishPosts = getSortedPosts()
+  const postsByLocale = new Map(
+    PUBLIC_LOCALES.map(lang => [lang, getSortedPosts(lang)] as const)
+  )
 
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://shanghaimedhealth.com'
-  const locales = ['ja', 'ar', 'ru', 'mn', 'ms', 'id']
-
-  let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  <url>
-    <loc>${baseUrl}</loc>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="${baseUrl}/" />`
-
-  locales.forEach(locale => {
-    sitemap += `
-    <xhtml:link rel="alternate" hreflang="${locale}" href="${baseUrl}/${locale}" />`
-  })
-  sitemap += `
-  </url>`
-
-  // Static pages with hreflang alternates
   const staticPages = [
+    { path: '/', changefreq: 'daily', priority: '1.0' },
     { path: '/blog', changefreq: 'daily', priority: '0.8' },
     { path: '/research', changefreq: 'weekly', priority: '0.9' },
     { path: '/glossary', changefreq: 'monthly', priority: '0.8' },
@@ -39,59 +70,50 @@ export async function GET() {
     { path: '/care-team', changefreq: 'monthly', priority: '0.6' },
     { path: '/contact', changefreq: 'monthly', priority: '0.6' },
     { path: '/faq', changefreq: 'monthly', priority: '0.6' },
-    { path: '/patient-stories', changefreq: 'monthly', priority: '0.6' },
+    { path: '/free-consultation', changefreq: 'monthly', priority: '0.8' },
   ]
 
+  const entries: string[] = []
   staticPages.forEach(page => {
-    sitemap += `
-  <url>
-    <loc>${baseUrl}${page.path}</loc>
-    <changefreq>${page.changefreq}</changefreq>
-    <priority>${page.priority}</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="${baseUrl}${page.path}" />`
-    locales.forEach(locale => {
-      sitemap += `
-    <xhtml:link rel="alternate" hreflang="${locale}" href="${baseUrl}/${locale}${page.path}" />`
+    PUBLIC_LOCALES.forEach(lang => {
+      entries.push(urlEntry({
+        lang,
+        pathname: page.path,
+        changefreq: page.changefreq,
+        priority: page.priority,
+      }))
     })
-    sitemap += `
-  </url>`
   })
 
-  categories.forEach(category => {
-    sitemap += `
-  <url>
-    <loc>${baseUrl}/blog?category=${category.slug}</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>`
+  englishPosts.forEach(post => {
+    const availableLocales = getAvailablePostLocales(post.slug) as Locale[]
+    const pathname = `/blog/${post.slug}`
+    availableLocales.forEach(lang => {
+      const localizedPost = postsByLocale.get(lang)?.find(item => item.slug === post.slug) || post
+      entries.push(urlEntry({
+        lang,
+        pathname,
+        changefreq: 'weekly',
+        priority: '0.9',
+        lastmod: new Date(post.publishDate).toISOString(),
+        locales: availableLocales,
+        image: localizedPost.featuredImage ? {
+          url: new URL(localizedPost.featuredImage, SITE_URL).toString(),
+          caption: localizedPost.title,
+        } : undefined,
+      }))
+    })
   })
 
-  posts.forEach(post => {
-    sitemap += `
-  <url>
-    <loc>${baseUrl}/blog/${post.slug}</loc>
-    <lastmod>${new Date(post.publishDate).toISOString()}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>`
-
-    if (post.featuredImage) {
-      sitemap += `
-    <image:image>
-      <image:loc>${baseUrl}${post.featuredImage}</image:loc>
-      <image:caption>${post.title}</image:caption>
-    </image:image>`
-    }
-
-    sitemap += `
-  </url>`
-  })
-
-  sitemap += `
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+${entries.join('\n')}
 </urlset>`
 
   return new Response(sitemap, {
     headers: {
-      'Content-Type': 'application/xml',
+      'Content-Type': 'application/xml; charset=utf-8',
+      'Cache-Control': 'public, max-age=3600',
     },
   })
 }

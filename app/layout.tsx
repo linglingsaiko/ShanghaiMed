@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import { headers } from 'next/headers'
+import { isValidLocale } from '@/lib/i18n'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
@@ -88,13 +90,17 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const localeHeader = headers().get('x-shanghaimed-locale')
+  const lang = localeHeader && isValidLocale(localeHeader) ? localeHeader : 'en'
+  const dir = lang === 'ar' ? 'rtl' : 'ltr'
+
   return (
-    <html lang="en">
+    <html lang={lang} dir={dir}>
       <body className="antialiased">
         <LanguageProvider>
           <HtmlLangDirSetter />
           <Header />
-          <main dir="ltr">{children}</main>
+          <main dir={dir}>{children}</main>
           <Footer />
           <WhatsAppFloat />
           <AgentChat />

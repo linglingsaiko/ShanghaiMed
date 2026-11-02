@@ -255,7 +255,7 @@ export function getSortedPosts(lang?: string): BlogPost[] {
 
 export function getPostBySlug(slug: string, lang?: string): BlogPost | undefined {
   const posts = getSortedPosts(lang)
-  return posts.find(post => post.slug === slug)
+  return posts.find(post => post.slug === slug || post.id === slug)
 }
 
 export function getPostsByQuery(params: BlogQueryParams, lang?: string): { posts: BlogPost[]; totalPages: number } {
@@ -297,6 +297,18 @@ export function getPostSlugs(): string[] {
   return fileNames
     .filter(fileName => fileName.endsWith('.md') && !/\.(ja|ar|ru|mn|ms|id|zh)\.md$/.test(fileName))
     .map(fileName => fileName.replace(/\.md$/, ''))
+}
+
+export function getAvailablePostLocales(slug: string): string[] {
+  const basePost = getSortedPosts().find(post => post.slug === slug || post.id === slug)
+  if (!basePost) return []
+  return ['en', 'ja', 'ar', 'ru', 'mn', 'ms', 'id'].filter(lang =>
+    lang === 'en' || fs.existsSync(path.join(postsDirectory, `${basePost.id}.${lang}.md`))
+  )
+}
+
+export function hasPostLocale(slug: string, lang: string): boolean {
+  return getAvailablePostLocales(slug).includes(lang)
 }
 
 export function getRelatedPosts(currentPost: BlogPost, limit: number = 3, lang?: string): BlogPost[] {

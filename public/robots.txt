@@ -4,8 +4,10 @@
 # === Default rules for ALL crawlers ===
 # Allowed channels inherit this block (Google/Bing/Yandex/DuckDuckGo,
 # GEO acquisition: OAI-SearchBot, ChatGPT-User, PerplexityBot, Perplexity-User,
-# Claude-Web, Claude-User, plus social preview: facebookexternalhit,
+# Claude-SearchBot, Claude-User, plus social preview: facebookexternalhit,
 # meta-externalagent, TelegramBot, Twitterbot, LinkedInBot, WhatsApp).
+# GPTBot and ClaudeBot are allowed for long-term AI brand visibility.
+# Google-Extended is allowed for Gemini training and search grounding.
 # NOTE: no dedicated "allow" blocks — a dedicated User-agent group overrides
 # this wildcard group and would silently un-disallow /admin/ and /api/.
 User-agent: *
@@ -13,17 +15,8 @@ Allow: /
 Disallow: /admin/
 Disallow: /api/
 
-# === AI Training Crawlers (BLOCKED — no model training on our content) ===
-User-agent: GPTBot
-Disallow: /
-
-User-agent: ClaudeBot
-Disallow: /
-
+# === Selected AI data-collection crawlers (BLOCKED) ===
 User-agent: anthropic-ai
-Disallow: /
-
-User-agent: Google-Extended
 Disallow: /
 
 User-agent: CCBot
@@ -67,6 +60,6 @@ Disallow: /
 Sitemap: https://shanghaimedhealth.com/sitemap.xml
 
 # === AI Content Map (for LLM/AI crawlers: OAI-SearchBot, ChatGPT-User,
-# PerplexityBot, Claude-Web, etc.) ===
+# PerplexityBot, Claude-SearchBot, Claude-User, etc.) ===
 # Structured content map describing the site for AI retrieval systems.
 Llms-txt: https://shanghaimedhealth.com/llms.txt

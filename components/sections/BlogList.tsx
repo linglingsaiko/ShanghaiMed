@@ -115,14 +115,12 @@ export default function BlogList({
                   </li>
                 ))}
               </ul>
-              <div className="mt-4 pt-3 border-t border-gray-100">
-                <Link
-                  href={localePath('/blog/guides')}
-                  className="flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
-                >
-                  📖 Browse all guides by topic →
-                </Link>
-              </div>
+              <Link
+                href={localePath('/blog/guides')}
+                className="mt-4 block rounded-lg bg-primary/5 border border-primary/15 px-4 py-3 text-center hover:bg-primary/10 transition-colors"
+              >
+                <span className="text-sm font-semibold text-primary">📖 Browse All Guides by Topic →</span>
+              </Link>
             </div>
 
             <div>

@@ -8,6 +8,7 @@ import WhatsAppFloat from '@/components/WhatsAppFloat'
 import AgentChat from '@/components/AgentChat'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 import HtmlLangDirSetter from '@/components/HtmlLangDirSetter'
+import WebsiteAnalytics from '@/components/WebsiteAnalytics'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://shanghaimedhealth.com'
 
@@ -105,6 +106,7 @@ export default function RootLayout({
           <WhatsAppFloat />
           <AgentChat />
         </LanguageProvider>
+        <WebsiteAnalytics />
         
         {/* JSON-LD Structured Data */}
         <script

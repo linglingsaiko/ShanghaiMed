@@ -111,7 +111,7 @@ function groupPostsByCategory(posts: BlogPost[]): { key: string; display: Catego
 
 export default function GuidesPage({ params }: GuidesPageProps) {
   const lang = resolvePublicLocale(params?.lang)
-  const allPosts = getSortedPosts(lang).filter(p => p.status === 'published')
+  const allPosts = getSortedPosts(lang)
   const groups = groupPostsByCategory(allPosts)
 
   return (

@@ -13,7 +13,7 @@ author: Lingling Ma
 date: '2026-11-03T02:00:00.000Z'
 lastReviewed: '2026-11-03'
 featured: false
-featuredImage: /images/hero_b1_no_text_frameless.jpg
+featuredImage: /images/blog/medical-records-for-treatment-in-china-checklist.png
 seoTitle: 中国での治療のための医療記録：チェックリスト
 metaDescription: 中国での治療を計画している？この旅行前の記録チェックリストで、医療報告書、スキャン画像、薬剤、アレルギー、症状、質問を整理しましょう。
 keywords:

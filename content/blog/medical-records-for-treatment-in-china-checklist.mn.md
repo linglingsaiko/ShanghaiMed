@@ -13,7 +13,7 @@ author: Lingling Ma
 date: '2026-11-03T02:00:00.000Z'
 lastReviewed: '2026-11-03'
 featured: false
-featuredImage: /images/hero_b1_no_text_frameless.jpg
+featuredImage: /images/blog/medical-records-for-treatment-in-china-checklist.png
 seoTitle: "Хятад улсад эмчлүүлэхэд шаардлагатай эмнэлгийн баримт: Шалгах жагсаалт"
 metaDescription: "Хятад улсад эмчлүүлэхээр төлөвлөж байна уу? Аялалын өмнөх энэ жагсаалтаар эмнэлгийн дүгнэлт, шинжилгээний зураг, эм, харшил, шинж тэмдэг, асуултаа цэгцлээрэй."
 keywords:

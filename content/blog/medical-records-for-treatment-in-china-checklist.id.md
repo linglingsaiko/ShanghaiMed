@@ -17,7 +17,7 @@ author: Lingling Ma
 date: '2026-11-03T02:00:00.000Z'
 lastReviewed: '2026-11-03'
 featured: false
-featuredImage: /images/hero_b1_no_text_frameless.jpg
+featuredImage: /images/blog/medical-records-for-treatment-in-china-checklist.png
 seoTitle: 'Catatan Medis untuk Perawatan di Tiongkok: Daftar Periksa'
 metaDescription: Merencanakan perawatan di Tiongkok? Atur laporan medis, gambar pindaian,
   obat-obatan, alergi, gejala, dan pertanyaan dengan daftar periksa catatan pra-perjalanan

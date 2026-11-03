@@ -13,7 +13,7 @@ author: Lingling Ma
 date: '2026-11-03T02:00:00.000Z'
 lastReviewed: '2026-11-03'
 featured: false
-featuredImage: /images/hero_b1_no_text_frameless.jpg
+featuredImage: /images/blog/medical-records-for-treatment-in-china-checklist.png
 seoTitle: "Medical Records for Treatment in China: Checklist"
 metaDescription: "Planning treatment in China? Organize medical reports, scan images, medications, allergies, symptoms and questions with this pre-travel records checklist."
 keywords:

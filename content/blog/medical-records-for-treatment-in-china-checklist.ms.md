@@ -16,7 +16,7 @@ author: Lingling Ma
 date: '2026-11-03T02:00:00.000Z'
 lastReviewed: '2026-11-03'
 featured: false
-featuredImage: /images/hero_b1_no_text_frameless.jpg
+featuredImage: /images/blog/medical-records-for-treatment-in-china-checklist.png
 seoTitle: 'Rekod Perubatan untuk Rawatan di China: Senarai Semak'
 metaDescription: Merancang rawatan di China? Susun laporan perubatan, imej pindaian,
   ubat-ubatan, alahan, simptom dan soalan-soalan dengan senarai semak rekod pra-perjalanan

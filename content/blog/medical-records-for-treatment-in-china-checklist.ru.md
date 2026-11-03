@@ -16,7 +16,7 @@ author: Lingling Ma
 date: '2026-11-03T02:00:00.000Z'
 lastReviewed: '2026-11-03'
 featured: false
-featuredImage: /images/hero_b1_no_text_frameless.jpg
+featuredImage: /images/blog/medical-records-for-treatment-in-china-checklist.png
 seoTitle: 'Медицинские записи для лечения в Китае: контрольный список'
 metaDescription: Планируете лечение в Китае? Организуйте медицинские отчеты, сканы
   изображений, лекарства, аллергии, симптомы и вопросы с помощью этого контрольного

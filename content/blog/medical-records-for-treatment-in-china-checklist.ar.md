@@ -16,7 +16,7 @@ author: Lingling Ma
 date: '2026-11-03T02:00:00.000Z'
 lastReviewed: '2026-11-03'
 featured: false
-featuredImage: /images/hero_b1_no_text_frameless.jpg
+featuredImage: /images/blog/medical-records-for-treatment-in-china-checklist.png
 seoTitle: 'السجلات الطبية للعلاج في الصين: قائمة مرجعية'
 metaDescription: هل تخطط للعلاج في الصين؟ قم بتنظيم التقارير الطبية، وصور الأشعة،
   والأدوية، والحساسيات، والأعراض، والأسئلة باستخدام قائمة التحقق من السجلات قبل السفر

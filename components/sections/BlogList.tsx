@@ -115,6 +115,14 @@ export default function BlogList({
                   </li>
                 ))}
               </ul>
+              <div className="mt-4 pt-3 border-t border-gray-100">
+                <Link
+                  href={localePath('/blog/guides')}
+                  className="flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                >
+                  📖 Browse all guides by topic →
+                </Link>
+              </div>
             </div>
 
             <div>

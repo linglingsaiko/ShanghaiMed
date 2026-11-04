@@ -1,5 +1,5 @@
-fastapi
-uvicorn
-python-multipart
-httpx
-aiofiles
+fastapi==0.162.0
+uvicorn==0.54.0
+python-multipart==0.0.33
+httpx==0.28.1
+aiofiles==25.1.0

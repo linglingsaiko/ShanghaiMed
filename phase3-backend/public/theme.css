@@ -1,0 +1,17 @@
+:root {
+  color-scheme: light;
+  --color-primary: #0E5A5A;
+  --color-background: #F4F7F9;
+  --color-surface: #FFFFFF;
+  --color-text: #2B3442;
+  --color-muted-text: #687586;
+  --color-border: #E3E8EE;
+  --color-focus: #0E5A5A;
+  --font-body: Inter, "PingFang SC", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+  --font-display: Inter, "PingFang SC", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --space-unit: 4px;
+  --content-width: 1180px;
+}

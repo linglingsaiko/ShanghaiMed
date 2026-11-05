@@ -5,6 +5,7 @@ import ProcessFlow from '@/components/sections/ProcessFlow'
 import TreatmentAreas from '@/components/sections/TreatmentAreas'
 import CareTeam from '@/components/sections/CareTeam'
 import Pricing from '@/components/sections/Pricing'
+import FindDoctor from '@/components/sections/FindDoctor'
 import LatestInsights from '@/components/sections/LatestInsights'
 import Contact from '@/components/sections/Contact'
 
@@ -18,6 +19,7 @@ export default function HomePage() {
       <TreatmentAreas />
       <CareTeam />
       <Pricing />
+      <FindDoctor />
       <LatestInsights />
       <Contact />
     </>

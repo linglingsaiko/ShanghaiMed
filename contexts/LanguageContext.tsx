@@ -23,7 +23,7 @@ const enTranslations = {
       treatments: 'Treatments',
       careTeam: 'Care Team',
       trust: 'Trust',
-      items: ['Why Shanghai', 'How It Works', 'Hospital Network', 'Care Team', 'Pricing', 'Medical Records', 'Blog', 'Contact'],
+      items: ['Why Shanghai', 'How It Works', 'Hospital Network', 'Care Team', 'Pricing', 'Find a Doctor', 'Blog', 'Contact'],
     },
     whyShanghai: {
       badge: 'Why Shanghai',
@@ -190,6 +190,16 @@ const enTranslations = {
       featuredTitle: 'Trusted Hospitals',
       featuredSubtitle: "China's top-ranked public hospitals with dedicated international departments",
       learnMore: 'Learn More',
+    },
+    findDoctor: {
+      badge: 'Meet MediMatch · Our Purpose-Built AI',
+      title: "In China, there's no family doctor to refer you. So we built MediMatch.",
+      body1: "Modern medicine is split into sub-specialties most patients have never heard of — orthopedics alone divides into spine, joint, and sports medicine. Choosing the right one is the single most important step in your care, and the easiest to get wrong.",
+      body2: "Back home, your GP would review your case and refer you to the right specialist. In China, you choose on your own — often in a language and a system you don't know.",
+      body3: "MediMatch is our purpose-built AI for exactly this step. Upload your medical records, and it reads your case the way a referring physician would — matching you to the precise sub-specialty and doctor your condition actually needs.",
+      steps: ['Upload your records', 'AI reads your case', 'Meet your matched specialist'],
+      cta: 'Find a Doctor',
+      disclaimer: "MediMatch guides you to the right specialty; it does not diagnose or replace a doctor's judgment.",
     },
     howItWorks: {
       title: 'Five Simple Steps',
@@ -619,7 +629,7 @@ export const translations: Record<Language, any> = {
       treatments: '治療',
       careTeam: 'ケアチーム',
       trust: '信頼',
-      items: ['なぜ上海か', 'ご利用の流れ', '病院ネットワーク', 'ケアチーム', '料金', '医療記録', 'ブログ', 'お問い合わせ'],
+      items: ['なぜ上海か', 'ご利用の流れ', '病院ネットワーク', 'ケアチーム', '料金', '医師を探す', 'ブログ', 'お問い合わせ'],
     },
     whyShanghai: {
       badge: 'なぜ上海か',
@@ -1272,7 +1282,7 @@ export const translations: Record<Language, any> = {
       treatments: 'العلاجات',
       careTeam: 'فريق الرعاية',
       trust: 'الثقة',
-      items: ['لماذا شنغهاي', 'كيف يعمل', 'شبكة المستشفيات', 'فريق الرعاية', 'الأسعار', 'السجلات الطبية', 'المدونة', 'اتصل بنا'],
+      items: ['لماذا شنغهاي', 'كيف يعمل', 'شبكة المستشفيات', 'فريق الرعاية', 'الأسعار', 'ابحث عن طبيب', 'المدونة', 'اتصل بنا'],
     },
     hero: {
       badge1: 'مستشفيات التأمين الدولي',
@@ -1992,7 +2002,7 @@ export const translations: Record<Language, any> = {
       treatments: 'Лечение',
       careTeam: 'Команда сопровождения',
       trust: 'Доверие',
-      items: ['Почему Шанхай', 'Как это работает', 'Сеть больниц', 'Команда сопровождения', 'Цены', 'Медицинские записи', 'Блог', 'Контакты'],
+      items: ['Почему Шанхай', 'Как это работает', 'Сеть больниц', 'Команда сопровождения', 'Цены', 'Найти врача', 'Блог', 'Контакты'],
     },
     hero: {
       badge1: 'Больницы с международным страхованием',
@@ -2719,7 +2729,7 @@ export const translations: Record<Language, any> = {
       treatments: 'Эмчилгээ',
       careTeam: 'Асрамжийн баг',
       trust: 'Итгэл',
-      items: ['Яагаад Шанхай', 'Хэрхэн ажилладаг', 'Эмнэлгийн сүлжээ', 'Асрамжийн баг', 'Үнэ', 'Эмнэлгийн бичиг', 'Блог', 'Холбоо барих'],
+      items: ['Яагаад Шанхай', 'Хэрхэн ажилладаг', 'Эмнэлгийн сүлжээ', 'Асрамжийн баг', 'Үнэ', 'Эмч хайх', 'Блог', 'Холбоо барих'],
     },
     hero: {
       badge1: 'Олон улсын даатгалын эмнэлгүүд',
@@ -3448,7 +3458,7 @@ export const translations: Record<Language, any> = {
         treatments: 'Rawatan',
         careTeam: 'Pasukan Penjagaan',
         trust: 'Kepercayaan',
-        items: ['Mengapa Shanghai', 'Bagaimana Ia Berfungsi', 'Rangkaian Hospital', 'Pasukan Penjagaan', 'Harga', 'Rekod Perubatan', 'Blog', 'Hubungi Kami']
+        items: ['Mengapa Shanghai', 'Bagaimana Ia Berfungsi', 'Rangkaian Hospital', 'Pasukan Penjagaan', 'Harga', 'Cari Doktor', 'Blog', 'Hubungi Kami']
       },
       whyShanghai: {
         badge: 'Mengapa Shanghai',
@@ -4244,7 +4254,7 @@ export const translations: Record<Language, any> = {
         treatments: 'Layanan',
         careTeam: 'Tim Perawatan',
         trust: 'Kepercayaan',
-        items: ['Mengapa Shanghai', 'Cara Kerja', 'Jaringan Rumah Sakit', 'Tim Perawatan', 'Harga', 'Rekam Medis', 'Blog', 'Kontak']
+        items: ['Mengapa Shanghai', 'Cara Kerja', 'Jaringan Rumah Sakit', 'Tim Perawatan', 'Harga', 'Cari Dokter', 'Blog', 'Kontak']
       },
       whyShanghai: {
         badge: 'Mengapa Shanghai',

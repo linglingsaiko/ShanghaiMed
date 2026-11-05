@@ -8,7 +8,7 @@
       name="description"
       content="ShanghaiMed 病历上传与 AI 医生匹配：上传病历、AI 分析、获取免费预览与完整报告。"
     />
-    <title>病历上传与 AI 医生匹配｜ShanghaiMed</title>
+    <title>MediMatch 病历分析 · 精准专科医生匹配｜ShanghaiMed</title>
     <style>
       :root {
         color-scheme: light;
@@ -2049,9 +2049,9 @@
         <section class="hero" aria-labelledby="hero-title">
           <div class="eyebrow">
             <span class="eyebrow-dot" aria-hidden="true"></span>
-            AI 病历分析 · 精准医生匹配
+            MediMatch 专属 AI · 精准专科分诊
           </div>
-          <h1 id="hero-title">上传病历，AI帮您找到最合适的医生</h1>
+          <h1 id="hero-title">上传病历，让 MediMatch 为您匹配最合适的专科医生</h1>
           <p class="hero-subtitle">
             支持图片、PDF、压缩包上传，病历越完整，推荐越精准
           </p>
@@ -2759,6 +2759,7 @@
         const MAX_FILE_SIZE = 50 * 1024 * 1024;
         const ALLOWED_EXTENSIONS = new Set(["jpg", "jpeg", "png", "webp", "bmp", "gif", "tif", "tiff", "heic", "heif", "pdf", "zip"]);
         const CONSENT_KEY = "shanghaimed-medical-records-consent";
+        const TASK_KEY = "shanghaimed-medical-records-task";
         const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
         const elements = {
@@ -3110,6 +3111,69 @@
           }
         }
 
+        function saveTask(taskId) {
+          try {
+            window.localStorage.setItem(TASK_KEY, JSON.stringify({
+              taskId: taskId,
+              startedAt: Date.now(),
+              fileCount: selectedFiles ? selectedFiles.length : 1,
+            }));
+          } catch (e) { /* storage unavailable */ }
+        }
+
+        function loadTask() {
+          try {
+            const raw = window.localStorage.getItem(TASK_KEY);
+            return raw ? JSON.parse(raw) : null;
+          } catch (e) { return null; }
+        }
+
+        function clearTask() {
+          try { window.localStorage.removeItem(TASK_KEY); } catch (e) { /* ignore */ }
+        }
+
+        function finishAnalysis(result) {
+          clearTask();
+          setProgress("analysis", 100);
+          setStepState(1, "complete");
+          for (let i = 2; i < elements.steps.length; i++) {
+            setStepState(i, "complete");
+          }
+          const preview = result.report_preview || result.free_preview || {};
+          const summaryEl = elements.previewSection.querySelector('.preview-summary, [data-field="summary"]');
+          if (summaryEl && preview.summary) {
+            summaryEl.textContent = preview.summary;
+          }
+          window._fullReportData = result.report_full || result.full_report || null;
+          elements.analysisNote.textContent = "分析完成，免费预览已生成";
+          elements.progressSection.dataset.state = "complete";
+          elements.progressPill.textContent = "已完成";
+          elements.progressPill.classList.add("success");
+          elements.uploadSection.querySelector(".status-pill").textContent = "分析完成";
+          elements.previewSection.hidden = false;
+          applyPreview(result.preview || result.report_preview || result.free_preview || {});
+          renderPayPalButtons();
+          elements.reportDate.textContent = new Date().toLocaleString("zh-CN", { hour12: false });
+          isProcessing = false;
+          elements.startButtonText.textContent = "重新分析";
+          updateActionState();
+          elements.previewSection.scrollIntoView({
+            behavior: reducedMotion.matches ? "auto" : "smooth",
+            block: "start",
+          });
+        }
+
+        function failAnalysis(error) {
+          clearTask();
+          elements.analysisNote.textContent = "分析失败：" + error.message;
+          elements.progressSection.dataset.state = "error";
+          elements.progressPill.textContent = "失败";
+          isProcessing = false;
+          elements.startButtonText.textContent = "重新分析";
+          showFileError("AI 分析失败：" + error.message + "，请重试");
+          updateActionState();
+        }
+
         async function startAnalysis() {
           if (!consentGranted) {
             showConsentModal();
@@ -3135,7 +3199,6 @@
             block: "start",
           });
 
-          // 真实上传
           try {
             await uploadFiles();
           } catch (e) {
@@ -3146,7 +3209,6 @@
             return;
           }
 
-          // 真实 AI 分析
           setStepState(0, "active");
           elements.analysisNote.textContent = "正在进行 AI 分析，请耐心等待…";
           setProgress("analysis", 10);
@@ -3169,57 +3231,22 @@
             const accepted = await analyzeResponse.json();
             analysisResult = accepted;
             currentTaskId = accepted.task_id;
+            saveTask(currentTaskId);
 
             setProgress("analysis", 45);
-            elements.analysisNote.textContent = "AI 深度分析中，通常需要 3-10 分钟，请保持页面打开…";
-
             const result = await pollAnalysisStatus(currentTaskId);
-
-            setProgress("analysis", 100);
-            setStepState(1, "complete");
-            for (let i = 2; i < elements.steps.length; i++) {
-              setStepState(i, "complete");
-            }
-
-            // 填充预览数据
-            const preview = result.report_preview || result.free_preview || {};
-            const summaryEl = elements.previewSection.querySelector('.preview-summary, [data-field="summary"]');
-            if (summaryEl && preview.summary) {
-              summaryEl.textContent = preview.summary;
-            }
-
-            // 存储完整报告数据供付费解锁
-            window._fullReportData = result.report_full || result.full_report || null;
-
-            elements.analysisNote.textContent = "分析完成，免费预览已生成";
-            elements.progressSection.dataset.state = "complete";
-            elements.progressPill.textContent = "已完成";
-            elements.progressPill.classList.add("success");
-            elements.uploadSection.querySelector(".status-pill").textContent = "分析完成";
-            elements.previewSection.hidden = false;
-            applyPreview(result.preview || result.report_preview || result.free_preview || {});
-            renderPayPalButtons();
-            elements.reportDate.textContent = new Date().toLocaleString("zh-CN", { hour12: false });
-            isProcessing = false;
-            elements.startButtonText.textContent = "重新分析";
-            updateActionState();
-            elements.previewSection.scrollIntoView({
-              behavior: reducedMotion.matches ? "auto" : "smooth",
-              block: "start",
-            });
+            finishAnalysis(result);
           } catch (error) {
-            elements.analysisNote.textContent = "分析失败：" + error.message;
-            elements.progressSection.dataset.state = "error";
-            elements.progressPill.textContent = "失败";
-            isProcessing = false;
-            elements.startButtonText.textContent = "重新分析";
-            showFileError("AI 分析失败：" + error.message + "，请重试");
-            updateActionState();
+            failAnalysis(error);
           }
         }
 
         async function pollAnalysisStatus(taskId) {
-          const maxAttempts = 100;
+          const maxAttempts = 120;
+          const task = loadTask();
+          const startedAt = (task && task.startedAt) || Date.now();
+          const fileCount = (task && task.fileCount) || (selectedFiles ? selectedFiles.length : 1) || 1;
+          const estimatedTotal = Math.min(600, 90 + fileCount * 25);
           for (let attempt = 1; attempt <= maxAttempts; attempt++) {
             await new Promise((resolve) => setTimeout(resolve, 10000));
             let data = null;
@@ -3236,12 +3263,49 @@
             if (data.status === 'failed') {
               throw new Error((data.pipeline_error && data.pipeline_error.message) || data.error || 'AI 分析失败');
             }
-            setProgress("analysis", Math.min(95, 45 + Math.round((data.progress || 0) * 0.5)));
-            if (attempt % 3 === 0) {
-              elements.analysisNote.textContent = "AI 深度分析中，已进行 " + Math.round(attempt * 10 / 60) + " 分钟，请保持页面打开…";
+            const elapsed = (Date.now() - startedAt) / 1000;
+            const elapsedMin = Math.floor(elapsed / 60);
+            const remaining = Math.max(0, estimatedTotal - elapsed);
+            const remainingMin = Math.ceil(remaining / 60);
+            const ratio = Math.min(0.95, elapsed / estimatedTotal);
+            setProgress("analysis", Math.max(45, Math.round(45 + ratio * 50)));
+            let stage = "正在识别病历文件…";
+            if (ratio >= 0.66) { stage = "正在生成分析报告…"; }
+            else if (ratio >= 0.33) { stage = "AI 正在分析病情、匹配专科…"; }
+            if (remaining > 30) {
+              elements.analysisNote.textContent = stage + "（已进行 " + elapsedMin + " 分钟，预计还需约 " + remainingMin + " 分钟）";
+            } else {
+              elements.analysisNote.textContent = stage + "（已进行 " + elapsedMin + " 分钟，即将完成，请稍候）";
             }
           }
           throw new Error('分析时间较长，请稍后重试');
+        }
+
+        async function resumeAnalysisIfPending() {
+          const task = loadTask();
+          if (!task || !task.taskId) return;
+          isProcessing = true;
+          currentTaskId = task.taskId;
+          elements.progressSection.hidden = false;
+          elements.progressSection.dataset.state = "loading";
+          elements.startButtonText.textContent = "分析进行中";
+          elements.uploadSection.querySelector(".status-pill").textContent = "处理中";
+          setStepState(0, "complete");
+          setStepState(1, "active");
+          setProgress("analysis", 45);
+          elements.analysisNote.textContent = "检测到有进行中的分析，正在为你恢复进度…";
+          updateActionState();
+          try {
+            const result = await pollAnalysisStatus(task.taskId);
+            finishAnalysis(result);
+          } catch (error) {
+            clearTask();
+            isProcessing = false;
+            elements.progressSection.dataset.state = "error";
+            elements.analysisNote.textContent = "之前的分析已结束或过期，请重新上传分析";
+            elements.startButtonText.textContent = "重新分析";
+            updateActionState();
+          }
         }
 
         function applyPreview(preview) {
@@ -3470,6 +3534,7 @@
           showConsentModal();
         }
         updateActionState();
+        resumeAnalysisIfPending();
       })();
     </script>
   </body>

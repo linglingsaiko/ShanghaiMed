@@ -23,7 +23,7 @@ const enTranslations = {
       treatments: 'Treatments',
       careTeam: 'Care Team',
       trust: 'Trust',
-      items: ['Why Shanghai', 'How It Works', 'Hospital Network', 'Care Team', 'Pricing', 'Blog', 'Contact'],
+      items: ['Why Shanghai', 'How It Works', 'Hospital Network', 'Care Team', 'Pricing', 'Medical Records', 'Blog', 'Contact'],
     },
     whyShanghai: {
       badge: 'Why Shanghai',
@@ -619,7 +619,7 @@ export const translations: Record<Language, any> = {
       treatments: '治療',
       careTeam: 'ケアチーム',
       trust: '信頼',
-      items: ['なぜ上海か', 'ご利用の流れ', '病院ネットワーク', 'ケアチーム', '料金', 'ブログ', 'お問い合わせ'],
+      items: ['なぜ上海か', 'ご利用の流れ', '病院ネットワーク', 'ケアチーム', '料金', '医療記録', 'ブログ', 'お問い合わせ'],
     },
     whyShanghai: {
       badge: 'なぜ上海か',
@@ -1272,7 +1272,7 @@ export const translations: Record<Language, any> = {
       treatments: 'العلاجات',
       careTeam: 'فريق الرعاية',
       trust: 'الثقة',
-      items: ['لماذا شنغهاي', 'كيف يعمل', 'شبكة المستشفيات', 'فريق الرعاية', 'الأسعار', 'المدونة', 'اتصل بنا'],
+      items: ['لماذا شنغهاي', 'كيف يعمل', 'شبكة المستشفيات', 'فريق الرعاية', 'الأسعار', 'السجلات الطبية', 'المدونة', 'اتصل بنا'],
     },
     hero: {
       badge1: 'مستشفيات التأمين الدولي',
@@ -1992,7 +1992,7 @@ export const translations: Record<Language, any> = {
       treatments: 'Лечение',
       careTeam: 'Команда сопровождения',
       trust: 'Доверие',
-      items: ['Почему Шанхай', 'Как это работает', 'Сеть больниц', 'Команда сопровождения', 'Цены', 'Блог', 'Контакты'],
+      items: ['Почему Шанхай', 'Как это работает', 'Сеть больниц', 'Команда сопровождения', 'Цены', 'Медицинские записи', 'Блог', 'Контакты'],
     },
     hero: {
       badge1: 'Больницы с международным страхованием',
@@ -2719,7 +2719,7 @@ export const translations: Record<Language, any> = {
       treatments: 'Эмчилгээ',
       careTeam: 'Асрамжийн баг',
       trust: 'Итгэл',
-      items: ['Яагаад Шанхай', 'Хэрхэн ажилладаг', 'Эмнэлгийн сүлжээ', 'Асрамжийн баг', 'Үнэ', 'Блог', 'Холбоо барих'],
+      items: ['Яагаад Шанхай', 'Хэрхэн ажилладаг', 'Эмнэлгийн сүлжээ', 'Асрамжийн баг', 'Үнэ', 'Эмнэлгийн бичиг', 'Блог', 'Холбоо барих'],
     },
     hero: {
       badge1: 'Олон улсын даатгалын эмнэлгүүд',
@@ -3448,7 +3448,7 @@ export const translations: Record<Language, any> = {
         treatments: 'Rawatan',
         careTeam: 'Pasukan Penjagaan',
         trust: 'Kepercayaan',
-        items: ['Mengapa Shanghai', 'Bagaimana Ia Berfungsi', 'Rangkaian Hospital', 'Pasukan Penjagaan', 'Harga', 'Blog', 'Hubungi Kami']
+        items: ['Mengapa Shanghai', 'Bagaimana Ia Berfungsi', 'Rangkaian Hospital', 'Pasukan Penjagaan', 'Harga', 'Rekod Perubatan', 'Blog', 'Hubungi Kami']
       },
       whyShanghai: {
         badge: 'Mengapa Shanghai',
@@ -4244,7 +4244,7 @@ export const translations: Record<Language, any> = {
         treatments: 'Layanan',
         careTeam: 'Tim Perawatan',
         trust: 'Kepercayaan',
-        items: ['Mengapa Shanghai', 'Cara Kerja', 'Jaringan Rumah Sakit', 'Tim Perawatan', 'Harga', 'Blog', 'Kontak']
+        items: ['Mengapa Shanghai', 'Cara Kerja', 'Jaringan Rumah Sakit', 'Tim Perawatan', 'Harga', 'Rekam Medis', 'Blog', 'Kontak']
       },
       whyShanghai: {
         badge: 'Mengapa Shanghai',

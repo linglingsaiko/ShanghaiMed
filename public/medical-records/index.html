@@ -1150,6 +1150,13 @@
         font-size: 16px;
       }
 
+      .paypal-button-container {
+        min-height: 48px;
+        margin: 12px 0 4px;
+        width: 100%;
+        max-width: 320px;
+      }
+
       .payment-note {
         display: block;
         margin-top: 9px;
@@ -2422,12 +2429,14 @@
                     <li>3 位医生匹配</li>
                     <li>可打印报告</li>
                   </ul>
+                  <div id="paypal-button-container" class="paypal-button-container" hidden></div>
                   <button
                     class="btn btn-primary btn-unlock"
                     id="unlock-report"
                     type="button"
                     aria-controls="full-report"
                     data-anchor-id="medical-records-upload.unlock-report"
+                    hidden
                   >
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                       <rect x="5" y="10" width="14" height="11" rx="2" stroke="currentColor" stroke-width="1.8" />
@@ -3159,24 +3168,28 @@
           setProgress("analysis", 10);
 
           try {
-            const analyzeResponse = await fetch(API_BASE + '/analyze', {
+            setStepState(0, "complete");
+            setStepState(1, "active");
+
+            const analyzeResponse = await fetch(API_BASE + '/analyze?wait=false', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({ file_ids: uploadedFileIds }),
             });
 
-            setProgress("analysis", 60);
-            setStepState(0, "complete");
-            setStepState(1, "active");
-
-            if (!analyzeResponse.ok) {
+            if (!analyzeResponse.ok && analyzeResponse.status !== 202) {
               const error = await analyzeResponse.json().catch(() => ({}));
               throw new Error(error.detail?.message || error.detail || 'AI 分析失败');
             }
 
-            const result = await analyzeResponse.json();
-            analysisResult = result;
-            currentTaskId = result.task_id;
+            const accepted = await analyzeResponse.json();
+            analysisResult = accepted;
+            currentTaskId = accepted.task_id;
+
+            setProgress("analysis", 45);
+            elements.analysisNote.textContent = "AI 深度分析中，通常需要 3-10 分钟，请保持页面打开…";
+
+            const result = await pollAnalysisStatus(currentTaskId);
 
             setProgress("analysis", 100);
             setStepState(1, "complete");
@@ -3200,6 +3213,8 @@
             elements.progressPill.classList.add("success");
             elements.uploadSection.querySelector(".status-pill").textContent = "分析完成";
             elements.previewSection.hidden = false;
+            applyPreview(result.preview || result.report_preview || result.free_preview || {});
+            renderPayPalButtons();
             elements.reportDate.textContent = new Date().toLocaleString("zh-CN", { hour12: false });
             isProcessing = false;
             elements.startButtonText.textContent = "重新分析";
@@ -3217,6 +3232,173 @@
             showFileError("AI 分析失败：" + error.message + "，请重试");
             updateActionState();
           }
+        }
+
+        async function pollAnalysisStatus(taskId) {
+          const maxAttempts = 100;
+          for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+            await new Promise((resolve) => setTimeout(resolve, 10000));
+            let data = null;
+            try {
+              const resp = await fetch(API_BASE + '/status/' + taskId);
+              if (resp.status === 404) throw new Error('分析任务不存在或已过期');
+              if (!resp.ok) continue;
+              data = await resp.json();
+            } catch (error) {
+              if (error.message && error.message.indexOf('不存在') >= 0) throw error;
+              continue;
+            }
+            if (data.status === 'completed') return data;
+            if (data.status === 'failed') {
+              throw new Error((data.pipeline_error && data.pipeline_error.message) || data.error || 'AI 分析失败');
+            }
+            setProgress("analysis", Math.min(95, 45 + Math.round((data.progress || 0) * 0.5)));
+            if (attempt % 3 === 0) {
+              elements.analysisNote.textContent = "AI 深度分析中，已进行 " + Math.round(attempt * 10 / 60) + " 分钟，请保持页面打开…";
+            }
+          }
+          throw new Error('分析时间较长，请稍后重试');
+        }
+
+        function applyPreview(preview) {
+          const listEl = elements.previewSection.querySelector('.summary-list');
+          if (listEl && preview.summary) {
+            listEl.innerHTML = '<div class="summary-row"><dt>AI 病历摘要</dt><dd></dd></div>';
+            const dd = listEl.querySelector('dd');
+            dd.textContent = preview.summary;
+          }
+          const deptEl = elements.previewSection.querySelector('.department-name');
+          if (deptEl && preview.specialty) {
+            deptEl.textContent = preview.specialty;
+          }
+          const secondaryEl = elements.previewSection.querySelector('.department-secondary');
+          if (secondaryEl && preview.specialty) {
+            secondaryEl.hidden = true;
+          }
+        }
+
+        async function loadPayPalSDK(clientId) {
+          if (window.paypal && window.paypal.Buttons) return;
+          await new Promise((resolve, reject) => {
+            const script = document.createElement('script');
+            script.src = 'https://www.paypal.com/sdk/js?client-id=' + encodeURIComponent(clientId) + '&currency=USD&intent=capture&components=buttons&disable-funding=credit';
+            script.onload = resolve;
+            script.onerror = () => reject(new Error('PayPal SDK 加载失败'));
+            document.head.appendChild(script);
+          });
+        }
+
+        async function renderPayPalButtons() {
+          const container = document.getElementById('paypal-button-container');
+          if (!container || isPaid) return;
+          container.hidden = false;
+          if (container.dataset.rendered === 'true') return;
+          try {
+            const cfgResp = await fetch(API_BASE + '/pay/config');
+            const cfg = await cfgResp.json();
+            if (!cfg.enabled || !cfg.client_id) {
+              container.innerHTML = '<p class="payment-note">支付通道即将开通，如需报告请通过人工咨询获取。</p>';
+              return;
+            }
+            await loadPayPalSDK(cfg.client_id);
+            window.paypal.Buttons({
+              style: { layout: 'vertical', color: 'blue', shape: 'rect', label: 'paypal', height: 45 },
+              createOrder: async () => {
+                const response = await fetch(API_BASE + '/pay/orders', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ file_id: uploadedFileIds[0] }),
+                });
+                if (!response.ok) {
+                  const error = await response.json().catch(() => ({}));
+                  throw new Error(error.detail?.message || error.detail || '订单创建失败');
+                }
+                const data = await response.json();
+                return data.order_id;
+              },
+              onApprove: async (data) => {
+                elements.paymentStatus.hidden = false;
+                elements.paymentStatus.textContent = '支付成功，正在解锁完整报告…';
+                const response = await fetch(API_BASE + '/pay/capture', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ order_id: data.orderID, file_id: uploadedFileIds[0] }),
+                });
+                if (!response.ok) {
+                  const error = await response.json().catch(() => ({}));
+                  throw new Error(error.detail?.issue || error.detail?.message || error.detail || '支付确认失败');
+                }
+                const reportData = await response.json();
+                isPaid = true;
+                document.body.classList.add('is-paid');
+                elements.paymentStatus.hidden = false;
+                elements.paymentStatus.textContent = '支付已确认，完整报告已解锁。';
+                elements.lockedModule.hidden = true;
+                elements.fullReport.hidden = false;
+                renderFullReport(reportData.full_report);
+                elements.fullReport.scrollIntoView({
+                  behavior: reducedMotion.matches ? 'auto' : 'smooth',
+                  block: 'start',
+                });
+              },
+              onError: () => {
+                showFileError('支付出错，请重试');
+              },
+            }).render('#paypal-button-container');
+            container.dataset.rendered = 'true';
+          } catch (error) {
+            container.innerHTML = '<p class="payment-note">支付组件加载失败，请刷新页面重试。</p>';
+          }
+        }
+
+        function renderFullReport(report) {
+          const container = document.querySelector('.report-chapters');
+          if (!container) return;
+          container.innerHTML = '';
+          const sections = (report && report.sections) || [];
+          sections.forEach((section, index) => {
+            const article = document.createElement('article');
+            article.className = 'report-chapter';
+            const heading = document.createElement('div');
+            heading.className = 'chapter-heading';
+            const num = document.createElement('span');
+            num.className = 'chapter-number';
+            num.textContent = String(index + 1).padStart(2, '0');
+            const title = document.createElement('h3');
+            title.textContent = section.title || '章节 ' + (index + 1);
+            heading.appendChild(num);
+            heading.appendChild(title);
+            const body = document.createElement('p');
+            body.className = 'chapter-body';
+            body.style.whiteSpace = 'pre-wrap';
+            body.textContent = section.content || '';
+            article.appendChild(heading);
+            article.appendChild(body);
+            container.appendChild(article);
+          });
+          const doctors = (report && report.doctors) || [];
+          if (doctors.length) {
+            const article = document.createElement('article');
+            article.className = 'report-chapter';
+            const heading = document.createElement('div');
+            heading.className = 'chapter-heading';
+            heading.innerHTML = '<span class="chapter-number">+</span><h3>推荐医生</h3>';
+            article.appendChild(heading);
+            doctors.forEach((doctor) => {
+              const item = document.createElement('p');
+              item.style.marginBottom = '12px';
+              const line1 = [doctor.name, doctor.title, doctor.department].filter(Boolean).join(' · ');
+              const line2 = [doctor.hospital, doctor.hospital_level].filter(Boolean).join(' · ');
+              const specialties = doctor.specialties || '';
+              item.innerHTML = '<strong></strong><br><span class="doctor-hospital"></span>';
+              item.querySelector('strong').textContent = line1;
+              item.querySelector('.doctor-hospital').textContent = line2 + (specialties ? '｜擅长：' + specialties : '');
+              article.appendChild(item);
+            });
+            container.appendChild(article);
+          }
+          const reportIdEl = document.getElementById('report-id');
+          if (reportIdEl) reportIdEl.textContent = 'SM-' + Date.now().toString(36).toUpperCase();
         }
 
         async function unlockReport() {

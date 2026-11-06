@@ -2000,6 +2000,25 @@
           break-inside: avoid;
         }
       }
+    .chief-complaint { margin: 18px 0 4px; }
+    .chief-label { font-weight: 600; color: #1A2230; font-size: 15px; display: block; margin-bottom: 4px; }
+    .chief-optional { font-weight: 400; color: #6b7686; font-size: 13px; }
+    .chief-hint { color: #55606e; font-size: 13px; margin: 0 0 8px; }
+    .chief-input-wrap { position: relative; }
+    #chief-complaint-input {
+      width: 100%; box-sizing: border-box; resize: vertical; min-height: 76px;
+      padding: 12px 12px 40px; border: 1px solid #E3E8EE; border-radius: 12px;
+      font-size: 14px; line-height: 1.6; color: #1A2230; background: #fff; font-family: inherit;
+    }
+    #chief-complaint-input:focus { outline: none; border-color: #0E5A5A; box-shadow: 0 0 0 3px rgba(14,90,90,.12); }
+    .voice-btn {
+      position: absolute; right: 8px; bottom: 8px; display: inline-flex; align-items: center; gap: 5px;
+      padding: 6px 12px; border: 1px solid #0E5A5A; background: #fff; color: #0E5A5A;
+      border-radius: 999px; font-size: 12.5px; cursor: pointer; transition: all .2s;
+    }
+    .voice-btn:hover { background: #f0f7f7; }
+    .voice-btn.recording { background: #e23d3d; border-color: #e23d3d; color: #fff; animation: ccPulse 1.2s infinite; }
+    @keyframes ccPulse { 0%,100% { opacity: 1; } 50% { opacity: .55; } }
     </style>
   </head>
   <body data-page-id="medical-records-upload" data-entry="true">
@@ -2193,6 +2212,29 @@
                 <div>
                   <strong>病历整理建议</strong><br />
                   请将病历资料整理齐全后打包上传，包括影像报告、化验单、门诊/住院病历、手术记录、病理报告、用药清单。
+                </div>
+              </div>
+
+              <div class="chief-complaint" id="chief-complaint-block">
+                <label class="chief-label" for="chief-complaint-input">
+                  主诉 <span class="chief-optional">（选填，建议填写，帮助 AI 更精准匹配专科）</span>
+                </label>
+                <p class="chief-hint">请描述您最主要的不适、持续时间和想解决的问题。AI 会将主诉与病历一起分析。</p>
+                <div class="chief-input-wrap">
+                  <textarea
+                    id="chief-complaint-input"
+                    rows="3"
+                    maxlength="2000"
+                    placeholder="例如：近三个月反复胸闷、活动后气短，休息可缓解，想排查心脏问题。"
+                    aria-label="主诉：描述主要症状、持续时间和想解决的问题"
+                  ></textarea>
+                  <button type="button" id="voice-input-btn" class="voice-btn" aria-label="语音输入主诉">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <rect x="9" y="3" width="6" height="11" rx="3" stroke="currentColor" stroke-width="1.8" />
+                      <path d="M5 11a7 7 0 0 0 14 0M12 18v3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                    </svg>
+                    <span id="voice-btn-text">语音输入</span>
+                  </button>
                 </div>
               </div>
 
@@ -3220,7 +3262,7 @@
             const analyzeResponse = await fetch(API_BASE + '/analyze?wait=false', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ file_ids: uploadedFileIds }),
+              body: JSON.stringify({ file_ids: uploadedFileIds, chief_complaint: getChiefComplaint() }),
             });
 
             if (!analyzeResponse.ok && analyzeResponse.status !== 202) {
@@ -3240,6 +3282,54 @@
             failAnalysis(error);
           }
         }
+
+        function getChiefComplaint() {
+          const el = document.getElementById('chief-complaint-input');
+          return el ? el.value.trim() : '';
+        }
+
+        (function initVoiceInput() {
+          const btn = document.getElementById('voice-input-btn');
+          const textarea = document.getElementById('chief-complaint-input');
+          const btnText = document.getElementById('voice-btn-text');
+          if (!btn || !textarea || !btnText) return;
+          const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+          if (!SR) { btn.style.display = 'none'; return; }
+          let recognition = null;
+          let recognizing = false;
+          function resetBtn() {
+            recognizing = false;
+            btn.classList.remove('recording');
+            btnText.textContent = '语音输入';
+          }
+          btn.addEventListener('click', function () {
+            if (recognizing) { try { recognition.stop(); } catch (e) {} return; }
+            recognition = new SR();
+            recognition.lang = (navigator.language || 'zh-CN').toLowerCase().indexOf('zh') === 0 ? 'zh-CN' : 'en-US';
+            recognition.continuous = true;
+            recognition.interimResults = true;
+            recognition.onresult = function (e) {
+              let finalText = '';
+              for (let i = e.resultIndex; i < e.results.length; i++) {
+                if (e.results[i].isFinal) finalText += e.results[i][0].transcript;
+              }
+              if (finalText) {
+                let cur = textarea.value.replace(/\s+$/, '');
+                if (cur && !/[，。,.！？!?]$/.test(cur)) cur += '，';
+                textarea.value = cur + finalText;
+                textarea.dispatchEvent(new Event('input'));
+              }
+            };
+            recognition.onerror = resetBtn;
+            recognition.onend = resetBtn;
+            try {
+              recognition.start();
+              recognizing = true;
+              btn.classList.add('recording');
+              btnText.textContent = '正在聆听 · 点击停止';
+            } catch (e) { resetBtn(); }
+          });
+        })();
 
         async function pollAnalysisStatus(taskId) {
           const maxAttempts = 120;

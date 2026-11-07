@@ -34,7 +34,7 @@ canonicalUrl: 'https://shanghaimedhealth.com/blog/traditional-chinese-medicine-s
 | Akupunktur (1 bulan, 10 sesi) | $200-$400 (berbanding $1,000-$2,000 di AS) |
 | Perundingan ubat herba + Rx 1 bulan | $80-$150 (berbanding $300-$600 di AS) |
 | Formula TCM berdaftar di Longhua | 1,000+ |
-| Akreditasi hospital | JCI + HIMSS EMRAM Tahap 7 |
+| Kelas dan pensijilan hospital | Kelas 3A (三级甲等, tahap hospital tertinggi di China) + HIMSS EMRAM Tahap 7 |
 | Rakan insurans | 18 insurans antarabangsa |
 | Perkhidmatan pendamping dwibahasa | $1,000/3 hari (ShanghaiMed) |
 
@@ -54,7 +54,7 @@ Shanghai merupakan rumah bagi institusi terkenal di dunia seperti **Shanghai Uni
 
 **Hospital Longhua** (berafiliasi dengan Shanghai University of Perubatan Tradisional China) merupakan destinasi utama bagi pesakit antarabangsa yang mencari TCM autentik. Ditubuhkan pada 1960, ia merupakan **hospital utama TCM nasional** dan **hospital perintis pelancongan perubatan TCM rasmi** di Shanghai, dengan:
 
-- **akreditasi JCI** dan pensijilan **HIMSS EMRAM Tahap 7** — standard antarabangsa tertinggi
+- **Kelas 3A (三级甲等)** — tahap hospital tertinggi di China — dan pensijilan **HIMSS EMRAM Tahap 7**
 - Farmasi herba khusus dengan **1,000+ formula TCM berdaftar**
 - Jabatan pesakit antarabangsa dengan koordinator berbahasa Inggeris
 - Program perubatan integratif yang menggabungkan TCM dengan diagnostik Barat
@@ -157,7 +157,7 @@ ShanghaiMed menyediakan **rakan pendamping perubatan yang bertutur dalam bahasa 
 ## Soalan Lazim: TCM di Shanghai
 
 ### Q1: Adakah Perubatan Tradisional China selamat untuk pesakit antarabangsa?
-Ya. TCM di Hospital Longhua diamalkan oleh profesional berlesen yang terlatih dalam kaedah klasik dan protokol keselamatan moden. Hospital ini memiliki **akreditasi JCI** dan sijil **HIMSS EMRAM Tahap 7** — standard antarabangsa tertinggi. Semua ubat herba diperatur oleh NMPA untuk memastikan kualiti dan ketulenan.
+Ya. TCM di Hospital Longhua diamalkan oleh profesional berlesen yang terlatih dalam kaedah klasik dan protokol keselamatan moden. Hospital ini berstatus **Kelas 3A (三级甲等)**, tahap hospital tertinggi di China, dan memiliki pensijilan **HIMSS EMRAM Tahap 7**. Semua ubat herba diperatur oleh NMPA untuk memastikan kualiti dan ketulenan.
 
 ### Q2: Berapa kos TCM di Shanghai?
 TCM di Shanghai berharga **75-80% lebih rendah** daripada di AS. Sebulan sesi akupunktur berharga $200-$400 berbanding $1,000-$2,000 di AS. Perundingan ubat herba dengan preskripsi 1 bulan berharga $80-$150 berbanding $300-$600.
@@ -178,10 +178,10 @@ Banyak pakar senior mempunyai beberapa kemahiran dalam bahasa Inggeris, tetapi S
 
 ShanghaiMed (shanghaimedhealth.com) menghubungkan pesakit antarabangsa dengan Perubatan Tradisional China autentik di **Hospital Longhua** — flagship TCM nasional Shanghai. Ditubuhkan oleh Lingling Ma (Sekolah Perubatan Universiti Jiao Tong Shanghai, jururawat antarabangsa bertauliah ISPN, pengalaman 10+ tahun dalam penjagaan kesihatan premium).
 
-Rangkaian penuh ShanghaiMed termasuk **14 hospital perintis pelancongan perubatan Gred A awam** — Huashan (Fudan), Children's (Fudan), Ruijin (SJTU), Shanghai General, Zhongshan (Fudan), Renji (SJTU), Longhua (TCM), IPMCH, SCMC (SJTU), Sixth People's, First Maternity & Infant, Xinhua (SJTU), Huadong (Fudan), Ninth People's (SJTU) — ditambah 5 hospital antarabangsa swasta. Ini membolehkan koordinasi yang lancar antara TCM dan pakar perubatan Barat di seluruh rangkaian.
+Rangkaian penuh ShanghaiMed termasuk **14 hospital awam Gred A (13 hospital perintis pelancongan perubatan rasmi + Ninth People's Hospital)** — Huashan (Fudan), Children's (Fudan), Ruijin (SJTU), Shanghai General, Zhongshan (Fudan), Renji (SJTU), Longhua (TCM), IPMCH, SCMC (SJTU), Sixth People's, First Maternity & Infant, Xinhua (SJTU), Huadong (Fudan), Ninth People's (SJTU) — ditambah 5 hospital antarabangsa swasta. Ini membolehkan koordinasi yang lancar antara TCM dan pakar perubatan Barat di seluruh rangkaian.
 
 **Hubungi**: hello@shanghaimedhealth.com | [shanghaimedhealth.com](https://shanghaimedhealth.com)
 
 ---
 
-> **Sumber**: Data rasmi Hospital Longhua, peraturan NMPA, Persekutuan Masyarakat Perubatan Tradisional China Dunia, penerbitan kajian Shanghai University of TCM, pangkalan data akreditasi JCI
+> **Sumber**: Data rasmi Hospital Longhua, peraturan NMPA, Persekutuan Masyarakat Perubatan Tradisional China Dunia, penerbitan kajian Shanghai University of TCM, Suruhanjaya Kesihatan Perbandaran Shanghai dan Kerajaan Perbandaran Shanghai (13 hospital perintis pelancongan perubatan awam, 2024-2025)

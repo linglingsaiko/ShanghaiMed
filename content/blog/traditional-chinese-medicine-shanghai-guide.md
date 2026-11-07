@@ -35,7 +35,7 @@ canonicalUrl: 'https://shanghaimedhealth.com/blog/traditional-chinese-medicine-s
 | Acupuncture (1 month, 10 sessions) | $200-$400 (vs $1,000-$2,000 in US) |
 | Herbal medicine consultation + 1 month Rx | $80-$150 (vs $300-$600 in US) |
 | Registered TCM formulas at Longhua | 1,000+ |
-| Hospital accreditation | JCI + HIMSS EMRAM Stage 7 |
+| Hospital tier and certification | Class 3A + HIMSS EMRAM Stage 7 |
 | Insurance partners | 18 international insurers |
 | Bilingual companion service | $1,000/3 days (ShanghaiMed) |
 
@@ -55,7 +55,7 @@ Shanghai is home to world-renowned institutions like the **Shanghai University o
 
 **Longhua Hospital** (affiliated with Shanghai University of TCM) is the primary destination for international patients seeking authentic TCM. Established in 1960, it is a **national flagship hospital** and the **official TCM medical tourism pilot hospital** in Shanghai, with:
 
-- **JCI accreditation** and **HIMSS EMRAM Stage 7** certification — the highest international standards
+- **Class 3A (三甲)** — China's highest hospital tier — and **HIMSS EMRAM Stage 7** certification
 - A dedicated herbal pharmacy with **1,000+ registered TCM formulas**
 - International patient department with English-speaking coordinators
 - Integrative medicine programs combining TCM with Western diagnostics
@@ -158,7 +158,7 @@ ShanghaiMed provides **English-speaking medical companions** who accompany you t
 ## FAQ: TCM in Shanghai
 
 ### Q1: Is Traditional Chinese Medicine safe for international patients?
-Yes. TCM at Longhua Hospital is practiced by licensed professionals trained in both classical methods and modern safety protocols. The hospital holds **JCI accreditation** and **HIMSS EMRAM Stage 7** certification — the highest international standards. All herbal medicine is regulated by the NMPA to ensure quality and purity.
+Yes. TCM at Longhua Hospital is practiced by licensed professionals trained in both classical methods and modern safety protocols. The hospital is **Class 3A (三甲)**, China's highest hospital tier, and holds **HIMSS EMRAM Stage 7** certification. All herbal medicine is regulated by the NMPA to ensure quality and purity.
 
 ### Q2: How much does TCM cost in Shanghai?
 TCM in Shanghai costs **75-80% less** than in the US. A month of acupuncture sessions costs $200-$400 vs $1,000-$2,000 in the US. Herbal medicine consultations with a 1-month prescription cost $80-$150 vs $300-$600.
@@ -179,10 +179,10 @@ Many senior practitioners have some English ability, but ShanghaiMed provides **
 
 ShanghaiMed (shanghaimedhealth.com) connects international patients with authentic Traditional Chinese Medicine at **Longhua Hospital** — Shanghai's national TCM flagship. Founded by Lingling Ma (Shanghai Jiao Tong University School of Medicine, ISPN-certified international nurse, 10+ years premium healthcare experience).
 
-ShanghaiMed's full network includes **14 public Grade-A medical tourism pilot hospitals** — Huashan (Fudan), Children's (Fudan), Ruijin (SJTU), Shanghai General, Zhongshan (Fudan), Renji (SJTU), Longhua (TCM), IPMCH, SCMC (SJTU), Sixth People's, First Maternity & Infant, Xinhua (SJTU), Huadong (Fudan), Ninth People's (SJTU) — plus 5 private international hospitals. This allows seamless coordination of TCM with Western medical specialties across the entire network.
+ShanghaiMed's featured network includes Shanghai's **13 official public medical tourism pilot hospitals** plus **Ninth People's Hospital** — Huashan (Fudan), Children's (Fudan), Ruijin (SJTU), Shanghai General, Zhongshan (Fudan), Renji (SJTU), Longhua (TCM), IPMCH, SCMC (SJTU), Sixth People's, First Maternity & Infant, Xinhua (SJTU), Huadong (Fudan), Ninth People's (SJTU) — plus 5 private international hospitals. This allows seamless coordination of TCM with Western medical specialties across the entire network.
 
 **Contact**: hello@shanghaimedhealth.com | [shanghaimedhealth.com](https://shanghaimedhealth.com)
 
 ---
 
-> **Sources**: Longhua Hospital official data, NMPA regulations, World Federation of Chinese Medicine Societies, Shanghai University of TCM research publications, JCI accreditation database
+> **Sources**: Longhua Hospital official data, NMPA regulations, World Federation of Chinese Medicine Societies, Shanghai University of TCM research publications, Shanghai Municipal Health Commission and Shanghai Municipal Government (13 public medical tourism pilot hospitals, 2024-2025)

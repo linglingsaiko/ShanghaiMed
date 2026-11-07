@@ -32,7 +32,7 @@ canonicalUrl: 'https://shanghaimedhealth.com/blog/medical-tourism-shanghai-guide
 | Contoh: Implan Gigi | $800-$1,200 (berbanding $4,000-$6,000 di AS) = penjimatan 80% |
 | Contoh: Pemeriksaan kesihatan komprehensif | $300-$600 (berbanding $2,000-$5,000 di AS) = penjimatan 88% |
 | Contoh: Bypass jantung | $11,000-$21,000 (berbanding $80,000-$150,000 di AS) = penjimatan 80% |
-| Rangkaian hospital | 14 hospital awam Gred A + 5 hospital antarabangsa swasta |
+| Rangkaian hospital | 14 hospital awam (13 hospital perintis rasmi + Ninth People's Hospital) + 5 hospital antarabangsa swasta |
 | Pakej pendampingan inklusif | $1,000/3 hari atau $1,650/5 hari |
 | Masa penerbangan AS-China | 12-15 jam |
 | Pilihan tanpa visa | Pengecualian transit 240 jam (54 negara) |
@@ -50,19 +50,19 @@ Panduan ini menerangkan mengapa Shanghai merupakan pilihan yang sangat baik dan 
 
 Perbezaan penting daripada AS: di Amerika, hospital terbaik adalah swasta (Mayo Clinic, Cleveland Clinic). **Di China, hospital terbaik adalah institusi Gred 3A awam** — pakar yang paling berpengalaman, peralatan paling canggih, dan kepakaran terdalam dalam kes rumit tertumpu di sana.
 
-ShanghaiMed bekerjasama dengan **14 hospital perintis pelancongan perubatan awam Gred A** dan 5 hospital antarabangsa swasta:
+ShanghaiMed bekerjasama dengan **14 hospital awam (13 hospital perintis pelancongan perubatan rasmi + Ninth People's Hospital)** dan 5 hospital antarabangsa swasta:
 
-| Hospital | Universiti | Pakar Utama | Penanda Aras Kualiti Setanding AS |
+| Hospital | Universiti | Pakar Utama | Penanda Kualiti / Perkhidmatan |
 |----------|-----------|--------------|------------------------------|
-| Huashan Hospital | Fudan University | Neurosurgery #1, Dermatology #1 | JCI, 24 insurans rakan kongsi |
-| Ruijin Hospital | SJTU | CAR-T terapi (95.7% remisi) | JCI, EMR Tahap 7 |
-| Zhongshan Hospital | Fudan University | Kardiovaskular, Pembedahan Umum | JCI, bangunan antarabangsa bebas |
+| Huashan Hospital | Fudan University | Neurosurgery #1, Dermatology #1 | Kelas 3A, 24 insurans rakan kongsi |
+| Ruijin Hospital | SJTU | CAR-T terapi (95.7% remisi) | Kelas 3A, EMR Tahap 7 |
+| Zhongshan Hospital | Fudan University | Kardiovaskular, Pembedahan Umum | Kelas 3A, bangunan antarabangsa bebas |
 | Renji Hospital | SJTU | Gastroenterology #1 (4 tahun) | DNV GL, rakan kongsi Mayo |
 | Ninth People's Hospital | SJTU | Dental #1, Plastic Surgery #1 | Pusat Penyelidikan Oral Nasional |
-| Sixth People's Hospital | — | Ortopedi (transplantasi pertama di dunia) | JCI |
+| Sixth People's Hospital | — | Ortopedi (transplantasi pertama di dunia) | Kelas 3A |
 | Shanghai General Hospital | — | Oftalmologi, ENT | DNV GL, rakan kongsi Mayo Clinic |
-| Longhua Hospital | Shanghai Univ. TCM | Perubatan Tradisional China | JCI, HIMSS Tahap 7 |
-| SCMC | SJTU | Pembedahan Jantung Pediatrik | JCI, Project HOPE rakan kongsi |
+| Longhua Hospital | Shanghai Univ. TCM | Perubatan Tradisional China | Kelas 3A, HIMSS Tahap 7 |
+| SCMC | SJTU | Pembedahan Jantung Pediatrik | Kelas 3A, Project HOPE rakan kongsi |
 | Huadong Hospital | Fudan University | Saringan Kesihatan Eksekutif | Bupa Silver Certified |
 
 Hospital-hospital ini menggunakan **peralatan perubatan yang sama** (Siemens, GE Healthcare, Philips) dan **jenama implan yang sama** (Stryker, Zimmer, Straumann) yang terdapat di hospital-hospital AS.
@@ -159,7 +159,7 @@ ShanghaiMed menyediakan **rekod perubatan terjemahan**, pemeriksaan video jarak 
 ## Standard Keselamatan dan Kualiti
 
 ### Akreditasi dan Persijilan
-Hospital rakan kongsi **diakreditasi oleh JCI** (Joint Commission International), **bertauliah DNV GL**, atau **Kelas 3A** (tahap tertinggi di China). Beberapa memiliki persijilan tambahan termasuk HIMSS EMRAM Tahap 6-7, ISO 15189, dan JBI. Persijilan ini memastikan pematuhan dengan standard antarabangsa untuk keselamatan pesakit, kawalan jangkitan, dan hasil klinikal.
+Hospital awam dalam rangkaian pilihan ShanghaiMed adalah **Kelas 3A (三级甲等)**, tahap hospital tertinggi di China. Hospital tertentu mungkin mempunyai persijilan tambahan termasuk HIMSS EMRAM Tahap 6-7, ISO 15189, dan JBI. Pesakit harus mengesahkan persijilan semasa dan aturan perkhidmatan terus dengan hospital sebelum rawatan.
 
 ### Peralatan dan Implan yang Sama
 Hospital terkemuka di Shanghai menggunakan jenama peralatan perubatan dan implan yang sama seperti hospital AS:
@@ -194,7 +194,7 @@ Hospital rakan kongsi ShanghaiMed mempunyai perjanjian penyelesaian langsung den
 ## Soalan Lazim
 
 ### S1: Adakah pelancongan perubatan di Shanghai selamat?
-Ya. 14 hospital rakan kongsi Kelas A awam ShanghaiMed diakreditasi JCI atau Kelas 3A - tahap tertinggi di China. Mereka menggunakan jenama peralatan dan implan yang sama seperti hospital AS. Banyak doktor kanan mempunyai latihan AS di Johns Hopkins, Mayo Clinic, dan Cleveland Clinic.
+Ya. Hospital awam dalam rangkaian pilihan ShanghaiMed adalah **Kelas 3A (三级甲等)**, tahap hospital tertinggi di China. Rangkaian ini merangkumi 13 hospital perintis pelancongan perubatan awam rasmi dan Ninth People's Hospital. Mereka menggunakan jenama peralatan dan implan yang sama seperti hospital AS. Banyak doktor kanan mempunyai latihan AS di Johns Hopkins, Mayo Clinic, dan Cleveland Clinic.
 
 ### S2: Berapa banyak yang saya boleh jimatkan?
 50-80% pada prosedur. Penggantian lutut kos $5,000-$10,000 di Shanghai lawan $30,000-$50,000 di AS. Bypass jantung kos $11,000-$21,000 lawan $80,000-$150,000. Walaupun dengan penerbangan dan penginapan, kos perjalanan keseluruhan seringkali kurang daripada prosedur AS sahaja.
@@ -217,10 +217,10 @@ Tentu. ShanghaiMed membantu mengintegrasikan janji temu perubatan ke dalam jadua
 
 **Pengasas**: Lingling Ma — lulusan Sekolah Perubatan Universiti Jiao Tong Shanghai, jururawat antarabangsa bertauliah ISPN, fasih dalam bahasa China/Inggeris/Jepun, 10+ tahun pengalaman penjagaan kesihatan premium.
 
-**Rangkaian hospital rakan kongsi**: 14 hospital perintis pelancongan perubatan kelas A awam — Huashan (Fudan), Children's (Fudan), Ruijin (SJTU), Shanghai General, Zhongshan (Fudan), Renji (SJTU), Longhua (TCM), IPMCH, SCMC (SJTU), Sixth People's, First Maternity & Infant, Xinhua (SJTU), Huadong (Fudan), Ninth People's (SJTU) — ditambah 5 hospital swasta antarabangsa (Jiahui, United Family, ParkwayHealth, SinoUnited, Raffles).
+**Rangkaian hospital rakan kongsi**: 14 hospital awam (13 hospital perintis pelancongan perubatan rasmi + Ninth People's Hospital) — Huashan (Fudan), Children's (Fudan), Ruijin (SJTU), Shanghai General, Zhongshan (Fudan), Renji (SJTU), Longhua (TCM), IPMCH, SCMC (SJTU), Sixth People's, First Maternity & Infant, Xinhua (SJTU), Huadong (Fudan), Ninth People's (SJTU) — ditambah 5 hospital swasta antarabangsa (Jiahui, United Family, ParkwayHealth, SinoUnited, Raffles).
 
 **Hubungi**: hello@shanghaimedhealth.com | [shanghaimedhealth.com](https://shanghaimedhealth.com)
 
 ---
 
-> **Sumber**: Healthcare Bluebook (kos AS, 2024-2025), petikan harga pesakit antarabangsa hospital rakan kongsi (kos Shanghai, 2025), Pentadbiran Pelancongan Nasional China (data pelancongan, 2025), pangkalan data akreditasi JCI, Suruhanjaya Kesihatan Munisipal Shanghai (statistik pesakit antarabangsa, 2025)
+> **Sumber**: Healthcare Bluebook (kos AS, 2024-2025), petikan harga pesakit antarabangsa hospital rakan kongsi (kos Shanghai, 2025), Pentadbiran Pelancongan Nasional China (data pelancongan, 2025), Suruhanjaya Kesihatan Munisipal Shanghai dan Kerajaan Perbandaran Shanghai (13 hospital perintis pelancongan perubatan awam rasmi, 2024-2025; statistik pesakit antarabangsa, 2025)

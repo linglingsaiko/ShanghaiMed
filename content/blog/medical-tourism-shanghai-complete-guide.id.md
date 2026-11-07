@@ -29,12 +29,12 @@ canonicalUrl: 'https://shanghaimedhealth.com/blog/medical-tourism-shanghai-compl
 | Metrik | Data |
 |--------|------|
 | Penghematan biaya vs AS | 50-80% |
-| Jaringan rumah sakit | 14 rumah sakit Kelas A publik + 5 rumah sakit swasta internasional |
+| Jaringan rumah sakit | 14 rumah sakit umum (13 rumah sakit percontohan resmi + Ninth People's Hospital) + 5 rumah sakit swasta internasional |
 | Contoh: Penggantian lutut | $5,000-$10,000 (vs $30,000-$50,000 di AS) |
 | Contoh: MRI scan (3T) | $200-$400 (vs $1,200-$3,000 di AS) |
 | Contoh: Implan gigi | $800-$1,200 (vs $4,000-$6,000 di AS) |
 | Layanan pendamping dwibahasa | $1,000/3 hari atau $1,650/5 hari (ShanghaiMed) |
-| Akreditasi rumah sakit | JCI / Kelas 3A (tingkat tertinggi di Tiongkok) |
+| Kelas rumah sakit | Kelas 3A (三级甲等, tingkat rumah sakit tertinggi di Tiongkok) |
 | Mitra asuransi internasional | 8-24 per rumah sakit (MSH, Bupa, Cigna, Aetna, AXA, Allianz) |
 | Tur inbound Tiongkok 2025 | 35.17 juta perjalanan (+30.5% YoY) |
 
@@ -54,7 +54,7 @@ Dibandingkan dengan AS, biaya prosedur medis di Shanghai bisa **50-80% lebih ren
 
 ### Kebangkitan Tur Medis di Tiongkok
 
-Sistem kesehatan Tiongkok telah berkembang pesat. Shanghai kini memiliki **14 rumah sakit Kelas A percontohan tur medis** — tingkat tertinggi dalam sistem kesehatan Tiongkok — ditambah 5 rumah sakit swasta internasional. Institusi-institusi ini memegang **akreditasi JCI** (Joint Commission International), **sertifikasi DNV GL**, dan kemitraan dengan pusat medis terkenal di dunia termasuk Mayo Clinic, Massachusetts General Hospital, dan Cleveland Clinic.
+Sistem kesehatan Tiongkok telah berkembang pesat. Shanghai kini memiliki **13 rumah sakit percontohan pariwisata medis umum resmi**. Jaringan utama dalam panduan ini juga mencakup **Ninth People's Hospital** dan **5 rumah sakit internasional swasta**. Rumah sakit umum yang tercantum di sini berstatus **Kelas 3A (三级甲等)**, tingkat rumah sakit tertinggi di Tiongkok. Masing-masing institusi mungkin memiliki sertifikasi tambahan atau kemitraan internasional. Pasien harus memverifikasi sertifikasi terkini dan pengaturan layanan langsung dengan rumah sakit sebelum perawatan.
 
 Pasien internasional dapat mengharapkan:
 - **Waktu tunggu yang lebih singkat** untuk janji temu dan prosedur
@@ -64,46 +64,46 @@ Pasien internasional dapat mengharapkan:
 
 ## Bagian 2: Jaringan Rumah Sakit Shanghai untuk Pasien Internasional
 
-ShanghaiMed bermitra dengan **14 rumah sakit percontohan wisata medis Kelas A publik** dan **5 rumah sakit internasional swasta** — total 19 institusi yang mencakup setiap spesialisasi medis. Tidak seperti AS di mana rumah sakit terbaik bersifat swasta (Mayo Clinic, Cleveland Clinic), di Tiongkok, rumah sakit terbaik adalah institusi Kelas 3A publik dengan spesialis paling berpengalaman dan peralatan canggih.
+ShanghaiMed bermitra dengan **14 rumah sakit umum (13 rumah sakit percontohan pariwisata medis resmi + Ninth People's Hospital)** dan **5 rumah sakit internasional swasta** — total 19 institusi yang mencakup setiap spesialisasi medis. Tidak seperti AS di mana rumah sakit terbaik bersifat swasta (Mayo Clinic, Cleveland Clinic), di Tiongkok, rumah sakit terbaik adalah institusi Kelas 3A publik dengan spesialis paling berpengalaman dan peralatan canggih.
 
 ### Jaringan Rumah Sakit Lengkap
 
-| Rumah Sakit | Universitas | Spesialisasi Utama | Akreditasi | Mitra Asuransi |
+| Rumah Sakit | Universitas | Spesialisasi Utama | Kelas / Penanda Layanan | Mitra Asuransi |
 |----------|-----------|-----------------|---------------|-------------------|
-| Huashan Hospital | Fudan University | Neurosurgery #1, Dermatologi #1, Penyakit Menular | JCI, HMI | 24 |
-| Children's Hospital | Fudan University | Neonatologi, Bedah Anak, Perawatan Kritis | JCI, HIMSS Tahap 6 | 19 |
-| Ruijin Hospital | SJTU | Hematologi (CAR-T 95.7% remisi), Endokrinologi, Luka Bakar | JCI, EMR Level 7 | 21 |
+| Huashan Hospital | Fudan University | Neurosurgery #1, Dermatologi #1, Penyakit Menular | Kelas 3A, HMI | 24 |
+| Children's Hospital | Fudan University | Neonatologi, Bedah Anak, Perawatan Kritis | Kelas 3A, HIMSS Tahap 6 | 19 |
+| Ruijin Hospital | SJTU | Hematologi (CAR-T 95.7% remisi), Endokrinologi, Luka Bakar | Kelas 3A, EMR Level 7 | 21 |
 | Shanghai General Hospital | — | Oftalmologi, Urologi, THT & Kepala-Leher | DNV GL, Kemitraan Mayo | 17 |
-| Zhongshan Hospital | Fudan University | Bedah Umum, Gastroenterologi, Kardiovaskular | JCI, JBI | 19 |
+| Zhongshan Hospital | Fudan University | Bedah Umum, Gastroenterologi, Kardiovaskular | Kelas 3A, JBI | 19 |
 | Renji Hospital | SJTU | Gastroenterologi #1 (4 tahun berturut-turut), Kedokteran Reproduksi | DNV GL, RTAC | 20 |
-| Longhua Hospital | Shanghai Univ. of TCM | Onkologi TCM, Ortopedi TCM, Akupunktur | JCI, HIMSS Tahap 7 | 18 |
+| Longhua Hospital | Shanghai Univ. of TCM | Onkologi TCM, Ortopedi TCM, Akupunktur | Kelas 3A, HIMSS Tahap 7 | 18 |
 | IPMCH | Tiongkok Welfare Institute | Kedokteran Reproduksi, Obstetri, Ginekologi | DNV GL | 19 |
-| SCMC | SJTU | Bedah Jantung Anak, Hematologi-Onkologi Anak | JCI, ISO 15189 | 23 |
-| Sixth People's Hospital | — | Ortopedi (transplantasi anggota tubuh pertama di dunia 1963), Endokrinologi | JCI | 18 |
-| First Maternity & Infant | — | Obstetri, Kedokteran Janin, Kedokteran Reproduksi | JCI, APAGE | 18 |
-| Xinhua Hospital | SJTU | Pediatri, Dermatologi, Bedah Umum | JCI | 16 |
+| SCMC | SJTU | Bedah Jantung Anak, Hematologi-Onkologi Anak | Kelas 3A, ISO 15189 | 23 |
+| Sixth People's Hospital | — | Ortopedi (transplantasi anggota tubuh pertama di dunia 1963), Endokrinologi | Kelas 3A | 18 |
+| First Maternity & Infant | — | Obstetri, Kedokteran Janin, Kedokteran Reproduksi | Kelas 3A, APAGE | 18 |
+| Xinhua Hospital | SJTU | Pediatri, Dermatologi, Bedah Umum | Kelas 3A | 16 |
 | Huadong Hospital | Fudan University | Geriatri, Rehabilitasi, Pemeriksaan Kesehatan Eksekutif | Bupa Silver | 17 |
 | Ninth People's Hospital | SJTU | Bedah Mulut/Gigi #1, Bedah Plastik #1, Maxillofacial | Pusat Penelitian Oral Nasional | 8+21 |
 
-**Ditambah 5 rumah sakit internasional swasta**: Jiahui International (afiliasi MGH, 500 tempat tidur), United Family (JCI), ParkwayHealth (grup IHH), SinoUnited Health (anggota Jaringan Mayo Clinic), dan Raffles Hospital (grup Singapura).
+**Ditambah 5 rumah sakit internasional swasta**: Jiahui International (afiliasi MGH, 500 tempat tidur), United Family, ParkwayHealth (grup IHH), SinoUnited Health (anggota Jaringan Mayo Clinic), dan Raffles Hospital (grup Singapura).
 
 ### Sorotan Rumah Sakit Unggulan
 
-**Rumah Sakit Huashan (Universitas Fudan)** — Didirikan oleh 1907, menangani 5+ jutaan pasien rawat jalan setiap tahun. Peringkat #1 secara nasional dalam bedah saraf dan dermatologi. JCI terakreditasi dengan mitra asuransi internasional 24 untuk penyelesaian langsung. Banyak dokter senior yang dilatih di Klinik Cleveland dan Johns Hopkins.
+**Rumah Sakit Huashan (Universitas Fudan)** — Didirikan oleh 1907, menangani 5+ jutaan pasien rawat jalan setiap tahun. Peringkat #1 secara nasional dalam bedah saraf dan dermatologi. Berstatus Kelas 3A (三级甲等), tingkat rumah sakit tertinggi di Tiongkok, dengan mitra asuransi internasional 24 untuk penyelesaian langsung. Banyak dokter senior yang dilatih di Klinik Cleveland dan Johns Hopkins.
 
-**Rumah Sakit Ruijin (SJTU)** — Pelopor dalam transplantasi sumsum tulang dan terapi CAR-T dengan **tingkat remisi 95.7%**. JCI terakreditasi dengan Tingkat EMR Nasional 7. 21 mitra asuransi internasional. Pusat terkemuka endokrinologi dan perawatan luka bakar.
+**Rumah Sakit Ruijin (SJTU)** — Pelopor dalam transplantasi sumsum tulang dan terapi CAR-T dengan **tingkat remisi 95.7%**. Berstatus Kelas 3A (三级甲等) dengan Tingkat EMR Nasional 7. 21 mitra asuransi internasional. Pusat terkemuka endokrinologi dan perawatan luka bakar.
 
 **Shanghai Ninth People's Hospital (SJTU)** — Peringkat **#1 di Tiongkok untuk bedah mulut/gigi dan operasi plastik**. Pusat Penelitian Penyakit Mulut Nasional. Departemen Medis Internasional khusus dibuka Jan 2024 di kampus Pudong dengan kursi gigi 100+. Merawat pasien dari 40+ negara.
 
-**Rumah Sakit Zhongshan (Universitas Fudan)** — Pusat kardiovaskular dengan gedung pasien internasional independen. JCI dan bersertifikat JBI. 19 mitra asuransi internasional. Pusat bedah umum dan gastroenterologi terkemuka.
+**Rumah Sakit Zhongshan (Universitas Fudan)** — Pusat kardiovaskular dengan gedung pasien internasional independen. Berstatus Kelas 3A (三级甲等) dan memiliki penanda JBI. 19 mitra asuransi internasional. Pusat bedah umum dan gastroenterologi terkemuka.
 
 **Rumah Sakit Renji (SJTU)** — **#1 gastroenterologi nasional selama 4 tahun berturut-turut**. Pusat transplantasi hati terkemuka. Bersertifikat DNV GL dan RTAC. 20 mitra asuransi internasional. Pusat kedokteran reproduksi internasional.
 
-**Sixth People's Hospital** — Situs **operasi replantasi anggota tubuh pertama yang sukses di dunia pada 1963**. JCI terakreditasi. Pusat ortopedi, endokrinologi, dan kedokteran olahraga terkemuka. 18 mitra asuransi internasional.
+**Sixth People's Hospital** — Situs **operasi replantasi anggota tubuh pertama yang sukses di dunia pada 1963**. Berstatus Kelas 3A (三级甲等), tingkat rumah sakit tertinggi di Tiongkok. Pusat ortopedi, endokrinologi, dan kedokteran olahraga terkemuka. 18 mitra asuransi internasional.
 
-**Rumah Sakit Longhua (Universitas TCM Shanghai)** — **Rumah sakit utama nasional untuk Pengobatan Tradisional Tiongkok**. JCI dan bersertifikat HIMSS Tahap 7. Rumah sakit percontohan wisata medis TCM resmi. 1,000+ formula TCM terdaftar. Spesialisasi dalam onkologi TCM, akupunktur, dan pengobatan integratif.
+**Rumah Sakit Longhua (Universitas TCM Shanghai)** — **Rumah sakit utama nasional untuk Pengobatan Tradisional Tiongkok**. Berstatus Kelas 3A (三级甲等) dan bersertifikat HIMSS Tahap 7. Rumah sakit percontohan wisata medis TCM resmi. 1,000+ formula TCM terdaftar. Spesialisasi dalam onkologi TCM, akupunktur, dan pengobatan integratif.
 
-**Pusat Medis Anak Shanghai (SJTU)** — Pusat bedah jantung pediatrik terbaik di Tiongkok. Kemitraan dengan Project HOPE. JCI, bersertifikat HIMSS Tahap 6, dan ISO 15189. 23 mitra asuransi internasional — terbanyak di jaringan kami.
+**Pusat Medis Anak Shanghai (SJTU)** — Pusat bedah jantung pediatrik terbaik di Tiongkok. Kemitraan dengan Project HOPE. Berstatus Kelas 3A (三级甲等), bersertifikat HIMSS Tahap 6, dan ISO 15189. 23 mitra asuransi internasional — terbanyak di jaringan kami.
 
 ## Bagian 3: Perawatan Medis Populer dan Biaya
 
@@ -138,7 +138,7 @@ ShanghaiMed bermitra dengan **14 rumah sakit percontohan wisata medis Kelas A pu
 
 **Perawatan Kesuburan** — IVF dan ICSI di **Rumah Sakit Renji** dan **Rumah Sakit Internasional Peace Maternity & Child Health Hospital**, dengan tingkat keberhasilan yang sebanding dengan standar AS dengan biaya 75% lebih rendah.
 
-**Bedah Pediatrik** — Cacat jantung bawaan, onkologi pediatrik, dan perawatan neonatal di **Pusat Medis Anak Shanghai** (SJTU) dan **Rumah Sakit Anak Universitas Fudan** — keduanya terakreditasi JCI.
+**Bedah Pediatrik** — Cacat jantung bawaan, onkologi pediatrik, dan perawatan neonatal di **Pusat Medis Anak Shanghai** (SJTU) dan **Rumah Sakit Anak Universitas Fudan** — keduanya berstatus Kelas 3A (三级甲等), tingkat rumah sakit tertinggi di Tiongkok.
 
 **Oftalmologi** — Operasi katarak, perawatan retina, dan koreksi penglihatan di **Rumah Sakit Umum Shanghai**, lembaga mitra Mayo Clinic dengan 17 mitra asuransi internasional.
 
@@ -173,7 +173,7 @@ ShanghaiMed membantu Anda **mengintegrasikan janji medis ke dalam rencana perjal
 ## FAQ: Turisme Medis di Shanghai
 
 ### P1: Apakah perawatan kesehatan di Shanghai aman untuk pasien internasional?
-Ya. 14 rumah sakit percontohan pariwisata medis Kelas A di Shanghai terakreditasi JCI atau Kelas 3A - tingkat tertinggi di Tiongkok. Mereka menggunakan peralatan medis yang sama (Siemens, GE, Philips) dan merek implan (Stryker, Zimmer, Straumann) seperti rumah sakit AS. Banyak dokter senior yang dilatih di Johns Hopkins, Mayo Clinic, dan Cleveland Clinic.
+Ya. Rumah sakit umum dalam jaringan utama ShanghaiMed berstatus **Kelas 3A (三级甲等)**, tingkat rumah sakit tertinggi di Tiongkok. Jaringan ini mencakup 13 rumah sakit percontohan pariwisata medis umum resmi dan Ninth People's Hospital. Mereka menggunakan peralatan medis yang sama (Siemens, GE, Philips) dan merek implan (Stryker, Zimmer, Straumann) seperti rumah sakit AS. Banyak dokter senior yang dilatih di Johns Hopkins, Mayo Clinic, dan Cleveland Clinic.
 
 ### Pertanyaan 2: Berapa banyak yang bisa saya hemat dengan turisme medis di Shanghai?
 Biayanya **50-80% lebih rendah** daripada di AS. Penggantian lutut berharga $5,000-$10,000 di Shanghai vs $30,000-$50,000 di AS. Bahkan termasuk penerbangan dan akomodasi, total biaya perjalanan seringkali lebih rendah daripada prosedur AS saja.
@@ -192,7 +192,7 @@ Tentu saja. ShanghaiMed membantu Anda menjadwalkan janji medis sesuai dengan ren
 
 ## Tentang ShanghaiMed
 
-ShanghaiMed (shanghaimedhealth.com) adalah platform turisme medis inbound B2C yang berbasis di Shanghai, Tiongkok. Didirikan oleh Lingling Ma — lulusan Sekolah Kedokteran Universitas Jiao Tong Shanghai dengan sertifikasi perawat internasional ISPN dan pengalaman perawatan kesehatan premium selama 10+ tahun — ShanghaiMed menghubungkan pasien internasional dengan **14 rumah sakit percontohan turisme medis Kelas A publik** dan **5 rumah sakit internasional swasta**.
+ShanghaiMed (shanghaimedhealth.com) adalah platform turisme medis inbound B2C yang berbasis di Shanghai, Tiongkok. Didirikan oleh Lingling Ma — lulusan Sekolah Kedokteran Universitas Jiao Tong Shanghai dengan sertifikasi perawat internasional ISPN dan pengalaman perawatan kesehatan premium selama 10+ tahun — ShanghaiMed menghubungkan pasien internasional dengan **14 rumah sakit umum (13 rumah sakit percontohan pariwisata medis resmi + Ninth People's Hospital)** dan **5 rumah sakit internasional swasta**.
 
 **Jaringan rumah sakit mitra**: Rumah Sakit Huashan (Universitas Fudan), Rumah Sakit Anak (Universitas Fudan), Rumah Sakit Ruijin (Universitas Jiao Tong Shanghai), Rumah Sakit Umum Shanghai, Rumah Sakit Zhongshan (Universitas Fudan), Rumah Sakit Renji (Universitas Jiao Tong Shanghai), Rumah Sakit Longhua (Universitas TCM Shanghai), Rumah Sakit Internasional Peace Maternity & Child Health, Pusat Medis Anak Shanghai (Universitas Jiao Tong Shanghai), Sixth People's Hospital, Rumah Sakit Bersalin & Anak Pertama, Rumah Sakit Xinhua (Universitas Jiao Tong Shanghai), Rumah Sakit Huadong (Universitas Fudan), Shanghai Ninth People's Hospital (Universitas Jiao Tong Shanghai), serta Jiahui International, United Family, ParkwayHealth, SinoUnited Health, dan Raffles Hospital.
 
@@ -200,4 +200,4 @@ ShanghaiMed (shanghaimedhealth.com) adalah platform turisme medis inbound B2C ya
 
 ---
 
-> **Sumber**: Healthcare Bluebook (biaya AS, 2024-2025), kutipan pasien internasional dari rumah sakit mitra (biaya Shanghai, 2025), Administrasi Pariwisata Nasional Tiongkok (data pariwisata inbound, 2025), Komisi Kesehatan Kota Shanghai (statistik pasien internasional, 2025), database akreditasi JCI
+> **Sumber**: Healthcare Bluebook (biaya AS, 2024-2025), kutipan pasien internasional dari rumah sakit mitra (biaya Shanghai, 2025), Administrasi Pariwisata Nasional Tiongkok (data pariwisata inbound, 2025), Komisi Kesehatan Kota Shanghai dan Pemerintah Kota Shanghai (13 rumah sakit percontohan pariwisata medis umum, 2024-2025; statistik pasien internasional, 2025)

@@ -34,7 +34,7 @@ canonicalUrl: 'https://shanghaimedhealth.com/blog/traditional-chinese-medicine-s
 | Akupunktur (1 bulan, 10 sesi) | $200-$400 (vs $1,000-$2,000 di AS) |
 | Konsultasi pengobatan herbal + resep 1 bulan | $80-$150 (vs $300-$600 di AS) |
 | Formula TCM terdaftar di Longhua | 1,000+ |
-| Akreditasi rumah sakit | JCI + HIMSS EMRAM Stage 7 |
+| Kelas dan sertifikasi rumah sakit | Kelas 3A (三级甲等, tingkat rumah sakit tertinggi di Tiongkok) + HIMSS EMRAM Stage 7 |
 | Mitra asuransi | 18 perusahaan asuransi internasional |
 | Layanan pendamping bilingual | $1,000/3 hari (ShanghaiMed) |
 
@@ -54,7 +54,7 @@ Shanghai adalah rumah bagi institusi terkenal dunia seperti **Universitas Tradis
 
 **Rumah Sakit Longhua** (berafiliasi dengan Universitas TCM Shanghai) adalah tujuan utama bagi pasien internasional yang mencari TCM otentik. Didirikan pada 1960, ini adalah **rumah sakit unggulan nasional** dan **rumah sakit percontohan turisme medis TCM resmi** di Shanghai, dengan:
 
-- **Akun JCI** dan sertifikasi HIMSS EMRAM Stage 7 — standar internasional tertinggi
+- **Kelas 3A (三级甲等)** — tingkat rumah sakit tertinggi di Tiongkok — dan sertifikasi **HIMSS EMRAM Stage 7**
 - Apotek herbal khusus dengan **1,000+ formula TCM terdaftar**
 - Departemen pasien internasional dengan koordinator berbahasa Inggris
 - Program pengobatan integratif yang menggabungkan TCM dengan diagnostik Barat
@@ -157,7 +157,7 @@ ShanghaiMed menyediakan **pendamping medis berbahasa Inggris** yang menemani And
 ## FAQ: TCM di Shanghai
 
 ### Q1: Apakah Pengobatan Tradisional Tiongkok aman untuk pasien internasional?
-Ya. TCM di Rumah Sakit Longhua dipraktikkan oleh profesional berlisensi yang terlatih dalam metode klasik dan protokol keselamatan modern. Rumah sakit ini memegang **akreditasi JCI** dan sertifikasi **HIMSS EMRAM Tahap 7** — standar internasional tertinggi. Semua obat herbal diatur oleh NMPA untuk memastikan kualitas dan kemurnian.
+Ya. TCM di Rumah Sakit Longhua dipraktikkan oleh profesional berlisensi yang terlatih dalam metode klasik dan protokol keselamatan modern. Rumah sakit ini berstatus **Kelas 3A (三级甲等)**, tingkat rumah sakit tertinggi di Tiongkok, dan memiliki sertifikasi **HIMSS EMRAM Stage 7**. Semua obat herbal diatur oleh NMPA untuk memastikan kualitas dan kemurnian.
 
 ### P2: Berapa biaya TCM di Shanghai?
 TCM di Shanghai berharga **75-80% lebih murah** daripada di AS. Satu bulan sesi akupunktur berharga $200-$400 vs $1,000-$2,000 di AS. Konsultasi obat herbal dengan resep 1 bulan berharga $80-$150 vs $300-$600.
@@ -178,10 +178,10 @@ Banyak praktisi senior memiliki kemampuan bahasa Inggris, tetapi ShanghaiMed men
 
 ShanghaiMed (shanghaimedhealth.com) menghubungkan pasien internasional dengan Pengobatan Tradisional Tiongkok otentik di **Rumah Sakit Longhua** — rumah sakit TCM andalan nasional Shanghai. Didirikan oleh Lingling Ma (Sekolah Kedokteran Universitas Jiao Tong Shanghai, perawat internasional bersertifikat ISPN, pengalaman kesehatan premium lebih dari 10+ tahun).
 
-Jaringan lengkap ShanghaiMed mencakup **14 rumah sakit percontohan pariwisata medis Kelas-A publik** — Huashan (Fudan), Children's (Fudan), Ruijin (SJTU), Shanghai General, Zhongshan (Fudan), Renji (SJTU), Longhua (TCM), IPMCH, SCMC (SJTU), Sixth People's, First Maternity & Infant, Xinhua (SJTU), Huadong (Fudan), Ninth People's (SJTU) — ditambah 5 rumah sakit internasional swasta. Hal ini memungkinkan koordinasi tanpa batas antara TCM dan spesialisasi medis Barat di seluruh jaringan.
+Jaringan lengkap ShanghaiMed mencakup **14 rumah sakit umum Kelas A (13 rumah sakit percontohan pariwisata medis resmi + Ninth People's Hospital)** — Huashan (Fudan), Children's (Fudan), Ruijin (SJTU), Shanghai General, Zhongshan (Fudan), Renji (SJTU), Longhua (TCM), IPMCH, SCMC (SJTU), Sixth People's, First Maternity & Infant, Xinhua (SJTU), Huadong (Fudan), Ninth People's (SJTU) — ditambah 5 rumah sakit internasional swasta. Hal ini memungkinkan koordinasi tanpa batas antara TCM dan spesialisasi medis Barat di seluruh jaringan.
 
 **Kontak**: hello@shanghaimedhealth.com | [shanghaimedhealth.com](https://shanghaimedhealth.com)
 
 ---
 
-> **Sumber**: Data resmi Rumah Sakit Longhua, peraturan NMPA, Federasi Dunia Masyarakat Pengobatan Tradisional Tiongkok, publikasi penelitian Universitas Pengobatan Tradisional Tiongkho Shanghai, database akreditasi JCI
+> **Sumber**: Data resmi Rumah Sakit Longhua, peraturan NMPA, Federasi Dunia Masyarakat Pengobatan Tradisional Tiongkok, publikasi penelitian Universitas Pengobatan Tradisional Tiongkho Shanghai, Komisi Kesehatan Kota Shanghai dan Pemerintah Kota Shanghai (13 rumah sakit percontohan pariwisata medis umum, 2024-2025)

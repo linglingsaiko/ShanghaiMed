@@ -36,6 +36,11 @@ const credentialsData: Record<'en' | 'ja' | 'ar' | 'ru' | 'mn' | 'ms' | 'id', Cr
       detail: 'Shanghai Jiao Tong University School of Medicine',
       category: 'Education',
     },
+    {
+      title: 'Executive Business Administration Program (Certificate of Completion, non-degree)',
+      detail: 'Antai College of Economics & Management, Shanghai Jiao Tong University (2020–2022)',
+      category: 'Education',
+    },
 
   ],
   ja: [
@@ -57,6 +62,11 @@ const credentialsData: Record<'en' | 'ja' | 'ar' | 'ru' | 'mn' | 'ms' | 'id', Cr
     {
       title: 'BSN — 看護学学士',
       detail: '上海交通大学医学院',
+      category: '学歴',
+    },
+    {
+      title: '上級経営管理課程研修（修了証・学位なし）',
+      detail: 'Antai College of Economics & Management, Shanghai Jiao Tong University (2020–2022)',
       category: '学歴',
     },
 
@@ -82,6 +92,11 @@ const credentialsData: Record<'en' | 'ja' | 'ar' | 'ru' | 'mn' | 'ms' | 'id', Cr
       detail: 'كلية الطب بجامعة شنغهاي جياو تونغ',
       category: 'التعليم',
     },
+    {
+      title: 'برنامج إدارة الأعمال التنفيذية (شهادة إتمام، دون درجة أكاديمية)',
+      detail: 'Antai College of Economics & Management, Shanghai Jiao Tong University (2020–2022)',
+      category: 'التعليم',
+    },
 
   ],
   ru: [
@@ -103,6 +118,11 @@ const credentialsData: Record<'en' | 'ja' | 'ar' | 'ru' | 'mn' | 'ms' | 'id', Cr
     {
       title: 'BSN — Бакалавр наук в сестринском деле',
       detail: 'Школа медицины Шанхайского университета Цзяотун',
+      category: 'Образование',
+    },
+    {
+      title: 'Программа повышения квалификации в сфере управления бизнесом (сертификат об окончании, без степени)',
+      detail: 'Antai College of Economics & Management, Shanghai Jiao Tong University (2020–2022)',
       category: 'Образование',
     },
 
@@ -128,6 +148,11 @@ const credentialsData: Record<'en' | 'ja' | 'ar' | 'ru' | 'mn' | 'ms' | 'id', Cr
       detail: 'Шанхайн Жяо Тонг их сургуулийн Анагаах ухааны сургууль',
       category: 'Боловсрол',
     },
+    {
+      title: 'Бизнесийн удирдлагын ахисан түвшний сургалт (төгссөн гэрчилгээ, академийн зэрэггүй)',
+      detail: 'Antai College of Economics & Management, Shanghai Jiao Tong University (2020–2022)',
+      category: 'Боловсрол',
+    },
 
   ],
   ms: [
@@ -151,6 +176,11 @@ const credentialsData: Record<'en' | 'ja' | 'ar' | 'ru' | 'mn' | 'ms' | 'id', Cr
       detail: 'Sekolah Perubatan Universiti Jiao Tong Shanghai',
       category: 'Pendidikan',
     },
+    {
+      title: 'Program Pentadbiran Perniagaan Eksekutif (Sijil Tamat, tanpa ijazah)',
+      detail: 'Antai College of Economics & Management, Shanghai Jiao Tong University (2020–2022)',
+      category: 'Pendidikan',
+    },
 
   ],
   id: [
@@ -172,6 +202,11 @@ const credentialsData: Record<'en' | 'ja' | 'ar' | 'ru' | 'mn' | 'ms' | 'id', Cr
     {
       title: 'BSN — Sarjana Sains dalam Keperawatan',
       detail: 'Sekolah Kedokteran Universitas Jiao Tong Shanghai',
+      category: 'Pendidikan',
+    },
+    {
+      title: 'Program Administrasi Bisnis Eksekutif (Sertifikat Penyelesaian, tanpa gelar)',
+      detail: 'Antai College of Economics & Management, Shanghai Jiao Tong University (2020–2022)',
       category: 'Pendidikan',
     },
 
@@ -324,6 +359,7 @@ const text = {
     nurseCertName: 'شهادة مزاولة مهنة التمريض',
     ispnCertName: 'شهادة إنجاز ISPN',
     jlptCertName: 'شهادة JLPT N1 (اختبار كفاءة اللغة اليابانية، المستوى الأعلى)',
+    execEdCertName: 'برنامج إدارة الأعمال التنفيذية (شهادة إتمام، دون درجة أكاديمية)',
     bsnDegreeCertName: 'شهادة درجة البكالوريوس في العلوم (التمريض)',
     bsnGradCertName: 'شهادة التخرج الجامعي (التمريض)',
     jlptCertIssuer: 'خدمات التبادل التعليمي اليابانية / مؤسسة اليابان',
@@ -358,6 +394,7 @@ const text = {
     nurseCertName: 'Nurse Practicing Certificate',
     ispnCertName: 'ISPN Certificate of Achievement',
     jlptCertName: 'JLPT N1 Certificate (Japanese-Language Proficiency Test)',
+    execEdCertName: 'Executive Business Administration Program (non-degree)',
     bsnDegreeCertName: 'Bachelor of Science Degree Certificate (Nursing)',
     bsnGradCertName: 'Undergraduate Graduation Certificate (Nursing)',
     jlptCertIssuer: 'Japan Educational Exchanges and Services / Japan Foundation',
@@ -392,6 +429,7 @@ const text = {
     nurseCertName: '看護師執業証書',
     ispnCertName: 'ISPN資格認定証',
     jlptCertName: 'JLPT N1 認定証（日本語能力試験 最高レベル）',
+    execEdCertName: '上級経営管理課程研修（修了・学位なし）',
     bsnDegreeCertName: '学士（理学）学位記（看護学）',
     bsnGradCertName: '本科卒業証書（看護学）',
     jlptCertIssuer: '日本国際教育支援協会／国際交流基金',
@@ -426,6 +464,7 @@ const text = {
     nurseCertName: 'Сертификат права осуществления медсестринской практики',
     ispnCertName: 'Сертификат об успешном прохождении ISPN',
     jlptCertName: 'Сертификат JLPT N1 (Экзамен по японскому языку, высший уровень)',
+    execEdCertName: 'Программа повышения квалификации в сфере управления бизнесом (без степени)',
     bsnDegreeCertName: 'Диплом о степени бакалавра наук (сестринское дело)',
     bsnGradCertName: 'Диплом об окончании вуза (сестринское дело)',
     jlptCertIssuer: 'Японская служба образовательных обменов / Японский фонд',
@@ -460,6 +499,7 @@ const text = {
     nurseCertName: 'Сувилагчийн үйл ажиллагааны гэрчилгээ',
     ispnCertName: 'ISPN амжилтын гэрчилгээ',
     jlptCertName: 'JLPT N1 гэрчилгээ (Япон хэлний шалгалт, дээд түвшин)',
+    execEdCertName: 'Бизнесийн удирдлагын ахисан түвшний сургалт (төгссөн гэрчилгээ, академийн зэрэггүй)',
     bsnDegreeCertName: 'Бакалаврын зэргийн гэрчилгээ (сувилал)',
     bsnGradCertName: 'Их сургууль төгссөн гэрчилгээ (сувилал)',
     jlptCertIssuer: 'Японы Боловсролын Солилцооны Үйлчилгээ / Япон Сан',
@@ -494,6 +534,7 @@ const text = {
     nurseCertName: 'Sijil Amalan Jururawat',
     ispnCertName: 'Sijil Pencapaian ISPN',
     jlptCertName: 'Sijil JLPT N1 (Ujian Kecekapan Bahasa Jepun, Tahap Tertinggi)',
+    execEdCertName: 'Program Pentadbiran Perniagaan Eksekutif (Sijil Tamat, tanpa ijazah)',
     bsnDegreeCertName: 'Sijil Ijazah Sarjana Muda Sains (Kejururawatan)',
     bsnGradCertName: 'Sijil Graduasi Prasiswazah (Kejururawatan)',
     jlptCertIssuer: 'Japan Educational Exchanges and Services / Japan Foundation',
@@ -528,6 +569,7 @@ const text = {
     nurseCertName: 'Sertifikat Praktik Keperawatan',
     ispnCertName: 'Sertifikat Pencapaian ISPN',
     jlptCertName: 'Sertifikat JLPT N1 (Tes Kemahiran Bahasa Jepang, Tingkat Tertinggi)',
+    execEdCertName: 'Program Administrasi Bisnis Eksekutif (Sertifikat Penyelesaian, tanpa gelar)',
     bsnDegreeCertName: 'Ijazah Gelar Sarjana Sains (Keperawatan)',
     bsnGradCertName: 'Ijazah Kelulusan Sarjana (Keperawatan)',
     jlptCertIssuer: 'Japan Educational Exchanges and Services / Japan Foundation',
@@ -712,6 +754,26 @@ export default function FounderContent() {
                 <div>
                   <p className="text-sm font-medium text-gray-900">{t.bsnGradCertName}</p>
                   <p className="text-xs text-gray-500">Shanghai Jiao Tong University School of Medicine (2010)</p>
+                </div>
+                <svg className="w-4 h-4 text-gray-400 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+
+              <a
+                href="/images/certificate-executive-education.jpg"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 p-4 border rounded-lg hover:border-teal-300 hover:bg-teal-50/30 transition-colors group"
+              >
+                <div className="flex-shrink-0 w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center group-hover:bg-teal-200 transition-colors">
+                  <svg className="w-5 h-5 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-gray-900">{t.execEdCertName}</p>
+                  <p className="text-xs text-gray-500">Antai College, SJTU (2022)</p>
                 </div>
                 <svg className="w-4 h-4 text-gray-400 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />

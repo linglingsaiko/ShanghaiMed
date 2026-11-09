@@ -132,7 +132,7 @@ Jika anda merancang perjalanan ke Shanghai dan ingin mencuba TCM — sama ada un
 
 - Cadangkan doktor yang pakar mereka sepadan dengan keadaan anda;
 - Tempah temujanji di jabatan TCM hospital Grade 3A teratas atau klinik berwajah antarabangsa yang terkenal;
-- Berikan interpretasi perubatan profesional semasa seluruh perundingan anda, jadi tidak ada yang hilang dalam terjemahan;
+- Menyediakan interpretasi perubatan profesional semasa perundingan anda untuk menyokong komunikasi yang tepat;
 - Terjemahkan rekod perubatan anda sebelum lawatan;
 - Terangkan pelan rawatan anda dalam bahasa Inggeris yang jelas selepas perundingan;
 - Susul antara sesi dan bantu isi semula preskripsi herba jika perlu.

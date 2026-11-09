@@ -9,7 +9,7 @@ tags:
   - prepare medical records for abroad
   - Shanghai hospital appointment
   - medical second opinion China
-author: Lingling Ma
+author: Sara Ma, Founder
 date: '2026-11-03T02:00:00.000Z'
 lastReviewed: '2026-11-03'
 featured: false
@@ -280,4 +280,4 @@ A family member can help, but an adult patient's authorization should be obtaine
 
 ## About the author
 
-**Lingling Ma (Sara)** is the founder of ShanghaiMed and an ISPN-certified registered nurse with the Chinese senior nursing professional title (主管护师). She has more than a decade of experience in premium healthcare operations and international patient coordination in Shanghai, and works in English, Chinese and Japanese (JLPT N1). Her role is medical coordination and patient communication, not diagnosis or prescribing.
+**Sara Ma** is the founder of ShanghaiMed. She is a registered nurse (RN) with a **BSN from Shanghai Jiao Tong University School of Medicine** and **ISPN (International Standards for Professional Nurses) certification**. She has more than a decade of experience in premium international healthcare operations and international patient coordination in Shanghai. She is fluent in Mandarin, English, and Japanese. Her role is medical coordination and patient communication, not diagnosis or prescribing.

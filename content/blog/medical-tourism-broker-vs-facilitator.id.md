@@ -89,7 +89,7 @@ Kedua model tersebut tidak membuat sebuah perusahaan otomatis baik atau buruk. N
 - Mengumpulkan dan meninjau catatan medis, pencitraan, dan riwayat lengkap Anda  
 - Mengatur konsultasi jarak jauh dengan rumah sakit yang menangani sebelum Anda berkomitmen  
 - Memberikan perkiraan perawatan dan biaya yang tertulis dan terperinci dari rumah sakit itu sendiri  
-- Memberi saran tentang kategori visa (untuk Tiongkok, biasanya S1/S2 untuk tujuan medis) dan dokumentasi  
+- Memberi saran tentang kategori visa (untuk Tiongkok, biasanya S2 untuk tujuan medis) dan dokumentasi  
 - Memverifikasi apakah perusahaan asuransi internasional Anda dapat ditagih langsung.
 
 **Selama perawatan Anda:**  

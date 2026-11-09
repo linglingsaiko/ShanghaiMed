@@ -49,7 +49,7 @@ Setiap bisnis yang sah di Tiongkok daratan terdaftar di Administrasi Negara untu
 | Nama perusahaan terdaftar | Shanghai Keling Information Technology Co., Ltd. (上海可玲信息技术有限公司) |
 | Kode Kredit Sosial Terpadu | **91310110MAKDNY7H7W** |
 | Alamat terdaftar | Kamar 101, Lantai 1, No. 2555 Changyang Road, Distrik Yangpu, Shanghai, Tiongkok |
-| Perwakilan hukum | Lingling Ma (马玲玲) |
+| Perwakilan hukum | Sara Ma (nama resmi: Lingling Ma / 马玲玲) |
 
 Anda dapat memasukkan nama perusahaan kami (dalam bahasa Tiongkok: 上海可玲信息技术有限公司) atau kode kredit kami ke [gsxt.gov.cn](https://www.gsxt.gov.cn) untuk mengonfirmasi status pendaftan kami. Kode kredit yang sama muncul di footer setiap halaman di situs web ini.
 
@@ -61,21 +61,21 @@ Anda dapat memasukkan nama perusahaan kami (dalam bahasa Tiongkok: 上海可玲�
 
 ## Langkah 2: Verifikasi rumah sakit dan dokter secara independen.
 
-Seorang fasilitator perjalanan medis hanya sebagus rumah sakit dan dokter yang dapat ia hubungkan untuk Anda. Setiap fasilitator dapat mengklaim kemitraan. **Anda harus dapat memverifikasi keduanya, secara independen, sebelum Anda membayar apa pun.**
+Fasilitator perjalanan medis hanya sebaik rumah sakit dan dokter yang dapat diaksesnya untuk Anda. Setiap fasilitator dapat mengklaim kemitraan, dan klaim semacam itu tidak boleh diterima tanpa bukti. **Anda harus dapat memverifikasi rumah sakit dan dokter yang merawat secara independen sebelum membayar apa pun.**
 
 ### Verifikasi rumah sakit.
 
-Kami tidak secara eksklusif mewakili rumah sakit mana pun. Departemen medis internasional dari rumah sakit Kelas 3A Shanghai terbuka untuk semua orang - setiap pasien dapat menghubungi mereka secara langsung. Nilai kami terletak pada membantu klien menemukan rumah sakit dan departemen yang paling cocok dalam waktu sesingkat mungkin, mengelola seluruh proses mulai dari terjemahan rekam medis, penjadwalan janji temu, pendampingan di tempat, hingga tindak lanjut setelah keluar dari rumah sakit.
+Kami tidak secara eksklusif mewakili rumah sakit mana pun. Departemen medis internasional rumah sakit Kelas 3A di Shanghai terbuka untuk semua orang — setiap pasien dapat menghubungi mereka secara langsung. Nilai kami terletak pada membantu klien mengidentifikasi rumah sakit dan departemen yang sesuai, kemudian mengoordinasikan prosesnya mulai dari penerjemahan rekam medis dan penjadwalan janji temu hingga pendampingan di lokasi dan tindak lanjut setelah keluar dari rumah sakit.
 
-Semua rumah sakit umum yang bekerja sama dengan kami adalah **Kelas 3A (三甲)** — klasifikasi rumah sakit tertinggi di Tiongkok — dan masing-masing dari mereka memiliki situs web resmi dan departemen pasien internasional yang dapat Anda hubungi langsung. Anda tidak perlu mengambil kata-kata kami untuk itu.
+Rumah sakit umum yang mungkin kami rekomendasikan adalah **Kelas 3A (三甲)** — klasifikasi rumah sakit tertinggi di Tiongkok. Rekomendasi didasarkan pada kondisi dan kebutuhan layanan Anda, tidak dibatasi pada 13 rumah sakit umum percontohan resmi untuk wisata medis atau daftar tetap lainnya. Pilihan dapat mencakup rumah sakit afiliasi Naval Medical University dan Shanghai University of Traditional Chinese Medicine, rumah sakit Kelas 3A lain di Shanghai yang sesuai, serta rumah sakit swasta yang tepat.
 
-Halaman Jaringan Rumah Sakit kami mencantumkan setiap rumah sakit mitra dengan tautan langsung ke situs web resmi departemen internasional mereka. Kami mendorong Anda untuk:
+Ketika kami memberikan pilihan rumah sakit, kami juga memberikan tautan resmi rumah sakit atau departemen internasional jika tersedia. Pilihan ini bersifat representatif, bukan daftar rumah sakit mitra. Kami mendorong Anda untuk:
 
 1. Kunjungi situs web resmi rumah sakit untuk mempelajari tentang layanan medis internasional mereka.
 2. Hubungi atau kirim surel langsung ke Departemen Pasien Internasional / Pusat Medis Internasional rumah sakit.
 3. Konfirmasi bahwa departemen internasional rumah sakit menerima janji temu langsung dan pelajari tentang proses pasien asing mereka.
 
-Rumah sakit bertanggung jawab atas perawatan klinis - mereka tidak menangani logistik non-klinis untuk pasien asing. Terjemahan rekam medis, akomodasi dan transportasi, pertanyaan visa, konsultasi asuransi - rumah sakit tidak terbiasa dengan hal-hal ini dan tidak memiliki kapasitas untuk membantu. Itulah mengapa departemen internasional rumah sakit menyambut pasien yang dirujuk melalui fasilitator profesional: biaya komunikasi lebih rendah, pasien lebih siap, dan proses klinis berjalan lancar. Inilah tepatnya mengapa ShanghaiMed ada.
+Rumah sakit bertanggung jawab atas perawatan klinis. Tingkat dukungan nonklinis yang tersedia bervariasi menurut departemen internasional, sehingga pasien perlu mengonfirmasi layanan secara langsung. ShanghaiMed membantu dengan rekam medis, janji temu, komunikasi, logistik perjalanan, dan tindak lanjut, sementara rumah sakit tetap bertanggung jawab atas keputusan medis. Pasien dapat menghubungi rumah sakit secara langsung; menggunakan fasilitator bersifat opsional.
 
 ### Verifikasi dokternya.
 
@@ -94,7 +94,7 @@ Biaya perjalanan medis terbagi dalam dua kategori: **biaya klinik/rumah sakit** 
 
 **Bagaimana kami menanganinya:**  
 - Biaya rumah sakit dan klinik selalu **dibayarkan langsung ke rumah sakit yang menangani** dengan tarif yang ditetapkan rumah sakit itu sendiri. Kami tidak mengumpulkan, menyimpan, atau menaikkan biaya medis, dan kami tidak mendapatkan komisi dari rumah sakit.  
-- Biaya concierge kami dipublikasikan di halaman Harga kami — mulai dari konsultasi awal gratis, hingga pendampingan rumah sakit mandiri seharga $50/jam, hingga paket concierge seharga $500–$1,650 tergantung kebutuhan Anda. Tidak ada markup tersembunyi pada tagihan rumah sakit.  
+- Biaya concierge kami dipublikasikan di halaman Harga kami — mulai dari konsultasi awal online gratis melalui WhatsApp, hingga pendampingan rumah sakit mandiri seharga $50/jam, hingga paket concierge seharga $500–$1,650 tergantung kebutuhan Anda. Tidak ada markup tersembunyi pada tagihan rumah sakit.  
 - Sebelum Anda membayar deposit, Anda akan menerima **rencana perawatan tertulis dan perkiraan biaya terperinci** yang mencakup: biaya concierge, perkiraan biaya rumah sakit, biaya interpretasi, perkiraan akomodasi, dan biaya tambahan lainnya yang diketahui.
 
 **Pertanyaan untuk ditanyakan kepada setiap fasilitator:**
@@ -121,12 +121,12 @@ Hal-hal tidak selalu berjalan sempurna, bahkan di rumah sakit yang sangat baik. 
 Ini adalah pemeriksaan paling sederhana dan paling jelas. Sebelum membayar deposit apa pun, Anda harus dapat berkomunikasi dengan koordinator yang nyata - sebaiknya seorang profesional terlatih secara medis, bukan hanya agen penjualan.
 
 **Apa yang dapat Anda harapkan dari kami:**  
-- **Konsultasi awal gratis** (WhatsApp/LINE), disediakan oleh koordinator medis terlatih — tidak perlu pembayaran, tidak ada kewajiban.  
+- **Konsultasi pendahuluan online gratis melalui WhatsApp**, yang diberikan oleh koordinator terlatih untuk menilai kebutuhan Anda, membahas pilihan rumah sakit dan dokter yang sesuai, serta menjelaskan pertimbangan anggaran dan prosesnya — tanpa pembayaran dan tanpa kewajiban. Layanan ini merupakan dukungan koordinasi pada tahap pengambilan keputusan, bukan konsultasi video klinis oleh rumah sakit; layanan ini tidak menggantikan diagnosis dokter dan tidak menjanjikan penyusunan rencana perawatan klinis yang dipersonalisasi secara gratis.  
 - Anda dapat menanyakan apa pun kepada kami tentang proses kami, rumah sakit, biaya kami, atau kondisi medis spesifik Anda.  
 - Koordinator yang meninjau kasus Anda adalah seorang profesional medis senior.  
 - Kami menanggapi pertanyaan tertulis dalam waktu **24 jam**.
 
-Anda dapat menghubungi kami kapan saja di [hello@shanghaimedhealth.com](mailto:hello@shanghaimedhealth.com), di [WhatsApp](https://wa.me/8613818274110), atau di [LINE](https://line.me/ti/p/cD_Ed4GHBM).
+Anda dapat menghubungi kami kapan saja melalui [hello@shanghaimedhealth.com](mailto:hello@shanghaimedhealth.com) atau [WhatsApp](https://wa.me/8613818274110).
 
 **Tanda bahaya pada setiap fasilitator:**  
 - Taktik penjualan dengan tekanan tinggi ("harga ini hanya tersedia hari ini")  

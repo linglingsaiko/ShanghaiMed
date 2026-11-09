@@ -86,7 +86,7 @@ Shanghai offers two main pathways for international patients: **public hospital 
 **Advantages:**
 
 - Premium hotel-like environment with private rooms
-- Full English-speaking environment throughout the facility—from reception to nursing staff to physicians
+- English-speaking staff and coordinators available at international patient departments; English proficiency varies by department and individual staff member
 - Longer consultation times with more detailed, patient-centered communication
 - Appointments available quickly for most services
 - Comprehensive services under one roof (consultations, diagnostics, pharmacy, dental)
@@ -97,7 +97,7 @@ Shanghai offers two main pathways for international patients: **public hospital 
 - For highly complex cases, specialists may refer to public hospital colleagues
 - Some insurance companies classify certain private hospitals as **High Cost Providers (HCP)** or "expensive medical facilities". Depending on your insurance plan, visits to HCP-listed hospitals may require a **20% copay**—while the same treatment at non-HCP facilities would be covered in full. This is worth checking before you commit to a facility.
 
-**Best for:** Preventive care, routine checkups, minor procedures, dental work, pediatrics, and patients who prioritize comfort and communication.
+**Best for:** Preventive care, routine checkups, outpatient procedures, dental work, pediatrics, and patients who prioritize comfort and communication.
 
 Many international patients use a combination of both: complex treatment at public hospital international departments where top specialists and advanced equipment are concentrated, routine follow-ups and preventive care at private international clinics where the experience is more comfortable.
 
@@ -124,7 +124,7 @@ This is often the biggest concern for international patients, and understandably
 
 **Dedicated international departments** at major public hospitals employ bilingual coordinators who assist with everything from appointment booking to explaining treatment plans. These coordinators often have medical backgrounds or specialized training. While the coordinators bridge the language gap effectively, the overall English environment in public hospitals is not as seamless as in private facilities—the broader hospital operates primarily in Chinese, and you may encounter staff outside the international department who speak limited English.
 
-**Private international hospitals** offer a fully English-speaking experience—reception, nursing staff, physicians, and administrative teams all communicate in English. Consultations tend to be longer and more detailed, with physicians taking extra time to explain conditions and treatment options.
+**Private international hospitals** generally offer stronger English-language support, with English-speaking reception, nursing staff, and physicians at their international departments. However, English proficiency can still vary by individual staff member and department. Consultations tend to be longer and more detailed, with physicians taking extra time to explain conditions and treatment options.
 
 ## Insurance Acceptance: Can You Use Your Plan?
 
@@ -173,7 +173,7 @@ Paying for healthcare—and everything else—in China has become dramatically e
 
 **36 overseas e-wallets work directly in China.** Through the People's Bank of China's cross-border payment integration, e-wallets from countries including Malaysia (Touch'n Go), South Korea (Kakao Pay), Hong Kong (AlipayHK), Thailand (TrueMoney), and many others can be used at merchants across Shanghai without needing a separate Chinese payment account.
 
-**PayPal and WeChat Pay integration.** PayPal has partnered with WeChat Pay, allowing PayPal users to make payments through the WeChat ecosystem—another convenient bridge for visitors who prefer not to set up local payment methods.
+**International credit cards at hospitals.** Many large hospitals accept international credit cards (Visa, Mastercard) at their international patient departments, though acceptance varies by hospital and department. Confirm payment options with your hospital before treatment.
 
 **Small transactions are fee-free.** For transactions under ¥200 (approximately $28), no additional currency conversion fees are charged—making pharmacy runs, meals, and transportation payments hassle-free.
 
@@ -188,20 +188,28 @@ Paying for healthcare—and everything else—in China has become dramatically e
 
 Getting to Shanghai and navigating entry requirements is simpler than you might expect.
 
-**The 240-Hour Visa-Free Transit** is a game-changer for many international patients. If you're from one of 54 eligible countries (including the US, UK, Canada, Australia, Japan, and most EU nations), you can transit through Shanghai without a visa for up to 240 hours (10 days). This is particularly useful for:
+For health checkups, dental care, TCM, ordinary outpatient consultations, follow-ups, and second opinions, a **tourist (L) visa or an applicable visa-free entry policy** may be appropriate.
 
-- Quick consultations and minor procedures
-- Health checkups that don't require extended stays
-- Follow-up visits for patients who received initial treatment elsewhere
+**The 240-Hour Visa-Free Transit** covers eligible citizens of **57 countries** who meet all transit conditions. It allows up to 240 hours (10 days) and can be suitable for a compliant short-stay itinerary involving:
 
-**Medical Visas (M Visa)** are appropriate for patients requiring longer treatment periods. You'll need:
+- A short health checkup or dental appointment
+- An ordinary outpatient consultation or second opinion
+- A follow-up visit that does not involve planned admission
 
-- Invitation letter from your Shanghai hospital or clinic
-- Proof of financial means or insurance
-- Valid passport (6+ months validity recommended)
+It is **not for planned surgery, hospital admission, or inpatient treatment**.
+
+China has **no standalone “Medical Visa” letter category**, and the **M visa is for business/trade**. For planned surgery, hospital admission, or treatment requiring admission, the relevant route is an **S2 (Short-term Private Affairs) visa for medical treatment**, supported by the treating hospital's invitation letter, admission notice, or proof of proposed admission. Core application documents typically include:
+
+- Hospital invitation/admission documentation
+- Required proof of financial means
+- Valid passport
 - Completed visa application
 
-Getting to Shanghai is convenient—Pudong International Airport (PVG) and Hongqiao International Airport (SHA) connect to most major cities worldwide. Many international patients fly in, have their appointment, and fly out the same or next day for minor procedures, or arrange accommodation for longer treatment plans.
+If a condition requiring admission is discovered after lawful entry, hospital documentation can support an application to change status in China under the applicable rules. In an emergency, treatment comes first and immigration formalities follow.
+
+*Visa policy verified as of **October 25, 2026**. Before travel, check the latest National Immigration Administration (NIA) announcement or call **+86-12367**. Visa and status decisions are made individually by the competent authorities.*
+
+Getting to Shanghai is convenient—Pudong International Airport (PVG) and Hongqiao International Airport (SHA) connect to most major cities worldwide. Many international patients fly in, attend an outpatient appointment, and fly out the same or next day, or arrange accommodation for longer treatment plans.
 
 Accommodation near major hospitals ranges from budget options to luxury hotels and serviced apartments. International hospitals often have partnerships with nearby accommodations for patient families.
 
@@ -222,8 +230,8 @@ Planning medical travel to another country can feel overwhelming—matching your
 - Identifying the right hospital and specialist for your condition
 - Confirming insurance coverage or self-pay costs before you travel
 - Scheduling appointments and requesting cost estimates
-- Arranging visa, travel, and accommodation (many nationalities qualify for China's 240-hour transit visa)
-- Receiving treatment with English-speaking medical staff
+- Arranging the correct entry route, travel, and accommodation—an L visa or applicable visa-free entry for eligible outpatient visits, 240-hour transit only for qualifying short visits, or S2 for planned surgery/admission
+- Receiving treatment with coordinated language support (English-speaking staff availability varies by hospital and department; professional medical interpretation can be arranged)
 - Follow-up care, including English reports and telemedicine options
 
 Each of these steps involves choices that can significantly affect your experience and costs. We help international patients navigate all of them—so you can focus on your health, not the logistics.

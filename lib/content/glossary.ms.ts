@@ -116,16 +116,18 @@ export const glossaryMs: GlossaryTerm[] = [
     term: 'Medical Visa',
     category: 'Perjalanan & Perundangan',
     definition:
-      'Visa yang dikeluarkan untuk tujuan menerima rawatan perubatan, biasanya disokong oleh surat jemputan atau pengesahan daripada hospital yang merawat dan kadang-kadang oleh organisasi pemudah cara.',
+      'Istilah carian, bukan kategori visa berasingan di China. China tidak mempunyai kategori huruf visa "Medical Visa" yang tersendiri; visa M ialah untuk perniagaan dan perdagangan, bukan rawatan perubatan.',
+    context:
+      'Pemeriksaan kesihatan, rawatan pergigian rutin, TCM, lawatan pesakit luar, susulan dan pendapat perubatan kedua boleh menggunakan visa pelancong atau kemudahan tanpa visa yang terpakai jika semua syarat dipenuhi. Untuk pembedahan terancang, kemasukan hospital atau rawatan lain yang memerlukan penerimaan pesakit, sahkan surat jemputan hospital/dokumen cadangan penerimaan serta laluan S2 bagi tujuan perubatan sebelum berlepas. Jika keperluan hanya timbul selepas kemasukan yang sah, sebarang permohonan penggantian visa dalam China atau permit tinggal yang berkaitan mesti mematuhi peraturan dan tidak diluluskan secara automatik. Visa, tempoh tinggal dan penggantian ditentukan oleh pihak berkuasa berkenaan mengikut kes; semak pengumuman NIA terkini atau hubungi +86-12367 sebelum mengembara.',
   },
   {
     term: 'Visa-Free Transit',
     aliases: ['240-Hour Transit Visa Exemption', 'Transit Without Visa'],
     category: 'Perjalanan & Perundangan',
     definition:
-      'Dasar yang membenarkan warga asing yang layak memasuki negara untuk tempoh terhad tanpa visa semasa transit ke negara atau wilayah ketiga. China menawarkan pengecualian visa transit 240 jam kepada warga negara daripada senarai negara yang ditetapkan.',
+      'Dasar yang membenarkan warga asing yang layak memasuki negara untuk tempoh terhad tanpa visa semasa transit ke negara atau wilayah ketiga. Pengecualian visa transit 240 jam di China terpakai kepada warga daripada 57 negara yang memenuhi semua syarat.',
     context:
-      'Kelayakan, tempoh dan kawasan yang dibenarkan boleh berubah dan berbeza mengikut tempat masuk dan kewarganegaraan; dasar visa rasmi semasa harus sentiasa diperiksa sebelum perjalanan.',
+      'Bagi perjalanan perubatan, kemudahan ini hanya untuk pemeriksaan kesihatan jangka pendek, rawatan pergigian atau lawatan pesakit luar rutin yang layak; bukan untuk pembedahan terancang atau kemasukan hospital. Kelayakan, tempoh dan kawasan yang dibenarkan boleh berubah serta berbeza mengikut kewarganegaraan dan tempat masuk; semak pengumuman NIA terkini atau hubungi +86-12367 sebelum mengembara.',
   },
   {
     term: 'Informed Consent',

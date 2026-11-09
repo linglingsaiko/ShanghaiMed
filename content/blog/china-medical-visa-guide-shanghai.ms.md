@@ -32,13 +32,13 @@ Jika anda hanya mempunyai 30 saat, panduan ini meliputi kebanyakan situasi:
 
 | Situasi anda | Visa yang anda perlukan | Bolehkah anda memasuki tanpa visa? |
 |---|---|---|
-| Pemeriksaan kesihatan/pergigian/TCM/pendapat kedua sahaja, tanpa rawatan | **Visa Pelancong (L) atau kemasukan tanpa visa** (30 hari) | ✅ Ya, jika kewarganegaraan anda layak (lihat §3) |
-| Pembedahan yang dirancang, kemasukan hospital, atau rawatan pesakit dalam selama beberapa hari | **Visa S2 (Hal-hal Peribadi Jangka Pendek, tujuan perubatan)** | ❌ Tidak — anda mesti memohon terlebih dahulu dengan surat jemputan hospital |
-| Warga negara Malaysia atau Kazakhstan, rawatan dalam tempoh 30 hari | **Bebas visa** (perjanjian bilateral secara eksplisit termasuk tujuan perubatan) | ✅ Ya — sehingga 30 hari, 90 hari setiap tempoh 180 hari |
-| Sudah berada di China dengan sebarang visa dan menemui masalah perubatan yang memerlukan rawatan | **Tidak perlu keluar** — memohon untuk menukar/memanjangkan visa di dalam negara di Biro Kemasukan-Keluar | Lihat §4 |
+| Pemeriksaan kesihatan/pergigian/TCM/kunjungan pesakit luar biasa/susulan/pendapat kedua sahaja, tanpa kemasukan hospital | **Visa Pelancong (L) atau dasar pengecualian visa yang berkenaan** | ✅ Ya, jika kewarganegaraan dan itinerari anda layak (lihat §3) |
+| Pembedahan yang dirancang, kemasukan hospital atau rawatan yang memerlukan kemasukan | **Visa S2 (Hal Ehwal Peribadi Jangka Pendek, tujuan perubatan)** dengan surat jemputan/bukti kemasukan hospital; jika keperluan timbul selepas kemasukan yang sah, mohon penukaran status dalam negara mengikut peraturan | ❌ Bukan untuk kemasukan yang dirancang — lihat §4 untuk keadaan yang ditemui selepas ketibaan |
+| Warganegara Malaysia atau Kazakhstan, pemeriksaan/pergigian/pesakit luar dalam tempoh 30 hari | **Bebas visa** (perjanjian bilateral secara eksplisit merangkumi tujuan perubatan) | ✅ Ya — sehingga 30 hari, 90 hari setiap tempoh 180 hari; pembedahan/kemasukan yang dirancang tetap memerlukan S2 atau penukaran status dalam negara yang sah |
+| Sudah berada di China secara sah dan ditemui masalah perubatan yang memerlukan kemasukan hospital | **Tidak perlu keluar** — mohon permit tinggal jenis S2 atau status lain yang sesuai di Biro Keluar-Masuk dengan dokumentasi hospital | Lihat §4 |
 | Rawatan dijangka melebihi 180 hari | **Visa S1 → ditukar ke permit kediaman dalam tempoh 30 hari setelah kemasukan** | ❌ Tidak |
 
-**Pengejelasan penting:** China tidak mempunyai kategori visa yang secara harfiah dinamakan “Visa Perubatan.” Untuk rawatan perubatan yang dirancang, kategori yang betul ialah **Visa S2 (Hal-hal Peribadi Jangka Pendek) dengan tujuan rawatan perubatan**. Hospital dan agensi visa secara umum menyebut ini sebagai “visa perubatan” — dan secara fungsional, itulah betul-betulnya apa itu.
+**Penjelasan penting:** China tidak mempunyai kategori visa yang secara harfiah dinamakan “Visa Perubatan.” **Visa M adalah untuk perniagaan/perdagangan, bukan rawatan perubatan.** Untuk pembedahan yang dirancang, kemasukan hospital atau rawatan yang memerlukan kemasukan, kategori yang berkaitan ialah **Visa S2 (Hal Ehwal Peribadi Jangka Pendek) dengan tujuan rawatan perubatan**. “Visa perubatan” hanyalah nama tidak formal untuk laluan S2 ini.
 
 — *Peraturan mengenai Pentadbiran Kemasukan dan Keluar Rakyat Asing (Perintah No. 637 tahun 2013, sebagaimana dipinda oleh Perintah Majlis Negeri No. 814, berkuat kuasa pada 1 Oktober 2025), Art. 6 (kategori S2)*; [Kedutaan Besar China di Kazakhstan, Notis Permohonan Visa (April 2026)](https://kz.china-embassy.gov.cn/chn/lsfw/zhengjian/qianzheng/202604/t20260424_11899222.htm)
 
@@ -48,7 +48,7 @@ Jika anda hanya mempunyai 30 saat, panduan ini meliputi kebanyakan situasi:
 
 Sebelum menyelami secara terperinci, adalah berguna untuk memahami bagaimana China mengklasifikasikan pelawat asing. Sistem visa China menggunakan kategori huruf, masing-masing terikat dengan tujuan khusus lawatan. Terdapat 13 jenis visa biasa: C (krew), D (tempat tinggal tetap), F (pertukaran/lawatan), G (transit), J (wartawan), K (bakat teknologi muda), L (pelancongan), M (perniagaan/perdagangan), Q (reuni keluarga — melawat warga negara China/penduduk tetap), R (bakat tinggi), S (hal-hal peribadi/keluarga — melawat orang asing yang tinggal di China), X (belajar), dan Z (kerja).  
 
-Rawatan perubatan termasuk dalam **S1/S2 — Hal-hal Peribadi**. “S” singkatan untuk “sīrén shìwù” (私人事務), yang bermaksud “hal-hal peribadi.” Dalam kategori S2, kedutaan dan pusat visa China mengekalkan subkategori yang jelas khusus untuk rawatan perubatan, dengan syarat-syarat dokumennya sendiri (surat hospital, simpanan bank, peraturan pengiring). Sesiapa yang merancang untuk rawatan pesakit dalam atau pembedahan harus menggunakan laluan ini.  
+Rawatan perubatan termasuk dalam **S2 — Hal-hal Peribadi**. “S” singkatan untuk “sīrén shìwù” (私人事務), yang bermaksud “hal-hal peribadi.” Dalam kategori S2, kedutaan dan pusat visa China mengekalkan subkategori yang jelas khusus untuk rawatan perubatan, dengan syarat-syarat dokumennya sendiri (surat hospital, simpanan bank, peraturan pengiring). Sesiapa yang merancang untuk rawatan pesakit dalam atau pembedahan harus menggunakan laluan ini.  
 
 Perbezaan ini penting kerana pihak berkuasa imigresen China mengambil serius pematuhan tujuan visa. **Artikel 81 Undang-Undang Pentadbiran Keluar-Masuk** membenarkan pengusiran orang asing yang terlibat dalam aktiviti yang tidak konsisten dengan tujuan visa mereka. Namun — dan ini adalah nuansa kritikal yang kebanyakan panduan dalam talian salah faham — undang-undang juga menyediakan mekanisme yang manusiawi dan praktikal untuk menangani situasi perubatan yang timbul selepas kemasukan. Kami meliput ini dalam Bahagian 4 dan 5.
 
@@ -56,9 +56,9 @@ Perbezaan ini penting kerana pihak berkuasa imigresen China mengambil serius pem
 
 ---
 
-## 2. Visa S2 - Laluan Utama untuk Rawatan Perubatan yang Dirancang
+## 2. Visa S2 - Laluan Utama untuk Pembedahan atau Kemasukan Hospital yang Dirancang
 
-Visa S2 dengan tujuan perubatan merupakan laluan standard untuk mana-mana warga asing yang merancang untuk menjalani rawatan di hospital di China, termasuk di hospital awam Grade 3A dan pusat perubatan antarabangsa di Shanghai.
+Visa S2 dengan tujuan perubatan merupakan laluan standard untuk warga asing yang merancang pembedahan, kemasukan hospital, atau rawatan yang memerlukan kemasukan hospital di China, termasuk di hospital awam Grade 3A dan pusat perubatan antarabangsa di Shanghai.
 
 ### Apa yang anda Perlu Bersedia
 
@@ -78,8 +78,8 @@ Berdasarkan syarat-syarat semasa yang diterbitkan oleh kedutaan China dan pusat 
 3. Sijil diagnosis perubatan pesakit dan sebarang dokumen rujukan/pindahan, jika berkenaan
 
 **Pengiring (ahli keluarga yang menemani pesakit):**  
-- Pengiring mesti merupakan **ahli keluarga terdekat sahaja**: pasangan, ibu bapa, ibu mertua, anak-anak, pasangan anak-anak, adik-beradik, datuk nenek, datuk nenek sebelah ibu/bapa, cucu, dan cucu mertua
-- **Rakan-rakan, pengasuh, penjaga profesional, dan pembantu TIDAK layak untuk visa pengiring S2**
+- Pengiring hanya boleh terdiri daripada **pasangan, ibu bapa, anak, adik-beradik, datuk nenek sebelah ayah atau ibu, serta cucu sebelah ayah atau ibu** pesakit
+- **Rakan, pengasuh, penjaga profesional, pembantu peribadi dan penterjemah peribadi TIDAK layak untuk visa pengiring S2**
 - Maksimum **2 pengiring setiap pesakit**
 - Dokumen yang diperlukan: bukti hubungan darah (sijil perkahwinan, sijil kelahiran, sijil hubungan yang disahkan) + surat pengiring hospital
 
@@ -101,7 +101,7 @@ Sejak **30 Jun 2025**, semua permohonan visa China menggunakan sistem dalam tali
 **Masa pemprosesan** (standard):
 - Biasa: **4 hari bekerja**
 - Ekspres: **3 hari bekerja** (yuran tambahan)
-- Cepat: **1–2 hari bekerja** (untuk situasi perubatan yang benar-benar mendesak, dengan surat hospital yang secara eksplisit menyatakan keadaan kecemasan)
+- Cepat: **1–3 hari bekerja** (untuk situasi perubatan yang benar-benar mendesak, dengan surat hospital yang secara eksplisit menyatakan keadaan kecemasan)
 - Visa kemanusiaan kecemasan: pengeluaran pada hari yang sama atau hari bekerja berikutnya untuk kes kritikal, dengan surat hospital yang mendokumentasikan keadaan mengancam nyawa yang memerlukan rawatan dalam tempoh 7 hari
 
 ### Diskaun Polisi Semasa (Dipanjangkan Sehingga 31 Disember 2026)
@@ -121,14 +121,16 @@ Surat jemputan adalah dokumen yang memulakan seluruh proses S2, dan ia memerluka
 1. Serahkan rekod perubatan lengkap (pencitraan, patologi, laporan pembedahan, senarai ubat semasa) — diterjemahkan ke dalam format klinikal China
 2. Jabatan Perubatan Antarabangsa hospital mengalihkan fail anda ke pakar yang relevan
 3. Seorang ketua doktor meninjau kes anda (5-10 hari bekerja), mengesahkan kebolehrawatan dan memberikan pendapat rawatan awal
-4. **Untuk kes kompleks atau pembedahan**, perundingan video dengan doktor yang merawat mungkin dijadualkan supaya doktor boleh mengesahkan pelan rawatan
+4. **Untuk kes kompleks atau pembedahan**, hospital mungkin memerlukan konsultasi video klinikal dengan doktor yang merawat sebelum memutuskan sama ada kes boleh diterima. Amalan berbeza mengikut hospital dan kes, dan hospital mungkin mengenakan bayaran konsultasi klinikal yang berasingan
 5. Setelah doktor bersetuju untuk menerima anda, Jabatan Antarabangsa mengeluarkan surat jemputan formal dengan meterai rasmi hospital dan tandatangan doktor yang diberi kuasa (2-5 hari bekerja)
 
 **Surat tersebut mesti termasuk:** nama penuh pesakit, jantina, tarikh lahir, nombor pasport, diagnosis (dalam bahasa China/Inggeris), rawatan/pembedahan yang dicadangkan, anggaran tarikh kemasukan dan tempoh, butir-butir hubungan hospital, tandatangan doktor yang diberi kuasa, dan meterai hospital.  
 
-Jika anda menjangkakan beberapa kali kemasukan (cth., pembedahan berperingkat, kitaran kemoterapi, atau prosedur susulan), **surat jemputan mesti secara eksplisit menyatakan pelan rawatan berperingkat dan tarikh dijangka kembali**. Ini membolehkan pegawai konsul mengeluarkan visa S2 berbilang kali masuk yang sah untuk 6-12 bulan.
+Jika anda menjangkakan beberapa kali masuk (cth. pembedahan berperingkat, kitaran kemoterapi atau prosedur susulan), **surat jemputan harus menyatakan secara jelas pelan rawatan berperingkat dan anggaran tarikh kembali**. anda boleh memohon visa S2 berbilang kali masuk yang sah selama 6–12 bulan; pegawai konsul menentukan bilangan kemasukan, tempoh sah dan tempoh tinggal mengikut setiap kes.
 
-**Nota mengenai hospital awam:** Hospital awam Grade 3A teratas di Shanghai secara umumnya tidak menjadualkan pembedahan definitif tanpa perundingan secara peribadi. Namun, Jabatan Perubatan Antarabangsa mereka boleh mengeluarkan surat jemputan berdasarkan rekod bertulis ditambah perundingan video. Ini merupakan amalan standard dan secara sah mencukupi sebagai asas untuk pengeluarkan visa S2.
+**Nota mengenai penilaian hospital:** Penilaian penerimaan dan prosedur surat jemputan berbeza mengikut hospital dan kes. Untuk kes kompleks atau pembedahan, hospital mungkin meminta rekod bertulis dan konsultasi video klinikal sebelum memutuskan sama ada ia boleh menerima pesakit dan mengeluarkan surat jemputan. Ini bukan amalan standard yang seragam di semua hospital, dan konsultasi video klinikal hospital mungkin dikenakan bayaran hospital yang berasingan.
+
+**Konsultasi awal dalam talian percuma ShanghaiMed adalah berbeza:** konsultasi WhatsApp percuma kami menyediakan panduan umum dan koordinasi. Ia bukan konsultasi video klinikal oleh doktor, tidak menggantikannya, dan tidak merangkumi sebarang bayaran konsultasi klinikal yang mungkin dikenakan oleh hospital.
 
 ---
 
@@ -145,7 +147,7 @@ Setakat Oktober 2026, pemegang pasport biasa dari **50 negara** boleh memasuki C
 **Negeri-Negeri Teluk (Asia Barat) (4):** Arab Saudi, Oman, Kuwait, Bahrain  
 **Oceania (2):** New Zealand, Australia  
 **Amerika (6):** Brazil, Argentina, Chile, Peru, Uruguay, Kanada  
-Dasar ini sah sehingga **31 Disember 2026** untuk 48 negara (termasuk Sweden, ditambah pada 10 November 2025); **Rusia** dilanjutkan secara berasingan sehingga **31 Disember 2027**; **Brunei** tiada tarikh luput.
+Menurut Soalan Lazim Kementerian Luar Negeri China (dikemas kini pada Mei 2026), dasar ini sah sehingga **31 Disember 2026** untuk **48 negara** (termasuk Sweden, ditambah pada 10 November 2025); **Rusia** dilanjutkan secara berasingan sehingga **31 Disember 2027**; **Brunei** tiada tarikh luput. (48 + 1 + 1 = 50 negara keseluruhannya.)
 
 ⚠️ **Butiran penting untuk pelancong perubatan:** Tujuan yang dibenarkan ialah perniagaan, pelancongan, lawatan keluarga, pertukaran, dan transit — **rawatan perubatan tidak disenaraikan**. Namun, ini tidak bermaksud anda tidak boleh berjumpa dengan doktor semasa lawatan tersebut.
 
@@ -163,25 +165,25 @@ Dasar ini sah sehingga **31 Disember 2026** untuk 48 negara (termasuk Sweden, di
 
 Baru-baru ini dilanjutkan pada 20 Ogos 2026 (menambah Kyrgyzstan dan Vietnam), dasar tanpa visa transit selama 240 jam meliputi 57 negara dan 65 pelabuhan masuk, termasuk Shanghai Pudong, Shanghai Hongqiao, dan pelabuhan Shanghai. Pengunjung boleh tinggal sehingga 240 jam (10 hari) dalam kawasan pentadbiran pelabuhan (dari Shanghai, pergerakan dibenarkan di seluruh Jiangsu, Zhejiang, Anhui, dan Shanghai).
 
-Tujuan yang disenaraikan ialah pelancongan, perniagaan, lawatan, dan keluarga — **bukan rawatan perubatan**. Dasar ini dirancang untuk tinggal transit, dan anda tidak sepatutnya merancang rawatan perubatan sekitar itu. Jika anda sedang transit melalui Shanghai dan ingin menjalani pemeriksaan kesihatan cepat atau lawatan gigi semasa tempoh 10 hari anda, ini praktikalnya boleh dilakukan. Jangan gunakan kemasukan tanpa visa transit untuk rawatan perubatan yang dirancang.
+Tujuan yang disenaraikan ialah pelancongan, perniagaan, lawatan dan keluarga — **bukan rawatan perubatan**. Penumpang transit yang layak boleh memasukkan **pemeriksaan kesihatan ringkas, temu janji pergigian, konsultasi pesakit luar biasa, lawatan susulan atau pendapat kedua** dalam itinerari transit yang mematuhi syarat. Laluan ini **bukan untuk pembedahan yang dirancang, kemasukan hospital atau rawatan pesakit dalam**. Situasi tersebut memerlukan visa S2 dengan dokumentasi hospital atau, apabila keperluan timbul selepas kemasukan yang sah, penukaran status dalam negara mengikut peraturan berkenaan.
 
 **Sumber:** [Pengumuman NIA No. 4 tahun 2026 (20 Ogos 2026)](https://en.nia.gov.cn/n147418/n147463/c180637/content.html)
 
 ### C. Perjanjian Tanpa Visa Bilateral — Kes Khas
 
-Dua perjanjian bilateral secara eksplisit termasuk “rawatan perubatan” (医疗) sebagai tujuan yang dibenarkan; yang ketiga (Thailand) membenarkan lawatan singkat untuk urusan peribadi dengan kesan praktikal yang sama untuk rawatan pesakit luar:
+Dua perjanjian bilateral secara eksplisit menyenaraikan “rawatan perubatan” (医疗) sebagai tujuan yang dibenarkan. Perjanjian lain membenarkan lawatan singkat tanpa visa tetapi tidak secara eksplisit menyenaraikan rawatan perubatan; pemeriksaan ringkas dan rawatan pesakit luar tetap berbeza daripada pembedahan atau kemasukan hospital yang dirancang:
 
 | Negara | Tarikh berkuat kuasa | Tempoh maksimum setiap lawatan | Tempoh maksimum setiap 180 hari | Tujuan perubatan disenaraikan? |
 |---|---|---|---|---|
 | **Malaysia** | 17 Julai 2025 | ≤30 hari | ≤90 hari | ✅ Ya — secara eksplisit |
 | **Kazakhstan** | 10 November 2023 | ≤30 hari | ≤90 hari | ✅ Ya — secara eksplisit |
-| **Thailand** | 1 Mac 2024 | ≤30 hari | ≤90 hari | ⚠️ Tidak disenaraikan secara eksplisit (lawatan peribadi singkat secara umum diterima; pembedahan memerlukan S2) |
+| **Thailand** | 1 Mac 2024 | ≤30 hari | ≤90 hari | ⚠️ Tidak disenaraikan secara eksplisit; pemeriksaan/rawatan pesakit luar singkat boleh tanpa visa, manakala pembedahan/kemasukan yang dirancang memerlukan S2 atau penukaran status dalam negara yang sah |
 
-Selain itu, **UAE** telah mempunyai perjanjian bebas visa yang komprehensif dengan China sejak 16 Januari 2018 (sehingga 30 hari setiap lawatan, sehingga 90 hari setiap tempoh 180 hari, tertakluk kepada setem imigresen semasa ketibaan) — perjanjian pertama seperti ini antara China dan sebuah negara Timur Tengah. Teks perjanjian tidak secara eksplisit menyenaraikan “perubatan” seperti perjanjian Malaysia dan Kazakhstan, tetapi pemeriksaan kesihatan 30 hari dan lawatan pesakit luar secara rutin dilakukan tanpa visa; rawatan pesakit dalam memerlukan penukaran domestik kepada S2.
+Selain itu, **UAE** telah mempunyai perjanjian bebas visa yang komprehensif dengan China sejak 16 Januari 2018 (sehingga 30 hari setiap lawatan, sehingga 90 hari setiap tempoh 180 hari, tertakluk kepada setem imigresen semasa ketibaan) — perjanjian pertama seperti ini antara China dan sebuah negara Timur Tengah. Teks perjanjian tidak secara eksplisit menyenaraikan “perubatan” seperti perjanjian Malaysia dan Kazakhstan, tetapi pemeriksaan kesihatan dan lawatan pesakit luar dalam tempoh 30 hari boleh dilakukan tanpa visa. Pembedahan atau kemasukan yang dirancang memerlukan S2; jika keperluan timbul selepas kemasukan yang sah, laluan penukaran status dalam negara tersedia mengikut peraturan berkenaan.
 
-Singapura juga mempunyai perjanjian bebas visa bilateral dengan China (berkuat kuasa 9 Februari 2024, sehingga 30 hari setiap lawatan). Seperti Thailand dan UAE, perjanjian tersebut tidak secara eksplisit menyenaraikan “perubatan” sebagai tujuan, tetapi pemeriksaan kesihatan dan lawatan pesakit luar secara rutin dilakukan tanpa visa.
+Singapura juga mempunyai perjanjian bebas visa bilateral dengan China (berkuat kuasa 9 Februari 2024, sehingga 30 hari setiap lawatan). Seperti Thailand dan UAE, perjanjian tersebut tidak secara eksplisit menyenaraikan “perubatan” sebagai tujuan, tetapi pemeriksaan kesihatan dan lawatan pesakit luar boleh dilakukan tanpa visa.
 
-Untuk **pesakit Malaysia dan Kazakhstan** — dua pasaran utama ShanghaiMed — ini merupakan kelebihan yang bermakna: pemeriksaan, kerja gigi, perundingan pesakit luar, dan bahkan prosedur kecil boleh dilakukan sepenuhnya tanpa visa dalam tempoh 30 hari.
+Untuk **pesakit Malaysia dan Kazakhstan** — dua pasaran utama ShanghaiMed — ini merupakan kelebihan yang bermakna: pemeriksaan, rawatan pergigian, TCM, konsultasi pesakit luar biasa, lawatan susulan dan pendapat kedua boleh dilakukan tanpa visa dalam tempoh 30 hari. **Pembedahan yang dirancang, kemasukan hospital dan rawatan pesakit dalam tidak termasuk dalam laluan pesakit luar ini**; gunakan S2 dengan dokumentasi hospital atau laluan penukaran status dalam negara yang sah jika berkenaan.
 
 **Sumber:** [Kementerian Luar Negeri, Jadual Perjanjian Pengecualian Visa Bersama (dikemaskini pada 29 Mei 2026)](https://cs.mfa.gov.cn/zggmcgx/cgqzapecswlxk/ylb/202607/t20260716_11984014.html); [Kedutaan Besar China di Malaysia, notis bebas visa](https://my.china-embassy.gov.cn/fwzc/lsyw/lszj/fhqz2024/sbqzxz/202506/t20250606_11642531.htm); [Kedutaan Besar China di Kazakhstan (kemaskini April 2026)](https://kz.china-embassy.gov.cn/chn/lsfw/zhengjian/qianzheng/202604/t20260424_11899222.htm)
 
@@ -189,7 +191,7 @@ Untuk **pesakit Malaysia dan Kazakhstan** — dua pasaran utama ShanghaiMed — 
 
 Dasar bebas visa wilayah Hainan secara eksplisit menyertakan “rawatan perubatan” sebagai tujuan yang dibenarkan, yang mencerminkan kedudukan Hainan sebagai zon perintis pelancongan perubatan (khususnya Zon Perintis Pelancongan Perubatan Antarabangsa Boao Lecheng). Namun, tempoh tinggal bebas visa ini terhad kepada wilayah Hainan sahaja — ia tidak boleh digunakan untuk melancong ke Shanghai untuk rawatan. Kami menyenaraikannya di sini untuk kelengkapan.
 
-**Sumber:** [Dasar Kemasukan Bebas Visa Wilayah NIA (20 Ogos 2026)](https://en.nia.gov.cn/n147418/n147463/c180637/content.html)
+**Sumber:** [Dasar Kemasukan Bebas Visa Wilayah NIA (20 Ogos 2026)](https://www.nia.gov.cn/News/news/content.jsp?id=1726630)
 
 ---
 
@@ -235,7 +237,7 @@ Untuk kecemasan perubatan yang sangat mendesak di mana tiada masa untuk memohon 
 
 ### Pengiring: Keluarga lawan Pembantu/Pengasuh
 
-Subkategori visa pengiring S2 terhad secara ketat kepada ahli keluarga terdekat (pasangan, ibu bapa, ibu bapa mertua, anak-anak, pasangan anak-anak, adik-beradik, datuk nenek, datuk nenek sebelah ibu/bapa, cucu-cucu, cucu-cucu mertua), dengan maksimum **2 pengiring setiap pesakit**. Rakan-rakan, pembantu profesional, pekerja domestik, pembantu peribadi, dan penterjemah swasta tidak boleh mendapatkan visa pengiring S2.
+Subkategori visa pengiring S2 terhad secara ketat kepada **pasangan, ibu bapa, anak, adik-beradik, datuk nenek sebelah ayah atau ibu, serta cucu sebelah ayah atau ibu** pesakit, dengan maksimum **2 pengiring setiap pesakit**. Rakan, pengasuh profesional, pekerja domestik, pembantu peribadi, penjaga dan penterjemah peribadi tidak boleh mendapatkan visa pengiring S2.
 
 **Penyelesaian praktikal:**
 - Untuk penginapan singkat, pembantu atau penolong boleh menemani pesakit dengan visa pelancong (L)
@@ -260,7 +262,7 @@ Untuk rawatan yang dijangka melebihi 6 bulan (cth., rawatan kanser berpanjangan,
 
 ### Visa S2 Masuk Berbilang Kali untuk Rawatan Berperingkat
 
-Untuk pesakit yang memerlukan pembedahan berperingkat (cth., prosedur ortopedi dua peringkat), kemoterapi berbilang kali, atau prosedur susulan yang dirancang, surat jemputan hospital awal harus menyatakan secara jelas jadual rawatan berperingkat dan tarikh jangkaan kembalinya. Pegawai konsular kemudian boleh mengeluarkan **visa S2 masuk berbilang kali yang sah untuk 6 atau 12 bulan**, membenarkan 30-90 hari tinggal setiap kali kemasukan, tanpa memerlukan permohonan visa baharu untuk setiap lawatan.
+Untuk pesakit yang memerlukan pembedahan berperingkat (cth. prosedur ortopedik dua peringkat), kemoterapi berbilang kitaran atau prosedur susulan yang dirancang, surat jemputan hospital awal harus menyatakan secara jelas jadual rawatan berperingkat dan anggaran tarikh kembali. anda boleh memohon **visa S2 berbilang kali masuk yang sah selama 6 atau 12 bulan**, dengan tempoh tinggal 30–90 hari setiap kali masuk. Pegawai konsul menentukan bilangan kemasukan, tempoh sah dan tempoh tinggal secara individu; pengeluaran tidak dijamin.
 
 ### Bagaimana Jika Permohonan Visa Saya Ditolak?
 
@@ -271,7 +273,7 @@ Sebab-sebab umum untuk penolakan visa S2 termasuk:
 - Pelanggaran imigresen sebelumnya di China
 - Pilihan kategori visa yang salah
 
-Permohonan boleh dihantar semula setelah membetulkan masalah. Untuk situasi perubatan yang mendesak, hubungi bahagian konsular secara langsung melalui e-mel untuk meminta pemprosesan dipercepatkan secara kemanusiaan. Sentiasa memastikan dokumen-dokumen tersebut asli dan lengkap; konsulat umumnya meluluskan permohonan yang lengkap dan jujur.
+Permohonan boleh dihantar semula setelah masalah dibetulkan. Untuk situasi perubatan yang mendesak, hubungi bahagian konsul secara langsung melalui e-mel untuk meminta pemprosesan kemanusiaan yang dipercepatkan. Sentiasa pastikan dokumen adalah tulen dan lengkap. **Dokumen yang lengkap tidak menjamin kelulusan**: pihak berkuasa konsul dan imigresen menilai setiap permohonan secara individu.
 
 ---
 
@@ -289,7 +291,7 @@ Permohonan boleh dihantar semula setelah membetulkan masalah. Untuk situasi peru
 ### Senarai Semak Sebelum Berangkat
 
 - [ ] Pasport sah (ketahanan 6+ bulan, lebih daripada 2 halaman kosong)
-- [ ] Visa S2 (untuk rawatan yang dirancang) atau kelayakan tanpa visa yang disahkan
+- [ ] Visa S2 (untuk pembedahan/kemasukan hospital yang dirancang), atau visa pelancong (L) yang sesuai / kelayakan tanpa visa yang disahkan untuk rawatan pesakit luar biasa
 - [ ] Surat jemputan/surat kemasukan hospital (salinan cetak + salinan digital)
 - [ ] Penyata/sertifikat bank (≥ USD 10,000 atau setara)
 - [ ] Kad ketibaan dalam talian yang lengkap (percuma, laman web rasmi [s.nia.gov.cn](https://s.nia.gov.cn/ArrivalCardFillingPC/) — **berhati-hati dengan laman web pihak ketiga palsu yang mengenakan yuran**)
@@ -307,13 +309,13 @@ Permohonan boleh dihantar semula setelah membetulkan masalah. Untuk situasi peru
 Ya, jika anda memiliki pasport dari salah satu daripada 50 negara tanpa visa unilateral, atau dari Malaysia/Kazakhstan/Thailand/UAE/Singapura (tanpa visa bilateral). Pemeriksaan kesihatan adalah perkhidmatan kesihatan pencegahan, bukan rawatan pesakit dalam. Tempah temujanji, bawa pasport anda, dan selesaikan lawatan dalam tempoh 30 hari.  
 
 **S: Saya mengetahui saya memerlukan pembedahan semasa pemeriksaan. Adakah saya perlu terbang pulang dan memohon semula?**  
-Tidak. Seperti yang dinyatakan dalam Bahagian 4, anda boleh menukar/memanjangkan visa anda di dalam negara di Biro Kemasukan dan Keluar Shanghai dengan diagnosis hospital dan dokumen kemasukan. Rawatan boleh dimulakan tanpa meninggalkan China. Dalam keadaan kecemasan, hospital akan merawat pesakit terlebih dahulu - formaliti visa akan ditangani secara serentak.  
+Tidak. anda boleh mengemukakan permohonan pengeluaran semula visa di dalam China atau permit tinggal yang sesuai/perlanjutan di Biro Keluar-Masuk Shanghai dengan diagnosis hospital dan dokumen cadangan kemasukan; anda tidak perlu meninggalkan China semata-mata untuk mengemukakan permohonan itu. Dalam kecemasan, hospital merawat dan menstabilkan pesakit dahulu sementara formaliti diuruskan. Untuk rawatan bukan kecemasan, hospital yang merawat menentukan jadwal diagnosis dan rawatan, manakala pihak berkuasa imigresen yang berkenaan memutuskan permohonan imigresen, masing-masing mengikut kes; kelulusan atau rawatan segera tidak berlaku secara automatik.  
 
 **S: Bolehkah saya membawa pengasuh/penjaga/penolong peribadi saya?**  
 Visa pengiring S2 terhad kepada ahli keluarga terdekat (pasangan, ibu bapa, anak-anak, adik-beradik, datuk nenek, cucu; maksimum 2 orang). Untuk penjagaan profesional atau sokongan terjemahan, aturkan perkhidmatan tempatan melalui koordinator perubatan anda setelah ketibaan. Pengasuh dan penolong boleh menemani anda jangka pendek dengan visa pelancong.
 
 **S: Adakah saya benar-benar memerlukan USD 10,000 di bank?**  
-Ini merupakan syarat dokumentasi yang ditetapkan oleh konsulat China untuk visa perubatan S2. Ia bukan pembayaran — ia merupakan sijil bank yang menunjukkan anda boleh membiayai kos rawatan dan kos sara hidup semasa anda tinggal. Batasan sebenar mungkin sedikit berbeza mengikut kedutaan; semak laman web kedutaan China tempatan anda sebelum memohon.
+Ini merupakan syarat dokumentasi yang ditetapkan oleh konsulat China untuk visa S2 tujuan perubatan. Ia bukan pembayaran — ia merupakan sijil bank asal yang menunjukkan baki sekurang-kurangnya USD 10,000 (atau setara) untuk membiayai rawatan dan kos sara hidup semasa anda tinggal. Sahkan format dokumen dan butiran penyerahan dengan kedutaan atau konsulat China yang berkaitan sebelum memohon.
 
 **S: Bolehkah saya memohon visa China sepenuhnya dalam talian?**  
 Pemohonan itu sendiri adalah dalam talian — sejak 30 Jun 2025, semua permohonan visa China menggunakan [consular.mfa.gov.cn](https://consular.mfa.gov.cn/VISA/). Selepas pengemuan dalam talian dan kelulusan borang, anda mencetak halaman pengesahan dan mengemukakan dokumen fizikal (dan biometrik, jika diperlukan) di pusat permohonan visa yang ditentukan. Nota: Sistem visa sepenuhnya elektronik telah diumumkan sedang dalam pembikinan; semak pengumuman terkini Pentadbiran Imigresen Nasional untuk kemaskini.
@@ -328,7 +330,7 @@ Di hospital awam Gred 3A terkemuka di Shanghai dengan jabatan antarabangsa, dan 
 
 ## Sumber & Rujukan
 
-Semua maklumat polisi dalam panduan ini telah disahkan berdasarkan sumber-sumber rasmi kerajaan China pada 24 Oktober 2026. Polisi visa berubah dengan kerap — sentiasa semak pengumuman terkini daripada Pentadbiran Imigresen Nasional / Kementerian Luar Negeri sebelum melancong.  
+Semua maklumat dasar dalam panduan ini telah disahkan berdasarkan sumber rasmi kerajaan China pada **25 Oktober 2026**. Dasar visa sering berubah — sebelum mengembara, sentiasa semak pengumuman terkini Pentadbiran Imigresen Nasional (NIA) atau hubungi **+86-12367**.  
 
 **Undang-undang dan peraturan:**  
 1. Peraturan mengenai Pentadbiran Kemasukan dan Keluar Rakyat Asing (Perintah Majlis Negeri No. 814, pindaan 2025) — [https://ch.china-embassy.gov.cn/ls_fw_s/flfgmqxy/202608/t20260821_12008307.htm](https://ch.china-embassy.gov.cn/ls_fw_s/flfgmqxy/202608/t20260821_12008307.htm)
@@ -337,7 +339,7 @@ Semua maklumat polisi dalam panduan ini telah disahkan berdasarkan sumber-sumber
 **Polisi imigresen:**  
 3. Pentadbiran Imigresen Nasional (NIA) — [https://en.nia.gov.cn/](https://en.nia.gov.cn/)
 4. Pengumuman NIA No. 4 tahun 2026 (perluasan visa transit tanpa bayaran selama 240 jam, 20 Ogos 2026) — [https://en.nia.gov.cn/n147418/n147463/c180637/content.html](https://en.nia.gov.cn/n147418/n147463/c180637/content.html)
-5. Polisi kemasukan tanpa visa di rantau NIA (20 Ogos 2026) — [https://en.nia.gov.cn/n147418/n147463/c180637/content.html](https://en.nia.gov.cn/n147418/n147463/c180637/content.html)
+5. Polisi kemasukan tanpa visa di rantau NIA (20 Ogos 2026) — [https://www.nia.gov.cn/News/news/content.jsp?id=1726630](https://www.nia.gov.cn/News/news/content.jsp?id=1726630)
 6. Kad Kedatangan Dalam Talian NIA — [https://s.nia.gov.cn/ArrivalCardFillingPC/](https://s.nia.gov.cn/ArrivalCardFillingPC/)
 
 **Kementerian Luar Negeri:**  
@@ -361,12 +363,12 @@ Semua maklumat polisi dalam panduan ini telah disahkan berdasarkan sumber-sumber
 
 ---
 
-**Penafian:** Panduan ini mencerminkan polisi visa dan imigresen China seperti yang disahkan pada 24 Oktober 2026. Senarai bebas visa dan dasar pelabuhan China disesuaikan secara berkala - kadang-kadang beberapa kali setahun. Sentiasa periksa pengumuman terkini di laman web [Pentadbiran Imigresen Nasional](https://en.nia.gov.cn/) atau hubungi hotline multibahasa 24 jam NIA **+86-12367** (tersedia dalam bahasa Inggeris/Rusia/Jepun/Korea) sebelum membuat pengaturan perjalanan. Artikel ini tidak menjamin pengeluaran visa; semua keputusan visa dibuat oleh pegawai konsular China berdasarkan kes demi kes. Panduan ini adalah untuk tujuan maklumat sahaja dan tidak menggantikan nasihat visa profesional khusus untuk situasi anda.
+**Penafian:** Panduan ini mencerminkan dasar visa dan imigresen China seperti yang disahkan pada **25 Oktober 2026**. Sebelum mengembara, semak pengumuman terkini di [laman web Pentadbiran Imigresen Nasional](https://en.nia.gov.cn/) atau hubungi talian berbilang bahasa 24 jam NIA **+86-12367**. Artikel ini tidak menjamin pengeluaran visa; semua keputusan visa dibuat oleh pihak berkuasa konsul dan imigresen China mengikut setiap kes. Panduan ini adalah untuk tujuan maklumat sahaja dan tidak menggantikan nasihat visa profesional yang khusus untuk situasi anda.
 
 ---
 
 ## Tentang Penulis
 
-**Sara Ma** ialah pengasas ShanghaiMed. Beliau memiliki **Sarjana Muda Sains Kejururawatan dari Sekolah Perubatan Universiti Jiao Tong Shanghai (SJTU)**, merupakan jururawat berdaftar berlesen (RN) dengan **sertifikasi ISPN (Standard Antarabangsa untuk Jururawat Profesional)**, dan mempunyai lebih daripada satu dekad pengalaman amali dalam operasi penjagaan kesihatan antarabangsa premium di hospital awam Grade 3A terkemuka di Shanghai. Beliau telah menyelaraskan penjagaan perubatan untuk pesakit dari seluruh Timur Tengah, Asia Tenggara, Eropah, dan Oceania. Fasih dalam bahasa Mandarin, Inggeris, dan Jepun (JLPT N1), Sara mengasaskan ShanghaiMed untuk menjembatani jurang antara pesakit antarabangsa dan hospital awam berkualiti tinggi di Shanghai, membuat penjagaan perubatan China berkualiti tinggi boleh diakses dan dapat dinavigasi oleh pesakit yang tidak bertutur dalam bahasa China atau tidak mempunyai hubungan tempatan.
+**Sara Ma** ialah pengasas ShanghaiMed. Beliau ialah jururawat berdaftar berlesen (RN) dengan Ijazah Sarjana Kejururawatan (BSN) dari Shanghai Jiao Tong University School of Medicine dan sertifikasi **ISPN (International Standards for Professional Nurses)**. Beliau mempunyai lebih daripada satu dekad pengalaman amali dalam operasi penjagaan kesihatan antarabangsa premium di hospital awam Gred 3A terkemuka di Shanghai. Beliau telah menyelaraskan penjagaan perubatan untuk pesakit dari seluruh Timur Tengah, Asia Tenggara, Eropah, dan Oceania. Fasih dalam bahasa Mandarin, Inggeris, dan Jepun, Sara Ma mengasaskan ShanghaiMed untuk menjembatani jurang antara pesakit antarabangsa dan hospital awam berkualiti tinggi di Shanghai, membuat penjagaan perubatan China berkualiti tinggi boleh diakses dan dapat dinavigasi oleh pesakit yang tidak bertutur dalam bahasa China atau tidak mempunyai hubungan tempatan.
 
 *Jika anda merancang rawatan perubatan di Shanghai dan memerlukan bantuan dalam pemilihan hospital, penyelarasan surat jemputan, persediaan visa, atau sokongan di tempat, anda boleh menghubungi ShanghaiMed melalui butir-butir syarikat di laman web ini atau WhatsApp. Kami menyelaraskan dengan jabatan antarabangsa hospital awam Grade 3A di Shanghai, menterjemahkan rekod perubatan, mengaturkan perundingan video dengan doktor yang merawat, dan membantu dengan dokumentasi visa dan logistik dalam negara.*

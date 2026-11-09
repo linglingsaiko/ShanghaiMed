@@ -116,16 +116,18 @@ export const glossaryId: GlossaryTerm[] = [
     term: 'Medical Visa',
     category: 'Perjalanan & Hukum',
     definition:
-      'Visa yang dikeluarkan untuk tujuan menerima perawatan medis, biasanya didukung oleh surat undangan atau konfirmasi dari rumah sakit yang merawat dan terkadang oleh organisasi fasilitator.',
+      'Istilah pencarian, bukan kategori visa tersendiri di Tiongkok. Tiongkok tidak memiliki kategori huruf visa "Medical Visa" yang berdiri sendiri; visa M adalah untuk bisnis dan perdagangan, bukan perawatan medis.',
+    context:
+      'Pemeriksaan kesehatan, perawatan gigi rutin, TCM, kunjungan rawat jalan, kunjungan kontrol, dan pendapat medis kedua dapat menggunakan visa turis atau fasilitas bebas visa yang berlaku jika seluruh persyaratan terpenuhi. Untuk operasi terencana, rawat inap, atau perawatan lain yang memerlukan penerimaan pasien, konfirmasikan surat undangan rumah sakit/dokumen rencana penerimaan serta jalur S2 untuk tujuan medis sebelum keberangkatan. Jika kebutuhan baru muncul setelah masuk secara sah, permohonan penggantian visa di dalam wilayah Tiongkok atau izin tinggal terkait harus mengikuti peraturan dan tidak otomatis disetujui. Visa, masa tinggal, dan penggantian diputuskan oleh otoritas berwenang secara kasus per kasus; periksa pengumuman NIA terbaru atau hubungi +86-12367 sebelum bepergian.',
   },
   {
     term: 'Visa-Free Transit',
     aliases: ['240-Hour Transit Visa Exemption', 'Transit Without Visa'],
     category: 'Perjalanan & Hukum',
     definition:
-      'Kebijakan yang mengizinkan warga negara asing yang memenuhi syarat untuk memasuki negara dalam jangka waktu terbatas tanpa visa saat transit ke negara atau wilayah ketiga. Tiongkok menawarkan pengecualian visa transit 240 jam bagi warga negara dari daftar negara yang ditentukan.',
+      'Kebijakan yang mengizinkan warga negara asing yang memenuhi syarat untuk memasuki negara dalam jangka waktu terbatas tanpa visa saat transit ke negara atau wilayah ketiga. Pengecualian visa transit 240 jam di Tiongkok berlaku bagi warga dari 57 negara yang memenuhi seluruh persyaratan.',
     context:
-      'Kelayakan, durasi dan area yang diizinkan dapat berubah dan bervariasi menurut titik masuk dan kewarganegaraan; kebijakan visa resmi terkini harus selalu diperiksa sebelum bepergian.',
+      'Dalam perjalanan medis, fasilitas ini hanya untuk pemeriksaan kesehatan jangka pendek, perawatan gigi, atau kunjungan rawat jalan rutin yang memenuhi syarat; tidak untuk operasi terencana atau rawat inap. Kelayakan, durasi, dan area yang diizinkan dapat berubah serta berbeda menurut kewarganegaraan dan titik masuk; periksa pengumuman NIA terbaru atau hubungi +86-12367 sebelum bepergian.',
   },
   {
     term: 'Informed Consent',

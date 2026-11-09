@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import FreeConsultationContent from '@/components/pages/FreeConsultationContent'
 
 export const metadata: Metadata = {
-  title: 'Free Medical Consultation — ShanghaiMed',
-  description: 'Book a free, confidential, no-obligation medical consultation with ShanghaiMed. Get matched with top specialists at Shanghai Grade 3A hospitals, receive a personalized treatment plan and transparent cost estimate before you travel.',
+  title: 'Free Initial Online Consultation — ShanghaiMed',
+  description: 'Request a free, confidential, no-obligation preliminary online coordination consultation via WhatsApp. ShanghaiMed helps assess your needs, recommend suitable hospital and specialist options, and provide an estimated budget. This is not a hospital clinical consultation or a personalized treatment plan.',
   alternates: {
     canonical: 'https://shanghaimedhealth.com/free-consultation',
     languages: {
@@ -20,8 +20,8 @@ export default function FreeConsultationPage() {
   const pageJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    name: 'Free Medical Consultation',
-    description: 'Free, confidential, no-obligation medical consultation. Top specialist matching at Shanghai Grade 3A hospitals.',
+    name: 'Free Initial Online Consultation',
+    description: 'Free, confidential, no-obligation preliminary online coordination consultation via WhatsApp, including needs assessment and suitable hospital and specialist recommendations. This is not a hospital clinical consultation.',
     url: 'https://shanghaimedhealth.com/free-consultation',
     isPartOf: {
       '@type': 'MedicalBusiness',
@@ -29,14 +29,15 @@ export default function FreeConsultationPage() {
     },
     mainEntity: {
       '@type': 'Service',
-      name: 'Free Initial Medical Consultation',
-      serviceType: 'Medical consultation and specialist matching',
+      name: 'Free Initial Online Coordination Consultation',
+      serviceType: 'Preliminary online coordination consultation and specialist matching',
       provider: { '@type': 'MedicalBusiness', name: 'ShanghaiMed' },
       areaServed: { '@type': 'Place', name: 'Shanghai, China' },
       availableChannel: {
         '@type': 'ServiceChannel',
         availableLanguage: ['English', 'Chinese', 'Japanese', 'Arabic', 'Russian', 'Mongolian'],
         serviceUrl: 'https://wa.me/8613818274110',
+        description: 'Provided via WhatsApp; not a hospital clinical video consultation and not a replacement for physician diagnosis.',
       },
     },
   }

@@ -18,13 +18,8 @@ const credentialsData: Record<'en' | 'ja' | 'ar' | 'ru' | 'mn' | 'ms' | 'id', Cr
   en: [
     {
       title: 'ISPN — International Standards for Professional Nurses',
-      detail: 'International certification for registered nurses, issued by the International Society of Nurses in Cancer Care and affiliated bodies',
+      detail: 'International Standards for Professional Nurses — international nursing proficiency examination for registered nurses, developed with CGFNS International and administered through the Chinese health personnel authority',
       category: 'Nursing License',
-    },
-    {
-      title: 'Senior Registered Nurse',
-      detail: 'Senior-level professional title within China’s national health professional ranking system, awarded by the Shanghai Municipal Health Commission',
-      category: 'Professional Title',
     },
     {
       title: 'JLPT N1 — Japanese-Language Proficiency Test, Level N1',
@@ -36,17 +31,18 @@ const credentialsData: Record<'en' | 'ja' | 'ar' | 'ru' | 'mn' | 'ms' | 'id', Cr
       detail: 'Licensed by the Shanghai Municipal Health Commission',
       category: 'Nursing License',
     },
+    {
+      title: 'BSN — Bachelor of Science in Nursing',
+      detail: 'Shanghai Jiao Tong University School of Medicine',
+      category: 'Education',
+    },
+
   ],
   ja: [
     {
       title: 'ISPN — International Standards for Professional Nurses',
-      detail: '国際看護師向けの国際認定。国際がん看護学会（ISNCC）および関連機関により授与。',
+      detail: '国際看護師資格（ISPN）。CGFNSインターナショナルと中国の衛生人材機関が共同で実施する、看護師の国際的な知識・実践水準を評価する資格試験。',
       category: '看護師免許',
-    },
-    {
-      title: '上級看護師',
-      detail: '中国の国家衛生専門技術資格制度における上級の専門職称号。上海市衛生健康委員会より授与。',
-      category: '専門職称号',
     },
     {
       title: 'JLPT N1 — 日本語能力試験 最高レベル',
@@ -58,17 +54,18 @@ const credentialsData: Record<'en' | 'ja' | 'ar' | 'ru' | 'mn' | 'ms' | 'id', Cr
       detail: '上海市衛生健康委員会より看護師執業資格を取得。',
       category: '看護師免許',
     },
+    {
+      title: 'BSN — 看護学学士',
+      detail: '上海交通大学医学院',
+      category: '学歴',
+    },
+
   ],
   ar: [
     {
       title: 'ISPN — المعايير الدولية للممرضين المهنيين',
-      detail: 'شهادة دولية للممرضين المسجلين، تصدرها الجمعية الدولية لممرضي رعاية السرطان والجهات المنتسبة إليها',
+      detail: 'المعايير الدولية للممرضين المهنيين — اختبار دولي لكفاءة التمريض للممرضين المسجلين، طُوّر بالتعاون مع CGFNS International ويُدار عبر الجهة الصحية الصينية المختصة',
       category: 'رخصة تمريض',
-    },
-    {
-      title: 'ممرضة مسجلة كبيرة (主管护师)',
-      detail: 'لقب مهني رفيع ضمن نظام التصنيف الوطني الصيني للكوادر الصحية، تمنحه لجنة شنغهاي البلدية للصحة',
-      category: 'لقب مهني',
     },
     {
       title: 'JLPT N1 — اختبار كفاءة اللغة اليابانية، المستوى N1',
@@ -80,17 +77,18 @@ const credentialsData: Record<'en' | 'ja' | 'ar' | 'ru' | 'mn' | 'ms' | 'id', Cr
       detail: 'مرخصة من لجنة شنغهاي البلدية للصحة',
       category: 'رخصة تمريض',
     },
+    {
+      title: 'BSN — بكالوريوس العلوم في التمريض',
+      detail: 'كلية الطب بجامعة شنغهاي جياو تونغ',
+      category: 'التعليم',
+    },
+
   ],
   ru: [
     {
       title: 'ISPN — Международные стандарты для профессиональных медсестёр',
-      detail: 'Международная сертификация для дипломированных медсестёр, выдается Международным обществом медсестёр в области онкологической помощи и связанными организациями',
+      detail: 'Международные стандарты для профессиональных медсестёр — международный экзамен на профессиональную пригодность для дипломированных медсестёр, разработанный совместно с CGFNS International и проводимый через профильный орган здравоохранения Китая',
       category: 'Медицинская лицензия',
-    },
-    {
-      title: 'Медсестра высшей категории (主管护师)',
-      detail: 'Высшее профессиональное звание в национальной китайской системе квалификации медицинских работников, присуждается Шанхайской муниципальной комиссией по здравоохранению',
-      category: 'Профессиональное звание',
     },
     {
       title: 'JLPT N1 — Экзамен по японскому языку, уровень N1',
@@ -102,17 +100,18 @@ const credentialsData: Record<'en' | 'ja' | 'ar' | 'ru' | 'mn' | 'ms' | 'id', Cr
       detail: 'Лицензия выдана Шанхайской муниципальной комиссией по здравоохранению',
       category: 'Медицинская лицензия',
     },
+    {
+      title: 'BSN — Бакалавр наук в сестринском деле',
+      detail: 'Школа медицины Шанхайского университета Цзяотун',
+      category: 'Образование',
+    },
+
   ],
   mn: [
     {
       title: 'ISPN — Мэргэжлийн сувилагчдын олон улсын стандарт',
-      detail: 'Бүртгэлтэй сувилагчдад зориулсан олон улсын гэрчилгээ бөгөөд Хавдрын тусламж үйлчилгээний сувилагчдын олон улсын нийгэмлэг болон холбогдох байгууллагуудаас олгодог',
+      detail: 'Мэргэжлийн сувилагчдын олон улсын стандарт — CGFNS International-тай хамтран боловсруулсан, Хятадын эрүүл мэндийн хүний нөөцийн байгууллагаар зохион байгуулагддаг олон улсын сувилагчийн мэргэжлийн шалгалт',
       category: 'Сувилахуйн лиценз',
-    },
-    {
-      title: 'Ахлах бүртгэлтэй сувилагч (主管护师)',
-      detail: 'Хятадын эрүүл мэндийн мэргэжилтнүүдийн үндэсний мэргэшлийн систем дэх ахлах түвшний мэргэжлийн цол бөгөөд Шанхай хотын Эрүүл Мэндийн Комиссоос олгодог',
-      category: 'Мэргэжлийн цол',
     },
     {
       title: 'JLPT N1 — Япон хэлний чадварын шалгалт, N1 түвшин',
@@ -124,17 +123,18 @@ const credentialsData: Record<'en' | 'ja' | 'ar' | 'ru' | 'mn' | 'ms' | 'id', Cr
       detail: 'Шанхай хотын Эрүүл Мэндийн Комиссоос лиценз олгосон',
       category: 'Сувилахуйн лиценз',
     },
+    {
+      title: 'BSN — Сувилалын шинжлэх ухааны бакалавр',
+      detail: 'Шанхайн Жяо Тонг их сургуулийн Анагаах ухааны сургууль',
+      category: 'Боловсрол',
+    },
+
   ],
   ms: [
     {
       title: 'ISPN — International Standards for Professional Nurses (Piawaian Antarabangsa untuk Jururawat Profesional)',
-      detail: 'Pensijilan antarabangsa untuk jururawat berdaftar, dikeluarkan oleh International Society of Nurses in Cancer Care dan badan-badan gabungan',
+      detail: 'Piawaian Antarabangsa untuk Jururawat Profesional — peperiksaan kecekapan kejururawatan antarabangsa untuk jururawat berdaftar, dibangunkan bersama CGFNS International dan ditadbir melalui pihak berkuasa kesihatan China',
       category: 'Lesen Kejururawatan',
-    },
-    {
-      title: 'Jururawat Berdaftar Kanan (主管护师)',
-      detail: 'Gelaran profesional peringkat kanan dalam sistem ranking profesional kesihatan negara China, dianugerahkan oleh Suruhanjaya Kesihatan Perbandaran Shanghai',
-      category: 'Gelaran Profesional',
     },
     {
       title: 'JLPT N1 — Ujian Kecekapan Bahasa Jepun, Tahap N1',
@@ -146,17 +146,18 @@ const credentialsData: Record<'en' | 'ja' | 'ar' | 'ru' | 'mn' | 'ms' | 'id', Cr
       detail: 'Dilesenkan oleh Suruhanjaya Kesihatan Perbandaran Shanghai',
       category: 'Lesen Kejururawatan',
     },
+    {
+      title: 'BSN — Sarjana Muda Sains dalam Kejururawatan',
+      detail: 'Sekolah Perubatan Universiti Jiao Tong Shanghai',
+      category: 'Pendidikan',
+    },
+
   ],
   id: [
     {
       title: 'ISPN — International Standards for Professional Nurses (Standar Internasional untuk Perawat Profesional)',
-      detail: 'Sertifikasi internasional untuk perawat terdaftar, dikeluarkan oleh International Society of Nurses in Cancer Care dan badan-badan afiliasinya',
+      detail: 'Standar Internasional untuk Perawat Profesional — ujian kemahiran keperawatan internasional untuk perawat terdaftar, dikembangkan bersama CGFNS International dan diselenggarakan melalui otoritas kesehatan Tiongkok',
       category: 'Lisensi Keperawatan',
-    },
-    {
-      title: 'Perawat Terdaftar Senior (主管护师)',
-      detail: 'Gelar profesional tingkat senior dalam sistem peringkat profesional kesehatan nasional Tiongkok, dianugerahkan oleh Komisi Kesehatan Kota Shanghai',
-      category: 'Gelar Profesional',
     },
     {
       title: 'JLPT N1 — Ujian Kemahiran Bahasa Jepang, Tingkat N1',
@@ -168,6 +169,12 @@ const credentialsData: Record<'en' | 'ja' | 'ar' | 'ru' | 'mn' | 'ms' | 'id', Cr
       detail: 'Berlisensi dari Komisi Kesehatan Kota Shanghai',
       category: 'Lisensi Keperawatan',
     },
+    {
+      title: 'BSN — Sarjana Sains dalam Keperawatan',
+      detail: 'Sekolah Kedokteran Universitas Jiao Tong Shanghai',
+      category: 'Pendidikan',
+    },
+
   ],
 }
 
@@ -304,7 +311,7 @@ const text = {
   ar: {
     role: 'المؤسِّسة وكبيرة موظفي المرافقة الطبية',
     intro:
-      'ممرضة مسجلة حاصلة على شهادة ISPN، وممرضة مسجلة كبيرة، ومؤسِّسة ShanghaiMed. تتمتع بأكثر من عقد من الخبرة العملية في إدارة عمليات الرعاية الصحية الراقية وإرشاد المرضى الدوليين عبر منظومة شنغهاي الصحية — من الاستشارات الروتينية إلى تنسيق الجراحات المعقدة.',
+      'ممرضة مسجلة حاصلة على شهادة ISPN، ومؤسِّسة ShanghaiMed. تتمتع بأكثر من عقد من الخبرة العملية في إدارة عمليات الرعاية الصحية الراقية وإرشاد المرضى الدوليين عبر منظومة شنغهاي الصحية — من الاستشارات الروتينية إلى تنسيق الجراحات المعقدة.',
     whyTitle: 'لماذا أسستُ ShanghaiMed',
     whyP1:
       'أمضيت أكثر من عشر سنوات أعمل داخل منظومة الرعاية الصحية الراقية في شنغهاي — أنسّق رعاية المرضى الدوليين، وأجتاز البيروقراطية المستشفية نيابةً عنهم، وأشاهد المشكلات نفسها القابلة للتفادي تتكرر: مرضى يصلون بلا سجلات مترجمة، أو يُوجَّهون إلى القسم الخطأ، أو يدفعون أكثر من اللازم مقابل خدمات لا يحتاجونها، أو يغادرون دون فهم تعليمات خروجهم.',
@@ -317,6 +324,8 @@ const text = {
     nurseCertName: 'شهادة مزاولة مهنة التمريض',
     ispnCertName: 'شهادة إنجاز ISPN',
     jlptCertName: 'شهادة JLPT N1 (اختبار كفاءة اللغة اليابانية، المستوى الأعلى)',
+    bsnDegreeCertName: 'شهادة درجة البكالوريوس في العلوم (التمريض)',
+    bsnGradCertName: 'شهادة التخرج الجامعي (التمريض)',
     jlptCertIssuer: 'خدمات التبادل التعليمي اليابانية / مؤسسة اليابان',
     certFootnote: 'انقر لعرض الشهادات الموثَّقة. حُجبت المعلومات الحساسة حمايةً للخصوصية.',
     experienceTitle: 'مجالات الخبرة',
@@ -336,7 +345,7 @@ const text = {
   en: {
     role: 'Founder & Chief Concierge',
     intro:
-      "ISPN-certified registered nurse, senior registered nurse and founder of ShanghaiMed. Over a decade of hands-on experience in premium healthcare operations and guiding international patients through Shanghai's healthcare system — from routine consultations to complex surgical coordination.",
+      "ISPN-certified registered nurse and founder of ShanghaiMed. Over a decade of hands-on experience in premium healthcare operations and guiding international patients through Shanghai's healthcare system — from routine consultations to complex surgical coordination.",
     whyTitle: 'Why I Founded ShanghaiMed',
     whyP1:
       "I spent over ten years working inside Shanghai's premium healthcare system — coordinating care for international patients, navigating hospital bureaucracy on their behalf, and watching the same preventable problems repeat: patients arriving without translated records, being routed to the wrong department, overpaying for services they didn't need, or leaving without understanding their own discharge instructions.",
@@ -349,6 +358,8 @@ const text = {
     nurseCertName: 'Nurse Practicing Certificate',
     ispnCertName: 'ISPN Certificate of Achievement',
     jlptCertName: 'JLPT N1 Certificate (Japanese-Language Proficiency Test)',
+    bsnDegreeCertName: 'Bachelor of Science Degree Certificate (Nursing)',
+    bsnGradCertName: 'Undergraduate Graduation Certificate (Nursing)',
     jlptCertIssuer: 'Japan Educational Exchanges and Services / Japan Foundation',
     certFootnote: 'Click to view verified credentials. Sensitive information redacted for privacy.',
     experienceTitle: 'Areas of Experience',
@@ -381,6 +392,8 @@ const text = {
     nurseCertName: '看護師執業証書',
     ispnCertName: 'ISPN資格認定証',
     jlptCertName: 'JLPT N1 認定証（日本語能力試験 最高レベル）',
+    bsnDegreeCertName: '学士（理学）学位記（看護学）',
+    bsnGradCertName: '本科卒業証書（看護学）',
     jlptCertIssuer: '日本国際教育支援協会／国際交流基金',
     certFootnote: 'クリックすると資格証明をご確認いただけます。個人情報はプライバシー保護のため黒塗り処理しています。',
     experienceTitle: '経験分野',
@@ -400,7 +413,7 @@ const text = {
   ru: {
     role: 'Основатель и главный консьерж',
     intro:
-      'Дипломированная медсестра с международной сертификацией ISPN, медсестра высшей категории и основатель ShanghaiMed. Более десяти лет практического опыта в операционном управлении премиальной медициной и сопровождении международных пациентов в системе здравоохранения Шанхая — от плановых консультаций до координации сложных хирургических операций.',
+      'Дипломированная медсестра с международной сертификацией ISPN и основатель ShanghaiMed. Более десяти лет практического опыта в операционном управлении премиальной медициной и сопровождении международных пациентов в системе здравоохранения Шанхая — от плановых консультаций до координации сложных хирургических операций.',
     whyTitle: 'Почему я основала ShanghaiMed',
     whyP1:
       'Более десяти лет я работала внутри шанхайской системы премиальной медицины — координировала лечение международных пациентов, проходила вместо них больничную бюрократию и видела одни и те же предотвратимые проблемы: пациенты приезжают без переведённых медицинских записей, попадают не в то отделение, переплачивают за ненужные услуги или уезжают, не понимая собственных инструкций по выписке.',
@@ -413,6 +426,8 @@ const text = {
     nurseCertName: 'Сертификат права осуществления медсестринской практики',
     ispnCertName: 'Сертификат об успешном прохождении ISPN',
     jlptCertName: 'Сертификат JLPT N1 (Экзамен по японскому языку, высший уровень)',
+    bsnDegreeCertName: 'Диплом о степени бакалавра наук (сестринское дело)',
+    bsnGradCertName: 'Диплом об окончании вуза (сестринское дело)',
     jlptCertIssuer: 'Японская служба образовательных обменов / Японский фонд',
     certFootnote: 'Нажмите, чтобы просмотреть подтверждённые квалификации. Конфиденциальная информация скрыта для защиты персональных данных.',
     experienceTitle: 'Сфера опыта',
@@ -445,6 +460,8 @@ const text = {
     nurseCertName: 'Сувилагчийн үйл ажиллагааны гэрчилгээ',
     ispnCertName: 'ISPN амжилтын гэрчилгээ',
     jlptCertName: 'JLPT N1 гэрчилгээ (Япон хэлний шалгалт, дээд түвшин)',
+    bsnDegreeCertName: 'Бакалаврын зэргийн гэрчилгээ (сувилал)',
+    bsnGradCertName: 'Их сургууль төгссөн гэрчилгээ (сувилал)',
     jlptCertIssuer: 'Японы Боловсролын Солилцооны Үйлчилгээ / Япон Сан',
     certFootnote: 'Баталгаажсан итгэмжлэлийг үзэхийн тулд дарна уу. Хувийн мэдээллийг хамгаалах үүднээс эмзэг мэдээллийг далдалсан.',
     experienceTitle: 'Туршлагын чиглэл',
@@ -477,6 +494,8 @@ const text = {
     nurseCertName: 'Sijil Amalan Jururawat',
     ispnCertName: 'Sijil Pencapaian ISPN',
     jlptCertName: 'Sijil JLPT N1 (Ujian Kecekapan Bahasa Jepun, Tahap Tertinggi)',
+    bsnDegreeCertName: 'Sijil Ijazah Sarjana Muda Sains (Kejururawatan)',
+    bsnGradCertName: 'Sijil Graduasi Prasiswazah (Kejururawatan)',
     jlptCertIssuer: 'Japan Educational Exchanges and Services / Japan Foundation',
     certFootnote: 'Klik untuk melihat kelayakan yang disahkan. Maklumat sensitif telah disunting untuk privasi.',
     experienceTitle: 'Bidang Pengalaman',
@@ -496,7 +515,7 @@ const text = {
   id: {
     role: 'Pendiri & Kepala Concierge',
     intro:
-      'Perawat terdaftar bersertifikasi ISPN, perawat terdaftar senior dan pendiri ShanghaiMed. Lebih dari satu dekade pengalaman praktis dalam operasional layanan kesehatan premium dan membimbing pasien internasional melalui sistem layanan kesehatan Shanghai — dari konsultasi rutin hingga koordinasi pembedahan kompleks.',
+      'Perawat terdaftar bersertifikasi ISPN dan pendiri ShanghaiMed. Lebih dari satu dekade pengalaman praktis dalam operasional layanan kesehatan premium dan membimbing pasien internasional melalui sistem layanan kesehatan Shanghai — dari konsultasi rutin hingga koordinasi pembedahan kompleks.',
     whyTitle: 'Mengapa Saya Mendirikan ShanghaiMed',
     whyP1:
       'Saya menghabiskan lebih dari sepuluh tahun bekerja dalam sistem layanan kesehatan premium Shanghai — mengoordinasikan perawatan untuk pasien internasional, menavigasi birokrasi rumah sakit atas nama mereka, dan melihat masalah yang dapat dicegah yang sama terulang: pasien tiba tanpa rekam medis yang diterjemahkan, diarahkan ke departemen yang salah, membayar lebih untuk layanan yang tidak mereka butuhkan, atau pulang tanpa memahami instruksi pemulangan mereka sendiri.',
@@ -509,6 +528,8 @@ const text = {
     nurseCertName: 'Sertifikat Praktik Keperawatan',
     ispnCertName: 'Sertifikat Pencapaian ISPN',
     jlptCertName: 'Sertifikat JLPT N1 (Tes Kemahiran Bahasa Jepang, Tingkat Tertinggi)',
+    bsnDegreeCertName: 'Ijazah Gelar Sarjana Sains (Keperawatan)',
+    bsnGradCertName: 'Ijazah Kelulusan Sarjana (Keperawatan)',
     jlptCertIssuer: 'Japan Educational Exchanges and Services / Japan Foundation',
     certFootnote: 'Klik untuk melihat kredensial terverifikasi. Informasi sensitif disunting untuk privasi.',
     experienceTitle: 'Bidang Pengalaman',
@@ -637,8 +658,13 @@ export default function FounderContent() {
                 </svg>
               </a>
 
-              <div className="flex items-center gap-3 p-4 border rounded-lg">
-                <div className="flex-shrink-0 w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center">
+              <a
+                href="/images/certificate-jlpt.jpg"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 p-4 border rounded-lg hover:border-teal-300 hover:bg-teal-50/30 transition-colors group"
+              >
+                <div className="flex-shrink-0 w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center group-hover:bg-teal-200 transition-colors">
                   <svg className="w-5 h-5 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
                   </svg>
@@ -647,7 +673,50 @@ export default function FounderContent() {
                   <p className="text-sm font-medium text-gray-900">{t.jlptCertName}</p>
                   <p className="text-xs text-gray-500">{t.jlptCertIssuer}</p>
                 </div>
-              </div>
+                <svg className="w-4 h-4 text-gray-400 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+
+              <a
+                href="/images/certificate-bsn-degree.jpg"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 p-4 border rounded-lg hover:border-teal-300 hover:bg-teal-50/30 transition-colors group"
+              >
+                <div className="flex-shrink-0 w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center group-hover:bg-teal-200 transition-colors">
+                  <svg className="w-5 h-5 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-gray-900">{t.bsnDegreeCertName}</p>
+                  <p className="text-xs text-gray-500">Shanghai Jiao Tong University School of Medicine (2010)</p>
+                </div>
+                <svg className="w-4 h-4 text-gray-400 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+
+              <a
+                href="/images/certificate-bsn-graduation.jpg"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 p-4 border rounded-lg hover:border-teal-300 hover:bg-teal-50/30 transition-colors group"
+              >
+                <div className="flex-shrink-0 w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center group-hover:bg-teal-200 transition-colors">
+                  <svg className="w-5 h-5 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-gray-900">{t.bsnGradCertName}</p>
+                  <p className="text-xs text-gray-500">Shanghai Jiao Tong University School of Medicine (2010)</p>
+                </div>
+                <svg className="w-4 h-4 text-gray-400 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
             </div>
             <p className="text-xs text-gray-400 mt-3 text-center">{t.certFootnote}</p>
           </div>

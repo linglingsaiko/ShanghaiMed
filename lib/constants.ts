@@ -1,4 +1,4 @@
-// Hospital data for the Shanghai medical network
+// Representative hospital examples; recommendations are matched to each patient's needs
 export interface Hospital {
   id: string
   name: string
@@ -15,7 +15,7 @@ export interface Hospital {
   internationalPhone?: string
 }
 
-// Tier 1 - 14 Public Grade-A Medical Tourism Pilot Hospitals
+// Tier 1 - representative public hospital examples (not all are official medical tourism pilots)
 export const tier1Hospitals: Hospital[] = [
   {
     id: 'huashan',
@@ -64,15 +64,15 @@ export const tier1Hospitals: Hospital[] = [
   },
   {
     id: 'shanghai-general',
-    name: 'Shanghai General Hospital',
-    nameJa: '上海市第一人民病院',
+    name: 'Shanghai General Hospital (Shanghai Jiao Tong University School of Medicine)',
+    nameJa: '上海交通大学医学院附属上海市第一人民病院',
     tier: 'tier1',
     specialties: ['Ophthalmology', 'Urology', 'ENT & Head-Neck Surgery'],
     certifications: ['Grade 3A (三甲)'],
     insurancePartners: ['AIA', 'MSH', 'SOS International', 'Ping An Health', 'Pacific Health', 'Cigna', 'Allianz', 'AXA', 'MediLink', 'Bupa', 'Now Health', 'CIGNA & CMC', 'Windstone Health', 'ICBC-AXA', 'Pacific Prime', 'International SOS', 'AXA PPP'],
     internationalFeatures: 'International patient center with multilingual staff, 17 accepted insurance providers',
     insuranceStatus: 'International Insurance',
-    description: 'One of Shanghai\'s oldest and most prestigious hospitals. Leading ophthalmology and urology departments.',
+    description: 'Affiliated with Shanghai Jiao Tong University School of Medicine. One of Shanghai\'s oldest hospitals, with ophthalmology and urology departments.',
     image: '/images/市一.jpeg',
     internationalDeptUrl: 'https://eng.shgh.cn/IMCC',
     internationalPhone: '+86-21-63240090',
@@ -124,15 +124,15 @@ export const tier1Hospitals: Hospital[] = [
   },
   {
     id: 'ipmch',
-    name: 'International Peace Maternity & Child Health Hospital',
-    nameJa: '中国福利会国際平和母子保健院',
+    name: 'International Peace Maternity & Child Health Hospital (China Welfare Institute; Shanghai Jiao Tong University School of Medicine)',
+    nameJa: '中国福利会国際平和母子保健院（上海交通大学医学院附属）',
     tier: 'tier1',
     specialties: ['Reproductive Medicine', 'Obstetrics', 'Gynecology'],
     certifications: ['Grade 3A (三甲)'],
     insurancePartners: ['MSH', 'Ping An Health', 'AIA', 'Cigna', 'Allianz', 'MediLink', 'Bupa', 'AXA', 'Now Health', 'CIGNA & CMC', 'Windstone Health', 'ICBC-AXA', 'Pacific Prime', 'International SOS', 'AXA PPP', 'Bupa Global', 'Allianz Care', 'Aetna International', 'Pacific Health'],
     internationalFeatures: 'China Welfare Institute affiliated, international maternity care, 19 accepted insurance providers',
     insuranceStatus: 'International Insurance',
-    description: 'Affiliated with China Welfare Institute. Leading center for high-risk pregnancy, fetal medicine, and reproductive medicine.',
+    description: 'A China Welfare Institute hospital and an affiliated hospital of Shanghai Jiao Tong University School of Medicine. Center for high-risk pregnancy, fetal medicine, and reproductive medicine.',
     image: '/images/国妇婴.png',
     internationalDeptUrl: 'https://www.ipmch.com.cn/Hospital/',
     internationalPhone: '+86-21-64265988',
@@ -154,30 +154,30 @@ export const tier1Hospitals: Hospital[] = [
   },
   {
     id: 'sixth',
-    name: 'Shanghai Sixth People\'s Hospital',
-    nameJa: '上海市第六人民病院',
+    name: 'Shanghai Sixth People\'s Hospital (Shanghai Jiao Tong University School of Medicine)',
+    nameJa: '上海交通大学医学院附属上海市第六人民病院',
     tier: 'tier1',
     specialties: ['Orthopedics', 'Endocrinology & Metabolism', 'Sports Medicine'],
     certifications: ['Grade 3A (三甲)'],
     insurancePartners: ['MSH', 'Ping An Health', 'Pacific Health', 'Cigna', 'AIA', 'Allianz', 'AXA', 'MediLink', 'Bupa', 'Now Health', 'CIGNA & CMC', 'Windstone Health', 'ICBC-AXA', 'Pacific Prime', 'International SOS', 'AXA PPP', 'Bupa Global', 'Allianz Care'],
     internationalFeatures: 'World\'s first limb replantation center, 18 accepted insurance providers',
     insuranceStatus: 'International Insurance',
-    description: 'Pioneer in limb replantation surgery since 1963. Leading orthopedics and endocrinology center with international recognition.',
+    description: 'Affiliated with Shanghai Jiao Tong University School of Medicine. Known for limb replantation surgery since 1963, orthopedics, and endocrinology.',
     image: '/images/六院.png',
     internationalDeptUrl: 'https://english.6thhosp.com/Data/List/MedicalServices',
     internationalPhone: '+86-21-24056318',
   },
   {
     id: 'first-maternity',
-    name: 'Shanghai First Maternity & Infant Hospital',
-    nameJa: '上海市第一母子保健院',
+    name: 'Shanghai First Maternity & Infant Hospital (Tongji University Affiliated Obstetrics and Gynecology Hospital)',
+    nameJa: '上海市第一母子保健院（同済大学附属産科婦人科病院）',
     tier: 'tier1',
     specialties: ['Obstetrics', 'Fetal Medicine', 'Reproductive Medicine'],
     certifications: ['Grade 3A (三甲)', 'APAGE Accredited Training Centre'],
     insurancePartners: ['MSH', 'AIA', 'MediLink', 'Ping An Health', 'Cigna', 'Allianz', 'AXA', 'ICBC-AXA', 'Now Health', 'Bupa', 'Pacific Health', 'CIGNA & CMC', 'Windstone Health', 'Pacific Prime', 'International SOS', 'AXA PPP', 'Bupa Global', 'Allianz Care'],
     internationalFeatures: 'Dedicated international maternity services, 18 accepted insurance providers',
     insuranceStatus: 'International Insurance',
-    description: 'Shanghai\'s premier maternity hospital. Comprehensive obstetric and neonatal care with international patient support.',
+    description: 'Affiliated with Tongji University and officially second-named Tongji University Affiliated Obstetrics and Gynecology Hospital. Obstetric and neonatal care with international patient support.',
     image: '/images/一妇婴.png',
     internationalDeptUrl: 'https://www.51mch.com/',
     internationalPhone: '+86-21-968886',
@@ -311,14 +311,14 @@ export const tier2Hospitals: Hospital[] = [
 // Export all hospitals
 export const allHospitals = [...tier1Hospitals, ...tier2Hospitals]
 
-// Featured hospitals for homepage display
+// Representative hospital examples for homepage display
 export const featuredHospitalIds = ['huashan', 'longhua', 'ninth']
 
 // Navigation links
 export const navLinks = [
   { href: '#why-shanghai', label: 'Why Shanghai' },
   { href: '#how-it-works', label: 'How It Works' },
-  { href: '#treatments', label: 'Hospital Network' },
+  { href: '#treatments', label: 'Hospital Options' },
   { href: '#care-team', label: 'Care Team' },
   { href: '#pricing', label: 'Pricing' },
   { href: '/medical-records', label: 'Find a Doctor' },
@@ -329,7 +329,7 @@ export const navLinks = [
 // Statistics data
 export const statistics = [
   { value: '73,000+', label: "Shanghai's Annual International Patient Visits", description: 'Source: Shanghai Municipal Health Commission, 2025' },
-  { value: '14', label: 'Public Grade-A Medical Tourism Pilots', description: 'Specialized international services' },
+  { value: '13', label: 'Official Public Medical Tourism Pilot Hospitals', description: 'Official reference only, not a limit on hospital recommendations' },
   { value: '90+', label: 'Nationalities Served', description: 'Source: Huashan Hospital International Medical Center, 2025' },
   { value: '25%', label: 'Year-over-Year Growth', description: 'Source: Shanghai Municipal Health Commission, 2024' },
 ]
@@ -337,7 +337,7 @@ export const statistics = [
 // Social Proof Stats
 export const socialProofStats = [
   { value: '73,000+', label: "Shanghai's Int'l Patient Visits" },
-  { value: '23', label: 'Public Hospitals' },
+  { value: 'Case-matched', label: 'Public & Private Hospital Options' },
   { value: '90+', label: 'Nationalities' },
   { value: '25%', label: 'YoY Growth' },
 ]
@@ -403,11 +403,11 @@ export const nurseCredentials = [
 export const trustPillars = [
   {
     icon: 'Shield',
-    title: 'Verified Hospitals',
+    title: 'Hospital Matching',
     items: [
-      'All supported public hospitals hold Grade 3A classification — China\u2019s highest official hospital rating',
-      '18 top Shanghai hospitals in our network',
-      'Regular quality assessments and patient feedback reviews',
+      'Recommendations based on your condition, specialty fit, and practical needs',
+      'Any suitable Shanghai Grade 3A public hospital may be considered; suitable private hospitals can also be arranged',
+      'The 13 official public medical tourism pilot hospitals are an official reference, not a recommendation limit',
     ],
   },
   {

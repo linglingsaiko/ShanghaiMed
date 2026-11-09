@@ -10,12 +10,21 @@ import { useLanguage } from '@/contexts/LanguageContext'
 
 const WHATSAPP_LINK = 'https://wa.me/8613818274110'
 const LINE_LINK = 'https://line.me/ti/p/cD_Ed4GHBM'
+const WHATSAPP_LABELS: Record<string, string> = {
+  en: 'Chat on WhatsApp',
+  ja: 'LINEで相談する',
+  ar: 'تحدث عبر واتساب',
+  ru: 'Написать в WhatsApp',
+  mn: 'WhatsApp-аар холбогдох',
+  ms: 'Berbual melalui WhatsApp',
+  id: 'Chat melalui WhatsApp',
+}
 
 export default function FreeConsultationContent() {
   const { t, tArr, localePath, language } = useLanguage()
   const isJapanese = language === 'ja'
   const primaryLink = isJapanese ? LINE_LINK : WHATSAPP_LINK
-  const primaryLabel = isJapanese ? 'LINEで相談する' : 'Chat on WhatsApp'
+  const primaryLabel = WHATSAPP_LABELS[language] || WHATSAPP_LABELS.en
 
   const badges = tArr('freeConsultation.badges')
   const badgeFallback = [

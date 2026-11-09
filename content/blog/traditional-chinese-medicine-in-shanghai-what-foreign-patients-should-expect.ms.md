@@ -23,7 +23,7 @@ keywords:
 canonicalUrl: https://shanghaimedhealth.com/blog/traditional-chinese-medicine-in-shanghai-what-foreign-patients-should-expect
 ---
 
-Panduan ini adalah yang ketiga dalam siri kami untuk pesakit antarabangsa yang mencari rawatan kesihatan di Shanghai. Mulakan dengan “Adakah Shanghai Selamat untuk Rawatan Perubatan?” atau pelajari tentang “Pemeriksaan Perubatan di Shanghai” terlebih dahulu.
+Panduan ini adalah yang ketiga dalam siri kami untuk pesakit antarabangsa yang mencari rawatan kesihatan di Shanghai. Mulakan dengan [Adakah Shanghai Tempat yang Baik untuk Rawatan Perubatan?](/blog/is-shanghai-a-good-place-for-medical-treatment) atau pelajari tentang [Pemeriksaan Perubatan di Shanghai](/blog/the-complete-guide-to-medical-checkups-in-shanghai-for-international-visitors) terlebih dahulu.
 
 Setiap tahun, lebih banyak pesakit antarabangsa tiba di Shanghai bukan hanya untuk perubatan Barat berkualiti tinggi, tetapi juga untuk sesuatu yang lebih tua, berbeza, dan semakin disokong oleh sains: Perubatan Tradisional China (TCM). Dengan 73,000+ lawatan pesakit antarabangsa setiap tahun di hospital awam Shanghai (Suruhanjaya Kesihatan Bandar Shanghai, 2025), TCM telah menjadi sebahagian penting mengapa orang memilih untuk menerima rawatan perubatan di China.
 
@@ -52,7 +52,7 @@ Sebelum anda menempah temujanji, fahami perbezaan ini - ia penting untuk keselam
 
 Shanghai merupakan rumah bagi beberapa institusi TCM paling berprestij di China:
 
-Hospital Longhua Shanghai (上海龙华医院): Pemimpin nasional dan Pangkalan Penyelidikan Klinikal TCM Nasional yang ditentukan. Ia merawat kes yang paling kompleks dan melatih doktor TCM di peringkat siswazah. Jika Shanghai mempunyai “Klinik Mayo TCM,” inilah tempatnya.
+Hospital Longhua Shanghai (上海龙华医院): Pemimpin nasional dan Pangkalan Penyelidikan Klinikal TCM Nasional yang ditentukan. Ia merawat kes kompleks dan melatih doktor TCM di peringkat siswazah, menjadikannya salah satu institusi TCM yang paling dihormati di Shanghai.
 Hospital Yueyang Shanghai (上海岳阳医院): Terkenal untuk pendekatan bersepadu, menggabungkan TCM dengan perubatan Barat. Sangat kuat dalam pengurusan kesakitan, rehabilitasi, dan dermatologi.
 Jabatan TCM di Hospital-hospital Besar: Hospital-hospital terkemuka seperti Hospital Ruijin, Hospital Huashan, dan Hospital Zhongshan semua mempunyai jabatan TCM yang ditubuhkan yang menawarkan perkhidmatan akupunktur, herba, dan rehabilitasi dalam infrastruktur perubatan yang lengkap.
 
@@ -120,7 +120,7 @@ Interaksi herba-ubat: Sentiasa nyatakan semua ubat dan makanan tambahan yang and
 Keselamatan jarum: Akupunktur menggunakan jarum steril sekali pakai. Di hospital, ini adalah protokol standard. Sahkan ini di mana sahaja klinik yang anda kunjungi.
 Laporan kejadian buruk: Sistem farmakovigilance China meliputi ubat-ubatan Barat dan tradisional, yang bermaksud terdapat proses berstruktur untuk melaporkan dan menyiasat kebimbangan keselamatan.
 
-Kesimpulannya: menerima TCM di hospital terkemuka Shanghai adalah antara tempat paling selamat di dunia untuk mengakses ubat ini.
+Kesimpulannya: menerima TCM di hospital Shanghai yang bereputasi menyediakan persekitaran hospital yang terkawal dengan pengamal berlesen dan herba yang dikawal kualitinya.
 
 ## Menggabungkan TCM Dengan Perubatan Barat
 
@@ -142,13 +142,14 @@ Salah satu kelebihan praktikal menerima TCM di Shanghai ialah ia jauh lebih mamp
 
 ### Kos TCM: Shanghai lawan Amerika Syarikat
 
-Perkhidmatan 	 Shanghai (USD) 	 Amerika Syarikat (USD)
-Perundingan TCM awal 	 $20 – $42 	 $80 – $250
-Perundingan susulan 	 $11 – $21 	 $60 – $160
-Sesi akupunktur (setiap lawatan) 	 $11 – $28 	 $60 – $180
-Kursus akupunktur (10 sesi) 	 $110 – $275 	 $600 – $1,800
-Preskripsi herba (2 – bekalan seminggu) 	 $21 – $69 	 $150 – $400
-Sesi bekam atau moxibustion 	 $8 – $21 	 $40 – $150
+| Perkhidmatan | Shanghai (USD) | Amerika Syarikat (USD) |
+|---|---|---|
+| Perundingan TCM awal | $20 – $42 | $80 – $250 |
+| Perundingan susulan | $11 – $21 | $60 – $160 |
+| Sesi akupunktur (setiap lawatan) | $11 – $28 | $60 – $180 |
+| Kursus akupunktur (10 sesi) | $110 – $275 | $600 – $1,800 |
+| Preskripsi herba (bekalan 2 minggu) | $21 – $69 | $150 – $400 |
+| Sesi bekam atau moxibustion | $8 – $21 | $40 – $150 |
 
 Harga di Shanghai mencerminkan kadar hospital awam, yang diperaturkan oleh kerajaan. Harga di Amerika Syarikat berbeza mengikut wilayah dan kelayakan pengamal (sumber: CostNotes, LatestCost).
 
@@ -171,7 +172,7 @@ Pendekatan yang disyorkan: satu lawatan secara bersemuka, kemudian teruskan dari
 
 Fasa bersemuka (1 – 2 minggu): Datang ke Shanghai untuk perundingan awal dan sesi rawatan pertama (3 – 5). Inilah ketika doktor TCM membina diagnosis pola anda melalui pengambilan nadi, pemerhatian lidah, dan soal jawab terperinci. Doktor juga menetapkan protokol rawatan anda dan menyesuaikannya berdasarkan respons awal anda.
 Fasa di rumah: Selepas fasa bersemuka, pelan rawatan anda beralih ke ubat herba sebagai terapi utama. Doktor Shanghai anda menetapkan formula herba yang disesuaikan dengan bekalan yang mencukupi untuk 1 – 3 bulan. Penghantaran ubat herba antarabangsa tersedia, atau koordinator anda boleh menguruskan penghantaran regular.
-Rawatan jarak jauh: Perundingan susulan dilakukan melalui panggilan video. Doktor anda akan bertanya tentang perubahan simptom, meninjau gambar lidah anda (alat diagnostik standard TCM), dan menyesuaikan formula herba anda seperlunya. Ini amalan biasa—pesakit dari wilayah lain China juga melakukan hal yang sama.
+Rawatan jarak jauh: Perundingan susulan dilakukan melalui panggilan video. Doktor anda akan bertanya tentang perubahan simptom, meninjau gambar lidah anda (alat diagnostik standard TCM), dan menyesuaikan formula herba anda seperlunya. Ini amalan biasa—pesakit dari wilayah lain China juga melakukan hal yang sama. Yuran perundingan video hospital adalah berasingan daripada yuran perkhidmatan penyelarasan ShanghaiMed.
 
 Keadaan mana yang paling sesuai untuk pendekatan ini? Kebanyakan keadaan yang pesakit antarabangsa cari TCM untuk boleh diuruskan dengan satu lawatan bersemuka plus kesinambungan jarak jauh:
 
@@ -221,12 +222,12 @@ Jika anda sudah melihat doktor perubatan Barat—sama ada di Shanghai atau di ru
 
 Cabaran di atas—bahasa, tempahan, insurans, penyelarasan penjagaan—adalah betul-betul mengapa pesakit antarabangsa memilih untuk bekerja dengan ShanghaiMed berbanding menavigasi sistem perubatan Shanghai sendiri. Pasukan kami menyediakan:
 
-Sokongan perundingan dwibahasa: Kami menghadiri temujanji dengan anda atau menguruskan jurumaklumat perubatan yang berkelayakan, memastikan tiada yang hilang dalam terjemahan semasa proses diagnostik terperinci TCM.
+Sokongan perundingan dwibahasa: Kami menghadiri temujanji dengan anda atau menguruskan jurumaklumat perubatan yang berkelayakan untuk menyokong komunikasi yang tepat semasa proses diagnostik TCM yang terperinci.
 Pemadanan hospital dan doktor: Berdasarkan keadaan anda, kami mengesyorkan hospital dan pakar yang betul—bukan hanya yang terdekat atau yang mempunyai laman web Bahasa Inggeris terbaik.
 Tempahan temujanji dan logistik: Kami menguruskan pendaftaran WeChat, penjadualan temujanji, dan navigasi hospital supaya anda boleh memberi tumpuan kepada rawatan anda.
 Bantuan insurans dan pengebilan: Kami membantu anda mendapatkan invois dan dokumentasi yang diformatkan dengan betul daripada hospital—memenuhi syarat-syarat insurans antarabangsa supaya tuntutan pembayaran balik anda berjalan lancar.
 Penyelarasan penjagaan: Kami menyampaikan pelan rawatan TCM anda kepada penyedia perubatan Barat anda dan menandakan sebarang interaksi herba-ubat yang berpotensi.
-Penerusan rawatan jarak jauh: Selepas fasa secara peribadi, kami menyelaraskan pengisian semula preskripsi herba, penghantaran antarabangsa, dan susulan video dengan doktor Shanghai anda—supaya anda boleh meneruskan rawatan dari rumah tanpa gangguan.
+Penerusan rawatan jarak jauh: Selepas fasa secara peribadi, kami menyelaraskan pengisian semula preskripsi herba, penghantaran antarabangsa, dan susulan video dengan doktor Shanghai anda—supaya anda boleh meneruskan rawatan dari rumah tanpa gangguan. Yuran perundingan video hospital adalah berasingan daripada yuran perkhidmatan penyelarasan kami.
 
 anda tidak akan menavigasi sistem perundangan asing tanpa peguam. Menavigasi sistem perubatan asing - terutama yang berbeza dari segi budaya seperti TCM - memerlukan sokongan profesional pada tahap yang sama.
 
@@ -235,7 +236,7 @@ Bersedia untuk meneroka TCM di Shanghai dengan panduan yang dipercayai? Pasukan 
 WhatsApp: +86 13818274110 (sokongan bahasa Inggeris tersedia)
 Navigator Perubatan AI: Mulakan perbualan dengan ejen AI kami untuk jawapan masa nyata tentang perkhidmatan TCM, pilihan hospital, dan panduan temujanji di Shanghai.
 
-Dan jika anda belum melakukannya, jelajahi siri lengkap kami untuk menavigasi penjagaan kesihatan di Shanghai: Adakah Shanghai Selamat untuk Rawatan Perubatan? meliputi segalanya daripada memilih hospital hingga memahami kos perubatan, sementara Panduan Pemeriksaan Perubatan kami membantu anda mengambil pendekatan pencegahan terhadap kesihatan anda.
+Dan jika anda belum melakukannya, jelajahi siri lengkap kami untuk menavigasi penjagaan kesihatan di Shanghai: [Adakah Shanghai Tempat yang Baik untuk Rawatan Perubatan?](/blog/is-shanghai-a-good-place-for-medical-treatment) meliputi segalanya daripada memilih hospital hingga memahami kos perubatan, sementara [Panduan Pemeriksaan Perubatan](/blog/the-complete-guide-to-medical-checkups-in-shanghai-for-international-visitors) kami membantu anda mengambil pendekatan pencegahan terhadap kesihatan anda.
 
 Perjalanan kesihatan anda di Shanghai boleh memanfaatkan yang terbaik daripada kedua-dua dunia - perubatan moden dan tradisi yang teruji masa, semuanya dalam fasiliti perubatan berkualiti tinggi.
 

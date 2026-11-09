@@ -26,7 +26,7 @@ keywords:
   - '''TCM for foreigners'''
 canonicalUrl: https://shanghaimedhealth.com/blog/traditional-chinese-medicine-in-shanghai-what-foreign-patients-should-expect
 ---
-This guide is the third in our series for international patients navigating healthcare in Shanghai. Start with our Is Shanghai Safe for Medical Treatment? or learn about Medical Checkups in Shanghai first.
+This guide is the third in our series for international patients navigating healthcare in Shanghai. Start with our [Is Shanghai a Good Place for Medical Treatment?](/blog/is-shanghai-a-good-place-for-medical-treatment) or learn about [Medical Checkups in Shanghai](/blog/the-complete-guide-to-medical-checkups-in-shanghai-for-international-visitors) first.
 
 Every year, more international patients arrive in Shanghai not just for world-class Western medicine, but for something older, different, and increasingly backed by science: Traditional Chinese Medicine (TCM). With 73,000+ international patient visits per year at Shanghai's public hospitals (Shanghai Municipal Health Commission, 2025), TCM has become a significant part of why people choose to receive medical care in China.
 
@@ -55,7 +55,7 @@ Before you book an appointment, understand this distinction—it matters for you
 
 Shanghai is home to some of China's most prestigious TCM institutions:
 
-Shanghai Longhua Hospital (上海龙华医院): A national leader and designated National TCM Clinical Research Base. It treats the most complex cases and trains TCM doctors at the graduate level. If Shanghai had a "TCM Mayo Clinic," this would be it.
+Shanghai Longhua Hospital (上海龙华医院): A national leader and designated National TCM Clinical Research Base. It treats complex cases and trains TCM doctors at the graduate level, making it one of Shanghai's most respected TCM institutions.
 Shanghai Yueyang Hospital (上海岳阳医院): Renowned for its integrated approach, combining TCM with Western medicine. Particularly strong in pain management, rehabilitation, and dermatology.
 TCM Departments in Major General Hospitals: Leading hospitals like Ruijin Hospital, Huashan Hospital, and Zhongshan Hospital all have established TCM departments offering acupuncture, herbal medicine, and rehabilitation services within a full medical infrastructure.
 
@@ -123,7 +123,7 @@ Herb-drug interactions: Always disclose all medications and supplements you're t
 Needle safety: Acupuncture uses sterile, single-use needles. In hospitals, this is standard protocol. Verify this at any clinic you visit.
 Reporting adverse events: China's pharmacovigilance system covers both Western and traditional medicines, meaning there's a structured process for reporting and investigating safety concerns.
 
-The takeaway: receiving TCM in a reputable Shanghai hospital is among the safest places globally to access this medicine.
+The takeaway: receiving TCM in a reputable Shanghai hospital provides a regulated, hospital-based setting with licensed practitioners and quality-controlled herbs.
 
 ## Combining TCM With Western Medicine
 
@@ -145,13 +145,14 @@ One practical advantage of receiving TCM in Shanghai: it's significantly more af
 
 ### TCM Costs: Shanghai vs. United States
 
-Service	Shanghai (USD)	United States (USD)
-Initial TCM consultation	$20–$42	$80–$250
-Follow-up consultation	$11–$21	$60–$160
-Acupuncture session (per visit)	$11–$28	$60–$180
-Acupuncture course (10 sessions)	$110–$275	$600–$1,800
-Herbal prescription (2-week supply)	$21–$69	$150–$400
-Cupping or moxibustion session	$8–$21	$40–$150
+| Service | Shanghai (USD) | United States (USD) |
+|---|---|---|
+| Initial TCM consultation | $20–$42 | $80–$250 |
+| Follow-up consultation | $11–$21 | $60–$160 |
+| Acupuncture session (per visit) | $11–$28 | $60–$180 |
+| Acupuncture course (10 sessions) | $110–$275 | $600–$1,800 |
+| Herbal prescription (2-week supply) | $21–$69 | $150–$400 |
+| Cupping or moxibustion session | $8–$21 | $40–$150 |
 
 Shanghai prices reflect public hospital rates, which are government-regulated. U.S. prices vary by region and practitioner credentials (sources: CostNotes, LatestCost).
 
@@ -174,7 +175,7 @@ The recommended approach: one in-person visit, then continue from home.
 
 In-person phase (1–2 weeks) : Come to Shanghai for your initial consultation and the first 3–5 treatment sessions. This is when the TCM doctor builds your pattern diagnosis through pulse-taking, tongue observation, and detailed questioning—things that require physical presence. The doctor also establishes your treatment protocol and adjusts it based on your initial response.
 At-home phase: After the in-person phase, your treatment plan transitions to herbal medicine as the primary therapy. Your Shanghai doctor prescribes a customized herbal formula with enough supply for 1–3 months. International shipping for herbal prescriptions is available, or your coordinator can arrange regular deliveries.
-Remote follow-ups: Follow-up consultations are conducted via video call. Your doctor will ask about changes in symptoms, review photos of your tongue (a standard TCM diagnostic tool), and adjust your herbal formula as needed. This is common practice—patients from other Chinese provinces do the same thing.
+Remote follow-ups: Depending on the hospital's telemedicine policy and availability, follow-up consultations may be conducted via video call. Your doctor will ask about changes in symptoms, review photos of your tongue (a standard TCM diagnostic tool), and adjust your herbal formula as needed. Hospital telemedicine fees are separate from ShanghaiMed's coordination service fees and should be confirmed with the hospital.
 
 Which conditions are best suited for this approach? Most conditions international patients seek TCM for can be managed with one in-person visit plus remote continuation:
 
@@ -224,12 +225,12 @@ If you're already seeing a Western medicine doctor—whether in Shanghai or back
 
 The challenges above—language, booking, insurance, care coordination—are exactly why international patients choose to work with ShanghaiMed rather than navigating Shanghai's medical system alone. Our team provides:
 
-Bilingual consultation support: We attend appointments with you or arrange qualified medical interpreters, ensuring nothing is lost in translation during TCM's detailed diagnostic process.
+Bilingual consultation support: We attend appointments with you or arrange qualified medical interpreters, to support accurate communication during TCM's detailed diagnostic process.
 Hospital and doctor matching: Based on your condition, we recommend the right hospital and specialist—not just the nearest one or the one with the best English website.
 Appointment booking and logistics: We handle WeChat registration, appointment scheduling, and hospital navigation so you can focus on your treatment.
 Insurance and billing assistance: We help you obtain properly formatted invoices and documentation from the hospital—meeting international insurance requirements so your reimbursement claim goes smoothly.
 Care coordination: We communicate your TCM treatment plan to your Western medicine providers and flag any potential herb-drug interactions.
-Remote treatment continuation: After your in-person phase, we coordinate herbal prescription refills, international delivery, and video follow-ups with your Shanghai doctor—so you can continue treatment from home without interruption.
+Remote treatment continuation: After your in-person phase, we coordinate herbal prescription refills, international delivery, and video follow-ups with your Shanghai doctor—so you can continue treatment from home without interruption. Hospital telemedicine fees are separate from ShanghaiMed's coordination service fees and should be confirmed with the hospital.
 
 You wouldn't navigate a foreign legal system without a lawyer. Navigating a foreign medical system—especially one as culturally distinct as TCM—deserves the same level of professional support.
 
@@ -238,7 +239,7 @@ Ready to explore TCM in Shanghai with a trusted guide? Our team can help you nav
 WhatsApp: +86 13818274110 (English support available)
 AI Medical Navigator: Start a conversation with our AI agent for real-time answers about TCM services, hospital options, and appointment guidance in Shanghai.
 
-And if you haven't yet, explore our complete series for navigating healthcare in Shanghai: our Is Shanghai Safe for Medical Treatment? covers everything from choosing a hospital to understanding medical costs, while our Medical Checkup Guide helps you take a preventive approach to your health.
+And if you haven't yet, explore our complete series for navigating healthcare in Shanghai: our [Is Shanghai a Good Place for Medical Treatment?](/blog/is-shanghai-a-good-place-for-medical-treatment) covers everything from choosing a hospital to understanding medical costs, while our [Medical Checkup Guide](/blog/the-complete-guide-to-medical-checkups-in-shanghai-for-international-visitors) helps you take a preventive approach to your health.
 
 Your health journey in Shanghai can draw on the best of both worlds—modern medicine and time-tested tradition, all within world-class medical facilities.
 

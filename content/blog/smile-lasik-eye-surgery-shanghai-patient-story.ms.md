@@ -32,11 +32,13 @@ Seorang akauntan dari Chicago berusia awal tiga puluhan, dia telah memakai kanta
 
 Kemudian dia mula merancang perjalanan ke China - bukan untuk pembedahan, tetapi untuk Bund, makanan, dan seluruh pengalaman. Dia mesej pasukan kami: “Saya dengar pembedahan mata di Shanghai jauh lebih murah. Benarkah itu?”
 
-Benar. SMILE - teknik laser terbaru - menggunakan peralatan Zeiss yang sama yang terdapat di klinik-klinik terkemuka di AS, dengan harga kira-kira satu pertiga daripada harga tersebut. Dan dia boleh melakukannya semasa perjalanannya ke Shanghai. Tidak perlu perjalanan perubatan berasingan.
+Benar. SMILE - teknik laser terbaru - menggunakan peralatan Zeiss yang diiktiraf di peringkat antarabangsa, dengan harga kira-kira satu pertiga daripada harga tersebut. Dan dia boleh melakukannya semasa perjalanannya ke Shanghai. Tidak perlu perjalanan perubatan berasingan.
 
 “Adakah saya perlu visa perubatan?” dia bertanya.
 
-Tidak. SMILE ialah prosedur pesakit luar - tidak memerlukan hospitalisasi. Dia telah menguruskan visa pelancong masuk berganda selama 10 tahun sebelum berangkat, pengaturan standard untuk rakyat Amerika yang melawat China. Hanya pembedahan yang melibatkan kemasukan ke hospital memerlukan dokumen tambahan. Perjalanannya - mendarat, menilai, menjalankan pembedahan, pulih, bercuti - sepenuhnya mematuhi peraturan.
+Pada perjalanan bersejarah itu, dia telah pun memperoleh visa pelancong kemasukan berganda 10 tahun sebelum berangkat dan menggunakannya untuk itinerary yang diterangkan di bawah. Ini ialah fakta tentang visa yang sebenarnya dipegangnya, bukan peraturan umum bahawa visa pelancong memadai untuk pembedahan mata yang dirancang.
+
+**Nota dasar semasa (disahkan pada 25 Oktober 2026):** SMILE, LASIK dan ICL ialah prosedur pembedahan. Sifat pesakit luar atau tidak memerlukan bermalam di hospital tidak dengan sendirinya menjadikan visa pelancong memadai secara umum. Jika SMILE atau pembedahan mata lain telah dirancang sebelum berangkat, sahkan dokumen hospital penerima dan laluan S2 bagi tujuan perubatan dengan kedutaan atau konsulat China yang berkenaan sebelum perjalanan. Hanya jika keperluan pembedahan ditemui selepas kemasukan yang sah, pelancong boleh memohon, mengikut peraturan, pengeluaran semula visa dalam China atau permit tinggal yang sesuai; ini bukan kelulusan automatik. Semak pengumuman terkini NIA atau hubungi **+86-12367**, dan ikut keputusan pihak berkuasa yang berkenaan mengikut setiap kes.
 
 Dia menempah pada minggu yang sama.
 
@@ -52,7 +54,7 @@ Pakar bedah refraktif - seorang ketua doktor dengan pengalaman khusus bertahun-t
 
 ## Hari 3: Pembedahan
 
-Khamis pagi. Kembali ke hospital. Pembedahan mengambil masa kira-kira 15 minit. Hanya titisan anestetik tempatan. Tiada pisau bedah, tiada flap - laser Zeiss VisuMax 800 mengukir lensa kecil di dalam kornea, dan pakar bedah mengeluarkannya melalui sayatan 3mm. Kurang daripada sepuluh saat masa laser untuk setiap mata.
+Khamis pagi. Kembali ke hospital. Pembedahan mengambil masa kira-kira 15 minit. Hanya titisan anestetik tempatan. Tiada pisau bedah, tiada flap - laser Zeiss VisuMax 800 mengukir lensa kecil di dalam kornea, dan pakar bedah mengeluarkannya melalui sayatan 3 mm. Kurang daripada sepuluh saat masa laser untuk setiap mata.
 
 Dia berjalan keluar sambil menyipitkan mata. "Seperti pasir di mata saya. Tapi saya dah boleh nampak bentuk-bentuk itu."
 
@@ -97,11 +99,11 @@ Pembedahan di Chicago sahaja: $4,800. Semuanya termasuk di Shanghai — pembedah
 
 Ini bukan tentang "murah." Ini tentang jumlah, teknologi, dan pengalaman.
 
-**Peralatan:** Hospital menggunakan Zeiss VisuMax 800 — generasi terbaru, mesin yang sama yang terdapat di klinik-klinik terkemuka AS. Banyak amalan masih menggunakan model generasi sebelumnya 500.
+**Peralatan:** Hospital menggunakan Zeiss VisuMax 800 — generasi terbaru, platform laser femtosaat yang diiktiraf di peringkat antarabangsa. Banyak amalan masih menggunakan model generasi sebelumnya 500.
 
-**Jumlah:** Pasukan senior telah melakukan lebih daripada 260,000 pembedahan SMILE - lebih daripada mana-mana pusat tunggal di seluruh dunia, satu rekod yang dipegang untuk tahun-tahun berturut-turut.
+**Jumlah:** Pasukan senior telah melakukan lebih daripada 260,000 pembedahan SMILE, mencerminkan pengalaman luas dalam prosedur ini.
 
-**Hasil:** Hasil di pusat ini setanding dengan hasil antarabangsa terbaik yang diterbitkan.
+**Hasil:** Hasil individu bergantung pada preskripsi, keadaan kornea dan tindak balas penyembuhan anda. Pakar bedah akan membincangkan hasil yang dijangkakan semasa penilaian sebelum pembedahan.
 
 **Pemulihan:** SMILE adalah tanpa flap. Kebanyakan pesakit melihat fungsi dalam tempoh 24 jam. Dia melihat pemandangan kira-kira 24 jam selepas pembedahan. LASIK tradisional mencipta flap kornea dan memerlukan pemulihan berhati-hati selama seminggu.
 

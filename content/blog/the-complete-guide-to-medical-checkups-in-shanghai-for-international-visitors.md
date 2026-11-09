@@ -24,11 +24,13 @@ canonicalUrl: 'https://shanghaimedhealth.com/blog/medical-checkup-shanghai-guide
 ---
 If you are an expatriate living in Shanghai, a business traveler planning a stopover, or someone exploring medical tourism options in Asia, this guide is for you. Shanghai has quietly built one of the most sophisticated and accessible health screening ecosystems in the world—and for international visitors, the combination of world-class facilities, English-speaking specialists, and significantly lower costs makes it a destination worth serious consideration.
 
-Good to know: Citizens of 54 countries can visit Shanghai visa-free for up to 240 hours (10 days) under China's transit exemption—more than enough time for a comprehensive health checkup and follow-up. Check current eligibility before booking.
+Good to know: Eligible citizens of **57 countries** who meet China's transit conditions can use the **240-hour visa-free transit** policy for a short health checkup, dental appointment, ordinary outpatient consultation, follow-up, or second opinion in Shanghai. It is **not for planned surgery, hospital admission, or inpatient treatment**. Those situations require an S2 visa supported by hospital documentation or, when the need arises after lawful entry, an in-country status conversion under the applicable rules. Other travelers may use a tourist (L) visa or an applicable visa-free policy for checkups and outpatient care.
 
-If you have not yet decided whether Shanghai is the right destination for your medical needs, start with our comprehensive Is Shanghai Safe for Medical Treatment? to understand the full landscape before booking your checkup.
+*Visa policy verified as of **October 25, 2026**. Before booking, check the latest National Immigration Administration (NIA) announcement or call **+86-12367**. Entry and visa decisions are made individually by the competent authorities.*
 
-Why Preventive Screening Matters
+If you have not yet decided whether Shanghai is the right destination for your medical needs, start with our comprehensive [Is Shanghai a Good Place for Medical Treatment?](/blog/is-shanghai-a-good-place-for-medical-treatment) to understand the full landscape before booking your checkup.
+
+## Why Preventive Screening Matters
 
 Let us be direct: preventive screening saves lives. Studies consistently show that early detection of conditions like colorectal cancer, breast cancer, and cardiovascular disease dramatically improves treatment outcomes and reduces long-term healthcare costs. Yet in many Western countries, routine preventive screenings are often limited by insurance restrictions, long wait times, or high out-of-pocket costs.
 
@@ -36,11 +38,11 @@ Shanghai flips this equation. The city is home to 23 public hospitals with dedic
 
 The result? Comprehensive, multi-system health screenings that would cost thousands of dollars in New York or London are accessible at a fraction of the price, without months of waiting.
 
-Most Popular Checkup Packages
+## Most Popular Checkup Packages
 
 Shanghai hospitals typically offer three tiers of health screening packages. Each hospital has slight variations, but the following breakdown reflects what you can expect across major international medical centers.
 
-Basic Screening — $200–400 USD
+### Basic Screening — $200–400 USD
 
 The entry-level package covers the essentials and is ideal for adults under 40 with no significant family history or symptoms. It typically includes:
 
@@ -55,7 +57,7 @@ Abdominal ultrasound — examines liver, gallbladder, kidneys, and spleen; breas
 
 This package can usually be completed in about 2 hours, and results are often available the same day for basic parameters.
 
-Standard Checkup — $500–1,000 USD
+### Standard Checkup — $500–1,000 USD
 
 The mid-tier package adds meaningful depth for adults 40+ or anyone wanting more thorough coverage. It includes everything in Basic Screening, plus:
 
@@ -69,7 +71,7 @@ Gender-specific ultrasound — prostate and bladder ultrasound for men; breast a
 
 This package typically takes 3–4 hours and may require a brief follow-up for result review.
 
-Executive / VIP Screening — $1,000–2,500+ USD
+### Executive / VIP Screening — $1,000–2,500+ USD
 
 For those who want the most thorough evaluation possible, the executive package is a full-body assessment comparable to the premium physicals offered at places like the Cleveland Clinic or Singapore's Gleneagles—minus the premium price tag. In addition to everything in Standard, it includes:
 
@@ -89,20 +91,21 @@ Note: MRI and PET-CT are diagnostic-grade imaging studies rather than routine sc
 
 This comprehensive package generally requires one full day on-site, or up to 1.5 days if gastroscopy and colonoscopy are included.
 
-Typical Prices
+## Typical Prices
 
 One of the most compelling reasons international patients choose Shanghai for health screenings is cost. The following comparison illustrates typical pricing across three tiers.
 
-Package Level	Shanghai	United States	Potential Savings
-Basic Screening	$200–400	$800–1,500	60–75%
-Standard Checkup	$500–1,000	$2,500–4,000	65–80%
-Executive / VIP	$1,000–2,500	$5,000–12,000	65–85%
+| Package Level | Shanghai | United States | Potential Savings |
+|---|---|---|---|
+| Basic Screening | $200–400 | $800–1,500 | 60–75% |
+| Standard Checkup | $500–1,000 | $2,500–4,000 | 65–80% |
+| Executive / VIP | $1,000–2,500 | $5,000–12,000 | 65–85% |
 
 Prices are approximate ranges in USD, based on publicly available hospital fee schedules and international patient pricing data. Actual costs vary by hospital, specific tests included, and individual health profile.
 
-The 60–85% savings are not achieved by reducing quality. Many of Shanghai's top hospitals invest in the same or identical equipment as leading Western institutions—GE, Siemens, and Philips imaging systems are standard in major international medical centers. The cost difference reflects healthcare system structure, not capability.
+The cost difference does not necessarily reflect lower quality. Many of Shanghai's top hospitals use internationally recognized equipment brands such as GE, Siemens, and Philips; specific models and availability vary by institution and department. The price gap largely reflects differences in healthcare system structure and operating costs.
 
-How Long It Takes
+## How Long It Takes
 
 Time is a real concern for business travelers and expats with busy schedules. Here is what to realistically expect:
 
@@ -150,7 +153,7 @@ You receive your results and documentation without the hassle of filing claims.
 
 If your insurer does not have a direct billing agreement with the hospital, most international medical centers will provide a detailed receipt and medical report that you can submit to your insurer for reimbursement. Keep all documentation, as the process typically takes 2–6 weeks.
 
-Paying Out of Pocket
+## Paying Out of Pocket
 
 If you are not using insurance, Shanghai's international medical centers accept several convenient payment methods:
 
@@ -161,15 +164,15 @@ For executive-level packages, payment is typically settled on the day of your ap
 
 Not sure which hospitals your plan covers—or paying out of pocket and want a cost estimate first? That is exactly the kind of question where having a local coordinator makes a difference. Message us on WhatsApp at +86 13818274110 and we can verify your insurance network coverage or provide a transparent price breakdown before you book anything.
 
-How to Book
+## How to Book
 
 Booking a health checkup in Shanghai requires a bit of planning, but it is straightforward once you understand the process.
 
-Step 1: Schedule about 1 week in advance
+### Step 1: Schedule about 1 week in advance
 
 Most international medical centers require advance booking. Executive packages with gastroscopy, colonoscopy, or additional imaging may need slightly more lead time. Peak seasons (October–December, and post-Chinese New Year) fill up faster—book 2 weeks ahead during these periods.
 
-Step 2: Prepare your documents
+### Step 2: Prepare your documents
 
 You will need:
 
@@ -179,33 +182,33 @@ Any pre-authorization number from your insurer
 A list of current medications
 Previous medical records or relevant test results (bring what you have, even in translation)
 
-Step 3: Fast for 8–12 hours before your appointment
+### Step 3: Fast for 8–12 hours before your appointment
 
 Most blood tests require fasting. Drink water only, and avoid coffee, tea, and cigarettes the morning of your exam.
 
-Step 4: Meet your coordinator at the international reception
+### Step 4: Meet your coordinator at the international reception
 
 Your personal coordinator will meet you at the hospital's international reception area. They will handle registration, manage all communication with hospital staff, and guide you through every step of the process—so you never have to worry about language barriers or finding your way around.
 
-Step 5: Complete your screening with full accompaniment
+### Step 5: Complete your screening with full accompaniment
 
 Your coordinator will accompany you through each examination station—blood draw, imaging, specialist consultations—ensuring a smooth, efficient experience. They manage the logistics so you can focus entirely on the checkup itself.
 
-Step 6: Results review
+### Step 6: Results review
 
 Basic results may be available the same afternoon. Comprehensive results from executive packages are typically ready within 2–3 business days. If results are normal, you will receive a phone or video notification. If any findings need attention, a follow-up consultation or specialist referral will be arranged promptly.
 
 Ready to get started? Let us help you choose the right hospital and package for your needs. Contact us on WhatsApp at +86 13818274110 for personalized recommendations and booking assistance, or chat with our AI Health Navigator Agent for answers to specific questions.
 
-Follow-Up Care Options
+## Follow-Up Care Options
 
 What happens if something abnormal is found? This is perhaps the most critical question in preventive screening, and Shanghai handles it well.
 
-Immediate follow-up within Shanghai
+### Immediate follow-up within Shanghai
 
 If a checkup reveals an area of concern—say, a suspicious nodule on thyroid ultrasound or an elevated tumor marker—the hospital's international medical team can schedule prompt follow-up imaging, biopsy, or specialist consultation. Wait times for follow-up appointments at major hospitals are typically measured in days, not weeks.
 
-Next Steps
+## Next Steps
 
 Shanghai has earned its place among the world's leading destinations for comprehensive, high-quality health screenings. Whether you are due for a routine checkup, want a proactive cancer screening, or need a thorough executive physical, the city's combination of expert physicians, cutting-edge equipment, English-language service, and competitive pricing makes it a smart choice.
 

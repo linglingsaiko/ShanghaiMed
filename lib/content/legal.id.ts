@@ -37,7 +37,7 @@ export const legalId: Record<string, LegalDoc> = {
         items: [
           'Menilai kasus Anda dan mencocokkan rumah sakit serta spesialis;',
           'Menjadwalkan janji temu, interpretasi, dan pendampingan di lokasi;',
-          'Mendukung permohonan visa medis dan logistik perjalanan;',
+          'Memberikan panduan jalur visa untuk perawatan rutin yang memenuhi syarat dan jalur S2 untuk penerimaan pasien terencana, serta mengoordinasikan logistik perjalanan;',
           'Memproses biaya koordinasi layanan dan menerbitkan faktur;',
           'Berkomunikasi dengan Anda sebelum, selama, dan setelah kunjungan Anda;',
           'Memenuhi kewajiban hukum, akuntansi, pajak, dan peraturan.',
@@ -104,7 +104,7 @@ export const legalId: Record<string, LegalDoc> = {
           'Peninjauan dan penerjemahan profesional rekam medis;',
           'Mencocokkan kasus Anda dengan rumah sakit publik Tiongkok dan spesialis berlisensi yang sesuai;',
           'Penjadwalan janji temu dan estimasi biaya;',
-          'Dukungan surat undangan visa medis dan logistik perjalanan/akomodasi;',
+          'Panduan jalur visa dan logistik perjalanan/akomodasi: opsi visa turis atau bebas visa yang berlaku untuk perawatan rutin yang memenuhi syarat, serta perencanaan S2 dengan surat undangan rumah sakit/dokumen rencana penerimaan hanya untuk operasi terencana, rawat inap, atau perawatan lain yang memerlukan penerimaan pasien;',
           'Pendampingan dan interpretasi bilingual secara tatap muka selama kunjungan rumah sakit;',
           'Koordinasi tindak lanjut pasca kunjungan.',
         ],
@@ -132,7 +132,7 @@ export const legalId: Record<string, LegalDoc> = {
         title: '6. Tanggung jawab Anda',
         items: [
           'Memberikan informasi, rekam medis, dan dokumen identitas/visa yang akurat, lengkap, dan asli;',
-          'Memperoleh visa dan dokumen perjalanan yang sah untuk masuk ke Tiongkok; memperoleh asuransi perjalanan dan/atau medis yang sesuai sebagaimana Anda anggap tepat;',
+          'Memperoleh visa yang diperlukan atau memastikan Anda memenuhi seluruh persyaratan fasilitas bebas visa yang berlaku, serta memiliki dokumen perjalanan yang sah untuk masuk ke Tiongkok; memperoleh asuransi perjalanan dan/atau medis yang sesuai sebagaimana Anda anggap tepat;',
           'Membuat keputusan sendiri, dalam konsultasi dengan dokter yang merawat, tentang apakah akan melanjutkan pengobatan apa pun yang direkomendasikan oleh rumah sakit;',
           'Membayar biaya rumah sakit serta biaya perjalanan, akomodasi, dan hidup Anda sendiri secara langsung;',
           'Mematuhi hukum Republik Rakyat Tiongkok dan peraturan rumah sakit yang Anda kunjungi.',

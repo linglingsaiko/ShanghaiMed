@@ -89,7 +89,7 @@ Kedua-dua model tidak menjadikan syarikat baik atau buruk secara automatik. Teta
 - Mengumpul dan meninjau semua rekod perubatan, pengimejan, dan sejarah anda  
 - Mengaturkan perundingan jarak jauh dengan hospital yang merawat sebelum anda membuat komitmen  
 - Memberikan anggaran kos dan rawatan bertulis dari hospital itu sendiri  
-- Memberi nasihat tentang kategori visa (untuk China, biasanya S1/S2 untuk tujuan perubatan) dan dokumentasi  
+- Memberi nasihat tentang kategori visa (untuk China, biasanya S2 untuk tujuan perubatan) dan dokumentasi  
 - Mengesahkan sama ada penanggung insurans antarabangsa anda boleh dicaj secara langsung.
 
 **Semasa rawatan anda:**  

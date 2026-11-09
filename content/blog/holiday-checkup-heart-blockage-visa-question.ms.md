@@ -73,8 +73,8 @@ Proses sebenar:
 Tiga perkara praktikal:
 
 - anda perlu menunjukkan anda boleh menampung kos rawatan — anggaran hospital ditambah bukti dana atau insurans. Pengesahan insuransnya diterima
-- Tempoh permit mengikut dokumentasi perubatan anda — secara sah sehingga 180 hari
-- Ini bukanlah kawasan kelabu. Artikel 34 Undang-Undang Pentadbiran Keluar-masuk China meliputi betul-betul ini: pendatang tanpa visa yang tinggal lebih lama untuk sebab-sebab yang sah perlu memohon permit tinggal. Artikel 19 Peraturan Pentadbiran Keluar-masuk Rakyat Asing (disemak 2025) membenarkan keluarga atau agensi perkhidmatan untuk memohon bagi pihak pesakit yang dirawat di hospital.
+- Permit tinggal jenis S2 biasanya dikeluarkan selama **30–90 hari** berdasarkan dokumentasi hospital; rawatan lanjutan memerlukan bukti hospital yang dikemas kini untuk pelanjutan
+- Ini bukanlah kawasan kelabu. Peraturan keluar-masuk China menyediakan laluan dalam negara apabila keperluan rawatan timbul selepas ketibaan yang sah. Artikel 10 Peraturan Pentadbiran Keluar-masuk Warga Asing mengatur pengeluaran semula visa dalam negara apabila tujuan tinggal berubah mengikut peraturan nasional, dan Artikel 19 (semakan 2025) membenarkan keluarga atau agensi perkhidmatan profesional memohon bagi pihak pesakit yang dimasukkan ke hospital
 
 ## Bagaimana ia berlaku
 
@@ -90,9 +90,11 @@ Mereka terbang pulang sedikit lebih daripada empat minggu selepas mendarat. Paka
 
 ## Tiga nota jujur
 
-- Ini bukanlah cadangan untuk tiba tanpa visa dan merancang pembedahan. Jika anda sudah tahu anda memerlukan prosedur, mohon visa yang betul dari rumah. Laluan permit tinggal wujud untuk perkara-perkara yang timbul selepas kedatangan.
+- Ini bukanlah cadangan untuk tiba tanpa visa dan merancang pembedahan. Jika anda sudah tahu bahawa anda memerlukan pembedahan atau kemasukan hospital, mohon **visa S2** sebelum mengembara dengan surat jemputan/dokumen kemasukan hospital. Laluan permit tinggal adalah untuk keperluan yang timbul selepas ketibaan yang sah.
 - Jika permit tinggal anda hampir tamat, mulakan sekurang-kurangnya 7 hari sebelum tamat tempoh. Hotline imigresen berbilang bahasa China: +86-12367
-- Kemasukan tanpa visa adalah baik untuk pemeriksaan, kerja gigi dan lawatan pesakit luar - bukan untuk kemasukan hospital yang dirancang. Setiap kes berbeza; sahkan dengan hospital dan biro tempatan.
+- Kemasukan tanpa visa sesuai untuk pemeriksaan, rawatan gigi dan lawatan pesakit luar - bukan untuk kemasukan hospital yang dirancang. Setiap kes berbeza; sahkan dengan hospital dan biro tempatan.
+
+*Dasar visa disahkan setakat **25 Oktober 2026**. Sebelum mengembara, semak pengumuman terkini Pentadbiran Imigresen Nasional (NIA) atau hubungi **+86-12367**. Setiap permohonan dinilai secara individu oleh pihak berkuasa yang berkaitan.*
 
 ## Bagaimana kami boleh membantu
 

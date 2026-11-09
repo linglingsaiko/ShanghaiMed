@@ -88,4 +88,4 @@ Mitra yang tepat akan menjawab keenam pertanyaan dengan nyaman dan secara tertul
 
 ---
 
-*Merencanakan perjalanan pengobatan Anda ke Shanghai? Tim kami meninjau catatan medis lengkap Anda sebelum merekomendasikan rumah sakit mana pun - dan kami merencanakan segalanya, mulai dari apartemen Anda hingga perawatan lanjutan. Kirimkan pesan kepada kami di WhatsApp di +86 138 1827 4110 untuk konsultasi gratis, atau bergabunglah dengan [komunitas pasien gratis kami di Telegram](https://t.me/shanghaimed_group).*
+*Merencanakan perjalanan pengobatan Anda ke Shanghai? Tim kami meninjau catatan medis lengkap Anda sebelum merekomendasikan rumah sakit mana pun - dan kami merencanakan segalanya, mulai dari apartemen Anda hingga perawatan lanjutan. Kirimkan pesan kepada kami di WhatsApp di +86 138 1827 4110 untuk konsultasi koordinasi online awal gratis, atau bergabunglah dengan [komunitas pasien gratis kami di Telegram](https://t.me/shanghaimed_group).*

@@ -21,11 +21,13 @@ canonicalUrl: 'https://shanghaimedhealth.com/blog/medical-checkup-shanghai-guide
 
 Jika anda seorang ekspatriat yang tinggal di Shanghai, pelancong perniagaan yang merancang persinggahan, atau seseorang yang meninjau pilihan pelancongan perubatan di Asia, panduan ini adalah untuk anda. Shanghai telah diam-diam membina salah satu ekosistem saringan kesihatan yang paling canggih dan mudah diakses di dunia—dan bagi pelawat antarabangsa, kombinasi fasiliti berkualiti dunia, pakar yang bertutur dalam bahasa Inggeris, dan kos yang jauh lebih rendah menjadikannya destinasi yang berbaloi untuk dipertimbangkan dengan serius.
 
-Perlu tahu: Warga negara dari 54 boleh melawat Shanghai tanpa visa sehingga 240 jam (10 hari) di bawah pengecualian transit China—masa yang lebih dari cukup untuk pemeriksaan kesihatan yang komprehensif dan susulan. Semak kelayakan semasa sebelum membuat tempahan.
+Perlu tahu: Warganegara yang layak dari **57 negara** yang memenuhi syarat transit China boleh menggunakan dasar **Transit Bebas Visa 240 Jam** untuk pemeriksaan kesihatan ringkas, temu janji pergigian, konsultasi pesakit luar biasa, lawatan susulan atau pendapat kedua di Shanghai. Ia **bukan untuk pembedahan yang dirancang, kemasukan hospital atau rawatan pesakit dalam**. Situasi tersebut memerlukan visa S2 dengan dokumentasi hospital atau, apabila keperluan ditemui selepas kemasukan yang sah, penukaran status di China mengikut peraturan berkenaan. Pelancong lain boleh menggunakan visa pelancong (L) atau dasar pengecualian visa yang berkenaan untuk pemeriksaan dan rawatan pesakit luar.
 
-Jika anda belum memutuskan sama ada Shanghai merupakan destinasi yang betul untuk keperluan perubatan anda, mulakan dengan panduan komprehensif kami Adakah Shanghai Selamat untuk Rawatan Perubatan? untuk memahami gambaran penuh sebelum menempah pemeriksaan anda.
+*Dasar visa disahkan setakat **25 Oktober 2026**. Sebelum membuat tempahan, semak pengumuman terkini Pentadbiran Imigresen Nasional (NIA) atau hubungi **+86-12367**. Keputusan kemasukan dan visa dibuat secara individu oleh pihak berkuasa yang berkaitan.*
 
-Kenapa Pemeriksaan Pencegahan Penting
+Jika anda belum memutuskan sama ada Shanghai merupakan destinasi yang betul untuk keperluan perubatan anda, mulakan dengan panduan komprehensif kami [Adakah Shanghai Tempat yang Baik untuk Rawatan Perubatan?](/blog/is-shanghai-a-good-place-for-medical-treatment) untuk memahami gambaran penuh sebelum menempah pemeriksaan anda.
+
+## Kenapa Pemeriksaan Pencegahan Penting
 
 Jujur sahaja: pemeriksaan pencegahan menyelamatkan nyawa. Kajian secara konsisten menunjukkan bahawa pengesanan awal keadaan seperti kanser kolorektal, kanser payu dara, dan penyakit kardiovaskular secra dramatik meningkatkan hasil rawatan dan mengurangkan kos penjagaan kesihatan jangka panjang. Namun di banyak negara Barat, pemeriksaan pencegahan rutin seringkali terhad oleh kekangan insurans, masa tunggu yang lama, atau kos di luar poket yang tinggi.
 
@@ -33,11 +35,11 @@ Shanghai membalikkan persamaan ini. Bandar ini adalah rumah bagi 23 hospital awa
 
 Hasilnya? Pemeriksaan kesihatan multi-sistem yang komprehensif yang akan menelan kos beribu-ribu dolar di New York atau London boleh didapatkan dengan harga yang jauh lebih rendah, tanpa menunggu berbulan-bulan.
 
-Pakej Pemeriksaan Paling Popular
+## Pakej Pemeriksaan Paling Popular
 
 Hospital-hospital di Shanghai biasanya menawarkan tiga tahap pakej saringan kesihatan. Setiap hospital mempunyai sedikit variasi, tetapi penguraian berikut mencerminkan apa yang anda boleh jangka di pusat-pusat perubatan antarabangsa utama.
 
-Saringan Asas — $200–400 USD
+### Saringan Asas — $200–400 USD
 
 Pakej peringkat kemasukan meliputi keperluan asas dan sesuai untuk orang dewasa di bawah 40 tanpa sejarah keluarga atau simptom yang ketara. Ia biasanya termasuk:
 
@@ -52,7 +54,7 @@ Ultrasound Perut — Memeriksa hati, pundi hempedu, ginjal, dan limpa; ultrasoun
 
 Pakej ini biasanya boleh diselesaikan dalam masa kira-kira 2 jam, dan hasilnya selalunya tersedia pada hari yang sama untuk parameter asas.
 
-Pemeriksaan Standard — $500–1,000 USD
+### Pemeriksaan Standard — $500–1,000 USD
 
 Pakej pertengahan menambah kedalaman yang bermakna untuk orang dewasa 40+ atau sesiapa yang menginginkan liputan yang lebih menyeluruh. Ia termasuk semua yang terdapat dalam Pemeriksaan Asas, ditambah:
 
@@ -66,7 +68,7 @@ Ultrasound khusus jantina — Ultrasound prostat dan pundi kencing untuk lelaki;
 
 Pakej ini biasanya mengambil masa 3–4 jam dan mungkin memerlukan susulan ringkas untuk semakan hasil.
 
-Pemeriksaan Eksekutif / VIP — $1,000–2,500+ USD
+### Pemeriksaan Eksekutif / VIP — $1,000–2,500+ USD
 
 Untuk mereka yang mahukan penilaian paling menyeluruh, pakej eksekutif merupakan penilaian seluruh badan yang setanding dengan pemeriksaan fizikal premium yang ditawarkan di tempat seperti Klinik Cleveland atau Gleneagles Singapura — tanpa harga premium. Selain semua yang terdapat dalam Standard, ia termasuk:
 
@@ -86,20 +88,21 @@ Nota: MRI dan PET-CT adalah kajian pengimejan berkualiti diagnostik dan bukan al
 
 Pakej komprehensif ini secara umum memerlukan satu hari penuh di tempat, atau sehingga 1.5 hari jika termasuk gastroskopi dan kolonoskopi.
 
-Harga Tipikal
+## Harga Tipikal
 
 Salah satu sebab paling menarik bagi pesakit antarabangsa memilih Shanghai untuk saringan kesihatan ialah kos. Perbandingan berikut menunjukkan harga tipikal dalam tiga tahap.
 
-Tahap Pakej	Shanghai	Amerika Syarikat	Potensi Penjimatan
-Saringan Asas	$200–400	$800–1,500	60–75%
-Pemeriksaan Standard	$500–1,000	$2,500–4,000	65–80%
-Eksekutif / VIP	$1,000–2,500	$5,000–12,000	65–85%
+| Tahap Pakej | Shanghai | Amerika Syarikat | Potensi Penjimatan |
+|---|---|---|---|
+| Saringan Asas | $200–400 | $800–1,500 | 60–75% |
+| Pemeriksaan Standard | $500–1,000 | $2,500–4,000 | 65–80% |
+| Eksekutif / VIP | $1,000–2,500 | $5,000–12,000 | 65–85% |
 
 Harga adalah anggaran dalam USD, berdasarkan jadual yuran hospital yang tersedia untuk umum dan data harga pesakit antarabangsa. Kos sebenar berbeza mengikut hospital, ujian khusus yang disertakan, dan profil kesihatan individu.
 
-Penjimatan 60–85% tidak dicapai dengan mengurangkan kualiti. Banyak hospital terkemuka di Shanghai melabur dalam peralatan yang sama atau identik dengan institusi terkemuka Barat - sistem pengimejan GE, Siemens, dan Philips adalah standard di pusat perubatan antarabangsa utama. Perbezaan kos mencerminkan struktur sistem kesihatan, bukan keupayaan.
+Perbezaan kos tidak semestinya mencerminkan kualiti yang lebih rendah. Banyak hospital terkemuka di Shanghai menggunakan jenama peralatan yang diiktiraf di peringkat antarabangsa seperti GE, Siemens dan Philips; model tertentu dan ketersediaannya berbeza mengikut institusi dan jabatan. Jurang harga sebahagian besarnya mencerminkan perbezaan dalam struktur sistem penjagaan kesihatan dan kos operasi.
 
-Berapa Lama Masa Yang Dibutuhkan
+## Berapa Lama Masa Yang Dibutuhkan
 
 Masa merupakan kebimbangan sebenar bagi pelancong perniagaan dan ekspatriat dengan jadual sibuk. Berikut adalah apa yang boleh dijangka secara realistik:
 
@@ -108,7 +111,7 @@ Pemeriksaan Standard: 3–4 jam pada satu hari, dengan keputusan biasanya siap d
 Saringan Eksekutif / VIP: 1 sehari penuh di tempat, atau sehingga 1.5 hari jika termasuk gastroskopi dan kolonoskopi. Beberapa hospital menawarkan pengalaman VIP yang ringkas di mana kebanyakan ujian diselesaikan dalam satu hari.
 Hasil dan Susulan: Laporan komprehensif siap dalam 2–3 hari perniagaan. Keputusan normal diberitahu melalui telefon atau panggilan video. Jika sebarang penemuan abnormal memerlukan perhatian, hospital akan menjadualkan perundingan susulan atau rujukan pakar - biasanya dalam beberapa hari.
 
-Laporan Apa yang anda Terima
+## Laporan Apa yang anda Terima
 
 Kelebihan yang sering diabaikan dari menjalani pemeriksaan kesihatan di Shanghai ialah kualiti dokumentasi yang anda bawa pulang. Pusat perubatan antarabangsa di hospital-hospital utama Shanghai secara rutin menghasilkan:
 
@@ -118,7 +121,7 @@ Penemuan terperinci dengan julat rujukan - setiap hasil ujian disajikan dengan n
 Ringkasan doktor - ringkasan naratif oleh doktor kanan memberikan konteks dan keutamaan penemuan, bukan hanya nombor mentah.
 Pesanan tindakan - cadangan susulan, pengubahsuaian gaya hidup, dan cadangan rujukan digariskan dengan jelas.
 
-Pembayaran Langsung Insurans
+## Pembayaran Langsung Insurans
 
 Ini adalah salah satu aspek yang paling penting - dan paling sering disalah faham - dalam mendapatkan rawatan perubatan di Shanghai sebagai pesakit antarabangsa.
 
@@ -147,7 +150,7 @@ anda menerima hasil dan dokumentasi tanpa kerumitan mengajukan tuntutan.
 
 Jika penanggung insurans anda tidak mempunyai perjanjian pembayaran langsung dengan hospital, kebanyakan pusat perubatan antarabangsa akan menyediakan resit terperinci dan laporan perubatan yang anda boleh serahkan kepada penanggung insurans anda untuk pembayaran balik. Simpan semua dokumentasi, kerana prosesnya biasanya mengambil masa 2–6 minggu.
 
-Membayar Secara Tunai
+## Membayar Secara Tunai
 
 Jika anda tidak menggunakan insurans, pusat perubatan antarabangsa di Shanghai menerima beberapa kaedah pembayaran yang mudah:
 
@@ -158,15 +161,15 @@ Untuk pakej peringkat eksekutif, pembayaran biasanya diselesaikan pada hari temu
 
 Tidak pasti hospital mana yang dilindungi oleh pelan anda—atau membayar daripada poket dan ingin anggaran kos terlebih dahulu? Inilah jenis soalan di mana mempunyai koordinator tempatan membuat perbezaan. Hantarkan mesej kepada kami di WhatsApp di +86 13818274110 dan kami boleh mengesahkan liputan rangkaian insurans anda atau memberikan pemecahan harga yang jelas sebelum anda menempah apa-apa.
 
-Bagaimana untuk Menempah
+## Bagaimana untuk Menempah
 
 Menempah pemeriksaan kesihatan di Shanghai memerlukan sedikit perancangan, tetapi ia mudah apabila anda memahami prosesnya.
 
-Langkah 1: Jadualkan kira-kira 1 minggu sebelumnya
+### Langkah 1: Jadualkan kira-kira 1 minggu sebelumnya
 
 Kebanyakan pusat perubatan antarabangsa memerlukan tempahan terlebih dahulu. Pakej eksekutif dengan gastroskopi, kolonoskopi, atau pengimejan tambahan mungkin memerlukan sedikit lebih banyak masa persediaan. Musim bermuncak (Oktober-Disember, dan selepas Tahun Baru China) mengisi lebih cepat—tempah 2 minggu sebelumnya selama tempoh-tempoh ini.
 
-Langkah 2: Bersiapkan dokumen anda
+### Langkah 2: Bersiapkan dokumen anda
 
 anda akan memerlukan:
 
@@ -176,33 +179,33 @@ Sebarang nombor pra-kebenaran dari penanggung insurans anda
 Senarai ubat-ubatan semasa
 Rekod perubatan sebelumnya atau keputusan ujian yang relevan (bawa apa yang anda ada, walaupun dalam terjemahan)
 
-Langkah 3: Puasa selama 8–12 jam sebelum temu janji anda
+### Langkah 3: Puasa selama 8–12 jam sebelum temu janji anda
 
 Kebanyakan ujian darah memerlukan puasa. Minum air sahaja, dan elakkan kopi, teh, dan rokok pada pagi hari peperiksaan anda.
 
-Langkah 4: Temui koordinator anda di kaunter penerimaan antarabangsa
+### Langkah 4: Temui koordinator anda di kaunter penerimaan antarabangsa
 
 Koordinator peribadi anda akan bertemu anda di kawasan penerimaan antarabangsa hospital. Mereka akan menguruskan pendaftan, menguruskan semua komunikasi dengan kakitangan hospital, dan membimbing anda melalui setiap langkah proses—jadi anda tidak perlu risau tentang halangan bahasa atau mencari jalan sendiri.
 
-Langkah 5: Selesaikan saringan anda dengan pengiring penuh
+### Langkah 5: Selesaikan saringan anda dengan pengiring penuh
 
 Koordinator anda akan menemani anda melalui setiap stesen pemeriksaan—pengambilan darah, pengimejan, perundingan pakar—memastikan pengalaman yang lancar dan cekap. Mereka menguruskan logistik supaya anda boleh memberi tumpuan sepenuhnya kepada pemeriksaan itu sendiri.
 
-Langkah 6: Semakan hasil
+### Langkah 6: Semakan hasil
 
 Hasil asas mungkin tersedia pada petang yang sama. Hasil komprehensif daripada pakej eksekutif biasanya siap dalam 2–3 hari perniagaan. Jika hasil normal, anda akan menerima pemberitahuan melalui telefon atau video. Jika sebarang penemuan memerlukan perhatian, perundingan susulan atau rujukan pakar akan diuruskan segera.
 
 Bersedia untuk bermula? Biarkan kami membantu anda memilih hospital dan pakej yang betul untuk keperluan anda. Hubungi kami di WhatsApp di +86 13818274110 untuk cadangan peribadi dan bantuan tempahan, atau berbual dengan Ejen Navigator Kesihatan AI kami untuk jawapan kepada soalan-soalan spesifik.
 
-Pilihan Penjagaan Susulan
+## Pilihan Penjagaan Susulan
 
 Apa akan terjadi jika sesuatu yang tidak normal ditemui? Ini mungkin soalan paling kritikal dalam saringan pencegahan, dan Shanghai mengendalikannya dengan baik.
 
-Penyusulan segera di dalam Shanghai
+### Penyusulan segera di dalam Shanghai
 
 Jika pemeriksaan mendedahkan kawasan yang menjadi kebimbangan—katakan, nodul mencurigakan pada ultrasound tiroid atau penanda tumor yang tinggi—pasukan perubatan antarabangsa hospital boleh menjadualkan penyusulan pencitraan, biopsi, atau perundingan pakar dengan segera. Masa tunggu untuk janji temu susulan di hospital-hospital utama biasanya diukur dalam hari, bukan minggu.
 
-Langkah-langkah Berikutnya
+## Langkah-langkah Berikutnya
 
 Shanghai telah mendapatkan tempatnya di antara destinasi terkemuka di dunia untuk saringan kesihatan yang komprehensif dan berkualiti tinggi. Sama ada anda perlu menjalani pemeriksaan rutin, ingin saringan kanser proaktif, atau memerlukan pemeriksaan fizikal eksekutif yang menyeluruh, kombinasi doktor pakar, peralatan canggih, perkhidmatan dalam bahasa Inggeris, dan harga yang kompetitif di bandar ini menjadikannya pilihan yang bijak.
 

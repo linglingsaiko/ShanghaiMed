@@ -32,11 +32,13 @@ An accountant from Chicago in his early thirties, he'd worn contacts since he wa
 
 Then he started planning a trip to China — not for surgery, just for the Bund, the food, the whole experience. He messaged our team: "I heard eye surgery in Shanghai is way cheaper. Is that true?"
 
-It was. SMILE — the latest laser technique — using the same Zeiss equipment found in top US clinics, at roughly a third of the price. And he could do it during his Shanghai trip. No separate medical journey needed.
+It was. SMILE — the latest laser technique — using internationally recognized Zeiss equipment, at roughly a third of the price. And he could do it during his Shanghai trip. No separate medical journey needed.
 
 "Do I need a medical visa?" he asked.
 
-No. SMILE is an outpatient procedure — no hospitalisation required. He'd sorted his 10-year multi-entry tourist visa before departure, the standard arrangement for Americans visiting China. Only surgeries involving hospital admission require extra paperwork. His trip — land, evaluate, operate, recover, holiday — stayed fully compliant.
+For that historical trip, he had already obtained a 10-year multiple-entry tourist visa before departure and used it for the itinerary described below. This is a statement of the visa he actually held at the time, not a general rule that a tourist visa is sufficient for planned eye surgery.
+
+**Current policy note (verified October 25, 2026):** SMILE, LASIK, and ICL are surgical procedures. Being outpatient or not requiring an overnight hospital stay does not by itself make a tourist visa generally sufficient. If SMILE or another eye surgery is planned before departure, confirm the receiving hospital's documentation and the S2 medical-purpose pathway with the relevant Chinese embassy or consulate before travel. Only when the need for surgery is discovered after lawful entry may the traveler apply, as required, for in-country visa reissuance or an appropriate stay permit; this is not automatic approval. Check the latest NIA announcements or call **+86-12367**, and follow case-by-case decisions by the competent authorities.
 
 He booked the same week.
 
@@ -97,11 +99,11 @@ Chicago's surgery alone: $4,800. Shanghai's everything included — surgery, fli
 
 This isn't about "cheap." It's about volume, technology, and experience.
 
-**Equipment:** The hospital uses the Zeiss VisuMax 800 — the latest generation, the same machine found in top US clinics. Many practices still use the previous generation 500 model.
+**Equipment:** The hospital uses the Zeiss VisuMax 800 — the latest generation, an internationally recognized femtosecond laser platform. Many practices still use the previous generation 500 model.
 
-**Volume:** The senior team has performed over 260,000 SMILE surgeries — more than any single centre worldwide, a record held for consecutive years.
+**Volume:** The senior team has extensive SMILE surgery experience.
 
-**Outcomes:** Results at this centre are comparable to the best published international results.
+**Outcomes:** Individual results depend on your prescription, corneal condition, and healing response. Your surgeon will discuss expected outcomes during your pre-operative assessment.
 
 **Recovery:** SMILE is flapless. Most patients see functionally within 24 hours. He was sightseeing about 24 hours post-surgery. Traditional LASIK creates a corneal flap and needs a week of careful recovery.
 

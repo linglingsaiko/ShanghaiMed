@@ -32,11 +32,13 @@ Seorang akuntan dari Chicago berusia awal tiga puluhan, ia telah memakai lensa k
 
 Kemudian ia mulai merencanakan perjalanan ke Tiongkok - bukan untuk operasi, hanya untuk Bund, makanan, dan seluruh pengalaman. Ia mengirim pesan ke tim kami: "Aku dengar operasi mata di Shanghai jauh lebih murah. Benarkah itu?"
 
-Memang. SMILE - teknik laser terbaru - menggunakan peralatan Zeiss yang sama yang ditemukan di klinik-klinik top AS, dengan harga kira-kira sepertiga. Dan ia bisa melakukannya selama perjalanannya di Shanghai. Tidak perlu perjalanan medis terpisah.
+Memang. SMILE - teknik laser terbaru - menggunakan peralatan Zeiss yang diakui secara internasional, dengan harga kira-kira sepertiga. Dan ia bisa melakukannya selama perjalanannya di Shanghai. Tidak perlu perjalanan medis terpisah.
 
 "Apakah aku butuh visa medis?" tanyanya.
 
-Tidak. SMILE adalah prosedur rawat jalan - tidak memerlukan rawat inap. Ia telah mengurus visa turis multi-entry 10 tahun sebelum keberangkatan, pengaturan standar untuk orang Amerika yang mengunjungi Tiongkok. Hanya operasi yang melibatkan rawat inap yang membutuhkan dokumen tambahan. Perjalanannya - mendarat, mengevaluasi, mengoperasi, pulih, berlibur - tetap sepenuhnya sesuai dengan peraturan.
+Pada perjalanan historis tersebut, ia telah memperoleh visa turis multi-entry 10 tahun sebelum keberangkatan dan menggunakannya untuk itinerary yang dijelaskan di bawah. Ini adalah pernyataan faktual tentang visa yang ia pegang saat itu, bukan aturan umum bahwa visa turis cukup untuk operasi mata yang direncanakan.
+
+**Catatan kebijakan saat ini (diverifikasi 25 Oktober 2026):** SMILE, LASIK, dan ICL adalah prosedur bedah. Bersifat rawat jalan atau tidak memerlukan menginap di rumah sakit tidak dengan sendirinya membuat visa turis secara umum memadai. Jika SMILE atau operasi mata lain telah direncanakan sebelum keberangkatan, konfirmasikan dokumen rumah sakit penerima dan jalur S2 untuk tujuan medis dengan kedutaan atau konsulat Tiongkok yang berwenang sebelum perjalanan. Hanya jika kebutuhan operasi ditemukan setelah masuk secara sah, pelancong dapat mengajukan, sesuai ketentuan, penerbitan ulang visa di dalam Tiongkok atau izin tinggal yang sesuai; hal ini bukan persetujuan otomatis. Periksa pengumuman NIA terbaru atau hubungi **+86-12367**, dan ikuti keputusan kasus per kasus dari otoritas yang berwenang.
 
 Ia memesan minggu yang sama.
 
@@ -52,7 +54,7 @@ Ahli bedah refraktif - seorang kepala dokter dengan pengalaman khusus bertahun-t
 
 ## Hari 3: Operasi
 
-Kamis pagi. Kembali ke rumah sakit. Operasi berlangsung sekitar 15 menit. Hanya tetes anestesi lokal. Tanpa pisau bedah, tanpa flap - laser Zeiss VisuMax 800 mengukir lensa kecil di dalam kornea, dan ahli bedah mengeluarkannya melalui sayatan 3mm. Kurang dari sepuluh detik waktu laser per mata.
+Kamis pagi. Kembali ke rumah sakit. Operasi berlangsung sekitar 15 menit. Hanya tetes anestesi lokal. Tanpa pisau bedah, tanpa flap - laser Zeiss VisuMax 800 mengukir lensa kecil di dalam kornea, dan ahli bedah mengeluarkannya melalui sayatan 3 mm. Kurang dari sepuluh detik waktu laser per mata.
 
 Ia keluar sambil menyipitkan mata. "Seperti pasir di mataku. Tapi aku sudah bisa melihat bentuk."
 
@@ -97,11 +99,11 @@ Operasi di Chicago saja: $4,800. Di Shanghai, semuanya termasuk — operasi, pen
 
 Ini bukan tentang "murah." Ini tentang volume, teknologi, dan pengalaman.
 
-**Peralatan:** Rumah sakit menggunakan Zeiss VisuMax 800 — generasi terbaru, mesin yang sama yang ditemukan di klinik top AS. Banyak praktik masih menggunakan model 500 generasi sebelumnya.
+**Peralatan:** Rumah sakit menggunakan Zeiss VisuMax 800 — generasi terbaru, platform laser femtodetik yang diakui secara internasional. Banyak praktik masih menggunakan model 500 generasi sebelumnya.
 
-**Volume:** Tim senior telah melakukan lebih dari 260,000 operasi SMILE — lebih banyak daripada pusat tunggal mana pun di seluruh dunia, rekor yang dipegang selama beberapa tahun berturut-turut.
+**Volume:** Tim senior telah melakukan lebih dari 260.000 operasi SMILE, yang mencerminkan pengalaman luas dalam prosedur ini.
 
-**Hasil:** Hasil di pusat ini sebanding dengan hasil internasional terbaik yang dipublikasikan.
+**Hasil:** Hasil individu bergantung pada resep, kondisi kornea, dan respons penyembuhan Anda. Ahli bedah akan membahas hasil yang diharapkan selama evaluasi praoperasi.
 
 **Pemulihan:** SMILE tanpa flap. Sebagian besar pasien melihat fungsi dalam waktu 24 jam. Dia sedang jalan-jalan sekitar 24 jam setelah operasi. LASIK tradisional menciptakan flap kornea dan membutuhkan pemulihan yang hati-hati selama seminggu.
 

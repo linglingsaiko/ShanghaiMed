@@ -37,7 +37,7 @@ export const legalMs: Record<string, LegalDoc> = {
         items: [
           'Menilai kes anda dan memadankan hospital serta pakar;',
           'Menjadualkan temujanji, tafsiran dan pengiringan di lokasi;',
-          'Menyokong permohonan visa perubatan dan logistik perjalanan;',
+          'Memberi panduan laluan visa bagi rawatan rutin yang layak dan laluan S2 bagi penerimaan pesakit terancang, serta menyelaraskan logistik perjalanan;',
           'Memproses yuran penyelarasan perkhidmatan dan mengeluarkan invois;',
           'Berkomunikasi dengan anda sebelum, semasa dan selepas lawatan anda;',
           'Mematuhi kewajipan undang-undang, perakaunan, cukai dan pengawalseliaan.',
@@ -104,7 +104,7 @@ export const legalMs: Record<string, LegalDoc> = {
           'Semakan dan terjemahan profesional rekod perubatan;',
           'Memadankan kes anda dengan hospital awam China dan pakar berlesen yang sesuai;',
           'Penjadualan temujanji dan anggaran kos;',
-          'Sokongan jemputan visa perubatan dan logistik perjalanan/penginapan;',
+          'Panduan laluan visa dan logistik perjalanan/penginapan: pilihan visa pelancong atau tanpa visa yang terpakai bagi rawatan rutin yang layak, serta perancangan S2 dengan surat jemputan hospital/dokumen cadangan penerimaan hanya untuk pembedahan terancang, kemasukan hospital atau rawatan lain yang memerlukan penerimaan pesakit;',
           'Pengiringan dan tafsiran dwi-bahasa secara bersemuka semasa lawatan hospital;',
           'Penyelarasan susulan selepas lawatan.',
         ],
@@ -132,7 +132,7 @@ export const legalMs: Record<string, LegalDoc> = {
         title: '6. Tanggungjawab anda',
         items: [
           'Memberikan maklumat, rekod perubatan dan dokumen identiti/visa yang tepat, lengkap dan tulen;',
-          'Mendapatkan visa dan dokumen perjalanan yang sah untuk masuk ke China; mendapatkan insurans perjalanan dan/atau perubatan yang sesuai sebagaimana yang anda anggap wajar;',
+          'Mendapatkan visa yang diperlukan atau mengesahkan bahawa anda memenuhi semua syarat kemudahan tanpa visa yang terpakai, serta mempunyai dokumen perjalanan yang sah untuk masuk ke China; mendapatkan insurans perjalanan dan/atau perubatan yang sesuai sebagaimana yang anda anggap wajar;',
           'Membuat keputusan anda sendiri, dalam perundingan dengan doktor yang merawat, tentang sama ada untuk meneruskan sebarang rawatan yang disyorkan oleh hospital;',
           'Membayar caj hospital dan kos perjalanan, penginapan dan sara hidup anda sendiri secara terus;',
           'Mematuhi undang-undang Republik Rakyat China dan peraturan hospital yang anda lawati.',

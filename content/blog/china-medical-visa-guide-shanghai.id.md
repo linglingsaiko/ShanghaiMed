@@ -32,13 +32,13 @@ Jika Anda hanya punya 30 detik, pohon keputusan ini mencakup sebagian besar situ
 
 | Situasi Anda | Visa yang Anda Butuhkan | Dapatkah Anda Masuk Tanpa Visa? |
 |---|---|---|
-| Pemeriksaan kesehatan / gigi / TCM / pendapat kedua saja, tanpa rawat inap | **Visa Turis (L) atau masuk tanpa visa** (30 hari) | ✅ Ya, jika kewarganegaraan Anda memenuhi syarat (lihat §3) |
-| Operasi yang direncanakan, rawat inap di rumah sakit, atau perawatan rawat inap berhari-hari | **Visa S2 (Urusan Pribadi Jangka Pendek, tujuan medis)** | ❌ Tidak — Anda harus mengajukan permohonan terlebih dahulu dengan surat undangan dari rumah sakit |
-| Warga negara Malaysia atau Kazakhstan, perawatan dalam waktu 30 hari | **Bebas visa** (perjanjian bilateral secara eksplisit mencakup tujuan medis) | ✅ Ya — hingga 30 hari, 90 hari per periode 180 hari |
-| Sudah berada di Tiongkok dengan visa apa pun dan ditemukan masalah medis yang membutuhkan perawatan | **Tidak diperlukan keluar dari negara** — ajukan permohonan untuk mengonversi/memperpanjang visa Anda secara domestik di Biro Masuk-Keluar | Lihat §4 |
+| Pemeriksaan kesehatan / gigi / TCM / kunjungan rawat jalan biasa / tindak lanjut / second opinion saja, tanpa rawat inap | **Visa Turis (L) atau kebijakan bebas visa yang berlaku** | ✅ Ya, jika kewarganegaraan dan itinerary Anda memenuhi syarat (lihat §3) |
+| Operasi yang direncanakan, rawat inap, atau perawatan yang mengharuskan pasien dirawat | **Visa S2 (Urusan Pribadi Jangka Pendek, tujuan medis)** dengan surat undangan/bukti penerimaan rumah sakit; jika kebutuhan muncul setelah masuk secara sah, ajukan perubahan status di Tiongkok sesuai ketentuan | ❌ Bukan untuk rencana rawat inap — lihat §4 untuk kondisi yang ditemukan setelah kedatangan |
+| Warga negara Malaysia atau Kazakhstan, pemeriksaan/gigi/rawat jalan dalam 30 hari | **Bebas visa** (perjanjian bilateral secara eksplisit mencakup tujuan medis) | ✅ Ya — hingga 30 hari, 90 hari per periode 180 hari; operasi/rawat inap yang direncanakan tetap memerlukan S2 atau perubahan status yang sah di Tiongkok |
+| Sudah berada di Tiongkok secara sah dan ditemukan masalah medis yang memerlukan rawat inap | **Tidak perlu keluar dari negara** — ajukan izin tinggal jenis S2 atau status lain yang sesuai di Biro Keluar-Masuk dengan dokumen rumah sakit | Lihat §4 |
 | Perawatan yang diharapkan melebihi 180 hari | **Visa S1 → dikonversi menjadi izin tinggal dalam waktu 30 hari setelah masuk** | ❌ Tidak |
 
-**Klarifikasi Penting:** Tiongkok tidak memiliki kategori visa yang secara harfiah bernama "Visa Medis." Untuk perawatan medis yang direncanakan, kategori yang benar adalah **visa S2 (Urusan Pribadi Jangka Pendek) dengan tujuan perawatan medis**. Rumah sakit dan agen visa secara informal menyebutnya "visa medis" — dan secara fungsional, itulah tepatnya pengertiannya.
+**Klarifikasi Penting:** Tiongkok tidak memiliki kategori visa yang secara harfiah bernama "Visa Medis." **Visa M adalah untuk bisnis/perdagangan, bukan perawatan medis.** Untuk operasi yang direncanakan, rawat inap, atau perawatan yang mengharuskan pasien dirawat, kategori yang relevan adalah **visa S2 (Urusan Pribadi Jangka Pendek) dengan tujuan perawatan medis**. "Visa medis" hanyalah sebutan informal untuk jalur S2 ini.
 
 — *Peraturan tentang Administrasi Masuk dan Keluar Warga Negara Asing (Perintah No. 637 tahun 2013, sebagaimana diubah oleh Perintah Dewan Negara No. 814, efektif 1 Oktober 2025), Pasal 6 (kategori S2)*; [Kedutaan Besar Tiongkok di Kazakhstan, Pemberitahuan Permohonan Visa (Apr 2026)](https://kz.china-embassy.gov.cn/chn/lsfw/zhengjian/qianzheng/202604/t20260424_11899222.htm)
 
@@ -48,7 +48,7 @@ Jika Anda hanya punya 30 detik, pohon keputusan ini mencakup sebagian besar situ
 
 Sebelum membahas secara spesifik, penting untuk memahami bagaimana Tiongkok mengklasifikasikan pengunjung asing. Sistem visa Tiongkok menggunakan kategori huruf, masing-masing terkait dengan tujuan kunjungan tertentu. Saat ini ada 13 jenis visa biasa: C (kru), D (tempat tinggal permanen), F (pertukaran/kunjungan), G (transit), J (jurnalis), K (bakat teknologi muda), L (turisme), M (bisnis/perdagangan), Q (reuni keluarga - mengunjungi warga negara Tiongkok/penduduk tetap), R (bakat tingkat tinggi), S (urusan pribadi/keluarga - mengunjungi orang asing yang tinggal di Tiongkok), X (studi), dan Z (pekerjaan).
 
-Perawatan medis termasuk dalam **S1/S2 - Urusan Pribadi**. "S" singkatan dari "sīrén shìwù" (私人事务), yang berarti "urusan pribadi." Dalam kategori S2, kedutaan Tiongkok dan pusat visa mempertahankan subkategori yang terdefinisi dengan baik khusus untuk perawatan medis, dengan persyaratan dokumentasi sendiri (surat rumah sakit, deposito bank, aturan pendamping). Siapa pun yang merencanakan perawatan rawat inap atau operasi harus menggunakan rute ini.
+Perawatan medis termasuk dalam **S2 - Urusan Pribadi**. "S" singkatan dari "sīrén shìwù" (私人事务), yang berarti "urusan pribadi." Dalam kategori S2, kedutaan Tiongkok dan pusat visa mempertahankan subkategori yang terdefinisi dengan baik khusus untuk perawatan medis, dengan persyaratan dokumentasi sendiri (surat rumah sakit, deposito bank, aturan pendamping). Siapa pun yang merencanakan perawatan rawat inap atau operasi harus menggunakan rute ini.
 
 Perbedaan ini penting karena otoritas imigrasi Tiongkok sangat serius terhadap kepatuhan terhadap tujuan visa. **Pasal 81 Undang-Undang Administrasi Keluar-Masuk** memungkinkan deportasi orang asing yang terlibat dalam aktivitas yang tidak sesuai dengan tujuan visa mereka. Namun - dan ini adalah nuansa penting yang sering disalahpahami oleh sebagian besar panduan online - undang-undang juga menyediakan mekanisme yang manusiawi dan praktis untuk menangani situasi medis yang muncul setelah masuk. Kami membahas hal ini di Bagian 4 dan 5.
 
@@ -56,9 +56,9 @@ Perbedaan ini penting karena otoritas imigrasi Tiongkok sangat serius terhadap k
 
 ---
 
-## 2. Visa S2 — Rute Utama untuk Perawatan Medis yang Direncanakan
+## 2. Visa S2 — Rute Utama untuk Operasi atau Rawat Inap yang Direncanakan
 
-Visa S2 dengan tujuan medis adalah rute standar untuk setiap warga negara asing yang merencanakan perawatan di rumah sakit di Tiongkok, termasuk di rumah sakit umum Kelas 3A terbaik Shanghai dan pusat medis internasional.
+Visa S2 dengan tujuan medis adalah rute standar untuk warga negara asing yang merencanakan operasi, rawat inap, atau perawatan yang mengharuskan pasien dirawat di Tiongkok, termasuk di rumah sakit umum Kelas 3A terbaik Shanghai dan pusat medis internasional.
 
 ### Apa yang Perlu Anda Siapkan
 
@@ -78,8 +78,8 @@ Berdasarkan persyaratan saat ini yang diterbitkan oleh kedutaan besar Tiongkok d
 3. Sertifikat diagnosis medis pasien dan dokumen rujukan/transfer, jika berlaku
 
 **Pendamping (anggota keluarga yang menemani pasien):**  
-- Pendamping harus **hanya anggota keluarga dekat**: pasangan, orang tua, mertua, anak, pasangan anak, saudara kandung, kakek-nenek, kakek-nenek dari pihak ibu/ayah, cucu, dan cucu-cucu mertua.
-- **Teman, pengasuh, pengasuh profesional, dan asisten TIDAK memenuhi syarat untuk visa pendamping S2**
+- Pendamping hanya dapat berupa **pasangan, orang tua, anak, saudara kandung, kakek-nenek dari pihak ayah atau ibu, serta cucu dari pihak ayah atau ibu** pasien
+- **Teman, pengasuh, perawat profesional, asisten pribadi, dan penerjemah pribadi TIDAK memenuhi syarat untuk visa pendamping S2**
 - Maksimum **2 pendamping per pasien**
 - Dokumen yang diperlukan: bukti hubungan kekerabatan (sertifikat pernikahan, akta kelahiran, sertifikat hubungan yang dinotarisasi) + surat pendamping rumah sakit.
 
@@ -101,7 +101,7 @@ Sejak **30 Juni 2025**, semua aplikasi visa Tiongkok menggunakan sistem online t
 **Waktu pemrosesan** (standar):
 - Reguler: **4 hari kerja**
 - Ekspres: **3 hari kerja** (biaya tambahan)
-- Rush: **1–2 hari kerja** (untuk situasi medis yang sangat mendesak, dengan surat rumah sakit yang secara eksplisit menyatakan urgensi)
+- Rush: **1–3 hari kerja** (untuk situasi medis yang sangat mendesak, dengan surat rumah sakit yang secara eksplisit menyatakan urgensi)
 - Visa kemanusiaan darurat: penerbitan pada hari yang sama atau hari kerja berikutnya untuk kasus kritis, dengan surat rumah sakit yang mendokumentasikan kondisi yang mengancam jiwa yang membutuhkan perawatan dalam waktu 7 hari
 
 ### Diskon Kebijakan Saat Ini (Diperpanjang Hingga 31 Desember 2026)
@@ -121,14 +121,16 @@ Surat undangan adalah dokumen yang membuka seluruh proses S2, dan itu membutuhka
 1. Kirimkan catatan medis lengkap (pencitraan, patologi, laporan bedah, daftar obat saat ini) — diterjemahkan ke dalam format klinis Tiongkok
 2. Departemen Medis Internasional rumah sakit mengalihkan file Anda ke spesialisasi yang relevan
 3. Seorang kepala dokter meninjau kasus Anda (5-10 hari kerja), mengonfirmasi kemampuan pengobatan dan memberikan pendapat pengobatan awal
-4. **Untuk kasus kompleks atau bedah**, konsultasi video dengan dokter yang merawat mungkin dijadwalkan agar dokter dapat mengonfirmasi rencana perawatan
+4. **Untuk kasus kompleks atau bedah**, rumah sakit mungkin mewajibkan konsultasi video klinis dengan dokter yang merawat sebelum memutuskan apakah kasus dapat diterima. Praktiknya berbeda menurut rumah sakit dan kasus, dan rumah sakit dapat mengenakan biaya konsultasi klinis terpisah
 5. Setelah dokter setuju untuk menerima Anda, Departemen Internasional mengeluarkan surat undangan resmi dengan stempel resmi rumah sakit dan tanda tangan dokter yang berwenang (2-5 hari kerja)
 
 **Surat tersebut harus mencakup:** nama lengkap pasien, jenis kelamin, tanggal lahir, nomor paspor, diagnosis (dalam bahasa Tiongkok/Inggris), perawatan/operasi yang diusulkan, perkiraan tanggal dan durasi rawat inap, rincian kontak rumah sakit, tanda tangan dokter yang berwenang, dan stempel rumah sakit.  
 
-Jika Anda mengantisipasi beberapa kunjungan (misalnya, operasi bertahap, siklus kemoterapi, atau prosedur tindak lanjut), **surat undangan harus secara eksplisit menyatakan rencana perawatan bertahap dan tanggal kembalinya yang diharapkan**. Hal ini memungkinkan petugas konsuler mengeluarkan visa S2 masuk beberapa kali yang berlaku selama 6-12 bulan.
+Jika Anda mengantisipasi beberapa kali masuk (misalnya operasi bertahap, siklus kemoterapi, atau prosedur tindak lanjut), **surat undangan harus secara eksplisit menyatakan rencana perawatan bertahap dan perkiraan tanggal kembali**. Anda dapat meminta visa S2 multiple-entry yang berlaku 6–12 bulan; petugas konsuler menentukan jumlah masuk, masa berlaku, dan durasi tinggal berdasarkan masing-masing kasus.
 
-**Catatan tentang rumah sakit umum:** Rumah sakit umum Kelas 3A terbaik di Shanghai umumnya tidak menjadwalkan operasi definitif tanpa konsultasi langsung. Namun, Departemen Medis Internasional mereka dapat mengeluarkan surat undangan berdasarkan catatan tertulis ditambah konsultasi video. Ini adalah praktik standar dan secara hukum cukup sebagai dasar untuk penerbitan visa S2.
+**Catatan tentang penilaian rumah sakit:** Penilaian penerimaan dan prosedur surat undangan berbeda menurut rumah sakit dan kasus. Untuk kasus kompleks atau bedah, rumah sakit mungkin meminta rekam medis tertulis dan konsultasi video klinis sebelum memutuskan apakah dapat menerima pasien dan menerbitkan surat undangan. Ini bukan praktik standar yang seragam di semua rumah sakit, dan konsultasi video klinis rumah sakit dapat dikenai biaya rumah sakit terpisah.
+
+**Konsultasi awal online gratis ShanghaiMed berbeda:** konsultasi WhatsApp gratis kami memberikan panduan umum dan koordinasi. Layanan ini bukan konsultasi video klinis oleh dokter, tidak menggantikannya, dan tidak mencakup biaya konsultasi klinis apa pun yang mungkin ditetapkan rumah sakit.
 
 ---
 
@@ -150,7 +152,7 @@ Sejak Oktober 2026, pemegang paspor biasa dari **50 negara** dapat memasuki Tion
 
 **Amerika (6):** Brasil, Argentina, Chili, Peru, Uruguay, Kanada
 
-Kebijakan ini berlaku hingga **31 Desember 2026** untuk 48 negara (termasuk Swedia, yang ditambahkan pada 10 November 2025); **Rusia** diperpanjang secara terpisah hingga **31 Desember 2027**; **Brunei** tidak memiliki tanggal kedaluwarsa.
+Menurut FAQ Kementerian Luar Negeri Tiongkok (diperbarui Mei 2026), kebijakan ini berlaku hingga **31 Desember 2026** untuk **48 negara** (termasuk Swedia, yang ditambahkan pada 10 November 2025); **Rusia** diperpanjang secara terpisah hingga **31 Desember 2027**; **Brunei** tidak memiliki tanggal kedaluwarsa. (48 + 1 + 1 = total 50 negara.)
 
 ⚠️ **Rincian penting untuk pelancong medis:** Tujuan yang diizinkan yang terdaftar adalah bisnis, turisme, kunjungan keluarga, pertukaran, dan transit — **perawatan medis tidak terdaftar**. Namun, ini tidak berarti Anda tidak dapat menemui dokter selama kunjungan.
 
@@ -168,25 +170,25 @@ Kebijakan ini berlaku hingga **31 Desember 2026** untuk 48 negara (termasuk Swed
 
 Baru-baru ini diperpanjang pada 20 Agustus 2026 (menambahkan Kirgistan dan Vietnam), kebijakan bebas visa transit 240 jam mencakup 57 negara dan 65 pelabuhan masuk, termasuk Shanghai Pudong, Shanghai Hongqiao, dan pelabuhan Shanghai. Pengunjung dapat tinggal hingga 240 jam (10 hari) di dalam area administrasi pelabuhan (dari Shanghai, pergerakan diperbolehkan melintasi Jiangsu, Zhejiang, Anhui, dan Shanghai).
 
-Tujuan yang terdaftar adalah turisme, bisnis, kunjungan, dan keluarga — **bukan perawatan medis**. Kebijakan ini dirancang untuk masa tinggal transit, dan Anda tidak boleh merencanakan perawatan medis di sekitarnya. Jika Anda transit melalui Shanghai dan ingin melakukan pemeriksaan kesehatan cepat atau kunjungan gigi selama jendela 10 hari Anda, ini praktis bisa dilakukan. Jangan gunakan entri bebas visa transit untuk perawatan medis yang direncanakan.
+Tujuan yang tercantum adalah turisme, bisnis, kunjungan, dan keluarga — **bukan perawatan medis**. Penumpang transit yang memenuhi syarat dapat memasukkan **pemeriksaan kesehatan singkat, janji perawatan gigi, konsultasi rawat jalan biasa, tindak lanjut, atau second opinion** ke dalam itinerary transit yang mematuhi ketentuan. Jalur ini **bukan untuk operasi yang direncanakan, rawat inap, atau perawatan di rumah sakit**. Situasi tersebut memerlukan visa S2 dengan dokumen rumah sakit atau, jika kebutuhan muncul setelah masuk secara sah, perubahan status di Tiongkok sesuai ketentuan yang berlaku.
 
 **Sumber:** [Pengumuman NIA No. 4 tahun 2026 (20 Agustus 2026)](https://en.nia.gov.cn/n147418/n147463/c180637/content.html)
 
 ### C. Perjanjian Bebas Visa Bilateral — Kasus Khusus
 
-Dua perjanjian bilateral secara eksplisit memasukkan "perawatan medis" (医疗) sebagai tujuan yang diizinkan; yang ketiga (Thailand) mengizinkan kunjungan singkat untuk urusan pribadi dengan efek praktis yang sama untuk perawatan rawat jalan:
+Dua perjanjian bilateral secara eksplisit mencantumkan "perawatan medis" (医疗) sebagai tujuan yang diizinkan. Perjanjian lain mengizinkan kunjungan singkat bebas visa tetapi tidak secara eksplisit mencantumkan perawatan medis; pemeriksaan singkat dan perawatan rawat jalan tetap berbeda dari operasi atau rawat inap yang direncanakan:
 
 | Negara | Tanggal efektif | Maksimal tinggal per kunjungan | Maksimal tinggal per 180 hari | Tujuan medis terdaftar? |
 |---|---|---|---|---|
 | **Malaysia** | 17 Juli 2025 | ≤30 hari | ≤90 hari | ✅ Ya — secara eksplisit |
 | **Kazakhstan** | 10 November 2023 | ≤30 hari | ≤90 hari | ✅ Ya — secara eksplisit |
-| **Thailand** | 1 Maret 2024 | ≤30 hari | ≤90 hari | ⚠️ Tidak terdaftar secara eksplisit (kunjungan pribadi singkat umumnya diterima; operasi membutuhkan S2) |
+| **Thailand** | 1 Maret 2024 | ≤30 hari | ≤90 hari | ⚠️ Tidak tercantum secara eksplisit; pemeriksaan/rawat jalan singkat dapat bebas visa, sedangkan operasi/rawat inap yang direncanakan memerlukan S2 atau perubahan status yang sah di Tiongkok |
 
-Selain itu, **UEA** telah memiliki perjanjian bebas visa timbal balik yang komprehensif dengan Tiongkok sejak 16 Januari 2018 (hingga 30 hari per masa tinggal, hingga 90 hari per periode 180 hari, tunduk pada stempel imigrasi saat kedatangan) — perjanjian pertama antara Tiongkok dan negara Timur Tengah. Teks perjanjian tidak secara eksplisit mencantumkan "medis" seperti perjanjian Malaysia dan Kazakhstan, tetapi pemeriksaan kesehatan 30 hari dan kunjungan rawat jalan secara rutin dilakukan tanpa visa; perawatan rawat inap memerlukan konversi domestik ke S2.
+Selain itu, **UEA** telah memiliki perjanjian bebas visa timbal balik yang komprehensif dengan Tiongkok sejak 16 Januari 2018 (hingga 30 hari per masa tinggal, hingga 90 hari per periode 180 hari, tunduk pada stempel imigrasi saat kedatangan) — perjanjian pertama antara Tiongkok dan negara Timur Tengah. Teks perjanjian tidak secara eksplisit mencantumkan "medis" seperti perjanjian Malaysia dan Kazakhstan, tetapi pemeriksaan kesehatan dan kunjungan rawat jalan dalam 30 hari dapat dilakukan tanpa visa. Operasi atau rawat inap yang direncanakan memerlukan S2; jika kebutuhan muncul setelah masuk secara sah, tersedia jalur perubahan status di Tiongkok sesuai ketentuan yang berlaku.
 
-Singapura juga memiliki perjanjian bebas visa bilateral dengan Tiongkok (efektif 9 Februari 2024, hingga 30 hari per masa tinggal). Seperti Thailand dan UEA, perjanjian tersebut tidak secara eksplisit mencantumkan "medis" sebagai tujuan, tetapi pemeriksaan kesehatan dan kunjungan rawat jalan secara rutin dilakukan tanpa visa.
+Singapura juga memiliki perjanjian bebas visa bilateral dengan Tiongkok (efektif 9 Februari 2024, hingga 30 hari per masa tinggal). Seperti Thailand dan UEA, perjanjian tersebut tidak secara eksplisit mencantumkan "medis" sebagai tujuan, tetapi pemeriksaan kesehatan dan kunjungan rawat jalan dapat dilakukan tanpa visa.
 
-Untuk **pasien Malaysia dan Kazakhstan** — dua pasar utama ShanghaiMed — ini merupakan keuntungan yang signifikan: pemeriksaan, perawatan gigi, konsultasi rawat jalan, dan bahkan prosedur kecil dapat sepenuhnya dilakukan tanpa visa dalam waktu 30 hari.
+Untuk **pasien Malaysia dan Kazakhstan** — dua pasar utama ShanghaiMed — ini merupakan keuntungan yang signifikan: pemeriksaan, perawatan gigi, TCM, konsultasi rawat jalan biasa, tindak lanjut, dan second opinion dapat dilakukan tanpa visa dalam 30 hari. **Operasi yang direncanakan, rawat inap, dan perawatan di rumah sakit tidak termasuk dalam jalur rawat jalan ini**; gunakan S2 dengan dokumen rumah sakit atau jalur perubahan status yang sah di Tiongkok jika berlaku.
 
 **Sumber:** [Kementerian Luar Negeri, Tabel Perjanjian Bebas Visa Timbal Balik (diperbarui 29 Mei 2026)](https://cs.mfa.gov.cn/zggmcgx/cgqzapecswlxk/ylb/202607/t20260716_11984014.html); [Kedutaan Besar Tiongkok di Malaysia, pemberitahuan bebas visa](https://my.china-embassy.gov.cn/fwzc/lsyw/lszj/fhqz2024/sbqzxz/202506/t20250606_11642531.htm); [Kedutaan Besar Tiongkok di Kazakhstan (pembaruan April 2026)](https://kz.china-embassy.gov.cn/chn/lsfw/zhengjian/qianzheng/202604/t20260424_11899222.htm)
 
@@ -194,7 +196,7 @@ Untuk **pasien Malaysia dan Kazakhstan** — dua pasar utama ShanghaiMed — ini
 
 Kebijakan bebas visa provinsi Hainan secara eksplisit mencakup "perawatan medis" sebagai tujuan yang diizinkan, yang mencerminkan posisi Hainan sebagai zona percontohan wisata medis (khususnya Zona Percontohan Wisata Medis Internasional Boao Lecheng). Namun, masa tinggal bebas visa ini terbatas hanya pada provinsi Hainan — tidak dapat digunakan untuk melakukan perjalanan ke Shanghai untuk perawatan. Kami mencantumkannya di sini untuk kelengkapan.
 
-**Sumber:** [Kebijakan Masuk Bebas Visa Regional NIA (20 Agustus 2026)](https://en.nia.gov.cn/n147418/n147463/c180637/content.html)
+**Sumber:** [Kebijakan Masuk Bebas Visa Regional NIA (20 Agustus 2026)](https://www.nia.gov.cn/News/news/content.jsp?id=1726630)
 
 ---
 
@@ -240,7 +242,7 @@ Untuk keadaan darurat medis yang sangat mendesak di mana tidak ada waktu untuk m
 
 ### Pendamping: Keluarga vs. Pengasuh/Asisten
 
-Subkategori visa pendamping S2 sangat terbatas untuk anggota keluarga dekat (pasangan, orang tua, mertua, anak-anak, pasangan anak-anak, saudara kandung, kakek-nenek, kakek-nenek dari pihak ibu/ayah, cucu, cucu-cucu), dengan maksimum **2 pendamping per pasien**. Teman, pengasuh profesional, pekerja rumah tangga, asisten pribadi, dan penerjemah pribadi tidak dapat memperoleh visa pendamping S2.
+Subkategori visa pendamping S2 sangat terbatas pada **pasangan, orang tua, anak, saudara kandung, kakek-nenek dari pihak ayah atau ibu, serta cucu dari pihak ayah atau ibu** pasien, dengan maksimum **2 pendamping per pasien**. Teman, pengasuh profesional, pekerja rumah tangga, asisten pribadi, perawat, dan penerjemah pribadi tidak dapat memperoleh visa pendamping S2.
 
 **Solusi praktis:**
 - Untuk kunjungan singkat, pengasuh atau asisten dapat menemani pasien dengan visa turis (L)
@@ -265,7 +267,7 @@ Untuk pengobatan yang diperkirakan melebihi 6 bulan (misalnya, pengobatan kanker
 
 ### Visa S2 Multiple-Entry untuk Pengobatan Bertahap
 
-Untuk pasien yang membutuhkan operasi bertahap (misalnya, prosedur ortopedi dua tahap), kemoterapi multi-siklus, atau prosedur tindak lanjut yang direncanakan, surat undangan rumah sakit awal harus secara eksplisit menyatakan jadwal pengobatan bertahap dan tanggal kembalinya yang diharapkan. Petugas konsuler kemudian dapat mengeluarkan **visa S2 multiple-entry yang berlaku selama 6 atau 12 bulan**, yang memungkinkan masa tinggal 30-90 hari per kedatangan, tanpa memerlukan aplikasi visa baru untuk setiap kunjungan.
+Untuk pasien yang membutuhkan operasi bertahap (misalnya prosedur ortopedi dua tahap), kemoterapi multi-siklus, atau prosedur tindak lanjut yang direncanakan, surat undangan rumah sakit awal harus secara eksplisit menyatakan jadwal pengobatan bertahap dan perkiraan tanggal kembali. Anda dapat meminta **visa S2 multiple-entry yang berlaku 6 atau 12 bulan**, dengan masa tinggal 30–90 hari per kali masuk. Petugas konsuler menentukan jumlah masuk, masa berlaku, dan durasi tinggal secara individual; penerbitan tidak dijamin.
 
 ### Bagaimana Jika Permohonan Visa Saya Ditolak?
 
@@ -276,7 +278,7 @@ Alasan umum penolakan visa S2 meliputi:
 - Pelanggaran imigrasi sebelumnya di Tiongkok
 - Pemilihan kategori visa yang salah
 
-Aplikasi dapat diajukan kembali setelah masalah diperbaiki. Untuk situasi medis yang mendesak, hubungi bagian konsuler langsung melalui email untuk meminta pemrosesan cepat kemanusiaan. Selalu pastikan dokumen asli dan lengkap; konsulat umumnya menyetujui aplikasi yang lengkap dan jujur.
+Permohonan dapat diajukan kembali setelah masalah diperbaiki. Untuk situasi medis yang mendesak, hubungi bagian konsuler langsung melalui email untuk meminta pemrosesan cepat kemanusiaan. Selalu pastikan dokumen asli dan lengkap. **Kelengkapan dokumen tidak menjamin persetujuan**: otoritas konsuler dan imigrasi menilai setiap permohonan secara individual.
 
 ---
 
@@ -294,7 +296,7 @@ Aplikasi dapat diajukan kembali setelah masalah diperbaiki. Untuk situasi medis 
 ### Daftar Periksa Sebelum Keberangkatan
 
 - [ ] Paspor yang masih berlaku (validitas 6+ bulan, minimal 2 halaman kosong)
-- [ ] Visa S2 (untuk perawatan yang direncanakan) atau kelayakan bebas visa yang telah dikonfirmasi
+- [ ] Visa S2 (untuk operasi/rawat inap yang direncanakan), atau visa turis (L) yang sesuai / kelayakan bebas visa yang telah dikonfirmasi untuk perawatan rawat jalan biasa
 - [ ] Surat undangan rumah sakit/surat masuk (salinan cetak + salinan digital)
 - [ ] Laporan/sertifikat bank (≥ USD 10,000 atau setara)
 - [ ] Kartu kedatangan online yang telah diisi (gratis, situs resmi [s.nia.gov.cn](https://s.nia.gov.cn/ArrivalCardFillingPC/) — **waspadai situs pihak ketiga palsu yang memungut biaya**)
@@ -312,13 +314,13 @@ Aplikasi dapat diajukan kembali setelah masalah diperbaiki. Untuk situasi medis 
 Ya, jika Anda memegang paspor dari salah satu dari 50 negara bebas visa sepihak, atau dari Malaysia/Kazakhstan/Thailand/UEA/Singapura (bebas visa bilateral). Pemeriksaan kesehatan adalah layanan kesehatan preventif, bukan perawatan rawat inap. Pesan janji temu, bawa paspor Anda, dan selesaikan kunjungan dalam jangka waktu 30 hari.
 
 **Q: Saya menemukan bahwa saya membutuhkan operasi selama pemeriksaan. Apakah saya harus terbang pulang dan mengajukan permohonan kembali?**  
-Tidak. Seperti yang dijelaskan di Bagian 4, Anda dapat mengonversi/memperpanjang visa Anda di dalam negeri di Biro Masuk-Keluar Shanghai dengan diagnosis rumah sakit dan dokumentasi rawat inap. Perawatan dapat dimulai tanpa meninggalkan Tiongkok. Dalam keadaan darurat, rumah sakit merawat pasien terlebih dahulu — formalitas visa ditangani secara bersamaan.
+Tidak. Anda dapat mengajukan permohonan penerbitan ulang visa di dalam Tiongkok atau izin tinggal yang sesuai/perpanjangan di Biro Keluar-Masuk Shanghai dengan diagnosis rumah sakit dan dokumentasi rencana rawat inap; Anda tidak perlu meninggalkan Tiongkok hanya untuk mengajukan permohonan tersebut. Dalam keadaan darurat, rumah sakit terlebih dahulu merawat dan menstabilkan pasien sementara formalitas ditangani. Untuk perawatan non-darurat, rumah sakit yang merawat menentukan jadwal diagnosis dan perawatan, sedangkan otoritas imigrasi yang berwenang memutuskan permohonan imigrasi, masing-masing berdasarkan kasus per kasus; persetujuan maupun perawatan segera tidak otomatis.
 
 **Q: Bisakah saya membawa pengasuh/perawat/asisten pribadi saya?**  
 Visa pendamping S2 terbatas untuk anggota keluarga dekat (pasangan, orang tua, anak-anak, saudara kandung, kakek-nenek, cucu; maksimal 2). Untuk perawatan profesional atau dukungan terjemahan, atur layanan lokal melalui koordinator medis Anda setelah kedatangan. Pengasuh dan asisten dapat menemani Anda dalam jangka pendek dengan visa turis.
 
 **P: Apakah saya benar-benar membutuhkan USD 10,000 di bank?**  
-Ini adalah persyaratan dokumenter yang ditetapkan oleh konsulat Tiongkok untuk visa medis S2. Ini bukan pembayaran — ini adalah sertifikat bank yang menunjukkan Anda dapat membiayai perawatan dan biaya hidup Anda selama masa tinggal Anda. Ambang batas yang tepat mungkin sedikit berbeda menurut kedutaan; periksa situs web kedutaan Tiongkok setempat sebelum mengajukan permohonan.  
+Ini adalah persyaratan dokumenter yang ditetapkan oleh konsulat Tiongkok untuk visa S2 tujuan medis. Ini bukan pembayaran — ini adalah sertifikat bank asli yang menunjukkan saldo setidaknya USD 10.000 (atau setara) untuk membiayai perawatan dan biaya hidup selama Anda tinggal. Konfirmasikan format dokumen dan rincian penyerahan dengan kedutaan atau konsulat Tiongkok terkait sebelum mengajukan permohonan.  
 
 **P: Dapatkah saya mengajukan visa Tiongkok sepenuhnya secara online?**  
 Permohonan itu sendiri dilakukan secara online — sejak 30 Juni 2025, semua permohonan visa Tiongkok menggunakan [consular.mfa.gov.cn](https://consular.mfa.gov.cn/VISA/). Setelah pengajuan dan persetujuan formulir secara online, Anda mencetak halaman konfirmasi dan mengirimkan dokumen fisik (dan biometrik, jika diperlukan) ke pusat aplikasi visa yang ditunjuk. Catatan: Sistem visa sepenuhnya elektronik telah diumumkan sedang dalam pengembangan; periksa pengumuman terbaru dari Administrasi Imigrasi Nasional untuk pembaruan.  
@@ -333,7 +335,7 @@ Di rumah sakit umum Kelas 3A terbaik Shanghai dengan departemen internasional, d
 
 ## Sumber & Referensi
 
-Semua informasi kebijakan dalam panduan ini telah diverifikasi dengan sumber resmi pemerintah Tiongkok pada 24 Oktober 2026. Kebijakan visa sering berubah — selalu verifikasi pengumuman terbaru dari Administrasi Imigrasi Nasional / Kementerian Luar Negeri sebelum melakukan perjalanan.
+Semua informasi kebijakan dalam panduan ini telah diverifikasi dengan sumber resmi pemerintah Tiongkok pada **25 Oktober 2026**. Kebijakan visa sering berubah — sebelum bepergian, selalu periksa pengumuman terbaru Administrasi Imigrasi Nasional (NIA) atau hubungi **+86-12367**.
 
 **Hukum dan peraturan:**
 1. Peraturan tentang Administrasi Masuk dan Keluar Warga Negara Asing (Perintah Dewan Negara No. 814, revisi 2025) — [https://ch.china-embassy.gov.cn/ls_fw_s/flfgmqxy/202608/t20260821_12008307.htm](https://ch.china-embassy.gov.cn/ls_fw_s/flfgmqxy/202608/t20260821_12008307.htm)
@@ -342,7 +344,7 @@ Semua informasi kebijakan dalam panduan ini telah diverifikasi dengan sumber res
 **Kebijakan imigrasi:**
 3. Administrasi Imigrasi Nasional (NIA) — [https://en.nia.gov.cn/](https://en.nia.gov.cn/)
 4. Pengumuman NIA No. 4 tahun 2026 (perluasan bebas visa transit 240 jam, 20 Agustus 2026) — [https://en.nia.gov.cn/n147418/n147463/c180637/content.html](https://en.nia.gov.cn/n147418/n147463/c180637/content.html)
-5. Kebijakan masuk bebas visa regional NIA (20 Agustus 2026) — [https://en.nia.gov.cn/n147418/n147463/c180637/content.html](https://en.nia.gov.cn/n147418/n147463/c180637/content.html)
+5. Kebijakan masuk bebas visa regional NIA (20 Agustus 2026) — [https://www.nia.gov.cn/News/news/content.jsp?id=1726630](https://www.nia.gov.cn/News/news/content.jsp?id=1726630)
 6. Kartu Kedatangan Online NIA — [https://s.nia.gov.cn/ArrivalCardFillingPC/](https://s.nia.gov.cn/ArrivalCardFillingPC/)
 
 **Kementerian Luar Negeri:**  
@@ -366,12 +368,12 @@ Semua informasi kebijakan dalam panduan ini telah diverifikasi dengan sumber res
 
 ---
 
-**Penafian:** Panduan ini mencerminkan kebijakan visa dan imigrasi Tiongkok sebagaimana diverifikasi pada 24 Oktober 2026. Daftar bebas visa dan kebijakan pelabuhan Tiongkok disesuaikan secara berkala - terkadang beberapa kali per tahun. Selalu verifikasi pengumuman terbaru di [situs web Administrasi Imigrasi Nasional](https://en.nia.gov.cn/) atau hubungi hotline multibahasa 24 jam NIA **+86-12367** (tersedia dalam bahasa Inggris/Rusia/Jepang/Korea) sebelum membuat pengaturan perjalanan. Artikel ini tidak merupakan jaminan penerbitan visa; semua keputusan visa dibuat oleh petugas konsuler Tiongkok berdasarkan kasus per kasus. Panduan ini hanya untuk tujuan informasi dan tidak menggantikan saran visa profesional khusus untuk situasi Anda.
+**Penafian:** Panduan ini mencerminkan kebijakan visa dan imigrasi Tiongkok sebagaimana diverifikasi pada **25 Oktober 2026**. Sebelum bepergian, periksa pengumuman terbaru di [situs web Administrasi Imigrasi Nasional](https://en.nia.gov.cn/) atau hubungi hotline multibahasa 24 jam NIA **+86-12367**. Artikel ini tidak menjamin penerbitan visa; semua keputusan visa dibuat oleh otoritas konsuler dan imigrasi Tiongkok berdasarkan masing-masing kasus. Panduan ini hanya untuk tujuan informasi dan tidak menggantikan nasihat visa profesional yang khusus untuk situasi Anda.
 
 ---
 
 ## Tentang Penulis
 
-**Sara Ma** adalah pendiri ShanghaiMed. Dia memegang gelar **Sarjana Sains Keperawatan dari Sekolah Kedokteran Universitas Shanghai Jiao Tong (SJTU)**, merupakan perawat terdaftar berlisensi (RN) dengan **sertifikasi ISPN (Standar Internasional untuk Perawat Profesional)**, dan memiliki lebih dari satu dekade pengalaman langsung dalam operasi kesehatan internasional premium di rumah sakit umum Kelas 3A terbaik Shanghai. Dia telah mengoordinasikan perawatan medis untuk pasien dari seluruh Timur Tengah, Asia Tenggara, Eropa, dan Oseania. Fasih dalam bahasa Mandarin, Inggris, dan Jepang (JLPT N1), Sara mendirikan ShanghaiMed untuk menjembatani kesenjangan antara pasien internasional dan rumah sakit umum kelas dunia Shanghai, membuat perawatan medis berkualitas tinggi di Tiongkok dapat diakses dan dikelola dengan baik bagi pasien yang tidak berbicara bahasa Tiongkok atau tidak memiliki koneksi lokal.
+**Sara Ma** adalah pendiri ShanghaiMed. Dia adalah perawat terdaftar berlisensi (RN) dengan gelar Sarjana Keperawatan (BSN) dari Shanghai Jiao Tong University School of Medicine dan sertifikasi **ISPN (International Standards for Professional Nurses)**. Dia memiliki lebih dari satu dekade pengalaman langsung dalam operasi layanan kesehatan internasional premium di rumah sakit umum Kelas 3A terbaik Shanghai. Dia telah mengoordinasikan perawatan medis untuk pasien dari seluruh Timur Tengah, Asia Tenggara, Eropa, dan Oseania. Fasih dalam bahasa Mandarin, Inggris, dan Jepang, Sara Ma mendirikan ShanghaiMed untuk menjembatani kesenjangan antara pasien internasional dan rumah sakit umum kelas dunia Shanghai, membuat perawatan medis berkualitas tinggi di Tiongkok dapat diakses dan dikelola dengan baik bagi pasien yang tidak berbicara bahasa Tiongkok atau tidak memiliki koneksi lokal.
 
 *Jika Anda merencanakan perawatan medis di Shanghai dan membutuhkan bantuan dengan pemilihan rumah sakit, koordinasi surat undangan, persiapan visa, atau dukungan di lapangan, Anda dapat menghubungi ShanghaiMed melalui detail kontak di situs ini atau WhatsApp. Kami berkoordinasi dengan departemen internasional rumah sakit umum Kelas 3A Shanghai, menerjemahkan catatan medis, mengatur konsultasi video dengan dokter yang merawat, dan membantu dengan dokumentasi visa dan logistik di dalam negeri.*

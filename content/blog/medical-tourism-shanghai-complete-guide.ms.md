@@ -1,7 +1,7 @@
 ---
 title: "Pelancongan Perubatan di Shanghai: Panduan Lengkap untuk Pesakit Antarabangsa"
 slug: medical-tourism-shanghai-complete-guide
-excerpt: "KOS Pelancongan perubatan di Shanghai 50-80% adalah lebih rendah daripada di Amerika Syarikat. Panduan lengkap untuk hospital Gred A 14, prosedur, harga, dan sokongan dwibahasa untuk pesakit antarabangsa."
+excerpt: "Kos pelancongan perubatan di Shanghai 50-80% lebih rendah berbanding AS. Panduan tentang pilihan hospital awam Kelas 3A dan swasta yang sesuai, prosedur, harga dan sokongan dwibahasa."
 category: medical-tourism
 tags:
   - medical tourism Shanghai
@@ -14,7 +14,7 @@ date: '2026-06-30T08:00:00.000Z'
 featured: true
 featuredImage: /images/hero_b1_no_text_frameless.jpg
 seoTitle: "Pelancongan Perubatan di Shanghai: Panduan Lengkap untuk Pesakit Antarabangsa (2026)"
-metaDescription: "KOS Pelancongan perubatan Shanghai 50-80% adalah lebih rendah daripada AS. Panduan lengkap untuk hospital Gred A 14, prosedur, harga, dan sokongan dwibahasa untuk pesakit antarabangsa."
+metaDescription: "Kos pelancongan perubatan di Shanghai 50-80% lebih rendah berbanding AS. Panduan tentang pilihan hospital awam Kelas 3A dan swasta yang sesuai, prosedur, harga dan sokongan dwibahasa."
 keywords:
   - medical tourism Shanghai
   - Shanghai hospitals international
@@ -29,7 +29,7 @@ canonicalUrl: 'https://shanghaimedhealth.com/blog/medical-tourism-shanghai-compl
 | Metrik | Data |
 |--------|------|
 | Penjimatan kos berbanding AS | 50-80% |
-| Rangkaian hospital | 14 hospital awam (13 hospital perintis rasmi + Ninth People's Hospital) + 5 hospital swasta antarabangsa |
+| Pengesyoran hospital | Pilihan berdasarkan keperluan merangkumi hospital awam Kelas 3A dan hospital swasta Shanghai yang sesuai; 13 hospital awam perintis pelancongan perubatan rasmi ialah rujukan, bukan had |
 | Contoh: Penggantian lutut | $5,000-$10,000 (berbanding $30,000-$50,000 di AS) |
 | Contoh: Pemeriksaan MRI (3T) | $200-$400 (berbanding $1,200-$3,000 di AS) |
 | Contoh: Implan gigi | $800-$1,200 (berbanding $4,000-$6,000 di AS) |
@@ -42,7 +42,7 @@ canonicalUrl: 'https://shanghaimedhealth.com/blog/medical-tourism-shanghai-compl
 
 Pelancongan perubatan berkembang pesat kerana pesakit di seluruh dunia mencari penjagaan kesihatan yang berkualiti tinggi dan berharga mampu. Bagi pesakit antarabangsa, **Shanghai** telah muncul sebagai destinasi utama **pelancongan perubatan di China**, menggabungkan teknologi perubatan canggih, profesional yang sangat terlatih, dan rawatan berharga mampu. Sama ada anda mencari diagnostik canggih, pembedahan kosmetik, atau Perubatan Tradisional China, **hospital Shanghai** menawarkan alternatif yang menarik kepada sistem penjagaan kesihatan mahal di AS dan Eropah.
 
-Panduan ini meliputi semua yang anda perlu tahu tentang **penjagaan kesihatan di Shanghai** — daripada 14 hospital awam Gred A teratas hingga rawatan popular, perbandingan kos, dan langkah-langkah praktikal untuk merancang **perjalanan perubatan anda ke China**.
+Panduan ini meliputi semua yang anda perlu tahu tentang **penjagaan kesihatan di Shanghai** — daripada pilihan representatif hospital awam Kelas 3A dan swasta hingga rawatan popular, perbandingan kos dan langkah praktikal untuk merancang **perjalanan perubatan anda ke China**.
 
 ## Bahagian 1: Memahami Pelancongan Perubatan di Shanghai
 
@@ -54,44 +54,48 @@ Berbanding dengan AS, kos prosedur perubatan di Shanghai boleh menjadi **50-80% 
 
 ### Kebangkitan Pelancongan Perubatan di China
 
-Sistem penjagaan kesihatan China telah berkembang dengan pesat. Shanghai kini mempunyai **13 hospital perintis pelancongan perubatan awam rasmi**. Rangkaian utama dalam panduan ini juga merangkumi **Ninth People's Hospital** dan **5 hospital antarabangsa swasta**. Hospital awam yang disenaraikan di sini berstatus **Kelas 3A (三级甲等)**, tahap hospital tertinggi di China. Sesetengah institusi mungkin mempunyai pensijilan tambahan atau perkongsian antarabangsa. Pesakit harus mengesahkan pensijilan semasa dan aturan perkhidmatan secara langsung dengan hospital sebelum rawatan.
+Sistem penjagaan kesihatan China telah berkembang pesat. Shanghai mempunyai **13 hospital awam perintis pelancongan perubatan rasmi**. Hospital perintis ini ialah rujukan rasmi, bukan had kepada hospital yang boleh disyorkan oleh ShanghaiMed. Bergantung pada keadaan dan keperluan perkhidmatan anda, pilihan boleh merangkumi hospital awam **Kelas 3A** lain yang sesuai di Shanghai serta hospital swasta yang bersesuaian. Sesetengah institusi mungkin mempunyai pensijilan tambahan atau perkongsian antarabangsa.
 
 Pesakit antarabangsa boleh menjangkakan:
 - **Masa tunggu yang lebih pendek** untuk temujanji dan prosedur
 - **Penjagaan komprehensif** dengan pasukan multidisipliner
 - **Teknologi canggih** seperti pembedahan robotik Da Vinci, PET-MRI, dan terapi proton
-- **Penyelesaian insurans langsung** dengan 8-24 penanggung insurans antarabangsa setiap hospital
+- **Sokongan penyelarasan insurans** — penyelesaian langsung bergantung pada hospital, penanggung insurans, polisi dan prakebenaran
 
-## Bahagian 2: Rangkaian Hospital Shanghai untuk Pesakit Antarabangsa
+## Bahagian 2: Pilihan Hospital untuk Pesakit Antarabangsa
 
-ShanghaiMed bekerjasama dengan **14 hospital awam (13 hospital perintis pelancongan perubatan rasmi + Ninth People's Hospital)** dan **5 hospital antarabangsa swasta** - sejumlah 19 institusi yang meliputi semua pakar perubatan. Tidak seperti di AS di mana hospital terbaik adalah swasta (Mayo Clinic, Cleveland Clinic), di China hospital terbaik adalah institusi Kelas 3A awam dengan pakar yang paling berpengalaman dan peralatan canggih.
+ShanghaiMed mengesyorkan hospital dan jabatan berdasarkan diagnosis, matlamat rawatan, keperluan perkhidmatan dan ketersediaan temujanji sebenar. Ke-13 hospital awam perintis pelancongan perubatan rasmi termasuk dalam pilihan, tetapi tidak mengehadkan skop pengesyoran.
 
-### Rangkaian Hospital Lengkap
+### Pilihan Hospital Representatif
 
-| Hospital | Universiti | Pakar Utama | Kelas / Penanda Perkhidmatan | Rakan Kongsi Insurans |
+Jadual berikut memberikan contoh sahaja. Jadual ini **bukan senarai hospital yang lengkap, tetap atau eksklusif**.
+
+| Hospital | Universiti / Sistem | Kepakaran Utama | Akreditasi | Rakan Kongsi Insurans |
 |----------|-----------|-----------------|---------------|-------------------|
-| Huashan Hospital | Fudan University | Neurosurgery #1, Dermatology #1, Penyakit Berjangkit | Kelas 3A, HMI | 24 |
+| Huashan Hospital | Fudan University | Pembedahan saraf #1, Dermatologi #1, Penyakit Berjangkit | Kelas 3A, HMI | 24 |
 | Children's Hospital | Fudan University | Neonatologi, Pembedahan Pediatrik, Penjagaan Kritikal | Kelas 3A, HIMSS Tahap 6 | 19 |
-| Ruijin Hospital | SJTU | Hematologi (CAR-T 95.7% remisi), Endokrinologi, Luka Bakar | Kelas 3A, Tahap 7 EMR | 21 |
-| Shanghai General Hospital | — | Oftalmologi, Urologi, ENT & Kepala-Leher | DNV GL, Perkongsian Mayo | 17 |
+| Ruijin Hospital | SJTU School of Medicine | Hematologi (terapi sel CAR-T), Endokrinologi, Luka Bakar | Kelas 3A, National EMR Level 7 | 21 |
+| Shanghai General Hospital | SJTU School of Medicine | Oftalmologi, Urologi, ENT & Kepala-Leher | DNV GL, Perkongsian Mayo | 17 |
 | Zhongshan Hospital | Fudan University | Pembedahan Umum, Gastroenterologi, Kardiovaskular | Kelas 3A, JBI | 19 |
-| Renji Hospital | SJTU | Gastroenterologi #1 (4 tahun berturut-turut), Perubatan Reproduktif | DNV GL, RTAC | 20 |
-| Longhua Hospital | Shanghai Univ. of TCM | Onkologi TCM, Ortopedi TCM, Akupunktur | Kelas 3A, HIMSS Tahap 7 | 18 |
-| IPMCH | China Welfare Institute | Perubatan Reproduktif, Obstetrik, Ginekologi | DNV GL | 19 |
-| SCMC | SJTU | Pembedahan Jantung Pediatrik, Hematologi-Onkologi Pediatrik | Kelas 3A, ISO 15189 | 23 |
-| Sixth People's Hospital | — | Ortopedi (pembedahan replantasi anggota badan pertama di dunia 1963), Endokrinologi | Kelas 3A | 18 |
-| First Maternity & Infant | — | Obstetrik, Perubatan Janin, Perubatan Reproduktif | Kelas 3A, APAGE | 18 |
-| Xinhua Hospital | SJTU | Pediatrik, Dermatologi, Pembedahan Umum | Kelas 3A | 16 |
+| Renji Hospital | SJTU School of Medicine | Gastroenterologi #1 (4 tahun berturut-turut), Perubatan Reproduktif | DNV GL, RTAC | 20 |
+| Longhua Hospital | Shanghai University of TCM | Onkologi TCM, Ortopedi TCM, Akupunktur | Kelas 3A, HIMSS Tahap 7 | 18 |
+| IPMCH | China Welfare Institute / SJTU School of Medicine | Perubatan Reproduktif, Obstetrik, Ginekologi | DNV GL | 19 |
+| SCMC | SJTU School of Medicine | Pembedahan Jantung Pediatrik, Hematologi-Onkologi Pediatrik | Kelas 3A, ISO 15189 | 23 |
+| Sixth People's Hospital | SJTU School of Medicine | Ortopedi (replantasi anggota badan pertama di dunia 1963), Endokrinologi | Kelas 3A | 18 |
+| First Maternity & Infant | Tongji University | Obstetrik, Perubatan Janin, Perubatan Reproduktif | Kelas 3A, APAGE | 18 |
+| Xinhua Hospital | SJTU School of Medicine | Pediatrik, Dermatologi, Pembedahan Umum | Kelas 3A | 16 |
 | Huadong Hospital | Fudan University | Perubatan Geriatrik, Rehabilitasi, Saringan Kesihatan Eksekutif | Bupa Silver | 17 |
-| Ninth People's Hospital | SJTU | Pembedahan Mulut/Gigi #1, Pembedahan Plastik #1, Maxillofacial | Pusat Kajian Oral Nasional | 8+21 |
+| Ninth People's Hospital | SJTU School of Medicine | Pembedahan Mulut/Gigi #1, Pembedahan Plastik #1, Maksilofasial | National Oral Research Center | 8+21 |
 
-**Ditambah 5 hospital antarabangsa swasta**: Jiahui International (afiliasi MGH, 500 katil), United Family, ParkwayHealth (Kumpulan IHH), SinoUnited Health (ahli Rangkaian Mayo Clinic), dan Raffles Hospital (Kumpulan Singapura).
+Pilihan hospital awam lain boleh merangkumi **Changhai Hospital, Changzheng Hospital dan Eastern Hepatobiliary Surgery Hospital** dalam sistem **Naval Medical University** (dahulunya Second Military Medical University), serta **Shuguang Hospital** dan **Yueyang Hospital of Integrated Traditional Chinese and Western Medicine** dalam sistem **Shanghai University of Traditional Chinese Medicine**. Hospital Kelas 3A Shanghai lain yang sesuai juga boleh dipertimbangkan.
 
-### Sorotan Hospital Terpilih
+Contoh sektor swasta termasuk **Jiahui International, United Family, ParkwayHealth, SinoUnited Health dan Raffles Hospital**. Ini ialah contoh dan bukan senarai tetap; hospital swasta lain boleh dipertimbangkan apabila sesuai dengan keperluan perubatan dan perkhidmatan anda.
 
-**Hospital Huashan (Universiti Fudan)** — Ditubuhkan oleh 1907, merawat 5+ jutaan pesakit luar setiap tahun. Menduduki tempat ke-1 di seluruh negara dalam bedah saraf dan dermatologi. Berstatus Kelas 3A (三级甲等), tahap hospital tertinggi di China, dengan 24 rakan insurans antarabangsa untuk penyelesaian langsung. Banyak doktor kanan dilatih di Klinik Cleveland dan Johns Hopkins.
+### Sorotan Hospital
 
-**Hospital Ruijin (SJTU)** — Peneroka dalam transplantasi sumsum tulang dan terapi CAR-T dengan **kadar remisi 95.7%**. Berstatus Kelas 3A (三级甲等) dengan Tahap EMR Nasional 7. 21 rakan insurans antarabangsa. Pusat terkemuka dalam endokrinologi dan rawatan luka bakar.
+**Hospital Huashan (Universiti Fudan)** — Ditubuhkan pada 1907 dan merawat lebih 5 juta pesakit luar setiap tahun. Menduduki tempat pertama di seluruh negara dalam pembedahan saraf dan dermatologi. Hospital Kelas 3A dengan 24 rakan kongsi insurans antarabangsa untuk penyelesaian langsung.
+
+**Hospital Ruijin (SJTU)** — Peneroka dalam transplantasi sumsum tulang dan terapi sel CAR-T. Berstatus Kelas 3A (三级甲等) dengan Tahap EMR Nasional 7. 21 rakan insurans antarabangsa. Pusat terkemuka dalam endokrinologi dan rawatan luka bakar.
 
 **Shanghai Ninth People's Hospital (SJTU)** — Menduduki tempat **#1 di China untuk pembedahan mulut/gigi dan pembedahan plastik**. Pusat Kajian Penyakit Mulut Nasional. Jabatan Perubatan Antarabangsa khusus dibuka pada Januari 2024 di kampus Pudong dengan 100+ kerusi gigi. Merawat pesakit dari 40+ negara.
 
@@ -99,11 +103,11 @@ ShanghaiMed bekerjasama dengan **14 hospital awam (13 hospital perintis pelancon
 
 **Hospital Renji (SJTU)** — **#1 gastroenterologi di seluruh negara selama 4 tahun berturut-turut**. Pusat transplantasi hati terkemuka. Diperakui DNV GL dan RTAC. 20 rakan insurans antarabangsa. Pusat perubatan reproduktif antarabangsa.
 
-**Sixth People's Hospital** — Tempat **pembedahan replantasi anggota badan berjaya yang pertama di dunia pada 1963**. Berstatus Kelas 3A (三级甲等), tahap hospital tertinggi di China. Pusat terkemuka dalam orthopaedik, endokrinologi, dan perubatan sukan. 18 rakan insurans antarabangsa.
+**Sixth People's Hospital (SJTU School of Medicine)** — Tempat **pembedahan replantasi anggota badan berjaya yang pertama di dunia pada 1963**. Berstatus Kelas 3A (三级甲等), tahap hospital tertinggi di China. Pusat terkemuka dalam orthopaedik, endokrinologi, dan perubatan sukan. 18 rakan insurans antarabangsa.
 
 **Hospital Longhua (Universiti TCM Shanghai)** — **Hospital utama nasional untuk Perubatan Tradisional China**. Berstatus Kelas 3A (三级甲等) dan diperakui HIMSS Tahap 7. Hospital perintis pelancongan perubatan TCM rasmi. 1,000+ formula TCM berdaftar. Pakar dalam onkologi TCM, akupunktur, dan perubatan integratif.
 
-**Pusat Perubatan Kanak-kanak Shanghai (SJTU)** — Pusat bedah jantung pediatrik terkemuka di China. Kerjasama dengan Project HOPE. Berstatus Kelas 3A (三级甲等), diperakui HIMSS Tahap 6, dan ISO 15189. 23 rakan insurans antarabangsa — yang paling banyak dalam rangkaian kami.
+**Pusat Perubatan Kanak-kanak Shanghai (SJTU)** — Pusat bedah jantung pediatrik terkemuka di China. Kerjasama dengan Project HOPE. Berstatus Kelas 3A (三级甲等), diperakui HIMSS Tahap 6, dan ISO 15189. 23 rakan kongsi insurans antarabangsa.
 
 ## Bahagian 3: Rawatan Perubatan Popular dan Kos
 
@@ -113,7 +117,7 @@ ShanghaiMed bekerjasama dengan **14 hospital awam (13 hospital perintis pelancon
 |-----------|---------|---------------|---------|---------------------|
 | Penggantian Lutut | $30,000-$50,000 | $5,000-$10,000 | 80% | Sixth People's / Huashan |
 | Implan Gigi (setiap gigi) | $4,000-$6,000 | $800-$1,200 | 80% | Ninth People's Hospital |
-| MRI Scan (3T) | $1,200-$3,000 | $200-$400 | 90% | Multiple partners |
+| MRI Scan (3T) | $1,200-$3,000 | $200-$400 | 90% | Beberapa pilihan hospital |
 | Kitaran IVF | $12,000-$15,000 | $3,000-$5,000 | 75% | Renji / IPMCH |
 | Pembedahan Katarak | $3,500-$6,000 | $1,000-$2,000 | 70% | Shanghai General Hospital |
 | Rinoplasti | $5,000-$15,000 | $1,500-$3,500 | 75% | Ninth People's Hospital |
@@ -122,9 +126,11 @@ ShanghaiMed bekerjasama dengan **14 hospital awam (13 hospital perintis pelancon
 | Terapi CAR-T | $400,000+ | $50,000-$80,000 | 80%+ | Ruijin Hospital |
 | Pemeriksaan Kesihatan Komprehensif | $2,000-$5,000 | $300-$600 | 88% | Huadong Hospital |
 
+*Konteks harga: Harga rawatan hospital di Shanghai dalam artikel ini ialah julat rujukan untuk jabatan biasa di hospital awam China; kos sebenar berbeza mengikut hospital, jabatan dan keadaan pesakit. ShanghaiMed mengesyorkan jabatan perubatan antarabangsa di hospital awam, di mana bayaran biasanya lebih tinggi daripada jabatan biasa; sila rujuk sebut harga rasmi hospital.*
+
 ### Prosedur Popular mengikut Pengkhususan
 
-**Pembedahan Ortopedik** — Penggantian lutut/pinggul, pembedahan tulang belakang, dan rawatan kecederaan sukan di **Sixth People's Hospital** (perintis dalam pencangkokan semula anggota badan sejak 1963) dan **Hospital Huashan**. Implan Stryker/Zimmer yang sama seperti hospital AS, dengan kos 80% lebih rendah.
+**Pembedahan Ortopedik** — Penggantian lutut/pinggul, pembedahan tulang belakang, dan rawatan kecederaan sukan di **Sixth People's Hospital** (perintis dalam pencangkokan semula anggota badan sejak 1963) dan **Hospital Huashan**. Jenama implan yang digunakan di peringkat antarabangsa seperti Stryker dan Zimmer tersedia; model tertentu dan kesesuaiannya bergantung pada hospital, pakar bedah dan penilaian klinikal anda. Kos biasanya lebih rendah daripada di AS.
 
 **Pembedahan Kosmetik & Plastik** — Rinoplasti, pembesaran payu dara, dan pembentukan wajah di **Shanghai Ninth People's Hospital** — menduduki tempat ke-1 di China untuk pembedahan plastik. Penjimatan 65-75%.
 
@@ -132,11 +138,11 @@ ShanghaiMed bekerjasama dengan **14 hospital awam (13 hospital perintis pelancon
 
 **Perubatan Tradisional China** — Akupunktur autentik, terapi herba, dan urut Tuina di **Hospital Longhua** — flagship TCM nasional dengan 1,000+ formula berdaftar. Satu bulan akupunktur berharga $200-$400 berbanding $1,000-$2,000 di AS.
 
-**Rawatan Kanser** — Kemoterapi, terapi sasaran, dan imunoterapi di **Hospital Huashan** dan **Hospital Ruijin**. Terapi CAR-T Ruijin mencapai kadar remisi 95.7% untuk beberapa jenis kanser darah.
+**Rawatan Kanser** — Kemoterapi, terapi sasaran, dan imunoterapi di **Hospital Huashan** dan **Hospital Ruijin**. Ruijin mempunyai program terapi sel CAR-T yang mantap untuk beberapa jenis kanser darah.
 
 **Pembedahan Jantung** — Bypass, penggantian injap, dan kardiologi intervensi di **Hospital Zhongshan** (Universiti Fudan), yang mempunyai bangunan pesakit antarabangsa yang berdiri sendiri dan 19 rakan kongsi insurans.
 
-**Rawatan Kesuburan** — IVF dan ICSI di **Hospital Renji** dan **Hospital Antarabangsa Peace Maternity & Child Health**, dengan kadar kejayaan setanding dengan standard AS pada 75% kos yang lebih rendah.
+**Rawatan Kesuburan** — IVF dan ICSI di **Hospital Renji** dan **Hospital Antarabangsa Peace Maternity & Child Health**, pada kos yang jauh lebih rendah daripada di AS (hasil tertentu bergantung pada diagnosis individu dan pelan rawatan).
 
 **Pembedahan Pediatrik** — Cacat jantung kongenital, onkologi pediatrik, dan penjagaan neonatal di **Hospital Kanak-kanak Shanghai** (SJTU) dan **Hospital Kanak-kanak Fudan University** — kedua-duanya berstatus Kelas 3A (三级甲等), tahap hospital tertinggi di China.
 
@@ -146,58 +152,66 @@ ShanghaiMed bekerjasama dengan **14 hospital awam (13 hospital perintis pelancon
 
 ## Bahagian 4: Bagaimana untuk Bersedia untuk Perjalanan Perubatan anda ke Shanghai
 
-### Langkah 1: Perundingan Jarak Jauh Percuma
-Mulakan dengan perundingan video percuma melalui **ShanghaiMed** (shanghaimedhealth.com). Mereka menilai keperluan perubatan anda, mengesyorkan hospital yang betul daripada rangkaian 19 hospital mereka, dan memberikan anggaran kos terperinci — semua sebelum anda komited.
+### Langkah 1: Perundingan Awal Dalam Talian Percuma
+Mulakan dengan **perundingan awal dalam talian percuma melalui WhatsApp** bersama **ShanghaiMed** (shanghaimedhealth.com). Pasukan menyemak keperluan perubatan anda, mengesyorkan hospital yang sesuai berdasarkan keadaan dan keperluan perkhidmatan anda—bukan senarai hospital tetap—serta memberikan anggaran kos terperinci sebelum anda membuat komitmen.
 
-### Langkah 2: Dapatkan Visa Perubatan
-Setelah berunding, hospital rakan kongsi mengeluarkan **surat jemputan perubatan**. anda menggunakan ini untuk memohon visa China (proses mengambil 2-4 minggu). **Petua Pro**: China menawarkan pengecualian visa transit selama 240 jam (10 hari) untuk warga negara 54, yang mungkin meliputi perjalanan yang lebih pendek.
+### Langkah 2: Pilih Laluan Visa yang Sesuai
+Untuk **pemeriksaan kesihatan, rawatan gigi, TCM, lawatan pesakit luar biasa, temujanji susulan atau pendapat kedua**, visa pelancong atau polisi pengecualian visa yang terpakai boleh digunakan. Pengecualian visa transit 240 jam (10 hari) China meliputi **57 negara yang layak** dan mungkin sesuai untuk perjalanan pesakit luar singkat yang memenuhi syarat; ia bukan untuk kemasukan hospital yang dirancang.
+
+Jika **pembedahan, kemasukan hospital atau rawatan pesakit dalam lain yang dirancang** diperlukan, hospital yang dijangka memberikan rawatan boleh mengeluarkan jemputan perubatan atau dokumen kemasukan yang diperlukan untuk permohonan **visa S2**. Jika keperluan pembedahan atau kemasukan hospital dikenal pasti selepas memasuki negara secara sah, pesakit yang layak boleh memohon menukar status di China mengikut peraturan semasa. ShanghaiMed membantu menyelaraskan dokumen hospital dan penyediaan permohonan; pihak berkuasa konsular dan imigresen membuat keputusan muktamad.
+
+Maklumat visa di sini berdasarkan rujukan polisi yang disemak pada **25 Oktober 2026**. Sahkan keperluan semasa sebelum perjalanan melalui **National Immigration Administration** atau **+86-12367**.
 
 ### Langkah 3: Perjalanan dan Rawatan
 ShanghaiMed menyediakan **pembantu perubatan dwibahasa** yang bertemu anda di lapangan terbang, menemani anda ke semua janji temu, mengendalikan terjemahan, dan menyelaraskan logistik. Harga pakej: **$1,000 untuk 3 hari** (Penjagaan Asas) atau **$1,650 untuk 5 hari** (Penjagaan Kompleks).
 
 ### Langkah 4: Susulan Selepas Rawatan
-Setelah rawatan, ShanghaiMed menyediakan **rekod perubatan yang diterjemahkan**, pemeriksaan video jarak jauh, panduan ubat, dan perancangan pemulihan. Penjagaan Kompleks termasuk 30 hari sokongan susulan.
+Setelah rawatan, ShanghaiMed menyediakan **rekod perubatan yang diterjemahkan**, susulan dalam talian jarak jauh, panduan ubat dan perancangan pemulihan. Penjagaan Kompleks termasuk 30 hari sokongan susulan.
 
 ## Bahagian 5: Menggabungkan Rawatan Perubatan dengan Pelancongan
 
-Shanghai ialah bandar paling kosmopolitan di China. Banyak pesakit menggabungkan janji temu perubatan dengan lawatan pelancong:
+Shanghai ialah bandar paling kosmopolitan di China. Ramai pesakit menggabungkan temujanji perubatan dengan aktiviti pelancongan apabila pelan rawatan dan pemulihan mengizinkan:
 
-- **The Bund** — laluan tepi laut ikonik (jalan yang mesra pemulihan)
-- **Yu Garden** — taman China klasik berusia 400 tahun (rata, berpendar)
-- **Shanghai Tower** — bangunan tertinggi ke-2 di dunia (632m)
-- **Muzium Shanghai** — AC, bangku, koleksi bertaraf dunia
-- **Sesi kesejahteraan di Longhua Hospital** — upacara teh, tai chi, perundingan herba
+- **The Bund** — laluan tepi laut ikonik (sesuai untuk berjalan semasa pemulihan)
+- **Yu Garden** — taman China klasik berusia 400 tahun (rata dan teduh)
+- **Shanghai Tower** — bangunan kedua tertinggi di dunia (632 m)
+- **Muzium Shanghai** — penyaman udara, bangku dan koleksi bertaraf dunia
+- **Shanghai Disney Resort** — hari riadah pilihan untuk pesakit dan ahli keluarga yang menemani apabila serasi dengan rawatan dan pemulihan
 
-ShanghaiMed membantu anda **mengintegrasikan janji temu perubatan ke dalam jadual perjalanan anda** supaya anda tidak membazir masa percutian.
+ShanghaiMed membantu anda **menyepadukan temujanji perubatan ke dalam jadual perjalanan** supaya masa percutian tidak terbuang.
 
 ## Soalan Lazim: Pelancongan Perubatan di Shanghai
 
 ### S1: Adakah penjagaan kesihatan di Shanghai selamat untuk pesakit antarabangsa?
-Ya. Hospital awam dalam rangkaian utama ShanghaiMed berstatus **Kelas 3A (三级甲等)**, tahap hospital tertinggi di China. Rangkaian ini merangkumi 13 hospital perintis pelancongan perubatan awam rasmi dan Ninth People's Hospital. Mereka menggunakan peralatan perubatan yang sama (Siemens, GE, Philips) dan jenama implan (Stryker, Zimmer, Straumann) seperti hospital AS. Banyak doktor kanan telah dilatih di Johns Hopkins, Mayo Clinic, dan Cleveland Clinic.
+Hospital awam **Kelas 3A** Shanghai mewakili tahap hospital tertinggi di China. ShanghaiMed mengesyorkan hospital dan jabatan berdasarkan keadaan serta keperluan anda, bukan mengehadkan pilihan kepada senarai tetap. Ke-13 hospital awam perintis pelancongan perubatan rasmi ialah rujukan berguna, tetapi hospital awam Kelas 3A lain dan hospital swasta yang sesuai juga boleh dipertimbangkan. Pensijilan, teknologi dan aturan perkhidmatan berbeza mengikut institusi dan perlu disahkan untuk kes anda.
 
 ### Soalan 2: Berapa banyak yang saya boleh jimatkan dengan pelancongan perubatan di Shanghai?
 Kos adalah **50-80% lebih rendah** berbanding di Amerika Syarikat. Penggantian lutut berharga $5,000-$10,000 di Shanghai berbanding $30,000-$50,000 di Amerika Syarikat. Walaupun termasuk penerbangan dan penginapan, kos perjalanan keseluruhan selalunya kurang daripada prosedur di Amerika Syarikat sahaja.
 
 ### Soalan 3: Adakah doktor di Shanghai boleh bertutur dalam bahasa Inggeris?
-Banyak doktor kanan di hospital-hospital terkemuka mempunyai latihan antarabangsa dan boleh bertutur dalam bahasa Inggeris. ShanghaiMed juga menyediakan pendamping perubatan dwibahasa untuk memastikan tiada masalah komunikasi.
+Ketersediaan bahasa Inggeris berbeza mengikut doktor dan jabatan. ShanghaiMed menyediakan pendamping perubatan dwibahasa untuk menyokong komunikasi yang jelas sepanjang temujanji anda.
 
 ### Soalan 4: Apa yang termasuk dalam pakej perkhidmatan ShanghaiMed?
 **Penjagaan Asas ($1,000/3 hari)**: janji temu di hospital, pendamping dwibahasa, terjemahan, pangangkutan. **Penjagaan Kompleks ($1,650/5 hari)**: menambah koordinasi berbilang hospital, tempahan pakar, bantuan visa, dan susulan selepas rawatan. Kos rawatan di hospital adalah berasingan dan dianggar terlebih dahulu.
 
 ### Soalan 5: Bolehkah saya menggunakan insurans kesihatan antarabangsa saya?
-Ya. Hospital-hospital rakan kongsi ShanghaiMed mempunyai perjanjian penyelesaian langsung dengan 8-24 syarikat insurans antarabangsa, termasuk MSH, Bupa, Cigna, Aetna, AXA, Allianz, dan AIA. ShanghaiMed membantu dengan pengesahan insurans dan penyelesaian langsung.
+Sesetengah hospital mempunyai aturan penyelesaian langsung dengan penanggung insurans antarabangsa, tetapi ketersediaannya bergantung pada hospital, penanggung insurans, polisi dan prakebenaran. ShanghaiMed membantu mengesahkan manfaat dan menyelaraskan dokumen yang diperlukan; perlindungan dan penyelesaian langsung tidak dijamin.
 
 ### Soalan 6: Bolehkah saya menggabungkan rawatan perubatan dengan pelancongan?
 Tentu. ShanghaiMed membantu anda menjadualkan janji temu perubatan mengikut jadual perjalanan anda. Ramai pesakit menjalani pemeriksaan pada Hari 1-2, kemudian menghabiskan baki perjalanan mereka menjelajah Shanghai.
 
 ## Tentang ShanghaiMed
 
-ShanghaiMed (shanghaimedhealth.com) adalah platform pelancongan perubatan B2C yang berpangkalan di Shanghai, China. Ditubuhkan oleh Lingling Ma — lulusan Sekolah Perubatan Universiti Jiao Tong Shanghai dengan sijil jururawat antarabangsa ISPN dan pengalaman lebih dari 10+ tahun dalam penjagaan kesihatan premium — ShanghaiMed menghubungkan pesakit antarabangsa dengan **14 hospital awam (13 hospital perintis pelancongan perubatan rasmi + Ninth People's Hospital)** dan **5 hospital antarabangsa swasta**.
+ShanghaiMed (shanghaimedhealth.com) ialah platform pelancongan perubatan masuk B2C yang berpangkalan di Shanghai, China. **Sara Ma** ialah pengasas ShanghaiMed. Beliau ialah jururawat berdaftar berlesen (RN) dengan Ijazah Sarjana Kejururawatan (BSN) dari Shanghai Jiao Tong University School of Medicine dan sertifikasi **ISPN (International Standards for Professional Nurses)**. Beliau mempunyai lebih 10 tahun pengalaman dalam operasi penjagaan kesihatan antarabangsa premium. Beliau fasih dalam bahasa Mandarin, Inggeris dan Jepun. ShanghaiMed mengesyorkan hospital yang sesuai berdasarkan keperluan setiap pesakit dan menyokong keseluruhan perjalanan penjagaan.
 
-**Rangkaian hospital rakan kongsi**: Hospital Huashan (Universiti Fudan), Hospital Kanak-kanak (Universiti Fudan), Hospital Ruijin (Universiti Jiao Tong Shanghai), Hospital Umum Shanghai, Hospital Zhongshan (Universiti Fudan), Hospital Renji (Universiti Jiao Tong Shanghai), Hospital Longhua (Universiti TCM Shanghai), Hospital Antarabangsa Peace Maternity & Child Health, Hospital Pusat Perubatan Kanak-kanak Shanghai (Universiti Jiao Tong Shanghai), Sixth People's Hospital, Hospital Materniti & Bayi Pertama, Hospital Xinhua (Universiti Jiao Tong Shanghai), Hospital Huadong (Universiti Fudan), Shanghai Ninth People's Hospital, ditambah Jiahui International, United Family, ParkwayHealth, SinoUnited Health, dan Hospital Raffles.
+**Pengesyoran hospital**: Berdasarkan keperluan dan tidak eksklusif. Pilihan boleh merangkumi hospital awam Kelas 3A Shanghai yang sesuai, termasuk hospital gabungan Naval Medical University dan Shanghai University of Traditional Chinese Medicine, serta hospital swasta yang bersesuaian. Ke-13 hospital awam perintis pelancongan perubatan rasmi ialah rujukan, bukan senarai perkhidmatan tetap.
 
 **Hubungi**: hello@shanghaimedhealth.com | [shanghaimedhealth.com](https://shanghaimedhealth.com)
 
+*(Maklumat umum sahaja, bukan nasihat perubatan peribadi. Keputusan tentang penjagaan anda perlu dibuat bersama pengamal klinikal berkelayakan yang memahami keadaan anda. Maklumat visa ialah panduan umum; sahkan keperluan semasa dengan National Immigration Administration atau +86-12367 sebelum perjalanan.)*
+
 ---
 
-> **Sumber**: Healthcare Bluebook (kos AS, 2024-2025), petikan pesakit antarabangsa dari hospital rakan kongsi (kos Shanghai, 2025), Pentadbiran Pelancongan Nasional China (data pelancongan masuk, 2025), Suruhanjaya Kesihatan Perbandaran Shanghai dan Kerajaan Perbandaran Shanghai (13 hospital perintis pelancongan perubatan awam, 2024-2025; statistik pesakit antarabangsa, 2025).
+> **Sumber**: Healthcare Bluebook (kos AS, 2024-2025), maklumat harga pesakit antarabangsa hospital (kos Shanghai, 2025), China National Tourism Administration (data pelancongan masuk, 2025), Shanghai Municipal Health Commission dan Shanghai Municipal Government (13 hospital awam perintis pelancongan perubatan, 2024-2025; statistik pesakit antarabangsa, 2025), National Immigration Administration dan rujukan visa ShanghaiMed (polisi disemak pada 25 Oktober 2026)
+>
+> **Rujukan gabungan hospital**: [SJTU School of Medicine — Shanghai General Hospital](https://www.shsmu.edu.cn/english/info/1085/1229.htm); [SJTU School of Medicine — Shanghai Sixth People's Hospital](https://www.shsmu.edu.cn/english/info/1085/1228.htm); [Shanghai First Maternity & Infant Hospital — official profile](https://www.51mch.com/news/info/id/18); [International Peace Maternity & Child Health Hospital — official profile](https://www.ipmch.com.cn/contents/306/4485.html); [Naval Medical University — official profile](https://ao.smmu.edu.cn/2019/0422/c423a4396/page.htm); [Shanghai University of Traditional Chinese Medicine — affiliated hospitals](https://www.shutcm.edu.cn/fsyy/list.htm)

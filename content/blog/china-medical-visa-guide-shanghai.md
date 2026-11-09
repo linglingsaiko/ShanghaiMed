@@ -37,13 +37,13 @@ If you only have 30 seconds, this decision tree covers most situations:
 
 | Your situation | Visa you need | Can you enter visa-free? |
 |---|---|---|
-| Health checkup / dental / TCM / second opinion only, no admission | **Tourist (L) visa or visa-free entry** (30 days) | ✅ Yes, if your nationality qualifies (see §3) |
-| Planned surgery, hospital admission, or multi-day inpatient treatment | **S2 visa (Short-term Private Affairs, medical purpose)** | ❌ No — you must apply in advance with a hospital invitation letter |
-| Malaysian or Kazakhstani citizen, treatment within 30 days | **Visa-free** (bilateral agreements explicitly include medical purposes) | ✅ Yes — up to 30 days, 90 days per 180-day period |
-| Already in China on any visa and a medical issue is discovered that needs treatment | **No exit required** — apply to convert/extend your visa domestically at the Exit-Entry Bureau | See §4 |
+| Health checkup / dental / TCM / ordinary outpatient visit / follow-up / second opinion only, no admission | **Tourist (L) visa or applicable visa-free entry** | ✅ Yes, if your nationality and itinerary qualify (see §3) |
+| Planned surgery, hospital admission, or treatment requiring admission | **S2 visa (Short-term Private Affairs, medical purpose)** with a hospital invitation/admission certificate; if a need arises after lawful entry, apply for in-country conversion as required | ❌ Not for planned admission — see §4 for conditions discovered after arrival |
+| Malaysian or Kazakhstani citizen, checkup / dental / outpatient care within 30 days | **Visa-free** (bilateral agreements explicitly include medical purposes) | ✅ Yes — up to 30 days, 90 days per 180-day period; planned surgery/admission still requires S2 or lawful in-country conversion |
+| Already lawfully in China and a medical issue requiring admission is discovered | **No exit required** — apply for an S2-type stay permit or other appropriate status domestically at the Exit-Entry Bureau with hospital documentation | See §4 |
 | Treatment expected to exceed 180 days | **S1 visa → converted to a residence permit within 30 days of entry** | ❌ No |
 
-**Important clarification:** China does not have a visa category literally named "Medical Visa." For planned medical treatment, the correct category is the **S2 (Short-term Private Affairs) visa with a medical treatment purpose**. Hospitals and visa agencies colloquially call this the "medical visa" — and functionally, that is exactly what it is.
+**Important clarification:** China does not have a visa category literally named "Medical Visa." **The M visa is for business/trade, not medical treatment.** For planned surgery, hospital admission, or treatment requiring admission, the relevant category is the **S2 (Short-term Private Affairs) visa with a medical treatment purpose**. "Medical visa" is only a colloquial label for this S2 route.
 
 — *Regulations on the Administration of the Entry and Exit of Foreign Nationals (2013 Order No. 637, as amended by State Council Order No. 814, effective October 1, 2025), Art. 6 (S2 category)*; [Chinese Embassy in Kazakhstan, Visa Application Notice (Apr 2026)](https://kz.china-embassy.gov.cn/chn/lsfw/zhengjian/qianzheng/202604/t20260424_11899222.htm)
 
@@ -53,7 +53,7 @@ If you only have 30 seconds, this decision tree covers most situations:
 
 Before diving into specifics, it helps to understand how China classifies foreign visitors. China's visa system uses letter categories, each tied to a specific purpose of visit. There are currently 13 ordinary visa types: C (crew), D (permanent residence), F (exchange/visit), G (transit), J (journalists), K (young tech talent), L (tourism), M (business/trade), Q (family reunion — visiting Chinese citizens/permanent residents), R (high-level talent), S (private affairs/family — visiting foreigners residing in China), X (study), and Z (work).
 
-Medical treatment falls under **S1/S2 — Private Affairs**. The "S" stands for "sīrén shìwù" (私人事务), meaning "private matters." Within the S2 category, Chinese embassies and visa centers maintain a well-defined subcategory specifically for medical treatment, with its own documentary requirements (hospital letters, bank deposits, escort rules). Anyone planning inpatient care or surgery should use this route.
+Medical treatment falls under **S2 — Private Affairs**. The "S" stands for "sīrén shìwù" (私人事务), meaning "private matters." Within the S2 category, Chinese embassies and visa centers maintain a well-defined subcategory specifically for medical treatment, with its own documentary requirements (hospital letters, bank deposits, escort rules). Anyone planning inpatient care or surgery should use this route.
 
 This distinction matters because Chinese immigration authorities take visa-purpose compliance seriously. **Article 81 of the Exit-Entry Administration Law** allows for deportation of foreigners who engage in activities inconsistent with their visa purpose. However — and this is a critical nuance that most online guides get wrong — the law also provides humane and practical mechanisms for handling medical situations that arise after entry. We cover these in Sections 4 and 5.
 
@@ -61,9 +61,9 @@ This distinction matters because Chinese immigration authorities take visa-purpo
 
 ---
 
-## 2. The S2 Visa — The Main Route for Planned Medical Treatment
+## 2. The S2 Visa — The Main Route for Planned Surgery or Hospital Admission
 
-The S2 visa with a medical purpose is the standard route for any foreign national planning hospital treatment in China, including at Shanghai's top Grade 3A public hospitals and international medical centers.
+The S2 visa with a medical purpose is the standard route for foreign nationals planning surgery, hospital admission, or treatment requiring admission in China, including at Shanghai's top Grade 3A public hospitals and international medical centers.
 
 ### What You Need to Prepare
 
@@ -83,8 +83,8 @@ Based on current requirements published by Chinese embassies and visa applicatio
 3. The patient's medical diagnosis certificate and any referral/transfer documents, where applicable
 
 **Escorts (family members accompanying the patient):**
-- Escorts must be **immediate family members only**: spouse, parents, parents-in-law, children, children's spouses, siblings, grandparents, maternal/paternal grandparents, grandchildren, and grandchildren-in-law
-- **Friends, nannies, professional caregivers, and assistants do NOT qualify for S2 escort visas**
+- Escorts are limited to the patient's **spouse, parents, children, siblings, paternal or maternal grandparents, and paternal or maternal grandchildren**
+- **Friends, nannies, professional caregivers, personal assistants, and private translators do NOT qualify for S2 escort visas**
 - Maximum of **2 escorts per patient**
 - Required documents: proof of kinship (marriage certificate, birth certificate, notarized relationship certificate) + a hospital escort letter
 
@@ -106,7 +106,7 @@ Since **June 30, 2025**, all Chinese visa applications use the unified online sy
 **Processing times** (standard):
 - Regular: **4 working days**
 - Express: **3 working days** (additional fee)
-- Rush: **1–2 working days** (for genuinely urgent medical situations, with the hospital letter explicitly stating urgency)
+- Rush: **1–3 working days** (for genuinely urgent medical situations, with the hospital letter explicitly stating urgency)
 - Emergency humanitarian visa: same-day or next-working-day issuance for critical cases, with a hospital letter documenting a life-threatening condition requiring treatment within 7 days
 
 ### Current Policy Discounts (Extended Through December 31, 2026)
@@ -126,14 +126,16 @@ The invitation letter is the document that unlocks the entire S2 process, and it
 1. Submit complete medical records (imaging, pathology, surgical reports, current medication list) — translated into Chinese clinical format
 2. The hospital's International Medical Department routes your file to the relevant specialty
 3. A chief physician reviews your case (5–10 working days), confirming treatability and providing a preliminary treatment opinion
-4. **For complex or surgical cases**, a video consultation with the treating physician may be scheduled so the doctor can confirm the treatment plan
+4. **For complex or surgical cases**, the hospital may require a clinical video consultation with the treating physician before deciding whether to accept the case. Practices vary by hospital and case, and the hospital may charge a separate clinical consultation fee
 5. Once the physician agrees to accept you, the International Department issues the formal invitation letter with the hospital's official seal and an authorized physician's signature (2–5 working days)
 
 **The letter must include:** patient's full name, gender, date of birth, passport number, diagnosis (in Chinese/English), proposed treatment/surgery, estimated admission dates and duration, hospital contact details, the authorized physician's signature, and the hospital seal.
 
-If you anticipate multiple entries (e.g., staged surgeries, chemo cycles, or follow-up procedures), **the invitation letter must explicitly state the staged treatment plan and expected return dates**. This enables the consular officer to issue a multiple-entry S2 visa valid for 6–12 months.
+If you anticipate multiple entries (e.g., staged surgeries, chemo cycles, or follow-up procedures), **the invitation letter should explicitly state the staged treatment plan and expected return dates**. You may request a multiple-entry S2 visa valid for 6–12 months; the consular officer decides the entries, validity, and stay duration case by case.
 
-**A note on public hospitals:** Shanghai's top Grade 3A public hospitals generally do not schedule definitive surgery without an in-person consultation. However, their International Medical Departments can issue invitation letters based on written records plus a video consultation. This is standard practice and is legally sufficient as the basis for S2 visa issuance.
+**A note on hospital review:** Admission assessment and invitation-letter procedures vary by hospital and case. For complex or surgical cases, a hospital may request written records and a clinical video consultation before deciding whether it can accept the patient and issue an invitation letter. This is not a uniform standard practice across every hospital, and any hospital clinical video consultation may carry a separate hospital charge.
+
+**ShanghaiMed's free initial online consultation is different:** our free WhatsApp consultation provides general guidance and coordination. It is not a physician's clinical video consultation, does not replace one, and does not include any hospital clinical consultation fee that a hospital may charge.
 
 ---
 
@@ -155,7 +157,7 @@ As of October 2026, holders of ordinary passports from **50 countries** may ente
 
 **Americas (6):** Brazil, Argentina, Chile, Peru, Uruguay, Canada
 
-This policy is valid through **December 31, 2026** for 48 countries (including Sweden, added November 10, 2025); **Russia** is separately extended through **December 31, 2027**; **Brunei** has no expiration date.
+According to the Chinese Ministry of Foreign Affairs FAQ (updated May 2026), this policy is valid through **December 31, 2026** for **48 countries** (including Sweden, added November 10, 2025); **Russia** is separately extended through **December 31, 2027**; **Brunei** has no expiration date. (48 + 1 + 1 = 50 countries total.)
 
 ⚠️ **The critical detail for medical travelers:** The listed permitted purposes are business, tourism, family visits, exchange, and transit — **medical treatment is not listed**. This does not, however, mean you cannot see a doctor during a visit.
 
@@ -173,25 +175,25 @@ This policy is valid through **December 31, 2026** for 48 countries (including S
 
 Most recently extended on August 20, 2026 (adding Kyrgyzstan and Vietnam), the 240-hour transit visa-free policy covers 57 countries and 65 entry ports, including Shanghai Pudong, Shanghai Hongqiao, and the Shanghai port. Visitors may stay up to 240 hours (10 days) within the port's administrative area (from Shanghai, movement is allowed across Jiangsu, Zhejiang, Anhui, and Shanghai).
 
-The listed purposes are tourism, business, visits, and family — **not medical treatment**. This policy is designed for transit stays, and you should not plan medical treatment around it. If you are transiting through Shanghai and want to squeeze in a quick health checkup or dental visit during your 10-day window, this is practically workable. Do not use transit visa-free entry for planned medical treatment.
+The listed purposes are tourism, business, visits, and family — **not medical treatment**. Eligible transit passengers may fit a **short health checkup, dental appointment, ordinary outpatient consultation, follow-up, or second opinion** into a compliant transit itinerary. This route is **not for planned surgery, hospital admission, or inpatient treatment**. Those situations require an S2 visa with hospital documentation or, when the need arises after lawful entry, an in-country conversion under the applicable rules.
 
 **Source:** [NIA Announcement No. 4 of 2026 (August 20, 2026)](https://en.nia.gov.cn/n147418/n147463/c180637/content.html)
 
 ### C. Bilateral Visa-Free Agreements — The Special Cases
 
-Two bilateral agreements explicitly include "medical treatment" (医疗) as a permitted purpose; a third (Thailand) permits private affairs short visits with the same practical effect for outpatient care:
+Two bilateral agreements explicitly include "medical treatment" (医疗) as a permitted purpose. Other agreements permit short visa-free visits but do not explicitly list medical treatment; short checkups and outpatient care remain distinct from planned surgery or admission:
 
 | Country | Effective date | Max stay per visit | Max stay per 180 days | Medical purpose listed? |
 |---|---|---|---|---|
 | **Malaysia** | July 17, 2025 | ≤30 days | ≤90 days | ✅ Yes — explicitly |
 | **Kazakhstan** | November 10, 2023 | ≤30 days | ≤90 days | ✅ Yes — explicitly |
-| **Thailand** | March 1, 2024 | ≤30 days | ≤90 days | ⚠️ Not explicitly listed (short private visits generally accepted; surgery requires S2) |
+| **Thailand** | March 1, 2024 | ≤30 days | ≤90 days | ⚠️ Not explicitly listed; short checkups/outpatient care may be visa-free, while planned surgery/admission requires S2 or lawful in-country conversion |
 
-Additionally, the **UAE** has had a comprehensive mutual visa-free agreement with China since January 16, 2018 (up to 30 days per stay, up to 90 days per 180-day period, subject to immigration stamping on arrival) — the first such agreement between China and a Middle Eastern country. The agreement text does not explicitly enumerate "medical" like the Malaysian and Kazakhstani agreements, but 30-day health checkups and outpatient visits are routinely completed visa-free; inpatient treatment requires a domestic conversion to S2.
+Additionally, the **UAE** has had a comprehensive mutual visa-free agreement with China since January 16, 2018 (up to 30 days per stay, up to 90 days per 180-day period, subject to immigration stamping on arrival) — the first such agreement between China and a Middle Eastern country. The agreement text does not explicitly enumerate "medical" like the Malaysian and Kazakhstani agreements, but health checkups and outpatient visits within 30 days may be completed visa-free. Planned surgery or admission requires S2; if the need arises after lawful entry, an in-country conversion route is available under the applicable rules.
 
-Singapore also has a bilateral visa-free agreement with China (effective February 9, 2024, up to 30 days per stay). Like Thailand and the UAE, the agreement does not explicitly enumerate "medical" as a purpose, but health checkups and outpatient visits are routinely completed visa-free.
+Singapore also has a bilateral visa-free agreement with China (effective February 9, 2024, up to 30 days per stay). Like Thailand and the UAE, the agreement does not explicitly enumerate "medical" as a purpose, but health checkups and outpatient visits may be completed visa-free.
 
-For **Malaysian and Kazakhstani patients** — two of ShanghaiMed's key markets — this is a meaningful advantage: checkups, dental work, outpatient consultations, and even minor procedures can be completed entirely visa-free within 30 days.
+For **Malaysian and Kazakhstani patients** — two of ShanghaiMed's key markets — this is a meaningful advantage: checkups, dental work, TCM, ordinary outpatient consultations, follow-ups, and second opinions can be completed visa-free within 30 days. **Planned surgery, hospital admission, and inpatient treatment are not covered by this outpatient shortcut**; use S2 with hospital documentation or the lawful in-country conversion route when applicable.
 
 **Sources:** [Ministry of Foreign Affairs, Table of Mutual Visa Exemption Agreements (updated May 29, 2026)](https://cs.mfa.gov.cn/zggmcgx/cgqzapecswlxk/ylb/202607/t20260716_11984014.html); [Chinese Embassy in Malaysia, visa-free notice](https://my.china-embassy.gov.cn/fwzc/lsyw/lszj/fhqz2024/sbqzxz/202506/t20250606_11642531.htm); [Chinese Embassy in Kazakhstan (Apr 2026 update)](https://kz.china-embassy.gov.cn/chn/lsfw/zhengjian/qianzheng/202604/t20260424_11899222.htm)
 
@@ -199,7 +201,7 @@ For **Malaysian and Kazakhstani patients** — two of ShanghaiMed's key markets 
 
 Hainan province's visa-free policy explicitly includes "medical treatment" as a permitted purpose, reflecting Hainan's positioning as a medical tourism pilot zone (notably the Boao Lecheng International Medical Tourism Pilot Zone). However, this visa-free stay is limited to Hainan province only — it cannot be used to travel to Shanghai for treatment. We list it here for completeness.
 
-**Source:** [NIA Regional Visa-Free Entry Policy (August 20, 2026)](https://en.nia.gov.cn/n147418/n147463/c180637/content.html)
+**Source:** [NIA Regional Visa-Free Entry Policy (August 20, 2026)](https://www.nia.gov.cn/News/news/content.jsp?id=1726630)
 
 ---
 
@@ -245,7 +247,7 @@ For genuinely time-critical medical emergencies where there is no time to apply 
 
 ### Escorts: Family vs. Nannies/Aides
 
-The S2 escort visa subcategory is strictly limited to immediate family members (spouse, parents, parents-in-law, children, children's spouses, siblings, grandparents, maternal/paternal grandparents, grandchildren, grandchildren-in-law), with a maximum of **2 escorts per patient**. Friends, professional nannies, domestic workers, personal assistants, and private translators cannot obtain S2 escort visas.
+The S2 escort visa subcategory is strictly limited to the patient's **spouse, parents, children, siblings, paternal or maternal grandparents, and paternal or maternal grandchildren**, with a maximum of **2 escorts per patient**. Friends, professional nannies, domestic workers, personal assistants, caregivers, and private translators cannot obtain S2 escort visas.
 
 **Practical solutions:**
 - For short stays, a nanny or assistant can accompany the patient on a tourist (L) visa
@@ -270,7 +272,7 @@ For treatments expected to exceed 6 months (e.g., extended cancer treatment, lon
 
 ### Multiple-Entry S2 Visas for Staged Treatment
 
-For patients needing staged surgeries (e.g., two-stage orthopedic procedures), multi-cycle chemotherapy, or planned follow-up procedures, the initial hospital invitation letter should explicitly state the staged treatment timeline and expected return dates. Consular officers can then issue a **multiple-entry S2 visa valid for 6 or 12 months**, allowing 30–90 days of stay per entry, without requiring a new visa application for each visit.
+For patients needing staged surgeries (e.g., two-stage orthopedic procedures), multi-cycle chemotherapy, or planned follow-up procedures, the initial hospital invitation letter should explicitly state the staged treatment timeline and expected return dates. You may request a **multiple-entry S2 visa valid for 6 or 12 months**, with 30–90 days of stay per entry. Consular officers determine the entries, validity, and stay duration individually; issuance is not guaranteed.
 
 ### What If My Visa Application Is Refused?
 
@@ -281,7 +283,7 @@ Common reasons for S2 visa refusals include:
 - Prior immigration violations in China
 - Wrong visa category selection
 
-Applications can be resubmitted after correcting the issue. For urgent medical situations, contact the consular section directly by email to request humanitarian expedited processing. Always ensure documents are genuine and complete; consulates generally approve complete, honest applications.
+Applications can be resubmitted after correcting the issue. For urgent medical situations, contact the consular section directly by email to request humanitarian expedited processing. Always ensure documents are genuine and complete. **Completeness does not guarantee approval**: consular and immigration authorities assess every application individually.
 
 ---
 
@@ -299,7 +301,7 @@ Applications can be resubmitted after correcting the issue. For urgent medical s
 ### Pre-Departure Checklist
 
 - [ ] Valid passport (6+ months validity, 2+ blank pages)
-- [ ] S2 visa (for planned treatment) or confirmed visa-free eligibility
+- [ ] S2 visa (for planned surgery/admission), or an appropriate tourist (L) visa / confirmed visa-free eligibility for ordinary outpatient care
 - [ ] Hospital invitation letter/admission letter (printed copy + digital copy)
 - [ ] Bank statement/certificate (≥ USD 10,000 or equivalent)
 - [ ] Completed online arrival card (free, official site [s.nia.gov.cn](https://s.nia.gov.cn/ArrivalCardFillingPC/) — **beware of fake third-party sites charging fees**)
@@ -317,13 +319,13 @@ Applications can be resubmitted after correcting the issue. For urgent medical s
 Yes, if you hold a passport from one of the 50 unilateral visa-free countries, or from Malaysia/Kazakhstan/Thailand/UAE/Singapore (bilateral visa-free). Health checkups are preventive health services, not inpatient treatment. Book the appointment, bring your passport, and complete the visit within the 30-day window.
 
 **Q: I discovered I need surgery during a checkup. Do I have to fly home and reapply?**
-No. As described in Section 4, you can convert/extend your visa domestically at the Shanghai Exit-Entry Bureau with the hospital's diagnosis and admission documentation. Treatment can begin without leaving China. In emergencies, hospitals treat patients first — visa formalities are handled concurrently.
+No. You can apply for in-country visa reissuance or an appropriate stay permit/extension at the Shanghai Exit-Entry Bureau with the hospital's diagnosis and proposed-admission documentation; you do not need to leave China merely to submit that application. In an emergency, the hospital treats and stabilizes you first while formalities are handled. For non-emergency care, the treating hospital determines the diagnosis and treatment schedule, and the competent immigration authority decides the immigration application, each case by case; neither approval nor immediate treatment is automatic.
 
 **Q: Can I bring my nanny/caregiver/personal assistant?**
 The S2 escort visa is limited to immediate family members (spouse, parents, children, siblings, grandparents, grandchildren; max 2). For professional care or translation support, arrange local services through your medical coordinator after arrival. Nannies and assistants can accompany you short-term on a tourist visa.
 
 **Q: Do I really need USD 10,000 in the bank?**
-This is a documentary requirement set by Chinese consulates for the S2 medical visa. It is not a payment — it is a bank certificate demonstrating you can fund your treatment and living costs during your stay. The exact threshold may vary slightly by embassy; check your local Chinese embassy's website before applying.
+This is a documentary requirement set by Chinese consulates for the S2 medical-purpose visa. It is not a payment — it is an original bank certificate demonstrating a balance of at least USD 10,000 (or equivalent) to fund your treatment and living costs during your stay. Confirm the document format and submission details with the relevant Chinese embassy or consulate before applying.
 
 **Q: Can I apply for a Chinese visa entirely online?**
 The application itself is online — since June 30, 2025, all Chinese visa applications use [consular.mfa.gov.cn](https://consular.mfa.gov.cn/VISA/). After online submission and approval of the form, you print the confirmation page and submit physical documents (and biometrics, if required) at the designated visa application center. Note: a fully electronic visa system has been announced as in development; check the National Immigration Administration's latest announcements for updates.
@@ -338,7 +340,7 @@ At Shanghai's top Grade 3A public hospitals with international departments, and 
 
 ## Sources & References
 
-All policy information in this guide was verified against official Chinese government sources on October 24, 2026. Visa policies change frequently — always verify the latest announcements from the National Immigration Administration / Ministry of Foreign Affairs before travel.
+All policy information in this guide was verified against official Chinese government sources on **October 25, 2026**. Visa policies change frequently — before travel, always verify the latest announcements from the National Immigration Administration (NIA) or call **+86-12367**.
 
 **Laws and regulations:**
 1. Regulations on the Administration of the Entry and Exit of Foreign Nationals (State Council Order No. 814, 2025 revision) — [https://ch.china-embassy.gov.cn/ls_fw_s/flfgmqxy/202608/t20260821_12008307.htm](https://ch.china-embassy.gov.cn/ls_fw_s/flfgmqxy/202608/t20260821_12008307.htm)
@@ -347,7 +349,7 @@ All policy information in this guide was verified against official Chinese gover
 **Immigration policies:**
 3. National Immigration Administration (NIA) — [https://en.nia.gov.cn/](https://en.nia.gov.cn/)
 4. NIA Announcement No. 4 of 2026 (240-hour transit visa-free expansion, Aug 20, 2026) — [https://en.nia.gov.cn/n147418/n147463/c180637/content.html](https://en.nia.gov.cn/n147418/n147463/c180637/content.html)
-5. NIA Regional visa-free entry policies (Aug 20, 2026) — [https://en.nia.gov.cn/n147418/n147463/c180637/content.html](https://en.nia.gov.cn/n147418/n147463/c180637/content.html)
+5. NIA Regional visa-free entry policies (Aug 20, 2026) — [https://www.nia.gov.cn/News/news/content.jsp?id=1726630](https://www.nia.gov.cn/News/news/content.jsp?id=1726630)
 6. NIA Online Arrival Card — [https://s.nia.gov.cn/ArrivalCardFillingPC/](https://s.nia.gov.cn/ArrivalCardFillingPC/)
 
 **Ministry of Foreign Affairs:**
@@ -371,12 +373,12 @@ All policy information in this guide was verified against official Chinese gover
 
 ---
 
-**Disclaimer:** This guide reflects Chinese visa and immigration policies as verified on October 24, 2026. China's visa-free lists and port policies are adjusted periodically — sometimes multiple times per year. Always verify the latest announcements on the [National Immigration Administration website](https://en.nia.gov.cn/) or call the NIA's 24-hour multilingual hotline **+86-12367** (English/Russian/Japanese/Korean available) before making travel arrangements. This article does not constitute a guarantee of visa issuance; all visa decisions are made by Chinese consular officers on a case-by-case basis. This guide is for informational purposes only and does not substitute for professional visa advice specific to your situation.
+**Disclaimer:** This guide reflects Chinese visa and immigration policies as verified on **October 25, 2026**. Before travel, check the latest announcements on the [National Immigration Administration website](https://en.nia.gov.cn/) or call the NIA's 24-hour multilingual hotline **+86-12367**. This article does not constitute a guarantee of visa issuance; all visa decisions are made by Chinese consular and immigration authorities on a case-by-case basis. This guide is for informational purposes only and does not substitute for professional visa advice specific to your situation.
 
 ---
 
 ## About the Author
 
-**Sara Ma** is the founder of ShanghaiMed. She holds a **Bachelor of Science in Nursing from Shanghai Jiao Tong University (SJTU) School of Medicine**, is a licensed registered nurse (RN) with **ISPN (International Standards for Professional Nurses) certification**, and has over a decade of hands-on experience in premium international healthcare operations across Shanghai's top Grade 3A public hospitals. She has coordinated medical care for patients from across the Middle East, Southeast Asia, Europe, and Oceania. Fluent in Mandarin Chinese, English, and Japanese (JLPT N1), Sara founded ShanghaiMed to bridge the gap between international patients and Shanghai's world-class public hospitals, making high-quality Chinese medical care accessible and navigable for patients who do not speak Chinese or lack local connections.
+**Sara Ma** is the founder of ShanghaiMed. She is a registered nurse (RN) with a **BSN from Shanghai Jiao Tong University School of Medicine** and **ISPN (International Standards for Professional Nurses) certification**. She has over a decade of hands-on experience in premium international healthcare operations across Shanghai's top Grade 3A public hospitals. She has coordinated medical care for patients from across the Middle East, Southeast Asia, Europe, and Oceania. Fluent in Mandarin Chinese, English, and Japanese, Sara Ma founded ShanghaiMed to bridge the gap between international patients and Shanghai's world-class public hospitals, making high-quality Chinese medical care accessible and navigable for patients who do not speak Chinese or lack local connections.
 
 *If you are planning medical treatment in Shanghai and need help with hospital selection, invitation letter coordination, visa preparation, or on-the-ground support, you can reach ShanghaiMed via the contact details on this site or WhatsApp. We coordinate with the international departments of Shanghai's Grade 3A public hospitals, translate medical records, arrange video consultations with treating physicians, and assist with visa documentation and in-country logistics.*

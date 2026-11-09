@@ -3,7 +3,7 @@ import FounderContent from '@/components/pages/FounderContent'
 
 export const metadata: Metadata = {
   title: 'About the Founder — Sara Ma | ShanghaiMed',
-  description: 'Sara Ma, Founder & Chief Concierge of ShanghaiMed. ISPN-certified registered nurse, senior registered nurse, and 10+ years of premium healthcare operations experience in Shanghai.',
+  description: 'Sara Ma, Founder & Chief Concierge of ShanghaiMed. ISPN-certified registered nurse and 10+ years of premium healthcare operations experience in Shanghai.',
   alternates: { canonical: 'https://shanghaimedhealth.com/founder' },
 }
 
@@ -12,7 +12,7 @@ export default function FounderPage() {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: 'Sara Ma',
-    alternateName: 'Ma Lingling',
+    alternateName: ['Ma Lingling', 'Lingling Ma', '马玲玲'],
     jobTitle: 'Founder',
     image: 'https://shanghaimedhealth.com/images/sara-ma-headshot.jpg',
     url: 'https://shanghaimedhealth.com/founder',
@@ -26,8 +26,8 @@ export default function FounderPage() {
     hasCredential: [
       { '@type': 'EducationalOccupationalCredential', name: 'ISPN — International Standards for Professional Nurses', credentialCategory: 'Nursing License' },
       { '@type': 'EducationalOccupationalCredential', name: 'Registered Nurse (RN), China', credentialCategory: 'Nursing License' },
-      { '@type': 'EducationalOccupationalCredential', name: 'Senior Registered Nurse (主管护师)', credentialCategory: 'Professional Title' },
       { '@type': 'EducationalOccupationalCredential', name: 'JLPT N1', credentialCategory: 'Language Certification' },
+      { '@type': 'EducationalOccupationalCredential', name: 'BSN — Bachelor of Science in Nursing, Shanghai Jiao Tong University School of Medicine', credentialCategory: 'Degree' },
     ],
     knowsAbout: [
       'International patient coordination',

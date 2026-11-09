@@ -9,7 +9,7 @@ tags:
 - prepare medical records for abroad
 - Shanghai hospital appointment
 - medical second opinion China
-author: Lingling Ma
+author: Sara Ma, Founder
 date: '2026-11-03T02:00:00.000Z'
 lastReviewed: '2026-11-03'
 featured: false
@@ -272,4 +272,4 @@ ShanghaiMedは、国際患者が医療記録を整理・翻訳し、適切な病
 
 ## 著者について
 
-**Lingling Ma (Sara)** は、ShanghaiMedの創設者であり、中国のシニア看護専門家の称号（主管护师）を持つISPN認定登録看護師です。彼女は上海で10年以上にわたって高級医療運営と国際患者コーディネーションに携わっており、英語、中国語、日本語（JLPT N1）で業務を行っています。彼女の役割は、診断や処方箋の提供ではなく、医療コーディネーションと患者コミュニケーションにあります。
+**Sara Ma**はShanghaiMedの創設者です。 登録看護師（RN）であり、上海交通大学医学部で看護学士（BSN）を取得し、**ISPN（International Standards for Professional Nurses）認証**を有しています。 上海で10年以上にわたり、プレミアム国際医療運営と国際患者コーディネーションに携わってきました。 中国語（北京語）、英語、日本語に堪能です。 彼女の役割は、診断や処方箋の提供ではなく、医療コーディネーションと患者コミュニケーションにあります。

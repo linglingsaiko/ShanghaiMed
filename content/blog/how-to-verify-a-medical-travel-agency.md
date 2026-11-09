@@ -49,7 +49,7 @@ Every legitimate business in mainland China is registered with the State Adminis
 | Registered company name | Shanghai Keling Information Technology Co., Ltd. (上海可玲信息技术有限公司) |
 | Unified Social Credit Code | **91310110MAKDNY7H7W** |
 | Registered address | Room 101, Floor 1, No. 2555 Changyang Road, Yangpu District, Shanghai, China |
-| Legal representative | Lingling Ma (马玲玲) |
+| Legal representative | Sara Ma (legal name: Lingling Ma / 马玲玲) |
 
 You can enter our company name (in Chinese: 上海可玲信息技术有限公司) or our credit code into [gsxt.gov.cn](https://www.gsxt.gov.cn) to confirm our registration status. The same credit code appears in the footer of every page on this website.
 
@@ -61,21 +61,21 @@ You can enter our company name (in Chinese: 上海可玲信息技术有限公司
 
 ## Step 2: Verify the hospital and the doctor independently
 
-A medical travel facilitator is only as good as the hospitals and doctors it can connect you to. Any facilitator can claim partnerships. **You should be able to verify both, independently, before you pay anything.**
+A medical travel facilitator is only as good as the hospitals and doctors it can help you access. Any facilitator can claim partnerships, and such claims should never be accepted without evidence. **You should be able to verify the hospital and treating doctor independently before you pay anything.**
 
 ### Verify the hospital
 
-We do not exclusively represent any hospital. The international medical departments of Shanghai's Grade 3A hospitals are open to all — any patient can contact them directly. Our value lies in helping clients match the most suitable hospital and department in the shortest possible time, managing the entire process from medical record translation, appointment scheduling, on-site accompaniment, through to post-discharge follow-up.
+We do not exclusively represent any hospital. The international medical departments of Shanghai's Grade 3A hospitals are open to all — any patient can contact them directly. Our value lies in helping clients identify a suitable hospital and department, then coordinating the process from medical record translation and appointment scheduling through on-site accompaniment and post-discharge follow-up.
 
-All the public hospitals we work with are **Grade 3A (三甲)** — China's highest hospital classification — and every one of them has an official website and an international patient department you can contact directly. You do not need to take our word for it.
+The public hospitals we may recommend are **Grade 3A (三甲)** — China's highest hospital classification. Recommendations are based on your condition and service needs, not limited to the 13 official public medical tourism pilot hospitals or any other fixed list. Options may include affiliated hospitals of Naval Medical University and Shanghai University of Traditional Chinese Medicine, other suitable Shanghai Grade 3A hospitals, and appropriate private hospitals.
 
-Our Hospital Network page lists each partner hospital with direct links to their international department's official website. We encourage you to:
+When we provide hospital options, we also provide official hospital or international department links where available. These are representative options, not a partner-hospital list. We encourage you to:
 
 1. Visit the hospital's official website to learn about their international medical services
 2. Call or email the hospital's International Patient Department / International Medical Center directly
 3. Confirm that the hospital's international department accepts direct appointments and learn about their foreign patient process
 
-Hospitals are responsible for clinical care — they do not handle the non-clinical logistics for foreign patients. Medical record translation, accommodation and transport, visa inquiries, insurance consultations — hospitals are not familiar with these matters and do not have the capacity to assist. That is why hospital international departments welcome patients referred through professional facilitators: communication costs are lower, patients are better prepared, and the clinical process runs smoothly. This is precisely why ShanghaiMed exists.
+Hospitals are responsible for clinical care. The level of non-clinical support available varies by international department, so patients should confirm services directly. ShanghaiMed helps with medical records, appointments, communication, travel logistics, and follow-up while the hospital remains responsible for medical decisions. Patients may contact hospitals directly; using a facilitator is optional.
 
 ### Verify the doctor
 
@@ -94,7 +94,7 @@ Medical travel costs fall into two categories: **clinic/hospital fees** and **co
 
 **How we handle it:**
 - Hospital and clinical fees are always **paid directly to the treating hospital** at the hospital's own rates. We do not collect, hold, or mark up medical fees, and we earn no commission from hospitals.
-- Our concierge fees are published on our Pricing page — from free initial consultation, to $50/hour standalone hospital escort, to packaged concierge from $500–$1,650 depending on your needs. There are no hidden markups on hospital bills.
+- Our concierge fees are published on our Pricing page — from a free initial online consultation via WhatsApp, to $50/hour standalone hospital escort, to packaged concierge from $500–$1,650 depending on your needs. There are no hidden markups on hospital bills.
 - Before you pay any deposit, you receive a **written, itemised treatment plan and cost estimate** covering: concierge fees, estimated hospital charges, interpretation costs, accommodation estimates, and any known additional costs.
 
 **Questions to ask any facilitator:**
@@ -121,12 +121,12 @@ Things do not always go perfectly, even at excellent hospitals. Flights get dela
 This is the simplest and most telling check. Before paying any deposit, you should be able to communicate with a real coordinator — preferably a medically trained professional, not just a sales agent.
 
 **What you can expect from us:**
-- **Free initial consultation** (WhatsApp/LINE), provided by a trained medical coordinator — no payment required, no obligation
+- **Free preliminary online consultation via WhatsApp**, provided by a trained coordinator to assess your needs, discuss suitable hospital and doctor options, and explain budget considerations and the process — no payment required, no obligation. This is decision-stage coordination support, not a hospital clinical video consultation; it does not replace a doctor's diagnosis or promise a free personalised clinical treatment plan.
 - You can ask us anything about our process, the hospitals, our fees, or your specific medical situation
 - The coordinator reviewing your case is a senior medical professional
 - We respond to written inquiries within **24 hours**
 
-You can reach us anytime at [hello@shanghaimedhealth.com](mailto:hello@shanghaimedhealth.com), on [WhatsApp](https://wa.me/8613818274110), or on [LINE](https://line.me/ti/p/cD_Ed4GHBM).
+You can reach us anytime at [hello@shanghaimedhealth.com](mailto:hello@shanghaimedhealth.com) or on [WhatsApp](https://wa.me/8613818274110).
 
 **Red flags at any facilitator:**
 - High-pressure sales tactics ("this price is only available today")

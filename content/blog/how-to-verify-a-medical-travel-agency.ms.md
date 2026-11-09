@@ -49,7 +49,7 @@ Setiap perniagaan yang sah di tanah besar China didaftar dengan Pentadbiran Nege
 | Nama syarikat yang didaftarkan | Shanghai Keling Information Technology Co., Ltd. (上海可玲信息技术有限公司) |
 | Kod Kredit Sosial Bersatu | **91310110MAKDNY7H7W** |
 | Alamat berdaftar | Bilik 101, Tingkat 1, No. 2555 Changyang Road, Daerah Yangpu, Shanghai, China |
-| Wakil sah | Lingling Ma (马玲玲) |
+| Wakil sah | Sara Ma (nama sah: Lingling Ma / 马玲玲) |
 
 anda boleh memasukkan nama syarikat kami (dalam bahasa China: 上海可玲信息技术有限公司) atau kod kredit kami ke dalam [gsxt.gov.cn](https://www.gsxt.gov.cn) untuk mengesahkan status pendaftan kami. Kod kredit yang sama muncul di footer setiap halaman di laman web ini.
 
@@ -61,21 +61,21 @@ anda boleh memasukkan nama syarikat kami (dalam bahasa China: 上海可玲信息
 
 ## Langkah 2: Semak hospital dan doktor secara berasingan.
 
-Seorang fasilitator perjalanan perubatan hanya sebagus hospital dan doktor yang dia boleh hubungkan anda dengan. Mana-mana fasilitator boleh mendakwa perkongsian. **anda harus dapat mengesahkan kedua-duanya, secara bebas, sebelum anda membayar apa-apa.**
+Fasilitator perjalanan perubatan hanya sebaik hospital dan doktor yang dapat diakses dengan bantuannya. Mana-mana fasilitator boleh mendakwa mempunyai perkongsian, dan dakwaan sedemikian tidak harus diterima tanpa bukti. **anda harus dapat mengesahkan hospital dan doktor yang merawat secara bebas sebelum membayar apa-apa.**
 
 ### Verifikasi hospital tersebut.
 
-Kami tidak mewakili mana-mana hospital secara eksklusif. Jabatan-jabatan perubatan antarabangsa di hospital-hospital Gred 3A Shanghai terbuka kepada semua orang - mana-mana pesakit boleh menghubungi mereka secara langsung. Nilai kami terletak dalam membantu pelanggan mencari hospital dan jabatan yang paling sesuai dalam masa yang sesingkat mungkin, menguruskan seluruh proses dari terjemahan rekod perubatan, penjadualan temujanji, pendampingan di tempat, hingga susulan pasca-keluar dari hospital.
+Kami tidak mewakili mana-mana hospital secara eksklusif. Jabatan perubatan antarabangsa hospital Gred 3A di Shanghai terbuka kepada semua — mana-mana pesakit boleh menghubungi mereka secara langsung. Nilai kami terletak pada membantu pelanggan mengenal pasti hospital dan jabatan yang sesuai, kemudian menyelaraskan proses daripada terjemahan rekod perubatan dan penjadualan temu janji hingga pendampingan di lokasi dan susulan selepas keluar hospital.
 
-Semua hospital awam yang kami kerjasama ialah **Grade 3A (三甲)** - klasifikasi hospital tertinggi di China - dan setiap satu daripada mereka mempunyai laman web rasmi dan jabatan pesakit antarabangsa yang anda boleh hubungi secara terus. anda tidak perlu mengambil kata-kata kami untuk itu.
+Hospital awam yang mungkin kami cadangkan ialah **Gred 3A (三甲)** — klasifikasi hospital tertinggi di China. Cadangan berdasarkan keadaan dan keperluan perkhidmatan anda, dan tidak terhad kepada 13 hospital awam perintis pelancongan perubatan rasmi atau mana-mana senarai tetap lain. Pilihan mungkin termasuk hospital gabungan Naval Medical University dan Shanghai University of Traditional Chinese Medicine, hospital Gred 3A lain di Shanghai yang sesuai, dan hospital swasta yang sesuai.
 
-Halaman Rangkaian Hospital kami menyenaraikan setiap hospital rakan kongsi dengan pautan terus ke laman web rasmi jabatan antarabangsa mereka. Kami menggalakkan anda untuk:
+Apabila kami memberikan pilihan hospital, kami juga menyediakan pautan rasmi hospital atau jabatan antarabangsa jika tersedia. Ini ialah pilihan representatif, bukan senarai hospital rakan kongsi. Kami menggalakkan anda untuk:
 
 1. Lawati laman web rasmi hospital untuk mengetahui tentang perkhidmatan perubatan antarabangsa mereka.
 2. Hubungi atau email Jabatan Pesakit Antarabangsa / Pusat Perubatan Antarabangsa hospital secara terus
-3. Sahkan bahawa jabatan antarabangsa hospital menerima temujanji terus dan ketahui tentang proses pesakit asing mereka.
+3. Sahkan bahawa jabatan antarabangsa hospital menerima temu janji terus dan ketahui tentang proses pesakit asing mereka.
 
-Hospital bertanggungjawab untuk penjagaan klinikal - mereka tidak menguruskan logistik bukan klinikal untuk pesakit asing. Terjemahan rekod perubatan, penginapan dan pangangkutan, pertanyaan visa, perundingan insurans - hospital tidak biasa dengan perkara-perkara ini dan tidak mempunyai kapasiti untuk membantu. Itulah sebabnya jabatan antarabangsa hospital mengalu-alukan pesakit yang dirujuk melalui fasilitator profesional: kos komunikasi adalah lebih rendah, pesakit lebih bersedia, dan proses klinikal berjalan lancar. Inilah betul-betul sebab kenapa ShanghaiMed wujud.
+Hospital bertanggungjawab untuk penjagaan klinikal. Tahap sokongan bukan klinikal yang tersedia berbeza mengikut jabatan antarabangsa, jadi pesakit perlu mengesahkan perkhidmatan secara langsung. ShanghaiMed membantu dengan rekod perubatan, temu janji, komunikasi, logistik perjalanan dan susulan, manakala hospital kekal bertanggungjawab untuk keputusan perubatan. Pesakit boleh menghubungi hospital secara langsung; penggunaan fasilitator adalah pilihan.
 
 ### Verifikasi doktor itu.
 
@@ -94,7 +94,7 @@ KOS PERJALANAN MEDIKAL terbahagi kepada dua kategori: **yuran klinik/hospital** 
 
 **Bagaimana kami menguruskannya:**  
 - Yuran hospital dan klinik selalu **dibayar terus kepada hospital yang merawat** mengikut kadar hospital tersebut. Kami tidak mengumpul, menyimpan, atau menambah harga kepada yuran perubatan, dan kami tidak mendapatkan komisen daripada hospital.  
-- Yuran concierge kami disiarkan di halaman Harga kami — daripada rundingan awal percuma, hingga $50/jam untuk perkhidmatan pengiring hospital berdiri sendiri, hingga pakej concierge dari $500–$1,650 bergantung kepada keperluan anda. Tiada tambahan harga tersembunyi pada bil hospital.  
+- Yuran concierge kami disiarkan di halaman Harga kami — daripada perundingan awal percuma dalam talian melalui WhatsApp, hingga $50/jam untuk perkhidmatan pengiring hospital berdiri sendiri, hingga pakej concierge dari $500–$1,650 bergantung kepada keperluan anda. Tiada tambahan harga tersembunyi pada bil hospital.  
 - Sebelum anda membayar sebarang deposit, anda akan menerima **pelan rawatan bertulis dan anggaran kos** yang memperincikan: yuran concierge, anggaran caj hospital, kos interpretasi, anggaran penginapan, dan sebarang kos tambahan yang diketahui.
 
 **Soalan-soalan untuk ditanya kepada mana-mana fasilitator:**  
@@ -121,12 +121,12 @@ Segalanya tidak selalu berjalan lancar, walaupun di hospital-hospital terbaik. P
 Ini adalah pemeriksaan yang paling mudah dan paling jelas. Sebelum membayar sebarang deposit, anda harus dapat berkomunikasi dengan koordinator yang sebenar - sebaiknya seorang profesional yang terlatih secara medis, bukan hanya ejen jualan.
 
 **Apa yang anda boleh jangka daripada kami:**  
-- **Perundingan awal percuma** (WhatsApp/LINE), disediakan oleh koordinator perubatan terlatih — tiada pembayaran diperlukan, tiada kewajiban  
+- **Perundingan awal percuma dalam talian melalui WhatsApp**, disediakan oleh koordinator terlatih untuk menilai keperluan anda, membincangkan pilihan hospital dan doktor yang sesuai, serta menjelaskan pertimbangan bajet dan prosesnya — tiada pembayaran diperlukan dan tiada kewajipan. Ini ialah sokongan koordinasi pada peringkat membuat keputusan, bukan perundingan video klinikal oleh hospital; ia tidak menggantikan diagnosis doktor dan tidak menjanjikan penyediaan pelan rawatan klinikal yang diperibadikan secara percuma.  
 - anda boleh bertanya kepada kami apa sahaja tentang proses kami, hospital, yuran kami, atau keadaan perubatan khusus anda  
 - Koordinator yang meninjau kes anda adalah seorang profesional perubatan kanan  
 - Kami memberi maklum balas untuk pertanyaan bertulis dalam **24 jam**
 
-anda boleh menghubungi kami pada bila-bila masa di [hello@shanghaimedhealth.com](mailto:hello@shanghaimedhealth.com), di [WhatsApp](https://wa.me/8613818274110), atau di [LINE](https://line.me/ti/p/cD_Ed4GHBM).
+anda boleh menghubungi kami pada bila-bila masa melalui [hello@shanghaimedhealth.com](mailto:hello@shanghaimedhealth.com) atau [WhatsApp](https://wa.me/8613818274110).
 
 **Tanda bahaya pada mana-mana fasilitator:**  
 - Taktik jualan bertekanan tinggi (“harga ini hanya tersedia hari ini”)  

@@ -24,7 +24,7 @@ export default function BlogCTA({ post }: BlogCTAProps) {
     fetchRelated()
   }, [post, language])
   
-  // 根据文章分类推荐医院
+  // Representative examples only, not a fixed list or a case-specific recommendation
   const recommendedHospitals = tier1Hospitals.slice(0, 3)
   
   return (

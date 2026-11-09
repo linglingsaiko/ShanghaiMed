@@ -88,4 +88,4 @@ The right partner will answer all six comfortably and in writing. Take your time
 
 ---
 
-*Planning your treatment journey to Shanghai? Our team reviews your complete medical records before recommending any hospital — and we plan everything from your apartment to your follow-up care. Message us on WhatsApp at +86 138 1827 4110 for a free consultation, or join our [free patient community on Telegram](https://t.me/shanghaimed_group).*
+*Planning your treatment journey to Shanghai? Our team reviews your complete medical records before recommending any hospital — and we plan everything from your apartment to your follow-up care. Message us on WhatsApp at +86 13818274110 for a free initial online coordination consultation, or join our [free patient community on Telegram](https://t.me/shanghaimed_group).*

@@ -37,7 +37,7 @@ export const legalEn: Record<string, LegalDoc> = {
         items: [
           'Assess your case and match hospitals and specialists;',
           'Schedule appointments, interpretation and on-the-ground accompaniment;',
-          'Support medical visa applications and travel logistics;',
+          'Provide visa-pathway guidance for eligible routine care and the S2 pathway for planned admission, and coordinate travel logistics;',
           'Process service coordination fees and issue invoices;',
           'Communicate with you before, during and after your visit;',
           'Comply with legal, accounting, tax and regulatory obligations.',
@@ -104,7 +104,7 @@ export const legalEn: Record<string, LegalDoc> = {
           'Review and professional translation of medical records;',
           'Matching your case with suitable licensed Chinese public hospitals and specialists;',
           'Appointment scheduling and cost estimates;',
-          'Medical visa invitation support and travel/accommodation logistics;',
+          'Visa-pathway guidance and travel/accommodation logistics: tourist-visa or eligible visa-free options for routine care, and S2 planning with hospital invitation/proposed-admission documents only for scheduled surgery, hospitalization or other treatment requiring admission;',
           'Bilingual in-person accompaniment and interpretation during hospital visits;',
           'Post-visit follow-up coordination.',
         ],
@@ -132,7 +132,7 @@ export const legalEn: Record<string, LegalDoc> = {
         title: '6. Your responsibilities',
         items: [
           'Provide accurate, complete and genuine information, medical records and identity/visa documents;',
-          'Obtain a valid visa and travel documents for entry to China; obtain suitable travel and/or medical insurance as you consider appropriate;',
+          'Obtain the required visa or confirm that you meet every condition for applicable visa-free entry, and hold valid travel documents for entry to China; obtain suitable travel and/or medical insurance as you consider appropriate;',
           'Make your own decisions, in consultation with your treating physicians, about whether to proceed with any treatment recommended by a hospital;',
           'Pay hospital charges and your own travel, accommodation and living costs directly;',
           'Comply with the laws of the People\u2019s Republic of China and the rules of the hospitals you visit.',

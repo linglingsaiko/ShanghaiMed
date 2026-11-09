@@ -13,7 +13,7 @@ tags:
 - prepare medical records for abroad
 - Shanghai hospital appointment
 - medical second opinion China
-author: Lingling Ma
+author: Sara Ma, Founder
 date: '2026-11-03T02:00:00.000Z'
 lastReviewed: '2026-11-03'
 featured: false
@@ -285,4 +285,4 @@ Anggota keluarga dapat membantu, tetapi otorisasi dari pasien dewasa harus diper
 
 ## Tentang penulis
 
-**Lingling Ma (Sara)** adalah pendiri ShanghaiMed dan perawat terdaftar bersertifikat ISPN dengan gelar profesional keperawatan senior Tiongkok (主管护师). Dia memiliki lebih dari satu dekade pengalaman dalam operasi perawatan kesehatan premium dan koordinasi pasien internasional di Shanghai, dan bekerja dalam bahasa Inggris, Tiongkok, dan Jepang (JLPT N1). Perannya adalah koordinasi medis dan komunikasi pasien, bukan diagnosis atau pemberian resep.
+**Sara Ma** adalah pendiri ShanghaiMed. Dia adalah perawat terdaftar berlisensi (RN) dengan gelar Sarjana Keperawatan (BSN) dari Shanghai Jiao Tong University School of Medicine dan sertifikasi **ISPN (International Standards for Professional Nurses)**. Dia memiliki lebih dari satu dekade pengalaman dalam operasi layanan kesehatan internasional premium dan koordinasi pasien internasional di Shanghai. Dia fasih berbahasa Mandarin, Inggris, dan Jepang. Perannya adalah koordinasi medis dan komunikasi pasien, bukan diagnosis atau pemberian resep.

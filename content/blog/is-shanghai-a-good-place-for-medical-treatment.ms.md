@@ -80,7 +80,7 @@ Shanghai menawarkan dua laluan utama untuk pesakit antarabangsa: **jabatan antar
 **Kelebihan:**
 
 - Persekitaran hotel mewah dengan bilik-bilik peribadi
-- Persekitaran berbahasa Inggeris penuh di seluruh fasiliti - daripada kaunter penerimaan hingga kakitangan jururawat dan doktor
+- Kakitangan dan koordinator berbahasa Inggeris tersedia di jabatan pesakit antarabangsa; tahap penguasaan bahasa Inggeris berbeza mengikut jabatan dan kakitangan
 - Waktu perundingan yang lebih lama dengan komunikasi yang lebih terperinci dan berpusatkan pesakit
 - Temujanji tersedia dengan cepat untuk kebanyakan perkhidmatan
 - Perkhidmatan komprehensif di bawah satu bumbung (perundingan, diagnostik, farmasi, pergigian)
@@ -91,7 +91,7 @@ Shanghai menawarkan dua laluan utama untuk pesakit antarabangsa: **jabatan antar
 - Untuk kes yang sangat kompleks, pakar mungkin merujuk kepada rakan sekerja hospital awam.
 - Beberapa syarikat insurans mengklasifikasikan hospital swasta tertentu sebagai **Pembekal Kos Tinggi (HCP)** atau “fasiliti perubatan mahal”. Bergantung pada pelan insurans anda, lawatan ke hospital yang disenaraikan sebagai HCP mungkin memerlukan **pembayaran bersama 20%**—manakala rawatan yang sama di fasiliti bukan HCP akan dilindungi sepenuhnya. Ini berbaloi untuk diperiksa sebelum anda memilih fasiliti.
 
-**Sesuai untuk:** Penjagaan pencegahan, pemeriksaan rutin, prosedur kecil, kerja gigi, pediatrik, dan pesakit yang mengutamakan keselesaan dan komunikasi.
+**Sesuai untuk:** Penjagaan pencegahan, pemeriksaan rutin, prosedur pesakit luar, kerja gigi, pediatrik, dan pesakit yang mengutamakan keselesaan dan komunikasi.
 
 Banyak pesakit antarabangsa menggunakan kombinasi kedua-duanya: rawatan kompleks di jabatan antarabangsa hospital awam di mana pakar-pakar terkemuka dan peralatan canggih tertumpu, susulan rutin dan penjagaan pencegahan di klinik antarabangsa swasta di mana pengalamannya lebih selesa.
 
@@ -118,7 +118,7 @@ Ini sering menjadi kebimbangan terbesar bagi pesakit antarabangsa, dan ini adala
 
 **Jabatan antarabangsa khusus** di hospital-hospital awam utama menggaji koordinator dwibahasa yang membantu dengan segalanya, daripada tempahan janji temu hingga menjelaskan pelan rawatan. Koordinator ini biasanya mempunyai latar belakang perubatan atau latihan khusus. Walaupun koordinator menjembatani jurang bahasa secara berkesan, persekitaran bahasa Inggeris keseluruhan di hospital-hospital awam tidak semulus di fasiliti swasta—hospital yang lebih besar beroperasi terutamanya dalam bahasa China, dan anda mungkin menemui kakitangan di luar jabatan antarabangsa yang bertutur dalam bahasa Inggeris yang terhad.
 
-**Hospital swasta antarabangsa** menawarkan pengalaman berbahasa Inggeris sepenuhnya - resepsi, kakitangan keperawatan, doktor, dan pasukan pentadbiran semua berkomunikasi dalam bahasa Inggeris. Perundingan cenderung untuk menjadi lebih lama dan lebih terperinci, dengan doktor mengambil masa tambahan untuk menjelaskan keadaan dan pilihan rawatan.
+**Hospital swasta antarabangsa** secara umumnya menawarkan sokongan bahasa Inggeris yang lebih kukuh, dengan kakitangan penerimaan, jururawat dan doktor berbahasa Inggeris di jabatan antarabangsa mereka. Walau bagaimanapun, tahap penguasaan bahasa Inggeris masih boleh berbeza mengikut kakitangan dan jabatan. Perundingan cenderung lebih lama dan lebih terperinci, dengan doktor meluangkan masa tambahan untuk menjelaskan keadaan dan pilihan rawatan.
 
 ## Penerimaan Insurans: Bolehkah anda Menggunakan Pelan anda?
 
@@ -167,7 +167,7 @@ Membayar untuk penjagaan kesihatan - dan semua yang lain - di China telah menjad
 
 **36 e-dompet luar negara berfungsi secara langsung di China.** Melalui integrasi pembayaran rentas sempadan Bank Rakyat China, e-dompet dari negara-negara termasuk Malaysia (Touch'n Go), Korea Selatan (Kakao Pay), Hong Kong (AlipayHK), Thailand (TrueMoney), dan banyak lagi boleh digunakan di kedai-kedai di seluruh Shanghai tanpa memerlukan akaun pembayaran China berasingan.
 
-**Integrasi PayPal dan WeChat Pay.** PayPal telah bekerjasama dengan WeChat Pay, membenarkan pengguna PayPal untuk membuat pembayaran melalui ekosistem WeChat—jambatan mudah lain untuk pelawat yang tidak mahu mengatur kaedah pembayaran tempatan.
+**Kad kredit antarabangsa di hospital.** Banyak hospital besar menerima kad kredit antarabangsa (Visa, Mastercard) di jabatan pesakit antarabangsa mereka, walaupun penerimaan berbeza mengikut hospital dan jabatan. Sahkan pilihan pembayaran dengan hospital anda sebelum rawatan.
 
 **Transaksi kecil adalah tanpa yuran.** Untuk transaksi di bawah ¥200 (kira-kira $28), tiada yuran penukaran mata wang tambahan dikenakan—membuat pembayaran untuk ubat, makanan, dan pangangkutan menjadi mudah tanpa kerumitan.
 
@@ -182,20 +182,28 @@ Membayar untuk penjagaan kesihatan - dan semua yang lain - di China telah menjad
 
 Mencapai Shanghai dan menavigasi syarat-syarat kemasukan adalah lebih mudah daripada apa yang anda sangkakan.
 
-**Transit Bebas Visa 240 Jam** adalah satu perubahan besar bagi banyak pesakit antarabangsa. Jika anda berasal dari salah satu daripada 54 negara yang layak (termasuk AS, UK, Kanada, Australia, Jepun, dan kebanyakan negara Kesatuan Eropah), anda boleh melakukan transit melalui Shanghai tanpa visa sehingga 240 jam (10 hari). Ini sangat berguna untuk:
+Untuk pemeriksaan kesihatan, rawatan pergigian, TCM, konsultasi pesakit luar biasa, lawatan susulan dan pendapat kedua, **visa pelancong (L) atau dasar pengecualian visa yang berkenaan** mungkin sesuai.
 
-- Perundingan cepat dan prosedur kecil
-- Pemeriksaan kesihatan yang tidak memerlukan tinggal lama
-- Kunjungan susulan untuk pesakit yang menerima rawatan awal di tempat lain.
+**Transit Bebas Visa 240 Jam** meliputi warganegara yang layak dari **57 negara** yang memenuhi semua syarat transit. Ia membenarkan tempoh sehingga 240 jam (10 hari) dan boleh sesuai untuk itinerari lawatan singkat yang patuh, melibatkan:
 
-**Visa Perubatan (Visa M)** Adalah sesuai untuk pesakit yang memerlukan tempoh rawatan yang lebih lama. anda akan memerlukan:
+- Pemeriksaan kesihatan ringkas atau temu janji pergigian
+- Konsultasi pesakit luar biasa atau pendapat kedua
+- Lawatan susulan yang tidak melibatkan kemasukan hospital yang dirancang
 
-- Surat jemputan daripada hospital atau klinik Shanghai anda
-- Bukti keupayaan kewangan atau insurans
-- Pasport sah (disyorkan sah selama 6+ bulan)
+Ia **bukan untuk pembedahan yang dirancang, kemasukan hospital atau rawatan pesakit dalam**.
+
+China **tidak mempunyai kategori huruf visa berasingan yang bernama “Visa Perubatan”**, dan **Visa M ialah untuk perniagaan/perdagangan**. Untuk pembedahan yang dirancang, kemasukan hospital atau rawatan yang memerlukan kemasukan, laluan yang berkaitan ialah **visa S2 (Hal Ehwal Peribadi Jangka Pendek) bagi rawatan perubatan**, disokong oleh surat jemputan hospital yang merawat, notis kemasukan atau bukti cadangan kemasukan. Dokumen permohonan teras biasanya merangkumi:
+
+- Surat jemputan/dokumen kemasukan hospital
+- Bukti keupayaan kewangan yang diperlukan
+- Pasport yang sah
 - Permohonan visa yang lengkap
 
-Mencapai Shanghai adalah mudah - Lapangan Terbang Antarabangsa Pudong (PVG) dan Lapangan Terbang Antarabangsa Hongqiao (SHA) menghubungkan ke kebanyakan bandar-bandar besar di seluruh dunia. Banyak pesakit antarabangsa terbang masuk, membuat temujanji, dan terbang keluar pada hari yang sama atau hari berikutnya untuk prosedur kecil, atau mengatur penginapan untuk pelan rawatan yang lebih lama.
+Jika keadaan yang memerlukan kemasukan hospital ditemui selepas kemasukan yang sah, dokumentasi hospital boleh menyokong permohonan perubahan status di China mengikut peraturan berkenaan. Dalam kecemasan, rawatan didahulukan dan formaliti imigresen menyusul.
+
+*Dasar visa disahkan setakat **25 Oktober 2026**. Sebelum mengembara, semak pengumuman terkini Pentadbiran Imigresen Nasional (NIA) atau hubungi **+86-12367**. Keputusan visa dan status dibuat secara individu oleh pihak berkuasa yang berkaitan.*
+
+Mencapai Shanghai adalah mudah - Lapangan Terbang Antarabangsa Pudong (PVG) dan Lapangan Terbang Antarabangsa Hongqiao (SHA) menghubungkan kebanyakan bandar besar di seluruh dunia. Ramai pesakit antarabangsa tiba, menghadiri temu janji pesakit luar dan pulang pada hari yang sama atau keesokan harinya, atau mengatur penginapan untuk pelan rawatan yang lebih lama.
 
 Penginapan berhampiran dengan hospital utama bermula dari pilihan bajet hingga hotel mewah dan pangsapuri perkhidmatan. Hospital antarabangsa sering mempunyai perkongsian dengan penginapan berhampiran untuk keluarga pesakit.
 
@@ -216,8 +224,8 @@ Merancang perjalanan perubatan ke negara lain boleh menjadi sangat memenatkan - 
 - Mengenal pasti hospital dan pakar yang betul untuk keadaan anda
 - Mengesahkan perlindungan insurans atau kos bayaran sendiri sebelum anda melancong
 - Menjadualkan temujanji dan meminta anggaran kos
-- Mengatur visa, perjalanan, dan penginapan (ramai warga negara layak untuk visa transit 240 jam di China)
-- Menerima rawatan dengan kakitangan perubatan yang bertutur dalam bahasa Inggeris
+- Mengatur laluan masuk, perjalanan dan penginapan yang betul—visa L atau pengecualian visa yang berkenaan untuk lawatan pesakit luar yang layak, transit 240 jam hanya untuk lawatan singkat yang memenuhi syarat, atau S2 untuk pembedahan/kemasukan hospital yang dirancang
+- Menerima rawatan dengan sokongan bahasa yang diselaraskan (ketersediaan kakitangan berbahasa Inggeris berbeza mengikut hospital dan jabatan; interpretasi perubatan profesional boleh diatur)
 - Penjagaan susulan, termasuk laporan bahasa Inggeris dan pilihan telemedicine.
 
 Setiap langkah ini melibatkan pilihan yang boleh mempengaruhi pengalaman dan kos anda secara signifikan. Kami membantu pesakit antarabangsa menavigasi semuanya—jadi anda boleh fokus kepada kesihatan anda, bukan logistiknya.

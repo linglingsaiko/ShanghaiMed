@@ -80,20 +80,24 @@ const enFaqs: FaqItem[] = [
           <li><strong>Longhua Hospital</strong> (Shanghai University of TCM) — Grade 3A, official TCM medical tourism pilot hospital</li>
         </ul>
         <p>
-          These hospitals use the <strong>same medical equipment</strong> (Siemens, GE Healthcare, Philips) and{' '}
-          <strong>same implant brands</strong> (Stryker, Zimmer, Straumann) found in US hospitals. Many senior physicians
-          have trained at Johns Hopkins, Mayo Clinic, and Cleveland Clinic.
+          Shanghai hospitals use <strong>internationally available medical equipment and implant brands</strong>. The exact
+          equipment, manufacturer, and implant model depend on the hospital, department, and procedure, and should be
+          confirmed directly with the treating hospital.
         </p>
       </>
     ),
   },
   {
-    q: 'Which hospitals in Shanghai does ShanghaiMed work with?',
+    q: 'Which hospitals can ShanghaiMed recommend or arrange in Shanghai?',
     a: (
       <>
         <p className="mb-4">
-          ShanghaiMed partners with <strong>14 public Grade-A medical tourism pilot hospitals</strong> and{' '}
-          <strong>5 private international hospitals</strong> — a total of 19 institutions covering every medical specialty:
+          ShanghaiMed does not operate a contracted or fixed hospital network. We recommend hospitals based on{' '}
+          <strong>your condition, specialty fit, service needs, and actual appointment availability</strong>, then coordinate
+          the entire care journey. Any suitable Grade 3A public hospital in Shanghai may be considered, and suitable private
+          hospitals can also be arranged. The <strong>13 official public medical tourism pilot hospitals</strong> are an
+          official reference, not a limit on our recommendations. Medical fees are paid directly to the treating hospital.
+          The table below shows representative examples only, not a complete or fixed list:
         </p>
         <div className="overflow-x-auto mb-4">
           <table className="w-full text-sm border-collapse">
@@ -109,14 +113,14 @@ const enFaqs: FaqItem[] = [
                 ['Huashan Hospital', 'Fudan University', 'Neurosurgery #1, Dermatology #1'],
                 ["Children's Hospital", 'Fudan University', 'Neonatology, Pediatric Surgery'],
                 ['Ruijin Hospital', 'SJTU', 'Hematology (CAR-T), Endocrinology'],
-                ['Shanghai General Hospital', '—', 'Ophthalmology, ENT, Urology'],
+                ['Shanghai General Hospital', 'Shanghai Jiao Tong University School of Medicine', 'Ophthalmology, ENT, Urology'],
                 ['Zhongshan Hospital', 'Fudan University', 'Cardiovascular, General Surgery'],
                 ['Renji Hospital', 'SJTU', 'Gastroenterology #1, Reproductive Medicine'],
                 ['Longhua Hospital', 'Shanghai Univ. of TCM', 'Traditional Chinese Medicine'],
-                ['IPMCH', 'China Welfare Institute', 'Reproductive Medicine, Obstetrics'],
+                ['IPMCH', 'China Welfare Institute; Shanghai Jiao Tong University School of Medicine', 'Reproductive Medicine, Obstetrics'],
                 ["Shanghai Children's Medical Center", 'SJTU', 'Pediatric Cardiac Surgery'],
-                ["Sixth People's Hospital", '—', 'Orthopedics (limb replantation since 1963)'],
-                ['First Maternity & Infant Hospital', '—', 'Obstetrics, Fetal Medicine'],
+                ["Sixth People's Hospital", 'Shanghai Jiao Tong University School of Medicine', 'Orthopedics (limb replantation since 1963)'],
+                ['First Maternity & Infant Hospital', 'Tongji University; official second name: Tongji University Affiliated Obstetrics and Gynecology Hospital', 'Obstetrics, Fetal Medicine'],
                 ['Xinhua Hospital', 'SJTU', 'Pediatrics, Dermatology'],
                 ['Huadong Hospital', 'Fudan University', 'Geriatric Medicine, Health Screening'],
                 ["Ninth People's Hospital", 'SJTU', 'Dental #1, Plastic Surgery #1'],
@@ -130,9 +134,16 @@ const enFaqs: FaqItem[] = [
             </tbody>
           </table>
         </div>
+        <p className="mb-4">
+          Depending on your needs, options may also include the <strong>Naval Medical University (formerly Second Military
+          Medical University)</strong> system — Changhai Hospital, Changzheng Hospital, and Eastern Hepatobiliary Surgery
+          Hospital — and the <strong>Shanghai University of Traditional Chinese Medicine</strong> system, including Longhua,
+          Shuguang, and Yueyang hospitals. These are examples of the recommendation scope, not a fixed list.
+        </p>
         <p>
-          Plus 5 private international hospitals: Jiahui International (Mass General affiliation), United Family,
-          ParkwayHealth, SinoUnited Health (Mayo Clinic collaboration and second opinion services), and Raffles Hospital.
+          Where a private hospital is appropriate, representative examples include Jiahui International (Mass General
+          affiliation), United Family, ParkwayHealth, SinoUnited Health (Mayo Clinic collaboration and second opinion
+          services), and Raffles Hospital.
         </p>
       </>
     ),
@@ -142,18 +153,18 @@ const enFaqs: FaqItem[] = [
     a: (
       <>
         <p className="mb-4">
-          Many senior doctors at Shanghai's top hospitals have <strong>international training and speak English</strong>.
-          Physicians regularly publish in English-language medical journals and attend international conferences.
+          Some hospitals and doctors in Shanghai can provide services in English. Availability varies by doctor and
+          department, so please confirm English-language support for your specific doctor before booking.
         </p>
         <p className="mb-4">
-          To guarantee zero communication gaps, ShanghaiMed provides <strong>professional English–Chinese medical
+          To help reduce communication gaps, ShanghaiMed provides <strong>professional English–Chinese medical
           companions</strong> (Japanese–Chinese in the Japanese-language version) who:
         </p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li>Accompany you to every appointment</li>
           <li>Translate medical terminology accurately</li>
           <li>Help with hospital paperwork and navigation</li>
-          <li>Ensure you fully understand your diagnosis, treatment plan, and medication</li>
+          <li>Help you understand your diagnosis, treatment plan, and medication</li>
         </ul>
         <p>All medical documents, treatment plans, and prescriptions are <strong>translated into English</strong> for your records.</p>
       </>
@@ -170,8 +181,8 @@ const enFaqs: FaqItem[] = [
         </p>
         <p className="mb-4">After reviewing your medical records, we:</p>
         <ol className="list-decimal pl-6 mb-4 space-y-1">
-          <li>Identify <strong>2–3 suitable specialists</strong> at our partner hospitals whose clinical expertise,
-          published outcomes, and availability match your case</li>
+          <li>Identify <strong>2–3 suitable specialists</strong> at hospitals that fit your condition, service needs, and
+          practical requirements, whose clinical expertise, published outcomes, and availability match your case</li>
           <li>Share their <strong>full names, titles, hospital affiliations, and credentials</strong> with you — including
           their professional rank (we only recommend specialists at the rank of <em>Associate Chief Physician</em> 副主任医师 or above at Grade 3A hospitals)</li>
           <li>Provide the <strong>international patient department contact details</strong> of the relevant hospitals,
@@ -192,20 +203,27 @@ const enFaqs: FaqItem[] = [
     ),
   },
   {
-    q: 'How do I get a medical visa for China?',
+    q: 'Which visa or entry route should I use for medical care in China?',
     a: (
       <>
-        <p className="mb-4">ShanghaiMed assists with the <strong>complete visa process</strong>:</p>
-        <ol className="list-decimal pl-6 mb-4 space-y-1">
-          <li><strong>Initial consultation</strong> (free, remote via video call)</li>
-          <li><strong>Medical invitation letter</strong> — issued by the partner hospital after consultation</li>
-          <li><strong>Visa application</strong> — you submit the invitation letter to the Chinese embassy/consulate</li>
-          <li><strong>Processing time</strong> — typically 2-4 weeks</li>
-          <li><strong>Document support</strong> — ShanghaiMed provides translation of all required documents</li>
-        </ol>
+        <p className="mb-4">The appropriate entry route depends on the care you plan to receive:</p>
+        <ul className="list-disc pl-6 mb-4 space-y-2">
+          <li><strong>Health checkups, dental care, TCM, routine outpatient visits, follow-up visits, and second opinions:</strong>{' '}
+          you may be able to use a tourist visa or an applicable visa-free entry route.</li>
+          <li><strong>Planned surgery, inpatient treatment, or care requiring hospital admission:</strong> use the treating
+          hospital&apos;s invitation letter or planned-admission documentation to apply through the <strong>S2 visa route</strong>.
+          ShanghaiMed can assist with document coordination and translation.</li>
+        </ul>
+        <p className="mb-4">
+          Start with a <strong>free initial online consultation via WhatsApp</strong>. China&apos;s <strong>240-hour transit
+          visa exemption covers 57 countries</strong>, subject to eligibility and itinerary conditions. It is not intended
+          for planned surgery or inpatient treatment.
+        </p>
         <p>
-          China offers a <strong>240-hour (10-day) transit visa exemption</strong> for citizens of 57 countries (including the US, UK,
-          Canada, Australia, Japan, UAE, and most EU nations), which may be sufficient for short consultations, second opinions, or health checkups. For surgery, inpatient treatment, or stays longer than 10 days, a medical (M) visa is recommended.
+          <strong>The M visa is for business and trade, not medical treatment.</strong> This visa information is current as
+          of <strong>25 October 2026</strong>. Before travel, check the latest official notice from the National Immigration
+          Administration (NIA) or call <strong>+86-12367</strong>. Visa and visa-free entry decisions are assessed case by
+          case by the relevant authorities, and approval cannot be guaranteed.
         </p>
       </>
     ),
@@ -214,8 +232,8 @@ const enFaqs: FaqItem[] = [
     q: 'What is included in the ShanghaiMed service package?',
     a: (
       <>
-        <p className="mb-2"><strong>Free Initial Consultation — $0</strong></p>
-        <p className="mb-1">No-obligation decision-stage conversation — 4 services:</p>
+        <p className="mb-2"><strong>Free Initial Online Coordination Consultation via WhatsApp — $0</strong></p>
+        <p className="mb-1">No-obligation decision-stage coordination — 4 services; not a hospital clinical video consultation or a personalized treatment plan:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li>Medical needs assessment</li>
           <li>Hospital &amp; specialist recommendations</li>
@@ -246,7 +264,7 @@ const enFaqs: FaqItem[] = [
           <li>Hospital &amp; specialist matching</li>
           <li>Local transportation, payment, and on-the-ground guidance</li>
           <li>Dedicated WhatsApp support throughout your stay</li>
-          <li>Visa invitation letter support</li>
+          <li>Tourist or eligible visa-free pathway guidance for checkups</li>
           <li>30-day post-checkup remote follow-up</li>
           <li>Insurance support</li>
         </ul>
@@ -263,7 +281,7 @@ const enFaqs: FaqItem[] = [
           <li>Hospital &amp; specialist matching</li>
           <li>Local transportation, payment, and on-the-ground guidance</li>
           <li>Dedicated WhatsApp support throughout your stay</li>
-          <li>Visa invitation letter support</li>
+          <li>Visa pathway guidance; hospital invitation/intended-admission document coordination only for planned surgery, inpatient treatment, or other care requiring admission</li>
           <li>30-day post-care remote follow-up</li>
           <li>Insurance support · pre-authorization</li>
         </ul>
@@ -282,7 +300,7 @@ const enFaqs: FaqItem[] = [
           <li>Inpatient check-ins during hospital stay</li>
           <li>Local transportation, payment/billing assistance, and on-the-ground guidance</li>
           <li>Dedicated WhatsApp support throughout your stay</li>
-          <li>Medical visa invitation letter support</li>
+          <li>S2 pathway guidance and hospital invitation/intended-admission document coordination for planned surgery, inpatient treatment, or other care requiring admission</li>
           <li>Family communication &amp; progress updates</li>
           <li>60-day post-care remote follow-up</li>
           <li>Insurance · pre-authorization &amp; surgical deposit coordination</li>
@@ -364,8 +382,8 @@ const enFaqs: FaqItem[] = [
     a: (
       <>
         <p className="mb-4">
-          Yes. ShanghaiMed partner hospitals have <strong>direct settlement agreements</strong> with major international
-          insurers. Coverage ranges from 8 to 24 insurers per hospital:
+          Yes. Direct settlement may be available when your insurer has an agreement with the <strong>treating hospital</strong>.
+          Published hospital–insurer arrangements vary by hospital:
         </p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li>Huashan Hospital — 24 insurance partners</li>
@@ -374,7 +392,8 @@ const enFaqs: FaqItem[] = [
           <li>Renji Hospital — 20 insurance partners</li>
         </ul>
         <p>
-          Accepted insurers include <strong>MSH, Bupa, Cigna, Aetna, AXA, Allianz, AIA, International SOS,</strong> and more.
+          Examples of insurers in published hospital–insurer arrangements include <strong>MSH, Bupa, Cigna, Aetna, AXA, Allianz, AIA, and International SOS</strong>.
+          Actual acceptance and direct settlement depend on the treating hospital, department, current agreement, and your policy.
           ShanghaiMed provides insurance support including policy benefit checks and pre-authorization letters. Where direct
           billing is available we coordinate with the hospital on your behalf; otherwise patients pay the hospital directly
           and claim reimbursement with our documentation support.
@@ -388,7 +407,7 @@ const enFaqs: FaqItem[] = [
       <>
         <p className="mb-4">ShanghaiMed provides <strong>comprehensive post-treatment follow-up</strong>:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
-          <li><strong>Remote video check-ups</strong> with your treating doctor</li>
+          <li><strong>Remote follow-up coordination</strong>; clinical video check-ups with your treating doctor only where offered by the hospital, with any hospital teleconsultation fee confirmed separately from ShanghaiMed coordination</li>
           <li><strong>Translated medical records</strong> — full discharge summary, test results, and medication list in English</li>
           <li><strong>Medication guidance</strong> — dosage instructions, side effects, and interaction warnings</li>
           <li><strong>Recovery planning</strong> — personalized timeline and activity recommendations</li>
@@ -498,27 +517,25 @@ const jaFaqs: FaqItem[] = [
           <li><strong>Longhua Hospital</strong>（上海中医薬大学）— 三級甲等、中医薬医療ツーリズム公式パイロット病院</li>
         </ul>
         <p>
-          これらの病院は米国の病院と<strong>同じ医療機器</strong>（Siemens、GE Healthcare、Philips）や{' '}
-          <strong>同じインプラントブランド</strong>（Stryker、Zimmer、Straumann）を使用しています。上級医師の多くは
-          Johns Hopkins、Mayo Clinic、Cleveland Clinicで研修を積んでいます。
+          上海の病院では、<strong>国際的に入手可能な医療機器やインプラントブランド</strong>が使用されています。
+          具体的な機器、メーカー、インプラントのモデルは病院・診療科・手術によって異なるため、受診病院に確認してください。
         </p>
       </>
     ),
   },
   {
-    q: 'ShanghaiMedは上海のどの病院と提携していますか？',
+    q: 'ShanghaiMedはどの病院を提案・手配できますか？',
     a: (
       <>
         <p className="mb-4">
-          ShanghaiMedは<strong>医療ツーリズム指定の公立三級甲等病院14院</strong>および{' '}
-          <strong>民営国際病院5院</strong>と提携しており、計19の医療機関がすべての診療科をカバーしています：
+          ShanghaiMedは契約済み・固定の病院ネットワークを運営しているわけではありません。<strong>病状、専門分野の適合性、実際のご要望</strong>に基づいて病院を提案し、受診から帰国後までの全過程を調整します。上海の適切な公立三級甲等病院はいずれも検討でき、適切な民営病院も手配可能です。<strong>公式の公立医療ツーリズム試行病院13院</strong>は公的な参考情報であり、提案先の上限ではありません。医療費は受診病院へ直接お支払いいただきます。以下は代表的な例であり、完全・固定のリストではありません：
         </p>
         <div className="overflow-x-auto mb-4">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gray-100">
                 <th className="border border-gray-300 px-4 py-2 text-left">病院</th>
-                <th className="border border-gray-300 px-4 py-2 text-left">大学</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">所属機関</th>
                 <th className="border border-gray-300 px-4 py-2 text-left">主な専門分野</th>
               </tr>
             </thead>
@@ -527,14 +544,14 @@ const jaFaqs: FaqItem[] = [
                 ['Huashan Hospital', '復旦大学', '脳神経外科 第1位、皮膚科 第1位'],
                 ["Children's Hospital", '復旦大学', '新生児科、小児外科'],
                 ['Ruijin Hospital', '上海交通大学', '血液内科（CAR-T）、内分泌内科'],
-                ['Shanghai General Hospital', '—', '眼科、耳鼻咽喉科、泌尿器科'],
+                ['Shanghai General Hospital', 'Shanghai Jiao Tong University School of Medicine', '眼科、耳鼻咽喉科、泌尿器科'],
                 ['Zhongshan Hospital', '復旦大学', '循環器内科、一般外科'],
                 ['Renji Hospital', '上海交通大学', '消化器内科 第1位、生殖医学'],
                 ['Longhua Hospital', '上海中医薬大学', '伝統中国医学'],
-                ['IPMCH（国際和平妇幼保健院）', '中国福利会', '生殖医学、産科'],
+                ['IPMCH（国際和平妇幼保健院）', '中国福利会・上海交通大学医学院', '生殖医学、産科'],
                 ["Shanghai Children's Medical Center", '上海交通大学', '小児心臓外科'],
-                ['第六人民医院', '—', '整形外科（1963年より断肢再植）'],
-                ['第一産婦人科病院', '—', '産科、胎児医学'],
+                ['第六人民医院', '上海交通大学医学院', '整形外科（1963年より断肢再植）'],
+                ['第一産婦人科病院', '同済大学（正式第二名称：Tongji University Affiliated Obstetrics and Gynecology Hospital）', '産科、胎児医学'],
                 ['Xinhua Hospital', '上海交通大学', '小児科、皮膚科'],
                 ['Huadong Hospital', '復旦大学', '老年医学、健康診断'],
                 ['第九人民医院', '上海交通大学', '歯科 第1位、形成外科 第1位'],
@@ -548,9 +565,12 @@ const jaFaqs: FaqItem[] = [
             </tbody>
           </table>
         </div>
+        <p className="mb-4">
+          ご要望に応じて、<strong>海軍軍医大学（旧第二軍医大学）</strong>系のChanghai Hospital、Changzheng Hospital、Eastern Hepatobiliary Surgery Hospital、および<strong>上海中医薬大学</strong>系のLonghua、Shuguang、Yueyang各病院も選択肢になります。これらは提案範囲の例であり、固定リストではありません。
+        </p>
         <p>
-          さらに民営国際病院5院：Jiahui International（Mass General提携）、United Family、ParkwayHealth、
-          SinoUnited Health（Mayo Clinicネットワーク）、Raffles Hospitalとも提携しています。
+          民営病院の代表的な例には、Jiahui International（Mass General提携）、United Family、ParkwayHealth、
+          SinoUnited Health（Mayo Clinicネットワーク）、Raffles Hospitalがあります。
         </p>
       </>
     ),
@@ -560,37 +580,35 @@ const jaFaqs: FaqItem[] = [
     a: (
       <>
         <p className="mb-4">
-          上海の一流病院の上級医師の多くは<strong>海外研修の経験があり、英語を話すことができます</strong>。
-          医師たちは英語の医学誌に定期的に論文を発表し、国際学会にも参加しています。
+          上海では、一部の病院・医師が英語で対応できます。対応可否は医師や診療科によって異なるため、予約前に担当医の英語対応を確認してください。
         </p>
         <p className="mb-4">
-          コミュニケーションの齟齬を完全になくすため、ShanghaiMedは<strong>英語・中国語バイリンガルの専門メディカルコンパニオン</strong>を派遣し、以下をサポートします：
+          コミュニケーションの齟齬を減らすため、ShanghaiMedは<strong>英語・中国語バイリンガルの専門メディカルコンパニオン</strong>を派遣し、以下をサポートします：
         </p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li>すべての診察への付き添い</li>
           <li>医療用語の正確な通訳</li>
           <li>病院の書類手続きと案内のサポート</li>
-          <li>診断内容、治療計画、薬についての完全な理解の確保</li>
+          <li>診断内容、治療計画、薬について理解できるようサポート</li>
         </ul>
         <p>すべての医療文書、治療計画、処方箋は<strong>英語に翻訳</strong>してお渡しします。</p>
       </>
     ),
   },
   {
-    q: '中国の医療ビザはどのように取得しますか？',
+    q: '中国で医療を受けるにはビザが必要ですか？',
     a: (
       <>
-        <p className="mb-4">ShanghaiMedは<strong>ビザ取得の全プロセス</strong>をサポートします：</p>
-        <ol className="list-decimal pl-6 mb-4 space-y-1">
-          <li><strong>初回相談</strong>（無料、ビデオ通話によるオンライン対応）</li>
-          <li><strong>医療招待状</strong>— 相談後、提携病院が発行</li>
-          <li><strong>ビザ申請</strong>— 招待状を中国大使館・領事館に提出</li>
-          <li><strong>処理期間</strong>— 通常2～4週間</li>
-          <li><strong>書類サポート</strong>— ShanghaiMedが必要書類の翻訳を提供</li>
-        </ol>
+        <p className="mb-4">適切な入国経路は、予定する医療内容によって異なります：</p>
+        <ul className="list-disc pl-6 mb-4 space-y-2">
+          <li><strong>健康診断、歯科、中医、一般外来、再診、セカンドオピニオン：</strong>観光ビザまたは適用されるビザ免除制度を利用できます。</li>
+          <li><strong>計画された手術、入院治療、または入院を要する医療：</strong>受診病院が発行する招聘状または入院予定証明書を用いた<strong>S2ビザ</strong>の経路となります。ShanghaiMedは書類の調整と翻訳を支援できます。</li>
+        </ul>
+        <p className="mb-4">
+          まずは<strong>WhatsAppによる無料初回オンライン相談</strong>をご利用ください。中国の<strong>240時間通過ビザ免除は57か国</strong>を対象としていますが、資格・行程条件を満たす必要があります。
+        </p>
         <p>
-          中国は54か国（米国、英国、カナダ、オーストラリア、EU主要国を含む）の国民に{' '}
-          <strong>240時間（10日間）の通過ビザ免除</strong>を提供しており、短期の医療渡航には十分な場合もあります。
+          <strong>Mビザは商用ビザであり、医療ビザではありません。</strong>ビザ情報は<strong>2026年10月25日</strong>時点のものです。渡航前に国家移民管理局（NIA）の最新公告を確認するか、<strong>+86-12367</strong>へお問い合わせください。
         </p>
       </>
     ),
@@ -631,7 +649,7 @@ const jaFaqs: FaqItem[] = [
           <li>病院・専門医マッチング</li>
           <li>現地移動・支払い・実務ガイド</li>
           <li>滞在期間中の専用WhatsAppサポート</li>
-          <li>医療ビザ招聘状サポート</li>
+          <li>健診のための観光ビザまたは対象となるビザ免除ルートの案内</li>
           <li>健診後30日間リモートフォローアップ</li>
           <li>保険サポート</li>
         </ul>
@@ -644,7 +662,7 @@ const jaFaqs: FaqItem[] = [
           <li>診療レポート翻訳・薬の受け取り支援</li>
           <li>病院・専門医マッチング・予約調整</li>
           <li>現地での移動・支払い・実務ガイド</li>
-          <li>WhatsApp専用サポート・医療ビザ招聘状サポート</li>
+          <li>WhatsApp専用サポート・ビザルートの案内（病院の招聘状／入院予定証明の調整は、計画された手術・入院・その他入院を要する治療の場合のみ）</li>
           <li>保険サポート、治療後30日間リモートフォローアップ</li>
         </ul>
         <p className="mb-2"><strong>手術・延長ケア・コンシェルジュ — $1,650 / 5日間（日中）</strong></p>
@@ -661,7 +679,7 @@ const jaFaqs: FaqItem[] = [
           <li>入院中の病室訪問</li>
           <li>現地移動・支払い・実務ガイド</li>
           <li>滞在期間中の専用WhatsAppサポート</li>
-          <li>医療ビザ招聘状サポート</li>
+          <li>S2ビザルートの案内、および計画された手術・入院・その他入院を要する治療に関する病院の招聘状／入院予定証明の調整</li>
           <li>ご家族とのコミュニケーション・経過報告</li>
           <li>治療後60日間リモートフォローアップ</li>
           <li>保険・手術デポジット調整</li>
@@ -735,8 +753,8 @@ const jaFaqs: FaqItem[] = [
     a: (
       <>
         <p className="mb-4">
-          はい。ShanghaiMed提携病院は主要な国際保険会社と<strong>直結精算（ダイレクト・セットルメント）契約</strong>を締結しています。
-          病院ごとに8～24社の保険に対応しています：
+          はい。保険会社と<strong>受診病院</strong>との間に契約がある場合、直結精算を利用できることがあります。
+          病院と保険会社の公表されている提携内容は病院ごとに異なります：
         </p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li>Huashan Hospital — 24の保険提携</li>
@@ -757,7 +775,7 @@ const jaFaqs: FaqItem[] = [
       <>
         <p className="mb-4">ShanghaiMedは<strong>充実した治療後フォローアップ</strong>を提供します：</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
-          <li><strong>リモートビデオ診察</strong>— 担当医とのフォローアップ</li>
+          <li><strong>遠隔フォローアップの調整</strong> — 担当医との臨床ビデオ診察は病院が提供する場合に調整し、病院の遠隔診療費はShanghaiMedの調整サービスとは別途確認</li>
           <li><strong>翻訳済み医療記録</strong>— 退院時サマリー、検査結果、服薬リストの英語版</li>
           <li><strong>服薬指導</strong>— 用法・用量、副作用、併用注意薬の情報</li>
           <li><strong>回復計画</strong>— 個別の回復スケジュールと活動の推奨</li>
@@ -773,7 +791,7 @@ const jaFaqs: FaqItem[] = [
     a: (
       <>
         <p className="mb-4">
-          無料コンサルテーションは<strong>義務なし</strong>のビデオ通話で、医療ニーズの評価、適切な病院・専門医のご提案、想定医療費のお見積り、保険のご案内の4サービスを提供します。予約を確定する義務はなく、話を聞いてから判断いただけます。
+          無料初回相談は<strong>WhatsAppによるオンライン対応</strong>で、予約や購入の義務はありません。医療ニーズの評価、適切な病院・専門医のご提案、想定医療費のお見積り、保険のご案内の4サービスを提供します。話を聞いてから判断いただけます。
         </p>
         <p>
           空港送迎、予約手配、現地同伴、診察の予約はコンシェルジュパッケージまたは時間制同伴サービスで提供されます。
@@ -854,27 +872,26 @@ const ruFaqs: FaqItem[] = [
           <li><strong>Longhua Hospital</strong> (Shanghai University of TCM) — Grade 3A, официальная пилотная больница медицинского туризма ТКМ</li>
         </ul>
         <p>
-          Эти больницы используют <strong>то же медицинское оборудование</strong> (Siemens, GE Healthcare, Philips) и{' '}
-          <strong>те же бренды имплантатов</strong> (Stryker, Zimmer, Straumann), что и больницы США. Многие ведущие врачи
-          стажировались в Johns Hopkins, Mayo Clinic и Cleveland Clinic.
+          В больницах Шанхая используются <strong>доступные на международном рынке медицинское оборудование и бренды
+          имплантатов</strong>. Конкретное оборудование, производитель и модель имплантата зависят от больницы, отделения
+          и операции; уточняйте это непосредственно в лечащей больнице.
         </p>
       </>
     ),
   },
   {
-    q: 'С какими больницами Шанхая сотрудничает ShanghaiMed?',
+    q: 'Какие больницы ShanghaiMed может рекомендовать или организовать?',
     a: (
       <>
         <p className="mb-4">
-          ShanghaiMed сотрудничает с <strong>14 государственными больницами класса А — пилотами медицинского туризма</strong> и{' '}
-          <strong>5 частными международными больницами</strong> — всего 19 учреждений, покрывающих все медицинские специальности:
+          ShanghaiMed не управляет договорной или фиксированной сетью больниц. Мы рекомендуем больницы с учётом <strong>вашего заболевания, профиля специалистов и практических потребностей</strong>, а затем координируем весь процесс лечения. Можно рассмотреть любую подходящую государственную больницу категории 3А в Шанхае, а также организовать лечение в подходящей частной больнице. <strong>13 официальных пилотных государственных больниц медицинского туризма</strong> служат официальным ориентиром, но не ограничивают наши рекомендации. Медицинские счета оплачиваются непосредственно лечащей больнице. В таблице приведены только представительные примеры — это не полный и не фиксированный список:
         </p>
         <div className="overflow-x-auto mb-4">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gray-100">
                 <th className="border border-gray-300 px-4 py-2 text-left">Больница</th>
-                <th className="border border-gray-300 px-4 py-2 text-left">Университет</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">Принадлежность</th>
                 <th className="border border-gray-300 px-4 py-2 text-left">Ключевая специальность</th>
               </tr>
             </thead>
@@ -883,14 +900,14 @@ const ruFaqs: FaqItem[] = [
                 ['Huashan Hospital', 'Fudan University', 'Нейрохирургия №1, дерматология №1'],
                 ["Children's Hospital", 'Fudan University', 'Неонатология, детская хирургия'],
                 ['Ruijin Hospital', 'SJTU', 'Гематология (CAR-T), эндокринология'],
-                ['Shanghai General Hospital', '—', 'Офтальмология, ЛОР, урология'],
+                ['Shanghai General Hospital', 'Shanghai Jiao Tong University School of Medicine', 'Офтальмология, ЛОР, урология'],
                 ['Zhongshan Hospital', 'Fudan University', 'Кардиология, общая хирургия'],
                 ['Renji Hospital', 'SJTU', 'Гастроэнтерология №1, репродуктивная медицина'],
                 ['Longhua Hospital', 'Shanghai Univ. of TCM', 'Традиционная китайская медицина'],
-                ['IPMCH', 'China Welfare Institute', 'Репродуктивная медицина, акушерство'],
+                ['IPMCH', 'China Welfare Institute; Shanghai Jiao Tong University School of Medicine', 'Репродуктивная медицина, акушерство'],
                 ["Shanghai Children's Medical Center", 'SJTU', 'Детская кардиохирургия'],
-                ["Sixth People's Hospital", '—', 'Ортопедия (реплантация конечностей с 1963 г.)'],
-                ['First Maternity & Infant Hospital', '—', 'Акушерство, фетальная медицина'],
+                ["Sixth People's Hospital", 'Shanghai Jiao Tong University School of Medicine', 'Ортопедия (реплантация конечностей с 1963 г.)'],
+                ['First Maternity & Infant Hospital', 'Tongji University; official second name: Tongji University Affiliated Obstetrics and Gynecology Hospital', 'Акушерство, фетальная медицина'],
                 ['Xinhua Hospital', 'SJTU', 'Педиатрия, дерматология'],
                 ['Huadong Hospital', 'Fudan University', 'Гериатрия, медосмотры'],
                 ["Ninth People's Hospital", 'SJTU', 'Стоматология №1, пластическая хирургия №1'],
@@ -904,8 +921,11 @@ const ruFaqs: FaqItem[] = [
             </tbody>
           </table>
         </div>
+        <p className="mb-4">
+          В зависимости от ваших потребностей варианты могут также включать систему <strong>Военно-морского медицинского университета (ранее Второй военно-медицинский университет)</strong> — больницы Changhai, Changzheng и Eastern Hepatobiliary Surgery Hospital, а также систему <strong>Шанхайского университета традиционной китайской медицины</strong>, включая больницы Longhua, Shuguang и Yueyang. Это примеры масштаба рекомендаций, а не фиксированный список.
+        </p>
         <p>
-          Плюс 5 частных международных больниц: Jiahui International (партнёрство с Mass General), United Family,
+          Представительные примеры частных больниц: Jiahui International (партнёрство с Mass General), United Family,
           ParkwayHealth, SinoUnited Health (сотрудничество с Mayo Clinic и услуги «второго мнения») и Raffles Hospital.
         </p>
       </>
@@ -916,37 +936,37 @@ const ruFaqs: FaqItem[] = [
     a: (
       <>
         <p className="mb-4">
-          Многие ведущие врачи топовых больниц Шанхая прошли <strong>международную стажировку и говорят по-английски</strong>.
-          Врачи регулярно публикуются в англоязычных медицинских журналах и участвуют в международных конференциях.
+          Некоторые больницы и врачи Шанхая могут предоставлять услуги на английском языке. Доступность зависит от врача
+          и отделения, поэтому перед записью уточните, доступна ли англоязычная поддержка именно у вашего врача.
         </p>
         <p className="mb-4">
-          Чтобы полностью исключить языковой барьер, ShanghaiMed предоставляет <strong>профессиональных двуязычных медицинских сопровождающих</strong> (англо-китайских), которые:
+          Чтобы помочь уменьшить коммуникационные ошибки, ShanghaiMed предоставляет <strong>профессиональных двуязычных
+          медицинских сопровождающих</strong> (англо-китайских), которые:
         </p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li>Сопровождают вас на каждом приёме</li>
           <li>Точно переводят медицинскую терминологию</li>
           <li>Помогают с больничными документами и навигацией</li>
-          <li>Гарантируют, что вы полностью понимаете диагноз, план лечения и назначения</li>
+          <li>Помогают вам понять диагноз, план лечения и назначения</li>
         </ul>
         <p>Все медицинские документы, планы лечения и рецепты <strong>переводятся на английский язык</strong> для вашего архива.</p>
       </>
     ),
   },
   {
-    q: 'Как получить медицинскую визу в Китай?',
+    q: 'Нужна ли виза для получения медицинской помощи в Китае?',
     a: (
       <>
-        <p className="mb-4">ShanghaiMed помогает с <strong>полным процессом оформления визы</strong>:</p>
-        <ol className="list-decimal pl-6 mb-4 space-y-1">
-          <li><strong>Первичная консультация</strong> (бесплатно, удалённо по видеосвязи)</li>
-          <li><strong>Медицинское приглашение</strong> — оформляется партнёрской больницей после консультации</li>
-          <li><strong>Подача на визу</strong> — вы предоставляете приглашение в посольство/консульство Китая</li>
-          <li><strong>Срок рассмотрения</strong> — обычно 2–4 недели</li>
-          <li><strong>Документальная поддержка</strong> — ShanghaiMed обеспечивает перевод всех необходимых документов</li>
-        </ol>
+        <p className="mb-4">Подходящий путь зависит от планируемой медицинской помощи:</p>
+        <ul className="list-disc pl-6 mb-4 space-y-2">
+          <li><strong>Медосмотры, стоматология, ТКМ, плановые амбулаторные визиты, повторные приёмы и второе мнение:</strong> можно использовать туристическую визу или применимый безвизовый режим.</li>
+          <li><strong>Плановая операция, стационарное лечение или помощь, требующая госпитализации:</strong> лечащая больница может выдать приглашение или справку о предполагаемой госпитализации для <strong>визового пути S2</strong>. ShanghaiMed может помочь с координацией и переводом документов.</li>
+        </ul>
+        <p className="mb-4">
+          Начните с <strong>бесплатной первичной онлайн-консультации через WhatsApp</strong>. <strong>240-часовой безвизовый транзитный режим Китая охватывает 57 стран</strong> при соблюдении требований к праву на участие и маршруту.
+        </p>
         <p>
-          Китай предоставляет <strong>240-часовой безвизовый транзит</strong> гражданам 54 стран (включая США, Великобританию,
-          Канаду, Австралию и большинство стран ЕС), которого может быть достаточно для коротких медицинских поездок.
+          <strong>Виза M — деловая, а не медицинская.</strong> Визовая информация актуальна на <strong>25 октября 2026 года</strong>; перед поездкой проверьте последнее объявление Национального иммиграционного управления (NIA) или позвоните по номеру <strong>+86-12367</strong>.
         </p>
       </>
     ),
@@ -987,7 +1007,7 @@ const ruFaqs: FaqItem[] = [
           <li>Подбор больницы и специалиста</li>
           <li>Помощь с транспортом, оплатой и ориентацией на месте</li>
           <li>Выделенная линия поддержки в WhatsApp на время поездки</li>
-          <li>Поддержка с медицинским приглашением на визу</li>
+          <li>Консультация по туристической визе или применимому безвизовому маршруту для чек-апа</li>
           <li>30 дней пост-чекапного удалённого наблюдения</li>
           <li>Страховая поддержка</li>
         </ul>
@@ -1000,7 +1020,7 @@ const ruFaqs: FaqItem[] = [
           <li>Перевод медицинских заключений, помощь с получением лекарств</li>
           <li>Подбор больницы и специалиста, запись на приёмы</li>
           <li>Помощь с транспортом, оплатой и ориентацией на месте</li>
-          <li>Выделенная поддержка в WhatsApp, поддержка с медицинским приглашением на визу</li>
+          <li>Выделенная поддержка в WhatsApp, консультация по визовому маршруту; координация больничного приглашения/документа о планируемой госпитализации — только при планируемой операции, госпитализации или другом лечении, требующем госпитализации</li>
           <li>Страховая поддержка, 30 дней пост-лечебного удалённого наблюдения</li>
         </ul>
         <p className="mb-2"><strong>Консьерж для хирургии и длительного лечения — $1,650 / 5 дней (днём)</strong></p>
@@ -1017,7 +1037,7 @@ const ruFaqs: FaqItem[] = [
           <li>Визиты в палату во время госпитализации</li>
           <li>Помощь с транспортом, оплатой и ориентацией на месте</li>
           <li>Выделенная линия поддержки в WhatsApp на время поездки</li>
-          <li>Поддержка с медицинским приглашением на визу</li>
+          <li>Консультация по маршруту S2 и координация больничного приглашения/документа о планируемой госпитализации при планируемой операции, госпитализации или другом лечении, требующем госпитализации</li>
           <li>Общение с семьёй и обновления о ходе лечения</li>
           <li>60 дней пост-лечебного удалённого наблюдения</li>
           <li>Страховая поддержка и координация хирургического депозита</li>
@@ -1091,8 +1111,8 @@ const ruFaqs: FaqItem[] = [
     a: (
       <>
         <p className="mb-4">
-          Да. Партнёрские больницы ShanghaiMed имеют <strong>договоры прямого урегулирования счетов</strong> с крупнейшими международными
-          страховыми компаниями. Каждая больница принимает от 8 до 24 страховщиков:
+          Да. Прямое урегулирование счетов может быть доступно, если у вашей страховой компании есть договор с <strong>лечащей больницей</strong>.
+          Опубликованные соглашения между больницами и страховщиками различаются:
         </p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li>Huashan Hospital — 24 страховых партнёра</li>
@@ -1113,7 +1133,7 @@ const ruFaqs: FaqItem[] = [
       <>
         <p className="mb-4">ShanghaiMed обеспечивает <strong>комплексное сопровождение после лечения</strong>:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
-          <li><strong>Удалённые видеоконсультации</strong> с лечащим врачом</li>
+          <li><strong>Координация удалённого наблюдения</strong>; клинические видеоконсультации с лечащим врачом — только если их предлагает больница, любая плата за телемедицинскую консультацию больницы подтверждается отдельно от координации ShanghaiMed</li>
           <li><strong>Переведённые медицинские документы</strong> — полная выписка, результаты анализов и список лекарств на английском языке</li>
           <li><strong>Консультации по приёму лекарств</strong> — инструкции по дозировке, побочные эффекты и предупреждения о взаимодействии</li>
           <li><strong>План восстановления</strong> — индивидуальный график и рекомендации по физической активности</li>
@@ -1129,7 +1149,7 @@ const ruFaqs: FaqItem[] = [
     a: (
       <>
         <p className="mb-4">
-          Бесплатная консультация проводится по видеосвязи и <strong>ни к чему вас не обязывает</strong>. Вы получите оценку медицинских потребностей, рекомендации по больницам и специалистам, ориентировочную оценку расходов и консультацию по страховке — всего 4 услуги. Вы не обязаны бронировать пакет после консультации.
+          Бесплатная первичная консультация проводится <strong>онлайн через WhatsApp</strong> и ни к чему вас не обязывает. Вы получите оценку медицинских потребностей, рекомендации по больницам и специалистам, ориентировочную оценку расходов и консультацию по страховке — всего 4 услуги. Вы не обязаны бронировать пакет после консультации.
         </p>
         <p>
           Трансфер из аэропорта, запись на приёмы, очное сопровождение и организация приёма предоставляются в рамках консьерж-пакетов или почасового сопровождения.
@@ -1208,27 +1228,26 @@ const mnFaqs: FaqItem[] = [
           <li><strong>Longhua Hospital</strong> (Shanghai University of TCM) — Grade 3A, УАУ-ын эрүүл мэндийн аяллын албан ёсны туршилтын эмнэлэг</li>
         </ul>
         <p>
-          Эдгээр эмнэлгүүд АНУ-ын эмнэлгүүдэд ашигладаг <strong>ижил эрүүл мэндийн тоног төхөөрөмж</strong> (Siemens, GE Healthcare, Philips) болон{' '}
-          <strong>ижил имплантын брэндүүдийг</strong> (Stryker, Zimmer, Straumann) ашигладаг. Олон тэргүүлэх эмч нар
-          Johns Hopkins, Mayo Clinic, Cleveland Clinic-д мэргэжил дээшлүүлсэн.
+          Шанхайн эмнэлгүүдэд <strong>олон улсын зах зээлд байдаг эрүүл мэндийн тоног төхөөрөмж, имплантын
+          брэндүүдийг</strong> ашигладаг. Тодорхой тоног төхөөрөмж, үйлдвэрлэгч, имплантын загвар нь эмнэлэг, тасаг,
+          мэс заслаас хамаардаг тул эмчилгээ үзүүлэх эмнэлэгтэйгээ баталгаажуулна уу.
         </p>
       </>
     ),
   },
   {
-    q: 'ShanghaiMed ямар Шанхайн эмнэлгүүдтэй хамтран ажилладаг вэ?',
+    q: 'ShanghaiMed ямар эмнэлгүүдийг санал болгож, зохицуулж чадах вэ?',
     a: (
       <>
         <p className="mb-4">
-          ShanghaiMed <strong>А зэрэглэлийн эрүүл мэндийн аяллын туршилтын 14 төрийн эмнэлэг</strong> болон{' '}
-          <strong>5 хувийн олон улсын эмнэлэг</strong> — нийт 19 байгууллагатай хамтран ажиллаж, бүх эрүүл мэндийн мэргэжлийг хамарна:
+          ShanghaiMed гэрээгээр хамтарсан буюу тогтмол эмнэлгийн сүлжээг ажиллуулдаггүй. Бид <strong>таны өвчин, мэргэжлийн тохирцоо, бодит хэрэгцээнд</strong> үндэслэн эмнэлэг санал болгож, эмчилгээний бүх үе шатыг зохицуулна. Шанхайн тохирох аливаа 3А улсын эмнэлгийг авч үзэж, тохирох хувийн эмнэлгүүдийг ч зохицуулж болно. <strong>Албан ёсны 13 эмнэлгийн аялал жуулчлалын туршилтын улсын эмнэлэг</strong> нь албан ёсны лавлагаа бөгөөд санал болголтын хязгаар биш. Эмнэлгийн төлбөрийг эмчилгээ үзүүлэх эмнэлэгт шууд төлнө. Доорх хүснэгтэд зөвхөн төлөөллийн жишээнүүдийг үзүүлэв — энэ нь бүрэн буюу тогтмол жагсаалт биш:
         </p>
         <div className="overflow-x-auto mb-4">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gray-100">
                 <th className="border border-gray-300 px-4 py-2 text-left">Эмнэлэг</th>
-                <th className="border border-gray-300 px-4 py-2 text-left">Их сургууль</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">Харьяалал</th>
                 <th className="border border-gray-300 px-4 py-2 text-left">Гол мэргэжил</th>
               </tr>
             </thead>
@@ -1237,14 +1256,14 @@ const mnFaqs: FaqItem[] = [
                 ['Huashan Hospital', 'Fudan University', 'Мэдрэлийн мэс засал №1, арьс өвчин №1'],
                 ["Children's Hospital", 'Fudan University', 'Нярайн анагаах ухаан, хүүхдийн мэс засал'],
                 ['Ruijin Hospital', 'SJTU', 'Цус судлал (CAR-T), дотор шүүрэл'],
-                ['Shanghai General Hospital', '—', 'Нүд, чих хамар хоолой, шээсний зам'],
+                ['Shanghai General Hospital', 'Shanghai Jiao Tong University School of Medicine', 'Нүд, чих хамар хоолой, шээсний зам'],
                 ['Zhongshan Hospital', 'Fudan University', 'Зүрх судас, ерөнхий мэс засал'],
                 ['Renji Hospital', 'SJTU', 'Хоол боловсруулах зам №1, нөхөн үржихүй'],
                 ['Longhua Hospital', 'Shanghai Univ. of TCM', 'Уламжлалт Хятад анагаах ухаан'],
-                ['IPMCH', 'China Welfare Institute', 'Нөхөн үржихүй, эх барих'],
+                ['IPMCH', 'China Welfare Institute; Shanghai Jiao Tong University School of Medicine', 'Нөхөн үржихүй, эх барих'],
                 ["Shanghai Children's Medical Center", 'SJTU', 'Хүүхдийн зүрхний мэс засал'],
-                ["Sixth People's Hospital", '—', 'Яс шарас (1963 оноос мөч нөхөн суулгалт)'],
-                ['First Maternity & Infant Hospital', '—', 'Эх барих, ургийн анагаах ухаан'],
+                ["Sixth People's Hospital", 'Shanghai Jiao Tong University School of Medicine', 'Яс шарас (1963 оноос мөч нөхөн суулгалт)'],
+                ['First Maternity & Infant Hospital', 'Tongji University; official second name: Tongji University Affiliated Obstetrics and Gynecology Hospital', 'Эх барих, ургийн анагаах ухаан'],
                 ['Xinhua Hospital', 'SJTU', 'Хүүхэд судлал, арьс өвчин'],
                 ['Huadong Hospital', 'Fudan University', 'Ахмад настан, эрүүл мэндийн үзлэг'],
                 ["Ninth People's Hospital", 'SJTU', 'Шүд №1, гоёл сайхны мэс засал №1'],
@@ -1258,9 +1277,12 @@ const mnFaqs: FaqItem[] = [
             </tbody>
           </table>
         </div>
+        <p className="mb-4">
+          Таны хэрэгцээнээс хамаарч <strong>Далайн цэргийн анагаахын их сургууль (хуучнаар Хоёр дахь цэргийн анагаахын их сургууль)</strong>-ийн системийн Changhai, Changzheng, Eastern Hepatobiliary Surgery Hospital болон <strong>Шанхайн уламжлалт Хятад анагаахын их сургууль</strong>-ийн системийн Longhua, Shuguang, Yueyang эмнэлгүүдийг ч авч үзэж болно. Эдгээр нь санал болголтын хүрээний жишээ бөгөөд тогтмол жагсаалт биш.
+        </p>
         <p>
-          Дээрээс нь 5 хувийн олон улсын эмнэлэг: Jiahui International (Mass General-тай түншлэл), United Family,
-          ParkwayHealth, SinoUnited Health (Mayo Clinic-тэй хамтын ажиллагаа ба «хоёр дахь санал» үйлчилгээ) болон Raffles Hospital.
+          Хувийн эмнэлгүүдийн төлөөллийн жишээнүүдэд Jiahui International (Mass General-тай түншлэл), United Family,
+          ParkwayHealth, SinoUnited Health (Mayo Clinic-тэй хамтын ажиллагаа ба «хоёр дахь санал» үйлчилгээ) болон Raffles Hospital орно.
         </p>
       </>
     ),
@@ -1270,36 +1292,37 @@ const mnFaqs: FaqItem[] = [
     a: (
       <>
         <p className="mb-4">
-          Шанхайн тэргүүлэх эмнэлгүүдийн олон эмч нар <strong>олон улсын мэргэжил дээшлүүлэлт хийсэн бөгөөд англиар ярьдаг</strong>.
-          Эмч нар англи хэлний эрүүл мэндийн сэтгүүлд тогтмол нийтлэл бичиж, олон улсын хуралд оролцдог.
+          Шанхайн зарим эмнэлэг, эмч нар англи хэлээр үйлчилгээ үзүүлэх боломжтой. Энэ нь эмч, тасгаас хамаардаг тул
+          цаг захиалахын өмнө таны эмч англиар үйлчилгээ үзүүлэх эсэхийг баталгаажуулна уу.
         </p>
         <p className="mb-4">
-          Хэлний бэрхшээлийг бүрэн арилгахын тулд ShanghaiMed <strong>мэргэжлийн 2 хэлтэй эрүүл мэндийн дагалдан явагчдыг</strong> (англи-хятад) үзүүлдэг ба тэд дараах зүйлсийг хийнэ:
+          Харилцааны алдаа, зөрчлийг багасгахад туслахын тулд ShanghaiMed <strong>мэргэжлийн 2 хэлтэй эрүүл мэндийн
+          дагалдан явагчдыг</strong> (англи-хятад) үзүүлдэг ба тэд дараах зүйлсийг хийнэ:
         </p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li>Уулзалт бүрт таныг дагалдана</li>
           <li>Эрүүл мэндийн нэр томьёог үнэн зөв орчуулна</li>
           <li>Эмнэлгийн бичиг баримт болон хөтөч байдлаар тусална</li>
-          <li>Онош, эмчилгээний төлөвлөгөө, жорыг бүрэн ойлгоход тусална</li>
+          <li>Онош, эмчилгээний төлөвлөгөө, жорыг ойлгоход тусална</li>
         </ul>
         <p>Бүх эрүүл мэндийн бичиг баримт, эмчилгээний төлөвлөгөө, жор таны архивт зориулан <strong>англи хэл рүү орчуулагдана</strong>.</p>
       </>
     ),
   },
   {
-    q: 'Хятадад эрүүл мэндийн визийг хэрхэн авах вэ?',
+    q: 'Хятадад эмчилгээ авахад виз хэрэгтэй юу?',
     a: (
       <>
-        <p className="mb-4">ShanghaiMed <strong>виз авах бүрэн үйл явцад</strong> тусална:</p>
-        <ol className="list-decimal pl-6 mb-4 space-y-1">
-          <li><strong>Анхны зөвлөгөө</strong> (үнэгүй, зайнаас видео)</li>
-          <li><strong>Эрүүл мэндийн урилга</strong> — зөвлөгөөний дараа түнш эмнэлэг гаргана</li>
-          <li><strong>Виз мэдүүлэх</strong> — урилгыг Хятадын элчин/консулд өгнө</li>
-          <li><strong>Хянан шийдвэрлэх хугацаа</strong> — ихэвчлэн 2–4 долоо хоног</li>
-          <li><strong>Баримт бичгийн дэмжлэг</strong> — шаардлагатай бүх бичиг баримтын орчуулгыг ShanghaiMed хангана</li>
-        </ol>
+        <p className="mb-4">Тохирох визний зам нь төлөвлөж буй эмчилгээнээс хамаарна:</p>
+        <ul className="list-disc pl-6 mb-4 space-y-2">
+          <li><strong>Эрүүл мэндийн үзлэг, шүдний эмчилгээ, уламжлалт Хятад анагаах, ердийн амбулаторийн үзлэг, дахин үзлэг, хоёр дахь санал:</strong> жуулчны виз эсвэл хамаарах визгүй зохицуулалтыг ашиглаж болно.</li>
+          <li><strong>Төлөвлөсөн мэс засал, эмнэлэгт хэвтэн эмчлүүлэх эсвэл хэвтэн эмчлүүлэх шаардлагатай эмчилгээ:</strong> эмчилгээ үзүүлэх эмнэлэг урилга буюу хэвтүүлэн эмчлүүлэх төлөвлөгөөний гэрчилгээг <strong>S2 визний замд</strong> зориулан гаргаж болно. ShanghaiMed бичиг баримтын зохицуулалт, орчуулгадаа тусалж чадна.</li>
+        </ul>
+        <p className="mb-4">
+          <strong>WhatsApp-аар үнэгүй анхны онлайн зөвлөгөө</strong> авахаас эхлээрэй. Хятадын <strong>240 цагийн визгүй дамжин өнгөрөх бодлого 57 орныг</strong> хамардаг бөгөөд эрх, аяллын нөхцлийг хангах ёстой.
+        </p>
         <p>
-          Хятад нь 54 орны иргэдэд (АНУ, Их Британи, Канад, Австрали, ЕХ-ны ихэнх орон зэрэг) <strong>240 цагийн визгүй дамжин өнгөрөх</strong> боломж олгодог бөгөөд энэ нь богино эрүүл мэндийн аялалд хангалттай байж болно.
+          <strong>M виз бол бизнесийн виз бөгөөд эмнэлгийн виз биш.</strong> Визний мэдээлэл <strong>2026 оны 10-р сарын 25</strong>-ны байдлаар шинэчлэгдсэн. Аяллын өмнө Үндэсний цагаачлалын удирдах газар (NIA)-ын хамгийн сүүлийн зарлалыг шалгах буюу <strong>+86-12367</strong> дугаарт залгаж баталгаажуулна уу.
         </p>
       </>
     ),
@@ -1340,7 +1363,7 @@ const mnFaqs: FaqItem[] = [
           <li>Эмнэлэг ба мэргэжлийн эмч сонгох</li>
           <li>Орон нутгийн тээвэр, төлбөр, чиглүүлэгч</li>
           <li>Аяллын үеийн тусгай WhatsApp дэмжлэг</li>
-          <li>Эмнэлгийн визний урилгын дэмжлэг</li>
+          <li>Эрүүл мэндийн үзлэгт зориулсан жуулчны виз эсвэл хэрэгжих визгүй нэвтрэх замын зөвлөгөө</li>
           <li>Үзлэгийн дараах 30 хоногийн зайнаас хяналт</li>
           <li>Даатгалын дэмжлэг</li>
         </ul>
@@ -1353,7 +1376,7 @@ const mnFaqs: FaqItem[] = [
           <li>Эмнэлгийн тайлан орчуулах, эм хүлээн авах туслалцаа</li>
           <li>Эмнэлэг ба мэргэжлийн эмч сонгох, цаг захиалга</li>
           <li>Орон нутгийн тээвэр, төлбөр, чиглүүлэгч</li>
-          <li>Тусгай WhatsApp дэмжлэг, эмнэлгийн визний урилгын дэмжлэг</li>
+          <li>Тусгай WhatsApp дэмжлэг, визний замын зөвлөгөө; эмнэлгийн урилга/хэвтүүлэн эмчлүүлэх төлөвлөгөөний баримтын зохицуулалт нь зөвхөн төлөвлөсөн мэс засал, хэвтэн эмчлүүлэх эсвэл хэвтэн эмчлүүлэх шаардлагатай бусад эмчилгээнд</li>
           <li>Даатгалын дэмжлэг, эмчилгээний дараах 30 хоногийн зайнаас хяналт</li>
         </ul>
         <p className="mb-2"><strong>Мэс засал ба уртасгасан асрамжийн консьерж — $1,650 / 5 өдөр (өдрийн цагаар)</strong></p>
@@ -1370,7 +1393,7 @@ const mnFaqs: FaqItem[] = [
           <li>Хэвтэх үеийн өрөөнд эргэлт</li>
           <li>Орон нутгийн тээвэр, төлбөр, чиглүүлэгч</li>
           <li>Аяллын үеийн тусгай WhatsApp дэмжлэг</li>
-          <li>Эмнэлгийн визний урилгын дэмжлэг</li>
+          <li>S2 замын зөвлөгөө болон төлөвлөсөн мэс засал, хэвтэн эмчлүүлэх эсвэл хэвтэн эмчлүүлэх шаардлагатай бусад эмчилгээнд зориулсан эмнэлгийн урилга/хэвтүүлэн эмчлүүлэх төлөвлөгөөний баримтын зохицуулалт</li>
           <li>Гэр бүлийнхэнтэй харилцах ба явцын мэдээллээр хангах</li>
           <li>Эмчилгээний дараах 60 хоногийн зайнаас хяналт</li>
           <li>Даатгал ба мэс заслын барьцааны зохицуулалт</li>
@@ -1444,8 +1467,8 @@ const mnFaqs: FaqItem[] = [
     a: (
       <>
         <p className="mb-4">
-          Тийм. ShanghaiMed-ийн түнш эмнэлгүүд томоохон олон улсын даатгалын компаниудтай <strong>шууд төлбөр тооцооны гэрээтэй</strong>.
-          Эмнэлэг бүр 8-аас 24 даатгагч хүлээн авдаг:
+          Тийм. Таны даатгалын компани <strong>эмчилгээ үзүүлэх эмнэлэгтэй</strong> гэрээтэй бол шууд төлбөр тооцоо хийх боломжтой байж болно.
+          Эмнэлэг, даатгалын компаниудын зарласан тохиролцоо эмнэлэг бүрд ялгаатай:
         </p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li>Huashan Hospital — 24 даатгалын түнш</li>
@@ -1466,7 +1489,7 @@ const mnFaqs: FaqItem[] = [
       <>
         <p className="mb-4">ShanghaiMed <strong>эмчилгээний дараах иж бүрэн дагалдан явах</strong> үйлчилгээ үзүүлнэ:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
-          <li>Эмчлэгч эмчтэй <strong>зайнаас видео зөвлөгөө</strong></li>
+          <li><strong>Зайны дараах үзлэгийн зохицуулалт</strong>; эмчлэгч эмчтэйгээр эмнэлзүйн видео зөвлөгөө хийх боломжийг эмнэлэг санал болгосон тохиолдолд зохицуулж, эмнэлгийн телемедицийн төлбөрийг ShanghaiMed-ийн зохицуулалтаас тусдаа тодруулна</li>
           <li><strong>Орчуулагдсан эрүүл мэндийн баримт бичгүүд</strong> — иж бүрэн гарах бичиг, шинжилгээний хариу, эмийн жагсаалт англи хэл дээр</li>
           <li><strong>Эм хэрэглэх зөвлөгөө</strong> — тун, гаж нөлөө, харилцан үйлчлэлийн сэрэмжлүүлэг</li>
           <li><strong>Эдгэрэх төлөвлөгөө</strong> — хувь хүний хуваарь, биеийн тамирын зөвлөмж</li>
@@ -1482,7 +1505,7 @@ const mnFaqs: FaqItem[] = [
     a: (
       <>
         <p className="mb-4">
-          Үнэгүй зөвлөгөө видео дуудлагаар явагдах бөгөөд <strong>таныг ямар нэгэн зүйлд үүрэг хүлээлгэхгүй</strong>. Та эрүүл мэндийн хэрэгцээний үнэлгээ, эмнэлэг ба мэргэжлийн эмчийн санал, зардлын ойролцоо тооцоолол, даатгалын зөвлөгөө — 4 үйлчилгээг авна. Зөвлөгөөний дараа зайлшгүй багц захиалах шаардлагагүй.
+          Үнэгүй анхны зөвлөгөө <strong>WhatsApp-аар онлайнаар</strong> явагдах бөгөөд таныг ямар нэгэн зүйлд үүрэг хүлээлгэхгүй. Та эрүүл мэндийн хэрэгцээний үнэлгээ, эмнэлэг ба мэргэжлийн эмчийн санал, зардлын ойролцоо тооцоолол, даатгалын зөвлөгөө — 4 үйлчилгээг авна. Зөвлөгөөний дараа зайлшгүй багц захиалах шаардлагагүй.
         </p>
         <p>
           Нисэх буудлын тосолт, цаг захиалга, биечлэн дагалдан явах, уулзалт зохион байгуулах үйлчилгээг консьерж багц эсвэл цагийн дагалдан явах үйлчилгээнд үзүүлнэ.
@@ -1565,27 +1588,25 @@ const arFaqs: FaqItem[] = [
           <li><strong>Longhua Hospital</strong> (جامعة شنغهاي للطب الصيني التقليدي) — الدرجة 3A، مستشفى تجريبي رسمي للسياحة العلاجية بالطب الصيني التقليدي</li>
         </ul>
         <p>
-          تستخدم هذه المستشفيات <strong>نفس المعدات الطبية</strong> (Siemens، GE Healthcare، Philips) و{' '}
-          <strong>نفس العلامات التجارية للزرعات</strong> (Stryker، Zimmer، Straumann) الموجودة في المستشفيات الأمريكية. وقد تلقى العديد من كبار الأطباء
-          تدريبًا في Johns Hopkins وMayo Clinic وCleveland Clinic.
+          تستخدم مستشفيات شنغهاي <strong>معدات طبية وعلامات تجارية للزرعات متاحة دوليًا</strong>. وتختلف المعدات والشركة
+          المصنّعة وطراز الزرعة بحسب المستشفى والقسم والإجراء، لذا ينبغي تأكيد ذلك مع المستشفى المعالج.
         </p>
       </>
     ),
   },
   {
-    q: 'ما هي المستشفيات في شنغهاي التي تتعامل معها ShanghaiMed؟',
+    q: 'ما المستشفيات التي يمكن لـ ShanghaiMed التوصية بها أو ترتيبها؟',
     a: (
       <>
         <p className="mb-4">
-          تتعاون ShanghaiMed مع <strong>14 مستشفى حكومي من الدرجة A مرخصًا للسياحة العلاجية</strong> و{' '}
-          <strong>5 مستشفيات دولية خاصة</strong> — بإجمالي 19 مؤسسة تغطي جميع التخصصات الطبية:
+          لا تدير ShanghaiMed شبكة مستشفيات تعاقدية أو ثابتة. نوصي بالمستشفيات بناءً على <strong>حالتك وملاءمة التخصص واحتياجاتك العملية</strong>، ثم ننسق رحلة العلاج كاملة. يمكن النظر في أي مستشفى حكومي مناسب من الفئة 3A في شنغهاي، ويمكن أيضًا ترتيب مستشفيات خاصة مناسبة. <strong>المستشفيات الحكومية التجريبية الرسمية الـ13 للسياحة العلاجية</strong> مرجع رسمي وليست حدًا لتوصياتنا. تُدفع الرسوم الطبية مباشرة إلى المستشفى المعالج. يعرض الجدول أدناه أمثلة تمثيلية فقط، وليس قائمة كاملة أو ثابتة:
         </p>
         <div className="overflow-x-auto mb-4">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gray-100">
                 <th className="border border-gray-300 px-4 py-2 text-left">المستشفى</th>
-                <th className="border border-gray-300 px-4 py-2 text-left">الجامعة</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">الجهة التابعة</th>
                 <th className="border border-gray-300 px-4 py-2 text-left">التخصص الرئيسي</th>
               </tr>
             </thead>
@@ -1594,14 +1615,14 @@ const arFaqs: FaqItem[] = [
                 ['Huashan Hospital', 'Fudan University', 'جراحة الأعصاب #1، الأمراض الجلدية #1'],
                 ["Children's Hospital", 'Fudan University', 'حديثو الولادة، جراحة الأطفال'],
                 ['Ruijin Hospital', 'SJTU', 'أمراض الدم (CAR-T)، الغدد الصماء'],
-                ['Shanghai General Hospital', '—', 'طب العيون، الأنف والأذن والحنجرة، المسالك البولية'],
+                ['Shanghai General Hospital', 'Shanghai Jiao Tong University School of Medicine', 'طب العيون، الأنف والأذن والحنجرة، المسالك البولية'],
                 ['Zhongshan Hospital', 'Fudan University', 'أمراض القلب والأوعية الدموية، الجراحة العامة'],
                 ['Renji Hospital', 'SJTU', 'أمراض الجهاز الهضمي #1، الطب التناسلي'],
                 ['Longhua Hospital', 'Shanghai Univ. of TCM', 'الطب الصيني التقليدي'],
-                ['IPMCH', 'China Welfare Institute', 'الطب التناسلي، أمراض النساء والتوليد'],
+                ['IPMCH', 'China Welfare Institute; Shanghai Jiao Tong University School of Medicine', 'الطب التناسلي، أمراض النساء والتوليد'],
                 ["Shanghai Children's Medical Center", 'SJTU', 'جراحة القلب للأطفال'],
-                ["Sixth People's Hospital", '—', 'جراحة العظام (إعادة زرع الأطراف منذ 1963)'],
-                ['First Maternity & Infant Hospital', '—', 'أمراض النساء والتوليد، طب الجنين'],
+                ["Sixth People's Hospital", 'Shanghai Jiao Tong University School of Medicine', 'جراحة العظام (إعادة زرع الأطراف منذ 1963)'],
+                ['First Maternity & Infant Hospital', 'Tongji University; official second name: Tongji University Affiliated Obstetrics and Gynecology Hospital', 'أمراض النساء والتوليد، طب الجنين'],
                 ['Xinhua Hospital', 'SJTU', 'طب الأطفال، الأمراض الجلدية'],
                 ['Huadong Hospital', 'Fudan University', 'طب الشيخوخة، الفحص الصحي'],
                 ["Ninth People's Hospital", 'SJTU', 'طب الأسنان #1، الجراحة التجميلية #1'],
@@ -1615,8 +1636,11 @@ const arFaqs: FaqItem[] = [
             </tbody>
           </table>
         </div>
+        <p className="mb-4">
+          وبحسب احتياجاتك، قد تشمل الخيارات أيضًا منظومة <strong>جامعة الطب العسكري البحري (سابقًا جامعة الطب العسكري الثانية)</strong>، ومنها مستشفيات Changhai وChangzheng وEastern Hepatobiliary Surgery Hospital، ومنظومة <strong>جامعة شنغهاي للطب الصيني التقليدي</strong>، ومنها مستشفيات Longhua وShuguang وYueyang. هذه أمثلة على نطاق التوصيات وليست قائمة ثابتة.
+        </p>
         <p>
-          بالإضافة إلى 5 مستشفيات دولية خاصة: Jiahui International (تابع لـ Mass General)، وUnited Family، و
+          تشمل الأمثلة التمثيلية للمستشفيات الخاصة Jiahui International (تابع لـ Mass General)، وUnited Family، و
           ParkwayHealth، وSinoUnited Health (تعاون مع Mayo Clinic وخدمات الرأي الطبي الثاني)، ومستشفى Raffles.
         </p>
       </>
@@ -1627,38 +1651,37 @@ const arFaqs: FaqItem[] = [
     a: (
       <>
         <p className="mb-4">
-          خضع العديد من كبار الأطباء في كبرى مستشفيات شنغهاي <strong>لتدريب دولي ويتحدثون الإنجليزية</strong>.
-          وينشر الأطباء بانتظام في المجلات الطبية الناطقة بالإنجليزية ويحضرون المؤتمرات الدولية.
+          يمكن لبعض المستشفيات والأطباء في شنغهاي تقديم الخدمات باللغة الإنجليزية. يختلف توفر ذلك بحسب الطبيب والقسم،
+          لذا يرجى تأكيد توفر الدعم بالإنجليزية مع طبيبك المحدد قبل الحجز.
         </p>
         <p className="mb-4">
-          لضمان عدم وجود أي فجوة في التواصل، توفر ShanghaiMed <strong>مرافقين طبيين محترفين يتحدثون الإنجليزية
+          للمساعدة في تقليل أخطاء التواصل، توفر ShanghaiMed <strong>مرافقين طبيين محترفين يتحدثون الإنجليزية
           والصينية</strong> يقومون بما يلي:
         </p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li>مرافقتك في كل موعد طبي</li>
           <li>ترجمة المصطلحات الطبية بدقة</li>
           <li>المساعدة في الأوراق والتنقل داخل المستشفى</li>
-          <li>ضمان فهمك الكامل لتشخيصك وخطة العلاج والأدوية</li>
+          <li>مساعدتك على فهم تشخيصك وخطة العلاج والأدوية</li>
         </ul>
         <p>تُترجم جميع الوثائق الطبية وخطط العلاج والوصفات الطبية <strong>إلى الإنجليزية</strong> لسجلاتك.</p>
       </>
     ),
   },
   {
-    q: 'كيف أحصل على تأشيرة طبية للصين؟',
+    q: 'هل أحتاج إلى تأشيرة لتلقي الرعاية الطبية في الصين؟',
     a: (
       <>
-        <p className="mb-4">تساعدك ShanghaiMed في <strong>إجراءات التأشيرة كاملة</strong>:</p>
-        <ol className="list-decimal pl-6 mb-4 space-y-1">
-          <li><strong>استشارة أولية</strong> (مجانية، عن بُعد عبر مكالمة فيديو)</li>
-          <li><strong>خطاب دعوة طبية</strong> — يصدره المستشفى الشريك بعد الاستشارة</li>
-          <li><strong>تقديم طلب التأشيرة</strong> — تقدم خطاب الدعوة إلى السفارة أو القنصلية الصينية</li>
-          <li><strong>مدة المعالجة</strong> — عادة من 2 إلى 4 أسابيع</li>
-          <li><strong>دعم الوثائق</strong> — توفر ShanghaiMed ترجمة لجميع الوثائق المطلوبة</li>
-        </ol>
+        <p className="mb-4">يعتمد المسار المناسب على الرعاية التي تخطط لتلقيها:</p>
+        <ul className="list-disc pl-6 mb-4 space-y-2">
+          <li><strong>الفحوصات الصحية، وطب الأسنان، والطب الصيني التقليدي، والزيارات الخارجية الروتينية، والمتابعة، والرأي الطبي الثاني:</strong> يمكنك استخدام تأشيرة سياحية أو مسار إعفاء من التأشيرة ينطبق عليك.</li>
+          <li><strong>الجراحة المخططة، أو العلاج داخل المستشفى، أو الرعاية التي تتطلب الإدخال إلى المستشفى:</strong> يمكن للمستشفى المعالج إصدار خطاب دعوة أو شهادة إدخال مزمع لمسار <strong>تأشيرة S2</strong>. يمكن لـ ShanghaiMed المساعدة في تنسيق الوثائق وترجمتها.</li>
+        </ul>
+        <p className="mb-4">
+          ابدأ <strong>باستشارة أولية مجانية عبر الإنترنت من خلال WhatsApp</strong>. تغطي <strong>سياسة الإعفاء من تأشيرة العبور لمدة 240 ساعة في الصين 57 دولة</strong>، مع مراعاة شروط الأهلية وخط السير.
+        </p>
         <p>
-          تقدم الصين <strong>إعفاءً من التأشيرة للعبور لمدة 240 ساعة</strong> لمواطني 54 دولة (بما في ذلك الولايات المتحدة والمملكة
-          المتحدة وكندا وأستراليا ومعظم دول الاتحاد الأوروبي)، وهو ما قد يكون كافيًا للرحلات الطبية القصيرة.
+          <strong>تأشيرة M هي تأشيرة أعمال وليست تأشيرة طبية.</strong> معلومات التأشيرة محدثة حتى <strong>25 أكتوبر 2026</strong>؛ تحقق قبل السفر من أحدث إعلان صادر عن إدارة الهجرة الوطنية (NIA) أو اتصل بالرقم <strong>+86-12367</strong>.
         </p>
       </>
     ),
@@ -1699,7 +1722,7 @@ const arFaqs: FaqItem[] = [
           <li>مطابقة المستشفى والأخصائي</li>
           <li>النقل المحلي والدفع والإرشاد على الأرض</li>
           <li>دعم مخصص عبر WhatsApp طوال فترة إقامتك</li>
-          <li>دعم خطاب دعوة التأشيرة</li>
+          <li>إرشاد بشأن مسار التأشيرة السياحية أو الإعفاء المؤهل من التأشيرة للفحص الصحي</li>
           <li>متابعة عن بُعد لمدة 30 يومًا بعد الفحص</li>
           <li>دعم التأمين</li>
         </ul>
@@ -1716,7 +1739,7 @@ const arFaqs: FaqItem[] = [
           <li>مطابقة المستشفى والأخصائي</li>
           <li>النقل المحلي والدفع والإرشاد على الأرض</li>
           <li>دعم مخصص عبر WhatsApp طوال فترة إقامتك</li>
-          <li>دعم خطاب دعوة التأشيرة</li>
+          <li>إرشاد بشأن مسار التأشيرة؛ ويقتصر تنسيق خطاب دعوة المستشفى/وثيقة التنويم المقصود على الجراحة المخططة أو التنويم أو غير ذلك من العلاج الذي يتطلب التنويم</li>
           <li>متابعة عن بُعد لمدة 30 يومًا بعد العلاج</li>
           <li>دعم التأمين · التصريح المسبق</li>
         </ul>
@@ -1735,7 +1758,7 @@ const arFaqs: FaqItem[] = [
           <li>زيارات دورية للمريض أثناء الإقامة في المستشفى</li>
           <li>النقل المحلي والمساعدة في الدفع والفوترة والإرشاد على الأرض</li>
           <li>دعم مخصص عبر WhatsApp طوال فترة إقامتك</li>
-          <li>دعم خطاب دعوة التأشيرة الطبية</li>
+          <li>إرشاد بشأن مسار S2 وتنسيق خطاب دعوة المستشفى/وثيقة التنويم المقصود للجراحة المخططة أو التنويم أو غير ذلك من العلاج الذي يتطلب التنويم</li>
           <li>التواصل مع العائلة وتحديثات التقدم</li>
           <li>متابعة عن بُعد لمدة 60 يومًا بعد العلاج</li>
           <li>التأمين · التصريح المسبق وتنسيق الوديعة الجراحية</li>
@@ -1815,8 +1838,8 @@ const arFaqs: FaqItem[] = [
     a: (
       <>
         <p className="mb-4">
-          نعم. لدى المستشفيات الشريكة لـ ShanghaiMed <strong>اتفاقيات تسوية مباشرة</strong> مع كبرى شركات التأمين
-          الدولية. ويتراوح عدد شركات التأمين المغطاة من 8 إلى 24 شركة لكل مستشفى:
+          نعم. قد تتوفر التسوية المباشرة عندما تكون لدى شركة التأمين الخاصة بك اتفاقية مع <strong>المستشفى المعالج</strong>.
+          تختلف ترتيبات المستشفيات وشركات التأمين المنشورة من مستشفى لآخر:
         </p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li>Huashan Hospital — 24 شريك تأمين</li>
@@ -1838,7 +1861,7 @@ const arFaqs: FaqItem[] = [
       <>
         <p className="mb-4">توفر ShanghaiMed <strong>متابعة شاملة بعد العلاج</strong>:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
-          <li><strong>متابعة عن بُعد عبر الفيديو</strong> مع طبيبك المعالج</li>
+          <li><strong>تنسيق المتابعة عن بُعد</strong>؛ وتُنسَّق الفحوصات السريرية بالفيديو مع الطبيب المعالج فقط إذا وفرتها المستشفى، مع تأكيد أي رسوم مستشفى للاستشارة عن بُعد بشكل منفصل عن خدمة تنسيق ShanghaiMed</li>
           <li><strong>سجلات طبية مترجمة</strong> — ملخص الخروج الكامل ونتائج الفحوصات وقائمة الأدوية بالإنجليزية</li>
           <li><strong>إرشادات الأدوية</strong> — تعليمات الجرعات والآثار الجانبية وتحذيرات التفاعلات</li>
           <li><strong>خطة التعافي</strong> — جدول زمني مخصص وتوصيات بالأنشطة</li>
@@ -1854,8 +1877,8 @@ const arFaqs: FaqItem[] = [
     a: (
       <>
         <p className="mb-4">
-          <strong>نعم.</strong> الاستشارة الأولية مع سارة عبر WhatsApp مجانية تمامًا ودون أي التزام.
-          خلال المكالمة، نقوم بتقييم احتياجاتك الطبية، ونوصي بالمستشفيات والأخصائيين المناسبين، ونقدم لك
+          <strong>نعم.</strong> الاستشارة الأولية المجانية مع سارة تتم عبر الإنترنت من خلال WhatsApp ودون أي التزام.
+          خلال هذه الاستشارة، نقوم بتقييم احتياجاتك الطبية، ونوصي بالمستشفيات والأخصائيين المناسبين، ونقدم لك
           تقديرًا واقعيًا لميزانية العلاج، ونشرح كيفية عمل التأمين.
         </p>
         <p>
@@ -1962,27 +1985,26 @@ const msFaqs: FaqItem[] = [
           <li><strong>Longhua Hospital</strong> (Universiti TCM Shanghai) — Grade 3A, hospital perintis pelancongan perubatan TCM rasmi</li>
         </ul>
         <p>
-          Hospital-hospital ini menggunakan <strong>peralatan perubatan yang sama</strong> (Siemens, GE Healthcare, Philips) dan{' '}
-          <strong>jenama implan yang sama</strong> (Stryker, Zimmer, Straumann) yang terdapat di hospital AS. Ramai doktor kanan
-          telah berlatih di Johns Hopkins, Mayo Clinic, dan Cleveland Clinic.
+          Hospital di Shanghai menggunakan <strong>peralatan perubatan dan jenama implan yang tersedia di peringkat
+          antarabangsa</strong>. Peralatan, pengilang dan model implan yang tepat bergantung pada hospital, jabatan dan
+          prosedur, dan perlu disahkan dengan hospital yang merawat.
         </p>
       </>
     ),
   },
   {
-    q: 'Hospital manakah di Shanghai yang bekerjasama dengan ShanghaiMed?',
+    q: 'Hospital manakah yang boleh disyorkan atau diatur oleh ShanghaiMed?',
     a: (
       <>
         <p className="mb-4">
-          ShanghaiMed bekerjasama dengan <strong>14 hospital awam perintis pelancongan perubatan Grade 3A</strong> dan{' '}
-          <strong>5 hospital antarabangsa swasta</strong> — sejumlah 19 institusi meliputi setiap kepakaran perubatan:
+          ShanghaiMed tidak mengendalikan rangkaian hospital berkontrak atau tetap. Kami mengesyorkan hospital berdasarkan <strong>keadaan, kesesuaian kepakaran dan keperluan praktikal anda</strong>, kemudian menyelaraskan keseluruhan perjalanan penjagaan. Mana-mana hospital awam Grade 3A yang sesuai di Shanghai boleh dipertimbangkan, dan hospital swasta yang sesuai juga boleh diatur. <strong>13 hospital awam perintis rasmi pelancongan perubatan</strong> ialah rujukan rasmi, bukan had cadangan kami. Caj perubatan dibayar terus kepada hospital yang merawat. Jadual di bawah hanya menunjukkan contoh representatif — bukan senarai lengkap atau tetap:
         </p>
         <div className="overflow-x-auto mb-4">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gray-100">
                 <th className="border border-gray-300 px-4 py-2 text-left">Hospital</th>
-                <th className="border border-gray-300 px-4 py-2 text-left">Universiti</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">Afiliasi</th>
                 <th className="border border-gray-300 px-4 py-2 text-left">Kepakaran Utama</th>
               </tr>
             </thead>
@@ -1991,14 +2013,14 @@ const msFaqs: FaqItem[] = [
                 ['Huashan Hospital', 'Fudan University', 'Neurosurgeri #1, Dermatologi #1'],
                 ["Children's Hospital", 'Fudan University', 'Neonatologi, Pembedahan Pediatrik'],
                 ['Ruijin Hospital', 'SJTU', 'Hematologi (CAR-T), Endokrinologi'],
-                ['Shanghai General Hospital', '—', 'Oftalmologi, ENT, Urologi'],
+                ['Shanghai General Hospital', 'Shanghai Jiao Tong University School of Medicine', 'Oftalmologi, ENT, Urologi'],
                 ['Zhongshan Hospital', 'Fudan University', 'Kardiovaskular, Pembedahan Am'],
                 ['Renji Hospital', 'SJTU', 'Gastroenterologi #1, Perubatan Reproduktif'],
                 ['Longhua Hospital', 'Shanghai Univ. of TCM', 'Perubatan Tradisional China'],
-                ['IPMCH', 'China Welfare Institute', 'Perubatan Reproduktif, Obstetrik'],
+                ['IPMCH', 'China Welfare Institute; Shanghai Jiao Tong University School of Medicine', 'Perubatan Reproduktif, Obstetrik'],
                 ["Shanghai Children's Medical Center", 'SJTU', 'Pembedahan Jantung Pediatrik'],
-                ["Sixth People's Hospital", '—', 'Ortopedik (pemindahan anggota sejak 1963)'],
-                ['First Maternity & Infant Hospital', '—', 'Obstetrik, Perubatan Fetus'],
+                ["Sixth People's Hospital", 'Shanghai Jiao Tong University School of Medicine', 'Ortopedik (pemindahan anggota sejak 1963)'],
+                ['First Maternity & Infant Hospital', 'Tongji University; official second name: Tongji University Affiliated Obstetrics and Gynecology Hospital', 'Obstetrik, Perubatan Fetus'],
                 ['Xinhua Hospital', 'SJTU', 'Pediatrik, Dermatologi'],
                 ['Huadong Hospital', 'Fudan University', 'Perubatan Geriatrik, Pemeriksaan Kesihatan'],
                 ["Ninth People's Hospital", 'SJTU', 'Pergigian #1, Pembedahan Plastik #1'],
@@ -2012,8 +2034,11 @@ const msFaqs: FaqItem[] = [
             </tbody>
           </table>
         </div>
+        <p className="mb-4">
+          Bergantung pada keperluan anda, pilihan juga boleh merangkumi sistem <strong>Naval Medical University (dahulunya Second Military Medical University)</strong> — Changhai Hospital, Changzheng Hospital dan Eastern Hepatobiliary Surgery Hospital — serta sistem <strong>Shanghai University of Traditional Chinese Medicine</strong>, termasuk hospital Longhua, Shuguang dan Yueyang. Ini ialah contoh skop cadangan, bukan senarai tetap.
+        </p>
         <p>
-          Ditambah 5 hospital antarabangsa swasta: Jiahui International (gabungan Mass General), United Family,
+          Contoh representatif hospital swasta termasuk Jiahui International (gabungan Mass General), United Family,
           ParkwayHealth, SinoUnited Health (kolaborasi Mayo Clinic dan perkhidmatan pendapat kedua), dan Raffles Hospital.
         </p>
       </>
@@ -2024,38 +2049,37 @@ const msFaqs: FaqItem[] = [
     a: (
       <>
         <p className="mb-4">
-          Ramai doktor kanan di hospital terkemuka di Shanghai mempunyai <strong>latihan antarabangsa dan bertutur dalam bahasa Inggeris</strong>.
-          Doktor-doktor ini kerap menerbitkan karya dalam jurnal perubatan berbahasa Inggeris dan menghadiri persidangan antarabangsa.
+          Sesetengah hospital dan doktor di Shanghai boleh memberikan perkhidmatan dalam bahasa Inggeris. Ketersediaannya
+          bergantung pada doktor dan jabatan, jadi sila sahkan sokongan bahasa Inggeris dengan doktor khusus anda sebelum membuat tempahan.
         </p>
         <p className="mb-4">
-          Untuk menjamin tiada jurang komunikasi, ShanghaiMed menyediakan <strong>pendamping perubatan
+          Untuk membantu mengurangkan kesilapan komunikasi, ShanghaiMed menyediakan <strong>pendamping perubatan
           Inggeris–Mandarin profesional</strong> yang:
         </p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li>Mengiringi anda ke setiap temujanji</li>
           <li>Menterjemah istilah perubatan dengan tepat</li>
           <li>Membantu dengan urusan pentadbiran hospital dan navigasi</li>
-          <li>Memastikan anda memahami sepenuhnya diagnosis, pelan rawatan, dan ubat-ubatan anda</li>
+          <li>Membantu anda memahami diagnosis, pelan rawatan, dan ubat-ubatan anda</li>
         </ul>
         <p>Semua dokumen perubatan, pelan rawatan, dan preskripsi <strong>diterjemahkan ke dalam bahasa Inggeris</strong> untuk rekod anda.</p>
       </>
     ),
   },
   {
-    q: 'Bagaimanakah saya mendapatkan visa perubatan untuk China?',
+    q: 'Adakah saya memerlukan visa untuk mendapatkan rawatan perubatan di China?',
     a: (
       <>
-        <p className="mb-4">ShanghaiMed membantu dengan <strong>proses visa secara menyeluruh</strong>:</p>
-        <ol className="list-decimal pl-6 mb-4 space-y-1">
-          <li><strong>Konsultasi awal</strong> (percuma, dari jauh melalui panggilan video)</li>
-          <li><strong>Surat jemputan perubatan</strong> — dikeluarkan oleh hospital rakan niaga selepas konsultasi</li>
-          <li><strong>Permohonan visa</strong> — anda menyerahkan surat jemputan kepada kedutaan/konsulat China</li>
-          <li><strong>Tempoh pemprosesan</strong> — biasanya 2-4 minggu</li>
-          <li><strong>Sokongan dokumen</strong> — ShanghaiMed menyediakan terjemahan semua dokumen yang diperlukan</li>
-        </ol>
+        <p className="mb-4">Laluan yang sesuai bergantung pada rawatan yang anda rancangkan:</p>
+        <ul className="list-disc pl-6 mb-4 space-y-2">
+          <li><strong>Pemeriksaan kesihatan, rawatan pergigian, TCM, lawatan pesakit luar biasa, lawatan susulan dan pendapat kedua:</strong> anda boleh menggunakan visa pelancong atau laluan pengecualian visa yang berkenaan.</li>
+          <li><strong>Pembedahan yang dirancang, rawatan pesakit dalam atau rawatan yang memerlukan kemasukan ke hospital:</strong> hospital yang merawat boleh mengeluarkan surat jemputan atau sijil kemasukan yang dirancang untuk laluan <strong>visa S2</strong>. ShanghaiMed boleh membantu penyelarasan dan terjemahan dokumen.</li>
+        </ul>
+        <p className="mb-4">
+          Mulakan dengan <strong>konsultasi awal dalam talian percuma melalui WhatsApp</strong>. <strong>Dasar pengecualian visa transit 240 jam China meliputi 57 negara</strong>, tertakluk pada syarat kelayakan dan jadual perjalanan.
+        </p>
         <p>
-          China menawarkan <strong>pengecualian visa transit 240 jam</strong> untuk warganegara 54 negara (termasuk AS, UK,
-          Kanada, Australia, dan kebanyakan negara EU), yang boleh memadai untuk perjalanan perubatan yang singkat.
+          <strong>Visa M ialah visa perniagaan, bukan visa perubatan.</strong> Maklumat visa adalah terkini setakat <strong>25 Oktober 2026</strong>; sebelum perjalanan, semak pengumuman terkini Pentadbiran Imigresen Negara (NIA) atau hubungi <strong>+86-12367</strong>.
         </p>
       </>
     ),
@@ -2096,7 +2120,7 @@ const msFaqs: FaqItem[] = [
           <li>Pemadanan hospital &amp; pakar</li>
           <li>Pengangkutan tempatan, pembayaran, dan panduan di lapangan</li>
           <li>Sokongan WhatsApp khas sepanjang penginapan anda</li>
-          <li>Sokongan surat jemputan visa</li>
+          <li>Panduan laluan visa pelancong atau pengecualian visa yang layak untuk pemeriksaan kesihatan</li>
           <li>Susulan jarak jauh 30 hari selepas pemeriksaan</li>
           <li>Sokongan insurans</li>
         </ul>
@@ -2113,7 +2137,7 @@ const msFaqs: FaqItem[] = [
           <li>Pemadanan hospital &amp; pakar</li>
           <li>Pengangkutan tempatan, pembayaran, dan panduan di lapangan</li>
           <li>Sokongan WhatsApp khas sepanjang penginapan anda</li>
-          <li>Sokongan surat jemputan visa</li>
+          <li>Panduan laluan visa; penyelarasan surat jemputan hospital/dokumen hasrat kemasukan hanya untuk pembedahan yang dirancang, rawatan pesakit dalam, atau rawatan lain yang memerlukan kemasukan ke hospital</li>
           <li>Susulan jarak jauh 30 hari selepas penjagaan</li>
           <li>Sokongan insurans · pra-kebenaran</li>
         </ul>
@@ -2132,7 +2156,7 @@ const msFaqs: FaqItem[] = [
           <li>Lawatan pesakit dalam sepanjang penginapan di hospital</li>
           <li>Pengangkutan tempatan, bantuan pembayaran/bil, dan panduan di lapangan</li>
           <li>Sokongan WhatsApp khas sepanjang penginapan anda</li>
-          <li>Sokongan surat jemputan visa perubatan</li>
+          <li>Panduan laluan S2 dan penyelarasan surat jemputan hospital/dokumen hasrat kemasukan untuk pembedahan yang dirancang, rawatan pesakit dalam, atau rawatan lain yang memerlukan kemasukan ke hospital</li>
           <li>Komunikasi keluarga &amp; kemas kini kemajuan</li>
           <li>Susulan jauh 60 hari selepas penjagaan</li>
           <li>Insurans · pra-kebenaran &amp; penyelarasan deposit pembedahan</li>
@@ -2214,8 +2238,8 @@ const msFaqs: FaqItem[] = [
     a: (
       <>
         <p className="mb-4">
-          Ya. Hospital rakan kongsi ShanghaiMed mempunyai <strong>perjanjian bil terus</strong> dengan penanggung insurans
-          antarabangsa utama. Liputan melibatkan 8 hingga 24 penanggung insurans setiap hospital:
+          Ya. Bil terus mungkin tersedia apabila penanggung insurans anda mempunyai perjanjian dengan <strong>hospital yang merawat</strong>.
+          Pengaturan hospital–insurans yang diterbitkan berbeza mengikut hospital:
         </p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li>Huashan Hospital — 24 rakan niaga insurans</li>
@@ -2238,7 +2262,7 @@ const msFaqs: FaqItem[] = [
       <>
         <p className="mb-4">ShanghaiMed menyediakan <strong>susulan selepas rawatan yang komprehensif</strong>:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
-          <li><strong>Pemeriksaan video jarak jauh</strong> dengan doktor yang merawat anda</li>
+          <li><strong>Penyelarasan susulan jarak jauh</strong>; pemeriksaan video klinikal dengan doktor yang merawat anda hanya jika ditawarkan oleh hospital, dengan sebarang bayaran teleperundingan hospital disahkan secara berasingan daripada penyelarasan ShanghaiMed</li>
           <li><strong>Rekod perubatan yang telah diterjemahkan</strong> — ringkasan keluar penuh, keputusan ujian, dan senarai ubat dalam bahasa Inggeris</li>
           <li><strong>Panduan pengambilan ubat</strong> — arahan dos, kesan sampingan, dan amaran interaksi</li>
           <li><strong>Perancangan pemulihan</strong> — garis masa peribadi dan cadangan aktiviti</li>
@@ -2254,7 +2278,7 @@ const msFaqs: FaqItem[] = [
     a: (
       <>
         <p className="mb-4">
-          <strong>Ya.</strong> Konsultasi awal dengan Sara melalui WhatsApp adalah percuma sepenuhnya dan tanpa sebarang obligasi. Semasa panggilan, kami menilai keperluan perubatan anda, mengesyorkan hospital dan pakar yang sesuai,
+          <strong>Ya.</strong> Konsultasi awal dalam talian dengan Sara melalui WhatsApp adalah percuma sepenuhnya dan tanpa sebarang obligasi. Semasa konsultasi ini, kami menilai keperluan perubatan anda, mengesyorkan hospital dan pakar yang sesuai,
           memberikan anggaran belanjawan yang realistik untuk rawatan, dan menerangkan cara insurans berfungsi.
         </p>
         <p>
@@ -2360,27 +2384,26 @@ const idFaqs: FaqItem[] = [
           <li><strong>Longhua Hospital</strong> (Universitas TCM Shanghai) — Grade 3A, rumah sakit percontohan wisata medis TCM resmi</li>
         </ul>
         <p>
-          Rumah sakit-rumah sakit ini menggunakan <strong>peralatan medis yang sama</strong> (Siemens, GE Healthcare, Philips) dan{' '}
-          <strong>merek implan yang sama</strong> (Stryker, Zimmer, Straumann) yang ditemukan di rumah sakit AS. Banyak dokter senior
-          telah berlatih di Johns Hopkins, Mayo Clinic, dan Cleveland Clinic.
+          Rumah sakit di Shanghai menggunakan <strong>peralatan medis dan merek implan yang tersedia secara internasional</strong>.
+          Peralatan, produsen, dan model implan yang spesifik bergantung pada rumah sakit, departemen, dan prosedur,
+          sehingga perlu dikonfirmasi dengan rumah sakit yang merawat.
         </p>
       </>
     ),
   },
   {
-    q: 'Rumah sakit mana di Shanghai yang bekerja sama dengan ShanghaiMed?',
+    q: 'Rumah sakit mana yang dapat direkomendasikan atau diatur oleh ShanghaiMed?',
     a: (
       <>
         <p className="mb-4">
-          ShanghaiMed bermitra dengan <strong>14 rumah sakit publik percontohan wisata medis Grade 3A</strong> dan{' '}
-          <strong>5 rumah sakit internasional swasta</strong> — total 19 institusi mencakup setiap spesialisasi medis:
+          ShanghaiMed tidak mengoperasikan jaringan rumah sakit berkontrak atau tetap. Kami merekomendasikan rumah sakit berdasarkan <strong>kondisi, kesesuaian spesialisasi, dan kebutuhan praktis Anda</strong>, lalu mengoordinasikan seluruh perjalanan perawatan. Setiap rumah sakit negeri Grade 3A yang sesuai di Shanghai dapat dipertimbangkan, dan rumah sakit swasta yang sesuai juga dapat diatur. <strong>13 rumah sakit negeri perintis resmi wisata medis</strong> adalah rujukan resmi, bukan batas rekomendasi kami. Biaya perawatan dibayarkan langsung kepada rumah sakit yang merawat. Tabel berikut hanya menampilkan contoh representatif — bukan daftar lengkap atau tetap:
         </p>
         <div className="overflow-x-auto mb-4">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gray-100">
                 <th className="border border-gray-300 px-4 py-2 text-left">Rumah Sakit</th>
-                <th className="border border-gray-300 px-4 py-2 text-left">Universitas</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">Afiliasi</th>
                 <th className="border border-gray-300 px-4 py-2 text-left">Spesialisasi Utama</th>
               </tr>
             </thead>
@@ -2389,14 +2412,14 @@ const idFaqs: FaqItem[] = [
                 ['Huashan Hospital', 'Fudan University', 'Bedah Saraf #1, Dermatologi #1'],
                 ["Children's Hospital", 'Fudan University', 'Neonatologi, Bedah Anak'],
                 ['Ruijin Hospital', 'SJTU', 'Hematologi (CAR-T), Endokrinologi'],
-                ['Shanghai General Hospital', '—', 'Oftalmologi, THT, Urologi'],
+                ['Shanghai General Hospital', 'Shanghai Jiao Tong University School of Medicine', 'Oftalmologi, THT, Urologi'],
                 ['Zhongshan Hospital', 'Fudan University', 'Kardiovaskular, Bedah Umum'],
                 ['Renji Hospital', 'SJTU', 'Gastroenterologi #1, Kedokteran Reproduksi'],
                 ['Longhua Hospital', 'Shanghai Univ. of TCM', 'Pengobatan Tradisional Tiongkok'],
-                ['IPMCH', 'China Welfare Institute', 'Kedokteran Reproduksi, Obstetri'],
+                ['IPMCH', 'China Welfare Institute; Shanghai Jiao Tong University School of Medicine', 'Kedokteran Reproduksi, Obstetri'],
                 ["Shanghai Children's Medical Center", 'SJTU', 'Bedah Jantung Anak'],
-                ["Sixth People's Hospital", '—', 'Ortopedi (replantasi anggota sejak 1963)'],
-                ['First Maternity & Infant Hospital', '—', 'Obstetri, Kedokteran Janin'],
+                ["Sixth People's Hospital", 'Shanghai Jiao Tong University School of Medicine', 'Ortopedi (replantasi anggota sejak 1963)'],
+                ['First Maternity & Infant Hospital', 'Tongji University; official second name: Tongji University Affiliated Obstetrics and Gynecology Hospital', 'Obstetri, Kedokteran Janin'],
                 ['Xinhua Hospital', 'SJTU', 'Pediatri, Dermatologi'],
                 ['Huadong Hospital', 'Fudan University', 'Kedokteran Geriatri, Skrining Kesehatan'],
                 ["Ninth People's Hospital", 'SJTU', 'Gigi #1, Bedah Plastik #1'],
@@ -2410,8 +2433,11 @@ const idFaqs: FaqItem[] = [
             </tbody>
           </table>
         </div>
+        <p className="mb-4">
+          Bergantung pada kebutuhan Anda, pilihan juga dapat mencakup sistem <strong>Naval Medical University (sebelumnya Second Military Medical University)</strong> — Changhai Hospital, Changzheng Hospital, dan Eastern Hepatobiliary Surgery Hospital — serta sistem <strong>Shanghai University of Traditional Chinese Medicine</strong>, termasuk rumah sakit Longhua, Shuguang, dan Yueyang. Ini adalah contoh cakupan rekomendasi, bukan daftar tetap.
+        </p>
         <p>
-          Ditambah 5 rumah sakit internasional swasta: Jiahui International (afiliasi Mass General), United Family,
+          Contoh representatif rumah sakit swasta mencakup Jiahui International (afiliasi Mass General), United Family,
           ParkwayHealth, SinoUnited Health (kolaborasi Mayo Clinic dan layanan opini kedua), dan Raffles Hospital.
         </p>
       </>
@@ -2422,38 +2448,37 @@ const idFaqs: FaqItem[] = [
     a: (
       <>
         <p className="mb-4">
-          Banyak dokter senior di rumah sakit terkemuka di Shanghai memiliki <strong>pelatihan internasional dan berbicara bahasa Inggris</strong>.
-          Para dokter ini secara rutin menerbitkan karya di jurnal medis berbahasa Inggris dan menghadiri konferensi internasional.
+          Beberapa rumah sakit dan dokter di Shanghai dapat memberikan layanan dalam bahasa Inggris. Ketersediaannya berbeda
+          menurut dokter dan departemen, jadi mohon konfirmasi dukungan bahasa Inggris dengan dokter spesifik Anda sebelum memesan.
         </p>
         <p className="mb-4">
-          Untuk menjamin tidak ada kesenjangan komunikasi, ShanghaiMed menyediakan <strong>pendamping medis
+          Untuk membantu mengurangi kesalahan komunikasi, ShanghaiMed menyediakan <strong>pendamping medis
           Inggris–Mandarin profesional</strong> yang:
         </p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li>Mendampingi Anda ke setiap janji temu</li>
           <li>Menerjemahkan istilah medis secara akurat</li>
           <li>Membantu urusan administrasi rumah sakit dan navigasi</li>
-          <li>Memastikan Anda memahami sepenuhnya diagnosis, rencana pengobatan, dan obat-obatan Anda</li>
+          <li>Membantu Anda memahami diagnosis, rencana pengobatan, dan obat-obatan Anda</li>
         </ul>
         <p>Semua dokumen medis, rencana pengobatan, dan resep <strong>diterjemahkan ke dalam bahasa Inggris</strong> untuk catatan Anda.</p>
       </>
     ),
   },
   {
-    q: 'Bagaimana cara mendapatkan visa medis untuk Tiongkok?',
+    q: 'Apakah saya memerlukan visa untuk mendapatkan perawatan medis di Tiongkok?',
     a: (
       <>
-        <p className="mb-4">ShanghaiMed membantu <strong>proses visa secara menyeluruh</strong>:</p>
-        <ol className="list-decimal pl-6 mb-4 space-y-1">
-          <li><strong>Konsultasi awal</strong> (gratis, jarak jauh melalui panggilan video)</li>
-          <li><strong>Surat undangan medis</strong> — dikeluarkan oleh rumah sakit mitra setelah konsultasi</li>
-          <li><strong>Pengajuan visa</strong> — Anda menyerahkan surat undangan ke kedutaan/konsulat Tiongkok</li>
-          <li><strong>Lama pemrosesan</strong> — biasanya 2-4 minggu</li>
-          <li><strong>Dukungan dokumen</strong> — ShanghaiMed menyediakan terjemahan semua dokumen yang diperlukan</li>
-        </ol>
+        <p className="mb-4">Jalur yang sesuai bergantung pada perawatan yang Anda rencanakan:</p>
+        <ul className="list-disc pl-6 mb-4 space-y-2">
+          <li><strong>Pemeriksaan kesehatan, perawatan gigi, TCM, kunjungan rawat jalan rutin, kunjungan lanjutan, dan opini kedua:</strong> Anda dapat menggunakan visa turis atau jalur bebas visa yang berlaku.</li>
+          <li><strong>Operasi yang direncanakan, perawatan rawat inap, atau perawatan yang memerlukan penerimaan ke rumah sakit:</strong> rumah sakit yang merawat dapat menerbitkan surat undangan atau sertifikat rencana penerimaan untuk jalur <strong>visa S2</strong>. ShanghaiMed dapat membantu koordinasi dan penerjemahan dokumen.</li>
+        </ul>
+        <p className="mb-4">
+          Mulailah dengan <strong>konsultasi awal online gratis melalui WhatsApp</strong>. <strong>Kebijakan bebas visa transit 240 jam Tiongkok mencakup 57 negara</strong>, dengan memenuhi persyaratan kelayakan dan itinerari.
+        </p>
         <p>
-          Tiongkok menawarkan <strong>pembebasan visa transit 240 jam</strong> untuk warga negara dari 54 negara (termasuk AS, Inggris,
-          Kanada, Australia, dan sebagian besar negara UE), yang dapat cukup untuk perjalanan medis singkat.
+          <strong>Visa M adalah visa bisnis, bukan visa medis.</strong> Informasi visa ini berlaku per <strong>25 Oktober 2026</strong>; sebelum perjalanan, verifikasi pengumuman terbaru Administrasi Imigrasi Nasional (NIA) atau hubungi <strong>+86-12367</strong>.
         </p>
       </>
     ),
@@ -2494,7 +2519,7 @@ const idFaqs: FaqItem[] = [
           <li>Pemadanan rumah sakit &amp; spesialis</li>
           <li>Transportasi lokal, pembayaran, dan bimbingan di lapangan</li>
           <li>Dukungan WhatsApp khusus selama Anda menginap</li>
-          <li>Dukungan surat undangan visa</li>
+          <li>Panduan jalur visa turis atau bebas visa yang memenuhi syarat untuk pemeriksaan kesehatan</li>
           <li>Tindak lanjut jarak jauh 30 hari setelah pemeriksaan</li>
           <li>Dukungan asuransi</li>
         </ul>
@@ -2511,7 +2536,7 @@ const idFaqs: FaqItem[] = [
           <li>Pemadanan rumah sakit &amp; spesialis</li>
           <li>Transportasi lokal, pembayaran, dan bimbingan di lapangan</li>
           <li>Dukungan WhatsApp khusus selama Anda menginap</li>
-          <li>Dukungan surat undangan visa</li>
+          <li>Panduan jalur visa; koordinasi surat undangan rumah sakit/dokumen rencana rawat inap hanya untuk operasi yang direncanakan, rawat inap, atau perawatan lain yang memerlukan rawat inap</li>
           <li>Tindak lanjut jarak jauh 30 hari setelah perawatan</li>
           <li>Dukungan asuransi · pra-otorisasi</li>
         </ul>
@@ -2530,7 +2555,7 @@ const idFaqs: FaqItem[] = [
           <li>Kunjungan rawat inap selama di rumah sakit</li>
           <li>Transportasi lokal, bantuan pembayaran/tagihan, dan bimbingan di lapangan</li>
           <li>Dukungan WhatsApp khusus selama Anda menginap</li>
-          <li>Dukungan surat undangan visa medis</li>
+          <li>Panduan jalur S2 dan koordinasi surat undangan rumah sakit/dokumen rencana rawat inap untuk operasi yang direncanakan, rawat inap, atau perawatan lain yang memerlukan rawat inap</li>
           <li>Komunikasi keluarga &amp; pembaruan perkembangan</li>
           <li>Tindak lanjut jarak jauh 60 hari setelah perawatan</li>
           <li>Asuransi · pra-otorisasi &amp; koordinasi deposit bedah</li>
@@ -2612,8 +2637,8 @@ const idFaqs: FaqItem[] = [
     a: (
       <>
         <p className="mb-4">
-          Ya. Rumah sakit mitra ShanghaiMed memiliki <strong>perjanjian penagihan langsung</strong> dengan perusahaan asuransi
-          internasional utama. Cakupan melibatkan 8 hingga 24 perusahaan asuransi per rumah sakit:
+          Ya. Penagihan langsung mungkin tersedia apabila perusahaan asuransi Anda memiliki perjanjian dengan <strong>rumah sakit yang merawat</strong>.
+          Pengaturan rumah sakit–asuransi yang dipublikasikan berbeda untuk setiap rumah sakit:
         </p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
           <li>Huashan Hospital — 24 mitra asuransi</li>
@@ -2636,7 +2661,7 @@ const idFaqs: FaqItem[] = [
       <>
         <p className="mb-4">ShanghaiMed menyediakan <strong>tindak lanjut pasca-pengobatan yang komprehensif</strong>:</p>
         <ul className="list-disc pl-6 mb-4 space-y-1">
-          <li><strong>Pemeriksaan video jarak jauh</strong> dengan dokter yang merawat Anda</li>
+          <li><strong>Koordinasi tindak lanjut jarak jauh</strong>; pemeriksaan video klinis dengan dokter yang merawat Anda hanya jika ditawarkan oleh rumah sakit, dengan biaya telekonsultasi rumah sakit dikonfirmasi secara terpisah dari koordinasi ShanghaiMed</li>
           <li><strong>Rekam medis yang telah diterjemahkan</strong> — ringkasan keluar lengkap, hasil tes, dan daftar obat dalam bahasa Inggris</li>
           <li><strong>Panduan penggunaan obat</strong> — instruksi dosis, efek samping, dan peringatan interaksi</li>
           <li><strong>Perencanaan pemulihan</strong> — garis waktu personal dan rekomendasi aktivitas</li>
@@ -2652,8 +2677,8 @@ const idFaqs: FaqItem[] = [
     a: (
       <>
         <p className="mb-4">
-          <strong>Ya.</strong> Konsultasi awal dengan Sara melalui WhatsApp gratis sepenuhnya dan tanpa
-          kewajiban apa pun. Dalam panggilan tersebut, kami menilai kebutuhan medis Anda, merekomendasikan rumah sakit dan spesialis yang sesuai,
+          <strong>Ya.</strong> Konsultasi awal online dengan Sara melalui WhatsApp gratis sepenuhnya dan tanpa
+          kewajiban apa pun. Dalam konsultasi ini, kami menilai kebutuhan medis Anda, merekomendasikan rumah sakit dan spesialis yang sesuai,
           memberikan estimasi anggaran yang realistis untuk pengobatan, dan menjelaskan cara kerja asuransi.
         </p>
         <p>

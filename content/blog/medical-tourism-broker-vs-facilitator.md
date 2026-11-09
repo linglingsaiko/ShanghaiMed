@@ -89,7 +89,7 @@ Neither model makes a company automatically good or bad. But only one of them le
 - Collects and reviews your complete medical records, imaging, and history
 - Arranges remote consultations with the treating hospital before you commit
 - Provides a written, itemized treatment and cost estimate from the hospital itself
-- Advises on visa category (for China, typically S1/S2 for medical purposes) and documentation
+- Advises on visa category (for China, typically S2 for medical purposes) and documentation
 - Verifies whether your international insurer can be billed directly
 
 **During your treatment:**

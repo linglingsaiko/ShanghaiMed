@@ -73,8 +73,8 @@ The actual process:
 Three practical points:
 
 - You'll need to show you can cover treatment costs — hospital estimates plus proof of funds or insurance. His insurance confirmation was accepted
-- The permit's duration follows your medical documentation — legally up to 180 days
-- This is not a grey area. Article 34 of China's Exit and Entry Administration Law covers exactly this: visa-free entrants staying longer for legitimate reasons apply for a stay permit. Article 19 of the Regulations on Administration of the Exit-Entry of Foreign Nationals (revised 2025) allows family or service agencies to apply on behalf of hospitalised patients
+- An S2-type stay permit is generally issued for **30–90 days** based on the hospital documentation; further treatment requires updated hospital proof for an extension
+- This is not a grey area. China's entry-exit rules provide an in-country route when a treatment need arises after lawful arrival. Article 10 of the Regulations on the Administration of the Entry and Exit of Foreign Nationals addresses in-country visa reissuance when the purpose of stay changes under national rules, and Article 19 (revised 2025) allows family or professional service agencies to apply on behalf of hospitalised patients
 
 ## How it played out
 
@@ -90,9 +90,11 @@ They flew home just over four weeks after landing. His cardiologist in Mancheste
 
 ## Three honest notes
 
-- This is not a recommendation to arrive visa-free and plan surgery. If you already know you need a procedure, apply for the right visa from home. The stay-permit route exists for things that come up after arrival
+- This is not a recommendation to arrive visa-free and plan surgery. If you already know you need surgery or hospital admission, apply for an **S2 visa** with the hospital's invitation/admission documentation before travel. The stay-permit route exists for needs that arise after lawful arrival
 - If your permitted stay is running short, start at least 7 days before expiry. China's multilingual immigration hotline: +86-12367
 - Visa-free entry is fine for checkups, dental work and outpatient visits — not for planned admission. Every case differs; confirm with the hospital and the local bureau
+
+*Visa policy verified as of **October 25, 2026**. Before travel, check the latest National Immigration Administration (NIA) announcement or call **+86-12367**. Applications are assessed individually by the competent authorities.*
 
 ## How we can help
 

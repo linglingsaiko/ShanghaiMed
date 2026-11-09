@@ -80,7 +80,7 @@ Shanghai menawarkan dua jalur utama untuk pasien internasional: **departemen int
 **Keuntungan:**
 
 - Lingkungan seperti hotel premium dengan kamar pribadi
-- Lingkungan yang sepenuhnya berbahasa Inggris di seluruh fasilitas - mulai dari resepsionis hingga staf perawat dan dokter
+- Staf dan koordinator berbahasa Inggris tersedia di departemen pasien internasional; kemampuan bahasa Inggris bervariasi menurut departemen dan staf
 - Waktu konsultasi yang lebih lama dengan komunikasi yang lebih terperinci dan berpusat pada pasien
 - Janji temu tersedia dengan cepat untuk sebagian besar layanan
 - Layanan komprehensif di satu tempat (konsultasi, diagnosis, apotek, gigi)
@@ -91,7 +91,7 @@ Shanghai menawarkan dua jalur utama untuk pasien internasional: **departemen int
 - Untuk kasus yang sangat kompleks, spesialis mungkin merujuk ke rekan-rekan di rumah sakit umum
 - Beberapa perusahaan asuransi mengklasifikasikan rumah sakit swasta tertentu sebagai **Penyedia Biaya Tinggi (HCP)** atau "fasilitas medis mahal". Tergantung pada rencana asuransi Anda, kunjungan ke rumah sakit yang terdaftar sebagai HCP mungkin memerlukan **biaya tambahan 20%**—sedangkan perawatan yang sama di fasilitas non-HCP akan ditanggung sepenuhnya. Hal ini perlu diperiksa sebelum Anda memilih fasilitas.
 
-**Cocok untuk:** Perawatan preventif, pemeriksaan rutin, prosedur kecil, perawatan gigi, pediatri, dan pasien yang memprioritaskan kenyamanan dan komunikasi.
+**Cocok untuk:** Perawatan preventif, pemeriksaan rutin, prosedur rawat jalan, perawatan gigi, pediatri, dan pasien yang memprioritaskan kenyamanan dan komunikasi.
 
 Banyak pasien internasional menggunakan kombinasi keduanya: perawatan kompleks di departemen internasional rumah sakit umum, tempat spesialis top dan peralatan canggih terkonsentrasi, serta tindak lanjut rutin dan perawatan preventif di klinik internasional swasta, tempat pengalaman lebih nyaman.
 
@@ -118,7 +118,7 @@ Ini sering kali menjadi kekhawatiran terbesar bagi pasien internasional, dan itu
 
 **Departemen internasional khusus** di rumah sakit umum besar mempekerjakan koordinator bilingual yang membantu segalanya, mulai dari pemesanan janji temu hingga menjelaskan rencana perawatan. Koordinator ini seringkali memiliki latar belakang medis atau pelatihan khusus. Meskipun koordinator tersebut dapat mengatasi kendala bahasa secara efektif, lingkungan bahasa Inggris secara keseluruhan di rumah sakit umum tidak sebaik di fasilitas swasta—rumah sakit yang lebih besar terutama beroperasi dalam bahasa Tiongkok, dan Anda mungkin menemui staf di luar departemen internasional yang hanya bisa berbicara bahasa Inggris terbatas.
 
-**Rumah sakit internasional swasta** menawarkan pengalaman sepenuhnya berbahasa Inggris — resepsionis, staf perawat, dokter, dan tim administrasi semuanya berkomunikasi dalam bahasa Inggris. Konsultasi cenderung lebih lama dan lebih terperinci, dengan dokter meluangkan waktu ekstra untuk menjelaskan kondisi dan pilihan pengobatan.
+**Rumah sakit internasional swasta** umumnya menawarkan dukungan bahasa Inggris yang lebih kuat, dengan resepsionis, perawat, dan dokter berbahasa Inggris di departemen internasional mereka. Namun, kemampuan bahasa Inggris masih dapat bervariasi menurut staf dan departemen. Konsultasi cenderung lebih lama dan lebih terperinci, dengan dokter meluangkan waktu ekstra untuk menjelaskan kondisi dan pilihan pengobatan.
 
 ## Penerimaan Asuransi: Dapatkah Anda Menggunakan Rencana Anda?
 
@@ -167,7 +167,7 @@ Membayar perawatan kesehatan — dan segala hal lainnya — di Tiongkok telah me
 
 **36 e-wallet luar negeri beroperasi langsung di Tiongkok.** Melalui integrasi pembayaran lintas batas Bank Rakyat Tiongkok, e-wallet dari negara-negara termasuk Malaysia (Touch'n Go), Korea Selatan (Kakao Pay), Hong Kong (AlipayHK), Thailand (TrueMoney), dan banyak lainnya dapat digunakan di pedagang di seluruh Shanghai tanpa memerlukan akun pembayaran Tiongkok terpisah.
 
-**Integrasi PayPal dan WeChat Pay.** PayPal telah bermitra dengan WeChat Pay, memungkinkan pengguna PayPal melakukan pembayaran melalui ekosistem WeChat—jembatan nyaman lainnya bagi pengunjung yang lebih memilih untuk tidak mengatur metode pembayaran lokal.
+**Kartu kredit internasional di rumah sakit.** Banyak rumah sakit besar menerima kartu kredit internasional (Visa, Mastercard) di departemen pasien internasional mereka, meskipun penerimaan bervariasi menurut rumah sakit dan departemen. Konfirmasikan pilihan pembayaran dengan rumah sakit Anda sebelum perawatan.
 
 **Transaksi kecil bebas biaya.** Untuk transaksi di bawah ¥200 (sekitar $28), tidak ada biaya konversi mata uang tambahan yang dikenakan—sehingga pembayaran untuk obat-obatan, makanan, dan transportasi menjadi mudah dan tanpa kerepotan.
 
@@ -182,20 +182,28 @@ Membayar perawatan kesehatan — dan segala hal lainnya — di Tiongkok telah me
 
 Mencapai Shanghai dan menavigasi persyaratan masuknya lebih sederhana dari yang Anda bayangkan.
 
-**Transit Bebas Visa 240 Jam** adalah hal yang mengubah permainan bagi banyak pasien internasional. Jika Anda berasal dari salah satu dari 54 negara yang memenuhi syarat (termasuk AS, Inggris, Kanada, Australia, Jepang, dan sebagian besar negara Uni Eropa), Anda dapat transit melalui Shanghai tanpa visa hingga 240 jam (10 hari). Ini sangat berguna untuk:
+Untuk pemeriksaan kesehatan, perawatan gigi, TCM, konsultasi rawat jalan biasa, tindak lanjut, dan second opinion, **visa turis (L) atau kebijakan bebas visa yang berlaku** dapat menjadi pilihan yang sesuai.
 
-- Konsultasi cepat dan prosedur kecil
-- Pemeriksaan kesehatan yang tidak memerlukan masa tinggal yang lama
-- Kunjungan tindak lanjut untuk pasien yang menerima perawatan awal di tempat lain.
+**Transit Bebas Visa 240 Jam** mencakup warga negara yang memenuhi syarat dari **57 negara** dan memenuhi seluruh ketentuan transit. Kebijakan ini mengizinkan masa tinggal hingga 240 jam (10 hari) dan dapat sesuai untuk itinerary singkat yang mematuhi ketentuan, meliputi:
 
-**Visa Medis (Visa M)** Cocok untuk pasien yang membutuhkan periode perawatan yang lebih lama. Anda akan membutuhkan:
+- Pemeriksaan kesehatan singkat atau janji perawatan gigi
+- Konsultasi rawat jalan biasa atau second opinion
+- Kunjungan tindak lanjut yang tidak melibatkan rencana rawat inap
 
-- Surat undangan dari rumah sakit atau klinik Shanghai Anda
-- Bukti kemampuan finansial atau asuransi
-- Paspor yang masih berlaku (disarankan masa berlaku lebih dari 6 bulan)
-- Aplikasi visa yang sudah lengkap
+Kebijakan ini **tidak untuk operasi yang direncanakan, rawat inap, atau perawatan di rumah sakit**.
 
-Mencapai Shanghai sangat mudah—Bandara Internasional Pudong (PVG) dan Bandara Internasional Hongqiao (SHA) terhubung ke sebagian besar kota besar di seluruh dunia. Banyak pasien internasional terbang masuk, melakukan janji temu, dan terbang keluar di hari yang sama atau hari berikutnya untuk prosedur kecil, atau mengatur akomodasi untuk rencana perawatan yang lebih lama.
+Tiongkok **tidak memiliki kategori huruf visa tersendiri bernama “Visa Medis”**, dan **Visa M adalah untuk bisnis/perdagangan**. Untuk operasi yang direncanakan, rawat inap, atau perawatan yang mengharuskan pasien dirawat, jalur yang relevan adalah **visa S2 (Urusan Pribadi Jangka Pendek) untuk perawatan medis**, dengan surat undangan dari rumah sakit yang merawat, surat penerimaan, atau bukti rencana penerimaan. Dokumen permohonan inti biasanya meliputi:
+
+- Surat undangan/dokumen penerimaan dari rumah sakit
+- Bukti kemampuan finansial yang disyaratkan
+- Paspor yang masih berlaku
+- Formulir permohonan visa yang telah dilengkapi
+
+Jika kondisi yang memerlukan rawat inap ditemukan setelah masuk secara sah, dokumen rumah sakit dapat mendukung permohonan perubahan status di Tiongkok sesuai ketentuan yang berlaku. Dalam keadaan darurat, perawatan didahulukan dan formalitas imigrasi menyusul.
+
+*Kebijakan visa diverifikasi hingga **25 Oktober 2026**. Sebelum bepergian, periksa pengumuman terbaru Administrasi Imigrasi Nasional (NIA) atau hubungi **+86-12367**. Keputusan visa dan status ditetapkan secara individual oleh otoritas yang berwenang.*
+
+Mencapai Shanghai sangat mudah—Bandara Internasional Pudong (PVG) dan Bandara Internasional Hongqiao (SHA) terhubung ke sebagian besar kota besar di seluruh dunia. Banyak pasien internasional datang, menghadiri janji rawat jalan, lalu pulang pada hari yang sama atau keesokan harinya, atau mengatur akomodasi untuk rencana perawatan yang lebih lama.
 
 Akomodasi di dekat rumah sakit besar berkisar dari pilihan anggaran hingga hotel mewah dan apartemen berlayanan. Rumah sakit internasional sering kali memiliki kemitraan dengan akomodasi terdekat untuk keluarga pasien.
 
@@ -216,8 +224,8 @@ Melakukan perencanaan perjalanan medis ke negara lain bisa terasa sangat membing
 - Mengidentifikasi rumah sakit dan spesialis yang tepat untuk kondisi Anda
 - Mengonfirmasi cakupan asuransi atau biaya bayar sendiri sebelum Anda melakukan perjalanan
 - Menjadwalkan janji temu dan meminta perkiraan biaya
-- Mengatur visa, perjalanan, dan akomodasi (banyak negara yang memenuhi syarat untuk visa transit 240 jam di Tiongkok)
-- Menerima perawatan dari staf medis yang berbahasa Inggris
+- Mengatur jalur masuk, perjalanan, dan akomodasi yang tepat—visa L atau bebas visa yang berlaku untuk kunjungan rawat jalan yang memenuhi syarat, transit 240 jam hanya untuk kunjungan singkat yang memenuhi ketentuan, atau S2 untuk operasi/rawat inap yang direncanakan
+- Menerima perawatan dengan dukungan bahasa yang dikoordinasikan (ketersediaan staf berbahasa Inggris bervariasi menurut rumah sakit dan departemen; interpretasi medis profesional dapat diatur)
 - Perawatan lanjutan, termasuk laporan dalam bahasa Inggris dan opsi telemedicine
 
 Masing-masing langkah ini melibatkan pilihan yang dapat secara signifikan memengaruhi pengalaman dan biaya Anda. Kami membantu pasien internasional menavigasi semuanya — sehingga Anda dapat fokus pada kesehatan Anda, bukan logistiknya.

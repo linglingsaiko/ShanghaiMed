@@ -102,16 +102,18 @@ export const glossaryEn: GlossaryTerm[] = [
     term: 'Medical Visa',
     category: 'Travel & Legal',
     definition:
-      'A visa issued for the purpose of receiving medical treatment, usually supported by an invitation or confirmation letter from the treating hospital and sometimes by a facilitating organisation.',
+      'A search term rather than a stand-alone visa category in China. China has no separate "Medical Visa" letter category; the M visa is for business and trade, not medical treatment.',
+    context:
+      'Health screening, routine dental care, TCM, outpatient visits, follow-ups and second opinions may use a tourist visa or applicable visa-free entry when all conditions are met. For planned surgery, hospitalization or other treatment requiring admission, confirm hospital invitation/proposed-admission documents and the S2 medical-purpose pathway before travel. If the need arises only after lawful entry, any in-country visa replacement or related stay-permit application must follow the applicable rules and is not automatically approved. Visas, stay periods and replacements are decided case by case by the competent authorities; check the latest NIA notice or call +86-12367 before travel.',
   },
   {
     term: 'Visa-Free Transit',
     aliases: ['240-Hour Transit Visa Exemption', 'Transit Without Visa'],
     category: 'Travel & Legal',
     definition:
-      'A policy allowing eligible foreign nationals to enter a country for a limited period without a visa while transiting onward to a third country or region. China offers a 240-hour transit visa exemption to citizens of a defined list of countries.',
+      'A policy allowing eligible foreign nationals to enter a country for a limited period without a visa while transiting onward to a third country or region. China’s 240-hour transit visa exemption applies to eligible citizens of 57 countries who meet every condition.',
     context:
-      'Eligibility, duration, and permitted area can change and vary by entry point and nationality; current official visa policy should always be checked before travel.',
+      'For medical travel, it is limited to qualifying short-term health screening, dental care or routine outpatient visits and is not for planned surgery or hospitalization. Eligibility, duration and permitted area vary by nationality and entry point and can change; verify the latest NIA notice or call +86-12367 before travel.',
   },
   {
     term: 'Informed Consent',

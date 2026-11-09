@@ -133,7 +133,7 @@ Jika Anda merencanakan perjalanan ke Shanghai dan ingin mencoba TCM - baik untuk
 
 - Rekomendasikan dokter yang spesialisasinya sesuai dengan kondisi Anda;
 - Pesan janji temu di departemen TCM rumah sakit Kelas 3A atau klinik internasional terkemuka;
-- Berikan interpretasi medis profesional selama seluruh konsultasi Anda, sehingga tidak ada yang hilang dalam terjemahan;
+- Memberikan interpretasi medis profesional selama konsultasi Anda untuk mendukung komunikasi yang akurat;
 - Terjemahkan catatan medis Anda sebelum kunjungan;
 - Jelaskan rencana perawatan Anda dalam bahasa Inggris sederhana setelah konsultasi;
 - Tindak lanjuti antar sesi dan bantu mengisi ulang resep herbal jika diperlukan.

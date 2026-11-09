@@ -108,8 +108,8 @@ const WhyShanghai: React.FC = () => {
                 </h3>
                 <ul className="space-y-3 text-gray-600">
                   {(travelAccess.length > 0 ? travelAccess : [
-                    '240-hour visa-free transit available for travelers from many countries',
-                    'Medical visa support for extended treatment plans',
+                    '240-hour visa-free transit for eligible travelers from 57 countries who meet all conditions; limited to qualifying short-term screening, dental, or routine outpatient visits, not planned surgery or hospitalization',
+                    'Visa pathway guidance for routine care (tourist visa or eligible visa-free entry) and planned admission (S2 with hospital invitation/proposed-admission documents); approvals are case by case and not guaranteed',
                     'Airport pickup and transportation assistance',
                     'End-to-end coordination throughout your healthcare journey',
                   ]).map((item, index) => (

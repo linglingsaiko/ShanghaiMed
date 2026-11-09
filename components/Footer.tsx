@@ -9,6 +9,13 @@ type FooterLink = { key: string; href: string }
 
 // Array order is stable; labels are looked up by key in the translation table.
 const footerLinkStructure: Record<string, FooterLink[]> = {
+  about: [
+    { key: 'aboutUs', href: '/about' },
+    { key: 'ourFounder', href: '/founder' },
+    { key: 'whyShanghai', href: '/why-shanghai' },
+    { key: 'ourSpecialties', href: '/treatments' },
+    { key: 'careTeam', href: '/care-team' },
+  ],
   services: [
     { key: 'medicalCheckup', href: '/#treatments' },
     { key: 'tcm', href: '/#treatments' },
@@ -20,14 +27,23 @@ const footerLinkStructure: Record<string, FooterLink[]> = {
     { key: 'ourStandards', href: '/our-standards' },
     { key: 'faqs', href: '/faq' },
     { key: 'blog', href: '/blog' },
+    { key: 'researchLibrary', href: '/research' },
+    { key: 'glossary', href: '/glossary' },
+  ],
+  legal: [
     { key: 'privacyPolicy', href: '/privacy-policy' },
     { key: 'termsOfService', href: '/terms-of-service' },
+    { key: 'editorialPolicy', href: '/editorial-policy' },
+    { key: 'medicalDisclaimer', href: '/medical-disclaimer' },
+    { key: 'refundPolicy', href: '/refund-policy' },
   ],
 }
 
 const footerFallback: Record<string, string[]> = {
+  about: ['About Us', 'Our Founder', 'Why Shanghai', 'Our Specialties', 'Care Team'],
   services: ['Medical Checkup', 'Traditional Chinese Medicine', 'Surgeries', 'Pediatric Care'],
-  support: ['How It Works', 'Our Standards', 'FAQs', 'Blog', 'Privacy Policy', 'Terms of Service'],
+  support: ['How It Works', 'Our Standards', 'FAQs', 'Blog', 'Research Library', 'Glossary'],
+  legal: ['Privacy Policy', 'Terms of Service', 'Editorial Policy', 'Medical Disclaimer', 'Refund Policy'],
 }
 
 const Footer: React.FC = () => {
@@ -67,7 +83,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-primary text-white">
       <div className="section-container py-12 lg:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-10">
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="text-2xl font-bold mb-4">
@@ -107,6 +123,12 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
+          {/* About */}
+          <div>
+            <h4 className="font-semibold text-lg mb-4">{translateWithFallback('footer.aboutTitle', 'About')}</h4>
+            <ul className="space-y-3">{renderLinks('about')}</ul>
+          </div>
+
           {/* Services */}
           <div>
             <h4 className="font-semibold text-lg mb-4">{translateWithFallback('footer.servicesTitle', 'Our Services')}</h4>
@@ -143,6 +165,9 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-white/10 mt-10 pt-8">
+          <ul className="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-6">
+            {renderLinks('legal')}
+          </ul>
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
             <p>{translateWithFallback('footer.copyright', `© ${new Date().getFullYear()} ShanghaiMed. All rights reserved.`)}</p>
             <p>{translateWithFallback('footer.operatedBy', 'Operated by Shanghai Keling Information Technology Co., Ltd.')}</p>

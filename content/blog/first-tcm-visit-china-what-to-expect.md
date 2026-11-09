@@ -132,7 +132,7 @@ If you're planning a trip to Shanghai and want to try TCM — whether for a chro
 
 - Recommend physicians whose specialties match your condition;
 - Book appointments at top Grade 3A hospital TCM departments or well-established international-facing clinics;
-- Provide professional medical interpretation during your entire consultation, so nothing gets lost in translation;
+- Provide professional medical interpretation during your consultation to support accurate communication;
 - Translate your medical records before the visit;
 - Explain your treatment plan in plain English after the consultation;
 - Follow up between sessions and help refill herbal prescriptions if needed.

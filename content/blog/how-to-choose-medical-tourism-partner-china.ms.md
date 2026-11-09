@@ -88,4 +88,4 @@ Rakan kongsi yang betul akan menjawab kesemua enam soalan dengan mudah dan secar
 
 ---
 
-*Merancang perjalanan rawatan anda ke Shanghai? Pasukan kami akan meninjau semua rekod perubatan anda sebelum mengesyorkan mana-mana hospital - dan kami merancang segalanya daripada pangsapuri anda hingga ke penjagaan susulan. Hubungi kami di WhatsApp di +86 138 1827 4110 untuk konsultasi percuma, atau sertai [komuniti pesakit percuma kami di Telegram](https://t.me/shanghaimed_group).*
+*Merancang perjalanan rawatan anda ke Shanghai? Pasukan kami akan meninjau semua rekod perubatan anda sebelum mengesyorkan mana-mana hospital - dan kami merancang segalanya daripada pangsapuri anda hingga ke penjagaan susulan. Hubungi kami di WhatsApp di +86 138 1827 4110 untuk konsultasi penyelarasan dalam talian awal percuma, atau sertai [komuniti pesakit percuma kami di Telegram](https://t.me/shanghaimed_group).*

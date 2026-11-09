@@ -12,7 +12,7 @@ tags:
 - prepare medical records for abroad
 - Shanghai hospital appointment
 - medical second opinion China
-author: Lingling Ma
+author: Sara Ma, Founder
 date: '2026-11-03T02:00:00.000Z'
 lastReviewed: '2026-11-03'
 featured: false
@@ -285,4 +285,4 @@ status: published
 
 ## عن المؤلف
 
-**Lingling Ma (Sara)** هي مؤسسة ShanghaiMed وممرضة مسجلة معتمدة من ISPN مع لقب ممرضة محترفة صينية رفيعة المستوى (主管护师). لديها أكثر من عقد من الخبرة في عمليات الرعاية الصحية المتميزة وتنسيق المرضى الدوليين في شنغهاي، وتعمل باللغات الإنجليزية والصينية واليابانية (JLPT N1). دورها هو التنسيق الطبي والتواصل مع المرضى، وليس التشخيص أو وصف الأدوية.
+**Sara Ma** هي مؤسسة ShanghaiMed. وهي ممرضة مسجلة مرخصة (RN)، حاصلة على درجة البكالوريوس في التمريض (BSN) من Shanghai Jiao Tong University School of Medicine، وشهادة **ISPN (International Standards for Professional Nurses)**. ولديها أكثر من عقد من الخبرة في عمليات الرعاية الصحية الدولية المتميزة وتنسيق المرضى الدوليين في شنغهاي. وتتحدث الصينية الماندرين والإنجليزية واليابانية. دورها هو التنسيق الطبي والتواصل مع المرضى، وليس التشخيص أو وصف الأدوية.

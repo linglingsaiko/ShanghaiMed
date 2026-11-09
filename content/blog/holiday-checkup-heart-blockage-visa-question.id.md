@@ -73,8 +73,8 @@ Proses sebenarnya:
 Tiga poin praktis:
 
 - Anda harus menunjukkan bahwa Anda dapat menutupi biaya perawatan - perkiraan rumah sakit ditambah bukti dana atau asuransi. Konfirmasi asuransinya diterima
-- Durasi izin tinggal mengikuti dokumentasi medis Anda - secara hukum hingga 180 hari
-- Ini bukan area abu-abu. Pasal 34 Undang-Undang Administrasi Keluar dan Masuk Tiongkok mencakup hal ini persis: pendatang bebas visa yang tinggal lebih lama karena alasan sah mengajukan permohonan izin tinggal. Pasal 19 Peraturan Administrasi Keluar dan Masuk Warga Negara Asing (direvisi 2025) memungkinkan keluarga atau agen layanan untuk mengajukan permohonan atas nama pasien yang dirawat di rumah sakit
+- Izin tinggal jenis S2 umumnya diterbitkan untuk **30–90 hari** berdasarkan dokumen rumah sakit; perawatan lanjutan memerlukan bukti rumah sakit yang diperbarui untuk perpanjangan
+- Ini bukan area abu-abu. Peraturan keluar-masuk Tiongkok menyediakan jalur di dalam negara ketika kebutuhan perawatan muncul setelah kedatangan yang sah. Pasal 10 Peraturan Administrasi Keluar dan Masuk Warga Negara Asing mengatur penerbitan ulang visa di dalam negara ketika tujuan tinggal berubah sesuai ketentuan nasional, dan Pasal 19 (revisi 2025) memungkinkan keluarga atau agen layanan profesional mengajukan permohonan atas nama pasien yang dirawat di rumah sakit
 
 ## Bagaimana hasilnya
 
@@ -90,9 +90,11 @@ Mereka terbang pulang sedikit lebih dari empat minggu setelah mendarat. Kardiolo
 
 ## Tiga catatan jujur
 
-- Ini bukan rekomendasi untuk tiba tanpa visa dan merencanakan operasi. Jika Anda sudah tahu Anda membutuhkan prosedur, ajukan visa yang tepat dari rumah. Rute izin tinggal ada untuk hal-hal yang muncul setelah kedatangan.
+- Ini bukan rekomendasi untuk tiba tanpa visa dan merencanakan operasi. Jika Anda sudah tahu bahwa Anda memerlukan operasi atau rawat inap, ajukan **visa S2** dari negara Anda dengan surat undangan/dokumen penerimaan rumah sakit. Jalur izin tinggal tersedia untuk kebutuhan yang muncul setelah kedatangan yang sah.
 - Jika izin tinggal Anda hampir habis, mulailah setidaknya 7 hari sebelum kedaluwarsa. Hotline imigrasi multibahasa Tiongkok: +86-12367
-- Masuk tanpa visa tidak masalah untuk pemeriksaan, perawatan gigi, dan kunjungan rawat jalan - bukan untuk rawat inap yang direncanakan. Setiap kasus berbeda; konfirmasikan dengan rumah sakit dan biro setempat
+- Masuk tanpa visa sesuai untuk pemeriksaan, perawatan gigi, dan kunjungan rawat jalan - bukan untuk rawat inap yang direncanakan. Setiap kasus berbeda; konfirmasikan dengan rumah sakit dan biro setempat
+
+*Kebijakan visa diverifikasi hingga **25 Oktober 2026**. Sebelum bepergian, periksa pengumuman terbaru Administrasi Imigrasi Nasional (NIA) atau hubungi **+86-12367**. Setiap permohonan dinilai secara individual oleh otoritas yang berwenang.*
 
 ## Bagaimana kami dapat membantu
 

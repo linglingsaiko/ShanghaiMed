@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import Link from 'next/link'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 const en = {
@@ -296,7 +297,7 @@ export default function AboutContent() {
   const { language } = useLanguage()
   const t = translations[language] || translations.en
   return (
-    <div className="bg-gray-50 min-h-screen py-12">
+    <div className="bg-gray-50 min-h-screen pt-28 pb-12">
       <div className="section-container max-w-3xl">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">{t.title}</h1>
         <p className="text-xl text-teal-700 font-medium mb-6">{t.hero}</p>
@@ -329,7 +330,16 @@ export default function AboutContent() {
 
         <section className="bg-white rounded-lg border p-8 mb-6">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">{t.aiTitle}</h2>
-          <p className="text-gray-600">{t.ai}</p>
+          <p className="text-gray-600">
+            {t.ai.split('MediMatch').map((part, i, arr) => (
+              <React.Fragment key={i}>
+                {part}
+                {i < arr.length - 1 && (
+                  <Link href="/medical-records" className="text-teal-700 font-medium hover:underline">MediMatch</Link>
+                )}
+              </React.Fragment>
+            ))}
+          </p>
         </section>
 
         <section className="bg-white rounded-lg border p-8 mb-6">

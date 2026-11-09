@@ -17,7 +17,7 @@ const en = {
   founderCreds: [
     'Registered Nurse (RN), China',
     'BSN, Shanghai Jiao Tong University School of Medicine',
-    'Executive Business Administration Program (Certificate of Completion, non-degree), Antai College, Shanghai Jiao Tong University, 2020–2022',
+    'MBA Executive Education, Shanghai Jiao Tong University',
     'ISPN — International Standards for Professional Nurses',
     'Trilingual: Chinese, English, Japanese',
   ],
@@ -59,7 +59,7 @@ const ja = {
   founderCreds: [
     '登録看護師（RN）、中国',
     'BSN, Shanghai Jiao Tong University School of Medicine',
-    '上級経営管理課程研修（修了証・学位なし）、Antai College, Shanghai Jiao Tong University、2020–2022',
+    'MBA Executive Education, Shanghai Jiao Tong University',
     'ISPN — International Standards for Professional Nurses',
     '中国語・英語・日本語の3か国語',
   ],
@@ -101,7 +101,7 @@ const ar = {
   founderCreds: [
     'ممرضة مسجلة (RN)، الصين',
     'BSN, Shanghai Jiao Tong University School of Medicine',
-    'برنامج إدارة الأعمال التنفيذية (شهادة إتمام، دون درجة أكاديمية)، Antai College, Shanghai Jiao Tong University، 2020–2022',
+    'MBA Executive Education, Shanghai Jiao Tong University',
     'ISPN — International Standards for Professional Nurses',
     'تتحدث ثلاث لغات: الصينية والإنجليزية واليابانية',
   ],
@@ -143,7 +143,7 @@ const ru = {
   founderCreds: [
     'Дипломированная медсестра (RN), Китай',
     'BSN, Shanghai Jiao Tong University School of Medicine',
-    'Программа повышения квалификации в сфере управления бизнесом (сертификат об окончании, без степени), Antai College, Shanghai Jiao Tong University, 2020–2022',
+    'MBA Executive Education, Shanghai Jiao Tong University',
     'ISPN — International Standards for Professional Nurses',
     'Три языка: китайский, английский и японский',
   ],
@@ -185,7 +185,7 @@ const mn = {
   founderCreds: [
     'Бүртгэлтэй сувилагч (RN), Хятад',
     'BSN, Shanghai Jiao Tong University School of Medicine',
-    'Бизнесийн удирдлагын ахисан түвшний сургалт (төгссөн гэрчилгээ, академийн зэрэггүй), Antai College, Shanghai Jiao Tong University, 2020–2022',
+    'MBA Executive Education, Shanghai Jiao Tong University',
     'ISPN — International Standards for Professional Nurses',
     'Хятад, англи, япон гэсэн гурван хэлээр ярьдаг',
   ],
@@ -227,7 +227,7 @@ const ms = {
   founderCreds: [
     'Jururawat Berdaftar (RN), China',
     'BSN, Shanghai Jiao Tong University School of Medicine',
-    'Program Pentadbiran Perniagaan Eksekutif (Sijil Tamat, tanpa ijazah), Antai College, Shanghai Jiao Tong University, 2020–2022',
+    'MBA Executive Education, Shanghai Jiao Tong University',
     'ISPN — International Standards for Professional Nurses',
     'Tiga bahasa: Bahasa China, Inggeris dan Jepun',
   ],
@@ -269,7 +269,7 @@ const id = {
   founderCreds: [
     'Perawat Terdaftar (RN), Tiongkok',
     'BSN, Shanghai Jiao Tong University School of Medicine',
-    'Program Administrasi Bisnis Eksekutif (Sertifikat Penyelesaian, tanpa gelar), Antai College, Shanghai Jiao Tong University, 2020–2022',
+    'MBA Executive Education, Shanghai Jiao Tong University',
     'ISPN — International Standards for Professional Nurses',
     'Tiga bahasa: Mandarin, Inggris, Jepang',
   ],

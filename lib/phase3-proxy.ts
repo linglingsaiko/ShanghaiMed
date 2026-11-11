@@ -1,3 +1,4 @@
+// final_51 proxy build: v51-p2 (cache-bust 2026-11-11, force route recompile)
 import { NextRequest, NextResponse } from 'next/server';
 
 const RAILWAY_API_URL = process.env.PHASE3_API_URL || 'http://localhost:8000';

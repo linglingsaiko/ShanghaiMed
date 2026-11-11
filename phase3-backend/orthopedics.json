@@ -1,0 +1,2034 @@
+{
+  "metadata": {
+    "category": "orthopedics",
+    "category_label": "骨科/脊柱外科",
+    "generated_at": "2026-11-03T18:01:32+08:00",
+    "source": "有来医生（m.youlai.cn）",
+    "city": "上海",
+    "hospital_filter": "三甲",
+    "selection_rule": "各来源列表交叉采集、按医生ID去重；来源内优先主任/副主任医师，跨来源轮转选取以覆盖不同亚专科；每科室最多50人",
+    "fallback_to_attending_for_minimum_30": false,
+    "doctor_count": 50,
+    "fee_unit": "CNY（元）；null表示来源页未展示该服务费用",
+    "source_pages": [
+      {
+        "label": "脊柱畸形",
+        "url": "https://m.youlai.cn/doctorrecommendlist_2_0_1822.html",
+        "status": "success",
+        "page_title": "上海市脊柱畸形专家排名_上海市脊柱畸形专家哪个最好 - 有来医生",
+        "raw_doctor_count": 20,
+        "eligible_count": 18
+      },
+      {
+        "label": "颈椎病",
+        "url": "https://m.youlai.cn/doctorrecommendlist_2_0_336.html",
+        "status": "success",
+        "page_title": "上海市颈椎病专家排名_上海市颈椎病专家哪个最好 - 有来医生",
+        "raw_doctor_count": 20,
+        "eligible_count": 20
+      },
+      {
+        "label": "腰椎间盘突出症",
+        "url": "https://m.youlai.cn/doctorrecommendlist_2_0_3841.html",
+        "status": "success",
+        "page_title": "上海市腰椎间盘突出症专家排名_上海市腰椎间盘突出症专家哪个最好 - 有来医生",
+        "raw_doctor_count": 20,
+        "eligible_count": 20
+      },
+      {
+        "label": "脊柱外科",
+        "url": "https://m.youlai.cn/doctorrecommendlist_2_139_0.html",
+        "status": "success",
+        "page_title": "上海市脊柱外科专家排名_上海市脊柱外科专家哪个最好 - 有来医生",
+        "raw_doctor_count": 20,
+        "eligible_count": 19
+      },
+      {
+        "label": "骨关节科",
+        "url": "https://m.youlai.cn/doctorrecommendlist_2_217_0.html",
+        "status": "success",
+        "page_title": "上海市骨关节科专家排名_上海市骨关节科专家哪个最好 - 有来医生",
+        "raw_doctor_count": 20,
+        "eligible_count": 15
+      },
+      {
+        "label": "运动医学科",
+        "url": "https://m.youlai.cn/doctorrecommendlist_2_138_0.html",
+        "status": "success",
+        "page_title": "上海市运动医学科专家排名_上海市运动医学科专家哪个最好 - 有来医生",
+        "raw_doctor_count": 20,
+        "eligible_count": 18
+      }
+    ],
+    "errors": []
+  },
+  "doctors": [
+    {
+      "doctor_id": "31231",
+      "name": "钱列",
+      "title": "主任医师",
+      "department": "脊柱外科",
+      "hospital": "上海交通大学医学院附属仁济医院",
+      "hospital_level": "三甲",
+      "registration_fee": 1200,
+      "academic_titles": [
+        "博士"
+      ],
+      "fudan_rank": "复旦榜A++++",
+      "specialties": "颈椎病、腰椎间盘突出症、腰椎滑脱、脊柱畸形等脊柱疾病的诊断及以手术为主综合治疗；脊柱微创治疗：椎间孔镜治疗腰椎间盘突出症、椎体成形治疗骨质疏松性脊柱骨折、通道辅助下减压固定治疗腰椎退变性疾病等脊柱微创治疗。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/31231/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_1822.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_1822.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_0_336.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_0_3841.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_139_0.html"
+      ],
+      "source_categories": [
+        "脊柱畸形",
+        "颈椎病",
+        "腰椎间盘突出症",
+        "脊柱外科"
+      ],
+      "keyword_tags": [
+        "腰椎间盘突出症",
+        "脊柱退行性改变",
+        "腰椎管狭窄",
+        "腰椎滑脱",
+        "脊柱骨折",
+        "脊柱畸形",
+        "颈椎病",
+        "骨质疏松"
+      ]
+    },
+    {
+      "doctor_id": "34145",
+      "name": "陈增淦",
+      "title": "主任医师",
+      "department": "骨科",
+      "hospital": "复旦大学附属中山医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "博士"
+      ],
+      "fudan_rank": "复旦榜A++++",
+      "specialties": "腰腿痛、肩颈痛、腰椎间盘突出、腰椎滑脱、颈椎病、腕管综合征、肘管综合征、复杂创伤、骨不连、髋关节和膝关节炎、年轻人股骨头无菌性坏死等疾病的诊治。",
+      "consult_fee_text": 130,
+      "consult_fee_phone": 260,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/34145/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_336.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_336.html"
+      ],
+      "source_categories": [
+        "颈椎病"
+      ],
+      "keyword_tags": [
+        "腕管综合征",
+        "骨不连",
+        "腰椎滑脱",
+        "颈椎病",
+        "肘管综合征",
+        "腰腿痛",
+        "创伤",
+        "膝关节炎",
+        "脊髓损伤",
+        "股骨头坏死",
+        "腱鞘囊肿",
+        "骨关节炎",
+        "拇外翻",
+        "下肢神经损伤",
+        "椎间盘突出症"
+      ]
+    },
+    {
+      "doctor_id": "31788",
+      "name": "李立钧",
+      "title": "主任医师",
+      "department": "脊柱外科",
+      "hospital": "上海市东方医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "副教授",
+        "博士"
+      ],
+      "fudan_rank": null,
+      "specialties": "颈颈椎、腰椎间盘突出、腰椎滑脱、脊柱骨折脱位、脊柱肿瘤等的诊治，以及个体化微创脊柱外科技术治疗颈腰椎疾患，微创手术治疗，椎体成形术治疗骨质疏松性椎体压缩骨折。",
+      "consult_fee_text": 60,
+      "consult_fee_phone": 210,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/31788/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_3841.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_3841.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_139_0.html"
+      ],
+      "source_categories": [
+        "腰椎间盘突出症",
+        "脊柱外科"
+      ],
+      "keyword_tags": [
+        "骨质疏松",
+        "脊柱肿瘤",
+        "压缩骨折",
+        "脊柱骨折",
+        "腰椎滑脱",
+        "椎动脉型颈椎病",
+        "腰椎间盘突出症",
+        "神经根型颈椎病",
+        "脊髓型颈椎病",
+        "椎管狭窄",
+        "脊柱结核"
+      ]
+    },
+    {
+      "doctor_id": "34623",
+      "name": "刘万军",
+      "title": "主任医师",
+      "department": "骨科-关节外科",
+      "hospital": "上海市第六人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": 1200,
+      "academic_titles": [
+        "博士"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "髋关节置换、膝关节置换手术（股骨头坏死、严重骨折手术后髋关节炎、严重髋关节发育不良、严重类风湿性髋关节炎、髋关节僵直、严重老年骨质增生性膝关节炎引起的关节痛）。早期股骨头坏死的保髋手术。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/34623/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_139_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_139_0.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_217_0.html"
+      ],
+      "source_categories": [
+        "脊柱外科",
+        "骨关节科"
+      ],
+      "keyword_tags": [
+        "关节痛",
+        "膝关节炎",
+        "髋关节发育不良",
+        "骨质增生",
+        "股骨头坏死",
+        "髋关节炎",
+        "骨折",
+        "关节结核",
+        "臀肌挛缩症",
+        "髋关节盂唇损伤",
+        "滑囊炎",
+        "骨关节病",
+        "绒毛结节性滑膜炎",
+        "髋关节脱位",
+        "膝关节骨性关节炎"
+      ]
+    },
+    {
+      "doctor_id": "31884",
+      "name": "蔡俊丰",
+      "title": "主任医师",
+      "department": "关节与骨病专科",
+      "hospital": "上海市东方医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "副教授",
+        "博士"
+      ],
+      "fudan_rank": null,
+      "specialties": "肩周炎、肩袖损伤、半月板损伤、韧带损伤、股骨头坏死、股骨颈骨折、髋关节发育不良、膝关节炎、类风湿性关节炎等的外科治疗。",
+      "consult_fee_text": 60,
+      "consult_fee_phone": 210,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/31884/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_217_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_217_0.html"
+      ],
+      "source_categories": [
+        "骨关节科"
+      ],
+      "keyword_tags": [
+        "股骨颈骨折",
+        "髋关节发育不良",
+        "肩周炎",
+        "膝关节炎",
+        "股骨头坏死",
+        "肩袖损伤",
+        "风湿性关节炎",
+        "韧带损伤",
+        "半月板损伤",
+        "类风湿关节炎",
+        "交叉韧带损伤"
+      ]
+    },
+    {
+      "doctor_id": "31885",
+      "name": "袁锋",
+      "title": "主任医师",
+      "department": "骨科-运动医学科",
+      "hospital": "上海市第六人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": 1200,
+      "academic_titles": [
+        "博士"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "关节镜下半月板缝合修复；关节镜下重建前、后交叉韧带；交叉韧带撕脱骨折、肩周炎、肩关节习惯性脱位、肩关节不稳、Bankart损伤、Hill-Saches损伤、SLAP损伤、肩袖损伤、肩峰撞击综合征、滑膜炎、踝关节、肘关节疾病的关节镜治疗；擅长关节疾病，运动损伤的诊治。",
+      "consult_fee_text": 310,
+      "consult_fee_phone": 510,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/31885/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_138_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_138_0.html"
+      ],
+      "source_categories": [
+        "运动医学科"
+      ],
+      "keyword_tags": [
+        "骨折",
+        "滑膜炎",
+        "运动损伤",
+        "肩袖损伤",
+        "肩周炎",
+        "肩袖撕裂",
+        "踝关节扭伤"
+      ]
+    },
+    {
+      "doctor_id": "34127",
+      "name": "董健",
+      "title": "主任医师",
+      "department": "骨科",
+      "hospital": "复旦大学附属中山医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "教授",
+        "博士",
+        "博导"
+      ],
+      "fudan_rank": "复旦榜A++++",
+      "specialties": "擅长脊柱肿瘤、颈椎病、腰椎疾病、脊柱骨折、结核、脊柱侧弯、老年人脊柱疾病等，对骨质疏松症和骨质疏松性脊柱骨折的治疗也很有特色，脊柱肿瘤诊疗和腰突症防治在国内外处于领先地位。长期致力于肿瘤脊柱转移的机制研究、转移性脊柱肿瘤的靶向治疗策略与新型骨修复材料的研发、骨质疏松发生发展机制研究。",
+      "consult_fee_text": 690,
+      "consult_fee_phone": 698,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/34127/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_1822.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_1822.html"
+      ],
+      "source_categories": [
+        "脊柱畸形"
+      ],
+      "keyword_tags": [
+        "脊柱结核",
+        "脊柱肿瘤",
+        "脊柱骨折",
+        "脊柱侧弯",
+        "脊柱退行性改变",
+        "椎管狭窄",
+        "腰椎滑脱",
+        "脊柱畸形"
+      ]
+    },
+    {
+      "doctor_id": "37730",
+      "name": "富灵杰",
+      "title": "主任医师",
+      "department": "脊柱中心",
+      "hospital": "上海交通大学医学院附属新华医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "博士"
+      ],
+      "fudan_rank": "复旦榜A++",
+      "specialties": "脊柱侧弯、颈肩腰腿痛的保守及手术治疗，以及脊柱韧带骨化症、脊柱结核、腰椎管狭窄症、腰椎间盘突出症、创伤性脊柱骨折脱位合并脊髓损伤、脊柱肿瘤、骨质疏松症等疾病的综合治疗。",
+      "consult_fee_text": 60,
+      "consult_fee_phone": 210,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/37730/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_336.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_336.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_0_3841.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_139_0.html"
+      ],
+      "source_categories": [
+        "颈椎病",
+        "腰椎间盘突出症",
+        "脊柱外科"
+      ],
+      "keyword_tags": [
+        "骨质疏松",
+        "脊柱结核",
+        "腰腿痛",
+        "脊柱肿瘤",
+        "脊柱韧带骨化",
+        "脊柱侧弯",
+        "脊柱骨折",
+        "腰椎间盘突出症",
+        "脊髓损伤",
+        "腰椎管狭窄",
+        "颈肩痛",
+        "颈椎病",
+        "胸腰椎骨折",
+        "椎间盘突出症"
+      ]
+    },
+    {
+      "doctor_id": "34874",
+      "name": "吴春根",
+      "title": "主任医师",
+      "department": "介入影像科",
+      "hospital": "上海市第六人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "博士"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "骨转移瘤诊治、胸腰椎体压缩性骨折诊治、脊柱良恶性肿瘤诊治、颈腰椎间盘突出症诊治、疑难病例影像引导下穿刺诊治、骨关节疾病X线、CT、MRI及DSA影像诊断等。",
+      "consult_fee_text": 309,
+      "consult_fee_phone": 310,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/34874/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_3841.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_3841.html"
+      ],
+      "source_categories": [
+        "腰椎间盘突出症"
+      ],
+      "keyword_tags": [
+        "骨折",
+        "腰椎间盘突出症",
+        "恶性肿瘤",
+        "颈椎间盘突出症",
+        "骨转移癌",
+        "胸腰椎骨折",
+        "椎间盘突出症",
+        "脊柱肿瘤"
+      ]
+    },
+    {
+      "doctor_id": "38364",
+      "name": "史国栋",
+      "title": "主任医师",
+      "department": "脊柱外科",
+      "hospital": "上海长征医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "教授",
+        "博士"
+      ],
+      "fudan_rank": "复旦榜A",
+      "specialties": "颈胸腰椎退变、创伤、炎症及畸形的诊断和治疗，特别擅长微创下胸腰椎疾患的诊断和治疗。",
+      "consult_fee_text": 310,
+      "consult_fee_phone": 610,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/38364/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_139_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_139_0.html"
+      ],
+      "source_categories": [
+        "脊柱外科"
+      ],
+      "keyword_tags": [
+        "创伤",
+        "颈椎间盘退变",
+        "腰椎间盘退变",
+        "椎动脉型颈椎病",
+        "椎间盘退变",
+        "脊髓型颈椎病"
+      ]
+    },
+    {
+      "doctor_id": "34603",
+      "name": "张先龙",
+      "title": "主任医师",
+      "department": "骨科-关节外科",
+      "hospital": "上海市第六人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": 300,
+      "academic_titles": [
+        "博士",
+        "博导",
+        "教授"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "机器人辅助下人工关节置换(髋、膝、单髁)手术，为国内第一个开展机器人手术(全髋、全膝、单髁)的专家。人工关节假体周围感染失败病例的处理，在国内出版了第一本人工关节感染的专著，制定了第一部人工关节感染防治的指南。复杂翻修手术，尤其善于应用3D打印定制假体技术，解决伴有严重骨缺损畸形失败病例。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/34603/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_217_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_217_0.html"
+      ],
+      "source_categories": [
+        "骨关节科"
+      ],
+      "keyword_tags": [
+        "骨缺损",
+        "髋臼骨折",
+        "膝关节炎",
+        "先天性髋关节脱位",
+        "先天性骨与关节畸形",
+        "膝关节损伤",
+        "骨折"
+      ]
+    },
+    {
+      "doctor_id": "34573",
+      "name": "皇甫小桥",
+      "title": "主任医师",
+      "department": "骨科-运动医学科",
+      "hospital": "上海市第六人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "博士",
+        "副教授"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "关节镜下微创治疗肩、膝、髋、肘关节的运动损伤及其关节疾患，如臂丛神经损伤、骨质疏松、骨关节炎、关节炎、坐骨神经痛、肩周炎、腰肌劳损、骨质增生、骨折。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/34573/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_138_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_138_0.html"
+      ],
+      "source_categories": [
+        "运动医学科"
+      ],
+      "keyword_tags": [
+        "臂丛神经损伤",
+        "坐骨神经痛",
+        "骨折",
+        "骨质疏松",
+        "肩周炎",
+        "运动损伤",
+        "骨关节炎",
+        "腰肌劳损",
+        "关节炎",
+        "骨质增生"
+      ]
+    },
+    {
+      "doctor_id": "38398",
+      "name": "尹华斌",
+      "title": "主任医师",
+      "department": "骨科",
+      "hospital": "上海市第一人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": 1200,
+      "academic_titles": [
+        "博士"
+      ],
+      "fudan_rank": null,
+      "specialties": "颈椎病、腰椎间盘突出症、腰椎管狭窄症、腰椎滑脱等脊柱退变性疾病的手术及微创治疗，同时在脊柱创伤、脊柱结核、脊柱肿瘤的治疗方面有丰富的临床经验。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/38398/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_1822.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_1822.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_0_336.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_0_3841.html"
+      ],
+      "source_categories": [
+        "脊柱畸形",
+        "颈椎病",
+        "腰椎间盘突出症"
+      ],
+      "keyword_tags": [
+        "颈椎病",
+        "腰椎滑脱",
+        "脊柱畸形",
+        "腰椎管狭窄",
+        "脊柱结核",
+        "腰椎间盘突出症",
+        "脊柱肿瘤",
+        "胸椎黄韧带骨化症"
+      ]
+    },
+    {
+      "doctor_id": "358954",
+      "name": "宋滇文",
+      "title": "主任医师",
+      "department": "骨科",
+      "hospital": "上海市第一人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": 1200,
+      "academic_titles": [
+        "教授",
+        "博导",
+        "博士"
+      ],
+      "fudan_rank": null,
+      "specialties": "颈椎病、腰椎间盘突出症、腰椎管狭窄症、腰椎滑脱症、胸椎黄韧带骨化症、脊柱外伤和脊柱畸形的诊断和手术治疗，在脊柱肿瘤和脊柱结核等疑难复杂疾病的诊治领域具有极深的造诣。",
+      "consult_fee_text": null,
+      "consult_fee_phone": 310,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/358954/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_1822.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_1822.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_0_336.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_0_3841.html"
+      ],
+      "source_categories": [
+        "脊柱畸形",
+        "颈椎病",
+        "腰椎间盘突出症"
+      ],
+      "keyword_tags": [
+        "脊柱畸形",
+        "腰椎管狭窄",
+        "胸椎黄韧带骨化症",
+        "脊柱结核",
+        "腰椎间盘突出症",
+        "脊柱肿瘤",
+        "颈椎病",
+        "腰椎滑脱",
+        "椎间盘突出症",
+        "胸椎病"
+      ]
+    },
+    {
+      "doctor_id": "43668",
+      "name": "赵庆华",
+      "title": "主任医师",
+      "department": "脊柱外科",
+      "hospital": "上海市第一人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": 800,
+      "academic_titles": [
+        "副教授",
+        "博士",
+        "博士后",
+        "研究生导师"
+      ],
+      "fudan_rank": null,
+      "specialties": "各种脊柱常见及疑难疾病的常规与微创手术治疗，对颈椎病、颈椎后纵韧带骨化症、颈椎管狭窄症、胸椎间盘突出症、胸椎黄韧带骨化症、腰椎间盘突出症、腰椎滑脱症、腰椎管狭窄症、脊柱侧弯、脊柱肿瘤、脊柱结核及脊柱外伤等各类脊柱疾患手术治疗具有丰富的经验。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/43668/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_336.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_336.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_0_3841.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_139_0.html"
+      ],
+      "source_categories": [
+        "颈椎病",
+        "腰椎间盘突出症",
+        "脊柱外科"
+      ],
+      "keyword_tags": [
+        "脊柱侧弯",
+        "腰椎管狭窄",
+        "腰椎间盘突出症",
+        "颈椎病",
+        "腰椎滑脱",
+        "颈椎后纵韧带骨化症",
+        "脊柱结核",
+        "胸椎黄韧带骨化症",
+        "脊柱肿瘤",
+        "椎间盘突出症",
+        "胸椎间盘突出症",
+        "颈椎管狭窄症"
+      ]
+    },
+    {
+      "doctor_id": "419336",
+      "name": "朱超",
+      "title": "主任医师",
+      "department": "脊柱外科",
+      "hospital": "上海交通大学医学院附属仁济医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "博士",
+        "博士后"
+      ],
+      "fudan_rank": "复旦榜A++++",
+      "specialties": "肢体麻木、疼痛、肢体无力、行走受限等病症的鉴别诊断治疗；微创治疗腰椎间盘突出，包括采用椎间孔镜技术、微创通道技术等；腰椎管狭窄、胸椎管狭窄，包括腰椎老化退变、椎间盘突出、黄韧带肥厚及骨化、前纵韧带骨化等导致的椎管狭窄、脊髓神经受压迫的外科手术治疗；电脑机器人辅助导航微创手术技术；秉持微创理念，治疗神经根型颈椎病、脊髓型颈椎病等；注重采用椎间盘置换、棘突间装置等非融合技术，避免长节段融合，保留脊柱节段活动及功能；老年性骨质疏松及病理性骨质疏松的系统治疗；脊柱骨折的微创治疗，椎体压缩性骨折的微创治疗；脊柱原发性肿瘤、转移性肿瘤的系统治疗及根治性手术切除治疗；退变性脊柱侧弯、特发性脊柱侧弯等脊柱畸形的矫形治疗。",
+      "consult_fee_text": 60,
+      "consult_fee_phone": 60,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/419336/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_1822.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_1822.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_0_336.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_0_3841.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_139_0.html"
+      ],
+      "source_categories": [
+        "脊柱畸形",
+        "颈椎病",
+        "腰椎间盘突出症",
+        "脊柱外科"
+      ],
+      "keyword_tags": [
+        "创伤",
+        "颈椎病",
+        "腰椎间盘突出症",
+        "椎管狭窄",
+        "腰椎管狭窄",
+        "脊柱退行性改变",
+        "椎动脉型颈椎病",
+        "脊柱畸形"
+      ]
+    },
+    {
+      "doctor_id": "38346",
+      "name": "符培亮",
+      "title": "主任医师",
+      "department": "关节外科",
+      "hospital": "上海长征医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "博士",
+        "博导",
+        "教授"
+      ],
+      "fudan_rank": "复旦榜A",
+      "specialties": "疑难，复杂关节疾病的诊治：髋关节（股骨头坏死，髋关节发育不良），肩关节（肩袖损伤，肩周炎），膝关节（半月板损伤，交叉韧带损伤，软骨损伤，膝骨关节炎），踝(关节扭伤）的诊断与外科治疗。擅长肩、髋、膝、踝关节的微创关节镜术，微创关节置换术以及保髋/保膝手术。年均主刀完成手术(关节置换+关节镜)700多例。在国内率先开展日间病房人工关节置换术（手术24小时回家)，自体软骨细胞移植治疗软骨缺损(解决大面积软骨损伤的难题)等手术。在治疗强直性脊柱炎/融合髋的髋关节置换和髋关节发育不良高度脱位髋关节置换具有丰富的临床经验，相关手术技术的临床研究已经发表在＜＜中华骨科杂志＞＞，＜＜中华外科杂志＞＞。",
+      "consult_fee_text": 60,
+      "consult_fee_phone": 110,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/38346/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_217_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_217_0.html"
+      ],
+      "source_categories": [
+        "骨关节科"
+      ],
+      "keyword_tags": [
+        "强直性脊柱炎",
+        "肩周炎",
+        "股骨头坏死",
+        "膝关节损伤",
+        "骨刺",
+        "股骨颈骨折",
+        "膝关节炎",
+        "骨关节炎",
+        "髌骨脱位",
+        "股骨髋臼撞击征",
+        "痛风",
+        "肩袖损伤",
+        "半月板损伤",
+        "踝关节扭伤",
+        "髋关节发育不良"
+      ]
+    },
+    {
+      "doctor_id": "35247",
+      "name": "葛京化",
+      "title": "主任医师",
+      "department": "骨伤科",
+      "hospital": "上海中医药大学附属龙华医院",
+      "hospital_level": "三甲",
+      "registration_fee": 20,
+      "academic_titles": [
+        "副教授"
+      ],
+      "fudan_rank": null,
+      "specialties": "中西医结合诊治各类骨伤科疾病，中医特色调理虚证、关节炎、类风湿关节炎、滑膜炎、骨质疏松症等病症。精于颈腰椎病系统综合治疗，涵盖颈椎病、腰椎间盘突出、脊柱侧弯、强直性脊柱炎、椎管狭窄等；规范诊治股骨头坏死、肩周炎、骨性关节炎、膝关节损伤、肌肉拉伤、腱鞘炎等骨伤科常见疾病。熟练开展骨折与创伤整复固定、人工关节置换、关节镜、小儿骨科矫形等手术，同时擅长脊柱骨折、关节置换等各类骨伤术后的功能康复与调理，形成手术治疗+术后康复+中医调理一体化诊疗模式。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/35247/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_217_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_217_0.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_138_0.html"
+      ],
+      "source_categories": [
+        "骨关节科",
+        "运动医学科"
+      ],
+      "keyword_tags": [
+        "颈椎病",
+        "骨质疏松",
+        "股骨头坏死",
+        "脊柱侧弯",
+        "肌挛缩",
+        "股骨颈骨折",
+        "股骨骨折",
+        "肱骨骨折",
+        "臀肌挛缩症",
+        "腰椎间盘突出症",
+        "腰椎脱位",
+        "椎间盘突出症",
+        "肩周炎"
+      ]
+    },
+    {
+      "doctor_id": "31221",
+      "name": "刘祖德",
+      "title": "主任医师",
+      "department": "脊柱外科",
+      "hospital": "上海交通大学医学院附属仁济医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "教授",
+        "博导",
+        "博士"
+      ],
+      "fudan_rank": "复旦榜A++++",
+      "specialties": "骨科、特别是脊柱外科常见疾病和疑难杂症的诊治，专业特色是颈椎、胸腰椎退变性疾病，以及脊柱创伤、肿瘤、感染、畸形的诊治。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/31221/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_1822.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_1822.html"
+      ],
+      "source_categories": [
+        "脊柱畸形"
+      ],
+      "keyword_tags": [
+        "感染",
+        "肿瘤",
+        "创伤",
+        "脊柱结核",
+        "腰椎间盘突出症",
+        "脊柱骨折",
+        "腰椎间盘退变",
+        "颈椎间盘突出症",
+        "脊柱畸形",
+        "颈椎间盘退变"
+      ]
+    },
+    {
+      "doctor_id": "43674",
+      "name": "王雷",
+      "title": "主任医师",
+      "department": "脊柱外科",
+      "hospital": "上海市第一人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "副教授",
+        "博士"
+      ],
+      "fudan_rank": null,
+      "specialties": "擅长颈椎病、腰椎间盘突出症、腰椎滑脱、脊柱侧弯、腰椎管狭窄症、脊柱肿瘤，老年脊柱疾病微创手术治疗。",
+      "consult_fee_text": 60,
+      "consult_fee_phone": 310,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/43674/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_336.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_336.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_0_3841.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_139_0.html"
+      ],
+      "source_categories": [
+        "颈椎病",
+        "腰椎间盘突出症",
+        "脊柱外科"
+      ],
+      "keyword_tags": [
+        "脊柱侧弯",
+        "肿瘤",
+        "脊柱骨折",
+        "颈椎病",
+        "腰椎管狭窄",
+        "腰椎骨折",
+        "骶尾骨骨折",
+        "腰椎间盘突出症",
+        "椎间盘突出症",
+        "脊柱转移癌",
+        "颈心综合征",
+        "胸椎病",
+        "胸椎侧弯",
+        "骶骨骨裂",
+        "腰椎滑脱"
+      ]
+    },
+    {
+      "doctor_id": "40849",
+      "name": "郑学胜",
+      "title": "主任医师",
+      "department": "神经外科",
+      "hospital": "上海交通大学医学院附属新华医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "博士"
+      ],
+      "fudan_rank": "复旦榜A++",
+      "specialties": "骶管囊肿、腰椎间盘突出症、脊髓拴系、脊柱裂、神经源性膀胱、椎管肿瘤、马尾神经综合征、糖尿病足、面肌痉挛、三叉神经痛、胶质瘤、脑膜瘤、垂体瘤、脑血管狭窄、脑梗塞、颈动脉斑块、动脉瘤、脑血管畸形、脑溢血、颅内血肿、脑外伤、颅骨缺损等。",
+      "consult_fee_text": 60,
+      "consult_fee_phone": 310,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/40849/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_3841.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_3841.html"
+      ],
+      "source_categories": [
+        "腰椎间盘突出症"
+      ],
+      "keyword_tags": [
+        "三叉神经痛",
+        "脑膜瘤",
+        "听神经瘤",
+        "面肌痉挛",
+        "胶质瘤",
+        "垂体瘤",
+        "椎管内肿瘤",
+        "骶管囊肿",
+        "脑损害",
+        "颅脑损伤",
+        "神经鞘瘤",
+        "腰椎间盘突出症",
+        "糖尿病足",
+        "脑血管畸形",
+        "脊柱裂"
+      ]
+    },
+    {
+      "doctor_id": "359329",
+      "name": "杨海松",
+      "title": "主任医师",
+      "department": "脊柱外科",
+      "hospital": "上海长征医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "博士",
+        "副教授"
+      ],
+      "fudan_rank": "复旦榜A",
+      "specialties": "腰椎间盘突出症、腰椎管狭窄症、腰椎滑脱的微创手术治疗，尤其擅长颈椎病、颈椎管狭窄症及后纵韧带骨化、黄韧带骨化的手术治疗，对脊髓畸形尤其上颈椎畸形脱位等诊治经验丰富。",
+      "consult_fee_text": 70,
+      "consult_fee_phone": 310,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/359329/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_336.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_336.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_0_3841.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_139_0.html"
+      ],
+      "source_categories": [
+        "颈椎病",
+        "腰椎间盘突出症",
+        "脊柱外科"
+      ],
+      "keyword_tags": [
+        "腰椎滑脱",
+        "腰椎间盘突出症",
+        "颈椎管狭窄症",
+        "颈椎病",
+        "腰椎管狭窄",
+        "椎管狭窄",
+        "后纵韧带骨化",
+        "颈椎畸形",
+        "脊柱骨折",
+        "颈椎脱位",
+        "脊柱炎",
+        "斜颈",
+        "脊柱韧带骨化"
+      ]
+    },
+    {
+      "doctor_id": "43670",
+      "name": "马金忠",
+      "title": "主任医师",
+      "department": "骨科",
+      "hospital": "上海市第一人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": 1200,
+      "academic_titles": [
+        "博士"
+      ],
+      "fudan_rank": null,
+      "specialties": "关节炎、类风湿性关节炎、股骨头坏死、髋关节发育不良、髋关节脱位、半月板损伤、交叉韧带损伤、人工关节翻修、关节畸形、关节周围骨肿瘤等。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/43670/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_217_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_217_0.html"
+      ],
+      "source_categories": [
+        "骨关节科"
+      ],
+      "keyword_tags": [
+        "关节炎",
+        "交叉韧带损伤",
+        "股骨头坏死",
+        "髋关节脱位",
+        "骨肿瘤",
+        "半月板损伤",
+        "风湿性关节炎",
+        "髋关节发育不良",
+        "关节畸形",
+        "肩关节脱位",
+        "软组织损伤",
+        "膝关节畸形",
+        "下肢骨关节损伤",
+        "骨关节炎",
+        "股骨头缺血性坏死"
+      ]
+    },
+    {
+      "doctor_id": "34575",
+      "name": "赵金忠",
+      "title": "主任医师",
+      "department": "骨科-运动医学科",
+      "hospital": "上海市第六人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "博士",
+        "博导"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "各种复杂性肩关节脱位、巨大肩袖损伤、不可修复性肩袖损伤、严重骨质疏松情况下肩袖损伤、严重肩关节挛缩、肩关节内骨折、肩锁关节脱位的治疗各种复杂性膝关节韧带损伤、髌股关节紊乱的治疗。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/34575/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_138_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_138_0.html"
+      ],
+      "source_categories": [
+        "运动医学科"
+      ],
+      "keyword_tags": [
+        "肩关节脱位",
+        "关节紊乱",
+        "关节内骨折",
+        "骨质疏松",
+        "肩锁关节脱位",
+        "关节挛缩",
+        "肩袖损伤",
+        "膝关节韧带损伤",
+        "运动创伤",
+        "肩袖撕裂",
+        "股骨髋臼撞击征",
+        "韧带撕裂",
+        "肌腱损伤",
+        "膝关节滑膜炎",
+        "肱骨外上髁炎"
+      ]
+    },
+    {
+      "doctor_id": "31225",
+      "name": "劳立峰",
+      "title": "主任医师",
+      "department": "脊柱外科",
+      "hospital": "上海交通大学医学院附属仁济医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "副教授",
+        "研究生导师"
+      ],
+      "fudan_rank": "复旦榜A++++",
+      "specialties": "脊柱外科，微创脊柱外科，尤其是复杂颈椎病、脊柱侧弯、脊柱肿瘤、腰椎间盘突出、腰椎管狭窄、腰椎滑脱、腰椎峡部裂、寰枢椎脱位、颈椎后纵韧带骨化、胸椎黄韧带骨化、脊柱后凸、脊柱骨折和脊髓损伤的手术及综合治疗。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/31225/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_1822.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_1822.html"
+      ],
+      "source_categories": [
+        "脊柱畸形"
+      ],
+      "keyword_tags": [
+        "腰椎滑脱",
+        "脊柱侧弯",
+        "脊柱肿瘤",
+        "腰椎管狭窄",
+        "腰椎峡部裂",
+        "寰枢椎脱位",
+        "脊柱骨折",
+        "后纵韧带骨化",
+        "脊髓损伤",
+        "颈椎病",
+        "脊柱结核",
+        "腰椎脱位",
+        "颈椎间盘突出症",
+        "神经根型颈椎病",
+        "脊髓型颈椎病"
+      ]
+    },
+    {
+      "doctor_id": "44943",
+      "name": "贺石生",
+      "title": "主任医师",
+      "department": "骨科",
+      "hospital": "上海市第十人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "博士",
+        "博导",
+        "副教授"
+      ],
+      "fudan_rank": null,
+      "specialties": "各种脊柱常见及疑难疾病的手术治疗，对枕颈畸形、颈椎病、颈椎后纵韧带骨化症、颈椎管狭窄症、胸椎间盘突出症、胸椎黄韧带骨化症、腰椎间盘突出症、腰椎滑脱症、腰椎管狭窄症、脊柱侧弯、脊柱肿瘤、脊柱结核及脊柱外伤等各类脊柱疾患的手术治疗具有丰富的经验。",
+      "consult_fee_text": 120,
+      "consult_fee_phone": 110,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/44943/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_336.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_336.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_0_3841.html"
+      ],
+      "source_categories": [
+        "颈椎病",
+        "腰椎间盘突出症"
+      ],
+      "keyword_tags": [
+        "颈椎病",
+        "脊柱结核",
+        "腰椎间盘突出症",
+        "胸椎间盘突出症",
+        "脊柱肿瘤",
+        "椎管狭窄",
+        "颈椎管狭窄症",
+        "脊柱侧弯",
+        "腰椎滑脱",
+        "颈椎后纵韧带骨化症",
+        "后纵韧带骨化",
+        "腰椎管狭窄",
+        "胸椎黄韧带骨化症",
+        "肩背痛",
+        "骨折"
+      ]
+    },
+    {
+      "doctor_id": "44916",
+      "name": "郑龙坡",
+      "title": "主任医师",
+      "department": "骨科",
+      "hospital": "上海市第十人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "教授",
+        "博士"
+      ],
+      "fudan_rank": null,
+      "specialties": "复杂骨盆及髋臼骨折的微创治疗以及股骨头无菌性坏死、膝关节骨关节炎、类风湿性关节炎的手术治疗，复杂髋、膝、肩、肘等人工关节置换与翻修，腰腿痛、腰椎间盘突出症、腰椎管狭窄症的微创治疗等。",
+      "consult_fee_text": 60,
+      "consult_fee_phone": 110,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/44916/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_3841.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_3841.html"
+      ],
+      "source_categories": [
+        "腰椎间盘突出症"
+      ],
+      "keyword_tags": [
+        "骨关节炎",
+        "腰腿痛",
+        "髋臼骨折",
+        "风湿性关节炎",
+        "腰椎间盘突出症",
+        "腰椎管狭窄",
+        "骨折",
+        "股骨颈骨折",
+        "骨缺损",
+        "膝关节损伤",
+        "股骨骨折",
+        "骨不连",
+        "下肢骨关节损伤",
+        "关节炎",
+        "骨肿瘤"
+      ]
+    },
+    {
+      "doctor_id": "377919",
+      "name": "张煜辉",
+      "title": "主任医师",
+      "department": "脊柱外科",
+      "hospital": "上海交通大学医学院附属仁济医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "博士",
+        "博士后"
+      ],
+      "fudan_rank": "复旦榜A++++",
+      "specialties": "脊柱脊髓肿瘤、各种原因导致的四肢长期疼痛瘫痪、颈椎病、腰椎间盘突出、颈椎损伤、脊柱退行性变和脊柱脊髓疾病引起的头痛、头晕、后枕部疼痛，颈肩痛、肢体疼痛、无力、麻木等症状的治疗。",
+      "consult_fee_text": 40,
+      "consult_fee_phone": 210,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/377919/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_336.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_336.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_0_3841.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_139_0.html"
+      ],
+      "source_categories": [
+        "颈椎病",
+        "腰椎间盘突出症",
+        "脊柱外科"
+      ],
+      "keyword_tags": [
+        "疼痛",
+        "头痛",
+        "颈肩痛",
+        "头晕",
+        "脊髓肿瘤",
+        "枕部疼痛",
+        "颈椎病",
+        "颈椎劳损",
+        "颈椎畸形",
+        "脊柱骨折",
+        "腰椎间盘突出症",
+        "腰椎间盘退变",
+        "脊柱退行性改变",
+        "椎管狭窄"
+      ]
+    },
+    {
+      "doctor_id": "44914",
+      "name": "杨春喜",
+      "title": "主任医师",
+      "department": "骨科",
+      "hospital": "上海市第一人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": 1200,
+      "academic_titles": [
+        "博士"
+      ],
+      "fudan_rank": null,
+      "specialties": "1.肩：肩袖损伤、脱位，复发脱位，冻结肩。2.膝： 髌骨半脱位、脱位，膝关节退变，骨刺，狭窄，半月板损伤。3.髋关节撞击症，肘关节黏连。4.尤其是肩关节疑难病微创治疗，髌骨半脱位矫正，膝关节退变的HTO-UKA-TKA阶梯化外科治疗。",
+      "consult_fee_text": 60,
+      "consult_fee_phone": 110,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/44914/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_217_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_217_0.html"
+      ],
+      "source_categories": [
+        "骨关节科"
+      ],
+      "keyword_tags": [
+        "半月板损伤",
+        "髌骨半脱位",
+        "骨刺",
+        "肩袖损伤",
+        "肩关节脱位",
+        "膝外翻",
+        "交叉韧带损伤",
+        "肩周炎",
+        "肩锁关节脱位",
+        "韧带撕裂",
+        "髌骨脱位",
+        "关节脱位",
+        "关节积液",
+        "关节痛",
+        "膝内翻"
+      ]
+    },
+    {
+      "doctor_id": "48058",
+      "name": "石关桐",
+      "title": "主任医师",
+      "department": "骨科",
+      "hospital": "上海中医药大学附属曙光医院西院",
+      "hospital_level": "三甲",
+      "registration_fee": 38,
+      "academic_titles": [
+        "教授",
+        "研究生导师"
+      ],
+      "fudan_rank": null,
+      "specialties": "治疗治疗颈、腰椎病、骨质疏松症、腰腿痛、风湿性关节炎、老年性骨关节病等。股骨头无菌性坏死、腰痛等骨伤科疑难性疾病的诊治及膏方调理。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/48058/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_217_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_217_0.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_138_0.html"
+      ],
+      "source_categories": [
+        "骨关节科",
+        "运动医学科"
+      ],
+      "keyword_tags": [
+        "骨质疏松",
+        "骨关节病",
+        "腰痛",
+        "腰椎病",
+        "风湿性关节炎",
+        "腰腿痛",
+        "颈椎病",
+        "腰椎间盘突出症",
+        "股骨头坏死",
+        "骨关节炎"
+      ]
+    },
+    {
+      "doctor_id": "31783",
+      "name": "谭军",
+      "title": "主任医师",
+      "department": "脊柱外科",
+      "hospital": "上海市东方医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "教授",
+        "博导",
+        "博士"
+      ],
+      "fudan_rank": null,
+      "specialties": "脊柱外科领域中的损伤、退变、肿瘤、畸形，以及颈椎、脊柱侧弯、腰椎后路、脊柱前路手术，显微镜下和腔镜下的微创手术。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/31783/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_1822.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_1822.html"
+      ],
+      "source_categories": [
+        "脊柱畸形"
+      ],
+      "keyword_tags": [
+        "肿瘤",
+        "脊柱侧弯",
+        "脊柱畸形",
+        "脊柱骨折",
+        "脊柱退行性改变"
+      ]
+    },
+    {
+      "doctor_id": "359441",
+      "name": "王明飞",
+      "title": "主任医师",
+      "department": "骨科",
+      "hospital": "上海市第一人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": 1200,
+      "academic_titles": [
+        "博导"
+      ],
+      "fudan_rank": null,
+      "specialties": "颈椎病、腰突症、腰椎滑脱症、颈腰椎管狭窄症及各类脊柱骨折、伤病的诊治和微创手术。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/359441/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_336.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_336.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_0_3841.html"
+      ],
+      "source_categories": [
+        "颈椎病",
+        "腰椎间盘突出症"
+      ],
+      "keyword_tags": [
+        "骨折",
+        "脊髓损伤",
+        "颈椎病",
+        "腰椎滑脱",
+        "腰椎管狭窄",
+        "腰椎间盘突出症",
+        "颈椎管狭窄症",
+        "脊柱骨折",
+        "肩周炎"
+      ]
+    },
+    {
+      "doctor_id": "47377",
+      "name": "郑拥军",
+      "title": "主任医师",
+      "department": "康复医学科",
+      "hospital": "复旦大学附属华东医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "博士后"
+      ],
+      "fudan_rank": null,
+      "specialties": "慢性疼痛（如腰疼、关节痛、偏头痛）、腰椎间盘突出微创治疗、椎间孔镜下神经根松解治疗、神经电刺激、脉冲射频、神经微创介入手术治疗带状疱疹神经痛。",
+      "consult_fee_text": null,
+      "consult_fee_phone": 210,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/47377/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_3841.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_3841.html"
+      ],
+      "source_categories": [
+        "腰椎间盘突出症"
+      ],
+      "keyword_tags": [
+        "带状疱疹",
+        "关节痛",
+        "慢性疼痛",
+        "偏头痛",
+        "神经痛",
+        "带状疱疹性神经痛",
+        "疼痛",
+        "腰椎间盘突出症",
+        "腰痛"
+      ]
+    },
+    {
+      "doctor_id": "41531",
+      "name": "倪海键",
+      "title": "副主任医师",
+      "department": "脊柱外科",
+      "hospital": "上海市第十人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "博士",
+        "副教授"
+      ],
+      "fudan_rank": null,
+      "specialties": "颈椎病、腰腿痛、腰椎间盘突出、腰椎管狭窄、腰椎滑脱的微创手术治疗，以及脊柱畸形治疗，如各种类型脊柱侧凸或测弯的三维矫形手术、儿童及青少年脊柱侧凸的规范化支具治疗等。",
+      "consult_fee_text": 49,
+      "consult_fee_phone": 210,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/41531/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_1822.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_1822.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_0_336.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_139_0.html"
+      ],
+      "source_categories": [
+        "脊柱畸形",
+        "颈椎病",
+        "脊柱外科"
+      ],
+      "keyword_tags": [
+        "腰椎管狭窄",
+        "腰腿痛",
+        "脊柱畸形",
+        "颈椎病",
+        "腰椎滑脱",
+        "椎动脉型颈椎病",
+        "神经根型颈椎病",
+        "腰椎间盘突出症",
+        "脊髓型颈椎病"
+      ]
+    },
+    {
+      "doctor_id": "31253",
+      "name": "徐卿荣",
+      "title": "主任医师",
+      "department": "骨关节外科",
+      "hospital": "上海交通大学医学院附属仁济医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "博士"
+      ],
+      "fudan_rank": "复旦榜A++++",
+      "specialties": "膝关节的相关疾病，包括关节炎、疼痛、畸形、韧带损伤、半月板破裂、软骨损伤、滑膜炎和关节周围骨折等，尤其擅长膝关节镜下微创手术和膝关节人工关节置换。同时在髋关节疾病、股骨头坏死、骨质疏松以及各类骨病等方面具有丰富的临床经验。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/31253/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_217_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_217_0.html"
+      ],
+      "source_categories": [
+        "骨关节科"
+      ],
+      "keyword_tags": [
+        "骨质疏松",
+        "韧带损伤",
+        "软骨损伤",
+        "关节炎",
+        "滑膜炎",
+        "股骨头坏死",
+        "疼痛",
+        "骨折",
+        "膝关节炎"
+      ]
+    },
+    {
+      "doctor_id": "34577",
+      "name": "何耀华",
+      "title": "主任医师",
+      "department": "骨科-运动医学科",
+      "hospital": "上海市第六人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "教授",
+        "博士",
+        "博导"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "肩关节脱位、肩袖损伤、盂唇损伤、SLAP损伤、肩峰撞击征、冻结肩（肩周炎）、肱骨大结节撕脱骨折等关节镜下的肩关节疾病诊治；熟练掌握膝关节半月板损伤、前后十字韧带损伤、前后十字韧带止点撕脱骨折等疾病的治疗。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/34577/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_138_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_138_0.html"
+      ],
+      "source_categories": [
+        "运动医学科"
+      ],
+      "keyword_tags": [
+        "肩关节脱位",
+        "肩周炎",
+        "膝关节半月板损伤",
+        "肩袖损伤",
+        "骨折",
+        "十字韧带损伤",
+        "股骨髋臼撞击征",
+        "韧带撕裂",
+        "肌肉拉伤",
+        "肱骨外上髁炎",
+        "外侧半月板撕裂",
+        "膝关节滑膜炎",
+        "韧带炎",
+        "骨赘",
+        "网球肘"
+      ]
+    },
+    {
+      "doctor_id": "31784",
+      "name": "吴德升",
+      "title": "主任医师",
+      "department": "脊柱外科",
+      "hospital": "上海市东方医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "教授",
+        "博导",
+        "博士"
+      ],
+      "fudan_rank": null,
+      "specialties": "颈椎病及颈椎临床不稳的外科治疗，颈椎创伤的结构及功能重建，颈椎肿瘤的切除与颈椎结核病灶清除结构重建，上颈椎畸形的手术矫治，腰椎退变性疾病如腰椎间盘突出症，腰椎管狭窄症等的手术干预，胸腰椎骨折脱位的后路及侧前方减压复位植骨内固定，腰椎滑脱畸形的矫正，胸腰椎结核的病灶清除内固定重建，胸腰椎肿瘤的切除，脊柱侧弯的矫治。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/31784/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_1822.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_1822.html"
+      ],
+      "source_categories": [
+        "脊柱畸形"
+      ],
+      "keyword_tags": [
+        "颈椎病",
+        "腰椎管狭窄",
+        "颈椎畸形",
+        "脊柱侧弯",
+        "腰椎间盘突出症",
+        "创伤",
+        "颈椎结核",
+        "肿瘤",
+        "腰椎结核",
+        "胸腰椎骨折",
+        "腰椎滑脱",
+        "颈椎肿瘤",
+        "结核病",
+        "脊柱畸形",
+        "颈椎后纵韧带骨化症"
+      ]
+    },
+    {
+      "doctor_id": "31247",
+      "name": "徐瑞达",
+      "title": "副主任医师",
+      "department": "骨科",
+      "hospital": "上海交通大学医学院附属仁济医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [],
+      "fudan_rank": "复旦榜A++++",
+      "specialties": "一、腰椎疾病微创诊疗1、擅长腰椎管狭窄症、腰椎间盘突出症、腰椎滑脱症的微创治疗。 2、脊柱内镜手术专家，荣获首届中国医师脊柱内镜技能大赛赛区优胜奖；微创技术覆盖颈、胸、腰全脊柱，年完成脊柱外科手术 400 余台，90% 以上腰椎手术实现日间化管理。仅需 1–2 个 1cm 微小切口，术后并发症发生率＜1.5%，术后 2–3 天即可出院；切口疼痛轻，无需长期卧床，帮助患者快速恢复生活自理能力。二、颈椎疾病精准治疗1、主攻颈椎病、颈椎间盘突出症、颈椎管狭窄症、后纵韧带骨化症。 2、所在团队为国内较早开展脊柱内镜下颈椎手术的单位之一，手术当日即可下地活动，平均住院时长＜4 天，年完成颈椎手术百余台。三、复杂脊柱疾病综合治疗1、诊治老年骨质疏松性椎体骨折、胸椎黄韧带骨化症、脊柱脊髓损伤、脊柱畸形矫正、脊柱肿瘤切除与重建。 2、融合微创与开放手术技术，推行个性化阶梯治疗方案，全程采用加速康复外科（ERAS）管理体系，兼顾安全与康复效率。",
+      "consult_fee_text": 49,
+      "consult_fee_phone": 90,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/31247/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_336.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_336.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_0_3841.html"
+      ],
+      "source_categories": [
+        "颈椎病",
+        "腰椎间盘突出症"
+      ],
+      "keyword_tags": [
+        "椎管狭窄",
+        "腰椎间盘突出症",
+        "脊柱退行性改变",
+        "脊柱骨折",
+        "神经根型颈椎病",
+        "椎动脉型颈椎病",
+        "交感神经型颈椎病",
+        "颈椎病"
+      ]
+    },
+    {
+      "doctor_id": "267963",
+      "name": "傅德皓",
+      "title": "主任医师",
+      "department": "骨科",
+      "hospital": "上海市第六人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "教授"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "创伤骨科治疗，如采用微创手术治疗脊柱骨折、髋部骨折、股骨骨折、胫腓骨骨折及肱骨骨折等。尤其擅长采用显微外科技术（皮瓣修复术和游离腓骨移植术）治疗各类骨科疑难问题，如腰椎间盘突出症、脊索瘤、糖尿病足的保肢治疗、骨与软组织缺损、骨折不愈合、股骨头坏死以及肘关节僵硬等。",
+      "consult_fee_text": 110,
+      "consult_fee_phone": 210,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/267963/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_3841.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_3841.html"
+      ],
+      "source_categories": [
+        "腰椎间盘突出症"
+      ],
+      "keyword_tags": [
+        "糖尿病足",
+        "股骨头坏死",
+        "胫腓骨骨折",
+        "脊索瘤",
+        "腰椎间盘突出症",
+        "骨折",
+        "骨折不愈合",
+        "股骨骨折",
+        "创伤",
+        "关节僵硬",
+        "肱骨骨折",
+        "脊柱骨折",
+        "慢性骨髓炎",
+        "髌骨骨折",
+        "骨缺损"
+      ]
+    },
+    {
+      "doctor_id": "406908",
+      "name": "赵剑佺",
+      "title": "副主任医师",
+      "department": "脊柱外科",
+      "hospital": "上海长征医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [],
+      "fudan_rank": "复旦榜A",
+      "specialties": "颈椎病、腰椎间盘突出、脊柱损伤、脊柱侧弯畸形等脊柱外科常见病。",
+      "consult_fee_text": 79,
+      "consult_fee_phone": 139,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/406908/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_1822.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_1822.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_139_0.html"
+      ],
+      "source_categories": [
+        "脊柱畸形",
+        "脊柱外科"
+      ],
+      "keyword_tags": [
+        "颈椎病",
+        "脊柱侧弯",
+        "椎动脉型颈椎病",
+        "脊髓型颈椎病",
+        "神经根型颈椎病",
+        "混合型颈椎病",
+        "腰椎间盘突出症",
+        "脊柱畸形",
+        "脊柱结核"
+      ]
+    },
+    {
+      "doctor_id": "31883",
+      "name": "尹峰",
+      "title": "主任医师",
+      "department": "关节与骨病专科",
+      "hospital": "上海市东方医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "教授",
+        "博导",
+        "博士"
+      ],
+      "fudan_rank": null,
+      "specialties": "股骨头无菌性坏死、膝关节、骨性关节炎、关节内骨折及肩关节损伤的诊治，还擅长人工全髋关节置换术及翻修术、人工全膝关节置换术及翻修术、膝关节单髁置换术、肱骨头置换术、人工踝关节置换术、人工肘关节置换术、复杂肿瘤保肢肿瘤假体置换术、髋关节镜手术、关节周围骨折重建内固定术、四肢长干骨骨折切开复位内固定手术、脂肪干细胞治疗膝骨性关节炎等多种术式。",
+      "consult_fee_text": null,
+      "consult_fee_phone": 210,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/31883/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_217_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_217_0.html"
+      ],
+      "source_categories": [
+        "骨关节科"
+      ],
+      "keyword_tags": [
+        "肩关节损伤",
+        "肿瘤",
+        "关节炎",
+        "膝关节炎",
+        "骨折",
+        "关节内骨折"
+      ]
+    },
+    {
+      "doctor_id": "43032",
+      "name": "庞金辉",
+      "title": "主任医师",
+      "department": "运动医学科",
+      "hospital": "上海市第一人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "博士",
+        "研究生导师"
+      ],
+      "fudan_rank": null,
+      "specialties": "四肢关节各种急慢性疼痛、损伤的诊治，以及关节的微创手术，包括肩袖损伤、肩周炎、膝交叉韧带损伤、半月板损伤、软骨损伤、肘关节不稳、踝关节疼痛、跟腱炎、跟痛症等疾病。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/43032/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_138_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_138_0.html"
+      ],
+      "source_categories": [
+        "运动医学科"
+      ],
+      "keyword_tags": [
+        "跟腱炎",
+        "软骨损伤",
+        "肩袖损伤",
+        "慢性疼痛",
+        "交叉韧带损伤",
+        "肩周炎",
+        "半月板损伤",
+        "踝关节疼痛",
+        "膝关节韧带损伤",
+        "运动损伤",
+        "复发性脱位",
+        "膝关节半月板损伤",
+        "踝关节扭伤"
+      ]
+    },
+    {
+      "doctor_id": "31785",
+      "name": "张亚东",
+      "title": "主任医师",
+      "department": "脊柱外科",
+      "hospital": "上海市东方医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "博士",
+        "教授"
+      ],
+      "fudan_rank": null,
+      "specialties": "脊椎骨折脱位，脊髓神经损伤，颈肩腰腿痛，脊柱侧弯畸形，脊椎结核，脊柱肿瘤，四肢骨折不连、畸形矫正等骨科病的治疗。尤其在颈椎间盘突出，腰椎间盘突出，腰椎管狭窄，椎体脱位治疗，及退变性脊柱畸形的矫正，老年骨质疏松性骨折的治疗效果优良。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/31785/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_1822.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_1822.html"
+      ],
+      "source_categories": [
+        "脊柱畸形"
+      ],
+      "keyword_tags": [
+        "骨折",
+        "脊椎结核",
+        "脊柱侧弯",
+        "腰椎管狭窄",
+        "脊柱畸形",
+        "腰腿痛",
+        "骨质疏松",
+        "脊柱肿瘤",
+        "神经损伤",
+        "脊柱骨折"
+      ]
+    },
+    {
+      "doctor_id": "38380",
+      "name": "席焱海",
+      "title": "副主任医师",
+      "department": "脊柱外科",
+      "hospital": "上海长征医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "博士"
+      ],
+      "fudan_rank": "复旦榜A",
+      "specialties": "各类颈、胸、腰椎疾病（颈椎病、腰椎间盘突出症、腰椎管狭窄症等）手术治疗，尤其以微创、微损伤治疗为特色（腰椎椎间孔/盘镜手术治疗、常规手术微小化手术治疗等）。对于颈椎病、腰椎间盘突出症、腰椎管狭窄症、脊柱骨折、脊柱畸形、颈椎微创、腰椎微创、脊柱微创治疗腰痛、颈痛、腰腿痛、腿脚麻木、手麻手痛、颈椎引起头晕、跛行、行走不稳踩棉花等疾病和症状都有丰富的治疗经验。",
+      "consult_fee_text": 30,
+      "consult_fee_phone": 40,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/38380/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_336.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_336.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_0_3841.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_139_0.html"
+      ],
+      "source_categories": [
+        "颈椎病",
+        "腰椎间盘突出症",
+        "脊柱外科"
+      ],
+      "keyword_tags": [
+        "颈椎病",
+        "腰椎间盘突出症",
+        "腰椎管狭窄",
+        "头晕",
+        "神经根型颈椎病",
+        "腰腿痛",
+        "颈肩痛",
+        "脊柱骨折",
+        "手麻",
+        "腰痛",
+        "脊髓型颈椎病",
+        "椎管狭窄",
+        "四肢麻木",
+        "椎动脉型颈椎病",
+        "间歇性跛行"
+      ]
+    },
+    {
+      "doctor_id": "419204",
+      "name": "余波",
+      "title": "主任医师",
+      "department": "康复医学科",
+      "hospital": "上海市第一人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [],
+      "fudan_rank": null,
+      "specialties": "颈腰椎病变、肩袖损伤、骨科运动损伤遗留功能障碍的康复评定、PRP注射、运动贴扎等综合康复诊疗方法，及脑卒中偏瘫、脑瘫肢体痉挛等神经损伤疾患的康复评定、治疗与肉毒毒素注射等。",
+      "consult_fee_text": 210,
+      "consult_fee_phone": 310,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/419204/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_3841.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_3841.html"
+      ],
+      "source_categories": [
+        "腰椎间盘突出症"
+      ],
+      "keyword_tags": [
+        "偏瘫",
+        "运动损伤",
+        "脑瘫",
+        "神经损伤",
+        "腰椎病",
+        "脑卒中",
+        "肩袖损伤",
+        "肩袖综合征",
+        "颈椎劳损",
+        "颈椎骨质增生",
+        "颈椎间盘突出症",
+        "腰椎骨质增生",
+        "颈椎间盘退变",
+        "腰椎间盘突出症"
+      ]
+    },
+    {
+      "doctor_id": "406912",
+      "name": "王伟恒",
+      "title": "副主任医师",
+      "department": "脊柱外科",
+      "hospital": "上海长征医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "博士"
+      ],
+      "fudan_rank": "复旦榜A",
+      "specialties": "脊柱微创化，规范化诊疗。脊柱退变性疾病、脊柱外伤、脊柱畸形、脊柱结核、脊柱侧弯、脊柱侧凸、脊柱肿瘤、脊柱骨折、脊柱裂、未分化脊柱关节病的诊治。",
+      "consult_fee_text": null,
+      "consult_fee_phone": 110,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/406912/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_1822.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_1822.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_139_0.html"
+      ],
+      "source_categories": [
+        "脊柱畸形",
+        "脊柱外科"
+      ],
+      "keyword_tags": [
+        "脊柱结核",
+        "脊柱侧弯",
+        "脊柱肿瘤",
+        "未分化脊柱关节病",
+        "脊柱裂",
+        "脊柱畸形",
+        "脊柱骨折",
+        "腰椎间盘突出症",
+        "椎管狭窄"
+      ]
+    },
+    {
+      "doctor_id": "34578",
+      "name": "陈云苏",
+      "title": "主任医师",
+      "department": "骨科-关节外科",
+      "hospital": "上海市第六人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "博士"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "人工髋关节、膝关节置换和翻修手术，小切口微创髋、膝关节置换，髋关节表面置换及导航支持下微创膝关节置换。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/34578/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_217_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_217_0.html"
+      ],
+      "source_categories": [
+        "骨关节科"
+      ],
+      "keyword_tags": [
+        "肩锁关节脱位",
+        "钙化性肌腱炎",
+        "膝关节脱位",
+        "关节损伤",
+        "膝关节炎",
+        "关节功能障碍",
+        "原发性骨关节炎",
+        "关节痛",
+        "髋关节滑膜炎",
+        "关节脱位",
+        "滑囊炎",
+        "髋关节炎",
+        "继发性骨关节炎"
+      ]
+    },
+    {
+      "doctor_id": "46895",
+      "name": "陈世益",
+      "title": "主任医师",
+      "department": "运动医学科",
+      "hospital": "复旦大学附属华山医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "博导",
+        "教授"
+      ],
+      "fudan_rank": "复旦榜A++++",
+      "specialties": "膝、肩、踝、跟腱、髌股关节等损伤、不稳与疼痛的关节镜微创诊治，包括软骨、韧带、半月板、肩袖、肌肉、肌腱创伤。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/46895/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_138_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_138_0.html"
+      ],
+      "source_categories": [
+        "运动医学科"
+      ],
+      "keyword_tags": [
+        "疼痛",
+        "创伤",
+        "踝部扭伤",
+        "韧带炎",
+        "骨赘",
+        "网球肘",
+        "运动创伤",
+        "肩袖撕裂",
+        "肌腱损伤",
+        "膝关节滑膜炎",
+        "股骨髋臼撞击征",
+        "韧带撕裂",
+        "肌肉拉伤",
+        "膝关节韧带损伤",
+        "肩袖损伤"
+      ]
+    },
+    {
+      "doctor_id": "31796",
+      "name": "赵定麟",
+      "title": "主任医师",
+      "department": "脊柱外科",
+      "hospital": "上海市东方医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "博导",
+        "教授"
+      ],
+      "fudan_rank": null,
+      "specialties": "各种疑难杂症，脊柱（颈椎、胸椎和腰椎）和骨关节疾患的诊断及手术，尤其是颈椎病的诊断、手术及预防，颈椎骨折脱位合并瘫痪的治疗，胸、腰椎各种伤患及手术。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/31796/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_1822.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_1822.html"
+      ],
+      "source_categories": [
+        "脊柱畸形"
+      ],
+      "keyword_tags": [
+        "颈椎病",
+        "颈椎骨折脱位",
+        "瘫痪",
+        "颈椎骨折",
+        "肢体瘫痪",
+        "脊柱畸形",
+        "腰椎管狭窄"
+      ]
+    },
+    {
+      "doctor_id": "43941",
+      "name": "林强",
+      "title": "副主任医师",
+      "department": "推拿科",
+      "hospital": "上海市第一人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [],
+      "fudan_rank": null,
+      "specialties": "推拿治疗肱骨外上髁炎、颈椎病、肩周炎、腰椎间盘突出、膝骨关节炎、婴幼儿斜颈、腹泻、便秘、厌食以及保健推拿。",
+      "consult_fee_text": 60,
+      "consult_fee_phone": 310,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/43941/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_336.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_336.html"
+      ],
+      "source_categories": [
+        "颈椎病"
+      ],
+      "keyword_tags": [
+        "骨关节炎",
+        "肱骨外上髁炎",
+        "颈椎病",
+        "肩周炎",
+        "腹泻",
+        "便秘",
+        "斜颈",
+        "椎动脉型颈椎病",
+        "脊髓型颈椎病",
+        "椎间盘突出症",
+        "膝关节炎"
+      ]
+    }
+  ]
+}

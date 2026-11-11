@@ -1,0 +1,1955 @@
+{
+  "metadata": {
+    "category": "tcm",
+    "category_label": "中医/针灸",
+    "generated_at": "2026-11-03T18:01:32+08:00",
+    "source": "有来医生（m.youlai.cn）",
+    "city": "上海",
+    "hospital_filter": "三甲",
+    "selection_rule": "各来源列表交叉采集、按医生ID去重；来源内优先主任/副主任医师，跨来源轮转选取以覆盖不同亚专科；每科室最多50人",
+    "fallback_to_attending_for_minimum_30": false,
+    "doctor_count": 50,
+    "fee_unit": "CNY（元）；null表示来源页未展示该服务费用",
+    "source_pages": [
+      {
+        "label": "针灸科",
+        "url": "https://m.youlai.cn/doctorrecommendlist_2_112_0.html",
+        "status": "success",
+        "page_title": "上海市针灸科专家排名_上海市针灸科专家哪个最好 - 有来医生",
+        "raw_doctor_count": 20,
+        "eligible_count": 9
+      },
+      {
+        "label": "中医骨科",
+        "url": "https://m.youlai.cn/doctorrecommendlist_2_96_0.html",
+        "status": "success",
+        "page_title": "上海市中医骨科专家排名_上海市中医骨科专家哪个最好 - 有来医生",
+        "raw_doctor_count": 20,
+        "eligible_count": 10
+      },
+      {
+        "label": "中医科",
+        "url": "https://m.youlai.cn/doctorrecommendlist_2_108_0.html",
+        "status": "success",
+        "page_title": "上海市中医科专家排名_上海市中医科专家哪个最好 - 有来医生",
+        "raw_doctor_count": 20,
+        "eligible_count": 20
+      },
+      {
+        "label": "中医按摩科",
+        "url": "https://m.youlai.cn/doctorrecommendlist_2_113_0.html",
+        "status": "success",
+        "page_title": "上海市中医按摩科专家排名_上海市中医按摩科专家哪个最好 - 有来医生",
+        "raw_doctor_count": 20,
+        "eligible_count": 15
+      },
+      {
+        "label": "中医外科",
+        "url": "https://m.youlai.cn/doctorrecommendlist_2_114_0.html",
+        "status": "success",
+        "page_title": "上海市中医外科专家排名_上海市中医外科专家哪个最好 - 有来医生",
+        "raw_doctor_count": 20,
+        "eligible_count": 16
+      }
+    ],
+    "errors": []
+  },
+  "doctors": [
+    {
+      "doctor_id": "44187",
+      "name": "张中一",
+      "title": "主任医师",
+      "department": "针灸科",
+      "hospital": "上海中医药大学附属岳阳中西医结合医院",
+      "hospital_level": "三甲",
+      "registration_fee": 200,
+      "academic_titles": [],
+      "fudan_rank": null,
+      "specialties": "中风后遗症、神经根型颈椎病、腰椎间盘突出、面瘫、失眠、面神经炎、腰肌劳损、交感神经型颈椎病等。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/44187/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_112_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_112_0.html"
+      ],
+      "source_categories": [
+        "针灸科"
+      ],
+      "keyword_tags": [
+        "失眠",
+        "腰肌劳损",
+        "面神经炎",
+        "面瘫",
+        "交感神经型颈椎病",
+        "神经根型颈椎病",
+        "腰椎间盘突出症",
+        "脑卒中",
+        "腰椎劳损",
+        "颈椎病",
+        "脑中风后遗症"
+      ]
+    },
+    {
+      "doctor_id": "35222",
+      "name": "茅建春",
+      "title": "主任医师",
+      "department": "风湿科",
+      "hospital": "上海中医药大学附属龙华医院",
+      "hospital_level": "三甲",
+      "registration_fee": 100,
+      "academic_titles": [
+        "教授",
+        "研究生导师"
+      ],
+      "fudan_rank": null,
+      "specialties": "痛风、骨关节病、骨质疏松、系统性红斑狼疮、干燥综合征、类风湿关节炎、强直性脊柱炎等疑难杂症以及体质虚弱等免疫失调性疾病的辨证调理。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/35222/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_96_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_96_0.html"
+      ],
+      "source_categories": [
+        "中医骨科"
+      ],
+      "keyword_tags": [
+        "系统性红斑狼疮",
+        "强直性脊柱炎",
+        "痛风",
+        "类风湿关节炎",
+        "骨质疏松",
+        "干燥综合征",
+        "骨关节病"
+      ]
+    },
+    {
+      "doctor_id": "31526",
+      "name": "沈惠风",
+      "title": "主任医师",
+      "department": "中医科",
+      "hospital": "上海交通大学医学院附属仁济医院",
+      "hospital_level": "三甲",
+      "registration_fee": 10,
+      "academic_titles": [
+        "教授"
+      ],
+      "fudan_rank": "复旦榜A++++",
+      "specialties": "消化道(慢性胃炎、结肠炎、胆道疾病)、呼吸道(慢阻肺、各种咳嗽、哮喘、过敏性鼻炎)各类肾病及慢性肾功能不全非透析治疗失眠、眩晕、心悸、冬令膏方。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/31526/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_108_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_108_0.html"
+      ],
+      "source_categories": [
+        "中医科"
+      ],
+      "keyword_tags": [
+        "心悸",
+        "眩晕",
+        "失眠",
+        "慢性阻塞性肺疾病",
+        "咳嗽性哮喘",
+        "慢性胃炎",
+        "结肠炎",
+        "支气管哮喘",
+        "咳嗽",
+        "头痛",
+        "高血压",
+        "慢性支气管炎",
+        "慢性肾衰竭",
+        "肾炎",
+        "过敏性鼻炎"
+      ]
+    },
+    {
+      "doctor_id": "44173",
+      "name": "金义成",
+      "title": "主任医师",
+      "department": "推拿科",
+      "hospital": "上海中医药大学附属岳阳中西医结合医院",
+      "hospital_level": "三甲",
+      "registration_fee": 198,
+      "academic_titles": [
+        "教授"
+      ],
+      "fudan_rank": null,
+      "specialties": "小儿咳嗽、哮喘、积滞、肠系膜淋巴结炎、生长发育迟缓、相火证、抽动症、脊柱侧弯等儿科疾患。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/44173/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_113_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_113_0.html"
+      ],
+      "source_categories": [
+        "中医按摩科"
+      ],
+      "keyword_tags": [
+        "脊柱侧弯",
+        "支气管哮喘",
+        "抽动症",
+        "发育迟缓",
+        "小儿咳嗽",
+        "淋巴结炎",
+        "急性肠系膜淋巴结炎"
+      ]
+    },
+    {
+      "doctor_id": "32286",
+      "name": "薛慈民",
+      "title": "主任医师",
+      "department": "中医外科",
+      "hospital": "上海中医药大学附属曙光医院东院",
+      "hospital_level": "三甲",
+      "registration_fee": 51,
+      "academic_titles": [
+        "副教授",
+        "研究生导师"
+      ],
+      "fudan_rank": null,
+      "specialties": "甲状腺结节、囊肿、桥本甲状腺炎、前列腺增生、前列腺炎、下肢动脉硬化闭塞症、下肢静脉曲张等甲状腺疾病、泌尿男科疾病和血管病；以及甲状腺癌术后、前列腺癌术后调理以及亚健康的中医治疗。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/32286/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_114_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_114_0.html"
+      ],
+      "source_categories": [
+        "中医外科"
+      ],
+      "keyword_tags": [
+        "桥本甲状腺炎",
+        "前列腺增生",
+        "甲状腺结节",
+        "甲状腺癌",
+        "甲状腺囊肿",
+        "前列腺炎",
+        "下肢静脉曲张",
+        "下肢动脉硬化闭塞症"
+      ]
+    },
+    {
+      "doctor_id": "45350",
+      "name": "洪钰芳",
+      "title": "主任医师",
+      "department": "针灸科",
+      "hospital": "上海市中医医院",
+      "hospital_level": "三甲",
+      "registration_fee": 102,
+      "academic_titles": [],
+      "fudan_rank": null,
+      "specialties": "治疗各种痛症、神经系统、运动系统和内科、妇科方面疾病，如中风及脑中风后遗症、头晕、头痛、三叉神经痛、面瘫、面肌痉挛、运动神经元病变、颈肩腰腿痛、痛经、过敏性疾病、湿疹、牛皮癣、强直性脊柱炎、冠心病、慢性胃炎、慢性肠炎、睡眠障碍等疾病，以及亚健康方面的调理。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/45350/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_112_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_112_0.html"
+      ],
+      "source_categories": [
+        "针灸科"
+      ],
+      "keyword_tags": [
+        "头痛",
+        "面肌痉挛",
+        "湿疹",
+        "腰腿痛",
+        "慢性胃炎",
+        "头晕",
+        "强直性脊柱炎",
+        "癣",
+        "过敏",
+        "冠心病",
+        "运动神经元病",
+        "睡眠障碍",
+        "三叉神经痛",
+        "面瘫",
+        "痛经"
+      ]
+    },
+    {
+      "doctor_id": "35247",
+      "name": "葛京化",
+      "title": "主任医师",
+      "department": "骨伤科",
+      "hospital": "上海中医药大学附属龙华医院",
+      "hospital_level": "三甲",
+      "registration_fee": 20,
+      "academic_titles": [
+        "副教授"
+      ],
+      "fudan_rank": null,
+      "specialties": "中西医结合诊治各类骨伤科疾病，中医特色调理虚证、关节炎、类风湿关节炎、滑膜炎、骨质疏松症等病症。精于颈腰椎病系统综合治疗，涵盖颈椎病、腰椎间盘突出、脊柱侧弯、强直性脊柱炎、椎管狭窄等；规范诊治股骨头坏死、肩周炎、骨性关节炎、膝关节损伤、肌肉拉伤、腱鞘炎等骨伤科常见疾病。熟练开展骨折与创伤整复固定、人工关节置换、关节镜、小儿骨科矫形等手术，同时擅长脊柱骨折、关节置换等各类骨伤术后的功能康复与调理，形成手术治疗+术后康复+中医调理一体化诊疗模式。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/35247/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_96_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_96_0.html"
+      ],
+      "source_categories": [
+        "中医骨科"
+      ],
+      "keyword_tags": [
+        "颈椎病",
+        "骨质疏松",
+        "股骨头坏死",
+        "脊柱侧弯",
+        "肌挛缩",
+        "股骨颈骨折",
+        "股骨骨折",
+        "肱骨骨折",
+        "臀肌挛缩症",
+        "腰椎间盘突出症",
+        "腰椎脱位",
+        "椎间盘突出症",
+        "肩周炎"
+      ]
+    },
+    {
+      "doctor_id": "31536",
+      "name": "沈蓉",
+      "title": "主任医师",
+      "department": "中医科",
+      "hospital": "上海交通大学医学院附属仁济医院",
+      "hospital_level": "三甲",
+      "registration_fee": 9,
+      "academic_titles": [
+        "教授"
+      ],
+      "fudan_rank": "复旦榜A++++",
+      "specialties": "治疗中医内科病症尤其对慢性肾小球肾炎、风湿病、狼疮性肾炎、慢性尿路感染、慢性肾功能不全等泌尿系统疾病；慢性胃炎、慢性胆囊炎、慢性结肠炎等消化系统疾病；肿瘤术后调理、更年期综合症、月经不调、盆腔炎等病症的中医治疗方面有自己的见解和用药心得。",
+      "consult_fee_text": null,
+      "consult_fee_phone": 310,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/31536/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_108_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_108_0.html"
+      ],
+      "source_categories": [
+        "中医科"
+      ],
+      "keyword_tags": [
+        "狼疮性肾炎",
+        "肾功能不全",
+        "尿路感染",
+        "慢性肾小球肾炎",
+        "更年期综合征",
+        "慢性胆囊炎",
+        "风湿病",
+        "慢性结肠炎",
+        "慢性胃炎",
+        "盆腔炎",
+        "慢性肾功能衰竭",
+        "复发性风湿病",
+        "月经不调"
+      ]
+    },
+    {
+      "doctor_id": "43940",
+      "name": "章家福",
+      "title": "主任医师",
+      "department": "推拿科",
+      "hospital": "上海市第一人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [],
+      "fudan_rank": null,
+      "specialties": "治疗腰椎间盘突出症、颈性眩晕、脊髓型颈椎病、疲劳综合征、抑郁症、慢性浅表性胃炎和原发性痛经等病症。近年来对生活方式病如疲劳综合征、慢阻肺的康复治疗有一定的研究。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/43940/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_113_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_113_0.html"
+      ],
+      "source_categories": [
+        "中医按摩科"
+      ],
+      "keyword_tags": [
+        "慢性浅表性胃炎",
+        "脊髓型颈椎病",
+        "疲劳",
+        "抑郁症",
+        "疲劳综合征",
+        "腰椎间盘突出症",
+        "原发性痛经",
+        "眩晕",
+        "痛经",
+        "颈椎脱位",
+        "慢性萎缩性胃炎",
+        "颈椎病",
+        "椎动脉型颈椎病",
+        "急性浅表性胃炎",
+        "椎间盘突出症"
+      ]
+    },
+    {
+      "doctor_id": "35414",
+      "name": "张静喆",
+      "title": "主任医师",
+      "department": "普通外科",
+      "hospital": "上海中医药大学附属龙华医院",
+      "hospital_level": "三甲",
+      "registration_fee": 50,
+      "academic_titles": [
+        "教授",
+        "博导"
+      ],
+      "fudan_rank": null,
+      "specialties": "各类胆胰结石和炎症疾病、肝胆胰胃肠及甲状腺肿瘤的中医治疗，腹部多脏器大手术后康复、消化道重建术后的后遗症及疑难并发症（如肠黏连、括约肌功能障碍、吻合口狭窄反流等）的中医治疗。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/35414/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_114_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_114_0.html"
+      ],
+      "source_categories": [
+        "中医外科"
+      ],
+      "keyword_tags": [
+        "急性胰腺炎",
+        "慢性胰腺炎",
+        "胆管结石",
+        "肠粘连",
+        "胆管炎",
+        "黄疸",
+        "恶性肿瘤",
+        "胰腺炎",
+        "急性胆囊炎",
+        "胆囊炎",
+        "胆囊息肉",
+        "甲状腺疾病",
+        "胰腺结石",
+        "慢性胆囊炎",
+        "胆囊癌"
+      ]
+    },
+    {
+      "doctor_id": "440049",
+      "name": "马桂芝",
+      "title": "主任医师",
+      "department": "针灸科",
+      "hospital": "上海市中西医结合医院",
+      "hospital_level": "三甲",
+      "registration_fee": 40,
+      "academic_titles": [
+        "研究生导师"
+      ],
+      "fudan_rank": null,
+      "specialties": "运用针灸治疗颈肩腰腿痛、中风、面瘫、偏头痛、失眠、眩晕等，并擅长运用针灸及穴位埋线手法治疗单纯性肥胖、便秘、月经不调、痛经、慢性盆腔炎、多囊卵巢综合征等。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/440049/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_112_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_112_0.html"
+      ],
+      "source_categories": [
+        "针灸科"
+      ],
+      "keyword_tags": [
+        "失眠",
+        "眩晕",
+        "单纯性肥胖",
+        "偏头痛",
+        "月经不调",
+        "慢性盆腔炎",
+        "面瘫",
+        "痛经",
+        "腰腿痛",
+        "便秘",
+        "多囊卵巢综合征",
+        "脑卒中",
+        "功能性便秘",
+        "脑中风后遗症",
+        "顽固性便秘"
+      ]
+    },
+    {
+      "doctor_id": "48058",
+      "name": "石关桐",
+      "title": "主任医师",
+      "department": "骨科",
+      "hospital": "上海中医药大学附属曙光医院西院",
+      "hospital_level": "三甲",
+      "registration_fee": 38,
+      "academic_titles": [
+        "教授",
+        "研究生导师"
+      ],
+      "fudan_rank": null,
+      "specialties": "治疗治疗颈、腰椎病、骨质疏松症、腰腿痛、风湿性关节炎、老年性骨关节病等。股骨头无菌性坏死、腰痛等骨伤科疑难性疾病的诊治及膏方调理。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/48058/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_96_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_96_0.html"
+      ],
+      "source_categories": [
+        "中医骨科"
+      ],
+      "keyword_tags": [
+        "骨质疏松",
+        "骨关节病",
+        "腰痛",
+        "腰椎病",
+        "风湿性关节炎",
+        "腰腿痛",
+        "颈椎病",
+        "腰椎间盘突出症",
+        "股骨头坏死",
+        "骨关节炎"
+      ]
+    },
+    {
+      "doctor_id": "34290",
+      "name": "蔡定芳",
+      "title": "主任医师",
+      "department": "中医科",
+      "hospital": "复旦大学附属中山医院",
+      "hospital_level": "三甲",
+      "registration_fee": 300,
+      "academic_titles": [
+        "教授"
+      ],
+      "fudan_rank": "复旦榜A++++",
+      "specialties": "中西医结合治疗中风、帕金森病、睡眠障碍及疑难杂症、心血管疾病、肿瘤。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/34290/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_108_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_108_0.html"
+      ],
+      "source_categories": [
+        "中医科"
+      ],
+      "keyword_tags": [
+        "帕金森",
+        "肿瘤",
+        "帕金森病",
+        "睡眠障碍",
+        "高血压",
+        "睡眠-觉醒节律障碍",
+        "脑卒中",
+        "睡眠不足综合征"
+      ]
+    },
+    {
+      "doctor_id": "43942",
+      "name": "刘洪波",
+      "title": "主任医师",
+      "department": "推拿科",
+      "hospital": "上海市第一人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [],
+      "fudan_rank": null,
+      "specialties": "微调手法治疗颈性眩晕、脊髓型颈椎病、急慢性腰痛等疑难病症。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/43942/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_113_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_113_0.html"
+      ],
+      "source_categories": [
+        "中医按摩科"
+      ],
+      "keyword_tags": [
+        "眩晕",
+        "脊髓型颈椎病",
+        "腰痛",
+        "交感神经型颈椎病",
+        "颈椎间盘突出症",
+        "头晕",
+        "颈椎劳损",
+        "颈椎病",
+        "颈椎脱位",
+        "颈椎骨折"
+      ]
+    },
+    {
+      "doctor_id": "35425",
+      "name": "蒋学洲",
+      "title": "主任医师",
+      "department": "中西医结合泌尿外科",
+      "hospital": "上海中医药大学附属龙华医院",
+      "hospital_level": "三甲",
+      "registration_fee": 9,
+      "academic_titles": [],
+      "fudan_rank": null,
+      "specialties": "男科疾病：阳痿早泄、男性不育、弱精症、性功能障碍、各种男科疑难杂症。泌尿系统结石、泌尿系统肿瘤、尿路感染、膀胱过度活动症、前列腺炎、前列腺增生等。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/35425/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_114_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_114_0.html"
+      ],
+      "source_categories": [
+        "中医外科"
+      ],
+      "keyword_tags": [
+        "肿瘤",
+        "前列腺肿瘤",
+        "输尿管癌",
+        "精囊炎",
+        "死精症",
+        "肾肿瘤",
+        "泌尿系结石",
+        "前列腺炎",
+        "早泄",
+        "前列腺囊肿",
+        "输尿管结石",
+        "前列腺脓肿",
+        "男性性功能障碍",
+        "肾结石",
+        "性功能障碍"
+      ]
+    },
+    {
+      "doctor_id": "31529",
+      "name": "史永奋",
+      "title": "副主任医师",
+      "department": "中医科",
+      "hospital": "上海交通大学医学院附属仁济医院",
+      "hospital_level": "三甲",
+      "registration_fee": 9,
+      "academic_titles": [],
+      "fudan_rank": "复旦榜A++++",
+      "specialties": "运用头排针治疗中风后遗症，运用针灸疗法结合中医中药治疗面瘫、咳嗽、颈肩腰腿痛、月经不调、风湿免疫病等，肿瘤术后调治。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/31529/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_112_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_112_0.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_108_0.html"
+      ],
+      "source_categories": [
+        "针灸科",
+        "中医科"
+      ],
+      "keyword_tags": [
+        "面瘫",
+        "类风湿关节炎",
+        "腰腿痛",
+        "周围性面瘫",
+        "咳嗽",
+        "月经不调",
+        "痛风",
+        "风湿性关节炎",
+        "月经过多",
+        "慢性咳嗽",
+        "风湿病",
+        "脑中风后遗症",
+        "颈肩痛"
+      ]
+    },
+    {
+      "doctor_id": "35249",
+      "name": "许理忠",
+      "title": "副主任医师",
+      "department": "骨伤科",
+      "hospital": "上海中医药大学附属龙华医院",
+      "hospital_level": "三甲",
+      "registration_fee": 42,
+      "academic_titles": [
+        "副教授"
+      ],
+      "fudan_rank": null,
+      "specialties": "慢性胃肠功能紊乱、顽固性失眠、亚健康、各种虚症的中药调理;通过膏方补虚扶正、调理体质、改善慢性病症状，帮助人体恢复平衡状态;骨质疏松症、各种慢性筋骨病、骨关节病、股骨头无菌性坏死、骨肿瘤等疾病的中医调理治疗以及颈椎病、腰椎病、骨折等术后的康复调理。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/35249/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_96_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_96_0.html"
+      ],
+      "source_categories": [
+        "中医骨科"
+      ],
+      "keyword_tags": [
+        "骨折",
+        "颈椎病",
+        "骨质疏松",
+        "骨质增生",
+        "腰椎病",
+        "中指骨折",
+        "先天性髌骨脱位",
+        "下颌骨骨折",
+        "上颌骨骨折",
+        "骨盆骨折",
+        "踝部骨折",
+        "踝部扭伤",
+        "腰椎滑脱",
+        "关节损伤",
+        "韧带损伤"
+      ]
+    },
+    {
+      "doctor_id": "36269",
+      "name": "金长娟",
+      "title": "主任医师",
+      "department": "中西医结合科",
+      "hospital": "上海市胸科医院",
+      "hospital_level": "三甲",
+      "registration_fee": 68,
+      "academic_titles": [],
+      "fudan_rank": "复旦榜A",
+      "specialties": "肺结节、肺癌、胸腺癌、食道癌、贲门癌、乳腺癌、胃癌、脑瘤、癌性积液，放化疗毒副反应、癌症晚期术后存活期的调理和肿瘤的防治。尤其对于晚期非小细胞肺癌、食道癌和难治性心衰、以及支气管炎、支气管扩张症等呼吸系统疾病有着丰富的临床经验。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/36269/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_108_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_108_0.html"
+      ],
+      "source_categories": [
+        "中医科"
+      ],
+      "keyword_tags": [
+        "肺癌",
+        "肿瘤",
+        "支气管炎",
+        "肺结节",
+        "非小细胞肺癌",
+        "乳腺癌",
+        "脑瘤",
+        "胃癌",
+        "贲门癌",
+        "支气管扩张症",
+        "胸腺癌",
+        "食管癌",
+        "心力衰竭"
+      ]
+    },
+    {
+      "doctor_id": "43944",
+      "name": "钟力炜",
+      "title": "主任医师",
+      "department": "推拿科",
+      "hospital": "上海市第一人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "博导"
+      ],
+      "fudan_rank": null,
+      "specialties": "腰突症、颈椎病、颈性头痛、中风后遗症、高血压等治疗。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/43944/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_113_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_113_0.html"
+      ],
+      "source_categories": [
+        "中医按摩科"
+      ],
+      "keyword_tags": [
+        "高血压",
+        "头痛",
+        "颈椎病",
+        "神经根型颈椎病",
+        "颈椎间盘突出症",
+        "脊髓型颈椎病",
+        "颈椎间盘退变",
+        "脑卒中",
+        "脑中风后遗症",
+        "颈椎劳损",
+        "混合型颈椎病",
+        "颈椎脱位"
+      ]
+    },
+    {
+      "doctor_id": "35432",
+      "name": "应荐",
+      "title": "主任医师",
+      "department": "中西医结合泌尿外科",
+      "hospital": "上海中医药大学附属龙华医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "博士"
+      ],
+      "fudan_rank": null,
+      "specialties": "采用中草药，配合针刺、艾灸、敷脐等外治方法综合治疗慢性前列腺炎、不育症、性功能障碍（阳痿、早泄、阳强、性欲低下、性欲亢进、不射精等）、泌尿生殖系统感染（尿路感染、生殖道感染、盆腔炎等）、泌尿生殖系肿瘤，以及泌尿系统各种疑难杂病。",
+      "consult_fee_text": 60,
+      "consult_fee_phone": 210,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/35432/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_114_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_114_0.html"
+      ],
+      "source_categories": [
+        "中医外科"
+      ],
+      "keyword_tags": [
+        "尿路感染",
+        "阳痿",
+        "肿瘤",
+        "生殖道感染",
+        "早泄",
+        "慢性前列腺炎",
+        "性欲亢进",
+        "性功能障碍",
+        "感染",
+        "盆腔炎",
+        "泌尿系统感染",
+        "男性不育症",
+        "泌尿系肿瘤",
+        "慢性盆腔炎"
+      ]
+    },
+    {
+      "doctor_id": "32206",
+      "name": "王美娟",
+      "title": "副主任医师",
+      "department": "针灸科",
+      "hospital": "上海中医药大学附属曙光医院东院",
+      "hospital_level": "三甲",
+      "registration_fee": 10,
+      "academic_titles": [],
+      "fudan_rank": null,
+      "specialties": "治疗中风、痛症、面瘫、前列腺增生、失眠等。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/32206/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_112_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_112_0.html"
+      ],
+      "source_categories": [
+        "针灸科"
+      ],
+      "keyword_tags": [
+        "失眠",
+        "面瘫",
+        "前列腺增生",
+        "脑卒中"
+      ]
+    },
+    {
+      "doctor_id": "35265",
+      "name": "李晨光",
+      "title": "副主任医师",
+      "department": "骨伤科",
+      "hospital": "上海中医药大学附属龙华医院",
+      "hospital_level": "三甲",
+      "registration_fee": 100,
+      "academic_titles": [],
+      "fudan_rank": null,
+      "specialties": "石氏伤科综合技术，内治服用中药益气化瘀、调理脏腑，外治配合手法针灸疏通经络、理筋正骨。石氏伤科针灸，是伤科最安全有效的治伤工具，治疗各种关节和肌肉疼痛具有显著优势。擅长治疗颈椎病，肩周炎，腰椎间盘突出疾病，骨性关节炎，软组织急慢性损伤。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/35265/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_96_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_96_0.html"
+      ],
+      "source_categories": [
+        "中医骨科"
+      ],
+      "keyword_tags": [
+        "肩周炎",
+        "关节炎",
+        "颈椎病",
+        "疼痛",
+        "神经根型颈椎病",
+        "软组织损伤",
+        "骨关节炎",
+        "交感神经型颈椎病",
+        "脊髓型颈椎病",
+        "腰椎间盘突出症",
+        "椎动脉型颈椎病",
+        "混合型颈椎病",
+        "椎间盘突出症",
+        "颈椎间盘突出症"
+      ]
+    },
+    {
+      "doctor_id": "41775",
+      "name": "朱德增",
+      "title": "主任医师",
+      "department": "中医内科",
+      "hospital": "上海长海医院",
+      "hospital_level": "三甲",
+      "registration_fee": 198,
+      "academic_titles": [
+        "教授",
+        "博导"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "中西医结合防治糖尿病、中医中药治疗难治性黄疸、中医药治疗呼吸系统和消化系统疾病。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/41775/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_108_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_108_0.html"
+      ],
+      "source_categories": [
+        "中医科"
+      ],
+      "keyword_tags": [
+        "糖尿病",
+        "黄疸",
+        "胆汁反流性胃炎",
+        "十二指肠溃疡",
+        "慢性萎缩性胃炎",
+        "病理性黄疸",
+        "胃溃疡",
+        "咳嗽",
+        "结缔组织病",
+        "胃肠炎",
+        "慢性胃炎",
+        "支气管哮喘",
+        "肿瘤"
+      ]
+    },
+    {
+      "doctor_id": "47433",
+      "name": "朱鼎成",
+      "title": "主任医师",
+      "department": "推拿科",
+      "hospital": "复旦大学附属华东医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "教授"
+      ],
+      "fudan_rank": null,
+      "specialties": "诊治失眠、颈椎病、月经不调、慢性疲劳综合征等疾病。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/47433/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_113_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_113_0.html"
+      ],
+      "source_categories": [
+        "中医按摩科"
+      ],
+      "keyword_tags": [
+        "颈椎病",
+        "月经不调",
+        "慢性疲劳综合征",
+        "失眠",
+        "疲劳",
+        "神经根型颈椎病",
+        "非器质性失眠症",
+        "网球肘",
+        "慢性失眠症",
+        "顽固性失眠",
+        "混合型颈椎病",
+        "椎动脉型颈椎病",
+        "疲劳综合征"
+      ]
+    },
+    {
+      "doctor_id": "38876",
+      "name": "薛慈民",
+      "title": "主任医师",
+      "department": "中医外科",
+      "hospital": "上海中医药大学附属曙光医院西院",
+      "hospital_level": "三甲",
+      "registration_fee": 51,
+      "academic_titles": [
+        "副教授"
+      ],
+      "fudan_rank": null,
+      "specialties": "甲状腺结节、囊肿、桥本甲状腺炎、前列腺增生、前列腺炎、下肢动脉硬化闭塞症、下肢静脉曲张等甲状腺疾病、泌尿男科疾病和血管病；以及甲状腺癌术后、前列腺癌术后调理以及亚健康的中医治疗。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/38876/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_114_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_114_0.html"
+      ],
+      "source_categories": [
+        "中医外科"
+      ],
+      "keyword_tags": [
+        "前列腺增生",
+        "甲状腺癌",
+        "桥本甲状腺炎",
+        "甲状腺囊肿",
+        "前列腺炎",
+        "下肢静脉曲张",
+        "甲状腺结节",
+        "下肢动脉硬化闭塞症"
+      ]
+    },
+    {
+      "doctor_id": "32207",
+      "name": "张潮",
+      "title": "副主任医师",
+      "department": "针灸科",
+      "hospital": "上海中医药大学附属曙光医院东院",
+      "hospital_level": "三甲",
+      "registration_fee": 9,
+      "academic_titles": [
+        "副教授",
+        "研究生导师",
+        "博士"
+      ],
+      "fudan_rank": null,
+      "specialties": "辨脉论治、针药结合治疗头痛，失眠，咳嗽，胃肠病，儿科诸症，内科杂病。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/32207/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_112_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_112_0.html"
+      ],
+      "source_categories": [
+        "针灸科"
+      ],
+      "keyword_tags": [
+        "头痛",
+        "小儿鼻炎",
+        "胃肠炎",
+        "失眠",
+        "小儿胃炎",
+        "胃肠胀气",
+        "小儿咳嗽",
+        "胃肠功能紊乱",
+        "咳嗽",
+        "急性胃肠炎",
+        "小儿感冒"
+      ]
+    },
+    {
+      "doctor_id": "38761",
+      "name": "徐震球",
+      "title": "副主任医师",
+      "department": "骨伤科",
+      "hospital": "上海中医药大学附属曙光医院东院",
+      "hospital_level": "三甲",
+      "registration_fee": 12,
+      "academic_titles": [],
+      "fudan_rank": null,
+      "specialties": "中医针药结合手法治疗颈肩腰腿痛、颈椎病、腰椎间盘突出、肩周炎、关节损伤、筋膜炎、脊柱小关节紊乱、骨关节炎、股骨头坏死及网球肘、骨质疏松等疾病。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/38761/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_96_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_96_0.html"
+      ],
+      "source_categories": [
+        "中医骨科"
+      ],
+      "keyword_tags": [
+        "肩周炎",
+        "网球肘",
+        "腰椎间盘突出症",
+        "骨质疏松",
+        "膝关节损伤",
+        "腰腿痛",
+        "颈肩痛",
+        "骨关节炎",
+        "关节损伤",
+        "腰椎小关节紊乱",
+        "筋膜炎",
+        "关节紊乱",
+        "股骨头坏死"
+      ]
+    },
+    {
+      "doctor_id": "42859",
+      "name": "李昊",
+      "title": "主任医师",
+      "department": "中医科",
+      "hospital": "上海市同济医院",
+      "hospital_level": "三甲",
+      "registration_fee": 41,
+      "academic_titles": [],
+      "fudan_rank": null,
+      "specialties": "在中医内科常见病、多发病及疑难杂病的诊治方面具有丰富经验。擅长慢性萎缩性胃炎、对扭转萎缩、肠化生、异型增生等病理改变；运用中医治疗消化道肿瘤以及治疗顽固性失眠具有良好效果。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/42859/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_108_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_108_0.html"
+      ],
+      "source_categories": [
+        "中医科"
+      ],
+      "keyword_tags": [
+        "肿瘤",
+        "慢性萎缩性胃炎",
+        "顽固性失眠",
+        "胰腺炎",
+        "结肠癌",
+        "先天性肠狭窄",
+        "食道癌",
+        "小儿肠炎",
+        "功能性胃肠病",
+        "萎缩性鼻炎",
+        "大肠息肉",
+        "高血压",
+        "耳鸣",
+        "功能性肠病",
+        "乙状结肠肿瘤"
+      ]
+    },
+    {
+      "doctor_id": "394618",
+      "name": "萧枫",
+      "title": "主任医师",
+      "department": "推拿科",
+      "hospital": "复旦大学附属华东医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [],
+      "fudan_rank": null,
+      "specialties": "推拿科的常见病、疑难病治疗，如肩周炎、颈腰部慢性劳损、中风后遗症等，积累了较丰富的临床经验。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/394618/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_113_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_113_0.html"
+      ],
+      "source_categories": [
+        "中医按摩科"
+      ],
+      "keyword_tags": [
+        "肩周炎",
+        "颈椎病",
+        "脑中风后遗症",
+        "腰椎间盘突出症",
+        "腰椎管狭窄",
+        "腰椎劳损",
+        "面瘫",
+        "肩关节损伤",
+        "肩袖撕裂",
+        "脑卒中",
+        "肩关节脱位",
+        "颈椎劳损"
+      ]
+    },
+    {
+      "doctor_id": "376284",
+      "name": "周绍荣",
+      "title": "主任医师",
+      "department": "中医外科",
+      "hospital": "上海中医药大学附属曙光医院西院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [],
+      "fudan_rank": null,
+      "specialties": "中西医结合诊治外科腺体疾病，包括良性甲状腺结节、桥本甲状腺炎、甲状腺癌、男性前列腺炎、老年男性良性前列腺增生；周围血管病疾病，包括下肢静脉曲张、下肢动脉硬化闭塞症、糖尿病足、血栓闭塞性脉管炎、下肢丹毒等，以及各类难愈性创面。",
+      "consult_fee_text": 110,
+      "consult_fee_phone": 170,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/376284/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_114_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_114_0.html"
+      ],
+      "source_categories": [
+        "中医外科"
+      ],
+      "keyword_tags": [
+        "糖尿病足",
+        "甲状腺结节",
+        "下肢动脉硬化",
+        "甲状腺癌",
+        "丹毒",
+        "下肢静脉曲张",
+        "前列腺增生",
+        "血栓闭塞性脉管炎",
+        "糖尿病",
+        "前列腺炎",
+        "桥本甲状腺炎",
+        "下肢动脉硬化闭塞症",
+        "慢性前列腺炎",
+        "单纯性下肢静脉曲张"
+      ]
+    },
+    {
+      "doctor_id": "35267",
+      "name": "倪承浩",
+      "title": "副主任医师",
+      "department": "针灸科",
+      "hospital": "上海中医药大学附属龙华医院",
+      "hospital_level": "三甲",
+      "registration_fee": 78,
+      "academic_titles": [
+        "研究生导师"
+      ],
+      "fudan_rank": null,
+      "specialties": "神经系统疾病的治疗，如中风后遗症、面瘫、面肌痉挛、癫痫、帕金森病、失眠、耳鸣、耳聋等。以及颈腰椎疾病的治疗，如颈椎病、颈肩综合症、颈肌疲劳症、腰椎间盘突出症、腰肌劳损等。同时对各种痛症，如头痛、面痛、胃痛、痛经、各种关节痛、各种神经痛等都能达到较好的治疗效果。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/35267/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_112_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_112_0.html"
+      ],
+      "source_categories": [
+        "针灸科"
+      ],
+      "keyword_tags": [
+        "耳鸣",
+        "胃痛",
+        "帕金森",
+        "颈椎病",
+        "关节痛",
+        "帕金森病",
+        "头痛",
+        "腰肌劳损",
+        "痛经",
+        "神经痛",
+        "腰椎间盘突出症",
+        "癫痫",
+        "面瘫",
+        "耳聋",
+        "疲劳"
+      ]
+    },
+    {
+      "doctor_id": "40495",
+      "name": "丁盛",
+      "title": "副主任医师",
+      "department": "关节矫形外科",
+      "hospital": "上海市光华中西医结合医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [],
+      "fudan_rank": null,
+      "specialties": "人工关节置换、关节镜操作以及四肢关节矫形（如关节畸形、脱位）。",
+      "consult_fee_text": 30,
+      "consult_fee_phone": 110,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/40495/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_96_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_96_0.html"
+      ],
+      "source_categories": [
+        "中医骨科"
+      ],
+      "keyword_tags": [
+        "关节畸形",
+        "先天性膝关节畸形",
+        "先天性骨与关节畸形",
+        "关节脱位",
+        "膝关节畸形"
+      ]
+    },
+    {
+      "doctor_id": "42864",
+      "name": "孙瑞涛",
+      "title": "主任医师",
+      "department": "中医科",
+      "hospital": "上海市同济医院",
+      "hospital_level": "三甲",
+      "registration_fee": 12,
+      "academic_titles": [],
+      "fudan_rank": null,
+      "specialties": "运用中医药辨证治疗各种慢性肾脏疾病（如蛋白尿、血尿，复发性尿路感染，慢性肾功能不全，慢性肾衰竭及糖尿病肾病、痛风肾等）；慢性胃炎，萎缩性胃炎伴肠化；对亚健康、年老体虚、月经不规则、易感冒免疫力低下及儿童体弱人群的中医药调养。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/42864/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_108_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_108_0.html"
+      ],
+      "source_categories": [
+        "中医科"
+      ],
+      "keyword_tags": [
+        "月经不调",
+        "月经紊乱",
+        "萎缩性胃炎",
+        "慢性胃炎",
+        "慢性肾衰竭",
+        "肾衰竭",
+        "慢性肾炎",
+        "肾盂肾炎",
+        "肾炎",
+        "糖尿病肾病",
+        "肾功能不全",
+        "蛋白尿",
+        "血尿",
+        "尿路感染",
+        "肾病综合征"
+      ]
+    },
+    {
+      "doctor_id": "43941",
+      "name": "林强",
+      "title": "副主任医师",
+      "department": "推拿科",
+      "hospital": "上海市第一人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [],
+      "fudan_rank": null,
+      "specialties": "推拿治疗肱骨外上髁炎、颈椎病、肩周炎、腰椎间盘突出、膝骨关节炎、婴幼儿斜颈、腹泻、便秘、厌食以及保健推拿。",
+      "consult_fee_text": 60,
+      "consult_fee_phone": 310,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/43941/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_113_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_113_0.html"
+      ],
+      "source_categories": [
+        "中医按摩科"
+      ],
+      "keyword_tags": [
+        "颈椎病",
+        "肩周炎",
+        "腹泻",
+        "便秘",
+        "斜颈",
+        "骨关节炎",
+        "肱骨外上髁炎",
+        "脊髓型颈椎病",
+        "椎间盘突出症",
+        "膝关节炎",
+        "椎动脉型颈椎病"
+      ]
+    },
+    {
+      "doctor_id": "41787",
+      "name": "郑茂荣",
+      "title": "主任医师",
+      "department": "中医外科",
+      "hospital": "上海长海医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "教授"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "诊治皮肤病的疑难疾病，尤其擅长于皮肤病的中西医结合治疗及银屑病诊治。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/41787/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_114_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_114_0.html"
+      ],
+      "source_categories": [
+        "中医外科"
+      ],
+      "keyword_tags": [
+        "银屑病",
+        "接触性睑皮炎",
+        "脱毛",
+        "甲银屑病",
+        "荨麻疹",
+        "放射性皮炎",
+        "银屑病性关节炎",
+        "脓疱型银屑病",
+        "皮炎",
+        "毛虫皮炎",
+        "湿疹样皮炎",
+        "手部皮炎",
+        "烧伤",
+        "扁平疣",
+        "脱发"
+      ]
+    },
+    {
+      "doctor_id": "440189",
+      "name": "高明",
+      "title": "副主任医师",
+      "department": "针灸科",
+      "hospital": "上海中医药大学附属曙光医院东院",
+      "hospital_level": "三甲",
+      "registration_fee": 29,
+      "academic_titles": [
+        "研究生导师"
+      ],
+      "fudan_rank": null,
+      "specialties": "针灸治疗颈、肩、腰、腿痛、头痛等各种痛症、中风后遗症、帕金森病、面瘫等神经系统疾病、失眠、耳鸣、耳聋、干眼症、月经不调等病证。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/440189/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_112_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_112_0.html"
+      ],
+      "source_categories": [
+        "针灸科"
+      ],
+      "keyword_tags": [
+        "失眠",
+        "干眼症",
+        "帕金森",
+        "月经不调",
+        "头痛",
+        "耳聋",
+        "面瘫",
+        "耳鸣",
+        "帕金森病",
+        "脑卒中",
+        "脑中风后遗症",
+        "腰腿痛"
+      ]
+    },
+    {
+      "doctor_id": "45310",
+      "name": "劳继英",
+      "title": "副主任医师",
+      "department": "骨伤科",
+      "hospital": "上海市中医医院",
+      "hospital_level": "三甲",
+      "registration_fee": 10,
+      "academic_titles": [],
+      "fudan_rank": null,
+      "specialties": "治疗颈、肩、腰部疾病，以及股骨头坏死、强直性脊柱炎、骨关节炎、关节僵硬、骨折、扭伤及慢性劳损等疾病。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/45310/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_96_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_96_0.html"
+      ],
+      "source_categories": [
+        "中医骨科"
+      ],
+      "keyword_tags": [
+        "扭伤",
+        "骨关节炎",
+        "股骨头坏死",
+        "关节僵硬",
+        "强直性脊柱炎",
+        "骨折",
+        "颈椎病",
+        "膝关节损伤",
+        "腰腿痛",
+        "骨质增生",
+        "腰痛",
+        "韧带损伤",
+        "腰椎管狭窄"
+      ]
+    },
+    {
+      "doctor_id": "43917",
+      "name": "王松坡",
+      "title": "主任医师",
+      "department": "中医科",
+      "hospital": "上海市第一人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": 200,
+      "academic_titles": [
+        "博士",
+        "教授"
+      ],
+      "fudan_rank": null,
+      "specialties": "中医药治疗消化系疾病和肿瘤，特别是对胃肠肿瘤、反流性食管炎、溃疡性结肠炎、胃癌前病变、慢性肝病等积累了比较丰富的经验。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/43917/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_108_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_108_0.html"
+      ],
+      "source_categories": [
+        "中医科"
+      ],
+      "keyword_tags": [
+        "反流",
+        "肠肿瘤",
+        "肿瘤",
+        "慢性肝病",
+        "反流性食管炎",
+        "胃癌",
+        "溃疡性结肠炎",
+        "直肠癌",
+        "盲肠癌",
+        "嗜酸性粒细胞性食管炎",
+        "胃炎",
+        "药物性食管炎",
+        "大肠癌",
+        "食管炎",
+        "低位直肠癌"
+      ]
+    },
+    {
+      "doctor_id": "32058",
+      "name": "李伟民",
+      "title": "副主任医师",
+      "department": "推拿科",
+      "hospital": "上海市东方医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [],
+      "fudan_rank": null,
+      "specialties": "中西医结合抗衰老，食疗，肿瘤康复，带状疱疹等神经性疼痛的中医康复，颈肩腰腿痛、颈椎病的治疗，盆腔发育不全引起的遗尿、痛经、不孕。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/32058/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_113_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_113_0.html"
+      ],
+      "source_categories": [
+        "中医按摩科"
+      ],
+      "keyword_tags": [
+        "痛经",
+        "腰腿痛",
+        "带状疱疹",
+        "疼痛",
+        "肿瘤",
+        "遗尿",
+        "颈椎病",
+        "椎动脉型颈椎病",
+        "不孕症",
+        "不孕不育",
+        "交感神经型颈椎病",
+        "脊髓型颈椎病"
+      ]
+    },
+    {
+      "doctor_id": "41788",
+      "name": "苏永华",
+      "title": "主任医师",
+      "department": "中医外科",
+      "hospital": "上海长海医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "教授",
+        "博导",
+        "博士"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "中晚期恶性肿瘤、化疗性静脉炎、放化疗毒副作用、慢性难愈性创面、以及湿疹、银屑病、白癜风、痤疮等皮肤疾病的中医药治疗。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/41788/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_114_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_114_0.html"
+      ],
+      "source_categories": [
+        "中医外科"
+      ],
+      "keyword_tags": [
+        "银屑病",
+        "静脉炎",
+        "湿疹",
+        "痤疮",
+        "白癜风",
+        "恶性肿瘤",
+        "酒精肝",
+        "脂肪肝",
+        "噎膈",
+        "肺癌",
+        "食管癌",
+        "胃癌",
+        "胆囊结石"
+      ]
+    },
+    {
+      "doctor_id": "601081",
+      "name": "邓海平",
+      "title": "副主任医师",
+      "department": "针灸科",
+      "hospital": "上海中医药大学附属曙光医院东院",
+      "hospital_level": "三甲",
+      "registration_fee": 12,
+      "academic_titles": [
+        "副教授",
+        "博士"
+      ],
+      "fudan_rank": null,
+      "specialties": "针灸治疗：尿失禁、癌性疲劳、神经系统疾病、疼痛性疾病、亚健康调理，疑难杂症，如糖尿病周围神经病变、顽固性失眠、更年期综合征等。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/601081/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_112_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_112_0.html"
+      ],
+      "source_categories": [
+        "针灸科"
+      ],
+      "keyword_tags": [
+        "颈椎间盘突出症",
+        "面瘫",
+        "颈椎病",
+        "颈椎脱位",
+        "周围神经病",
+        "糖尿病",
+        "腰椎滑脱",
+        "腰椎间盘突出症",
+        "骨关节炎",
+        "腰椎管狭窄",
+        "腰椎脱位",
+        "脑卒中",
+        "尿失禁",
+        "椎间盘突出症",
+        "糖尿病神经病变"
+      ]
+    },
+    {
+      "doctor_id": "360872",
+      "name": "车兆勤",
+      "title": "副主任医师",
+      "department": "骨伤科",
+      "hospital": "上海中医药大学附属龙华医院",
+      "hospital_level": "三甲",
+      "registration_fee": 200,
+      "academic_titles": [],
+      "fudan_rank": null,
+      "specialties": "运用整体医学技术治疗股骨头坏死、颈肩腰腿痛、腰椎间盘突出、颈椎病，以及骨折、关节损伤、韧带损伤、肌肉神经损伤、软组织损伤、脊柱损伤等。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/360872/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_96_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_96_0.html"
+      ],
+      "source_categories": [
+        "中医骨科"
+      ],
+      "keyword_tags": [
+        "骨折",
+        "软组织损伤",
+        "韧带损伤",
+        "神经损伤",
+        "颈椎病",
+        "关节损伤",
+        "股骨头坏死",
+        "腰腿痛",
+        "腰椎间盘突出症",
+        "椎间盘突出症"
+      ]
+    },
+    {
+      "doctor_id": "46939",
+      "name": "牛惠志",
+      "title": "主任医师",
+      "department": "中西医结合科",
+      "hospital": "复旦大学附属华山医院",
+      "hospital_level": "三甲",
+      "registration_fee": 52,
+      "academic_titles": [
+        "教授"
+      ],
+      "fudan_rank": "复旦榜A++++",
+      "specialties": "中西医结合治疗肾炎、糖尿病肾病、慢性肾衰竭、尿路感染、慢性胃炎、腹泻便秘、痛风、失眠焦虑、月经不调及湿疹、痤疮、荨麻疹、紫癜、银屑病、黄褐斑等慢性皮肤病以及恶性肿瘤术后的中医调治。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/46939/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_108_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_108_0.html"
+      ],
+      "source_categories": [
+        "中医科"
+      ],
+      "keyword_tags": [
+        "尿路感染",
+        "慢性腹泻",
+        "糖尿病肾病",
+        "痤疮",
+        "慢性胃炎",
+        "血小板减少性紫癜",
+        "月经不调",
+        "荨麻疹",
+        "失眠",
+        "肾炎",
+        "银屑病",
+        "黄褐斑",
+        "便秘",
+        "焦虑症",
+        "湿疹"
+      ]
+    },
+    {
+      "doctor_id": "37472",
+      "name": "罗志洪",
+      "title": "副主任医师",
+      "department": "推拿科",
+      "hospital": "上海交通大学医学院附属瑞金医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [],
+      "fudan_rank": "复旦榜A++++",
+      "specialties": "颈椎病、腰椎间盘突出症、肩周炎等疾病。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/37472/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_113_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_113_0.html"
+      ],
+      "source_categories": [
+        "中医按摩科"
+      ],
+      "keyword_tags": [
+        "颈椎病",
+        "肩周炎",
+        "腰椎间盘突出症",
+        "骨关节炎",
+        "化脓性关节炎",
+        "髋关节骨关节炎",
+        "幼年特发性关节炎",
+        "反应性关节炎",
+        "外周型脊柱关节炎",
+        "原发性骨关节炎",
+        "银屑病性关节炎",
+        "椎间盘突出症",
+        "创伤性关节炎",
+        "继发性骨关节炎",
+        "腰椎间盘退变"
+      ]
+    },
+    {
+      "doctor_id": "43978",
+      "name": "周忠介",
+      "title": "主任医师",
+      "department": "中医外科",
+      "hospital": "上海市第一人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "副教授"
+      ],
+      "fudan_rank": null,
+      "specialties": "乳房疾病、痛风症、肿瘤病人术后二级治疗、外科手术切口迟缓愈合、各类窦道漏管以及牛皮癣、慢性湿疹的诊治。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/43978/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_114_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_114_0.html"
+      ],
+      "source_categories": [
+        "中医外科"
+      ],
+      "keyword_tags": [
+        "慢性湿疹",
+        "肿瘤",
+        "癣",
+        "痛风",
+        "乳房萎缩",
+        "痛风性关节炎",
+        "原发性痛风",
+        "乳房湿疹",
+        "继发性痛风"
+      ]
+    },
+    {
+      "doctor_id": "735810",
+      "name": "赵东峰",
+      "title": "副主任医师",
+      "department": "骨伤科",
+      "hospital": "上海中医药大学附属龙华医院",
+      "hospital_level": "三甲",
+      "registration_fee": 36,
+      "academic_titles": [
+        "博士"
+      ],
+      "fudan_rank": null,
+      "specialties": "针药配合手法防治骨与软组织退变疾病（颈椎病、小关节紊乱、椎间盘突出症、肩周炎、腰肌劳损、骨关节炎、滑膜炎等）和其他疾病（高血压、头痛、中风、失眠、荨麻疹、带状疱疹、耳聋、耳鸣、鼻窦炎、小儿厌食等）以及中医美容（埋线、祛斑、除痤疮等）。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/735810/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_96_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_96_0.html"
+      ],
+      "source_categories": [
+        "中医骨科"
+      ],
+      "keyword_tags": [
+        "高血压",
+        "滑膜炎",
+        "带状疱疹",
+        "关节紊乱",
+        "颈椎病",
+        "小儿厌食",
+        "鼻窦炎",
+        "失眠",
+        "肩周炎",
+        "痤疮",
+        "耳聋",
+        "椎间盘突出症",
+        "头痛",
+        "骨关节炎",
+        "腰肌劳损"
+      ]
+    },
+    {
+      "doctor_id": "359629",
+      "name": "周阿高",
+      "title": "主任医师",
+      "department": "中医科",
+      "hospital": "上海交通大学医学院附属第九人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": 50,
+      "academic_titles": [
+        "教授"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "各类良、恶性肿瘤、肿瘤术后调理、肺结节、乳腺结节、甲状腺结节等各类结节疾病、及胃肠病、呼吸病、便秘、痤疮、失眠、口腔溃疡、亚健康等以及膏方调理。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/359629/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_108_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_108_0.html"
+      ],
+      "source_categories": [
+        "中医科"
+      ],
+      "keyword_tags": [
+        "肿瘤",
+        "胃癌",
+        "痤疮",
+        "腹泻",
+        "脂肪肝",
+        "口腔溃疡",
+        "慢性咳嗽",
+        "高血脂",
+        "便秘",
+        "肠癌",
+        "慢性胃炎",
+        "冠心病",
+        "肺结节",
+        "失眠",
+        "胃肠炎"
+      ]
+    },
+    {
+      "doctor_id": "37473",
+      "name": "王勇",
+      "title": "副主任医师",
+      "department": "推拿科",
+      "hospital": "上海交通大学医学院附属瑞金医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [],
+      "fudan_rank": "复旦榜A++++",
+      "specialties": "诊治中风后遗症、各关节错位、腰突症、颈性眩晕、颞下颌关节紊乱、疲劳综合症等疾病。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/37473/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_113_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_113_0.html"
+      ],
+      "source_categories": [
+        "中医按摩科"
+      ],
+      "keyword_tags": [
+        "眩晕",
+        "疲劳",
+        "关节紊乱",
+        "先天性髋关节脱位",
+        "脑中风后遗症",
+        "寰枢关节脱位",
+        "先天性髌骨脱位",
+        "寰枢椎脱位",
+        "肘关节脱位",
+        "踝关节脱位",
+        "桡骨头脱位",
+        "先天性膝关节脱位",
+        "小儿先天性髋关节脱位",
+        "肩关节脱位",
+        "关节脱位"
+      ]
+    },
+    {
+      "doctor_id": "43979",
+      "name": "钱耀明",
+      "title": "主任医师",
+      "department": "中医外科",
+      "hospital": "上海市第一人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [],
+      "fudan_rank": null,
+      "specialties": "肛肠疾病：这是他最为擅长的领域，尤其在痔疮（痔）、肛瘘等疾病的手术治疗方面非常有经验。他能融合中医的传统特色与西医的技术优势。其他中医外科疾病：对乳房疾病、丹毒、痛风、骨质增生和骨质疏松等疾病的治疗也拥有丰富的经验。其他病症：对于颈肩腰腿疼痛、伤口迟愈等情况，他采用中药内服与外敷相结合、药物及传统手术相结合的方式治疗，效果显著。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/43979/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_114_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_114_0.html"
+      ],
+      "source_categories": [
+        "中医外科"
+      ],
+      "keyword_tags": [
+        "肛瘘",
+        "感染",
+        "骨质增生",
+        "疖",
+        "痛风",
+        "丹毒",
+        "痈",
+        "挫伤",
+        "痔疮",
+        "疔疮",
+        "鼻疖",
+        "继发性痛风",
+        "痛风性关节炎",
+        "原发性痛风",
+        "外耳道疖"
+      ]
+    },
+    {
+      "doctor_id": "380233",
+      "name": "孟胜喜",
+      "title": "主任医师",
+      "department": "中医科",
+      "hospital": "上海市第六人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "博士",
+        "研究生导师"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "长期从事临床工作，临床经验丰富，擅长运用中医药防治脑血管疾病（卒中、缺血性脑血管病、血管性痴呆、眩晕、阿尔茨海默病、脑小血管病等）、心血管疾病（冠心病、高血压病）、脾胃肝胆病（慢性胃炎、消化性溃疡）、内分泌疾病（糖尿病等）等诊治。",
+      "consult_fee_text": 59,
+      "consult_fee_phone": 310,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/380233/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_108_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_108_0.html"
+      ],
+      "source_categories": [
+        "中医科"
+      ],
+      "keyword_tags": [
+        "慢性胃炎",
+        "阿尔茨海默病",
+        "高血压",
+        "糖尿病",
+        "血管性痴呆",
+        "冠心病",
+        "消化性溃疡",
+        "脑血管病",
+        "眩晕",
+        "眩晕症",
+        "脑血管痉挛",
+        "出血性脑卒中",
+        "脑血管畸形",
+        "脑血管瘤",
+        "脑卒中"
+      ]
+    }
+  ]
+}

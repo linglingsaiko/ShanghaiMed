@@ -15,9 +15,10 @@ from typing import Dict, List
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 SHANGHAIMED_ROOT = Path(__file__).resolve().parents[2]
-DEFAULT_MATCHER_PATH = (
-    SHANGHAIMED_ROOT / "doctor-database" / "matching-engine" / "matcher.py"
-)
+# Deployment layout: matching engine and its JSON databases are vendored inside
+# this repository (matching-engine/ + *.json at the repo root). The legacy
+# SHANGHAIMED_MATCHER_PATH env var still wins if set.
+DEFAULT_MATCHER_PATH = PROJECT_ROOT / "matching-engine" / "matcher.py"
 
 API_BASE_URL = "https://ark.cn-beijing.volces.com/api/v3"
 API_KEY_ENV = "ARK_API_KEY"
@@ -33,14 +34,17 @@ MODEL_DEEPSEEK = "deepseek-v4-1-flash-261017"
 
 # 每个阶段的主力+备选模型链
 MODEL_CHAINS: Dict[str, List[str]] = {
-    "ocr_kimi": [MODEL_KIMI, MODEL_GLM, MODEL_GLM_FLASH],
-    "ocr_doubao": [MODEL_GLM, MODEL_DOUBAO, MODEL_GLM_FLASH],
-    "ocr_integrate": [MODEL_KIMI, MODEL_GLM_FLASH, MODEL_DEEPSEEK],
-    "timeline_kimi": [MODEL_KIMI, MODEL_GLM, MODEL_GLM_FLASH],
-    "timeline_doubao": [MODEL_GLM, MODEL_GLM_FLASH, MODEL_KIMI],
-    "timeline_integrate": [MODEL_KIMI, MODEL_GLM_FLASH, MODEL_DEEPSEEK],
-    "report_generate": [MODEL_KIMI, MODEL_GLM_FLASH, MODEL_DEEPSEEK],
-    "report_review": [MODEL_KIMI, MODEL_GLM_FLASH, MODEL_DEEPSEEK],
+    # 实测：doubao 支持 vision（OCR 首选）；glm-5-2 文本整合结构最符合 pipeline（沙箱全链路验证）；
+    # doubao 做文本整合会返回空结果，不可用；kimi-k3 推理模型 vision 会 hang。
+    # 故 OCR 用 doubao，文本整合/时间线/报告用 glm-5-2，glm-flash/deepseek 备选。
+    "ocr_kimi": [MODEL_DOUBAO, MODEL_GLM_FLASH],
+    "ocr_doubao": [MODEL_DOUBAO, MODEL_GLM_FLASH],
+    "ocr_integrate": [MODEL_GLM, MODEL_GLM_FLASH, MODEL_DEEPSEEK],
+    "timeline_kimi": [MODEL_GLM, MODEL_GLM_FLASH, MODEL_DEEPSEEK],
+    "timeline_doubao": [MODEL_GLM, MODEL_GLM_FLASH, MODEL_DEEPSEEK],
+    "timeline_integrate": [MODEL_GLM, MODEL_GLM_FLASH, MODEL_DEEPSEEK],
+    "report_generate": [MODEL_GLM, MODEL_GLM_FLASH, MODEL_DEEPSEEK],
+    "report_review": [MODEL_GLM, MODEL_GLM_FLASH, MODEL_DEEPSEEK],
 }
 
 
@@ -76,7 +80,7 @@ class PipelineConfig:
     glm_flash_model: str = MODEL_GLM_FLASH
     deepseek_model: str = MODEL_DEEPSEEK
     model_chains: Dict[str, List[str]] = field(default_factory=lambda: dict(MODEL_CHAINS))
-    timeout_seconds: float = 45.0
+    timeout_seconds: float = 90.0
     max_retries: int = 1
     retry_backoff_seconds: float = 1.0
     max_tokens: int = 8192
@@ -109,7 +113,7 @@ def load_config() -> PipelineConfig:
         kimi_model=os.getenv("ARK_KIMI_MODEL", MODEL_KIMI).strip(),
         doubao_model=os.getenv("ARK_DOUBAO_MODEL", MODEL_DOUBAO).strip(),
         glm_model=os.getenv("ARK_GLM_MODEL", MODEL_GLM).strip(),
-        timeout_seconds=_env_float("ARK_TIMEOUT_SECONDS", 45.0),
+        timeout_seconds=_env_float("ARK_TIMEOUT_SECONDS", 90.0),
         max_retries=_env_int("ARK_MAX_RETRIES", 1),
         retry_backoff_seconds=_env_float("ARK_RETRY_BACKOFF_SECONDS", 1.0),
         max_tokens=_env_int("ARK_MAX_TOKENS", 8192),

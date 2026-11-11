@@ -1959,6 +1959,8 @@
         body.is-paid .hero,
         body.is-paid .demo-strip,
         body.is-paid #consent-declined,
+        body.is-paid #report-center,
+        body.is-paid #access-credentials,
         body.is-paid #upload-section,
         body.is-paid #progress-section,
         body.is-paid #preview-section,
@@ -2000,6 +2002,254 @@
           break-inside: avoid;
         }
       }
+      .report-center {
+        scroll-margin-top: 24px;
+      }
+
+      .report-center-intro {
+        max-width: 720px;
+      }
+
+      .report-center-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+        gap: 22px;
+      }
+
+      .report-center-panel {
+        min-width: 0;
+        padding: 20px;
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        background: #fafcfd;
+      }
+
+      .report-center-panel h3 {
+        margin-bottom: 6px;
+        font-size: 16px;
+      }
+
+      .report-center-panel > p {
+        margin-bottom: 16px;
+        color: var(--color-muted-text);
+        font-size: 12px;
+      }
+
+      .center-message {
+        margin: 12px 0 0;
+        padding: 10px 12px;
+        border-radius: var(--radius-sm);
+        background: #f0f3f6;
+        color: #536172;
+        font-size: 12px;
+      }
+
+      .center-message.success {
+        background: var(--color-success-soft);
+        color: #226749;
+      }
+
+      .center-message.error {
+        background: var(--color-error-soft);
+        color: #96323b;
+      }
+
+      .center-message.warning {
+        background: var(--color-warning-soft);
+        color: #6d4b19;
+      }
+
+      .report-list {
+        display: grid;
+        gap: 10px;
+        padding: 0;
+        margin: 14px 0 0;
+        list-style: none;
+      }
+
+      .report-list-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        padding: 13px 14px;
+        border: 1px solid var(--color-border);
+        border-radius: 10px;
+        background: #fff;
+      }
+
+      .report-list-copy {
+        min-width: 0;
+      }
+
+      .report-list-id {
+        display: block;
+        overflow-wrap: anywhere;
+        margin-bottom: 3px;
+        color: var(--color-title);
+        font-size: 13px;
+      }
+
+      .report-list-meta {
+        margin: 0;
+        color: var(--color-muted-text);
+        font-size: 11px;
+      }
+
+      .report-list-item .btn {
+        flex: 0 0 auto;
+      }
+
+      .center-form {
+        display: grid;
+        gap: 12px;
+      }
+
+      .center-field {
+        display: grid;
+        gap: 6px;
+        color: var(--color-title);
+        font-size: 12px;
+        font-weight: 650;
+      }
+
+      .center-field input {
+        width: 100%;
+        min-height: 44px;
+        padding: 10px 12px;
+        border: 1px solid #cfd8e0;
+        border-radius: 8px;
+        background: #fff;
+        color: var(--color-title);
+        font: inherit;
+        font-size: 14px;
+        font-weight: 400;
+      }
+
+      .center-field input:focus {
+        border-color: var(--color-primary);
+        outline: 3px solid rgba(14, 90, 90, 0.12);
+      }
+
+      .center-form-actions,
+      .auth-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+      }
+
+      .auth-state {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 14px;
+        color: #536172;
+        font-size: 12px;
+      }
+
+      .auth-login-fields {
+        display: grid;
+        gap: 12px;
+      }
+
+      .analysis-email-block {
+        margin-top: 16px;
+      }
+
+      .analysis-email-block .chief-hint {
+        margin-bottom: 7px;
+      }
+
+      .analysis-email-input {
+        width: 100%;
+        min-height: 46px;
+        padding: 11px 12px;
+        border: 1px solid var(--color-border);
+        border-radius: 10px;
+        color: var(--color-title);
+        background: #fff;
+      }
+
+      .access-credentials {
+        border-color: #dfc27f;
+        background: #fffcf5;
+      }
+
+      .credentials-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+
+      .credential-item {
+        min-width: 0;
+        padding: 16px;
+        border: 1px solid #ead8ac;
+        border-radius: 10px;
+        background: #fff;
+      }
+
+      .credential-label {
+        display: block;
+        margin-bottom: 7px;
+        color: #6d4b19;
+        font-size: 12px;
+        font-weight: 750;
+      }
+
+      .credential-value {
+        display: block;
+        overflow-wrap: anywhere;
+        color: var(--color-title);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 17px;
+        font-weight: 750;
+      }
+
+      input.credential-value {
+        width: 100%;
+        min-height: 44px;
+        padding: 8px 10px;
+        border: 1px solid var(--color-border);
+        border-radius: 8px;
+        background: #fafbfc;
+      }
+
+      .credential-item .btn {
+        margin-top: 10px;
+      }
+
+      .credentials-warning {
+        margin: 15px 0 0;
+        color: #6d4b19;
+        font-size: 13px;
+      }
+
+      @media (max-width: 800px) {
+        .report-center-grid,
+        .credentials-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 520px) {
+        .report-center-panel {
+          padding: 16px;
+        }
+
+        .report-list-item {
+          align-items: stretch;
+          flex-direction: column;
+        }
+
+        .report-list-item .btn,
+        .center-form-actions .btn,
+        .auth-actions .btn {
+          width: 100%;
+        }
+      }
+
     .chief-complaint { margin: 18px 0 4px; }
     .chief-label { font-weight: 600; color: #1A2230; font-size: 15px; display: block; margin-bottom: 4px; }
     .chief-optional { font-weight: 400; color: #6b7686; font-size: 13px; }
@@ -2129,6 +2379,78 @@
           </div>
 
           <section
+            class="card card-pad report-center"
+            id="report-center"
+            aria-labelledby="report-center-title"
+            data-anchor-id="medical-records-upload.report-center"
+          >
+            <div class="section-heading">
+              <div class="section-title-wrap">
+                <div class="report-center-intro">
+                  <h2 id="report-center-title">我的报告</h2>
+                  <p>此设备上的报告会自动列出；换设备时，可使用报告编号和提取码认领。</p>
+                </div>
+              </div>
+              <button class="btn btn-secondary btn-small" id="refresh-reports" type="button">刷新列表</button>
+            </div>
+
+            <div class="report-center-grid">
+              <div class="report-center-panel">
+                <h3>此设备上的报告</h3>
+                <p>只显示报告编号、进度与支付状态。打开时需通过当前安全会话验证。</p>
+                <div class="center-message" id="reports-state" role="status" aria-live="polite">正在加载报告…</div>
+                <ul class="report-list" id="report-list" aria-label="我的病历分析报告"></ul>
+              </div>
+
+              <div class="center-form">
+                <div class="report-center-panel">
+                  <h3>跨设备找回</h3>
+                  <p>输入分析受理时保存的报告编号和提取码（仅显示一次）。提取码不是报告编号。</p>
+                  <form class="center-form" id="claim-form" autocomplete="off">
+                    <label class="center-field" for="claim-report-id">
+                      报告编号
+                      <input id="claim-report-id" name="report_id" type="text" maxlength="80" required autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="SM-…" />
+                    </label>
+                    <label class="center-field" for="claim-access-code">
+                      提取码
+                      <input id="claim-access-code" name="access_code" type="password" maxlength="200" required autocomplete="off" spellcheck="false" placeholder="输入安全保存的提取码" />
+                    </label>
+                    <div class="center-form-actions">
+                      <button class="btn btn-primary btn-small" id="claim-submit" type="submit">认领并打开报告</button>
+                    </div>
+                  </form>
+                </div>
+
+                <div class="report-center-panel" id="auth-panel" hidden>
+                  <div class="auth-state">
+                    <span id="auth-state">正在检查登录状态…</span>
+                    <button class="btn btn-quiet btn-small" id="logout-button" type="button" hidden>退出登录</button>
+                  </div>
+                  <form class="auth-login-fields" id="email-login-form" autocomplete="on">
+                    <label class="center-field" for="auth-email">
+                      邮箱
+                      <input id="auth-email" name="email" type="email" maxlength="254" required autocomplete="email" inputmode="email" placeholder="you@example.com" />
+                    </label>
+                    <div class="auth-actions">
+                      <button class="btn btn-secondary btn-small" id="request-code" type="button">获取验证码</button>
+                    </div>
+                    <label class="center-field" for="auth-code">
+                      邮箱验证码
+                      <input id="auth-code" name="code" type="text" maxlength="12" inputmode="numeric" autocomplete="one-time-code" spellcheck="false" placeholder="输入收到的验证码" />
+                    </label>
+                    <div class="auth-actions">
+                      <button class="btn btn-primary btn-small" id="verify-code" type="submit">验证码登录</button>
+                    </div>
+                  </form>
+                </div>
+                <div class="center-message" id="email-unavailable" role="status" hidden></div>
+                <div class="center-message" id="auth-feedback" role="status" aria-live="polite" hidden></div>
+                <div class="center-message" id="report-center-feedback" role="status" aria-live="polite" hidden></div>
+              </div>
+            </div>
+          </section>
+
+          <section
             class="card card-pad upload-card is-blocked"
             id="upload-section"
             aria-labelledby="upload-title"
@@ -2238,6 +2560,14 @@
                 </div>
               </div>
 
+              <div class="analysis-email-block" id="analysis-email-block" hidden>
+                <label class="chief-label" for="analysis-email">
+                  邮箱 <span class="chief-optional">（选填，用于验证邮箱后跨设备找回此报告）</span>
+                </label>
+                <p class="chief-hint">此处不会直接登录或发送报告；完成邮箱验证码验证后，才可认领匹配的报告。</p>
+                <input class="analysis-email-input" id="analysis-email" type="email" maxlength="254" autocomplete="email" inputmode="email" placeholder="you@example.com" />
+              </div>
+
               <div class="upload-actions">
                 <p class="action-note">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -2261,6 +2591,37 @@
                 </button>
               </div>
             </div>
+          </section>
+
+          <section
+            class="card card-pad access-credentials"
+            id="access-credentials"
+            aria-labelledby="credentials-title"
+            aria-live="polite"
+            hidden
+          >
+            <div class="section-heading">
+              <div class="section-title-wrap">
+                <div>
+                  <h2 id="credentials-title">请立即保存报告找回凭证</h2>
+                  <p>分析已受理。报告编号固定不变，提取码仅在本次响应中显示。</p>
+                </div>
+              </div>
+            </div>
+            <div class="credentials-grid">
+              <div class="credential-item">
+                <span class="credential-label">报告编号</span>
+                <code class="credential-value" id="accepted-report-id">—</code>
+                <button class="btn btn-secondary btn-small" id="copy-report-id" type="button">复制报告编号</button>
+              </div>
+              <div class="credential-item">
+                <label class="credential-label" for="accepted-access-code">提取码（仅显示一次）</label>
+                <input class="credential-value" id="accepted-access-code" type="text" readonly autocomplete="off" spellcheck="false" aria-label="提取码（仅显示一次），请立即安全保存" />
+                <button class="btn btn-secondary btn-small" id="copy-access-code" type="button">复制提取码</button>
+              </div>
+            </div>
+            <p class="credentials-warning"><strong>请安全保存，跨设备找回需要同时使用以上两项。</strong>刷新或关闭页面后无法再次查看提取码；请勿通过公开聊天或截图分享。</p>
+            <div class="center-message" id="credentials-feedback" role="status" hidden></div>
           </section>
 
           <section
@@ -2520,7 +2881,7 @@
             </div>
 
             <div class="report-meta">
-              <span>报告编号：<span id="report-id">自动生成</span></span>
+              <span>报告编号：<span id="report-id">—</span></span>
               <span>生成时间：<span id="report-date">—</span></span>
               <span>资料完整度：基于上传文件评估</span>
               <span>报告语言：中文</span>
@@ -2833,6 +3194,32 @@
           fullReport: document.getElementById("full-report"),
           printButton: document.getElementById("print-report"),
           reportDate: document.getElementById("report-date"),
+          reportId: document.getElementById("report-id"),
+          accessCredentials: document.getElementById("access-credentials"),
+          acceptedReportId: document.getElementById("accepted-report-id"),
+          acceptedAccessCode: document.getElementById("accepted-access-code"),
+          credentialsFeedback: document.getElementById("credentials-feedback"),
+          reportCenter: document.getElementById("report-center"),
+          refreshReports: document.getElementById("refresh-reports"),
+          reportsState: document.getElementById("reports-state"),
+          reportList: document.getElementById("report-list"),
+          reportCenterFeedback: document.getElementById("report-center-feedback"),
+          claimForm: document.getElementById("claim-form"),
+          claimReportId: document.getElementById("claim-report-id"),
+          claimAccessCode: document.getElementById("claim-access-code"),
+          claimSubmit: document.getElementById("claim-submit"),
+          authPanel: document.getElementById("auth-panel"),
+          authState: document.getElementById("auth-state"),
+          authEmail: document.getElementById("auth-email"),
+          authCode: document.getElementById("auth-code"),
+          requestCode: document.getElementById("request-code"),
+          verifyCode: document.getElementById("verify-code"),
+          logoutButton: document.getElementById("logout-button"),
+          authFeedback: document.getElementById("auth-feedback"),
+          emailLoginForm: document.getElementById("email-login-form"),
+          emailUnavailable: document.getElementById("email-unavailable"),
+          analysisEmailBlock: document.getElementById("analysis-email-block"),
+          analysisEmail: document.getElementById("analysis-email"),
           consentModal: document.getElementById("consent-modal"),
           consentDialog: document.getElementById("consent-dialog"),
           agreeConsent: document.getElementById("agree-consent"),
@@ -2953,20 +3340,56 @@
           });
         }
 
+        function clearAccessCredentials() {
+          elements.accessCredentials.hidden = true;
+          elements.acceptedReportId.textContent = '—';
+          elements.acceptedAccessCode.value = '';
+          setMessage(elements.credentialsFeedback, '');
+        }
+
+        function clearActiveReport() {
+          currentReportId = null;
+          currentTaskId = null;
+          uploadedFileIds = [];
+          elements.reportId.textContent = '—';
+        }
+
         function resetPayment() {
           isPaid = false;
+          payPalRenderVersion += 1;
+          payPalOrder = null;
+          payPalOrderPromise = null;
+          payPalCapture = null;
+          const container = document.getElementById('paypal-button-container');
+          if (container) {
+            container.replaceChildren();
+            container.hidden = true;
+            delete container.dataset.rendered;
+          }
           document.body.classList.remove("is-paid");
           elements.fullReport.hidden = true;
           elements.paymentStatus.hidden = true;
+          elements.paymentStatus.textContent = '';
+          elements.paymentStatus.classList.remove('alert-error');
+          elements.paymentStatus.classList.add('alert-success');
           elements.lockedModule.hidden = false;
         }
 
         function resetResults() {
+          analysisGeneration += 1;
           if (uploadTimer) {
             window.clearInterval(uploadTimer);
             uploadTimer = null;
           }
           isProcessing = false;
+          clearActiveReport();
+          clearAccessCredentials();
+          const chapters = document.querySelector('.report-chapters');
+          if (chapters) chapters.replaceChildren();
+          const summaryList = elements.previewSection.querySelector('.summary-list');
+          if (summaryList) summaryList.replaceChildren();
+          const departmentName = elements.previewSection.querySelector('.department-name');
+          if (departmentName) departmentName.textContent = '';
           elements.progressSection.hidden = true;
           elements.previewSection.hidden = true;
           elements.progressSection.dataset.state = "loading";
@@ -3108,13 +3531,60 @@
           return new Promise((resolve) => window.setTimeout(resolve, milliseconds));
         }
 
-        // API 配置与状态
+        // API 配置与状态。会话只通过同源 HttpOnly Cookie 携带，不在 JS 中保存令牌。
         const API_BASE = window.location.origin + '/api/phase3';
         let uploadedFileIds = [];
         let currentTaskId = null;
-        let analysisResult = null;
+        let currentReportId = null;
+        let reportSummaries = [];
+        let reportCenterReady = null;
+        let reportsLoading = false;
+        let claimPending = false;
+        let openingReport = false;
+        let emailEnabled = false;
+        let currentUser = null;
+        let authRequestPending = false;
+        let authVerifyPending = false;
+        let analysisGeneration = 0;
+        let sessionGeneration = 0;
+        let payPalRenderVersion = 0;
+        let payPalOrder = null;
+        let payPalOrderPromise = null;
+        let payPalCapture = null;
 
-        async function uploadFiles() {
+        function apiErrorMessage(data, fallback) {
+          if (!data) return fallback;
+          if (typeof data.error === 'string') return data.error;
+          if (typeof data.message === 'string') return data.message;
+          if (typeof data.detail === 'string') return data.detail;
+          if (data.detail && typeof data.detail.message === 'string') return data.detail.message;
+          if (data.detail && typeof data.detail.issue === 'string') return data.detail.issue;
+          return fallback;
+        }
+
+        async function requestJson(path, options = {}) {
+          const response = await fetch(API_BASE + path, {
+            credentials: 'same-origin',
+            cache: 'no-store',
+            ...options,
+          });
+          const data = await response.json().catch(() => ({}));
+          if (!response.ok) {
+            const error = new Error(apiErrorMessage(data, '请求失败，请稍后重试'));
+            error.status = response.status;
+            throw error;
+          }
+          return data;
+        }
+
+        function setMessage(element, text, type = '') {
+          if (!element) return;
+          element.textContent = text || '';
+          element.className = 'center-message' + (type ? ' ' + type : '');
+          element.hidden = !text;
+        }
+
+        async function uploadFiles(generation) {
           const formData = new FormData();
           selectedFiles.forEach((item) => {
             formData.append('files', item.file);
@@ -3128,15 +3598,18 @@
               method: 'POST',
               body: formData,
             });
+            if (generation !== analysisGeneration) return;
 
             setProgress("upload", 80);
 
             if (!response.ok) {
               const error = await response.json().catch(() => ({}));
+              if (generation !== analysisGeneration) return;
               throw new Error(error.detail || '上传失败，请重试');
             }
 
             const result = await response.json();
+            if (generation !== analysisGeneration) return;
             uploadedFileIds = result.file_ids || [];
 
             setProgress("upload", 100);
@@ -3147,6 +3620,7 @@
               status.classList.add("complete");
             });
           } catch (error) {
+            if (generation !== analysisGeneration) return;
             elements.uploadStatus.textContent = "上传失败：" + error.message;
             showFileError("文件上传失败：" + error.message);
             throw error;
@@ -3174,35 +3648,108 @@
           try { window.localStorage.removeItem(TASK_KEY); } catch (e) { /* ignore */ }
         }
 
-        function finishAnalysis(result) {
-          clearTask();
+        function showAccessCredentials(accepted) {
+          clearAccessCredentials();
+          const reportId = accepted && accepted.report_id ? String(accepted.report_id) : '';
+          const accessCode = accepted && accepted.access_code ? String(accepted.access_code) : '';
+          elements.acceptedReportId.textContent = reportId || '未返回';
+          elements.acceptedAccessCode.value = accessCode;
+          elements.accessCredentials.hidden = false;
+          document.getElementById('copy-report-id').disabled = !reportId;
+          document.getElementById('copy-access-code').disabled = !accessCode;
+          if (!reportId || !accessCode) {
+            setMessage(elements.credentialsFeedback, '分析已受理，但找回凭证响应不完整。请保持页面打开，并从“我的报告”尝试恢复。', 'warning');
+          }
+        }
+
+        async function copyText(text) {
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(text);
+            return;
+          }
+          const temporary = document.createElement('textarea');
+          temporary.value = text;
+          temporary.readOnly = true;
+          temporary.style.position = 'fixed';
+          temporary.style.opacity = '0';
+          document.body.appendChild(temporary);
+          temporary.select();
+          const copied = document.execCommand('copy');
+          temporary.remove();
+          if (!copied) throw new Error('copy unavailable');
+        }
+
+        async function copyCredential(kind) {
+          const isCode = kind === 'code';
+          const text = isCode
+            ? elements.acceptedAccessCode.value
+            : elements.acceptedReportId.textContent;
+          if (!text || text === '—' || text === '未返回') return;
+          try {
+            await copyText(text);
+            setMessage(elements.credentialsFeedback, isCode ? '提取码已复制，请粘贴到安全的位置保存。' : '报告编号已复制。', 'success');
+          } catch (error) {
+            setMessage(elements.credentialsFeedback, '自动复制失败，请手动选择并复制。', 'error');
+          }
+        }
+
+        function formatReportDate(value) {
+          if (!value) return '';
+          const date = new Date(value);
+          if (Number.isNaN(date.getTime())) return '';
+          return date.toLocaleString('zh-CN', { hour12: false });
+        }
+
+        function reportIsPaid(report) {
+          return Boolean(report && (report.paid === true || report.paid_at || report.paid_order_id));
+        }
+
+        function reportIsExpired(report) {
+          const status = report && String(report.status || '').toLowerCase();
+          return Boolean(report && (report.expired === true || status === 'expired'));
+        }
+
+        function adoptReportData(data) {
+          if (!data) return;
+          const metadata = data.metadata && typeof data.metadata === 'object' ? data.metadata : {};
+          const reportId = data.report_id || metadata.report_id;
+          const taskId = data.task_id || metadata.task_id;
+          const fileIds = data.file_ids || metadata.file_ids;
+          if (reportId) currentReportId = String(reportId);
+          if (taskId) currentTaskId = String(taskId);
+          if (Array.isArray(fileIds)) uploadedFileIds = fileIds.slice();
+          if (currentReportId) elements.reportId.textContent = currentReportId;
+        }
+
+        function finishAnalysis(result, options = {}) {
+          const savedTask = loadTask();
+          if (savedTask && currentTaskId && savedTask.taskId === currentTaskId) clearTask();
+          adoptReportData(result);
+          setProgress("upload", 100);
           setProgress("analysis", 100);
-          setStepState(1, "complete");
-          for (let i = 2; i < elements.steps.length; i++) {
+          for (let i = 0; i < elements.steps.length; i++) {
             setStepState(i, "complete");
           }
-          const preview = result.report_preview || result.free_preview || {};
-          const summaryEl = elements.previewSection.querySelector('.preview-summary, [data-field="summary"]');
-          if (summaryEl && preview.summary) {
-            summaryEl.textContent = preview.summary;
-          }
-          window._fullReportData = result.report_full || result.full_report || null;
           elements.analysisNote.textContent = "分析完成，免费预览已生成";
+          elements.progressSection.hidden = false;
           elements.progressSection.dataset.state = "complete";
           elements.progressPill.textContent = "已完成";
           elements.progressPill.classList.add("success");
           elements.uploadSection.querySelector(".status-pill").textContent = "分析完成";
           elements.previewSection.hidden = false;
           applyPreview(result.preview || result.report_preview || result.free_preview || {});
-          renderPayPalButtons();
-          elements.reportDate.textContent = new Date().toLocaleString("zh-CN", { hour12: false });
+          if (!isPaid) renderPayPalButtons();
+          elements.reportDate.textContent = formatReportDate(result.completed_at || result.created_at) || new Date().toLocaleString("zh-CN", { hour12: false });
           isProcessing = false;
           elements.startButtonText.textContent = "重新分析";
           updateActionState();
-          elements.previewSection.scrollIntoView({
-            behavior: reducedMotion.matches ? "auto" : "smooth",
-            block: "start",
-          });
+          if (options.refreshList !== false) loadReports();
+          if (options.scroll !== false) {
+            elements.previewSection.scrollIntoView({
+              behavior: reducedMotion.matches ? "auto" : "smooth",
+              block: "start",
+            });
+          }
         }
 
         function failAnalysis(error) {
@@ -3222,8 +3769,16 @@
             return;
           }
           if (!selectedFiles.length || isProcessing) return;
+          const pendingEmail = emailEnabled ? elements.analysisEmail.value.trim() : '';
+          if (pendingEmail && !elements.analysisEmail.checkValidity()) {
+            showFileError('请输入有效的邮箱地址，或清空邮箱后再开始分析');
+            elements.analysisEmail.focus();
+            return;
+          }
 
           resetResults();
+          const generation = analysisGeneration;
+          clearTask();
           isProcessing = true;
           showFileError("");
           elements.progressSection.hidden = false;
@@ -3242,8 +3797,9 @@
           });
 
           try {
-            await uploadFiles();
+            await uploadFiles(generation);
           } catch (e) {
+            if (generation !== analysisGeneration) return;
             isProcessing = false;
             elements.startButtonText.textContent = "重新上传";
             elements.progressSection.dataset.state = "error";
@@ -3251,6 +3807,7 @@
             return;
           }
 
+          if (generation !== analysisGeneration) return;
           setStepState(0, "active");
           elements.analysisNote.textContent = "正在进行 AI 分析，请耐心等待…";
           setProgress("analysis", 10);
@@ -3259,26 +3816,35 @@
             setStepState(0, "complete");
             setStepState(1, "active");
 
-            const analyzeResponse = await fetch(API_BASE + '/analyze?wait=false', {
+            const analyzeBody = {
+              file_ids: uploadedFileIds,
+              chief_complaint: getChiefComplaint(),
+            };
+            if (pendingEmail) analyzeBody.email = pendingEmail;
+            const accepted = await requestJson('/analyze?wait=false', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ file_ids: uploadedFileIds, chief_complaint: getChiefComplaint() }),
+              body: JSON.stringify(analyzeBody),
+            });
+            if (generation !== analysisGeneration) return;
+            if (!accepted.task_id) throw new Error('分析受理响应缺少任务编号');
+            adoptReportData(accepted);
+            currentTaskId = String(accepted.task_id);
+            saveTask(currentTaskId);
+            showAccessCredentials(accepted);
+            loadReports();
+            elements.accessCredentials.scrollIntoView({
+              behavior: reducedMotion.matches ? 'auto' : 'smooth',
+              block: 'start',
             });
 
-            if (!analyzeResponse.ok && analyzeResponse.status !== 202) {
-              const error = await analyzeResponse.json().catch(() => ({}));
-              throw new Error(error.detail?.message || error.detail || 'AI 分析失败');
-            }
-
-            const accepted = await analyzeResponse.json();
-            analysisResult = accepted;
-            currentTaskId = accepted.task_id;
-            saveTask(currentTaskId);
-
             setProgress("analysis", 45);
-            const result = await pollAnalysisStatus(currentTaskId);
-            finishAnalysis(result);
+            const result = await pollAnalysisStatus(currentTaskId, generation);
+            if (generation !== analysisGeneration) return;
+            completeOpenedReport(result, true);
+            loadReports();
           } catch (error) {
+            if (generation !== analysisGeneration) return;
             failAnalysis(error);
           }
         }
@@ -3331,25 +3897,45 @@
           });
         })();
 
-        async function pollAnalysisStatus(taskId) {
+        async function pollAnalysisStatus(taskId, generation = analysisGeneration) {
           const maxAttempts = 120;
           const task = loadTask();
           const startedAt = (task && task.startedAt) || Date.now();
           const fileCount = (task && task.fileCount) || (selectedFiles ? selectedFiles.length : 1) || 1;
           const estimatedTotal = Math.min(600, 90 + fileCount * 25);
           for (let attempt = 1; attempt <= maxAttempts; attempt++) {
-            await new Promise((resolve) => setTimeout(resolve, 10000));
+            if (generation !== analysisGeneration) throw new Error('stale analysis view');
+            await wait(10000);
             let data = null;
             try {
-              const resp = await fetch(API_BASE + '/status/' + taskId);
-              if (resp.status === 404) throw new Error('分析任务不存在或已过期');
-              if (!resp.ok) continue;
-              data = await resp.json();
+              data = await requestJson('/status/' + encodeURIComponent(taskId));
             } catch (error) {
-              if (error.message && error.message.indexOf('不存在') >= 0) throw error;
+              if (generation !== analysisGeneration) throw error;
+              if (error.status === 401 || error.status === 403) {
+                throw new Error('当前会话无法访问此分析，请从“我的报告”重新打开或认领报告');
+              }
+              if (error.status === 404 || error.status === 410) {
+                throw new Error('分析任务不存在或已过期');
+              }
               continue;
             }
-            if (data.status === 'completed') return data;
+            if (generation !== analysisGeneration) throw new Error('stale analysis view');
+            if (data.report_id) adoptReportData(data);
+            if (data.status === 'completed') {
+              if (currentReportId) {
+                try {
+                  const detail = await requestJson('/reports/' + encodeURIComponent(currentReportId));
+                  const merged = { ...data, ...detail };
+                  if (!merged.preview && !merged.report_preview && !merged.free_preview) {
+                    merged.preview = data.preview || data.report_preview || data.free_preview;
+                  }
+                  return merged;
+                } catch (error) {
+                  return data;
+                }
+              }
+              return data;
+            }
             if (data.status === 'failed') {
               throw new Error((data.pipeline_error && data.pipeline_error.message) || data.error || 'AI 分析失败');
             }
@@ -3368,12 +3954,13 @@
               elements.analysisNote.textContent = stage + "（已进行 " + elapsedMin + " 分钟，即将完成，请稍候）";
             }
           }
-          throw new Error('分析时间较长，请稍后重试');
+          throw new Error('分析时间较长，请稍后在“我的报告”中重新打开');
         }
 
         async function resumeAnalysisIfPending() {
           const task = loadTask();
           if (!task || !task.taskId) return;
+          const generation = ++analysisGeneration;
           isProcessing = true;
           currentTaskId = task.taskId;
           elements.progressSection.hidden = false;
@@ -3386,114 +3973,678 @@
           elements.analysisNote.textContent = "检测到有进行中的分析，正在为你恢复进度…";
           updateActionState();
           try {
-            const result = await pollAnalysisStatus(task.taskId);
-            finishAnalysis(result);
+            if (reportCenterReady) await reportCenterReady;
+            if (generation !== analysisGeneration) return;
+            const matchingReport = reportSummaries.find((report) => report.task_id === task.taskId);
+            if (matchingReport) adoptReportData(matchingReport);
+            const result = await pollAnalysisStatus(task.taskId, generation);
+            if (generation !== analysisGeneration) return;
+            completeOpenedReport(result, true);
+            loadReports();
           } catch (error) {
+            if (generation !== analysisGeneration) return;
             clearTask();
             isProcessing = false;
             elements.progressSection.dataset.state = "error";
-            elements.analysisNote.textContent = "之前的分析已结束或过期，请重新上传分析";
+            elements.progressPill.textContent = "恢复失败";
+            elements.analysisNote.textContent = error.message || "之前的分析已结束或过期，请从“我的报告”重试";
             elements.startButtonText.textContent = "重新分析";
             updateActionState();
           }
         }
 
         function applyPreview(preview) {
+          const safePreview = preview && typeof preview === 'object' ? preview : {};
           const listEl = elements.previewSection.querySelector('.summary-list');
-          if (listEl && preview.summary) {
-            listEl.innerHTML = '<div class="summary-row"><dt>AI 病历摘要</dt><dd></dd></div>';
-            const dd = listEl.querySelector('dd');
-            dd.textContent = preview.summary;
+          if (listEl) {
+            const row = document.createElement('div');
+            row.className = 'summary-row';
+            const term = document.createElement('dt');
+            term.textContent = 'AI 病历摘要';
+            const description = document.createElement('dd');
+            description.textContent = safePreview.summary ? String(safePreview.summary) : '暂未提供摘要，请稍后刷新报告。';
+            row.append(term, description);
+            listEl.replaceChildren(row);
           }
           const deptEl = elements.previewSection.querySelector('.department-name');
-          if (deptEl && preview.specialty) {
-            deptEl.textContent = preview.specialty;
+          if (deptEl) {
+            deptEl.textContent = safePreview.specialty ? String(safePreview.specialty) : '待医生评估';
           }
           const secondaryEl = elements.previewSection.querySelector('.department-secondary');
-          if (secondaryEl && preview.specialty) {
-            secondaryEl.hidden = true;
+          if (secondaryEl) secondaryEl.hidden = Boolean(safePreview.specialty);
+        }
+
+        function reportStatusLabel(report) {
+          if (reportIsExpired(report)) return '已过期';
+          const status = String((report && report.status) || 'processing').toLowerCase();
+          const labels = {
+            completed: '分析完成',
+            complete: '分析完成',
+            succeeded: '分析完成',
+            failed: '分析失败',
+            error: '分析失败',
+            processing: '分析中',
+            pending: '等待分析',
+            queued: '排队中',
+            running: '分析中',
+          };
+          return labels[status] || '处理中';
+        }
+
+        function renderReportList() {
+          elements.reportList.replaceChildren();
+          reportSummaries.forEach((report) => {
+            if (!report || !report.report_id) return;
+            const item = document.createElement('li');
+            item.className = 'report-list-item';
+            const copy = document.createElement('div');
+            copy.className = 'report-list-copy';
+            const id = document.createElement('strong');
+            id.className = 'report-list-id';
+            id.textContent = String(report.report_id);
+            const meta = document.createElement('p');
+            meta.className = 'report-list-meta';
+            const date = formatReportDate(report.created_at || report.updated_at) || '日期待确认';
+            const payment = reportIsPaid(report) ? '已支付' : '未支付';
+            meta.textContent = date + ' · ' + reportStatusLabel(report) + ' · ' + payment;
+            copy.append(id, meta);
+
+            const open = document.createElement('button');
+            open.className = 'btn btn-secondary btn-small';
+            open.type = 'button';
+            const expired = reportIsExpired(report);
+            open.textContent = expired ? '已过期' : (reportIsPaid(report) ? '查看完整报告' : '打开报告');
+            open.disabled = expired || openingReport;
+            open.setAttribute('aria-label', (expired ? '报告已过期 ' : '打开报告 ') + String(report.report_id));
+            if (!expired) open.addEventListener('click', () => openReport(String(report.report_id)));
+            item.append(copy, open);
+            elements.reportList.appendChild(item);
+          });
+        }
+
+        async function loadReports() {
+          const generation = sessionGeneration;
+          if (reportsLoading) return false;
+          reportsLoading = true;
+          elements.refreshReports.disabled = true;
+          if (!reportSummaries.length) setMessage(elements.reportsState, '正在加载报告…');
+          try {
+            const data = await requestJson('/reports');
+            if (generation !== sessionGeneration) return false;
+            const reports = Array.isArray(data) ? data : (Array.isArray(data.reports) ? data.reports : []);
+            reportSummaries = reports.filter((report) => report && report.report_id);
+            renderReportList();
+            if (!reportSummaries.length) {
+              setMessage(elements.reportsState, '此设备暂无可恢复报告。开始分析后，报告会出现在这里；也可在右侧凭编号和提取码认领。');
+            } else {
+              setMessage(elements.reportsState, '');
+            }
+            return true;
+          } catch (error) {
+            if (generation !== sessionGeneration) return false;
+            if (error.status === 401 || error.status === 403) {
+              reportSummaries = [];
+              renderReportList();
+              setMessage(elements.reportsState, '当前安全会话已失效。请重新登录，或使用报告编号和提取码认领。', 'warning');
+            } else {
+              setMessage(elements.reportsState, '报告列表加载失败：' + error.message + '。可点击“刷新列表”重试。', 'error');
+            }
+            return false;
+          } finally {
+            if (generation === sessionGeneration) {
+              reportsLoading = false;
+              elements.refreshReports.disabled = false;
+            }
           }
         }
 
-        async function loadPayPalSDK(clientId) {
+        function updateAuthState() {
+          if (currentUser) {
+            const user = currentUser.user && typeof currentUser.user === 'object' ? currentUser.user : currentUser;
+            elements.authState.textContent = '已登录' + (user.email ? '：' + String(user.email) : '');
+            elements.logoutButton.hidden = false;
+          } else {
+            elements.authState.textContent = '未登录。验证邮箱后，可在其他设备找回该邮箱认领的报告。';
+            elements.logoutButton.hidden = true;
+          }
+        }
+
+        async function loadAuthMe() {
+          const generation = sessionGeneration;
+          try {
+            const data = await requestJson('/auth/me');
+            if (generation !== sessionGeneration) return null;
+            currentUser = data.authenticated === true || data.logged_in === true ? data : null;
+            updateAuthState();
+            return currentUser;
+          } catch (error) {
+            if (generation !== sessionGeneration) return null;
+            currentUser = null;
+            updateAuthState();
+            elements.authState.textContent = '登录状态暂时无法确认，仍可使用提取码找回报告。';
+            return null;
+          }
+        }
+
+        async function loadAuthConfig() {
+          try {
+            const config = await requestJson('/auth/config');
+            emailEnabled = config.email_enabled === true;
+            elements.authPanel.hidden = !emailEnabled;
+            elements.analysisEmailBlock.hidden = !emailEnabled;
+            if (emailEnabled) {
+              setMessage(elements.emailUnavailable, '');
+              await loadAuthMe();
+            } else {
+              currentUser = null;
+              setMessage(elements.emailUnavailable, '邮箱验证码登录当前未配置。您仍可使用报告编号和提取码跨设备找回报告。', 'warning');
+            }
+          } catch (error) {
+            emailEnabled = false;
+            currentUser = null;
+            elements.authPanel.hidden = true;
+            elements.analysisEmailBlock.hidden = true;
+            setMessage(elements.emailUnavailable, '邮箱登录能力暂时无法确认，请使用报告编号和提取码找回；系统不会显示验证码已发送。', 'warning');
+          } finally {
+            elements.requestCode.disabled = !emailEnabled;
+            elements.verifyCode.disabled = !emailEnabled;
+          }
+        }
+
+        async function requestEmailCode() {
+          if (!emailEnabled || authRequestPending) return;
+          const email = elements.authEmail.value.trim();
+          if (!email || !elements.authEmail.checkValidity()) {
+            setMessage(elements.authFeedback, '请先输入有效的邮箱地址。', 'error');
+            elements.authEmail.focus();
+            return;
+          }
+          const generation = sessionGeneration;
+          authRequestPending = true;
+          elements.requestCode.disabled = true;
+          setMessage(elements.authFeedback, '正在请求验证码…');
+          try {
+            await requestJson('/auth/request', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ email }),
+            });
+            if (generation !== sessionGeneration) return;
+            elements.authCode.value = '';
+            setMessage(elements.authFeedback, '验证码已发送，请查收邮件并在 10 分钟内完成验证。', 'success');
+            elements.authCode.focus();
+          } catch (error) {
+            if (generation !== sessionGeneration) return;
+            setMessage(elements.authFeedback, '验证码请求失败：' + error.message, 'error');
+          } finally {
+            if (generation === sessionGeneration) {
+              authRequestPending = false;
+              elements.requestCode.disabled = !emailEnabled;
+            }
+          }
+        }
+
+        async function verifyEmailCode() {
+          if (!emailEnabled || authVerifyPending) return;
+          const email = elements.authEmail.value.trim();
+          const code = elements.authCode.value.trim();
+          if (!email || !elements.authEmail.checkValidity()) {
+            setMessage(elements.authFeedback, '请输入有效的邮箱地址。', 'error');
+            elements.authEmail.focus();
+            return;
+          }
+          if (!code) {
+            setMessage(elements.authFeedback, '请输入邮件中的验证码。', 'error');
+            elements.authCode.focus();
+            return;
+          }
+          authVerifyPending = true;
+          const generation = sessionGeneration;
+          elements.verifyCode.disabled = true;
+          setMessage(elements.authFeedback, '正在验证…');
+          try {
+            const verification = await requestJson('/auth/verify', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ email, code }),
+            });
+            if (generation !== sessionGeneration) return;
+            if (verification.authenticated !== true) {
+              throw new Error('服务尚未确认登录状态，请稍后检查后再试');
+            }
+            const nextGeneration = beginSessionTransition();
+            const verifiedUser = await loadAuthMe();
+            if (nextGeneration !== sessionGeneration) return;
+            if (!verifiedUser) {
+              setMessage(elements.authFeedback, '暂时无法确认登录状态，请勿视为已登录；可刷新页面后重试。', 'warning');
+              return;
+            }
+            const reportsRefreshed = await loadReports();
+            if (nextGeneration !== sessionGeneration) return;
+            setMessage(
+              elements.authFeedback,
+              reportsRefreshed ? '邮箱验证成功，报告列表已刷新。' : '邮箱已验证并登录，但报告列表刷新失败，请点击“刷新列表”重试。',
+              reportsRefreshed ? 'success' : 'warning'
+            );
+          } catch (error) {
+            setMessage(elements.authFeedback, '验证码登录失败：' + error.message, 'error');
+          } finally {
+            authVerifyPending = false;
+            elements.verifyCode.disabled = !emailEnabled;
+          }
+        }
+
+        function clearSensitiveInputs() {
+          selectedFiles = [];
+          elements.fileInput.value = '';
+          showFileError('');
+          renderFiles();
+          const complaint = document.getElementById('chief-complaint-input');
+          if (complaint) complaint.value = '';
+          elements.analysisEmail.value = '';
+          elements.claimReportId.value = '';
+          elements.claimAccessCode.value = '';
+          elements.authEmail.value = '';
+          elements.authCode.value = '';
+        }
+
+        function beginSessionTransition() {
+          sessionGeneration += 1;
+          reportsLoading = false;
+          openingReport = false;
+          claimPending = false;
+          authRequestPending = false;
+          elements.refreshReports.disabled = false;
+          elements.claimSubmit.disabled = false;
+          elements.requestCode.disabled = !emailEnabled;
+          clearSensitiveInputs();
+          clearTask();
+          resetResults();
+          reportSummaries = [];
+          renderReportList();
+          currentUser = null;
+          updateAuthState();
+          return sessionGeneration;
+        }
+
+        async function logout() {
+          if (!emailEnabled || authVerifyPending) return;
+          beginSessionTransition();
+          authVerifyPending = true;
+          elements.logoutButton.disabled = true;
+          setMessage(elements.authFeedback, '正在退出…');
+          try {
+            await requestJson('/auth/logout', { method: 'POST' });
+            await loadReports();
+            setMessage(elements.authFeedback, '已安全退出登录。', 'success');
+          } catch (error) {
+            setMessage(elements.authFeedback, '退出请求失败，页面敏感内容已清除：' + error.message, 'error');
+          } finally {
+            authVerifyPending = false;
+            elements.logoutButton.disabled = false;
+          }
+        }
+
+        async function claimReport() {
+          if (claimPending) return;
+          const reportId = elements.claimReportId.value.trim();
+          const accessCode = elements.claimAccessCode.value.trim();
+          if (!reportId || !accessCode) {
+            setMessage(elements.reportCenterFeedback, '请同时输入报告编号和提取码。', 'error');
+            return;
+          }
+          const generation = sessionGeneration;
+          claimPending = true;
+          elements.claimSubmit.disabled = true;
+          setMessage(elements.reportCenterFeedback, '正在安全认领报告…');
+          try {
+            await requestJson('/reports/claim', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ report_id: reportId, access_code: accessCode }),
+            });
+            if (generation !== sessionGeneration) return;
+            elements.claimAccessCode.value = '';
+            await loadReports();
+            if (generation !== sessionGeneration) return;
+            setMessage(elements.reportCenterFeedback, '认领成功，正在打开报告…', 'success');
+            await openReport(reportId);
+          } catch (error) {
+            if (generation !== sessionGeneration) return;
+            elements.claimAccessCode.value = '';
+            const message = [400, 401, 403, 404].includes(error.status)
+              ? '报告编号或提取码不正确，或提取码已失效。'
+              : error.status === 410
+                ? '该报告已过期，无法继续认领。'
+                : error.status === 429
+                  ? '尝试次数过多，请稍后再试。'
+                  : '认领失败：' + error.message;
+            setMessage(elements.reportCenterFeedback, message, 'error');
+          } finally {
+            if (generation === sessionGeneration) {
+              claimPending = false;
+              elements.claimSubmit.disabled = false;
+            }
+          }
+        }
+
+        function scrollActiveReport() {
+          const target = !elements.fullReport.hidden
+            ? elements.fullReport
+            : !elements.previewSection.hidden
+              ? elements.previewSection
+              : elements.progressSection;
+          target.scrollIntoView({ behavior: reducedMotion.matches ? 'auto' : 'smooth', block: 'start' });
+        }
+
+        function showReportTerminalState(title, message, scroll) {
+          isProcessing = false;
+          elements.progressSection.hidden = false;
+          elements.previewSection.hidden = true;
+          elements.fullReport.hidden = true;
+          elements.lockedModule.hidden = true;
+          elements.progressSection.dataset.state = title === '已过期' ? 'expired' : 'error';
+          elements.progressPill.textContent = title;
+          elements.progressPill.classList.remove('success');
+          elements.analysisNote.textContent = message;
+          elements.startButtonText.textContent = '开始新的分析';
+          updateActionState();
+          if (scroll) scrollActiveReport();
+        }
+
+        function unlockPaidReport(report) {
+          adoptReportData(report);
+          isPaid = true;
+          document.body.classList.add('is-paid');
+          elements.paymentStatus.hidden = false;
+          elements.paymentStatus.classList.remove('alert-error');
+          elements.paymentStatus.classList.add('alert-success');
+          elements.paymentStatus.textContent = '支付已确认，完整报告已解锁；之后可从“我的报告”再次查看。';
+          elements.lockedModule.hidden = true;
+          elements.fullReport.hidden = false;
+          const fullReport = report.full_report || report.report_full || null;
+          renderFullReport(fullReport);
+        }
+
+        function completeOpenedReport(detail, scroll) {
+          const shouldUnlock = reportIsPaid(detail) || detail.full_report || detail.report_full;
+          if (shouldUnlock) isPaid = true;
+          finishAnalysis(detail, { scroll: false, refreshList: false });
+          if (shouldUnlock) unlockPaidReport(detail);
+          if (scroll) scrollActiveReport();
+        }
+
+        async function resumeOpenedReport(reportId) {
+          const generation = analysisGeneration;
+          try {
+            if (currentTaskId) {
+              const result = await pollAnalysisStatus(currentTaskId, generation);
+              if (generation !== analysisGeneration) return;
+              completeOpenedReport(result, true);
+              loadReports();
+            } else {
+              await pollReportDetail(reportId, generation);
+            }
+          } catch (error) {
+            if (generation !== analysisGeneration) return;
+            isProcessing = false;
+            elements.progressSection.dataset.state = 'error';
+            elements.progressPill.textContent = '恢复中断';
+            elements.analysisNote.textContent = error.message + '。可稍后从“我的报告”重新打开。';
+            updateActionState();
+          }
+        }
+
+        async function pollReportDetail(reportId, generation) {
+          for (let attempt = 0; attempt < 120; attempt += 1) {
+            await wait(10000);
+            if (generation !== analysisGeneration) return;
+            let detail;
+            try {
+              detail = await requestJson('/reports/' + encodeURIComponent(reportId));
+            } catch (error) {
+              if (error.status === 401 || error.status === 403 || error.status === 404 || error.status === 410) throw error;
+              continue;
+            }
+            if (generation !== analysisGeneration) return;
+            const status = String(detail.status || '').toLowerCase();
+            if (status === 'completed' || status === 'complete' || status === 'succeeded') {
+              completeOpenedReport(detail, true);
+              loadReports();
+              return;
+            }
+            if (status === 'failed' || status === 'error' || reportIsExpired(detail)) {
+              showReportTerminalState(reportIsExpired(detail) ? '已过期' : '分析失败', reportIsExpired(detail) ? '报告已超过保存期限。' : (detail.error || '分析未能完成。'), true);
+              loadReports();
+              return;
+            }
+            elements.analysisNote.textContent = '报告仍在分析中，已恢复自动刷新…';
+          }
+          throw new Error('分析时间较长');
+        }
+
+        function displayReportDetail(detail, scroll) {
+          adoptReportData(detail);
+          const metadata = detail.metadata && typeof detail.metadata === 'object' ? detail.metadata : {};
+          const date = formatReportDate(detail.completed_at || detail.created_at || metadata.created_at);
+          if (date) elements.reportDate.textContent = date;
+          const status = String(detail.status || metadata.status || 'processing').toLowerCase();
+          if (reportIsExpired(detail)) {
+            showReportTerminalState('已过期', '报告已超过保存期限，无法继续查看。', scroll);
+            return;
+          }
+          if (status === 'failed' || status === 'error') {
+            showReportTerminalState('分析失败', detail.error || '分析未能完成，请开始新的分析。', scroll);
+            return;
+          }
+          if (status === 'completed' || status === 'complete' || status === 'succeeded') {
+            completeOpenedReport(detail, scroll);
+            return;
+          }
+
+          isProcessing = true;
+          elements.progressSection.hidden = false;
+          elements.previewSection.hidden = true;
+          elements.fullReport.hidden = true;
+          elements.progressSection.dataset.state = 'loading';
+          elements.progressPill.textContent = '处理中';
+          elements.uploadSection.querySelector('.status-pill').textContent = '已恢复报告';
+          elements.startButtonText.textContent = '分析进行中';
+          setProgress('upload', 100);
+          setProgress('analysis', typeof detail.progress === 'number' ? detail.progress : 45);
+          setStepState(0, 'complete');
+          setStepState(1, 'active');
+          elements.uploadStatus.textContent = '已从“我的报告”安全恢复';
+          elements.analysisNote.textContent = '报告仍在分析中，正在恢复进度…';
+          updateActionState();
+          if (scroll) scrollActiveReport();
+          resumeOpenedReport(currentReportId);
+        }
+
+        async function openReport(reportId) {
+          if (!reportId || openingReport) return;
+          if (currentReportId === reportId && (!elements.previewSection.hidden || isProcessing)) {
+            scrollActiveReport();
+            return;
+          }
+          const generation = sessionGeneration;
+          openingReport = true;
+          renderReportList();
+          setMessage(elements.reportCenterFeedback, '正在恢复报告…');
+          try {
+            const detail = await requestJson('/reports/' + encodeURIComponent(reportId));
+            if (generation !== sessionGeneration) return;
+            resetResults();
+            currentReportId = String(detail.report_id || reportId);
+            elements.reportId.textContent = currentReportId;
+            displayReportDetail(detail, true);
+            setMessage(elements.reportCenterFeedback, '报告已恢复。', 'success');
+          } catch (error) {
+            if (generation !== sessionGeneration) return;
+            if (error.status === 410) {
+              resetResults();
+              currentReportId = reportId;
+              elements.reportId.textContent = reportId;
+              showReportTerminalState('已过期', '报告已超过保存期限，无法继续查看。', true);
+            }
+            const message = error.status === 401 || error.status === 403
+              ? '当前会话无权打开此报告，请重新登录或使用正确的提取码认领。'
+              : error.status === 410
+                ? '该报告已过期。'
+                : '报告恢复失败：' + error.message;
+            setMessage(elements.reportCenterFeedback, message, 'error');
+          } finally {
+            if (generation === sessionGeneration) {
+              openingReport = false;
+              renderReportList();
+            }
+          }
+        }
+
+        async function initializeReportCenter() {
+          await Promise.all([loadAuthConfig(), loadReports()]);
+        }
+
+        async function loadPayPalSDK(clientId, env) {
+          let sdkOrigin;
+          if (env === 'sandbox') sdkOrigin = 'https://www.sandbox.paypal.com';
+          else if (env === 'live') sdkOrigin = 'https://www.paypal.com';
+          else throw new Error('PayPal 环境配置无效');
           if (window.paypal && window.paypal.Buttons) return;
           await new Promise((resolve, reject) => {
             const script = document.createElement('script');
-            script.src = 'https://www.paypal.com/sdk/js?client-id=' + encodeURIComponent(clientId) + '&currency=USD&intent=capture&components=buttons&disable-funding=credit';
+            script.src = sdkOrigin + '/sdk/js?client-id=' + encodeURIComponent(clientId) + '&currency=USD&intent=capture&components=buttons&disable-funding=credit';
             script.onload = resolve;
             script.onerror = () => reject(new Error('PayPal SDK 加载失败'));
             document.head.appendChild(script);
           });
         }
 
+        function setPaymentContainerMessage(container, text) {
+          const note = document.createElement('p');
+          note.className = 'payment-note';
+          note.textContent = text;
+          container.replaceChildren(note);
+        }
+
         async function renderPayPalButtons() {
           const container = document.getElementById('paypal-button-container');
           if (!container || isPaid) return;
+          const version = ++payPalRenderVersion;
+          const fileId = uploadedFileIds[0];
+          const reportId = currentReportId;
           container.hidden = false;
           if (container.dataset.rendered === 'true') return;
+          container.dataset.rendered = 'true';
+          if (!fileId) {
+            setPaymentContainerMessage(container, '报告文件标识尚未恢复，请从“我的报告”重新打开后再试。');
+            return;
+          }
           try {
-            const cfgResp = await fetch(API_BASE + '/pay/config');
-            const cfg = await cfgResp.json();
+            const cfg = await requestJson('/pay/config');
+            if (version !== payPalRenderVersion) return;
             if (!cfg.enabled || !cfg.client_id) {
-              container.innerHTML = '<p class="payment-note">支付通道即将开通，如需报告请通过人工咨询获取。</p>';
+              setPaymentContainerMessage(container, '支付通道即将开通，如需报告请通过人工咨询获取。');
               return;
             }
-            await loadPayPalSDK(cfg.client_id);
-            window.paypal.Buttons({
+            await loadPayPalSDK(cfg.client_id, cfg.env);
+            if (version !== payPalRenderVersion) return;
+            const buttons = window.paypal.Buttons({
               style: { layout: 'vertical', color: 'blue', shape: 'rect', label: 'paypal', height: 45 },
               createOrder: async () => {
-                const response = await fetch(API_BASE + '/pay/orders', {
-                  method: 'POST',
-                  headers: { 'Content-Type': 'application/json' },
-                  body: JSON.stringify({ file_id: uploadedFileIds[0] }),
-                });
-                if (!response.ok) {
-                  const error = await response.json().catch(() => ({}));
-                  throw new Error(error.detail?.message || error.detail || '订单创建失败');
+                if (payPalOrder && payPalOrder.reportId === reportId) return payPalOrder.orderId;
+                if (payPalOrderPromise) return payPalOrderPromise;
+                payPalOrderPromise = (async () => {
+                  const data = await requestJson('/pay/orders', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ file_id: fileId }),
+                  });
+                  if (version !== payPalRenderVersion || !data.order_id) {
+                    throw new Error('订单状态已变化，请重新打开报告');
+                  }
+                  payPalOrder = { reportId, orderId: data.order_id };
+                  return data.order_id;
+                })();
+                try {
+                  return await payPalOrderPromise;
+                } finally {
+                  payPalOrderPromise = null;
                 }
-                const data = await response.json();
-                return data.order_id;
               },
               onApprove: async (data) => {
-                elements.paymentStatus.hidden = false;
-                elements.paymentStatus.textContent = '支付成功，正在解锁完整报告…';
-                const response = await fetch(API_BASE + '/pay/capture', {
-                  method: 'POST',
-                  headers: { 'Content-Type': 'application/json' },
-                  body: JSON.stringify({ order_id: data.orderID, file_id: uploadedFileIds[0] }),
-                });
-                if (!response.ok) {
-                  const error = await response.json().catch(() => ({}));
-                  throw new Error(error.detail?.issue || error.detail?.message || error.detail || '支付确认失败');
+                if (isPaid) return;
+                if (payPalCapture && payPalCapture.orderId === data.orderID) {
+                  return payPalCapture.promise;
                 }
-                const reportData = await response.json();
-                isPaid = true;
-                document.body.classList.add('is-paid');
-                elements.paymentStatus.hidden = false;
-                elements.paymentStatus.textContent = '支付已确认，完整报告已解锁。';
-                elements.lockedModule.hidden = true;
-                elements.fullReport.hidden = false;
-                renderFullReport(reportData.full_report);
-                elements.fullReport.scrollIntoView({
-                  behavior: reducedMotion.matches ? 'auto' : 'smooth',
-                  block: 'start',
-                });
+                const capturePromise = (async () => {
+                  elements.paymentStatus.hidden = false;
+                  elements.paymentStatus.classList.remove('alert-error');
+                  elements.paymentStatus.classList.add('alert-success');
+                  elements.paymentStatus.textContent = '支付已提交，正在确认并恢复完整报告…';
+                  const captured = await requestJson('/pay/capture', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ order_id: data.orderID, file_id: fileId }),
+                  });
+                  if (captured.payment_verified !== true) {
+                    throw new Error('支付服务尚未确认付款，请稍后从“我的报告”恢复，不要重复支付');
+                  }
+                  let restored = captured;
+                  if (currentReportId) {
+                    try {
+                      const detail = await requestJson('/reports/' + encodeURIComponent(currentReportId));
+                      restored = { ...detail };
+                      const capturedFull = captured.full_report || captured.report_full;
+                      if (!restored.full_report && !restored.report_full && capturedFull) {
+                        restored.full_report = capturedFull;
+                      }
+                    } catch (error) {
+                      restored = { ...captured, report_id: currentReportId };
+                    }
+                  }
+                  if (!restored.full_report && !restored.report_full) {
+                    throw new Error('付款已确认，但完整报告暂时恢复失败，请稍后从“我的报告”重试');
+                  }
+                  restored.paid = true;
+                  if (version !== payPalRenderVersion) return;
+                  unlockPaidReport(restored);
+                  loadReports();
+                  elements.fullReport.scrollIntoView({
+                    behavior: reducedMotion.matches ? 'auto' : 'smooth',
+                    block: 'start',
+                  });
+                })();
+                payPalCapture = { orderId: data.orderID, promise: capturePromise };
+                try {
+                  await capturePromise;
+                } catch (error) {
+                  if (version !== payPalRenderVersion) return;
+                  payPalCapture = null;
+                  elements.paymentStatus.hidden = false;
+                  elements.paymentStatus.classList.remove('alert-success');
+                  elements.paymentStatus.classList.add('alert-error');
+                  elements.paymentStatus.textContent = '支付确认失败：' + error.message + '。如已完成付款，请稍后从“我的报告”恢复，不要重复支付。';
+                  throw error;
+                }
               },
               onError: () => {
-                showFileError('支付出错，请重试');
+                if (version !== payPalRenderVersion) return;
+                showFileError('支付流程未完成。如已付款，请从“我的报告”恢复，不要重复支付。');
               },
-            }).render('#paypal-button-container');
-            container.dataset.rendered = 'true';
+            });
+            await buttons.render('#paypal-button-container');
           } catch (error) {
-            container.innerHTML = '<p class="payment-note">支付组件加载失败，请刷新页面重试。</p>';
+            if (version !== payPalRenderVersion) return;
+            setPaymentContainerMessage(container, '支付组件加载失败，请刷新页面或重新打开报告后重试。');
           }
         }
 
         function renderFullReport(report) {
           const container = document.querySelector('.report-chapters');
           if (!container) return;
-          container.innerHTML = '';
-          const sections = (report && report.sections) || [];
+          container.replaceChildren();
+          const sections = report && Array.isArray(report.sections) ? report.sections : [];
           sections.forEach((section, index) => {
             const article = document.createElement('article');
             article.className = 'report-chapter';
@@ -3503,40 +4654,53 @@
             num.className = 'chapter-number';
             num.textContent = String(index + 1).padStart(2, '0');
             const title = document.createElement('h3');
-            title.textContent = section.title || '章节 ' + (index + 1);
-            heading.appendChild(num);
-            heading.appendChild(title);
+            title.textContent = section.title ? String(section.title) : '章节 ' + (index + 1);
+            heading.append(num, title);
             const body = document.createElement('p');
             body.className = 'chapter-body';
             body.style.whiteSpace = 'pre-wrap';
-            body.textContent = section.content || '';
-            article.appendChild(heading);
-            article.appendChild(body);
+            body.textContent = section.content ? String(section.content) : '';
+            article.append(heading, body);
             container.appendChild(article);
           });
-          const doctors = (report && report.doctors) || [];
+          const doctors = report && Array.isArray(report.doctors) ? report.doctors : [];
           if (doctors.length) {
             const article = document.createElement('article');
             article.className = 'report-chapter';
             const heading = document.createElement('div');
             heading.className = 'chapter-heading';
-            heading.innerHTML = '<span class="chapter-number">+</span><h3>推荐医生</h3>';
+            const number = document.createElement('span');
+            number.className = 'chapter-number';
+            number.textContent = '+';
+            const title = document.createElement('h3');
+            title.textContent = '推荐医生';
+            heading.append(number, title);
             article.appendChild(heading);
             doctors.forEach((doctor) => {
               const item = document.createElement('p');
               item.style.marginBottom = '12px';
+              const strong = document.createElement('strong');
+              const hospital = document.createElement('span');
+              hospital.className = 'doctor-hospital';
               const line1 = [doctor.name, doctor.title, doctor.department].filter(Boolean).join(' · ');
               const line2 = [doctor.hospital, doctor.hospital_level].filter(Boolean).join(' · ');
-              const specialties = doctor.specialties || '';
-              item.innerHTML = '<strong></strong><br><span class="doctor-hospital"></span>';
-              item.querySelector('strong').textContent = line1;
-              item.querySelector('.doctor-hospital').textContent = line2 + (specialties ? '｜擅长：' + specialties : '');
+              const specialties = Array.isArray(doctor.specialties)
+                ? doctor.specialties.join('、')
+                : (doctor.specialties || '');
+              strong.textContent = line1;
+              hospital.textContent = line2 + (specialties ? '｜擅长：' + String(specialties) : '');
+              item.append(strong, document.createElement('br'), hospital);
               article.appendChild(item);
             });
             container.appendChild(article);
           }
-          const reportIdEl = document.getElementById('report-id');
-          if (reportIdEl) reportIdEl.textContent = 'SM-' + Date.now().toString(36).toUpperCase();
+          if (!sections.length && !doctors.length) {
+            const empty = document.createElement('p');
+            empty.className = 'report-chapter';
+            empty.textContent = '支付状态已确认，但完整报告内容暂未返回。请稍后从“我的报告”重新打开，无需重复支付。';
+            container.appendChild(empty);
+          }
+          elements.reportId.textContent = currentReportId || '—';
         }
 
         elements.fileInput.addEventListener("change", (event) => addFiles(event.target.files));
@@ -3589,6 +4753,20 @@
         elements.agreeConsent.addEventListener("click", agreeToConsent);
         elements.declineConsent.addEventListener("click", declineToConsent);
         elements.reopenConsent.addEventListener("click", showConsentModal);
+        elements.refreshReports.addEventListener('click', loadReports);
+        elements.claimForm.addEventListener('submit', (event) => {
+          event.preventDefault();
+          claimReport();
+        });
+        elements.requestCode.addEventListener('click', requestEmailCode);
+        elements.emailLoginForm.addEventListener('submit', (event) => {
+          event.preventDefault();
+          verifyEmailCode();
+        });
+        elements.logoutButton.addEventListener('click', logout);
+        document.getElementById('copy-report-id').addEventListener('click', () => copyCredential('report'));
+        document.getElementById('copy-access-code').addEventListener('click', () => copyCredential('code'));
+        elements.acceptedAccessCode.addEventListener('focus', () => elements.acceptedAccessCode.select());
 
         elements.consentModal.addEventListener("keydown", (event) => {
           if (event.key === "Escape") {
@@ -3624,6 +4802,7 @@
           showConsentModal();
         }
         updateActionState();
+        reportCenterReady = initializeReportCenter();
         resumeAnalysisIfPending();
       })();
     </script>

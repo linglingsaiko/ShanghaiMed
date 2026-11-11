@@ -1,0 +1,4810 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0E5A5A" />
+    <meta
+      name="description"
+      content="ShanghaiMed 病历上传与 AI 医生匹配：上传病历、AI 分析、获取免费预览与完整报告。"
+    />
+    <title>MediMatch 病历分析 · 精准专科医生匹配｜ShanghaiMed</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --color-primary: #0e5a5a;
+        --color-primary-dark: #084646;
+        --color-primary-soft: #eaf4f3;
+        --color-background: #f4f7f9;
+        --color-surface: #ffffff;
+        --color-title: #1a2230;
+        --color-text: #2b3442;
+        --color-muted-text: #687586;
+        --color-border: #e3e8ee;
+        --color-focus: #0e5a5a;
+        --color-success: #237a57;
+        --color-success-soft: #edf8f2;
+        --color-warning: #8a5a14;
+        --color-warning-soft: #fff8e9;
+        --color-error: #b63b45;
+        --color-error-soft: #fff1f2;
+        --font-body: Inter, "PingFang SC", "Microsoft YaHei", system-ui,
+          -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        --font-display: Inter, "PingFang SC", "Microsoft YaHei", system-ui,
+          -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        --radius-sm: 8px;
+        --radius-md: 12px;
+        --radius-lg: 18px;
+        --space-unit: 4px;
+        --content-width: 1180px;
+        --shadow-card: 0 12px 36px rgba(26, 34, 48, 0.055);
+        --shadow-modal: 0 28px 80px rgba(26, 34, 48, 0.22);
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        background: var(--color-background);
+        color: var(--color-text);
+        font-family: var(--font-body);
+        line-height: 1.6;
+      }
+
+      body {
+        margin: 0;
+        min-width: 320px;
+        min-height: 100vh;
+        background: var(--color-background);
+      }
+
+      body.modal-open {
+        overflow: hidden;
+      }
+
+      button,
+      input,
+      select,
+      textarea {
+        font: inherit;
+      }
+
+      button,
+      a {
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      button {
+        border: 0;
+      }
+
+      a {
+        color: var(--color-primary);
+        text-decoration-thickness: 1px;
+        text-underline-offset: 3px;
+      }
+
+      a:hover {
+        color: var(--color-primary-dark);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      p {
+        margin-top: 0;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        color: var(--color-title);
+        font-family: var(--font-display);
+        line-height: 1.3;
+      }
+
+      svg {
+        display: block;
+        flex: 0 0 auto;
+      }
+
+      [hidden] {
+        display: none !important;
+      }
+
+      :focus-visible {
+        outline: 3px solid var(--color-focus);
+        outline-offset: 3px;
+      }
+
+      .skip-link {
+        position: fixed;
+        top: 12px;
+        left: 12px;
+        z-index: 200;
+        padding: 10px 16px;
+        border-radius: var(--radius-sm);
+        background: var(--color-title);
+        color: #fff;
+        transform: translateY(-160%);
+      }
+
+      .skip-link:focus {
+        color: #fff;
+        transform: translateY(0);
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      .container {
+        width: min(calc(100% - 40px), var(--content-width));
+        margin-inline: auto;
+      }
+
+      .site-header {
+        position: relative;
+        z-index: 20;
+        border-bottom: 1px solid var(--color-border);
+        background: rgba(255, 255, 255, 0.97);
+      }
+
+      .nav-wrap {
+        min-height: 76px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--color-title);
+        text-decoration: none;
+      }
+
+      .brand:hover {
+        color: var(--color-title);
+      }
+
+      .brand-mark {
+        width: 40px;
+        height: 40px;
+        display: grid;
+        place-items: center;
+        border-radius: 11px;
+        background: var(--color-primary);
+        color: #fff;
+      }
+
+      .brand-name {
+        display: block;
+        font-size: 20px;
+        font-weight: 780;
+        letter-spacing: -0.4px;
+        line-height: 1.15;
+      }
+
+      .brand-subtitle {
+        display: block;
+        margin-top: 4px;
+        color: var(--color-muted-text);
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 1.3px;
+        line-height: 1;
+      }
+
+      .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+      }
+
+      .secure-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        color: var(--color-muted-text);
+        font-size: 13px;
+      }
+
+      .secure-label svg {
+        color: var(--color-success);
+      }
+
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        min-height: 44px;
+        font-size: 14px;
+        font-weight: 650;
+        text-decoration: none;
+      }
+
+      main {
+        overflow: hidden;
+      }
+
+      .hero {
+        max-width: 880px;
+        margin-inline: auto;
+        padding: 56px 0 32px;
+        text-align: center;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 18px;
+        padding: 7px 12px;
+        border: 1px solid #cfe2e0;
+        border-radius: 999px;
+        background: var(--color-primary-soft);
+        color: var(--color-primary);
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .eyebrow-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--color-primary);
+      }
+
+      .hero h1 {
+        max-width: 800px;
+        margin: 0 auto 16px;
+        font-size: clamp(30px, 4.2vw, 46px);
+        font-weight: 780;
+        letter-spacing: -1.2px;
+      }
+
+      .hero-subtitle {
+        max-width: 680px;
+        margin: 0 auto;
+        color: var(--color-muted-text);
+        font-size: 17px;
+      }
+
+      .trust-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 22px;
+        padding: 0;
+        margin: 24px 0 0;
+        list-style: none;
+      }
+
+      .trust-list li {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        color: #536172;
+        font-size: 13px;
+      }
+
+      .trust-list svg {
+        color: var(--color-success);
+      }
+
+      .demo-strip {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 20px;
+        padding: 12px 16px;
+        border: 1px solid #d8e5e8;
+        border-radius: var(--radius-md);
+        background: #f8fbfc;
+        color: #536172;
+        font-size: 13px;
+      }
+
+      .demo-strip svg {
+        margin-top: 3px;
+        color: var(--color-primary);
+      }
+
+      .workflow {
+        display: grid;
+        gap: 24px;
+        padding-bottom: 56px;
+      }
+
+      .card {
+        scroll-margin-top: 24px;
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        background: var(--color-surface);
+        box-shadow: var(--shadow-card);
+      }
+
+      .card-pad {
+        padding: 28px;
+      }
+
+      .section-heading {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 20px;
+        margin-bottom: 24px;
+      }
+
+      .section-title-wrap {
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+      }
+
+      .section-number {
+        min-width: 38px;
+        height: 28px;
+        display: inline-grid;
+        place-items: center;
+        margin-top: 1px;
+        border-radius: 7px;
+        background: var(--color-primary-soft);
+        color: var(--color-primary);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.5px;
+      }
+
+      .section-heading h2 {
+        margin-bottom: 5px;
+        font-size: 22px;
+        letter-spacing: -0.3px;
+      }
+
+      .section-heading p {
+        margin-bottom: 0;
+        color: var(--color-muted-text);
+        font-size: 14px;
+      }
+
+      .status-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        flex: 0 0 auto;
+        padding: 5px 10px;
+        border-radius: 999px;
+        background: #f0f3f6;
+        color: var(--color-muted-text);
+        font-size: 12px;
+        font-weight: 650;
+      }
+
+      .status-pill.success {
+        background: var(--color-success-soft);
+        color: var(--color-success);
+      }
+
+      .status-pill.demo {
+        border: 1px solid #d8e5e8;
+        background: #f8fbfc;
+        color: #536172;
+      }
+
+      .consent-banner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        margin-bottom: 20px;
+        padding: 16px 18px;
+        border: 1px solid #ead8ac;
+        border-radius: var(--radius-md);
+        background: var(--color-warning-soft);
+      }
+
+      .consent-banner-copy {
+        display: flex;
+        align-items: flex-start;
+        gap: 11px;
+        color: #6d4b19;
+        font-size: 14px;
+      }
+
+      .consent-banner-copy svg {
+        margin-top: 3px;
+      }
+
+      .consent-banner-copy strong {
+        display: block;
+        margin-bottom: 2px;
+        color: #55380f;
+      }
+
+      .btn {
+        min-height: 46px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 9px;
+        padding: 11px 20px;
+        border: 1px solid transparent;
+        border-radius: 9px;
+        cursor: pointer;
+        font-weight: 700;
+        line-height: 1.3;
+        text-decoration: none;
+        transition: background-color 160ms ease, border-color 160ms ease,
+          color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+      }
+
+      .btn:hover:not(:disabled) {
+        transform: translateY(-1px);
+      }
+
+      .btn:active:not(:disabled) {
+        transform: translateY(0);
+      }
+
+      .btn:disabled {
+        cursor: not-allowed;
+        opacity: 0.52;
+      }
+
+      .btn-primary {
+        background: var(--color-primary);
+        color: #fff;
+        box-shadow: 0 5px 14px rgba(14, 90, 90, 0.16);
+      }
+
+      .btn-primary:hover:not(:disabled) {
+        background: var(--color-primary-dark);
+        color: #fff;
+        box-shadow: 0 7px 18px rgba(14, 90, 90, 0.22);
+      }
+
+      .btn-secondary {
+        border-color: var(--color-border);
+        background: #fff;
+        color: var(--color-text);
+      }
+
+      .btn-secondary:hover:not(:disabled) {
+        border-color: #b9c6d1;
+        background: #f8fafb;
+        color: var(--color-title);
+      }
+
+      .btn-quiet {
+        min-height: 40px;
+        padding: 8px 12px;
+        background: transparent;
+        color: var(--color-primary);
+        font-size: 13px;
+      }
+
+      .btn-quiet:hover:not(:disabled) {
+        background: var(--color-primary-soft);
+      }
+
+      .btn-small {
+        min-height: 40px;
+        padding: 8px 14px;
+        font-size: 13px;
+      }
+
+      .upload-card {
+        transition: opacity 160ms ease;
+      }
+
+      .upload-card.is-blocked .upload-body {
+        opacity: 0.55;
+      }
+
+      .drop-zone {
+        position: relative;
+        min-height: 236px;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+        padding: 32px 20px;
+        border: 1.5px dashed #9fbfbd;
+        border-radius: var(--radius-md);
+        background: #f8fbfb;
+        text-align: center;
+        transition: border-color 160ms ease, background-color 160ms ease,
+          box-shadow 160ms ease;
+      }
+
+      .drop-zone:hover,
+      .drop-zone.is-dragging {
+        border-color: var(--color-primary);
+        background: #eff8f7;
+      }
+
+      .drop-zone.is-dragging {
+        box-shadow: inset 0 0 0 3px rgba(14, 90, 90, 0.09);
+      }
+
+      .drop-zone:focus-within {
+        outline: 3px solid var(--color-primary);
+        outline-offset: 3px;
+      }
+
+      .drop-zone[aria-disabled="true"] {
+        cursor: not-allowed;
+      }
+
+      .file-input {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        opacity: 0;
+      }
+
+      .file-input:disabled {
+        cursor: not-allowed;
+      }
+
+      .drop-content {
+        position: relative;
+        z-index: 1;
+        pointer-events: none;
+      }
+
+      .upload-icon {
+        width: 64px;
+        height: 64px;
+        display: grid;
+        place-items: center;
+        margin: 0 auto 16px;
+        border: 1px solid #d5e7e5;
+        border-radius: 18px;
+        background: #fff;
+        color: var(--color-primary);
+        box-shadow: 0 7px 20px rgba(14, 90, 90, 0.07);
+      }
+
+      .drop-title {
+        margin-bottom: 6px;
+        color: var(--color-title);
+        font-size: 17px;
+        font-weight: 720;
+      }
+
+      .drop-title span {
+        color: var(--color-primary);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .drop-hint {
+        margin-bottom: 16px;
+        color: var(--color-muted-text);
+        font-size: 13px;
+      }
+
+      .format-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 7px;
+      }
+
+      .format-chip {
+        padding: 3px 9px;
+        border: 1px solid var(--color-border);
+        border-radius: 6px;
+        background: #fff;
+        color: #536172;
+        font-size: 11px;
+        font-weight: 750;
+        letter-spacing: 0.4px;
+      }
+
+      .upload-limits {
+        margin: 12px 0 0;
+        color: var(--color-muted-text);
+        font-size: 12px;
+        text-align: center;
+      }
+
+      .alert {
+        display: flex;
+        align-items: flex-start;
+        gap: 9px;
+        margin-top: 14px;
+        padding: 12px 14px;
+        border-radius: var(--radius-sm);
+        font-size: 13px;
+      }
+
+      .alert svg {
+        margin-top: 3px;
+      }
+
+      .alert-error {
+        border: 1px solid #f1ccd0;
+        background: var(--color-error-soft);
+        color: #96323b;
+      }
+
+      .alert-success {
+        border: 1px solid #cde8da;
+        background: var(--color-success-soft);
+        color: #226749;
+      }
+
+      .file-panel {
+        margin-top: 20px;
+        overflow: hidden;
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+      }
+
+      .file-panel-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 12px 16px;
+        border-bottom: 1px solid var(--color-border);
+        background: #fafbfc;
+      }
+
+      .file-count {
+        color: #536172;
+        font-size: 13px;
+        font-weight: 650;
+      }
+
+      .file-list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      .file-item {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr) auto auto;
+        align-items: center;
+        gap: 12px;
+        padding: 13px 16px;
+      }
+
+      .file-item + .file-item {
+        border-top: 1px solid #edf0f3;
+      }
+
+      .file-type {
+        width: 42px;
+        height: 42px;
+        display: grid;
+        place-items: center;
+        border-radius: 9px;
+        background: var(--color-primary-soft);
+        color: var(--color-primary);
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 0.2px;
+      }
+
+      .file-name {
+        overflow: hidden;
+        margin: 0 0 2px;
+        color: var(--color-title);
+        font-size: 14px;
+        font-weight: 650;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .file-meta {
+        margin: 0;
+        color: var(--color-muted-text);
+        font-size: 12px;
+      }
+
+      .file-state {
+        color: var(--color-muted-text);
+        font-size: 12px;
+        white-space: nowrap;
+      }
+
+      .file-state.complete {
+        color: var(--color-success);
+      }
+
+      .icon-button {
+        width: 40px;
+        height: 40px;
+        display: grid;
+        place-items: center;
+        border-radius: 8px;
+        background: transparent;
+        color: var(--color-muted-text);
+        cursor: pointer;
+      }
+
+      .icon-button:hover:not(:disabled) {
+        background: var(--color-error-soft);
+        color: var(--color-error);
+      }
+
+      .icon-button:disabled {
+        cursor: not-allowed;
+        opacity: 0.45;
+      }
+
+      .records-tip {
+        display: flex;
+        align-items: flex-start;
+        gap: 11px;
+        margin-top: 20px;
+        padding: 15px 16px;
+        border: 1px solid #ece2c8;
+        border-radius: var(--radius-md);
+        background: #fffcf5;
+        color: #645638;
+        font-size: 13px;
+      }
+
+      .records-tip svg {
+        margin-top: 3px;
+        color: var(--color-warning);
+      }
+
+      .records-tip strong {
+        color: #57472b;
+      }
+
+      .upload-actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        margin-top: 24px;
+      }
+
+      .action-note {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        margin: 0;
+        color: var(--color-muted-text);
+        font-size: 12px;
+      }
+
+      .action-note svg {
+        color: var(--color-success);
+      }
+
+      .progress-layout {
+        display: grid;
+        gap: 24px;
+      }
+
+      .progress-block {
+        padding: 20px;
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        background: #fafcfd;
+      }
+
+      .progress-topline {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 10px;
+      }
+
+      .progress-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--color-title);
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .progress-percent {
+        color: var(--color-primary);
+        font-size: 14px;
+        font-variant-numeric: tabular-nums;
+        font-weight: 750;
+      }
+
+      .progress-track {
+        height: 9px;
+        overflow: hidden;
+        border-radius: 999px;
+        background: #e4ecee;
+      }
+
+      .progress-fill {
+        width: 0;
+        height: 100%;
+        border-radius: inherit;
+        background: var(--color-primary);
+        transition: width 180ms ease;
+      }
+
+      .progress-status {
+        min-height: 20px;
+        margin: 9px 0 0;
+        color: var(--color-muted-text);
+        font-size: 12px;
+      }
+
+      .analysis-steps {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 10px;
+        padding: 0;
+        margin: 14px 0 0;
+        list-style: none;
+      }
+
+      .analysis-step {
+        min-width: 0;
+        padding: 14px 12px;
+        border: 1px solid var(--color-border);
+        border-radius: 10px;
+        background: #fff;
+        transition: border-color 160ms ease, background-color 160ms ease;
+      }
+
+      .analysis-step.is-active {
+        border-color: #90bbb7;
+        background: #f2f9f8;
+      }
+
+      .analysis-step.is-complete {
+        border-color: #cce2d7;
+        background: #f5fbf8;
+      }
+
+      .step-icon {
+        width: 28px;
+        height: 28px;
+        display: grid;
+        place-items: center;
+        margin-bottom: 10px;
+        border-radius: 50%;
+        background: #eef1f4;
+        color: var(--color-muted-text);
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      .is-active .step-icon {
+        background: var(--color-primary);
+        color: #fff;
+      }
+
+      .is-complete .step-icon {
+        background: var(--color-success);
+        color: #fff;
+      }
+
+      .step-spinner {
+        width: 13px;
+        height: 13px;
+        border: 2px solid rgba(255, 255, 255, 0.4);
+        border-top-color: #fff;
+        border-radius: 50%;
+        animation: spin 800ms linear infinite;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .step-name {
+        min-height: 40px;
+        margin: 0 0 5px;
+        color: var(--color-title);
+        font-size: 13px;
+        font-weight: 680;
+        line-height: 1.5;
+      }
+
+      .step-status {
+        color: var(--color-muted-text);
+        font-size: 11px;
+      }
+
+      .is-active .step-status {
+        color: var(--color-primary);
+      }
+
+      .is-complete .step-status {
+        color: var(--color-success);
+      }
+
+      .preview-grid {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 18px;
+      }
+
+      .summary-card {
+        padding: 22px;
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        background: #fff;
+      }
+
+      .summary-card-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 17px;
+      }
+
+      .summary-icon {
+        width: 38px;
+        height: 38px;
+        display: grid;
+        place-items: center;
+        border-radius: 10px;
+        background: var(--color-primary-soft);
+        color: var(--color-primary);
+      }
+
+      .summary-card h3 {
+        margin: 0;
+        font-size: 17px;
+      }
+
+      .summary-list {
+        display: grid;
+        gap: 12px;
+        margin: 0;
+      }
+
+      .summary-row {
+        display: grid;
+        grid-template-columns: 90px 1fr;
+        gap: 12px;
+        font-size: 13px;
+      }
+
+      .summary-row dt {
+        color: var(--color-muted-text);
+      }
+
+      .summary-row dd {
+        margin: 0;
+        color: var(--color-title);
+        font-weight: 600;
+      }
+
+      .department-primary {
+        margin-bottom: 14px;
+        padding: 15px;
+        border-radius: 10px;
+        background: var(--color-primary-soft);
+      }
+
+      .department-label {
+        display: block;
+        margin-bottom: 3px;
+        color: var(--color-primary);
+        font-size: 11px;
+        font-weight: 750;
+      }
+
+      .department-name {
+        color: var(--color-primary-dark);
+        font-size: 22px;
+        font-weight: 780;
+      }
+
+      .department-secondary {
+        margin: 0;
+        color: #536172;
+        font-size: 13px;
+      }
+
+      .preview-disclaimer {
+        margin: 16px 0 0;
+        color: var(--color-muted-text);
+        font-size: 12px;
+      }
+
+      .locked-module {
+        position: relative;
+        min-height: 300px;
+        margin-top: 20px;
+        overflow: hidden;
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        background: #fafbfc;
+      }
+
+      .locked-content {
+        padding: 24px;
+        filter: blur(5px);
+        opacity: 0.48;
+        pointer-events: none;
+        user-select: none;
+      }
+
+      .locked-skeleton-title {
+        width: 42%;
+        height: 20px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        background: #9aa8b5;
+      }
+
+      .locked-skeleton-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+      }
+
+      .locked-skeleton-card {
+        height: 140px;
+        border-radius: 10px;
+        background: #aab6c0;
+      }
+
+      .locked-skeleton-line {
+        width: 100%;
+        height: 12px;
+        margin-top: 14px;
+        border-radius: 4px;
+        background: #aab6c0;
+      }
+
+      .locked-skeleton-line.short {
+        width: 70%;
+      }
+
+      .lock-overlay {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        padding: 28px;
+        background: rgba(250, 251, 252, 0.46);
+        text-align: center;
+      }
+
+      .lock-panel {
+        max-width: 500px;
+      }
+
+      .lock-icon {
+        width: 50px;
+        height: 50px;
+        display: grid;
+        place-items: center;
+        margin: 0 auto 12px;
+        border: 1px solid #d5e4e3;
+        border-radius: 50%;
+        background: #fff;
+        color: var(--color-primary);
+        box-shadow: 0 8px 24px rgba(26, 34, 48, 0.09);
+      }
+
+      .lock-panel h3 {
+        margin-bottom: 7px;
+        font-size: 20px;
+      }
+
+      .lock-panel p {
+        margin-bottom: 17px;
+        color: #536172;
+        font-size: 13px;
+      }
+
+      .unlock-features {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px 14px;
+        padding: 0;
+        margin: 0 0 18px;
+        list-style: none;
+        color: var(--color-title);
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      .unlock-features li::before {
+        content: "✓";
+        margin-right: 5px;
+        color: var(--color-success);
+      }
+
+      .btn-unlock {
+        min-width: 240px;
+        min-height: 52px;
+        font-size: 16px;
+      }
+
+      .paypal-button-container {
+        min-height: 48px;
+        margin: 12px 0 4px;
+        width: 100%;
+        max-width: 320px;
+      }
+
+      .payment-note {
+        display: block;
+        margin-top: 9px;
+        color: var(--color-muted-text);
+        font-size: 11px;
+      }
+
+      .report-toolbar {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .report-demo-note {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 20px;
+        padding: 13px 16px;
+        border: 1px solid #d8e5e8;
+        border-radius: var(--radius-md);
+        background: #f8fbfc;
+        color: #536172;
+        font-size: 13px;
+      }
+
+      .report-demo-note svg {
+        margin-top: 3px;
+        color: var(--color-primary);
+      }
+
+      .report-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 22px;
+        margin-bottom: 22px;
+        padding: 13px 16px;
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-sm);
+        background: #fafbfc;
+        color: var(--color-muted-text);
+        font-size: 12px;
+      }
+
+      .report-chapters {
+        display: grid;
+        gap: 18px;
+      }
+
+      .report-chapter {
+        padding: 24px;
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        background: #fff;
+      }
+
+      .chapter-heading {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        margin-bottom: 18px;
+      }
+
+      .chapter-number {
+        width: 30px;
+        height: 30px;
+        display: grid;
+        place-items: center;
+        flex: 0 0 auto;
+        border-radius: 8px;
+        background: var(--color-primary);
+        color: #fff;
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      .chapter-heading h3 {
+        margin: 0;
+        font-size: 18px;
+      }
+
+      .chapter-intro {
+        color: #536172;
+        font-size: 14px;
+      }
+
+      .timeline {
+        padding: 0;
+        margin: 18px 0 0;
+        list-style: none;
+      }
+
+      .timeline-item {
+        position: relative;
+        display: grid;
+        grid-template-columns: 96px 1fr;
+        gap: 20px;
+        padding-bottom: 18px;
+      }
+
+      .timeline-item:last-child {
+        padding-bottom: 0;
+      }
+
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: 107px;
+        width: 8px;
+        height: 8px;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        background: var(--color-primary);
+        box-shadow: 0 0 0 1px var(--color-primary);
+      }
+
+      .timeline-item::after {
+        content: "";
+        position: absolute;
+        top: 23px;
+        bottom: 2px;
+        left: 111px;
+        width: 1px;
+        background: #cfe0df;
+      }
+
+      .timeline-item:last-child::after {
+        display: none;
+      }
+
+      .timeline-date {
+        color: var(--color-primary);
+        font-size: 12px;
+        font-weight: 750;
+      }
+
+      .timeline-copy {
+        padding-left: 8px;
+        color: #536172;
+        font-size: 13px;
+      }
+
+      .timeline-copy strong {
+        display: block;
+        margin-bottom: 2px;
+        color: var(--color-title);
+      }
+
+      .finding-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+      }
+
+      .finding-item {
+        padding: 16px;
+        border: 1px solid var(--color-border);
+        border-radius: 10px;
+        background: #fafbfc;
+      }
+
+      .finding-item strong {
+        display: block;
+        margin-bottom: 5px;
+        color: var(--color-title);
+        font-size: 13px;
+      }
+
+      .finding-item p {
+        margin: 0;
+        color: var(--color-muted-text);
+        font-size: 12px;
+      }
+
+      .doctor-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+      }
+
+      .doctor-card {
+        padding: 18px;
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        background: #fff;
+      }
+
+      .doctor-card.recommended {
+        border-color: #9fc5c1;
+        box-shadow: inset 0 3px 0 var(--color-primary);
+      }
+
+      .doctor-badge {
+        display: inline-block;
+        margin-bottom: 12px;
+        padding: 3px 8px;
+        border-radius: 5px;
+        background: var(--color-primary-soft);
+        color: var(--color-primary);
+        font-size: 10px;
+        font-weight: 750;
+      }
+
+      .doctor-card h4 {
+        margin-bottom: 4px;
+        font-size: 16px;
+      }
+
+      .doctor-role {
+        margin-bottom: 13px;
+        color: var(--color-muted-text);
+        font-size: 12px;
+      }
+
+      .doctor-detail {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        color: #536172;
+        font-size: 12px;
+      }
+
+      .doctor-detail li {
+        padding: 7px 0;
+        border-top: 1px solid #edf0f3;
+      }
+
+      .doctor-detail strong {
+        color: var(--color-title);
+      }
+
+      .table-wrap {
+        overflow-x: auto;
+        border: 1px solid var(--color-border);
+        border-radius: 10px;
+      }
+
+      table {
+        width: 100%;
+        min-width: 680px;
+        border-collapse: collapse;
+        font-size: 13px;
+        text-align: left;
+      }
+
+      th,
+      td {
+        padding: 14px 16px;
+        border-bottom: 1px solid var(--color-border);
+        vertical-align: top;
+      }
+
+      th {
+        background: #f5f8fa;
+        color: var(--color-title);
+        font-size: 12px;
+        font-weight: 750;
+      }
+
+      td {
+        color: #536172;
+      }
+
+      td:first-child {
+        color: var(--color-title);
+        font-weight: 650;
+      }
+
+      tr:last-child td {
+        border-bottom: 0;
+      }
+
+      .preparation-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 18px;
+      }
+
+      .prep-checklist {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      .prep-checklist li {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 10px 0;
+        border-bottom: 1px solid #edf0f3;
+        color: #536172;
+        font-size: 13px;
+      }
+
+      .prep-checklist li:last-child {
+        border-bottom: 0;
+      }
+
+      .check-square {
+        width: 19px;
+        height: 19px;
+        display: grid;
+        place-items: center;
+        flex: 0 0 auto;
+        margin-top: 2px;
+        border: 1px solid #b9cecc;
+        border-radius: 5px;
+        color: var(--color-primary);
+        font-size: 11px;
+      }
+
+      .hospital-card {
+        padding: 20px;
+        border-radius: var(--radius-md);
+        background: var(--color-primary);
+        color: #fff;
+      }
+
+      .hospital-card h4 {
+        margin-bottom: 4px;
+        color: #fff;
+        font-size: 17px;
+      }
+
+      .hospital-type {
+        margin-bottom: 16px;
+        color: #d6e8e6;
+        font-size: 12px;
+      }
+
+      .hospital-list {
+        display: grid;
+        gap: 11px;
+        margin: 0;
+      }
+
+      .hospital-list div {
+        display: grid;
+        grid-template-columns: 74px 1fr;
+        gap: 10px;
+        font-size: 12px;
+      }
+
+      .hospital-list dt {
+        color: #bcd8d5;
+      }
+
+      .hospital-list dd {
+        margin: 0;
+        color: #fff;
+      }
+
+      .next-steps {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        margin-bottom: 18px;
+      }
+
+      .next-step {
+        padding: 15px;
+        border-radius: 10px;
+        background: #f5f8fa;
+        color: #536172;
+        font-size: 12px;
+      }
+
+      .next-step strong {
+        display: block;
+        margin-bottom: 4px;
+        color: var(--color-title);
+        font-size: 13px;
+      }
+
+      .medical-disclaimer {
+        padding: 16px;
+        border-left: 3px solid var(--color-warning);
+        border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+        background: var(--color-warning-soft);
+        color: #6b532c;
+        font-size: 12px;
+      }
+
+      .medical-disclaimer strong {
+        display: block;
+        margin-bottom: 4px;
+        color: #553f1d;
+      }
+
+      .site-footer {
+        border-top: 1px solid var(--color-border);
+        background: #fff;
+      }
+
+      .footer-wrap {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 32px;
+        padding-top: 28px;
+        padding-bottom: 28px;
+      }
+
+      .footer-brand {
+        margin-bottom: 6px;
+        color: var(--color-title);
+        font-size: 14px;
+        font-weight: 750;
+      }
+
+      .footer-legal {
+        max-width: 720px;
+        margin: 0;
+        color: var(--color-muted-text);
+        font-size: 11px;
+      }
+
+      .footer-links {
+        display: flex;
+        flex: 0 0 auto;
+        gap: 18px;
+        font-size: 12px;
+      }
+
+      .modal-backdrop {
+        position: fixed;
+        inset: 0;
+        z-index: 100;
+        display: grid;
+        place-items: center;
+        overflow-y: auto;
+        padding: 24px;
+        background: rgba(17, 28, 38, 0.64);
+      }
+
+      .modal {
+        width: min(100%, 580px);
+        max-height: calc(100vh - 48px);
+        overflow-y: auto;
+        padding: 30px;
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-lg);
+        background: #fff;
+        box-shadow: var(--shadow-modal);
+      }
+
+      .modal-icon {
+        width: 48px;
+        height: 48px;
+        display: grid;
+        place-items: center;
+        margin-bottom: 18px;
+        border-radius: 12px;
+        background: var(--color-primary-soft);
+        color: var(--color-primary);
+      }
+
+      .modal h2 {
+        margin-bottom: 9px;
+        font-size: 24px;
+        letter-spacing: -0.4px;
+      }
+
+      .modal-intro {
+        margin-bottom: 20px;
+        color: var(--color-muted-text);
+        font-size: 13px;
+      }
+
+      .consent-list {
+        display: grid;
+        gap: 13px;
+        padding: 0;
+        margin: 0 0 22px;
+        list-style: none;
+      }
+
+      .consent-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 11px;
+        color: var(--color-text);
+        font-size: 14px;
+      }
+
+      .consent-check {
+        width: 22px;
+        height: 22px;
+        display: grid;
+        place-items: center;
+        flex: 0 0 auto;
+        margin-top: 1px;
+        border-radius: 50%;
+        background: var(--color-success-soft);
+        color: var(--color-success);
+      }
+
+      .consent-privacy {
+        margin-bottom: 22px;
+        padding: 12px 14px;
+        border-radius: var(--radius-sm);
+        background: #f5f8fa;
+        color: var(--color-muted-text);
+        font-size: 12px;
+      }
+
+      .modal-actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 12px;
+      }
+
+      .modal-actions .btn-primary {
+        min-width: 150px;
+      }
+
+      .noscript {
+        padding: 16px 20px;
+        background: var(--color-error-soft);
+        color: var(--color-error);
+        text-align: center;
+      }
+
+      @media (max-width: 900px) {
+        .analysis-steps {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .doctor-grid,
+        .finding-list {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .doctor-card:last-child,
+        .finding-item:last-child {
+          grid-column: 1 / -1;
+        }
+
+        .preparation-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 720px) {
+        .container {
+          width: min(calc(100% - 28px), var(--content-width));
+        }
+
+        .nav-wrap {
+          min-height: 68px;
+        }
+
+        .brand-mark {
+          width: 36px;
+          height: 36px;
+        }
+
+        .brand-name {
+          font-size: 18px;
+        }
+
+        .brand-subtitle,
+        .secure-label {
+          display: none;
+        }
+
+        .back-link {
+          font-size: 13px;
+        }
+
+        .hero {
+          padding: 38px 0 24px;
+        }
+
+        .hero h1 {
+          font-size: 31px;
+          letter-spacing: -0.7px;
+        }
+
+        .hero-subtitle {
+          font-size: 15px;
+        }
+
+        .trust-list {
+          gap: 8px 14px;
+        }
+
+        .card-pad,
+        .report-chapter {
+          padding: 20px;
+        }
+
+        .section-heading {
+          gap: 12px;
+          margin-bottom: 20px;
+        }
+
+        .section-heading h2 {
+          font-size: 20px;
+        }
+
+        .section-number {
+          min-width: 34px;
+        }
+
+        .status-pill {
+          display: none;
+        }
+
+        .drop-zone {
+          min-height: 220px;
+          padding: 26px 16px;
+        }
+
+        .upload-actions {
+          align-items: stretch;
+          flex-direction: column-reverse;
+          gap: 12px;
+        }
+
+        .upload-actions .btn {
+          width: 100%;
+        }
+
+        .action-note {
+          justify-content: center;
+          text-align: center;
+        }
+
+        .analysis-steps {
+          grid-template-columns: 1fr;
+          gap: 8px;
+        }
+
+        .analysis-step {
+          display: grid;
+          grid-template-columns: 30px minmax(0, 1fr) auto;
+          align-items: center;
+          gap: 11px;
+          padding: 11px 12px;
+        }
+
+        .step-icon {
+          margin: 0;
+        }
+
+        .step-name {
+          min-height: 0;
+          margin: 0;
+        }
+
+        .preview-grid,
+        .doctor-grid,
+        .finding-list,
+        .next-steps {
+          grid-template-columns: 1fr;
+        }
+
+        .doctor-card:last-child,
+        .finding-item:last-child {
+          grid-column: auto;
+        }
+
+        .summary-row {
+          grid-template-columns: 76px 1fr;
+        }
+
+        .locked-skeleton-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .locked-skeleton-card:last-child {
+          display: none;
+        }
+
+        .lock-overlay {
+          padding: 20px;
+        }
+
+        .btn-unlock {
+          min-width: min(100%, 240px);
+        }
+
+        .report-toolbar {
+          width: 100%;
+        }
+
+        #full-report .section-heading {
+          flex-direction: column;
+        }
+
+        #full-report .report-toolbar .btn {
+          width: 100%;
+        }
+
+        .timeline-item {
+          grid-template-columns: 74px 1fr;
+          gap: 18px;
+        }
+
+        .timeline-item::before {
+          left: 85px;
+        }
+
+        .timeline-item::after {
+          left: 89px;
+        }
+
+        .consent-banner {
+          align-items: stretch;
+          flex-direction: column;
+        }
+
+        .footer-wrap {
+          flex-direction: column;
+          gap: 16px;
+        }
+
+        .modal-backdrop {
+          align-items: end;
+          padding: 12px;
+        }
+
+        .modal {
+          width: 100%;
+          max-height: calc(100vh - 24px);
+          padding: 24px 20px;
+          border-radius: 16px;
+        }
+
+        .modal h2 {
+          font-size: 22px;
+        }
+
+        .modal-actions {
+          flex-direction: column-reverse;
+        }
+
+        .modal-actions .btn {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .file-item {
+          grid-template-columns: auto minmax(0, 1fr) auto;
+          gap: 10px;
+          padding: 12px;
+        }
+
+        .file-state {
+          display: none;
+        }
+
+        .file-type {
+          width: 38px;
+          height: 38px;
+        }
+
+        .file-panel-header {
+          padding: 10px 12px;
+        }
+
+        .file-count {
+          font-size: 12px;
+        }
+
+        .format-list {
+          gap: 5px;
+        }
+
+        .trust-list li {
+          font-size: 12px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+
+      @media print {
+        @page {
+          margin: 16mm;
+        }
+
+        body {
+          background: #fff;
+          color: #000;
+        }
+
+        body.is-paid .site-header,
+        body.is-paid .hero,
+        body.is-paid .demo-strip,
+        body.is-paid #consent-declined,
+        body.is-paid #report-center,
+        body.is-paid #access-credentials,
+        body.is-paid #upload-section,
+        body.is-paid #progress-section,
+        body.is-paid #preview-section,
+        body.is-paid .site-footer,
+        body.is-paid .report-toolbar,
+        body.is-paid .report-demo-note,
+        body.is-paid .modal-backdrop,
+        body.is-paid .skip-link {
+          display: none !important;
+        }
+
+        body.is-paid .container,
+        body.is-paid .workflow {
+          width: 100%;
+          max-width: none;
+          padding: 0;
+          margin: 0;
+        }
+
+        body.is-paid #full-report {
+          display: block !important;
+          border: 0;
+          box-shadow: none;
+        }
+
+        body.is-paid .card-pad,
+        body.is-paid .report-chapter {
+          padding: 0;
+        }
+
+        body.is-paid .report-chapter {
+          break-inside: avoid;
+          margin-bottom: 16px;
+        }
+
+        body.is-paid .doctor-card,
+        body.is-paid .finding-item,
+        body.is-paid tr {
+          break-inside: avoid;
+        }
+      }
+      .report-center {
+        scroll-margin-top: 24px;
+      }
+
+      .report-center-intro {
+        max-width: 720px;
+      }
+
+      .report-center-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+        gap: 22px;
+      }
+
+      .report-center-panel {
+        min-width: 0;
+        padding: 20px;
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        background: #fafcfd;
+      }
+
+      .report-center-panel h3 {
+        margin-bottom: 6px;
+        font-size: 16px;
+      }
+
+      .report-center-panel > p {
+        margin-bottom: 16px;
+        color: var(--color-muted-text);
+        font-size: 12px;
+      }
+
+      .center-message {
+        margin: 12px 0 0;
+        padding: 10px 12px;
+        border-radius: var(--radius-sm);
+        background: #f0f3f6;
+        color: #536172;
+        font-size: 12px;
+      }
+
+      .center-message.success {
+        background: var(--color-success-soft);
+        color: #226749;
+      }
+
+      .center-message.error {
+        background: var(--color-error-soft);
+        color: #96323b;
+      }
+
+      .center-message.warning {
+        background: var(--color-warning-soft);
+        color: #6d4b19;
+      }
+
+      .report-list {
+        display: grid;
+        gap: 10px;
+        padding: 0;
+        margin: 14px 0 0;
+        list-style: none;
+      }
+
+      .report-list-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        padding: 13px 14px;
+        border: 1px solid var(--color-border);
+        border-radius: 10px;
+        background: #fff;
+      }
+
+      .report-list-copy {
+        min-width: 0;
+      }
+
+      .report-list-id {
+        display: block;
+        overflow-wrap: anywhere;
+        margin-bottom: 3px;
+        color: var(--color-title);
+        font-size: 13px;
+      }
+
+      .report-list-meta {
+        margin: 0;
+        color: var(--color-muted-text);
+        font-size: 11px;
+      }
+
+      .report-list-item .btn {
+        flex: 0 0 auto;
+      }
+
+      .center-form {
+        display: grid;
+        gap: 12px;
+      }
+
+      .center-field {
+        display: grid;
+        gap: 6px;
+        color: var(--color-title);
+        font-size: 12px;
+        font-weight: 650;
+      }
+
+      .center-field input {
+        width: 100%;
+        min-height: 44px;
+        padding: 10px 12px;
+        border: 1px solid #cfd8e0;
+        border-radius: 8px;
+        background: #fff;
+        color: var(--color-title);
+        font: inherit;
+        font-size: 14px;
+        font-weight: 400;
+      }
+
+      .center-field input:focus {
+        border-color: var(--color-primary);
+        outline: 3px solid rgba(14, 90, 90, 0.12);
+      }
+
+      .center-form-actions,
+      .auth-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+      }
+
+      .auth-state {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 14px;
+        color: #536172;
+        font-size: 12px;
+      }
+
+      .auth-login-fields {
+        display: grid;
+        gap: 12px;
+      }
+
+      .analysis-email-block {
+        margin-top: 16px;
+      }
+
+      .analysis-email-block .chief-hint {
+        margin-bottom: 7px;
+      }
+
+      .analysis-email-input {
+        width: 100%;
+        min-height: 46px;
+        padding: 11px 12px;
+        border: 1px solid var(--color-border);
+        border-radius: 10px;
+        color: var(--color-title);
+        background: #fff;
+      }
+
+      .access-credentials {
+        border-color: #dfc27f;
+        background: #fffcf5;
+      }
+
+      .credentials-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+
+      .credential-item {
+        min-width: 0;
+        padding: 16px;
+        border: 1px solid #ead8ac;
+        border-radius: 10px;
+        background: #fff;
+      }
+
+      .credential-label {
+        display: block;
+        margin-bottom: 7px;
+        color: #6d4b19;
+        font-size: 12px;
+        font-weight: 750;
+      }
+
+      .credential-value {
+        display: block;
+        overflow-wrap: anywhere;
+        color: var(--color-title);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 17px;
+        font-weight: 750;
+      }
+
+      input.credential-value {
+        width: 100%;
+        min-height: 44px;
+        padding: 8px 10px;
+        border: 1px solid var(--color-border);
+        border-radius: 8px;
+        background: #fafbfc;
+      }
+
+      .credential-item .btn {
+        margin-top: 10px;
+      }
+
+      .credentials-warning {
+        margin: 15px 0 0;
+        color: #6d4b19;
+        font-size: 13px;
+      }
+
+      @media (max-width: 800px) {
+        .report-center-grid,
+        .credentials-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 520px) {
+        .report-center-panel {
+          padding: 16px;
+        }
+
+        .report-list-item {
+          align-items: stretch;
+          flex-direction: column;
+        }
+
+        .report-list-item .btn,
+        .center-form-actions .btn,
+        .auth-actions .btn {
+          width: 100%;
+        }
+      }
+
+    .chief-complaint { margin: 18px 0 4px; }
+    .chief-label { font-weight: 600; color: #1A2230; font-size: 15px; display: block; margin-bottom: 4px; }
+    .chief-optional { font-weight: 400; color: #6b7686; font-size: 13px; }
+    .chief-hint { color: #55606e; font-size: 13px; margin: 0 0 8px; }
+    .chief-input-wrap { position: relative; }
+    #chief-complaint-input {
+      width: 100%; box-sizing: border-box; resize: vertical; min-height: 76px;
+      padding: 12px 12px 40px; border: 1px solid #E3E8EE; border-radius: 12px;
+      font-size: 14px; line-height: 1.6; color: #1A2230; background: #fff; font-family: inherit;
+    }
+    #chief-complaint-input:focus { outline: none; border-color: #0E5A5A; box-shadow: 0 0 0 3px rgba(14,90,90,.12); }
+    .voice-btn {
+      position: absolute; right: 8px; bottom: 8px; display: inline-flex; align-items: center; gap: 5px;
+      padding: 6px 12px; border: 1px solid #0E5A5A; background: #fff; color: #0E5A5A;
+      border-radius: 999px; font-size: 12.5px; cursor: pointer; transition: all .2s;
+    }
+    .voice-btn:hover { background: #f0f7f7; }
+    .voice-btn.recording { background: #e23d3d; border-color: #e23d3d; color: #fff; animation: ccPulse 1.2s infinite; }
+    @keyframes ccPulse { 0%,100% { opacity: 1; } 50% { opacity: .55; } }
+    </style>
+  </head>
+  <body data-page-id="medical-records-upload" data-entry="true">
+    <a class="skip-link" href="#main-content">跳转到主要内容</a>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a
+          class="brand"
+          href="https://shanghaimedhealth.com/"
+          aria-label="ShanghaiMed 官网首页"
+        >
+          <span class="brand-mark" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6V3Z" fill="currentColor" />
+            </svg>
+          </span>
+          <span>
+            <span class="brand-name">ShanghaiMed</span>
+            <span class="brand-subtitle">MEDICAL RECORDS · PHASE 3</span>
+          </span>
+        </a>
+        <nav class="nav-actions" aria-label="页面导航">
+          <span class="secure-label">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="5" y="10" width="14" height="11" rx="2" stroke="currentColor" stroke-width="2" />
+              <path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+            HTTPS 安全连接
+          </span>
+          <a class="back-link" href="https://shanghaimedhealth.com/">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="m15 18-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            返回官网
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <noscript>
+      <div class="noscript">请启用 JavaScript 以使用文件校验、上传分析及报告预览功能。</div>
+    </noscript>
+
+    <main id="main-content" tabindex="-1">
+      <div class="container">
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="eyebrow">
+            <span class="eyebrow-dot" aria-hidden="true"></span>
+            MediMatch 专属 AI · 精准专科分诊
+          </div>
+          <h1 id="hero-title">上传病历，让 MediMatch 为您匹配最合适的专科医生</h1>
+          <p class="hero-subtitle">
+            支持图片、PDF、压缩包上传，病历越完整，推荐越精准
+          </p>
+          <ul class="trust-list" aria-label="隐私与安全保障">
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              原始病历分析后删除
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              全程 HTTPS 加密
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              可随时要求删除数据
+            </li>
+          </ul>
+        </section>
+
+        <div class="demo-strip" role="note">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" />
+            <path d="M12 11v6M12 7h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+          <span>
+            <strong>服务说明：</strong>上传的病历将通过加密连接传输至服务器进行 AI 分析，分析完成后原始文件将被自动删除。报告仅供参考，不构成医疗建议。
+          </span>
+        </div>
+
+        <div class="workflow">
+          <div class="consent-banner" id="consent-declined" hidden role="status">
+            <div class="consent-banner-copy">
+              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 9v4M12 17h.01M10.3 3.7 2.6 17a2 2 0 0 0 1.7 3h15.4a2 2 0 0 0 1.7-3L13.7 3.7a2 2 0 0 0-3.4 0Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              <div>
+                <strong>需要您的同意才能继续</strong>
+                您可以选择拒绝，病历上传功能将保持关闭；我们不会收集您的文件。
+              </div>
+            </div>
+            <button
+              class="btn btn-secondary btn-small"
+              id="reopen-consent"
+              type="button"
+              aria-controls="consent-modal"
+              data-anchor-id="medical-records-upload.reopen-consent"
+            >
+              重新阅读同意书
+            </button>
+          </div>
+
+          <section
+            class="card card-pad report-center"
+            id="report-center"
+            aria-labelledby="report-center-title"
+            data-anchor-id="medical-records-upload.report-center"
+          >
+            <div class="section-heading">
+              <div class="section-title-wrap">
+                <div class="report-center-intro">
+                  <h2 id="report-center-title">我的报告</h2>
+                  <p>此设备上的报告会自动列出；换设备时，可使用报告编号和提取码认领。</p>
+                </div>
+              </div>
+              <button class="btn btn-secondary btn-small" id="refresh-reports" type="button">刷新列表</button>
+            </div>
+
+            <div class="report-center-grid">
+              <div class="report-center-panel">
+                <h3>此设备上的报告</h3>
+                <p>只显示报告编号、进度与支付状态。打开时需通过当前安全会话验证。</p>
+                <div class="center-message" id="reports-state" role="status" aria-live="polite">正在加载报告…</div>
+                <ul class="report-list" id="report-list" aria-label="我的病历分析报告"></ul>
+              </div>
+
+              <div class="center-form">
+                <div class="report-center-panel">
+                  <h3>跨设备找回</h3>
+                  <p>输入分析受理时保存的报告编号和提取码（仅显示一次）。提取码不是报告编号。</p>
+                  <form class="center-form" id="claim-form" autocomplete="off">
+                    <label class="center-field" for="claim-report-id">
+                      报告编号
+                      <input id="claim-report-id" name="report_id" type="text" maxlength="80" required autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="SM-…" />
+                    </label>
+                    <label class="center-field" for="claim-access-code">
+                      提取码
+                      <input id="claim-access-code" name="access_code" type="password" maxlength="200" required autocomplete="off" spellcheck="false" placeholder="输入安全保存的提取码" />
+                    </label>
+                    <div class="center-form-actions">
+                      <button class="btn btn-primary btn-small" id="claim-submit" type="submit">认领并打开报告</button>
+                    </div>
+                  </form>
+                </div>
+
+                <div class="report-center-panel" id="auth-panel" hidden>
+                  <div class="auth-state">
+                    <span id="auth-state">正在检查登录状态…</span>
+                    <button class="btn btn-quiet btn-small" id="logout-button" type="button" hidden>退出登录</button>
+                  </div>
+                  <form class="auth-login-fields" id="email-login-form" autocomplete="on">
+                    <label class="center-field" for="auth-email">
+                      邮箱
+                      <input id="auth-email" name="email" type="email" maxlength="254" required autocomplete="email" inputmode="email" placeholder="you@example.com" />
+                    </label>
+                    <div class="auth-actions">
+                      <button class="btn btn-secondary btn-small" id="request-code" type="button">获取验证码</button>
+                    </div>
+                    <label class="center-field" for="auth-code">
+                      邮箱验证码
+                      <input id="auth-code" name="code" type="text" maxlength="12" inputmode="numeric" autocomplete="one-time-code" spellcheck="false" placeholder="输入收到的验证码" />
+                    </label>
+                    <div class="auth-actions">
+                      <button class="btn btn-primary btn-small" id="verify-code" type="submit">验证码登录</button>
+                    </div>
+                  </form>
+                </div>
+                <div class="center-message" id="email-unavailable" role="status" hidden></div>
+                <div class="center-message" id="auth-feedback" role="status" aria-live="polite" hidden></div>
+                <div class="center-message" id="report-center-feedback" role="status" aria-live="polite" hidden></div>
+              </div>
+            </div>
+          </section>
+
+          <section
+            class="card card-pad upload-card is-blocked"
+            id="upload-section"
+            aria-labelledby="upload-title"
+            aria-disabled="true"
+            data-state="default"
+            data-anchor-id="medical-records-upload.upload"
+          >
+            <div class="section-heading">
+              <div class="section-title-wrap">
+                <span class="section-number" aria-hidden="true">01</span>
+                <div>
+                  <h2 id="upload-title">选择病历文件</h2>
+                  <p>可一次选择多份资料，也可以将整理好的文件打包为 ZIP</p>
+                </div>
+              </div>
+              <span class="status-pill">待上传</span>
+            </div>
+
+            <div class="upload-body">
+              <div class="drop-zone" id="drop-zone" aria-disabled="true">
+                <input
+                  class="file-input"
+                  id="file-input"
+                  type="file"
+                  accept=".jpg,.jpeg,.png,.webp,.bmp,.gif,.tif,.tiff,.heic,.heif,.pdf,.zip,image/jpeg,image/png,image/webp,image/heic,image/heif,application/pdf,application/zip"
+                  multiple
+                  disabled
+                  aria-label="选择或拖放 JPG、PNG、WEBP、HEIC、PDF、ZIP 病历文件，单个文件最大 50MB"
+                  aria-describedby="upload-limits file-error"
+                  data-anchor-id="medical-records-upload.file-picker"
+                />
+                <div class="drop-content">
+                  <div class="upload-icon" aria-hidden="true">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                      <path d="M12 16V4m0 0L7 9m5-5 5 5M5 14v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <p class="drop-title">拖拽文件到这里，或 <span>点击选择文件</span></p>
+                  <p class="drop-hint">支持多文件上传 · 无需注册即可预览</p>
+                  <div class="format-list" aria-label="支持的文件格式">
+                    <span class="format-chip">JPG</span>
+                    <span class="format-chip">PNG</span>
+                    <span class="format-chip">WEBP</span>
+                    <span class="format-chip">HEIC</span>
+                    <span class="format-chip">PDF</span>
+                    <span class="format-chip">ZIP</span>
+                  </div>
+                </div>
+              </div>
+              <p class="upload-limits" id="upload-limits">支持 JPG、PNG、WEBP、HEIC、PDF、ZIP 等常见格式 · 单个文件最大 50MB</p>
+
+              <div class="alert alert-error" id="file-error" hidden role="alert">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" />
+                  <path d="M12 7v6M12 17h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+                <span id="file-error-text"></span>
+              </div>
+
+              <div class="file-panel" id="file-panel" hidden>
+                <div class="file-panel-header">
+                  <span class="file-count" id="file-count">已选择 0 个文件</span>
+                  <button
+                    class="btn btn-quiet btn-small"
+                    id="clear-files"
+                    type="button"
+                    aria-controls="file-list"
+                    data-anchor-id="medical-records-upload.clear-files"
+                  >
+                    清空列表
+                  </button>
+                </div>
+                <ul class="file-list" id="file-list" aria-label="已选择的文件"></ul>
+              </div>
+
+              <div class="records-tip">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M9 5h6M9 3h6v4H9V3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+                  <path d="M7 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M8 12h8M8 16h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                </svg>
+                <div>
+                  <strong>病历整理建议</strong><br />
+                  请将病历资料整理齐全后打包上传，包括影像报告、化验单、门诊/住院病历、手术记录、病理报告、用药清单。
+                </div>
+              </div>
+
+              <div class="chief-complaint" id="chief-complaint-block">
+                <label class="chief-label" for="chief-complaint-input">
+                  主诉 <span class="chief-optional">（选填，建议填写，帮助 AI 更精准匹配专科）</span>
+                </label>
+                <p class="chief-hint">请描述您最主要的不适、持续时间和想解决的问题。AI 会将主诉与病历一起分析。</p>
+                <div class="chief-input-wrap">
+                  <textarea
+                    id="chief-complaint-input"
+                    rows="3"
+                    maxlength="2000"
+                    placeholder="例如：近三个月反复胸闷、活动后气短，休息可缓解，想排查心脏问题。"
+                    aria-label="主诉：描述主要症状、持续时间和想解决的问题"
+                  ></textarea>
+                  <button type="button" id="voice-input-btn" class="voice-btn" aria-label="语音输入主诉">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <rect x="9" y="3" width="6" height="11" rx="3" stroke="currentColor" stroke-width="1.8" />
+                      <path d="M5 11a7 7 0 0 0 14 0M12 18v3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                    </svg>
+                    <span id="voice-btn-text">语音输入</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="analysis-email-block" id="analysis-email-block" hidden>
+                <label class="chief-label" for="analysis-email">
+                  邮箱 <span class="chief-optional">（选填，用于验证邮箱后跨设备找回此报告）</span>
+                </label>
+                <p class="chief-hint">此处不会直接登录或发送报告；完成邮箱验证码验证后，才可认领匹配的报告。</p>
+                <input class="analysis-email-input" id="analysis-email" type="email" maxlength="254" autocomplete="email" inputmode="email" placeholder="you@example.com" />
+              </div>
+
+              <div class="upload-actions">
+                <p class="action-note">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M12 3 4 6v5c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+                    <path d="m9 12 2 2 4-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  文件仅用于本次分析，不会用于公开展示
+                </p>
+                <button
+                  class="btn btn-primary"
+                  id="start-analysis"
+                  type="button"
+                  disabled
+                  aria-controls="progress-section preview-section"
+                  data-anchor-id="medical-records-upload.start-analysis"
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="m12 3 1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5L12 3ZM19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8L19 15Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" />
+                  </svg>
+                  <span id="start-analysis-text">开始 AI 分析</span>
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <section
+            class="card card-pad access-credentials"
+            id="access-credentials"
+            aria-labelledby="credentials-title"
+            aria-live="polite"
+            hidden
+          >
+            <div class="section-heading">
+              <div class="section-title-wrap">
+                <div>
+                  <h2 id="credentials-title">请立即保存报告找回凭证</h2>
+                  <p>分析已受理。报告编号固定不变，提取码仅在本次响应中显示。</p>
+                </div>
+              </div>
+            </div>
+            <div class="credentials-grid">
+              <div class="credential-item">
+                <span class="credential-label">报告编号</span>
+                <code class="credential-value" id="accepted-report-id">—</code>
+                <button class="btn btn-secondary btn-small" id="copy-report-id" type="button">复制报告编号</button>
+              </div>
+              <div class="credential-item">
+                <label class="credential-label" for="accepted-access-code">提取码（仅显示一次）</label>
+                <input class="credential-value" id="accepted-access-code" type="text" readonly autocomplete="off" spellcheck="false" aria-label="提取码（仅显示一次），请立即安全保存" />
+                <button class="btn btn-secondary btn-small" id="copy-access-code" type="button">复制提取码</button>
+              </div>
+            </div>
+            <p class="credentials-warning"><strong>请安全保存，跨设备找回需要同时使用以上两项。</strong>刷新或关闭页面后无法再次查看提取码；请勿通过公开聊天或截图分享。</p>
+            <div class="center-message" id="credentials-feedback" role="status" hidden></div>
+          </section>
+
+          <section
+            class="card card-pad"
+            id="progress-section"
+            aria-labelledby="progress-title"
+            data-state="loading"
+            data-anchor-id="medical-records-upload.progress"
+            hidden
+          >
+            <div class="section-heading">
+              <div class="section-title-wrap">
+                <span class="section-number" aria-hidden="true">02</span>
+                <div>
+                  <h2 id="progress-title">上传与 AI 分析进度</h2>
+                  <p>请保持页面打开，分析完成后会自动生成免费预览</p>
+                </div>
+              </div>
+              <span class="status-pill" id="progress-pill">处理中</span>
+            </div>
+
+            <div class="progress-layout">
+              <div class="progress-block">
+                <div class="progress-topline">
+                  <span class="progress-label">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M12 16V4m0 0L8 8m4-4 4 4M5 14v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    文件上传进度
+                  </span>
+                  <span class="progress-percent" id="upload-percent">0%</span>
+                </div>
+                <div
+                  class="progress-track"
+                  id="upload-progress"
+                  role="progressbar"
+                  aria-label="文件上传进度"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  aria-valuenow="0"
+                >
+                  <div class="progress-fill" id="upload-fill"></div>
+                </div>
+                <p class="progress-status" id="upload-status" aria-live="polite">正在建立加密连接…</p>
+              </div>
+
+              <div class="progress-block">
+                <div class="progress-topline">
+                  <span class="progress-label">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M9 4h6M9 2h6v4H9V2Z" stroke="currentColor" stroke-width="1.8" />
+                      <path d="M7 4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2M8 11h8M8 16h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                    </svg>
+                    AI 分析进度
+                  </span>
+                  <span class="progress-percent" id="analysis-percent">0%</span>
+                </div>
+                <div
+                  class="progress-track"
+                  id="analysis-progress"
+                  role="progressbar"
+                  aria-label="AI 分析进度"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  aria-valuenow="0"
+                >
+                  <div class="progress-fill" id="analysis-fill"></div>
+                </div>
+                <p class="progress-status" id="analysis-note" aria-live="polite">等待文件上传完成</p>
+
+                <ol class="analysis-steps" id="analysis-steps">
+                  <li class="analysis-step" data-step="0" data-state="default">
+                    <span class="step-icon" aria-hidden="true">1</span>
+                    <p class="step-name">文件接收与解压</p>
+                    <span class="step-status">等待</span>
+                  </li>
+                  <li class="analysis-step" data-step="1" data-state="default">
+                    <span class="step-icon" aria-hidden="true">2</span>
+                    <p class="step-name">AI识别病历内容</p>
+                    <span class="step-status">等待</span>
+                  </li>
+                  <li class="analysis-step" data-step="2" data-state="default">
+                    <span class="step-icon" aria-hidden="true">3</span>
+                    <p class="step-name">时间线梳理</p>
+                    <span class="step-status">等待</span>
+                  </li>
+                  <li class="analysis-step" data-step="3" data-state="default">
+                    <span class="step-icon" aria-hidden="true">4</span>
+                    <p class="step-name">医生匹配</p>
+                    <span class="step-status">等待</span>
+                  </li>
+                  <li class="analysis-step" data-step="4" data-state="default">
+                    <span class="step-icon" aria-hidden="true">5</span>
+                    <p class="step-name">报告生成</p>
+                    <span class="step-status">等待</span>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </section>
+
+          <section
+            class="card card-pad"
+            id="preview-section"
+            aria-labelledby="preview-title"
+            data-state="complete"
+            data-anchor-id="medical-records-upload.preview"
+            hidden
+          >
+            <div class="section-heading">
+              <div class="section-title-wrap">
+                <span class="section-number" aria-hidden="true">03</span>
+                <div>
+                  <h2 id="preview-title">您的免费预览已生成</h2>
+                  <p>先了解病历摘要与推荐科室，再决定是否解锁完整报告</p>
+                </div>
+              </div>
+              <span class="status-pill success">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                分析完成
+              </span>
+            </div>
+
+            <div class="preview-grid">
+              <article class="summary-card">
+                <div class="summary-card-header">
+                  <span class="summary-icon" aria-hidden="true">
+                    <svg width="21" height="21" viewBox="0 0 24 24" fill="none">
+                      <path d="M7 3h10a2 2 0 0 1 2 2v16H5V5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+                      <path d="M9 8h6M9 12h6M9 16h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                    </svg>
+                  </span>
+                  <h3>病历摘要</h3>
+                </div>
+                <dl class="summary-list">
+                  <div class="summary-row">
+                    <dt>主要诉求</dt>
+                    <dd>腰痛伴下肢放射痛，希望明确就诊方向</dd>
+                  </div>
+                  <div class="summary-row">
+                    <dt>症状病程</dt>
+                    <dd>约 8 个月，近期症状反复</dd>
+                  </div>
+                  <div class="summary-row">
+                    <dt>已识别资料</dt>
+                    <dd>MRI 报告、门诊记录、化验单，共 6 份</dd>
+                  </div>
+                  <div class="summary-row">
+                    <dt>关键事件</dt>
+                    <dd>已梳理 3 个就诊与检查时间节点</dd>
+                  </div>
+                </dl>
+              </article>
+
+              <article class="summary-card">
+                <div class="summary-card-header">
+                  <span class="summary-icon" aria-hidden="true">
+                    <svg width="21" height="21" viewBox="0 0 24 24" fill="none">
+                      <path d="M12 21s7-4.4 7-11V5l-7-2-7 2v5c0 6.6 7 11 7 11Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+                      <path d="M12 7v6M9 10h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                    </svg>
+                  </span>
+                  <h3>推荐科室</h3>
+                </div>
+                <div class="department-primary">
+                  <span class="department-label">优先就诊方向</span>
+                  <span class="department-name">脊柱外科</span>
+                </div>
+                <p class="department-secondary">
+                  <strong>鉴别方向：</strong>神经内科、康复医学科<br />
+                  推荐依据为症状描述与影像报告关键词，最终科室以医生评估为准。
+                </p>
+              </article>
+            </div>
+            <p class="preview-disclaimer">以上为 AI 基于您上传的病历生成的分析结果，仅供参考，不构成诊断、治疗或就医建议。</p>
+
+            <div class="alert alert-success" id="payment-status" hidden role="status">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              支付已确认，完整报告已解锁。
+            </div>
+
+            <div class="locked-module" id="locked-module">
+              <div class="locked-content" aria-hidden="true">
+                <div class="locked-skeleton-title"></div>
+                <div class="locked-skeleton-grid">
+                  <div class="locked-skeleton-card"></div>
+                  <div class="locked-skeleton-card"></div>
+                  <div class="locked-skeleton-card"></div>
+                </div>
+                <div class="locked-skeleton-line"></div>
+                <div class="locked-skeleton-line short"></div>
+                <div class="locked-skeleton-line"></div>
+              </div>
+              <div class="lock-overlay">
+                <div class="lock-panel">
+                  <span class="lock-icon" aria-hidden="true">
+                    <svg width="23" height="23" viewBox="0 0 24 24" fill="none">
+                      <rect x="5" y="10" width="14" height="11" rx="2" stroke="currentColor" stroke-width="1.8" />
+                      <path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                    </svg>
+                  </span>
+                  <h3>完整报告已准备好</h3>
+                  <p>解锁医生推荐、就诊路径对比、准备指南及医院信息</p>
+                  <ul class="unlock-features">
+                    <li>6 个完整章节</li>
+                    <li>3 位医生匹配</li>
+                    <li>可打印报告</li>
+                  </ul>
+                  <div id="paypal-button-container" class="paypal-button-container" hidden></div>
+                  <span class="payment-note">安全支付 · 支付后立即解锁完整报告</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section
+            class="card card-pad"
+            id="full-report"
+            aria-labelledby="report-title"
+            data-state="complete"
+            data-anchor-id="medical-records-upload.full-report"
+            hidden
+          >
+            <div class="section-heading">
+              <div class="section-title-wrap">
+                <span class="section-number" aria-hidden="true">04</span>
+                <div>
+                  <h2 id="report-title">完整病历分析报告</h2>
+                  <p>6 个章节 · 医生推荐 · 就诊准备 · 医院信息</p>
+                </div>
+              </div>
+              <div class="report-toolbar">
+                <button
+                  class="btn btn-secondary btn-small"
+                  id="print-report"
+                  type="button"
+                  data-anchor-id="medical-records-upload.print-report"
+                >
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M7 8V3h10v5M7 17H5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M7 14h10v7H7v-7Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+                  </svg>
+                  打印 / 保存 PDF
+                </button>
+              </div>
+            </div>
+
+            <div class="report-demo-note" role="note">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" />
+                <path d="M12 11v6M12 7h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              <span><strong>AI 生成报告：</strong>以下报告基于您上传的病历由 AI 分析生成，仅供参考，不构成医疗建议。</span>
+            </div>
+
+            <div class="report-meta">
+              <span>报告编号：<span id="report-id">—</span></span>
+              <span>生成时间：<span id="report-date">—</span></span>
+              <span>资料完整度：基于上传文件评估</span>
+              <span>报告语言：中文</span>
+            </div>
+
+            <div class="report-chapters">
+              <article class="report-chapter">
+                <div class="chapter-heading">
+                  <span class="chapter-number">01</span>
+                  <h3>病历摘要与关键时间线</h3>
+                </div>
+                <p class="chapter-intro">
+                  示例患者以腰痛伴下肢放射痛为主要诉求，AI 将门诊记录、影像报告及用药信息按时间顺序整理，帮助医生快速了解病程。
+                </p>
+                <ol class="timeline">
+                  <li class="timeline-item">
+                    <span class="timeline-date">2026.01</span>
+                    <div class="timeline-copy">
+                      <strong>初次门诊评估</strong>
+                      记录腰部不适及活动后加重情况，开始基础检查与对症处理。
+                    </div>
+                  </li>
+                  <li class="timeline-item">
+                    <span class="timeline-date">2026.04</span>
+                    <div class="timeline-copy">
+                      <strong>完成腰椎 MRI 检查</strong>
+                      报告包含腰椎退变相关描述，具体影像需由接诊医生结合原始图像复核。
+                    </div>
+                  </li>
+                  <li class="timeline-item">
+                    <span class="timeline-date">2026.08</span>
+                    <div class="timeline-copy">
+                      <strong>症状反复，寻求第二意见</strong>
+                      整理既往资料，期望明确进一步检查、治疗选择及上海就诊方向。
+                    </div>
+                  </li>
+                </ol>
+              </article>
+
+              <article class="report-chapter">
+                <div class="chapter-heading">
+                  <span class="chapter-number">02</span>
+                  <h3>检查结果梳理与关注重点</h3>
+                </div>
+                <p class="chapter-intro">以下为 AI 基于病历的信息归纳，不解释影像严重程度，也不替代医生面诊。</p>
+                <div class="finding-list">
+                  <div class="finding-item">
+                    <strong>影像资料</strong>
+                    <p>已识别腰椎 MRI 文字报告；建议就诊时携带原始影像文件或光盘。</p>
+                  </div>
+                  <div class="finding-item">
+                    <strong>化验资料</strong>
+                    <p>已识别常规化验单；需核对检查日期、参考范围及后续是否需复查。</p>
+                  </div>
+                  <div class="finding-item">
+                    <strong>症状与用药</strong>
+                    <p>建议补充症状变化、既往治疗效果、药物剂量及过敏史供医生判断。</p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="report-chapter">
+                <div class="chapter-heading">
+                  <span class="chapter-number">03</span>
+                  <h3>医生推荐</h3>
+                </div>
+                <p class="chapter-intro">基于示例病历的科室方向生成，实际推荐需接入经过核验的医生数据库与排班信息。</p>
+                <div class="doctor-grid">
+                  <article class="doctor-card recommended">
+                    <span class="doctor-badge">优先匹配 · 示例</span>
+                    <h4>医生 A</h4>
+                    <p class="doctor-role">脊柱外科 · 主任医师</p>
+                    <ul class="doctor-detail">
+                      <li><strong>匹配方向：</strong>腰椎疾病评估</li>
+                      <li><strong>推荐理由：</strong>与主要症状和影像资料方向相符</li>
+                      <li><strong>就诊准备：</strong>原始 MRI、门诊记录、用药清单</li>
+                    </ul>
+                  </article>
+                  <article class="doctor-card">
+                    <span class="doctor-badge">鉴别评估 · 示例</span>
+                    <h4>医生 B</h4>
+                    <p class="doctor-role">神经内科 · 主任医师</p>
+                    <ul class="doctor-detail">
+                      <li><strong>匹配方向：</strong>下肢放射症状鉴别</li>
+                      <li><strong>推荐理由：</strong>可协助评估神经性症状相关因素</li>
+                      <li><strong>就诊准备：</strong>症状时间线、既往神经检查</li>
+                    </ul>
+                  </article>
+                  <article class="doctor-card">
+                    <span class="doctor-badge">康复方向 · 示例</span>
+                    <h4>医生 C</h4>
+                    <p class="doctor-role">康复医学科 · 主任医师</p>
+                    <ul class="doctor-detail">
+                      <li><strong>匹配方向：</strong>功能评估与康复计划</li>
+                      <li><strong>推荐理由：</strong>适用于明确诊断后的功能恢复评估</li>
+                      <li><strong>就诊准备：</strong>既往治疗记录、活动受限说明</li>
+                    </ul>
+                  </article>
+                </div>
+              </article>
+
+              <article class="report-chapter">
+                <div class="chapter-heading">
+                  <span class="chapter-number">04</span>
+                  <h3>就诊方向对比</h3>
+                </div>
+                <p class="chapter-intro">不同方向并无绝对先后，应结合面诊、体征与原始影像由医生决定。</p>
+                <div class="table-wrap">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th scope="col">就诊方向</th>
+                        <th scope="col">主要目的</th>
+                        <th scope="col">建议携带资料</th>
+                        <th scope="col">当前示例优先级</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>脊柱外科</td>
+                        <td>评估腰椎结构相关问题及进一步诊疗选择</td>
+                        <td>原始影像、影像报告、既往手术与治疗记录</td>
+                        <td>优先咨询</td>
+                      </tr>
+                      <tr>
+                        <td>神经内科</td>
+                        <td>鉴别下肢放射痛等神经系统相关表现</td>
+                        <td>症状时间线、神经系统检查、既往化验结果</td>
+                        <td>按需鉴别</td>
+                      </tr>
+                      <tr>
+                        <td>康复医学科</td>
+                        <td>评估功能受限并制定个体化康复方案</td>
+                        <td>明确诊断资料、治疗记录、日常活动情况</td>
+                        <td>后续评估</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </article>
+
+              <article class="report-chapter">
+                <div class="chapter-heading">
+                  <span class="chapter-number">05</span>
+                  <h3>就诊准备指南与医院信息</h3>
+                </div>
+                <div class="preparation-grid">
+                  <div>
+                    <h4>出发前准备清单</h4>
+                    <ul class="prep-checklist">
+                      <li><span class="check-square" aria-hidden="true">✓</span>携带护照、签证及既往病历原件，重要资料准备电子备份。</li>
+                      <li><span class="check-square" aria-hidden="true">✓</span>整理当前用药名称、剂量、频率，以及药物和食物过敏史。</li>
+                      <li><span class="check-square" aria-hidden="true">✓</span>记录最困扰的 3 个症状、持续时间、加重或缓解因素。</li>
+                      <li><span class="check-square" aria-hidden="true">✓</span>提前确认保险直付、预授权及自费项目，保留相关凭证。</li>
+                      <li><span class="check-square" aria-hidden="true">✓</span>列出希望向医生确认的问题，并预留检查与复诊时间。</li>
+                    </ul>
+                  </div>
+                  <aside class="hospital-card" aria-label="示例医院信息">
+                    <h4>推荐医院</h4>
+                    <p class="hospital-type">上海三级甲等综合医院</p>
+                    <dl class="hospital-list">
+                      <div><dt>推荐科室</dt><dd>脊柱外科门诊</dd></div>
+                      <div><dt>院区和地址</dt><dd>待医生及排班确认后提供</dd></div>
+                      <div><dt>预约方式</dt><dd>实际服务中由人工顾问协助确认</dd></div>
+                      <div><dt>就诊证件</dt><dd>护照及医院要求的其他材料</dd></div>
+                      <div><dt>费用说明</dt><dd>医疗费用以医院实际结算为准</dd></div>
+                    </dl>
+                  </aside>
+                </div>
+              </article>
+
+              <article class="report-chapter">
+                <div class="chapter-heading">
+                  <span class="chapter-number">06</span>
+                  <h3>免责声明与下一步</h3>
+                </div>
+                <div class="next-steps">
+                  <div class="next-step"><strong>1. 核对资料</strong>确认病历页完整、文字清晰、影像文件可读取。</div>
+                  <div class="next-step"><strong>2. 确认医生</strong>结合医生专长、出诊时间和个人需求选择就诊方向。</div>
+                  <div class="next-step"><strong>3. 安排行程</strong>确认预约后再预订交通住宿，并为检查预留时间。</div>
+                </div>
+                <div class="medical-disclaimer">
+                  <strong>重要医疗免责声明</strong>
+                  本报告为 AI 辅助信息整理示例，不构成医学诊断、治疗建议或疗效承诺，也不能替代持证医生的面诊。若出现剧烈疼痛、肢体无力、大小便功能异常或其他急性症状，请立即就近就医或联系当地急救服务。实际诊疗方案、医院选择与费用以医疗机构及接诊医生意见为准。
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <div>
+          <p class="footer-brand">ShanghaiMed · 上海医疗信息与协调服务</p>
+          <p class="footer-legal">
+            法律声明：ShanghaiMed 提供医疗信息整理与就诊协调服务，不替代医疗机构或医生的诊断与治疗。AI 生成内容可能存在遗漏或错误，请务必由持证医生复核。医疗服务费用直接支付给医疗机构，具体以医院结算为准。
+          </p>
+        </div>
+        <nav class="footer-links" aria-label="法律与隐私">
+          <a href="https://shanghaimedhealth.com/privacy-policy" target="_blank" rel="noopener noreferrer">隐私政策</a>
+          <a href="https://shanghaimedhealth.com/terms" target="_blank" rel="noopener noreferrer">服务条款</a>
+        </nav>
+      </div>
+    </footer>
+
+    <div class="modal-backdrop" id="consent-modal" hidden>
+      <section
+        class="modal"
+        id="consent-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="consent-title"
+        aria-describedby="consent-description"
+        tabindex="-1"
+      >
+        <span class="modal-icon" aria-hidden="true">
+          <svg width="25" height="25" viewBox="0 0 24 24" fill="none">
+            <path d="M12 3 4 6v5c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+            <path d="M12 8v5M12 16h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+        </span>
+        <h2 id="consent-title">病历上传知情同意书</h2>
+        <p class="modal-intro" id="consent-description">
+          病历包含敏感健康信息。开始上传前，请仔细阅读并确认以下事项。
+        </p>
+        <ul class="consent-list">
+          <li>
+            <span class="consent-check" aria-hidden="true">✓</span>
+            <span>您上传的病历资料将用于AI分析和医生匹配</span>
+          </li>
+          <li>
+            <span class="consent-check" aria-hidden="true">✓</span>
+            <span>原始病历在分析完成后将被删除</span>
+          </li>
+          <li>
+            <span class="consent-check" aria-hidden="true">✓</span>
+            <span>仅保留必要的结构化结果用于报告生成</span>
+          </li>
+          <li>
+            <span class="consent-check" aria-hidden="true">✓</span>
+            <span>所有数据传输均通过HTTPS加密</span>
+          </li>
+          <li>
+            <span class="consent-check" aria-hidden="true">✓</span>
+            <span>您可以随时要求删除您的数据</span>
+          </li>
+        </ul>
+        <p class="consent-privacy">
+          点击“同意并继续”即表示您理解并同意上述处理方式。您的文件将通过加密连接上传，分析完成后原始文件将被自动删除。
+        </p>
+        <div class="modal-actions">
+          <button
+            class="btn btn-secondary"
+            id="decline-consent"
+            type="button"
+            data-anchor-id="medical-records-upload.decline-consent"
+          >
+            拒绝
+          </button>
+          <button
+            class="btn btn-primary"
+            id="agree-consent"
+            type="button"
+            data-anchor-id="medical-records-upload.agree-consent"
+          >
+            同意并继续
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      (() => {
+        "use strict";
+
+        const MAX_FILE_SIZE = 50 * 1024 * 1024;
+        const ALLOWED_EXTENSIONS = new Set(["jpg", "jpeg", "png", "webp", "bmp", "gif", "tif", "tiff", "heic", "heif", "pdf", "zip"]);
+        const CONSENT_KEY = "shanghaimed-medical-records-consent";
+        const TASK_KEY = "shanghaimed-medical-records-task";
+        const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+        const elements = {
+          uploadSection: document.getElementById("upload-section"),
+          dropZone: document.getElementById("drop-zone"),
+          fileInput: document.getElementById("file-input"),
+          filePanel: document.getElementById("file-panel"),
+          fileList: document.getElementById("file-list"),
+          fileCount: document.getElementById("file-count"),
+          clearFiles: document.getElementById("clear-files"),
+          fileError: document.getElementById("file-error"),
+          fileErrorText: document.getElementById("file-error-text"),
+          startButton: document.getElementById("start-analysis"),
+          startButtonText: document.getElementById("start-analysis-text"),
+          progressSection: document.getElementById("progress-section"),
+          progressPill: document.getElementById("progress-pill"),
+          uploadProgress: document.getElementById("upload-progress"),
+          uploadFill: document.getElementById("upload-fill"),
+          uploadPercent: document.getElementById("upload-percent"),
+          uploadStatus: document.getElementById("upload-status"),
+          analysisProgress: document.getElementById("analysis-progress"),
+          analysisFill: document.getElementById("analysis-fill"),
+          analysisPercent: document.getElementById("analysis-percent"),
+          analysisNote: document.getElementById("analysis-note"),
+          steps: Array.from(document.querySelectorAll(".analysis-step")),
+          previewSection: document.getElementById("preview-section"),
+          lockedModule: document.getElementById("locked-module"),
+          paymentStatus: document.getElementById("payment-status"),
+          fullReport: document.getElementById("full-report"),
+          printButton: document.getElementById("print-report"),
+          reportDate: document.getElementById("report-date"),
+          reportId: document.getElementById("report-id"),
+          accessCredentials: document.getElementById("access-credentials"),
+          acceptedReportId: document.getElementById("accepted-report-id"),
+          acceptedAccessCode: document.getElementById("accepted-access-code"),
+          credentialsFeedback: document.getElementById("credentials-feedback"),
+          reportCenter: document.getElementById("report-center"),
+          refreshReports: document.getElementById("refresh-reports"),
+          reportsState: document.getElementById("reports-state"),
+          reportList: document.getElementById("report-list"),
+          reportCenterFeedback: document.getElementById("report-center-feedback"),
+          claimForm: document.getElementById("claim-form"),
+          claimReportId: document.getElementById("claim-report-id"),
+          claimAccessCode: document.getElementById("claim-access-code"),
+          claimSubmit: document.getElementById("claim-submit"),
+          authPanel: document.getElementById("auth-panel"),
+          authState: document.getElementById("auth-state"),
+          authEmail: document.getElementById("auth-email"),
+          authCode: document.getElementById("auth-code"),
+          requestCode: document.getElementById("request-code"),
+          verifyCode: document.getElementById("verify-code"),
+          logoutButton: document.getElementById("logout-button"),
+          authFeedback: document.getElementById("auth-feedback"),
+          emailLoginForm: document.getElementById("email-login-form"),
+          emailUnavailable: document.getElementById("email-unavailable"),
+          analysisEmailBlock: document.getElementById("analysis-email-block"),
+          analysisEmail: document.getElementById("analysis-email"),
+          consentModal: document.getElementById("consent-modal"),
+          consentDialog: document.getElementById("consent-dialog"),
+          agreeConsent: document.getElementById("agree-consent"),
+          declineConsent: document.getElementById("decline-consent"),
+          consentDeclined: document.getElementById("consent-declined"),
+          reopenConsent: document.getElementById("reopen-consent"),
+        };
+
+        let selectedFiles = [];
+        let isProcessing = false;
+        let isPaid = false;
+        let consentGranted = false;
+        let uploadTimer = null;
+        let lastFocusedElement = null;
+        let fileIdCounter = 0;
+
+        const analysisMessages = [
+          "正在检查文件结构并解压压缩包…",
+          "正在识别报告文字、检查项目与关键指标…",
+          "正在按就诊、检查和治疗事件整理时间线…",
+          "正在根据病历方向匹配科室与医生…",
+          "正在生成摘要、推荐与就诊准备指南…",
+        ];
+
+        function readConsent() {
+          try {
+            return window.localStorage.getItem(CONSENT_KEY);
+          } catch (error) {
+            return null;
+          }
+        }
+
+        function saveConsent(value) {
+          try {
+            window.localStorage.setItem(CONSENT_KEY, value);
+          } catch (error) {
+            // 浏览器禁用存储时，本次会话仍可正常使用。
+          }
+        }
+
+        function updateActionState() {
+          const hasFiles = selectedFiles.length > 0;
+          elements.startButton.disabled = !consentGranted || !hasFiles || isProcessing;
+          elements.clearFiles.disabled = isProcessing;
+          elements.fileInput.disabled = !consentGranted || isProcessing;
+          elements.dropZone.setAttribute("aria-disabled", String(!consentGranted || isProcessing));
+          elements.uploadSection.classList.toggle("is-blocked", !consentGranted);
+          elements.uploadSection.setAttribute("aria-disabled", String(!consentGranted));
+          elements.uploadSection.dataset.state = isProcessing ? "loading" : hasFiles ? "default" : "empty";
+          elements.fileList.querySelectorAll("button").forEach((button) => {
+            button.disabled = isProcessing;
+          });
+        }
+
+        function showConsentModal() {
+          lastFocusedElement = document.activeElement;
+          elements.consentModal.hidden = false;
+          document.body.classList.add("modal-open");
+          window.requestAnimationFrame(() => elements.consentDialog.focus());
+        }
+
+        function hideConsentModal() {
+          elements.consentModal.hidden = true;
+          document.body.classList.remove("modal-open");
+        }
+
+        function agreeToConsent() {
+          consentGranted = true;
+          saveConsent("agreed");
+          hideConsentModal();
+          elements.consentDeclined.hidden = true;
+          updateActionState();
+          window.requestAnimationFrame(() => elements.fileInput.focus());
+        }
+
+        function declineToConsent() {
+          consentGranted = false;
+          saveConsent("declined");
+          hideConsentModal();
+          elements.consentDeclined.hidden = false;
+          updateActionState();
+          window.requestAnimationFrame(() => elements.reopenConsent.focus());
+        }
+
+        function formatFileSize(bytes) {
+          if (bytes < 1024) return `${bytes} B`;
+          if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
+          return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
+        }
+
+        function getExtension(fileName) {
+          const parts = fileName.toLowerCase().split(".");
+          return parts.length > 1 ? parts.pop() : "";
+        }
+
+        function showFileError(messages) {
+          const text = Array.isArray(messages) ? messages.join("；") : messages;
+          elements.fileErrorText.textContent = text;
+          elements.fileError.hidden = !text;
+        }
+
+        function setProgress(type, value) {
+          const percent = Math.max(0, Math.min(100, Math.round(value)));
+          const progress = type === "upload" ? elements.uploadProgress : elements.analysisProgress;
+          const fill = type === "upload" ? elements.uploadFill : elements.analysisFill;
+          const label = type === "upload" ? elements.uploadPercent : elements.analysisPercent;
+          progress.setAttribute("aria-valuenow", String(percent));
+          fill.style.width = `${percent}%`;
+          label.textContent = `${percent}%`;
+        }
+
+        function resetSteps() {
+          elements.steps.forEach((step, index) => {
+            step.classList.remove("is-active", "is-complete");
+            step.dataset.state = "default";
+            step.querySelector(".step-icon").textContent = String(index + 1);
+            step.querySelector(".step-status").textContent = "等待";
+          });
+        }
+
+        function clearAccessCredentials() {
+          elements.accessCredentials.hidden = true;
+          elements.acceptedReportId.textContent = '—';
+          elements.acceptedAccessCode.value = '';
+          setMessage(elements.credentialsFeedback, '');
+        }
+
+        function clearActiveReport() {
+          currentReportId = null;
+          currentTaskId = null;
+          uploadedFileIds = [];
+          elements.reportId.textContent = '—';
+        }
+
+        function resetPayment() {
+          isPaid = false;
+          payPalRenderVersion += 1;
+          payPalOrder = null;
+          payPalOrderPromise = null;
+          payPalCapture = null;
+          const container = document.getElementById('paypal-button-container');
+          if (container) {
+            container.replaceChildren();
+            container.hidden = true;
+            delete container.dataset.rendered;
+          }
+          document.body.classList.remove("is-paid");
+          elements.fullReport.hidden = true;
+          elements.paymentStatus.hidden = true;
+          elements.paymentStatus.textContent = '';
+          elements.paymentStatus.classList.remove('alert-error');
+          elements.paymentStatus.classList.add('alert-success');
+          elements.lockedModule.hidden = false;
+        }
+
+        function resetResults() {
+          analysisGeneration += 1;
+          if (uploadTimer) {
+            window.clearInterval(uploadTimer);
+            uploadTimer = null;
+          }
+          isProcessing = false;
+          clearActiveReport();
+          clearAccessCredentials();
+          const chapters = document.querySelector('.report-chapters');
+          if (chapters) chapters.replaceChildren();
+          const summaryList = elements.previewSection.querySelector('.summary-list');
+          if (summaryList) summaryList.replaceChildren();
+          const departmentName = elements.previewSection.querySelector('.department-name');
+          if (departmentName) departmentName.textContent = '';
+          elements.progressSection.hidden = true;
+          elements.previewSection.hidden = true;
+          elements.progressSection.dataset.state = "loading";
+          elements.progressPill.textContent = "处理中";
+          elements.progressPill.classList.remove("success");
+          elements.startButtonText.textContent = "开始 AI 分析";
+          elements.uploadSection.querySelector(".status-pill").textContent = "待上传";
+          setProgress("upload", 0);
+          setProgress("analysis", 0);
+          elements.uploadStatus.textContent = "正在建立加密连接…";
+          elements.analysisNote.textContent = "等待文件上传完成";
+          resetSteps();
+          resetPayment();
+          updateActionState();
+        }
+
+        function removeFile(fileId) {
+          if (isProcessing) return;
+          selectedFiles = selectedFiles.filter((item) => item.id !== fileId);
+          showFileError("");
+          resetResults();
+          renderFiles();
+        }
+
+        function renderFiles() {
+          elements.fileList.replaceChildren();
+          selectedFiles.forEach((item) => {
+            const listItem = document.createElement("li");
+            listItem.className = "file-item";
+
+            const type = document.createElement("span");
+            type.className = "file-type";
+            type.textContent = getExtension(item.file.name).toUpperCase();
+            type.setAttribute("aria-hidden", "true");
+
+            const info = document.createElement("div");
+            const name = document.createElement("p");
+            name.className = "file-name";
+            name.textContent = item.file.name;
+            name.title = item.file.name;
+            const meta = document.createElement("p");
+            meta.className = "file-meta";
+            meta.textContent = formatFileSize(item.file.size);
+            info.append(name, meta);
+
+            const status = document.createElement("span");
+            status.className = "file-state";
+            status.dataset.fileStatus = String(item.id);
+            status.textContent = item.status || "待上传";
+
+            const remove = document.createElement("button");
+            remove.className = "icon-button";
+            remove.type = "button";
+            remove.disabled = isProcessing;
+            remove.setAttribute("aria-label", `移除文件 ${item.file.name}`);
+            remove.setAttribute("aria-controls", "file-list");
+            remove.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M9 7V4h6v3M8 7l1 14h6l1-14M10 11v6M14 11v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+            remove.addEventListener("click", () => removeFile(item.id));
+
+            listItem.append(type, info, status, remove);
+            elements.fileList.append(listItem);
+          });
+
+          const totalSize = selectedFiles.reduce((sum, item) => sum + item.file.size, 0);
+          elements.filePanel.hidden = selectedFiles.length === 0;
+          elements.fileCount.textContent = selectedFiles.length
+            ? `已选择 ${selectedFiles.length} 个文件 · 共 ${formatFileSize(totalSize)}`
+            : "已选择 0 个文件";
+          updateActionState();
+        }
+
+        function addFiles(fileList) {
+          if (!consentGranted) {
+            showConsentModal();
+            return;
+          }
+          if (isProcessing) {
+            showFileError("当前分析正在进行，请完成后再添加文件");
+            return;
+          }
+
+          const incoming = Array.from(fileList);
+          if (!incoming.length) return;
+
+          const errors = [];
+          const validFiles = [];
+          const existingKeys = new Set(selectedFiles.map((item) => `${item.file.name}-${item.file.size}`));
+
+          incoming.forEach((file) => {
+            const extension = getExtension(file.name);
+            const key = `${file.name}-${file.size}`;
+            if (!ALLOWED_EXTENSIONS.has(extension)) {
+              errors.push(`“${file.name}”格式不支持，请上传 JPG、PNG、WEBP、HEIC、PDF 或 ZIP`);
+            } else if (file.size === 0) {
+              errors.push(`“${file.name}”是空文件，请重新选择`);
+            } else if (file.size > MAX_FILE_SIZE) {
+              errors.push(`“${file.name}”超过 50MB，请压缩或拆分后上传`);
+            } else if (existingKeys.has(key)) {
+              errors.push(`“${file.name}”已在列表中，已跳过重复文件`);
+            } else {
+              existingKeys.add(key);
+              validFiles.push({ id: ++fileIdCounter, file, status: "待上传" });
+            }
+          });
+
+          if (validFiles.length) {
+            resetResults();
+            selectedFiles = selectedFiles.concat(validFiles);
+            renderFiles();
+          }
+          showFileError(errors);
+          elements.fileInput.value = "";
+        }
+
+        function setStepState(index, state) {
+          const step = elements.steps[index];
+          const icon = step.querySelector(".step-icon");
+          const status = step.querySelector(".step-status");
+          step.classList.remove("is-active", "is-complete");
+
+          if (state === "active") {
+            step.classList.add("is-active");
+            step.dataset.state = "loading";
+            icon.innerHTML = '<span class="step-spinner"></span>';
+            status.textContent = "进行中";
+          } else if (state === "complete") {
+            step.classList.add("is-complete");
+            step.dataset.state = "complete";
+            icon.innerHTML = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+            status.textContent = "完成";
+          } else {
+            step.dataset.state = "default";
+            icon.textContent = String(index + 1);
+            status.textContent = "等待";
+          }
+        }
+
+        function wait(milliseconds) {
+          return new Promise((resolve) => window.setTimeout(resolve, milliseconds));
+        }
+
+        // API 配置与状态。会话只通过同源 HttpOnly Cookie 携带，不在 JS 中保存令牌。
+        const API_BASE = window.location.origin + '/api/phase3';
+        let uploadedFileIds = [];
+        let currentTaskId = null;
+        let currentReportId = null;
+        let reportSummaries = [];
+        let reportCenterReady = null;
+        let reportsLoading = false;
+        let claimPending = false;
+        let openingReport = false;
+        let emailEnabled = false;
+        let currentUser = null;
+        let authRequestPending = false;
+        let authVerifyPending = false;
+        let analysisGeneration = 0;
+        let sessionGeneration = 0;
+        let payPalRenderVersion = 0;
+        let payPalOrder = null;
+        let payPalOrderPromise = null;
+        let payPalCapture = null;
+
+        function apiErrorMessage(data, fallback) {
+          if (!data) return fallback;
+          if (typeof data.error === 'string') return data.error;
+          if (typeof data.message === 'string') return data.message;
+          if (typeof data.detail === 'string') return data.detail;
+          if (data.detail && typeof data.detail.message === 'string') return data.detail.message;
+          if (data.detail && typeof data.detail.issue === 'string') return data.detail.issue;
+          return fallback;
+        }
+
+        async function requestJson(path, options = {}) {
+          const response = await fetch(API_BASE + path, {
+            credentials: 'same-origin',
+            cache: 'no-store',
+            ...options,
+          });
+          const data = await response.json().catch(() => ({}));
+          if (!response.ok) {
+            const error = new Error(apiErrorMessage(data, '请求失败，请稍后重试'));
+            error.status = response.status;
+            throw error;
+          }
+          return data;
+        }
+
+        function setMessage(element, text, type = '') {
+          if (!element) return;
+          element.textContent = text || '';
+          element.className = 'center-message' + (type ? ' ' + type : '');
+          element.hidden = !text;
+        }
+
+        async function uploadFiles(generation) {
+          const formData = new FormData();
+          selectedFiles.forEach((item) => {
+            formData.append('files', item.file);
+          });
+
+          elements.uploadStatus.textContent = "正在通过加密连接上传文件…";
+          setProgress("upload", 30);
+
+          try {
+            const response = await fetch(API_BASE + '/upload', {
+              method: 'POST',
+              body: formData,
+            });
+            if (generation !== analysisGeneration) return;
+
+            setProgress("upload", 80);
+
+            if (!response.ok) {
+              const error = await response.json().catch(() => ({}));
+              if (generation !== analysisGeneration) return;
+              throw new Error(error.detail || '上传失败，请重试');
+            }
+
+            const result = await response.json();
+            if (generation !== analysisGeneration) return;
+            uploadedFileIds = result.file_ids || [];
+
+            setProgress("upload", 100);
+            elements.uploadStatus.textContent = "文件上传完成，即将开始 AI 分析";
+            selectedFiles.forEach((item) => { item.status = "已上传"; });
+            elements.fileList.querySelectorAll("[data-file-status]").forEach((status) => {
+              status.textContent = "已上传";
+              status.classList.add("complete");
+            });
+          } catch (error) {
+            if (generation !== analysisGeneration) return;
+            elements.uploadStatus.textContent = "上传失败：" + error.message;
+            showFileError("文件上传失败：" + error.message);
+            throw error;
+          }
+        }
+
+        function saveTask(taskId) {
+          try {
+            window.localStorage.setItem(TASK_KEY, JSON.stringify({
+              taskId: taskId,
+              startedAt: Date.now(),
+              fileCount: selectedFiles ? selectedFiles.length : 1,
+            }));
+          } catch (e) { /* storage unavailable */ }
+        }
+
+        function loadTask() {
+          try {
+            const raw = window.localStorage.getItem(TASK_KEY);
+            return raw ? JSON.parse(raw) : null;
+          } catch (e) { return null; }
+        }
+
+        function clearTask() {
+          try { window.localStorage.removeItem(TASK_KEY); } catch (e) { /* ignore */ }
+        }
+
+        function showAccessCredentials(accepted) {
+          clearAccessCredentials();
+          const reportId = accepted && accepted.report_id ? String(accepted.report_id) : '';
+          const accessCode = accepted && accepted.access_code ? String(accepted.access_code) : '';
+          elements.acceptedReportId.textContent = reportId || '未返回';
+          elements.acceptedAccessCode.value = accessCode;
+          elements.accessCredentials.hidden = false;
+          document.getElementById('copy-report-id').disabled = !reportId;
+          document.getElementById('copy-access-code').disabled = !accessCode;
+          if (!reportId || !accessCode) {
+            setMessage(elements.credentialsFeedback, '分析已受理，但找回凭证响应不完整。请保持页面打开，并从“我的报告”尝试恢复。', 'warning');
+          }
+        }
+
+        async function copyText(text) {
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(text);
+            return;
+          }
+          const temporary = document.createElement('textarea');
+          temporary.value = text;
+          temporary.readOnly = true;
+          temporary.style.position = 'fixed';
+          temporary.style.opacity = '0';
+          document.body.appendChild(temporary);
+          temporary.select();
+          const copied = document.execCommand('copy');
+          temporary.remove();
+          if (!copied) throw new Error('copy unavailable');
+        }
+
+        async function copyCredential(kind) {
+          const isCode = kind === 'code';
+          const text = isCode
+            ? elements.acceptedAccessCode.value
+            : elements.acceptedReportId.textContent;
+          if (!text || text === '—' || text === '未返回') return;
+          try {
+            await copyText(text);
+            setMessage(elements.credentialsFeedback, isCode ? '提取码已复制，请粘贴到安全的位置保存。' : '报告编号已复制。', 'success');
+          } catch (error) {
+            setMessage(elements.credentialsFeedback, '自动复制失败，请手动选择并复制。', 'error');
+          }
+        }
+
+        function formatReportDate(value) {
+          if (!value) return '';
+          const date = new Date(value);
+          if (Number.isNaN(date.getTime())) return '';
+          return date.toLocaleString('zh-CN', { hour12: false });
+        }
+
+        function reportIsPaid(report) {
+          return Boolean(report && (report.paid === true || report.paid_at || report.paid_order_id));
+        }
+
+        function reportIsExpired(report) {
+          const status = report && String(report.status || '').toLowerCase();
+          return Boolean(report && (report.expired === true || status === 'expired'));
+        }
+
+        function adoptReportData(data) {
+          if (!data) return;
+          const metadata = data.metadata && typeof data.metadata === 'object' ? data.metadata : {};
+          const reportId = data.report_id || metadata.report_id;
+          const taskId = data.task_id || metadata.task_id;
+          const fileIds = data.file_ids || metadata.file_ids;
+          if (reportId) currentReportId = String(reportId);
+          if (taskId) currentTaskId = String(taskId);
+          if (Array.isArray(fileIds)) uploadedFileIds = fileIds.slice();
+          if (currentReportId) elements.reportId.textContent = currentReportId;
+        }
+
+        function finishAnalysis(result, options = {}) {
+          const savedTask = loadTask();
+          if (savedTask && currentTaskId && savedTask.taskId === currentTaskId) clearTask();
+          adoptReportData(result);
+          setProgress("upload", 100);
+          setProgress("analysis", 100);
+          for (let i = 0; i < elements.steps.length; i++) {
+            setStepState(i, "complete");
+          }
+          elements.analysisNote.textContent = "分析完成，免费预览已生成";
+          elements.progressSection.hidden = false;
+          elements.progressSection.dataset.state = "complete";
+          elements.progressPill.textContent = "已完成";
+          elements.progressPill.classList.add("success");
+          elements.uploadSection.querySelector(".status-pill").textContent = "分析完成";
+          elements.previewSection.hidden = false;
+          applyPreview(result.preview || result.report_preview || result.free_preview || {});
+          if (!isPaid) renderPayPalButtons();
+          elements.reportDate.textContent = formatReportDate(result.completed_at || result.created_at) || new Date().toLocaleString("zh-CN", { hour12: false });
+          isProcessing = false;
+          elements.startButtonText.textContent = "重新分析";
+          updateActionState();
+          if (options.refreshList !== false) loadReports();
+          if (options.scroll !== false) {
+            elements.previewSection.scrollIntoView({
+              behavior: reducedMotion.matches ? "auto" : "smooth",
+              block: "start",
+            });
+          }
+        }
+
+        function failAnalysis(error) {
+          clearTask();
+          elements.analysisNote.textContent = "分析失败：" + error.message;
+          elements.progressSection.dataset.state = "error";
+          elements.progressPill.textContent = "失败";
+          isProcessing = false;
+          elements.startButtonText.textContent = "重新分析";
+          showFileError("AI 分析失败：" + error.message + "，请重试");
+          updateActionState();
+        }
+
+        async function startAnalysis() {
+          if (!consentGranted) {
+            showConsentModal();
+            return;
+          }
+          if (!selectedFiles.length || isProcessing) return;
+          const pendingEmail = emailEnabled ? elements.analysisEmail.value.trim() : '';
+          if (pendingEmail && !elements.analysisEmail.checkValidity()) {
+            showFileError('请输入有效的邮箱地址，或清空邮箱后再开始分析');
+            elements.analysisEmail.focus();
+            return;
+          }
+
+          resetResults();
+          const generation = analysisGeneration;
+          clearTask();
+          isProcessing = true;
+          showFileError("");
+          elements.progressSection.hidden = false;
+          elements.progressSection.dataset.state = "loading";
+          elements.startButtonText.textContent = "分析进行中";
+          elements.uploadSection.querySelector(".status-pill").textContent = "处理中";
+          selectedFiles.forEach((item) => { item.status = "上传中"; });
+          elements.fileList.querySelectorAll("[data-file-status]").forEach((status) => {
+            status.textContent = "上传中";
+            status.classList.remove("complete");
+          });
+          updateActionState();
+          elements.progressSection.scrollIntoView({
+            behavior: reducedMotion.matches ? "auto" : "smooth",
+            block: "start",
+          });
+
+          try {
+            await uploadFiles(generation);
+          } catch (e) {
+            if (generation !== analysisGeneration) return;
+            isProcessing = false;
+            elements.startButtonText.textContent = "重新上传";
+            elements.progressSection.dataset.state = "error";
+            updateActionState();
+            return;
+          }
+
+          if (generation !== analysisGeneration) return;
+          setStepState(0, "active");
+          elements.analysisNote.textContent = "正在进行 AI 分析，请耐心等待…";
+          setProgress("analysis", 10);
+
+          try {
+            setStepState(0, "complete");
+            setStepState(1, "active");
+
+            const analyzeBody = {
+              file_ids: uploadedFileIds,
+              chief_complaint: getChiefComplaint(),
+            };
+            if (pendingEmail) analyzeBody.email = pendingEmail;
+            const accepted = await requestJson('/analyze?wait=false', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(analyzeBody),
+            });
+            if (generation !== analysisGeneration) return;
+            if (!accepted.task_id) throw new Error('分析受理响应缺少任务编号');
+            adoptReportData(accepted);
+            currentTaskId = String(accepted.task_id);
+            saveTask(currentTaskId);
+            showAccessCredentials(accepted);
+            loadReports();
+            elements.accessCredentials.scrollIntoView({
+              behavior: reducedMotion.matches ? 'auto' : 'smooth',
+              block: 'start',
+            });
+
+            setProgress("analysis", 45);
+            const result = await pollAnalysisStatus(currentTaskId, generation);
+            if (generation !== analysisGeneration) return;
+            completeOpenedReport(result, true);
+            loadReports();
+          } catch (error) {
+            if (generation !== analysisGeneration) return;
+            failAnalysis(error);
+          }
+        }
+
+        function getChiefComplaint() {
+          const el = document.getElementById('chief-complaint-input');
+          return el ? el.value.trim() : '';
+        }
+
+        (function initVoiceInput() {
+          const btn = document.getElementById('voice-input-btn');
+          const textarea = document.getElementById('chief-complaint-input');
+          const btnText = document.getElementById('voice-btn-text');
+          if (!btn || !textarea || !btnText) return;
+          const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+          if (!SR) { btn.style.display = 'none'; return; }
+          let recognition = null;
+          let recognizing = false;
+          function resetBtn() {
+            recognizing = false;
+            btn.classList.remove('recording');
+            btnText.textContent = '语音输入';
+          }
+          btn.addEventListener('click', function () {
+            if (recognizing) { try { recognition.stop(); } catch (e) {} return; }
+            recognition = new SR();
+            recognition.lang = (navigator.language || 'zh-CN').toLowerCase().indexOf('zh') === 0 ? 'zh-CN' : 'en-US';
+            recognition.continuous = true;
+            recognition.interimResults = true;
+            recognition.onresult = function (e) {
+              let finalText = '';
+              for (let i = e.resultIndex; i < e.results.length; i++) {
+                if (e.results[i].isFinal) finalText += e.results[i][0].transcript;
+              }
+              if (finalText) {
+                let cur = textarea.value.replace(/\s+$/, '');
+                if (cur && !/[，。,.！？!?]$/.test(cur)) cur += '，';
+                textarea.value = cur + finalText;
+                textarea.dispatchEvent(new Event('input'));
+              }
+            };
+            recognition.onerror = resetBtn;
+            recognition.onend = resetBtn;
+            try {
+              recognition.start();
+              recognizing = true;
+              btn.classList.add('recording');
+              btnText.textContent = '正在聆听 · 点击停止';
+            } catch (e) { resetBtn(); }
+          });
+        })();
+
+        async function pollAnalysisStatus(taskId, generation = analysisGeneration) {
+          const maxAttempts = 120;
+          const task = loadTask();
+          const startedAt = (task && task.startedAt) || Date.now();
+          const fileCount = (task && task.fileCount) || (selectedFiles ? selectedFiles.length : 1) || 1;
+          const estimatedTotal = Math.min(600, 90 + fileCount * 25);
+          for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+            if (generation !== analysisGeneration) throw new Error('stale analysis view');
+            await wait(10000);
+            let data = null;
+            try {
+              data = await requestJson('/status/' + encodeURIComponent(taskId));
+            } catch (error) {
+              if (generation !== analysisGeneration) throw error;
+              if (error.status === 401 || error.status === 403) {
+                throw new Error('当前会话无法访问此分析，请从“我的报告”重新打开或认领报告');
+              }
+              if (error.status === 404 || error.status === 410) {
+                throw new Error('分析任务不存在或已过期');
+              }
+              continue;
+            }
+            if (generation !== analysisGeneration) throw new Error('stale analysis view');
+            if (data.report_id) adoptReportData(data);
+            if (data.status === 'completed') {
+              if (currentReportId) {
+                try {
+                  const detail = await requestJson('/reports/' + encodeURIComponent(currentReportId));
+                  const merged = { ...data, ...detail };
+                  if (!merged.preview && !merged.report_preview && !merged.free_preview) {
+                    merged.preview = data.preview || data.report_preview || data.free_preview;
+                  }
+                  return merged;
+                } catch (error) {
+                  return data;
+                }
+              }
+              return data;
+            }
+            if (data.status === 'failed') {
+              throw new Error((data.pipeline_error && data.pipeline_error.message) || data.error || 'AI 分析失败');
+            }
+            const elapsed = (Date.now() - startedAt) / 1000;
+            const elapsedMin = Math.floor(elapsed / 60);
+            const remaining = Math.max(0, estimatedTotal - elapsed);
+            const remainingMin = Math.ceil(remaining / 60);
+            const ratio = Math.min(0.95, elapsed / estimatedTotal);
+            setProgress("analysis", Math.max(45, Math.round(45 + ratio * 50)));
+            let stage = "正在识别病历文件…";
+            if (ratio >= 0.66) { stage = "正在生成分析报告…"; }
+            else if (ratio >= 0.33) { stage = "AI 正在分析病情、匹配专科…"; }
+            if (remaining > 30) {
+              elements.analysisNote.textContent = stage + "（已进行 " + elapsedMin + " 分钟，预计还需约 " + remainingMin + " 分钟）";
+            } else {
+              elements.analysisNote.textContent = stage + "（已进行 " + elapsedMin + " 分钟，即将完成，请稍候）";
+            }
+          }
+          throw new Error('分析时间较长，请稍后在“我的报告”中重新打开');
+        }
+
+        async function resumeAnalysisIfPending() {
+          const task = loadTask();
+          if (!task || !task.taskId) return;
+          const generation = ++analysisGeneration;
+          isProcessing = true;
+          currentTaskId = task.taskId;
+          elements.progressSection.hidden = false;
+          elements.progressSection.dataset.state = "loading";
+          elements.startButtonText.textContent = "分析进行中";
+          elements.uploadSection.querySelector(".status-pill").textContent = "处理中";
+          setStepState(0, "complete");
+          setStepState(1, "active");
+          setProgress("analysis", 45);
+          elements.analysisNote.textContent = "检测到有进行中的分析，正在为你恢复进度…";
+          updateActionState();
+          try {
+            if (reportCenterReady) await reportCenterReady;
+            if (generation !== analysisGeneration) return;
+            const matchingReport = reportSummaries.find((report) => report.task_id === task.taskId);
+            if (matchingReport) adoptReportData(matchingReport);
+            const result = await pollAnalysisStatus(task.taskId, generation);
+            if (generation !== analysisGeneration) return;
+            completeOpenedReport(result, true);
+            loadReports();
+          } catch (error) {
+            if (generation !== analysisGeneration) return;
+            clearTask();
+            isProcessing = false;
+            elements.progressSection.dataset.state = "error";
+            elements.progressPill.textContent = "恢复失败";
+            elements.analysisNote.textContent = error.message || "之前的分析已结束或过期，请从“我的报告”重试";
+            elements.startButtonText.textContent = "重新分析";
+            updateActionState();
+          }
+        }
+
+        function applyPreview(preview) {
+          const safePreview = preview && typeof preview === 'object' ? preview : {};
+          const listEl = elements.previewSection.querySelector('.summary-list');
+          if (listEl) {
+            const row = document.createElement('div');
+            row.className = 'summary-row';
+            const term = document.createElement('dt');
+            term.textContent = 'AI 病历摘要';
+            const description = document.createElement('dd');
+            description.textContent = safePreview.summary ? String(safePreview.summary) : '暂未提供摘要，请稍后刷新报告。';
+            row.append(term, description);
+            listEl.replaceChildren(row);
+          }
+          const deptEl = elements.previewSection.querySelector('.department-name');
+          if (deptEl) {
+            deptEl.textContent = safePreview.specialty ? String(safePreview.specialty) : '待医生评估';
+          }
+          const secondaryEl = elements.previewSection.querySelector('.department-secondary');
+          if (secondaryEl) secondaryEl.hidden = Boolean(safePreview.specialty);
+        }
+
+        function reportStatusLabel(report) {
+          if (reportIsExpired(report)) return '已过期';
+          const status = String((report && report.status) || 'processing').toLowerCase();
+          const labels = {
+            completed: '分析完成',
+            complete: '分析完成',
+            succeeded: '分析完成',
+            failed: '分析失败',
+            error: '分析失败',
+            processing: '分析中',
+            pending: '等待分析',
+            queued: '排队中',
+            running: '分析中',
+          };
+          return labels[status] || '处理中';
+        }
+
+        function renderReportList() {
+          elements.reportList.replaceChildren();
+          reportSummaries.forEach((report) => {
+            if (!report || !report.report_id) return;
+            const item = document.createElement('li');
+            item.className = 'report-list-item';
+            const copy = document.createElement('div');
+            copy.className = 'report-list-copy';
+            const id = document.createElement('strong');
+            id.className = 'report-list-id';
+            id.textContent = String(report.report_id);
+            const meta = document.createElement('p');
+            meta.className = 'report-list-meta';
+            const date = formatReportDate(report.created_at || report.updated_at) || '日期待确认';
+            const payment = reportIsPaid(report) ? '已支付' : '未支付';
+            meta.textContent = date + ' · ' + reportStatusLabel(report) + ' · ' + payment;
+            copy.append(id, meta);
+
+            const open = document.createElement('button');
+            open.className = 'btn btn-secondary btn-small';
+            open.type = 'button';
+            const expired = reportIsExpired(report);
+            open.textContent = expired ? '已过期' : (reportIsPaid(report) ? '查看完整报告' : '打开报告');
+            open.disabled = expired || openingReport;
+            open.setAttribute('aria-label', (expired ? '报告已过期 ' : '打开报告 ') + String(report.report_id));
+            if (!expired) open.addEventListener('click', () => openReport(String(report.report_id)));
+            item.append(copy, open);
+            elements.reportList.appendChild(item);
+          });
+        }
+
+        async function loadReports() {
+          const generation = sessionGeneration;
+          if (reportsLoading) return false;
+          reportsLoading = true;
+          elements.refreshReports.disabled = true;
+          if (!reportSummaries.length) setMessage(elements.reportsState, '正在加载报告…');
+          try {
+            const data = await requestJson('/reports');
+            if (generation !== sessionGeneration) return false;
+            const reports = Array.isArray(data) ? data : (Array.isArray(data.reports) ? data.reports : []);
+            reportSummaries = reports.filter((report) => report && report.report_id);
+            renderReportList();
+            if (!reportSummaries.length) {
+              setMessage(elements.reportsState, '此设备暂无可恢复报告。开始分析后，报告会出现在这里；也可在右侧凭编号和提取码认领。');
+            } else {
+              setMessage(elements.reportsState, '');
+            }
+            return true;
+          } catch (error) {
+            if (generation !== sessionGeneration) return false;
+            if (error.status === 401 || error.status === 403) {
+              reportSummaries = [];
+              renderReportList();
+              setMessage(elements.reportsState, '当前安全会话已失效。请重新登录，或使用报告编号和提取码认领。', 'warning');
+            } else {
+              setMessage(elements.reportsState, '报告列表加载失败：' + error.message + '。可点击“刷新列表”重试。', 'error');
+            }
+            return false;
+          } finally {
+            if (generation === sessionGeneration) {
+              reportsLoading = false;
+              elements.refreshReports.disabled = false;
+            }
+          }
+        }
+
+        function updateAuthState() {
+          if (currentUser) {
+            const user = currentUser.user && typeof currentUser.user === 'object' ? currentUser.user : currentUser;
+            elements.authState.textContent = '已登录' + (user.email ? '：' + String(user.email) : '');
+            elements.logoutButton.hidden = false;
+          } else {
+            elements.authState.textContent = '未登录。验证邮箱后，可在其他设备找回该邮箱认领的报告。';
+            elements.logoutButton.hidden = true;
+          }
+        }
+
+        async function loadAuthMe() {
+          const generation = sessionGeneration;
+          try {
+            const data = await requestJson('/auth/me');
+            if (generation !== sessionGeneration) return null;
+            currentUser = data.authenticated === true || data.logged_in === true ? data : null;
+            updateAuthState();
+            return currentUser;
+          } catch (error) {
+            if (generation !== sessionGeneration) return null;
+            currentUser = null;
+            updateAuthState();
+            elements.authState.textContent = '登录状态暂时无法确认，仍可使用提取码找回报告。';
+            return null;
+          }
+        }
+
+        async function loadAuthConfig() {
+          try {
+            const config = await requestJson('/auth/config');
+            emailEnabled = config.email_enabled === true;
+            elements.authPanel.hidden = !emailEnabled;
+            elements.analysisEmailBlock.hidden = !emailEnabled;
+            if (emailEnabled) {
+              setMessage(elements.emailUnavailable, '');
+              await loadAuthMe();
+            } else {
+              currentUser = null;
+              setMessage(elements.emailUnavailable, '邮箱验证码登录当前未配置。您仍可使用报告编号和提取码跨设备找回报告。', 'warning');
+            }
+          } catch (error) {
+            emailEnabled = false;
+            currentUser = null;
+            elements.authPanel.hidden = true;
+            elements.analysisEmailBlock.hidden = true;
+            setMessage(elements.emailUnavailable, '邮箱登录能力暂时无法确认，请使用报告编号和提取码找回；系统不会显示验证码已发送。', 'warning');
+          } finally {
+            elements.requestCode.disabled = !emailEnabled;
+            elements.verifyCode.disabled = !emailEnabled;
+          }
+        }
+
+        async function requestEmailCode() {
+          if (!emailEnabled || authRequestPending) return;
+          const email = elements.authEmail.value.trim();
+          if (!email || !elements.authEmail.checkValidity()) {
+            setMessage(elements.authFeedback, '请先输入有效的邮箱地址。', 'error');
+            elements.authEmail.focus();
+            return;
+          }
+          const generation = sessionGeneration;
+          authRequestPending = true;
+          elements.requestCode.disabled = true;
+          setMessage(elements.authFeedback, '正在请求验证码…');
+          try {
+            await requestJson('/auth/request', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ email }),
+            });
+            if (generation !== sessionGeneration) return;
+            elements.authCode.value = '';
+            setMessage(elements.authFeedback, '验证码已发送，请查收邮件并在 10 分钟内完成验证。', 'success');
+            elements.authCode.focus();
+          } catch (error) {
+            if (generation !== sessionGeneration) return;
+            setMessage(elements.authFeedback, '验证码请求失败：' + error.message, 'error');
+          } finally {
+            if (generation === sessionGeneration) {
+              authRequestPending = false;
+              elements.requestCode.disabled = !emailEnabled;
+            }
+          }
+        }
+
+        async function verifyEmailCode() {
+          if (!emailEnabled || authVerifyPending) return;
+          const email = elements.authEmail.value.trim();
+          const code = elements.authCode.value.trim();
+          if (!email || !elements.authEmail.checkValidity()) {
+            setMessage(elements.authFeedback, '请输入有效的邮箱地址。', 'error');
+            elements.authEmail.focus();
+            return;
+          }
+          if (!code) {
+            setMessage(elements.authFeedback, '请输入邮件中的验证码。', 'error');
+            elements.authCode.focus();
+            return;
+          }
+          authVerifyPending = true;
+          const generation = sessionGeneration;
+          elements.verifyCode.disabled = true;
+          setMessage(elements.authFeedback, '正在验证…');
+          try {
+            const verification = await requestJson('/auth/verify', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ email, code }),
+            });
+            if (generation !== sessionGeneration) return;
+            if (verification.authenticated !== true) {
+              throw new Error('服务尚未确认登录状态，请稍后检查后再试');
+            }
+            const nextGeneration = beginSessionTransition();
+            const verifiedUser = await loadAuthMe();
+            if (nextGeneration !== sessionGeneration) return;
+            if (!verifiedUser) {
+              setMessage(elements.authFeedback, '暂时无法确认登录状态，请勿视为已登录；可刷新页面后重试。', 'warning');
+              return;
+            }
+            const reportsRefreshed = await loadReports();
+            if (nextGeneration !== sessionGeneration) return;
+            setMessage(
+              elements.authFeedback,
+              reportsRefreshed ? '邮箱验证成功，报告列表已刷新。' : '邮箱已验证并登录，但报告列表刷新失败，请点击“刷新列表”重试。',
+              reportsRefreshed ? 'success' : 'warning'
+            );
+          } catch (error) {
+            setMessage(elements.authFeedback, '验证码登录失败：' + error.message, 'error');
+          } finally {
+            authVerifyPending = false;
+            elements.verifyCode.disabled = !emailEnabled;
+          }
+        }
+
+        function clearSensitiveInputs() {
+          selectedFiles = [];
+          elements.fileInput.value = '';
+          showFileError('');
+          renderFiles();
+          const complaint = document.getElementById('chief-complaint-input');
+          if (complaint) complaint.value = '';
+          elements.analysisEmail.value = '';
+          elements.claimReportId.value = '';
+          elements.claimAccessCode.value = '';
+          elements.authEmail.value = '';
+          elements.authCode.value = '';
+        }
+
+        function beginSessionTransition() {
+          sessionGeneration += 1;
+          reportsLoading = false;
+          openingReport = false;
+          claimPending = false;
+          authRequestPending = false;
+          elements.refreshReports.disabled = false;
+          elements.claimSubmit.disabled = false;
+          elements.requestCode.disabled = !emailEnabled;
+          clearSensitiveInputs();
+          clearTask();
+          resetResults();
+          reportSummaries = [];
+          renderReportList();
+          currentUser = null;
+          updateAuthState();
+          return sessionGeneration;
+        }
+
+        async function logout() {
+          if (!emailEnabled || authVerifyPending) return;
+          beginSessionTransition();
+          authVerifyPending = true;
+          elements.logoutButton.disabled = true;
+          setMessage(elements.authFeedback, '正在退出…');
+          try {
+            await requestJson('/auth/logout', { method: 'POST' });
+            await loadReports();
+            setMessage(elements.authFeedback, '已安全退出登录。', 'success');
+          } catch (error) {
+            setMessage(elements.authFeedback, '退出请求失败，页面敏感内容已清除：' + error.message, 'error');
+          } finally {
+            authVerifyPending = false;
+            elements.logoutButton.disabled = false;
+          }
+        }
+
+        async function claimReport() {
+          if (claimPending) return;
+          const reportId = elements.claimReportId.value.trim();
+          const accessCode = elements.claimAccessCode.value.trim();
+          if (!reportId || !accessCode) {
+            setMessage(elements.reportCenterFeedback, '请同时输入报告编号和提取码。', 'error');
+            return;
+          }
+          const generation = sessionGeneration;
+          claimPending = true;
+          elements.claimSubmit.disabled = true;
+          setMessage(elements.reportCenterFeedback, '正在安全认领报告…');
+          try {
+            await requestJson('/reports/claim', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ report_id: reportId, access_code: accessCode }),
+            });
+            if (generation !== sessionGeneration) return;
+            elements.claimAccessCode.value = '';
+            await loadReports();
+            if (generation !== sessionGeneration) return;
+            setMessage(elements.reportCenterFeedback, '认领成功，正在打开报告…', 'success');
+            await openReport(reportId);
+          } catch (error) {
+            if (generation !== sessionGeneration) return;
+            elements.claimAccessCode.value = '';
+            const message = [400, 401, 403, 404].includes(error.status)
+              ? '报告编号或提取码不正确，或提取码已失效。'
+              : error.status === 410
+                ? '该报告已过期，无法继续认领。'
+                : error.status === 429
+                  ? '尝试次数过多，请稍后再试。'
+                  : '认领失败：' + error.message;
+            setMessage(elements.reportCenterFeedback, message, 'error');
+          } finally {
+            if (generation === sessionGeneration) {
+              claimPending = false;
+              elements.claimSubmit.disabled = false;
+            }
+          }
+        }
+
+        function scrollActiveReport() {
+          const target = !elements.fullReport.hidden
+            ? elements.fullReport
+            : !elements.previewSection.hidden
+              ? elements.previewSection
+              : elements.progressSection;
+          target.scrollIntoView({ behavior: reducedMotion.matches ? 'auto' : 'smooth', block: 'start' });
+        }
+
+        function showReportTerminalState(title, message, scroll) {
+          isProcessing = false;
+          elements.progressSection.hidden = false;
+          elements.previewSection.hidden = true;
+          elements.fullReport.hidden = true;
+          elements.lockedModule.hidden = true;
+          elements.progressSection.dataset.state = title === '已过期' ? 'expired' : 'error';
+          elements.progressPill.textContent = title;
+          elements.progressPill.classList.remove('success');
+          elements.analysisNote.textContent = message;
+          elements.startButtonText.textContent = '开始新的分析';
+          updateActionState();
+          if (scroll) scrollActiveReport();
+        }
+
+        function unlockPaidReport(report) {
+          adoptReportData(report);
+          isPaid = true;
+          document.body.classList.add('is-paid');
+          elements.paymentStatus.hidden = false;
+          elements.paymentStatus.classList.remove('alert-error');
+          elements.paymentStatus.classList.add('alert-success');
+          elements.paymentStatus.textContent = '支付已确认，完整报告已解锁；之后可从“我的报告”再次查看。';
+          elements.lockedModule.hidden = true;
+          elements.fullReport.hidden = false;
+          const fullReport = report.full_report || report.report_full || null;
+          renderFullReport(fullReport);
+        }
+
+        function completeOpenedReport(detail, scroll) {
+          const shouldUnlock = reportIsPaid(detail) || detail.full_report || detail.report_full;
+          if (shouldUnlock) isPaid = true;
+          finishAnalysis(detail, { scroll: false, refreshList: false });
+          if (shouldUnlock) unlockPaidReport(detail);
+          if (scroll) scrollActiveReport();
+        }
+
+        async function resumeOpenedReport(reportId) {
+          const generation = analysisGeneration;
+          try {
+            if (currentTaskId) {
+              const result = await pollAnalysisStatus(currentTaskId, generation);
+              if (generation !== analysisGeneration) return;
+              completeOpenedReport(result, true);
+              loadReports();
+            } else {
+              await pollReportDetail(reportId, generation);
+            }
+          } catch (error) {
+            if (generation !== analysisGeneration) return;
+            isProcessing = false;
+            elements.progressSection.dataset.state = 'error';
+            elements.progressPill.textContent = '恢复中断';
+            elements.analysisNote.textContent = error.message + '。可稍后从“我的报告”重新打开。';
+            updateActionState();
+          }
+        }
+
+        async function pollReportDetail(reportId, generation) {
+          for (let attempt = 0; attempt < 120; attempt += 1) {
+            await wait(10000);
+            if (generation !== analysisGeneration) return;
+            let detail;
+            try {
+              detail = await requestJson('/reports/' + encodeURIComponent(reportId));
+            } catch (error) {
+              if (error.status === 401 || error.status === 403 || error.status === 404 || error.status === 410) throw error;
+              continue;
+            }
+            if (generation !== analysisGeneration) return;
+            const status = String(detail.status || '').toLowerCase();
+            if (status === 'completed' || status === 'complete' || status === 'succeeded') {
+              completeOpenedReport(detail, true);
+              loadReports();
+              return;
+            }
+            if (status === 'failed' || status === 'error' || reportIsExpired(detail)) {
+              showReportTerminalState(reportIsExpired(detail) ? '已过期' : '分析失败', reportIsExpired(detail) ? '报告已超过保存期限。' : (detail.error || '分析未能完成。'), true);
+              loadReports();
+              return;
+            }
+            elements.analysisNote.textContent = '报告仍在分析中，已恢复自动刷新…';
+          }
+          throw new Error('分析时间较长');
+        }
+
+        function displayReportDetail(detail, scroll) {
+          adoptReportData(detail);
+          const metadata = detail.metadata && typeof detail.metadata === 'object' ? detail.metadata : {};
+          const date = formatReportDate(detail.completed_at || detail.created_at || metadata.created_at);
+          if (date) elements.reportDate.textContent = date;
+          const status = String(detail.status || metadata.status || 'processing').toLowerCase();
+          if (reportIsExpired(detail)) {
+            showReportTerminalState('已过期', '报告已超过保存期限，无法继续查看。', scroll);
+            return;
+          }
+          if (status === 'failed' || status === 'error') {
+            showReportTerminalState('分析失败', detail.error || '分析未能完成，请开始新的分析。', scroll);
+            return;
+          }
+          if (status === 'completed' || status === 'complete' || status === 'succeeded') {
+            completeOpenedReport(detail, scroll);
+            return;
+          }
+
+          isProcessing = true;
+          elements.progressSection.hidden = false;
+          elements.previewSection.hidden = true;
+          elements.fullReport.hidden = true;
+          elements.progressSection.dataset.state = 'loading';
+          elements.progressPill.textContent = '处理中';
+          elements.uploadSection.querySelector('.status-pill').textContent = '已恢复报告';
+          elements.startButtonText.textContent = '分析进行中';
+          setProgress('upload', 100);
+          setProgress('analysis', typeof detail.progress === 'number' ? detail.progress : 45);
+          setStepState(0, 'complete');
+          setStepState(1, 'active');
+          elements.uploadStatus.textContent = '已从“我的报告”安全恢复';
+          elements.analysisNote.textContent = '报告仍在分析中，正在恢复进度…';
+          updateActionState();
+          if (scroll) scrollActiveReport();
+          resumeOpenedReport(currentReportId);
+        }
+
+        async function openReport(reportId) {
+          if (!reportId || openingReport) return;
+          if (currentReportId === reportId && (!elements.previewSection.hidden || isProcessing)) {
+            scrollActiveReport();
+            return;
+          }
+          const generation = sessionGeneration;
+          openingReport = true;
+          renderReportList();
+          setMessage(elements.reportCenterFeedback, '正在恢复报告…');
+          try {
+            const detail = await requestJson('/reports/' + encodeURIComponent(reportId));
+            if (generation !== sessionGeneration) return;
+            resetResults();
+            currentReportId = String(detail.report_id || reportId);
+            elements.reportId.textContent = currentReportId;
+            displayReportDetail(detail, true);
+            setMessage(elements.reportCenterFeedback, '报告已恢复。', 'success');
+          } catch (error) {
+            if (generation !== sessionGeneration) return;
+            if (error.status === 410) {
+              resetResults();
+              currentReportId = reportId;
+              elements.reportId.textContent = reportId;
+              showReportTerminalState('已过期', '报告已超过保存期限，无法继续查看。', true);
+            }
+            const message = error.status === 401 || error.status === 403
+              ? '当前会话无权打开此报告，请重新登录或使用正确的提取码认领。'
+              : error.status === 410
+                ? '该报告已过期。'
+                : '报告恢复失败：' + error.message;
+            setMessage(elements.reportCenterFeedback, message, 'error');
+          } finally {
+            if (generation === sessionGeneration) {
+              openingReport = false;
+              renderReportList();
+            }
+          }
+        }
+
+        async function initializeReportCenter() {
+          await Promise.all([loadAuthConfig(), loadReports()]);
+        }
+
+        async function loadPayPalSDK(clientId, env) {
+          let sdkOrigin;
+          if (env === 'sandbox') sdkOrigin = 'https://www.sandbox.paypal.com';
+          else if (env === 'live') sdkOrigin = 'https://www.paypal.com';
+          else throw new Error('PayPal 环境配置无效');
+          if (window.paypal && window.paypal.Buttons) return;
+          await new Promise((resolve, reject) => {
+            const script = document.createElement('script');
+            script.src = sdkOrigin + '/sdk/js?client-id=' + encodeURIComponent(clientId) + '&currency=USD&intent=capture&components=buttons&disable-funding=credit';
+            script.onload = resolve;
+            script.onerror = () => reject(new Error('PayPal SDK 加载失败'));
+            document.head.appendChild(script);
+          });
+        }
+
+        function setPaymentContainerMessage(container, text) {
+          const note = document.createElement('p');
+          note.className = 'payment-note';
+          note.textContent = text;
+          container.replaceChildren(note);
+        }
+
+        async function renderPayPalButtons() {
+          const container = document.getElementById('paypal-button-container');
+          if (!container || isPaid) return;
+          const version = ++payPalRenderVersion;
+          const fileId = uploadedFileIds[0];
+          const reportId = currentReportId;
+          container.hidden = false;
+          if (container.dataset.rendered === 'true') return;
+          container.dataset.rendered = 'true';
+          if (!fileId) {
+            setPaymentContainerMessage(container, '报告文件标识尚未恢复，请从“我的报告”重新打开后再试。');
+            return;
+          }
+          try {
+            const cfg = await requestJson('/pay/config');
+            if (version !== payPalRenderVersion) return;
+            if (!cfg.enabled || !cfg.client_id) {
+              setPaymentContainerMessage(container, '支付通道即将开通，如需报告请通过人工咨询获取。');
+              return;
+            }
+            await loadPayPalSDK(cfg.client_id, cfg.env);
+            if (version !== payPalRenderVersion) return;
+            const buttons = window.paypal.Buttons({
+              style: { layout: 'vertical', color: 'blue', shape: 'rect', label: 'paypal', height: 45 },
+              createOrder: async () => {
+                if (payPalOrder && payPalOrder.reportId === reportId) return payPalOrder.orderId;
+                if (payPalOrderPromise) return payPalOrderPromise;
+                payPalOrderPromise = (async () => {
+                  const data = await requestJson('/pay/orders', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ file_id: fileId }),
+                  });
+                  if (version !== payPalRenderVersion || !data.order_id) {
+                    throw new Error('订单状态已变化，请重新打开报告');
+                  }
+                  payPalOrder = { reportId, orderId: data.order_id };
+                  return data.order_id;
+                })();
+                try {
+                  return await payPalOrderPromise;
+                } finally {
+                  payPalOrderPromise = null;
+                }
+              },
+              onApprove: async (data) => {
+                if (isPaid) return;
+                if (payPalCapture && payPalCapture.orderId === data.orderID) {
+                  return payPalCapture.promise;
+                }
+                const capturePromise = (async () => {
+                  elements.paymentStatus.hidden = false;
+                  elements.paymentStatus.classList.remove('alert-error');
+                  elements.paymentStatus.classList.add('alert-success');
+                  elements.paymentStatus.textContent = '支付已提交，正在确认并恢复完整报告…';
+                  const captured = await requestJson('/pay/capture', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ order_id: data.orderID, file_id: fileId }),
+                  });
+                  if (captured.payment_verified !== true) {
+                    throw new Error('支付服务尚未确认付款，请稍后从“我的报告”恢复，不要重复支付');
+                  }
+                  let restored = captured;
+                  if (currentReportId) {
+                    try {
+                      const detail = await requestJson('/reports/' + encodeURIComponent(currentReportId));
+                      restored = { ...detail };
+                      const capturedFull = captured.full_report || captured.report_full;
+                      if (!restored.full_report && !restored.report_full && capturedFull) {
+                        restored.full_report = capturedFull;
+                      }
+                    } catch (error) {
+                      restored = { ...captured, report_id: currentReportId };
+                    }
+                  }
+                  if (!restored.full_report && !restored.report_full) {
+                    throw new Error('付款已确认，但完整报告暂时恢复失败，请稍后从“我的报告”重试');
+                  }
+                  restored.paid = true;
+                  if (version !== payPalRenderVersion) return;
+                  unlockPaidReport(restored);
+                  loadReports();
+                  elements.fullReport.scrollIntoView({
+                    behavior: reducedMotion.matches ? 'auto' : 'smooth',
+                    block: 'start',
+                  });
+                })();
+                payPalCapture = { orderId: data.orderID, promise: capturePromise };
+                try {
+                  await capturePromise;
+                } catch (error) {
+                  if (version !== payPalRenderVersion) return;
+                  payPalCapture = null;
+                  elements.paymentStatus.hidden = false;
+                  elements.paymentStatus.classList.remove('alert-success');
+                  elements.paymentStatus.classList.add('alert-error');
+                  elements.paymentStatus.textContent = '支付确认失败：' + error.message + '。如已完成付款，请稍后从“我的报告”恢复，不要重复支付。';
+                  throw error;
+                }
+              },
+              onError: () => {
+                if (version !== payPalRenderVersion) return;
+                showFileError('支付流程未完成。如已付款，请从“我的报告”恢复，不要重复支付。');
+              },
+            });
+            await buttons.render('#paypal-button-container');
+          } catch (error) {
+            if (version !== payPalRenderVersion) return;
+            setPaymentContainerMessage(container, '支付组件加载失败，请刷新页面或重新打开报告后重试。');
+          }
+        }
+
+        function renderFullReport(report) {
+          const container = document.querySelector('.report-chapters');
+          if (!container) return;
+          container.replaceChildren();
+          const sections = report && Array.isArray(report.sections) ? report.sections : [];
+          sections.forEach((section, index) => {
+            const article = document.createElement('article');
+            article.className = 'report-chapter';
+            const heading = document.createElement('div');
+            heading.className = 'chapter-heading';
+            const num = document.createElement('span');
+            num.className = 'chapter-number';
+            num.textContent = String(index + 1).padStart(2, '0');
+            const title = document.createElement('h3');
+            title.textContent = section.title ? String(section.title) : '章节 ' + (index + 1);
+            heading.append(num, title);
+            const body = document.createElement('p');
+            body.className = 'chapter-body';
+            body.style.whiteSpace = 'pre-wrap';
+            body.textContent = section.content ? String(section.content) : '';
+            article.append(heading, body);
+            container.appendChild(article);
+          });
+          const doctors = report && Array.isArray(report.doctors) ? report.doctors : [];
+          if (doctors.length) {
+            const article = document.createElement('article');
+            article.className = 'report-chapter';
+            const heading = document.createElement('div');
+            heading.className = 'chapter-heading';
+            const number = document.createElement('span');
+            number.className = 'chapter-number';
+            number.textContent = '+';
+            const title = document.createElement('h3');
+            title.textContent = '推荐医生';
+            heading.append(number, title);
+            article.appendChild(heading);
+            doctors.forEach((doctor) => {
+              const item = document.createElement('p');
+              item.style.marginBottom = '12px';
+              const strong = document.createElement('strong');
+              const hospital = document.createElement('span');
+              hospital.className = 'doctor-hospital';
+              const line1 = [doctor.name, doctor.title, doctor.department].filter(Boolean).join(' · ');
+              const line2 = [doctor.hospital, doctor.hospital_level].filter(Boolean).join(' · ');
+              const specialties = Array.isArray(doctor.specialties)
+                ? doctor.specialties.join('、')
+                : (doctor.specialties || '');
+              strong.textContent = line1;
+              hospital.textContent = line2 + (specialties ? '｜擅长：' + String(specialties) : '');
+              item.append(strong, document.createElement('br'), hospital);
+              article.appendChild(item);
+            });
+            container.appendChild(article);
+          }
+          if (!sections.length && !doctors.length) {
+            const empty = document.createElement('p');
+            empty.className = 'report-chapter';
+            empty.textContent = '支付状态已确认，但完整报告内容暂未返回。请稍后从“我的报告”重新打开，无需重复支付。';
+            container.appendChild(empty);
+          }
+          elements.reportId.textContent = currentReportId || '—';
+        }
+
+        elements.fileInput.addEventListener("change", (event) => addFiles(event.target.files));
+
+        ["dragenter", "dragover"].forEach((eventName) => {
+          elements.dropZone.addEventListener(eventName, (event) => {
+            event.preventDefault();
+            event.stopPropagation();
+            if (!consentGranted || isProcessing) return;
+            elements.dropZone.classList.add("is-dragging");
+            if (event.dataTransfer) event.dataTransfer.dropEffect = "copy";
+          });
+        });
+
+        elements.dropZone.addEventListener("dragleave", (event) => {
+          event.preventDefault();
+          if (!elements.dropZone.contains(event.relatedTarget)) {
+            elements.dropZone.classList.remove("is-dragging");
+          }
+        });
+
+        elements.dropZone.addEventListener("drop", (event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          elements.dropZone.classList.remove("is-dragging");
+          if (!consentGranted) {
+            showConsentModal();
+            return;
+          }
+          if (!isProcessing && event.dataTransfer) addFiles(event.dataTransfer.files);
+        });
+
+        ["dragover", "drop"].forEach((eventName) => {
+          window.addEventListener(eventName, (event) => event.preventDefault());
+        });
+
+        elements.clearFiles.addEventListener("click", () => {
+          if (isProcessing) return;
+          selectedFiles = [];
+          elements.fileInput.value = "";
+          showFileError("");
+          resetResults();
+          renderFiles();
+          elements.uploadSection.querySelector(".status-pill").textContent = "待上传";
+          elements.fileInput.focus();
+        });
+
+        elements.startButton.addEventListener("click", startAnalysis);
+        elements.printButton.addEventListener("click", () => window.print());
+        elements.agreeConsent.addEventListener("click", agreeToConsent);
+        elements.declineConsent.addEventListener("click", declineToConsent);
+        elements.reopenConsent.addEventListener("click", showConsentModal);
+        elements.refreshReports.addEventListener('click', loadReports);
+        elements.claimForm.addEventListener('submit', (event) => {
+          event.preventDefault();
+          claimReport();
+        });
+        elements.requestCode.addEventListener('click', requestEmailCode);
+        elements.emailLoginForm.addEventListener('submit', (event) => {
+          event.preventDefault();
+          verifyEmailCode();
+        });
+        elements.logoutButton.addEventListener('click', logout);
+        document.getElementById('copy-report-id').addEventListener('click', () => copyCredential('report'));
+        document.getElementById('copy-access-code').addEventListener('click', () => copyCredential('code'));
+        elements.acceptedAccessCode.addEventListener('focus', () => elements.acceptedAccessCode.select());
+
+        elements.consentModal.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") {
+            event.preventDefault();
+            declineToConsent();
+            return;
+          }
+          if (event.key !== "Tab") return;
+          const focusable = Array.from(
+            elements.consentDialog.querySelectorAll("button:not(:disabled), a[href], [tabindex='0']")
+          );
+          if (!focusable.length) return;
+          const first = focusable[0];
+          const last = focusable[focusable.length - 1];
+          if (event.shiftKey && (document.activeElement === first || document.activeElement === elements.consentDialog)) {
+            event.preventDefault();
+            last.focus();
+          } else if (!event.shiftKey && document.activeElement === last) {
+            event.preventDefault();
+            first.focus();
+          }
+        });
+
+        const savedConsent = readConsent();
+        if (savedConsent === "agreed") {
+          consentGranted = true;
+          elements.consentDeclined.hidden = true;
+        } else if (savedConsent === "declined") {
+          consentGranted = false;
+          elements.consentDeclined.hidden = false;
+        } else {
+          consentGranted = false;
+          showConsentModal();
+        }
+        updateActionState();
+        reportCenterReady = initializeReportCenter();
+        resumeAnalysisIfPending();
+      })();
+    </script>
+  </body>
+</html>

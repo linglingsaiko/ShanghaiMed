@@ -1,0 +1,1874 @@
+{
+  "metadata": {
+    "category": "dental",
+    "category_label": "牙科/口腔科",
+    "generated_at": "2026-11-03T18:01:32+08:00",
+    "source": "有来医生（m.youlai.cn）",
+    "city": "上海",
+    "hospital_filter": "三甲",
+    "selection_rule": "各来源列表交叉采集、按医生ID去重；来源内优先主任/副主任医师，跨来源轮转选取以覆盖不同亚专科；每科室最多50人",
+    "fallback_to_attending_for_minimum_30": false,
+    "doctor_count": 50,
+    "fee_unit": "CNY（元）；null表示来源页未展示该服务费用",
+    "source_pages": [
+      {
+        "label": "口腔科",
+        "url": "https://m.youlai.cn/doctorrecommendlist_2_45_0.html",
+        "status": "success",
+        "page_title": "上海市口腔科专家排名_上海市口腔科专家哪个最好 - 有来医生",
+        "raw_doctor_count": 20,
+        "eligible_count": 19
+      },
+      {
+        "label": "口腔正畸科",
+        "url": "https://m.youlai.cn/doctorrecommendlist_2_176_0.html",
+        "status": "success",
+        "page_title": "上海市口腔正畸科专家排名_上海市口腔正畸科专家哪个最好 - 有来医生",
+        "raw_doctor_count": 20,
+        "eligible_count": 16
+      },
+      {
+        "label": "牙齿矫正",
+        "url": "https://m.youlai.cn/doctorrecommendlist_2_0_13995.html",
+        "status": "success",
+        "page_title": "上海市牙齿矫正专家排名_上海市牙齿矫正专家哪个最好 - 有来医生",
+        "raw_doctor_count": 20,
+        "eligible_count": 9
+      },
+      {
+        "label": "种植科",
+        "url": "https://m.youlai.cn/doctorrecommendlist_2_181_0.html",
+        "status": "success",
+        "page_title": "上海市种植科专家排名_上海市种植科专家哪个最好 - 有来医生",
+        "raw_doctor_count": 20,
+        "eligible_count": 11
+      },
+      {
+        "label": "牙齿种植",
+        "url": "https://m.youlai.cn/doctorrecommendlist_2_0_1464.html",
+        "status": "success",
+        "page_title": "上海市牙齿种植专家排名_上海市牙齿种植专家哪个最好 - 有来医生",
+        "raw_doctor_count": 20,
+        "eligible_count": 9
+      },
+      {
+        "label": "口腔颌面外科",
+        "url": "https://m.youlai.cn/doctorrecommendlist_2_182_0.html",
+        "status": "success",
+        "page_title": "上海市颌面外科专家排名_上海市颌面外科专家哪个最好 - 有来医生",
+        "raw_doctor_count": 20,
+        "eligible_count": 18
+      },
+      {
+        "label": "牙体牙髓科",
+        "url": "https://m.youlai.cn/doctorrecommendlist_2_179_0.html",
+        "status": "success",
+        "page_title": "上海市牙体牙髓科专家排名_上海市牙体牙髓科专家哪个最好 - 有来医生",
+        "raw_doctor_count": 20,
+        "eligible_count": 15
+      },
+      {
+        "label": "牙周科",
+        "url": "https://m.youlai.cn/doctorrecommendlist_2_180_0.html",
+        "status": "success",
+        "page_title": "上海市牙周科专家排名_上海市牙周科专家哪个最好 - 有来医生",
+        "raw_doctor_count": 20,
+        "eligible_count": 11
+      }
+    ],
+    "errors": []
+  },
+  "doctors": [
+    {
+      "doctor_id": "37852",
+      "name": "孙坚",
+      "title": "主任医师",
+      "department": "口腔颌面头颈肿瘤科",
+      "hospital": "上海交通大学医学院附属第九人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": 1200,
+      "academic_titles": [
+        "博导",
+        "博士"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "配合显微镜下腮腺区肿瘤的精细化手术（如腮腺混合瘤等）、颌骨囊肿（尤其下颌骨良性肿瘤无痕切除重建开创性手术），长期从事口腔颌面-头颈部各类肿瘤的根治手术和术后缺损的修复与器官功能性重建。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/37852/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_45_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_45_0.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_182_0.html"
+      ],
+      "source_categories": [
+        "口腔科",
+        "口腔颌面外科"
+      ],
+      "keyword_tags": [
+        "颌骨囊肿",
+        "肿瘤",
+        "腮腺混合瘤",
+        "口腔颌面部损伤",
+        "造釉细胞瘤",
+        "口腔颌面部血管瘤",
+        "颌骨骨髓炎",
+        "口腔颌面部囊肿"
+      ]
+    },
+    {
+      "doctor_id": "37992",
+      "name": "房兵",
+      "title": "主任医师",
+      "department": "口腔正畸科",
+      "hospital": "上海交通大学医学院附属第九人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "教授",
+        "博导"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "应用舌侧隐形矫正器，唇侧各类矫正器，治疗各类青少年及成人牙颌面畸形，以及唇腭裂，牙周病，颞下颌关节紊乱等疾病。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/37992/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_176_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_176_0.html"
+      ],
+      "source_categories": [
+        "口腔正畸科"
+      ],
+      "keyword_tags": [
+        "唇腭裂",
+        "隐形矫正",
+        "牙周病",
+        "关节紊乱",
+        "牙列不齐",
+        "牙颌畸形",
+        "上颌前突"
+      ]
+    },
+    {
+      "doctor_id": "38007",
+      "name": "赖红昌",
+      "title": "主任医师",
+      "department": "口腔种植科",
+      "hospital": "上海交通大学医学院附属第九人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "博导",
+        "教授"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "常规的种植支持固定修复、种植支持活动修复、种植辅助骨增量术、种植美学修复、种植全口义齿修复、种植-牙周维护治疗、种植-正畸联合治疗等疑难病例。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/38007/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_13995.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_13995.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_181_0.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_0_1464.html"
+      ],
+      "source_categories": [
+        "牙齿矫正",
+        "种植科",
+        "牙齿种植"
+      ],
+      "keyword_tags": [
+        "牙齿缺损",
+        "牙齿畸形",
+        "牙齿外伤",
+        "牙齿松动",
+        "牙齿修复",
+        "牙齿矫正"
+      ]
+    },
+    {
+      "doctor_id": "38013",
+      "name": "顾迎新",
+      "title": "主任医师",
+      "department": "口腔种植科",
+      "hospital": "上海交通大学医学院附属第九人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "博士"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "各类牙列缺损（失）的种植与修复，前牙美学区即刻种植，骨量不足的种植解决方案，全口种植固定修复等。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/38013/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_13995.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_13995.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_181_0.html"
+      ],
+      "source_categories": [
+        "牙齿矫正",
+        "种植科"
+      ],
+      "keyword_tags": [
+        "牙齿缺损",
+        "牙齿畸形",
+        "牙齿外伤",
+        "牙齿矫正",
+        "牙齿修复"
+      ]
+    },
+    {
+      "doctor_id": "37943",
+      "name": "张瑛",
+      "title": "主任医师",
+      "department": "口腔颅颌面科",
+      "hospital": "上海交通大学医学院附属第九人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "牙与牙槽外科的常见病。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/37943/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_1464.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_1464.html"
+      ],
+      "source_categories": [
+        "牙齿种植"
+      ],
+      "keyword_tags": [
+        "牙髓病",
+        "牙体缺损",
+        "牙髓炎",
+        "牙齿外伤",
+        "慢性牙髓炎",
+        "牙体病",
+        "牙齿种植",
+        "急性牙髓炎",
+        "牙髓坏死",
+        "牙齿修复",
+        "牙体病损"
+      ]
+    },
+    {
+      "doctor_id": "37877",
+      "name": "张凌",
+      "title": "主任医师",
+      "department": "口腔颌面头颈肿瘤科",
+      "hospital": "上海交通大学医学院附属第九人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "头颈肿瘤术后大型缺损的修复重建，如前臂皮瓣、胸大肌皮瓣、股前外侧皮瓣等各种皮瓣的制备，舌、颊、口底颌颈联合根治，腓骨肌皮瓣和髂骨肌皮瓣重建上、下颌骨、小血管吻合、气管切开，以及婴幼儿血管瘤、成人脉管畸形病变等。",
+      "consult_fee_text": 40,
+      "consult_fee_phone": 210,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/37877/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_182_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_182_0.html"
+      ],
+      "source_categories": [
+        "口腔颌面外科"
+      ],
+      "keyword_tags": [
+        "口腔颌面纤维肉瘤",
+        "口腔颌面部血管瘤",
+        "血管瘤",
+        "肿瘤",
+        "口腔颌面部肿瘤"
+      ]
+    },
+    {
+      "doctor_id": "38049",
+      "name": "梁景平",
+      "title": "主任医师",
+      "department": "牙体牙髓科",
+      "hospital": "上海交通大学医学院附属第九人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "教授",
+        "博士",
+        "博导"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "口腔微生物学,牙体牙髓病发病和预防机理，包括龋齿，口腔干燥病，唇炎，口臭，口腔癌，口腔修复删除口腔单纯性疱疹，四环素牙，地图舌干槽症。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/38049/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_179_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_179_0.html"
+      ],
+      "source_categories": [
+        "牙体牙髓科"
+      ],
+      "keyword_tags": [
+        "口臭",
+        "地图舌",
+        "口腔癌",
+        "干槽症",
+        "龋齿",
+        "口腔单纯性疱疹",
+        "唇炎",
+        "四环素牙",
+        "牙髓病",
+        "慢性牙髓炎",
+        "釉质发育不全",
+        "急性牙髓炎",
+        "牙本质过敏症",
+        "牙体病损",
+        "根尖周脓肿"
+      ]
+    },
+    {
+      "doctor_id": "38124",
+      "name": "束蓉",
+      "title": "主任医师",
+      "department": "牙周病科",
+      "hospital": "上海交通大学医学院附属第九人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "教授",
+        "博导"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "中重度牙周炎的序列治疗及多学科治疗，如补牙、牙颌畸形、龋齿、根尖周炎、根管治疗、牙髓炎等疾病。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/38124/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_180_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_180_0.html"
+      ],
+      "source_categories": [
+        "牙周科"
+      ],
+      "keyword_tags": [
+        "牙周炎",
+        "根管治疗",
+        "牙髓炎",
+        "补牙",
+        "牙颌畸形",
+        "龋齿",
+        "根尖周炎",
+        "侵袭性牙周炎",
+        "牙周病",
+        "慢性牙周炎",
+        "急性牙周炎"
+      ]
+    },
+    {
+      "doctor_id": "37923",
+      "name": "何冬梅",
+      "title": "主任医师",
+      "department": "口腔外科",
+      "hospital": "上海交通大学医学院附属第九人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "教授",
+        "博士"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "智齿、多生牙的拔除，以及下颌骨骨折、牙龈癌、舌癌、口腔黏膜病、口腔颌面部囊肿、口腔癌等疾病的诊断与治疗。",
+      "consult_fee_text": null,
+      "consult_fee_phone": 210,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/37923/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_45_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_45_0.html"
+      ],
+      "source_categories": [
+        "口腔科"
+      ],
+      "keyword_tags": [
+        "口腔癌",
+        "多生牙",
+        "口腔颌面部囊肿",
+        "智齿阻生",
+        "牙龈癌",
+        "下颌骨骨折",
+        "口腔黏膜病",
+        "舌癌",
+        "智齿"
+      ]
+    },
+    {
+      "doctor_id": "37994",
+      "name": "江凌勇",
+      "title": "主任医师",
+      "department": "口腔正畸科",
+      "hospital": "上海交通大学医学院附属第九人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "博士",
+        "副教授"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "儿童及青少年牙列不齐，成人复杂疑难病例的综合正畸治疗，牙颌面畸形的正畸治疗、矫形和手术治疗，无托槽/舌侧隐形正畸治疗。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/37994/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_176_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_176_0.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_0_13995.html"
+      ],
+      "source_categories": [
+        "口腔正畸科",
+        "牙齿矫正"
+      ],
+      "keyword_tags": [
+        "牙列不齐",
+        "牙齿外伤",
+        "牙齿缺损",
+        "牙齿美白",
+        "牙齿矫正",
+        "牙齿修复"
+      ]
+    },
+    {
+      "doctor_id": "37999",
+      "name": "刘加强",
+      "title": "主任医师",
+      "department": "口腔颅颌面科",
+      "hospital": "上海交通大学医学院附属第九人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "专业特长为牙齿矫正及颅颌面骨性畸形矫正，如牙颌畸形、口腔修复、急性根尖周炎、牙齿美白、多生牙、牙列不齐、牙体缺损、慢性牙髓炎等。",
+      "consult_fee_text": null,
+      "consult_fee_phone": 310,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/37999/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_176_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_176_0.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_0_13995.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_179_0.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_180_0.html"
+      ],
+      "source_categories": [
+        "口腔正畸科",
+        "牙齿矫正",
+        "牙体牙髓科",
+        "牙周科"
+      ],
+      "keyword_tags": [
+        "牙齿美白",
+        "慢性牙髓炎",
+        "多生牙",
+        "牙齿矫正",
+        "牙颌畸形",
+        "牙列不齐",
+        "急性根尖周炎",
+        "牙体缺损"
+      ]
+    },
+    {
+      "doctor_id": "38009",
+      "name": "吴轶群",
+      "title": "主任医师",
+      "department": "口腔种植科",
+      "hospital": "上海交通大学医学院附属第九人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "教授",
+        "博导"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "牙槽嵴骨量严重不足、颌骨严重缺失、数字化导板、计算机辅助导航系统的种植修复诊疗、颧种植体与骨瓣结合修复修复上颌骨缺损患者的咀嚼功能。",
+      "consult_fee_text": null,
+      "consult_fee_phone": 310,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/38009/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_181_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_181_0.html"
+      ],
+      "source_categories": [
+        "种植科"
+      ],
+      "keyword_tags": [
+        "骨缺损",
+        "口腔颌面部肿瘤",
+        "口腔溃疡",
+        "口腔黏膜病",
+        "口腔癌"
+      ]
+    },
+    {
+      "doctor_id": "38016",
+      "name": "陆尔奕",
+      "title": "主任医师",
+      "department": "口腔科",
+      "hospital": "上海交通大学医学院附属仁济医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "博士",
+        "博导"
+      ],
+      "fudan_rank": "复旦榜A++++",
+      "specialties": "口腔牙体牙列缺失缺损的修复治疗。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/38016/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_1464.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_1464.html"
+      ],
+      "source_categories": [
+        "牙齿种植"
+      ],
+      "keyword_tags": [
+        "牙周病",
+        "牙列不齐",
+        "牙齿外伤",
+        "牙体缺损",
+        "牙齿种植",
+        "牙体病损",
+        "牙颌畸形",
+        "牙齿修复"
+      ]
+    },
+    {
+      "doctor_id": "37550",
+      "name": "朱琦",
+      "title": "主任医师",
+      "department": "口腔颌面头颈肿瘤科",
+      "hospital": "上海交通大学医学院附属第九人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "博士"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "恶性血液病，如淋巴瘤、多发性骨髓瘤、骨髓增生异常综合征、白血病和难治性血细胞减少的诊断和治疗。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/37550/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_182_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_182_0.html"
+      ],
+      "source_categories": [
+        "口腔颌面外科"
+      ],
+      "keyword_tags": [
+        "多发性骨髓瘤",
+        "白血病",
+        "骨髓增生异常综合征",
+        "淋巴瘤",
+        "霍奇金淋巴瘤",
+        "非霍奇金淋巴瘤",
+        "缺铁性贫血",
+        "再生障碍性贫血",
+        "过敏性紫癜"
+      ]
+    },
+    {
+      "doctor_id": "38050",
+      "name": "夏文薇",
+      "title": "主任医师",
+      "department": "牙体牙髓科",
+      "hospital": "上海交通大学医学院附属第九人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "副教授",
+        "博士"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "疑难根管治疗，树脂美容修复，龋齿，口腔干燥病，唇炎，口臭，口腔癌，口腔修复删除口腔单纯性疱疹，四环素牙，地图舌干槽症。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/38050/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_179_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_179_0.html"
+      ],
+      "source_categories": [
+        "牙体牙髓科"
+      ],
+      "keyword_tags": [
+        "唇炎",
+        "四环素牙",
+        "龋齿",
+        "口臭",
+        "地图舌",
+        "口腔癌",
+        "干槽症",
+        "口腔单纯性疱疹",
+        "根管治疗",
+        "牙本质过敏症",
+        "根尖周脓肿",
+        "慢性牙髓炎",
+        "釉质发育不全",
+        "牙髓炎",
+        "急性牙髓炎"
+      ]
+    },
+    {
+      "doctor_id": "38126",
+      "name": "顾晶晶",
+      "title": "主任医师",
+      "department": "牙周病科",
+      "hospital": "上海交通大学医学院附属第九人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "副教授"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "中重度牙周炎的综合治疗，如补牙、牙颌畸形、龋齿、根尖周炎、根管治疗、牙龈病、牙周炎、涎石病等疾病。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/38126/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_180_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_180_0.html"
+      ],
+      "source_categories": [
+        "牙周科"
+      ],
+      "keyword_tags": [
+        "龋齿",
+        "补牙",
+        "牙周炎",
+        "根尖周炎",
+        "根管治疗",
+        "牙颌畸形",
+        "涎石病",
+        "急性根尖周炎",
+        "侵袭性牙周炎",
+        "慢性牙周炎",
+        "牙周病",
+        "牙周脓肿",
+        "牙龈炎",
+        "急性牙周炎"
+      ]
+    },
+    {
+      "doctor_id": "43933",
+      "name": "娄佳宁",
+      "title": "主任医师",
+      "department": "口腔门诊科",
+      "hospital": "上海市第一人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [],
+      "fudan_rank": null,
+      "specialties": "牙齿美容、修复，以及口腔癌、口腔扁平苔藓、牙齿美白、口腔黏膜扁平苔藓、口腔黏膜炎、侵袭性牙周炎、急性牙周炎等。",
+      "consult_fee_text": 110,
+      "consult_fee_phone": 110,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/43933/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_45_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_45_0.html"
+      ],
+      "source_categories": [
+        "口腔科"
+      ],
+      "keyword_tags": [
+        "口腔癌",
+        "侵袭性牙周炎",
+        "口腔扁平苔藓",
+        "牙齿美白",
+        "扁平苔藓",
+        "急性牙周炎"
+      ]
+    },
+    {
+      "doctor_id": "38095",
+      "name": "沈刚",
+      "title": "主任医师",
+      "department": "口腔正畸科",
+      "hospital": "上海交通大学医学院附属第九人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "教授",
+        "博导",
+        "博士"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "各种错合畸形的矫治及成人矫治，尤其是利用下颌前导型功能性矫治器纠正下颌后缩畸形，及利用其自行研制开发的双槽沟矫治系统快速矫治错合畸形。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/38095/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_176_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_176_0.html"
+      ],
+      "source_categories": [
+        "口腔正畸科"
+      ],
+      "keyword_tags": [
+        "下颌后缩",
+        "牙列不齐",
+        "上颌前突",
+        "地包天",
+        "牙颌畸形"
+      ]
+    },
+    {
+      "doctor_id": "38052",
+      "name": "黄正蔚",
+      "title": "主任医师",
+      "department": "牙体牙髓科",
+      "hospital": "上海交通大学医学院附属第九人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "教授",
+        "博导"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "补牙、牙颌畸形、龋齿等疾病的诊治，以及根管治疗、牙齿种植、牙齿矫正、牙齿修复等。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/38052/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_13995.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_13995.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_0_1464.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_179_0.html"
+      ],
+      "source_categories": [
+        "牙齿矫正",
+        "牙齿种植",
+        "牙体牙髓科"
+      ],
+      "keyword_tags": [
+        "牙颌畸形",
+        "补牙",
+        "龋齿",
+        "牙齿修复",
+        "根管治疗",
+        "牙齿矫正",
+        "牙齿种植"
+      ]
+    },
+    {
+      "doctor_id": "38008",
+      "name": "莫嘉骥",
+      "title": "副主任医师",
+      "department": "口腔种植科",
+      "hospital": "上海交通大学医学院附属第九人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "疑难种植病例的诊断与治疗，高端种植系统的治疗与修复，尤其是前牙美学区域即刻种植即刻修复，种植区域骨量不足的GBR、自体骨、上颌窦提升等解决方案，全口缺牙即刻种植即刻负载，口腔种植方案数字化设计与实施。",
+      "consult_fee_text": 210,
+      "consult_fee_phone": 310,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/38008/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_181_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_181_0.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_0_1464.html"
+      ],
+      "source_categories": [
+        "种植科",
+        "牙齿种植"
+      ],
+      "keyword_tags": [
+        "牙列不齐",
+        "牙体缺损",
+        "牙折",
+        "牙槽裂",
+        "牙龈炎",
+        "牙周炎",
+        "智齿冠周炎",
+        "牙周病",
+        "阻生齿",
+        "牙齿外伤",
+        "智齿"
+      ]
+    },
+    {
+      "doctor_id": "38947",
+      "name": "朱聘倬",
+      "title": "主任医师",
+      "department": "口腔科",
+      "hospital": "上海中医药大学附属曙光医院东院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [],
+      "fudan_rank": null,
+      "specialties": "口腔内、外科，尤其口腔修复治疗，可诊治牙周病、牙体病。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/38947/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_1464.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_1464.html"
+      ],
+      "source_categories": [
+        "牙齿种植"
+      ],
+      "keyword_tags": [
+        "牙周病",
+        "牙体病",
+        "牙齿种植",
+        "牙周炎",
+        "牙齿修复",
+        "牙体缺损"
+      ]
+    },
+    {
+      "doctor_id": "37850",
+      "name": "张陈平",
+      "title": "主任医师",
+      "department": "口腔颌面头颈肿瘤科",
+      "hospital": "上海交通大学医学院附属第九人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "博导",
+        "教授"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "口腔颌面-头颈肿瘤的外科治疗，口腔颌面-头颈部缺损的修复与重建，尤其是下颌骨的功能性重建，如舌癌，舌系带过短，造釉细胞瘤，遗传性共济失调。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/37850/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_182_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_182_0.html"
+      ],
+      "source_categories": [
+        "口腔颌面外科"
+      ],
+      "keyword_tags": [
+        "遗传性共济失调",
+        "肿瘤",
+        "舌癌",
+        "舌系带过短",
+        "造釉细胞瘤",
+        "口腔颌面部囊肿",
+        "口腔颌面部损伤",
+        "口腔颌面部血管瘤"
+      ]
+    },
+    {
+      "doctor_id": "38051",
+      "name": "唐子圣",
+      "title": "主任医师",
+      "department": "牙体牙髓科",
+      "hospital": "上海交通大学医学院附属第九人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "博士"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "于显微根管治疗术和显微根尖手术，树脂美容修复，龋齿，口腔干燥病，口臭，口腔癌，口腔修复，口腔单纯性疱疹，四环素牙，地图舌干槽症。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/38051/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_179_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_179_0.html"
+      ],
+      "source_categories": [
+        "牙体牙髓科"
+      ],
+      "keyword_tags": [
+        "口臭",
+        "地图舌",
+        "口腔癌",
+        "干槽症",
+        "龋齿",
+        "口腔单纯性疱疹",
+        "根管治疗",
+        "四环素牙",
+        "慢性牙髓炎",
+        "釉质发育不全",
+        "急性牙髓炎",
+        "牙体病损",
+        "牙体病",
+        "牙本质过敏症",
+        "根尖周脓肿"
+      ]
+    },
+    {
+      "doctor_id": "38127",
+      "name": "宋忠臣",
+      "title": "主任医师",
+      "department": "牙周病科",
+      "hospital": "上海交通大学医学院附属第九人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "博导"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "中重度牙周炎的序列治疗及牙周病的多学科治疗，如补牙、牙颌畸形、龋齿、根尖周炎、根管治疗、牙龈病、牙周炎、涎石病等疾病。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/38127/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_180_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_180_0.html"
+      ],
+      "source_categories": [
+        "牙周科"
+      ],
+      "keyword_tags": [
+        "涎石病",
+        "牙周病",
+        "补牙",
+        "牙颌畸形",
+        "根尖周炎",
+        "龋齿",
+        "根管治疗",
+        "牙周炎",
+        "急性牙周炎",
+        "侵袭性牙周炎",
+        "急性根尖周炎",
+        "慢性牙周炎",
+        "牙周脓肿"
+      ]
+    },
+    {
+      "doctor_id": "31500",
+      "name": "陆群",
+      "title": "主任医师",
+      "department": "口腔科",
+      "hospital": "上海交通大学医学院附属仁济医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [],
+      "fudan_rank": "复旦榜A++++",
+      "specialties": "全口、局部义齿的修复，烤瓷牙修复治疗。如拔牙、牙齿美白、贵金属烤瓷牙、牙齿修复、乳牙滞留、牙周萎缩、口腔糜烂等。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/31500/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_45_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_45_0.html"
+      ],
+      "source_categories": [
+        "口腔科"
+      ],
+      "keyword_tags": [
+        "牙齿修复",
+        "贵金属烤瓷牙",
+        "乳牙滞留",
+        "拔牙",
+        "口腔糜烂",
+        "牙齿美白",
+        "牙周萎缩"
+      ]
+    },
+    {
+      "doctor_id": "38098",
+      "name": "陈振琦",
+      "title": "主任医师",
+      "department": "口腔正畸科",
+      "hospital": "上海交通大学医学院附属第九人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "博士",
+        "教授"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "唇腭裂牙颌畸形的矫治和各类错合畸形的正畸治疗，反合的矫治，牙列拥挤，牙列稀疏，龅牙，牙体病，牙体病损，牙槽裂，牙磨损，牙髓坏死，牙齿修复的治疗。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/38098/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_176_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_176_0.html"
+      ],
+      "source_categories": [
+        "口腔正畸科"
+      ],
+      "keyword_tags": [
+        "牙颌畸形",
+        "牙髓坏死",
+        "牙列稀疏",
+        "牙体病",
+        "牙齿修复",
+        "牙列拥挤",
+        "唇腭裂",
+        "牙体病损",
+        "牙磨损",
+        "牙槽裂"
+      ]
+    },
+    {
+      "doctor_id": "356579",
+      "name": "陆亿",
+      "title": "副主任医师",
+      "department": "口腔科",
+      "hospital": "上海交通大学医学院附属仁济医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [],
+      "fudan_rank": "复旦榜A++++",
+      "specialties": "口腔美容修复、牙齿修复、牙齿美白等。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/356579/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_13995.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_13995.html"
+      ],
+      "source_categories": [
+        "牙齿矫正"
+      ],
+      "keyword_tags": [
+        "牙齿修复",
+        "牙齿美白",
+        "牙齿畸形",
+        "牙齿缺损",
+        "牙齿矫正",
+        "牙齿发黑",
+        "牙齿清洁",
+        "牙齿发黄"
+      ]
+    },
+    {
+      "doctor_id": "38133",
+      "name": "金鸿莱",
+      "title": "副主任医师",
+      "department": "口腔综合科",
+      "hospital": "上海交通大学医学院附属第九人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": 40,
+      "academic_titles": [
+        "教授"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "牙体缺损、牙列缺损、牙列缺失的种植牙修复，微创种植牙技术，即拔即刻种植，复杂病例种植修复，半口、全口种植即刻负重（ALL-on-4/6）等。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/38133/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_45_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_45_0.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_181_0.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_0_1464.html"
+      ],
+      "source_categories": [
+        "口腔科",
+        "种植科",
+        "牙齿种植"
+      ],
+      "keyword_tags": [
+        "牙列不齐",
+        "牙列拥挤",
+        "牙体缺损",
+        "牙体病损",
+        "牙列稀疏"
+      ]
+    },
+    {
+      "doctor_id": "42897",
+      "name": "季振威",
+      "title": "副主任医师",
+      "department": "口腔科",
+      "hospital": "上海市同济医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [],
+      "fudan_rank": null,
+      "specialties": "头颈部肿瘤的切除与组织缺损的修复重建，包括软组织、硬组织缺损的修复与功能的重建；运用OA技术对颌面部创伤的修复与重建；运用显微外科技术取带血管蒂的组织瓣修复颌面部软硬组织缺损。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/42897/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_1464.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_1464.html"
+      ],
+      "source_categories": [
+        "牙齿种植"
+      ],
+      "keyword_tags": [
+        "肿瘤",
+        "创伤",
+        "口腔颌面部损伤",
+        "牙齿种植",
+        "口腔颌面部肿瘤",
+        "口腔颌面部毛细管型淋巴管瘤",
+        "口腔颌面纤维肉瘤",
+        "口腔颌面部血管瘤",
+        "颌面部大出血",
+        "口腔颌面部囊肿",
+        "口腔颌面部间隙感染"
+      ]
+    },
+    {
+      "doctor_id": "37851",
+      "name": "范新东",
+      "title": "主任医师",
+      "department": "口腔颌面头颈肿瘤科",
+      "hospital": "上海交通大学医学院附属第九人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "教授",
+        "博导"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "治疗血管瘤、血管畸形等疾病，如颌面部血管瘤、先天性血管瘤以及其他罕见血管瘤的诊断与治疗，颌面部、躯体及四肢动静脉畸形、静脉畸形、淋巴管畸形、相关综合征的诊断与治疗，还擅长介入栓塞治疗、介入硬化治疗、激光治疗、局部切除手术等治疗手段。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/37851/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_182_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_182_0.html"
+      ],
+      "source_categories": [
+        "口腔颌面外科"
+      ],
+      "keyword_tags": [
+        "先天性血管瘤",
+        "血管瘤",
+        "淋巴管畸形",
+        "血管畸形",
+        "海绵状血管瘤",
+        "脑静脉性血管畸形",
+        "脑血管畸形",
+        "颅内动静脉畸形",
+        "口腔颌面部肿瘤",
+        "脑动静脉畸形"
+      ]
+    },
+    {
+      "doctor_id": "38132",
+      "name": "王海宁",
+      "title": "主任医师",
+      "department": "口腔综合科",
+      "hospital": "上海交通大学医学院附属第九人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "全科口腔医学，口腔外科方面，如牙髓病、牙周炎、龋齿、牙周病、根尖周病、牙折、牙列不齐、删慢性牙周炎的治疗。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/38132/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_176_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_176_0.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_179_0.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_180_0.html"
+      ],
+      "source_categories": [
+        "口腔正畸科",
+        "牙体牙髓科",
+        "牙周科"
+      ],
+      "keyword_tags": [
+        "龋齿",
+        "牙髓病",
+        "牙周炎",
+        "牙列不齐",
+        "牙周病",
+        "慢性牙周炎",
+        "牙折",
+        "根尖周病"
+      ]
+    },
+    {
+      "doctor_id": "358792",
+      "name": "谢玉峰",
+      "title": "主任医师",
+      "department": "牙周病科",
+      "hospital": "上海交通大学医学院附属第九人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "博士"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "中重度牙周炎的多学科序列治疗，包括牙周与正畸，修复，牙体牙髓等多学科联合诊疗，针对牙周组织缺损实施了各项引导组织再生术（GTR），引导骨再生术（GBR），牙周软组织增量重建手术等。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/358792/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_180_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_180_0.html"
+      ],
+      "source_categories": [
+        "牙周科"
+      ],
+      "keyword_tags": [
+        "牙周炎",
+        "牙周病",
+        "侵袭性牙周炎",
+        "慢性牙周炎",
+        "牙周脓肿",
+        "急性牙周炎"
+      ]
+    },
+    {
+      "doctor_id": "32033",
+      "name": "黄远亮",
+      "title": "主任医师",
+      "department": "口腔科",
+      "hospital": "上海市东方医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "教授",
+        "博导",
+        "博士"
+      ],
+      "fudan_rank": null,
+      "specialties": "口腔、颅颌种植修复学，口腔颌面疾病，牙种植，牙体疾病以及牙周疾病等的治疗。",
+      "consult_fee_text": null,
+      "consult_fee_phone": 210,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/32033/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_45_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_45_0.html"
+      ],
+      "source_categories": [
+        "口腔科"
+      ],
+      "keyword_tags": [
+        "口腔颌面部肿瘤",
+        "口腔颌面部囊肿",
+        "牙体病损",
+        "牙周炎",
+        "口腔颌面部损伤",
+        "牙周病",
+        "口腔颌面部间隙感染",
+        "牙体病",
+        "牙体缺损"
+      ]
+    },
+    {
+      "doctor_id": "38101",
+      "name": "潘晓岗",
+      "title": "主任医师",
+      "department": "口腔正畸科",
+      "hospital": "上海交通大学医学院附属第九人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "博士"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "牙列不齐无托槽隐形矫治，儿童及青少年的颌面畸形，牙列拥挤，牙列稀疏，龅牙，牙体病，牙体病损，牙槽裂，牙磨损，牙髓坏死的早期正畸干预及功能矫形治疗。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/38101/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_176_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_176_0.html"
+      ],
+      "source_categories": [
+        "口腔正畸科"
+      ],
+      "keyword_tags": [
+        "牙磨损",
+        "牙体病损",
+        "牙髓坏死",
+        "牙槽裂",
+        "牙列不齐",
+        "牙列稀疏",
+        "牙体病",
+        "牙列拥挤",
+        "牙颌畸形",
+        "上颌前突"
+      ]
+    },
+    {
+      "doctor_id": "393154",
+      "name": "陈金东",
+      "title": "副主任医师",
+      "department": "口腔颌面外科",
+      "hospital": "上海交通大学医学院附属上海儿童医学中心",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [],
+      "fudan_rank": "复旦榜A",
+      "specialties": "正畸多学科联合治疗，特别在正畸正颌联合治疗，唇腭裂综合序列治疗，埋伏牙牵引，正畸牙周联合治疗，青少年的功能矫治和矫形治疗以及骨性畸形的掩饰性治疗等疑难病例的诊治有较深的造诣。从事正畸治疗(包括成人)，现已完成近3000例各个年龄段的正畸治疗，其中包括300-500例早期矫治，1300多例青少年矫治，以及900多例成人矫治。熟练掌握固定矫治技术及隐形矫治技术。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/393154/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_13995.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_13995.html"
+      ],
+      "source_categories": [
+        "牙齿矫正"
+      ],
+      "keyword_tags": [
+        "上颌前突",
+        "牙周病",
+        "下颌后缩",
+        "错颌畸形",
+        "牙列不齐",
+        "牙颌畸形",
+        "隐形矫正",
+        "上下颚手术/突嘴矫正",
+        "金属托槽矫正",
+        "牙齿矫正",
+        "唇腭裂",
+        "颌面正畸",
+        "唇腭裂手术",
+        "舌侧矫正"
+      ]
+    },
+    {
+      "doctor_id": "45077",
+      "name": "朱磊",
+      "title": "副主任医师",
+      "department": "口腔科",
+      "hospital": "上海市第十人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [],
+      "fudan_rank": null,
+      "specialties": "中重度牙周炎序列治疗，缺失牙种植修复。大面积龋损修复，复杂疑难根管治疗，根管再治疗。拔牙，微创智齿拔除，口腔外科小手术，如根尖外科手术，系带修整术、牙龈瘤切除术等；残根、残冠的保存治疗，各种牙体缺损修复包括嵌体、树脂充填及全冠修复；于全瓷牙美学修复方面及口腔全科治疗方面具有丰富的临床经验。",
+      "consult_fee_text": 50,
+      "consult_fee_phone": 190,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/45077/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_45_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_45_0.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_176_0.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_181_0.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_0_1464.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_179_0.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_180_0.html"
+      ],
+      "source_categories": [
+        "口腔科",
+        "口腔正畸科",
+        "种植科",
+        "牙齿种植",
+        "牙体牙髓科",
+        "牙周科"
+      ],
+      "keyword_tags": [
+        "根管治疗",
+        "全瓷牙",
+        "牙龈瘤",
+        "拔牙",
+        "智齿",
+        "牙周病",
+        "牙体病损",
+        "单纯性牙周炎",
+        "牙痛",
+        "牙体病",
+        "急性牙周炎",
+        "复合性牙周炎",
+        "龋齿",
+        "牙龈炎",
+        "慢性牙周炎"
+      ]
+    },
+    {
+      "doctor_id": "37853",
+      "name": "郑家伟",
+      "title": "主任医师",
+      "department": "口腔颌面头颈肿瘤科",
+      "hospital": "上海交通大学医学院附属第九人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "博导",
+        "教授"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "头颈部血管瘤与脉管畸形的诊断与综合治疗，如静脉畸形、淋巴管畸形、毛细血管畸形、动静脉畸形、血管瘤、脉管畸形综合征、化脓性肉芽肿、颌面部囊肿。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/37853/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_182_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_182_0.html"
+      ],
+      "source_categories": [
+        "口腔颌面外科"
+      ],
+      "keyword_tags": [
+        "颈部血管瘤",
+        "囊肿",
+        "淋巴管畸形",
+        "血管畸形",
+        "血管瘤",
+        "化脓性肉芽肿",
+        "口腔颌面部囊肿",
+        "口腔颌面部血管瘤"
+      ]
+    },
+    {
+      "doctor_id": "358790",
+      "name": "顾申生",
+      "title": "主任医师",
+      "department": "牙体牙髓科",
+      "hospital": "上海交通大学医学院附属第九人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "牙体，牙髓及根尖周病诊治，尤其擅长难治性根尖周炎的诊治，显微根管治疗与微创根尖手术，还擅长牙颌畸形，牙痛，龋齿，牙周炎，牙髓炎，牙周病，牙体病，阻生齿，鹅口疮，口腔干燥病，唇炎的诊治。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/358790/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_179_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_179_0.html"
+      ],
+      "source_categories": [
+        "牙体牙髓科"
+      ],
+      "keyword_tags": [
+        "牙痛",
+        "牙周病",
+        "唇炎",
+        "根尖周病",
+        "龋齿",
+        "牙体病",
+        "根尖周炎",
+        "牙周炎",
+        "阻生齿",
+        "根管治疗",
+        "牙颌畸形",
+        "牙髓炎",
+        "鹅口疮",
+        "慢性牙髓炎",
+        "釉质发育不全"
+      ]
+    },
+    {
+      "doctor_id": "38059",
+      "name": "潘益华",
+      "title": "副主任医师",
+      "department": "牙体牙髓科",
+      "hospital": "上海交通大学医学院附属第九人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": 40,
+      "academic_titles": [
+        "副教授"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "牙髓炎、龋齿、牙髓病、急性牙髓炎、根尖周炎、氟斑牙、牙体牙髓病、牙痛、四环素牙等。牙齿缺失的冠、桥修复。牙体牙髓病疑难病症治疗、弯曲细小根管处理及超声波根管异物处理、残根残冠保留，及前牙的美容修复等口腔综合治疗。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/38059/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_45_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_45_0.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_179_0.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_180_0.html"
+      ],
+      "source_categories": [
+        "口腔科",
+        "牙体牙髓科",
+        "牙周科"
+      ],
+      "keyword_tags": [
+        "牙髓炎",
+        "四环素牙",
+        "牙髓病",
+        "牙痛",
+        "根尖周炎",
+        "龋齿",
+        "氟斑牙",
+        "急性牙髓炎",
+        "牙本质过敏症",
+        "牙体病损",
+        "根尖周脓肿",
+        "慢性牙髓炎"
+      ]
+    },
+    {
+      "doctor_id": "34265",
+      "name": "余优成",
+      "title": "主任医师",
+      "department": "口腔科",
+      "hospital": "复旦大学附属中山医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [],
+      "fudan_rank": "复旦榜A++++",
+      "specialties": "牙种植、即刻种植即刻修复、上颌窦外提升等种植手术，以及复杂牙拔除，牙体缺损冠修复等。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/34265/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_45_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_45_0.html"
+      ],
+      "source_categories": [
+        "口腔科"
+      ],
+      "keyword_tags": [
+        "牙体缺损",
+        "牙痛",
+        "拔牙",
+        "牙齿美白",
+        "补牙"
+      ]
+    },
+    {
+      "doctor_id": "38104",
+      "name": "唐国华",
+      "title": "主任医师",
+      "department": "口腔正畸科",
+      "hospital": "上海交通大学医学院附属第九人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "博导"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "颌骨生长改良，个体化正畸治疗，青少年骨性错合的正畸治疗，成人矫治，舌侧矫治和隐形矫治，牙列不齐，牙列拥挤，牙列稀疏，龅牙，牙体病，牙体病损，牙槽裂，牙磨损，牙髓坏死的早期正畸干预及功能矫形治疗。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/38104/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_176_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_176_0.html"
+      ],
+      "source_categories": [
+        "口腔正畸科"
+      ],
+      "keyword_tags": [
+        "牙体病",
+        "牙列拥挤",
+        "牙磨损",
+        "牙体病损",
+        "牙髓坏死",
+        "牙槽裂",
+        "牙列不齐",
+        "牙列稀疏",
+        "上颌前突",
+        "反颌",
+        "牙颌畸形"
+      ]
+    },
+    {
+      "doctor_id": "407152",
+      "name": "邹多宏",
+      "title": "副主任医师",
+      "department": "口腔外科",
+      "hospital": "上海交通大学医学院附属第九人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "教授",
+        "博导",
+        "博士"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "牙种植及颌骨骨增量工作，包括单颗牙种植，多颗牙种植，全口即刻种植即刻修复，TPP种植，颧骨种植，GBR骨增量，Only植骨及上颌窦内外提升手术等复杂种植相关手术。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/407152/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_13995.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_13995.html",
+        "https://m.youlai.cn/doctorrecommendlist_2_181_0.html"
+      ],
+      "source_categories": [
+        "牙齿矫正",
+        "种植科"
+      ],
+      "keyword_tags": [
+        "牙齿缺损",
+        "牙齿畸形",
+        "牙齿松动",
+        "牙齿外伤",
+        "牙齿矫正",
+        "牙齿修复"
+      ]
+    },
+    {
+      "doctor_id": "38010",
+      "name": "王凤",
+      "title": "副主任医师",
+      "department": "口腔种植科",
+      "hospital": "上海交通大学医学院附属第九人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "博士"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "种植牙及修复、骨量不足种植、种植美学修复、全口种植修复重建、多学科联合种植修复重建、牙源性肿瘤、釉质发育不全、灼口综合征等。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/38010/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_181_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_181_0.html"
+      ],
+      "source_categories": [
+        "种植科"
+      ],
+      "keyword_tags": [
+        "釉质发育不全",
+        "灼口综合征",
+        "牙源性肿瘤",
+        "牙齿外伤",
+        "牙齿修复",
+        "牙齿缺损"
+      ]
+    },
+    {
+      "doctor_id": "37854",
+      "name": "周国瑜",
+      "title": "主任医师",
+      "department": "口腔颌面头颈肿瘤科",
+      "hospital": "上海交通大学医学院附属第九人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "教授",
+        "博导",
+        "博士"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "各种激光和冷冻治疗，如氪激光光动力治疗鲜红斑痣，手术翻瓣激光治疗静脉畸形，激光治疗血管瘤，激光治疗黄褐斑等。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/37854/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_182_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_182_0.html"
+      ],
+      "source_categories": [
+        "口腔颌面外科"
+      ],
+      "keyword_tags": [
+        "鲜红斑痣",
+        "黄褐斑",
+        "血管瘤",
+        "口腔颌面部血管瘤"
+      ]
+    },
+    {
+      "doctor_id": "38053",
+      "name": "孙喆",
+      "title": "副主任医师",
+      "department": "牙体牙髓科",
+      "hospital": "上海交通大学医学院附属第九人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "副教授"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "各类牙体牙髓根尖周疾病的诊治，疑难根管治疗，树脂美容修复，如补牙，牙颌畸形，龋齿,根尖周炎，牙体缺损，牙列缺损，牙列缺失，颌面缺损，牙周病等。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/38053/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_179_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_179_0.html"
+      ],
+      "source_categories": [
+        "牙体牙髓科"
+      ],
+      "keyword_tags": [
+        "牙颌畸形",
+        "龋齿",
+        "根尖周炎",
+        "补牙",
+        "根管治疗",
+        "牙体缺损",
+        "牙周病",
+        "牙体病",
+        "牙髓病",
+        "急性牙髓炎",
+        "牙体病损",
+        "牙髓炎",
+        "根尖周脓肿",
+        "牙本质过敏症",
+        "慢性牙髓炎"
+      ]
+    },
+    {
+      "doctor_id": "38125",
+      "name": "尹元正",
+      "title": "副主任医师",
+      "department": "牙周病科",
+      "hospital": "上海交通大学医学院附属第九人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "博士"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "中重度牙周病的综合治疗，如补牙、牙颌畸形、龋齿、根尖周炎、根管治疗、牙周炎等疾病。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/38125/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_180_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_180_0.html"
+      ],
+      "source_categories": [
+        "牙周科"
+      ],
+      "keyword_tags": [
+        "牙周病",
+        "根管治疗",
+        "牙颌畸形",
+        "龋齿",
+        "补牙",
+        "牙周炎",
+        "根尖周炎",
+        "牙周脓肿",
+        "牙龈炎",
+        "牙龈萎缩",
+        "急性牙周炎",
+        "急性根尖周炎",
+        "侵袭性牙周炎",
+        "慢性牙周炎"
+      ]
+    },
+    {
+      "doctor_id": "34271",
+      "name": "毕玮",
+      "title": "主任医师",
+      "department": "口腔科",
+      "hospital": "复旦大学附属中山医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [],
+      "fudan_rank": "复旦榜A++++",
+      "specialties": "各种类型的牙列缺损和缺失修复，包括各类美学修复、种植修复、固定修复、全口和可摘活动义齿的修复、咬颌重建等复杂修复治疗。以及口腔常见黏膜病的诊治。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/34271/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_45_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_45_0.html"
+      ],
+      "source_categories": [
+        "口腔科"
+      ],
+      "keyword_tags": [
+        "牙齿修复",
+        "口腔黏膜病",
+        "多生牙",
+        "四环素牙",
+        "慢性根尖牙周炎",
+        "拔牙"
+      ]
+    },
+    {
+      "doctor_id": "38105",
+      "name": "钱玉芬",
+      "title": "主任医师",
+      "department": "口腔正畸科",
+      "hospital": "上海交通大学医学院附属第九人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "研究生导师"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "各类错合畸形矫正，唇腭裂治疗，各种固定矫正技术和隐形矫正，儿童及青少年轻力矫治，成人美观矫治，牙周健康，牙列不齐，牙列拥挤，牙列稀疏，龅牙，牙体病，牙体病损，牙槽裂，牙磨损，牙髓坏死的早期正畸干预及功能矫形治疗。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/38105/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_176_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_176_0.html"
+      ],
+      "source_categories": [
+        "口腔正畸科"
+      ],
+      "keyword_tags": [
+        "唇腭裂",
+        "牙列拥挤",
+        "牙磨损",
+        "牙体病损",
+        "隐形矫正",
+        "牙髓坏死",
+        "牙槽裂",
+        "牙体病",
+        "牙列不齐",
+        "牙列稀疏",
+        "上颌前突",
+        "牙颌畸形"
+      ]
+    },
+    {
+      "doctor_id": "769113",
+      "name": "王少海",
+      "title": "副主任医师",
+      "department": "口腔科",
+      "hospital": "上海市东方医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "副教授",
+        "博导"
+      ],
+      "fudan_rank": null,
+      "specialties": "各类全瓷牙修复，活动义齿、美学义齿修复技术，种植义齿修复技术等。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/769113/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_0_13995.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_0_13995.html"
+      ],
+      "source_categories": [
+        "牙齿矫正"
+      ],
+      "keyword_tags": [
+        "牙体缺损",
+        "牙齿矫正",
+        "牙体病",
+        "牙齿治疗",
+        "牙齿修复"
+      ]
+    },
+    {
+      "doctor_id": "38012",
+      "name": "黄伟",
+      "title": "副主任医师",
+      "department": "口腔种植科",
+      "hospital": "上海交通大学医学院附属第九人民医院",
+      "hospital_level": "三甲",
+      "registration_fee": null,
+      "academic_titles": [
+        "副教授"
+      ],
+      "fudan_rank": "复旦榜A+++",
+      "specialties": "各类牙缺失种植修复，尤其在即刻种植及颌骨重建的种植，包括慢性牙周炎，牙体缺损，牙周脓肿，慢性牙髓炎，上颌前突。",
+      "consult_fee_text": null,
+      "consult_fee_phone": null,
+      "doctor_url": "https://m.youlai.cn/yyk/docindex/38012/",
+      "source_url": "https://m.youlai.cn/doctorrecommendlist_2_181_0.html",
+      "source_urls": [
+        "https://m.youlai.cn/doctorrecommendlist_2_181_0.html"
+      ],
+      "source_categories": [
+        "种植科"
+      ],
+      "keyword_tags": [
+        "牙体缺损",
+        "牙周脓肿",
+        "慢性牙髓炎",
+        "慢性牙周炎",
+        "上颌前突"
+      ]
+    }
+  ]
+}

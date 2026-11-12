@@ -886,6 +886,47 @@
         background: #f5fbf8;
       }
 
+      .analysis-step[data-state="error"] {
+        border-color: #d98880;
+        background: #fdf3f1;
+      }
+
+      .analysis-step[data-state="error"] .step-icon {
+        background: #c0392b;
+        color: #fff;
+      }
+
+      .analysis-step[data-state="error"] .step-status {
+        color: #c0392b;
+        font-weight: 700;
+      }
+
+      #progress-section[data-state="error"] .progress-fill {
+        background: #c0392b;
+      }
+
+      .analysis-retry-btn {
+        margin-top: 14px;
+        width: 100%;
+        padding: 12px 18px;
+        border: none;
+        border-radius: 10px;
+        background: #c0392b;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: background-color 160ms ease;
+      }
+
+      .analysis-retry-btn:hover {
+        background: #a93226;
+      }
+
+      .analysis-retry-btn[hidden] {
+        display: none;
+      }
+
       .step-icon {
         width: 28px;
         height: 28px;
@@ -2692,6 +2733,8 @@
                 </div>
                 <p class="progress-status" id="analysis-note" aria-live="polite">等待文件上传完成</p>
 
+                <button type="button" id="analysis-retry" class="analysis-retry-btn" hidden>重新开始 AI 分析</button>
+
                 <ol class="analysis-steps" id="analysis-steps">
                   <li class="analysis-step" data-step="0" data-state="default">
                     <span class="step-icon" aria-hidden="true">1</span>
@@ -3187,6 +3230,7 @@
           analysisFill: document.getElementById("analysis-fill"),
           analysisPercent: document.getElementById("analysis-percent"),
           analysisNote: document.getElementById("analysis-note"),
+          analysisRetry: document.getElementById("analysis-retry"),
           steps: Array.from(document.querySelectorAll(".analysis-step")),
           previewSection: document.getElementById("preview-section"),
           lockedModule: document.getElementById("locked-module"),
@@ -3520,6 +3564,10 @@
             step.dataset.state = "complete";
             icon.innerHTML = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
             status.textContent = "完成";
+          } else if (state === "error") {
+            step.dataset.state = "error";
+            icon.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>';
+            status.textContent = "失败";
           } else {
             step.dataset.state = "default";
             icon.textContent = String(index + 1);
@@ -3740,6 +3788,7 @@
           applyPreview(result.preview || result.report_preview || result.free_preview || {});
           if (!isPaid) renderPayPalButtons();
           elements.reportDate.textContent = formatReportDate(result.completed_at || result.created_at) || new Date().toLocaleString("zh-CN", { hour12: false });
+          if (elements.analysisRetry) elements.analysisRetry.hidden = true;
           isProcessing = false;
           elements.startButtonText.textContent = "重新分析";
           updateActionState();
@@ -3752,14 +3801,34 @@
           }
         }
 
+        const API_ERROR_TEXT_MAP = [
+          ["AI analysis failed. Please try again later.", "AI 分析失败，请稍后重试"],
+          ["not available for a new analysis", "该文件已完成过一次分析，请重新选择文件后再试"],
+          ["File ID not found", "上传文件已过期，请重新选择文件后再试"],
+          ["could not be delivered", "邮件暂时无法送达，请稍后重试"],
+        ];
+
+        function mapApiError(message) {
+          const text = String(message || "");
+          for (const entry of API_ERROR_TEXT_MAP) {
+            if (text.indexOf(entry[0]) !== -1) return entry[1];
+          }
+          return text;
+        }
+
         function failAnalysis(error) {
           clearTask();
-          elements.analysisNote.textContent = "分析失败：" + error.message;
+          const friendly = mapApiError(error && error.message);
+          elements.analysisNote.textContent = "分析失败：" + friendly;
           elements.progressSection.dataset.state = "error";
           elements.progressPill.textContent = "失败";
+          elements.steps.forEach((step, index) => {
+            if (step.dataset.state === "loading") setStepState(index, "error");
+          });
+          if (elements.analysisRetry) elements.analysisRetry.hidden = false;
           isProcessing = false;
           elements.startButtonText.textContent = "重新分析";
-          showFileError("AI 分析失败：" + error.message + "，请重试");
+          showFileError("AI 分析失败：" + friendly + "，可点击进度卡片中的红色按钮重试");
           updateActionState();
         }
 
@@ -3781,6 +3850,7 @@
           clearTask();
           isProcessing = true;
           showFileError("");
+          if (elements.analysisRetry) elements.analysisRetry.hidden = true;
           elements.progressSection.hidden = false;
           elements.progressSection.dataset.state = "loading";
           elements.startButtonText.textContent = "分析进行中";
@@ -4749,6 +4819,9 @@
         });
 
         elements.startButton.addEventListener("click", startAnalysis);
+        if (elements.analysisRetry) {
+          elements.analysisRetry.addEventListener("click", startAnalysis);
+        }
         elements.printButton.addEventListener("click", () => window.print());
         elements.agreeConsent.addEventListener("click", agreeToConsent);
         elements.declineConsent.addEventListener("click", declineToConsent);

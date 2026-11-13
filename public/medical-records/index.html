@@ -2311,12 +2311,6 @@
     .voice-btn.recording { background: #e23d3d; border-color: #e23d3d; color: #fff; animation: ccPulse 1.2s infinite; }
     @keyframes ccPulse { 0%,100% { opacity: 1; } 50% { opacity: .55; } }
     </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-    <script>
-      if (window.pdfjsLib) {
-        pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
-      }
-    </script>
   </head>
   <body data-page-id="medical-records-upload" data-entry="true">
     <a class="skip-link" href="#main-content">跳转到主要内容</a>
@@ -2369,7 +2363,7 @@
           </div>
           <h1 id="hero-title">上传病历，让 MediMatch 为您匹配最合适的专科医生</h1>
           <p class="hero-subtitle">
-            支持图片、PDF、压缩包上传，病历越完整，推荐越精准。病历页数越多，分析时间越长（几页短病历约1分钟，数十页长病历约需5-10分钟），请耐心等待
+            支持图片、PDF、压缩包上传，病历越完整，推荐越精准
           </p>
           <ul class="trust-list" aria-label="隐私与安全保障">
             <li>
@@ -3279,7 +3273,6 @@
         };
 
         let selectedFiles = [];
-        let currentTotalPages = 0;
         let isProcessing = false;
         let isPaid = false;
         let consentGranted = false;
@@ -3587,7 +3580,10 @@
         }
 
         // API 配置与状态。会话只通过同源 HttpOnly Cookie 携带，不在 JS 中保存令牌。
-        const API_BASE = window.location.origin + '/api/phase3';
+        // 规范化到主域 www：无 www 的 apex 会 308 重定向到 www，该 308 响应无 CORS 头，
+        // 浏览器对「POST+文件+跨源重定向」直接报 Failed to fetch，导致上传失败。
+        const API_ORIGIN = window.location.origin.replace(/^https:\/\/shanghaimedhealth\.com$/i, 'https://www.shanghaimedhealth.com');
+        const API_BASE = API_ORIGIN + '/api/phase3';
         let uploadedFileIds = [];
         let currentTaskId = null;
         let currentReportId = null;
@@ -3649,18 +3645,40 @@
           setProgress("upload", 30);
 
           try {
-            const response = await fetch(API_BASE + '/upload', {
-              method: 'POST',
-              body: formData,
-            });
+            // 上传自动重试：Failed to fetch 属网络层中断（多为到境外服务连接不稳定），
+            // 自动重试可越过偶发重置；多次仍失败则给出可操作的中文诊断。
+            let response = null;
+            const maxAttempts = 3;
+            for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+              try {
+                if (attempt > 1) {
+                  elements.uploadStatus.textContent = "网络不稳定，正在自动重试（第 " + attempt + "/" + maxAttempts + " 次）…";
+                  await new Promise((resolve) => setTimeout(resolve, 1500 * attempt));
+                  if (generation !== analysisGeneration) return;
+                }
+                response = await fetch(API_BASE + '/upload', {
+                  method: 'POST',
+                  body: formData,
+                });
+                break;
+              } catch (networkError) {
+                if (generation !== analysisGeneration) return;
+                if (attempt === maxAttempts) {
+                  throw new Error("网络连接中断（已自动重试 " + maxAttempts + " 次）。文件未能传到服务器，多为当前网络到境外服务连接不稳定，请切换网络或开启代理后重试。");
+                }
+              }
+            }
             if (generation !== analysisGeneration) return;
+            if (!response) {
+              throw new Error("网络连接中断，文件未能上传。请切换网络或开启代理后重试。");
+            }
 
             setProgress("upload", 80);
 
             if (!response.ok) {
               const error = await response.json().catch(() => ({}));
               if (generation !== analysisGeneration) return;
-              throw new Error(error.detail || '上传失败，请重试');
+              throw new Error(error.detail || ('上传失败（HTTP ' + response.status + '），请重试'));
             }
 
             const result = await response.json();
@@ -3682,37 +3700,12 @@
           }
         }
 
-        async function countFilePages(file) {
-          if (!/\.pdf$/i.test(file.name || "")) return 1;
-          if (!window.pdfjsLib) return 1;
-          try {
-            const buf = await file.arrayBuffer();
-            const pdf = await window.pdfjsLib.getDocument({ data: buf }).promise;
-            return pdf.numPages || 1;
-          } catch (e) { return 1; }
-        }
-
-        async function computeTotalPages() {
-          let total = 0;
-          for (const item of selectedFiles) {
-            try { total += await countFilePages(item.file); } catch (e) { total += 1; }
-          }
-          currentTotalPages = Math.max(1, total);
-          return currentTotalPages;
-        }
-
-        function estimateSeconds(pages) {
-          const p = Math.max(1, pages || 1);
-          return Math.min(1500, 45 + p * 6);
-        }
-
         function saveTask(taskId) {
           try {
             window.localStorage.setItem(TASK_KEY, JSON.stringify({
               taskId: taskId,
               startedAt: Date.now(),
               fileCount: selectedFiles ? selectedFiles.length : 1,
-              totalPages: currentTotalPages || (selectedFiles ? selectedFiles.length : 1),
             }));
           } catch (e) { /* storage unavailable */ }
         }
@@ -3899,9 +3892,6 @@
           });
 
           try {
-            await computeTotalPages();
-          } catch (e) { /* 页数读取失败按文件数预估 */ }
-          try {
             await uploadFiles(generation);
           } catch (e) {
             if (generation !== analysisGeneration) return;
@@ -3914,9 +3904,7 @@
 
           if (generation !== analysisGeneration) return;
           setStepState(0, "active");
-          const totalPages0 = currentTotalPages || (selectedFiles ? selectedFiles.length : 1);
-          const estMin0 = Math.max(1, Math.round(estimateSeconds(totalPages0) / 60));
-          elements.analysisNote.textContent = "共 " + totalPages0 + " 页病历，预计约 " + estMin0 + " 分钟（病历越多越久），正在进行 AI 分析，请耐心等待…";
+          elements.analysisNote.textContent = "正在进行 AI 分析，请耐心等待…";
           setProgress("analysis", 10);
 
           try {
@@ -4009,8 +3997,7 @@
           const task = loadTask();
           const startedAt = (task && task.startedAt) || Date.now();
           const fileCount = (task && task.fileCount) || (selectedFiles ? selectedFiles.length : 1) || 1;
-          const totalPages = (task && task.totalPages) || currentTotalPages || fileCount;
-          const estimatedTotal = estimateSeconds(totalPages);
+          const estimatedTotal = Math.min(600, 90 + fileCount * 25);
           for (let attempt = 1; attempt <= maxAttempts; attempt++) {
             if (generation !== analysisGeneration) throw new Error('stale analysis view');
             await wait(10000);
@@ -4056,11 +4043,10 @@
             let stage = "正在识别病历文件…";
             if (ratio >= 0.66) { stage = "正在生成分析报告…"; }
             else if (ratio >= 0.33) { stage = "AI 正在分析病情、匹配专科…"; }
-            const pageInfo = "共 " + totalPages + " 页病历 · ";
             if (remaining > 30) {
-              elements.analysisNote.textContent = pageInfo + stage + "（已进行 " + elapsedMin + " 分钟，预计还需约 " + remainingMin + " 分钟）";
+              elements.analysisNote.textContent = stage + "（已进行 " + elapsedMin + " 分钟，预计还需约 " + remainingMin + " 分钟）";
             } else {
-              elements.analysisNote.textContent = pageInfo + stage + "（已进行 " + elapsedMin + " 分钟，即将完成，请稍候）";
+              elements.analysisNote.textContent = stage + "（已进行 " + elapsedMin + " 分钟，即将完成，请稍候）";
             }
           }
           throw new Error('分析时间较长，请稍后在“我的报告”中重新打开');

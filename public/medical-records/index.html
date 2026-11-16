@@ -656,6 +656,23 @@
         color: #226749;
       }
 
+      .alert-info {
+        border: 1px solid #cfe2ea;
+        background: #f3fafc;
+        color: #315d6b;
+      }
+
+      .alert-info svg {
+        flex: 0 0 auto;
+      }
+
+      .pdf-image-notice-en {
+        display: block;
+        margin-top: 6px;
+        font-size: 12px;
+        line-height: 1.55;
+      }
+
       .file-panel {
         margin-top: 20px;
         overflow: hidden;
@@ -2479,6 +2496,17 @@
                 <span id="file-error-text"></span>
               </div>
 
+              <div class="alert alert-info" id="pdf-image-notice" hidden role="status" aria-live="polite">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" />
+                  <path d="M12 11v6M12 7h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+                <div>
+                  <span lang="zh-CN">CT/MRI 影像照片无需上传，请上传文字报告，我们解读的是报告文字。PDF 中混入的纯影像页会自动跳过，不影响其他文字页分析。</span>
+                  <span class="pdf-image-notice-en" lang="en">You do not need to upload CT/MRI images. Please upload the written report; MediMatch reads the report text. Image-only pages in a PDF are skipped automatically and do not block analysis of the other text pages.</span>
+                </div>
+              </div>
+
               <div class="file-panel" id="file-panel" hidden>
                 <div class="file-panel-header">
                   <span class="file-count" id="file-count">已选择 0 个文件</span>
@@ -2891,7 +2919,7 @@
                   <ul class="unlock-features">
                     <li>6 个完整章节</li>
                     <li>3 位医生匹配</li>
-                    <li>可打印报告</li>
+                    <li>正式 PDF 报告下载</li>
                   </ul>
                   <div id="paypal-button-container" class="paypal-button-container" hidden></div>
                   <span class="payment-note">安全支付 · 支付后立即解锁完整报告</span>
@@ -2921,15 +2949,17 @@
                   class="btn btn-secondary btn-small"
                   id="print-report"
                   type="button"
-                  data-anchor-id="medical-records-upload.print-report"
+                  data-anchor-id="medical-records-upload.download-report"
                 >
                   <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <path d="M7 8V3h10v5M7 17H5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M7 14h10v7H7v-7Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+                    <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 15v5h14v-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
-                  下载 / 打印报告
+                  <span id="print-report-label">下载 PDF 报告</span>
                 </button>
               </div>
             </div>
+
+            <div class="alert alert-error" id="report-download-feedback" hidden role="alert"></div>
 
             <div class="report-demo-note" role="note">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -3234,6 +3264,7 @@
           clearFiles: document.getElementById("clear-files"),
           fileError: document.getElementById("file-error"),
           fileErrorText: document.getElementById("file-error-text"),
+          pdfImageNotice: document.getElementById("pdf-image-notice"),
           startButton: document.getElementById("start-analysis"),
           startButtonText: document.getElementById("start-analysis-text"),
           progressSection: document.getElementById("progress-section"),
@@ -3253,6 +3284,8 @@
           paymentStatus: document.getElementById("payment-status"),
           fullReport: document.getElementById("full-report"),
           printButton: document.getElementById("print-report"),
+          printButtonLabel: document.getElementById("print-report-label"),
+          reportDownloadFeedback: document.getElementById("report-download-feedback"),
           reportDate: document.getElementById("report-date"),
           reportId: document.getElementById("report-id"),
           accessCredentials: document.getElementById("access-credentials"),
@@ -3432,6 +3465,13 @@
           elements.paymentStatus.textContent = '';
           elements.paymentStatus.classList.remove('alert-error');
           elements.paymentStatus.classList.add('alert-success');
+          elements.printButton.disabled = false;
+          elements.printButton.setAttribute('aria-busy', 'false');
+          if (elements.printButtonLabel) elements.printButtonLabel.textContent = '下载 PDF 报告';
+          if (elements.reportDownloadFeedback) {
+            elements.reportDownloadFeedback.hidden = true;
+            elements.reportDownloadFeedback.textContent = '';
+          }
           elements.lockedModule.hidden = false;
         }
 
@@ -3518,6 +3558,9 @@
           elements.fileCount.textContent = selectedFiles.length
             ? `已选择 ${selectedFiles.length} 个文件 · 共 ${formatFileSize(totalSize)}`
             : "已选择 0 个文件";
+          elements.pdfImageNotice.hidden = !selectedFiles.some(
+            (item) => getExtension(item.file.name) === "pdf"
+          );
           updateActionState();
         }
 
@@ -3860,16 +3903,20 @@
         function failAnalysis(error) {
           clearTask();
           const friendly = mapApiError(error && error.message);
-          elements.analysisNote.textContent = "分析失败：" + friendly;
+          const noReadableText = friendly.indexOf("未检测到可解读的文字报告") !== -1
+            || friendly.indexOf("No readable text report") !== -1;
+          elements.analysisNote.textContent = noReadableText ? friendly : "分析失败：" + friendly;
           elements.progressSection.dataset.state = "error";
           elements.progressPill.textContent = "失败";
           elements.steps.forEach((step, index) => {
             if (step.dataset.state === "loading") setStepState(index, "error");
           });
-          if (elements.analysisRetry) elements.analysisRetry.hidden = false;
+          if (elements.analysisRetry) elements.analysisRetry.hidden = noReadableText;
           isProcessing = false;
           elements.startButtonText.textContent = "重新分析";
-          showFileError("AI 分析失败：" + friendly + "，可点击进度卡片中的红色按钮重试");
+          showFileError(noReadableText
+            ? friendly
+            : "AI 分析失败：" + friendly + "，可点击进度卡片中的红色按钮重试");
           updateActionState();
         }
 
@@ -3949,7 +3996,8 @@
               block: 'start',
             });
 
-            setProgress("analysis", 45);
+            applyAnalysisProgress(accepted, false);
+            elements.analysisNote.textContent = analysisStageText(accepted.current_step);
             const result = await pollAnalysisStatus(currentTaskId, generation);
             if (generation !== analysisGeneration) return;
             completeOpenedReport(result, true);
@@ -4013,6 +4061,38 @@
           });
         })();
 
+        const ANALYSIS_STAGE_TEXT = Object.freeze({
+          queued: "分析任务已排队，即将开始…",
+          validating_uploaded_files: "正在校验上传的病历文件…",
+          ocr_recognizing: "正在识别病历文件中的文字…",
+          ocr_integrating: "正在整合病历识别结果…",
+          timeline_building: "正在整理病情时间线…",
+          matching_doctors: "正在匹配适合的专科与医生…",
+          matching_department: "正在匹配适合的专科与医生…",
+          ai_analysis: "AI 正在分析病情、匹配专科…",
+          generating_report: "正在生成分析报告…",
+          generating_free_preview: "正在生成免费预览…",
+          completed: "分析完成，免费预览已生成",
+          failed: "分析失败",
+          cancelled: "分析已取消",
+        });
+
+        function analysisStageText(step) {
+          return ANALYSIS_STAGE_TEXT[String(step || "")] || "正在分析病历，请耐心等待…";
+        }
+
+        function applyAnalysisProgress(data, monotonic = true) {
+          if (!data || data.progress === null || data.progress === undefined || data.progress === "") return;
+          const value = Number(data.progress);
+          if (!Number.isFinite(value)) return;
+          const serverProgress = Math.max(0, Math.min(100, Math.round(value)));
+          const displayedProgress = Number.parseInt(elements.analysisPercent.textContent, 10);
+          const nextProgress = monotonic && Number.isFinite(displayedProgress)
+            ? Math.max(displayedProgress, serverProgress)
+            : serverProgress;
+          setProgress("analysis", nextProgress);
+        }
+
         async function pollAnalysisStatus(taskId, generation = analysisGeneration) {
           const maxAttempts = 120;
           const task = loadTask();
@@ -4037,7 +4117,10 @@
             }
             if (generation !== analysisGeneration) throw new Error('stale analysis view');
             if (data.report_id) adoptReportData(data);
+            applyAnalysisProgress(data);
+            const stage = analysisStageText(data.current_step);
             if (data.status === 'completed') {
+              setProgress("analysis", 100);
               if (currentReportId) {
                 try {
                   const detail = await requestJson('/reports/' + encodeURIComponent(currentReportId));
@@ -4059,11 +4142,6 @@
             const elapsedMin = Math.floor(elapsed / 60);
             const remaining = Math.max(0, estimatedTotal - elapsed);
             const remainingMin = Math.ceil(remaining / 60);
-            const ratio = Math.min(0.95, elapsed / estimatedTotal);
-            setProgress("analysis", Math.max(45, Math.round(45 + ratio * 50)));
-            let stage = "正在识别病历文件…";
-            if (ratio >= 0.66) { stage = "正在生成分析报告…"; }
-            else if (ratio >= 0.33) { stage = "AI 正在分析病情、匹配专科…"; }
             if (remaining > 30) {
               elements.analysisNote.textContent = stage + "（已进行 " + elapsedMin + " 分钟，预计还需约 " + remainingMin + " 分钟）";
             } else {
@@ -4085,7 +4163,7 @@
           elements.uploadSection.querySelector(".status-pill").textContent = "处理中";
           setStepState(0, "complete");
           setStepState(1, "active");
-          setProgress("analysis", 45);
+          setProgress("analysis", 0);
           elements.analysisNote.textContent = "检测到有进行中的分析，正在为你恢复进度…";
           updateActionState();
           try {
@@ -4534,7 +4612,8 @@
               loadReports();
               return;
             }
-            elements.analysisNote.textContent = '报告仍在分析中，已恢复自动刷新…';
+            applyAnalysisProgress(detail);
+            elements.analysisNote.textContent = analysisStageText(detail.current_step) + '（已恢复自动刷新…）';
           }
           throw new Error('分析时间较长');
         }
@@ -4567,7 +4646,8 @@
           elements.uploadSection.querySelector('.status-pill').textContent = '已恢复报告';
           elements.startButtonText.textContent = '分析进行中';
           setProgress('upload', 100);
-          setProgress('analysis', typeof detail.progress === 'number' ? detail.progress : 45);
+          setProgress('analysis', 0);
+          applyAnalysisProgress(detail, false);
           setStepState(0, 'complete');
           setStepState(1, 'active');
           elements.uploadStatus.textContent = '已从“我的报告”安全恢复';
@@ -4819,6 +4899,82 @@
           elements.reportId.textContent = currentReportId || '—';
         }
 
+        async function downloadReportPdf() {
+          const button = elements.printButton;
+          const feedback = elements.reportDownloadFeedback;
+          if (!currentReportId || !isPaid || button.disabled) return;
+          const reportId = currentReportId;
+          const reportGeneration = analysisGeneration;
+          const authGeneration = sessionGeneration;
+          const isCurrentDownload = () => (
+            reportGeneration === analysisGeneration
+            && authGeneration === sessionGeneration
+            && currentReportId === reportId
+            && isPaid
+          );
+          button.disabled = true;
+          button.setAttribute('aria-busy', 'true');
+          if (elements.printButtonLabel) elements.printButtonLabel.textContent = '正在生成 PDF…';
+          if (feedback) {
+            feedback.hidden = true;
+            feedback.textContent = '';
+          }
+          try {
+            const response = await fetch(
+              API_BASE + '/reports/' + encodeURIComponent(reportId) + '/pdf',
+              {
+                credentials: 'same-origin',
+                cache: 'no-store',
+                headers: { Accept: 'application/pdf' },
+              }
+            );
+            if (!isCurrentDownload()) return;
+            if (!response.ok) {
+              const data = await response.json().catch(() => ({}));
+              const error = new Error(apiErrorMessage(data, 'PDF 生成失败，请稍后重试'));
+              error.status = response.status;
+              throw error;
+            }
+            const blob = await response.blob();
+            if (!isCurrentDownload()) return;
+            if (!blob.size || (blob.type && !blob.type.toLowerCase().includes('pdf'))) {
+              throw new Error('服务器未返回有效的 PDF 文件');
+            }
+            const objectUrl = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            const safeId = reportId.replace(/[^A-Za-z0-9_-]/g, '') || 'report';
+            link.href = objectUrl;
+            link.download = 'MediMatch_' + safeId + '.pdf';
+            document.body.appendChild(link);
+            link.click();
+            link.remove();
+            window.setTimeout(() => URL.revokeObjectURL(objectUrl), 10000);
+          } catch (error) {
+            if (!isCurrentDownload()) return;
+            const message = error.status === 403
+              ? '完整 PDF 需在报告解锁后下载；当前仍可查看免费预览。'
+              : error.status === 404
+                ? '报告不存在、已过期或当前会话无权下载，请重新打开报告。'
+                : error.status === 409
+                  ? '报告仍在生成中，请稍后重试。'
+                  : 'PDF 下载失败：' + error.message;
+            if (feedback) {
+              feedback.textContent = message;
+              feedback.hidden = false;
+            }
+          } finally {
+            if (
+              reportGeneration === analysisGeneration
+              && authGeneration === sessionGeneration
+              && currentReportId === reportId
+            ) {
+              button.disabled = false;
+              button.setAttribute('aria-busy', 'false');
+              if (elements.printButtonLabel) elements.printButtonLabel.textContent = '下载 PDF 报告';
+            }
+          }
+        }
+
         elements.fileInput.addEventListener("change", (event) => addFiles(event.target.files));
 
         ["dragenter", "dragover"].forEach((eventName) => {
@@ -4868,7 +5024,7 @@
         if (elements.analysisRetry) {
           elements.analysisRetry.addEventListener("click", startAnalysis);
         }
-        elements.printButton.addEventListener("click", () => window.print());
+        elements.printButton.addEventListener("click", downloadReportPdf);
         elements.agreeConsent.addEventListener("click", agreeToConsent);
         elements.declineConsent.addEventListener("click", declineToConsent);
         elements.reopenConsent.addEventListener("click", showConsentModal);

@@ -1,4 +1,4 @@
-"""Environment-configured transactional email delivery for MediMatch OTPs."""
+"""Environment-configured transactional email delivery for MediMatch."""
 
 from __future__ import annotations
 
@@ -20,17 +20,14 @@ def email_enabled() -> bool:
     return bool(os.getenv("SMTP_HOST", "").strip() and os.getenv("SMTP_FROM", "").strip())
 
 
-def send_otp_email(recipient: str, code: str) -> None:
-    """Send one OTP synchronously; the caller should use asyncio.to_thread.
-
-    Credentials are read only from environment variables. Exceptions propagate
-    so the API can return a truthful delivery error instead of pretending success.
-    """
+def _send_message(message: EmailMessage) -> None:
+    """Send a prepared message using the shared environment SMTP settings."""
     if not email_enabled():
         raise RuntimeError("SMTP is not configured.")
 
     host = os.environ["SMTP_HOST"].strip()
     sender = os.environ["SMTP_FROM"].strip()
+    message["From"] = sender
     username = os.getenv("SMTP_USERNAME", "").strip()
     password = os.getenv("SMTP_PASSWORD", "")
     try:
@@ -43,16 +40,6 @@ def send_otp_email(recipient: str, code: str) -> None:
         raise RuntimeError("Invalid SMTP timeout.") from exc
     if port <= 0 or port > 65535 or timeout <= 0:
         raise RuntimeError("Invalid SMTP configuration.")
-
-    message = EmailMessage()
-    message["Subject"] = "Your ShanghaiMed sign-in code"
-    message["From"] = sender
-    message["To"] = recipient
-    message.set_content(
-        "Your ShanghaiMed verification code is: "
-        f"{code}\n\nThis code expires in 10 minutes and can be used once. "
-        "If you did not request it, you can ignore this email."
-    )
 
     context = ssl.create_default_context()
     if _flag("SMTP_USE_SSL", False):
@@ -70,3 +57,29 @@ def send_otp_email(recipient: str, code: str) -> None:
         if username:
             smtp.login(username, password)
         smtp.send_message(message)
+
+
+def send_otp_email(recipient: str, code: str) -> None:
+    """Send one OTP synchronously; the caller should use asyncio.to_thread.
+
+    Credentials are read only from environment variables. Exceptions propagate
+    so the API can return a truthful delivery error instead of pretending success.
+    """
+    message = EmailMessage()
+    message["Subject"] = "Your ShanghaiMed sign-in code"
+    message["To"] = recipient
+    message.set_content(
+        "Your ShanghaiMed verification code is: "
+        f"{code}\n\nThis code expires in 10 minutes and can be used once. "
+        "If you did not request it, you can ignore this email."
+    )
+    _send_message(message)
+
+
+def send_report_email(recipient: str, report_id: str, report_text: str) -> None:
+    """Send a plaintext medical report synchronously via the shared SMTP setup."""
+    message = EmailMessage()
+    message["Subject"] = f"Your MediMatch medical report / 您的病历分析报告 - {report_id}"
+    message["To"] = recipient
+    message.set_content(report_text)
+    _send_message(message)

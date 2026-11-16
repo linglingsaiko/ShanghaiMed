@@ -112,7 +112,7 @@ const Header: React.FC = () => {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-gray-100">
+          <div className="lg:hidden py-4 border-t border-gray-100 max-h-[calc(100dvh-4rem)] overflow-y-auto">
             <div className="flex flex-col gap-4">
               {navLinks.map((link, index) => (
                 link.href.startsWith('#') ? (
@@ -139,8 +139,9 @@ const Header: React.FC = () => {
                   </Link>
                 )
               ))}
-              <div className="py-2">
-                <LanguageSwitcher />
+              <div className="py-2 border-t border-gray-100 pt-4">
+                <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">Language / 语言</p>
+                <LanguageSwitcher variant="list" />
               </div>
             </div>
           </div>

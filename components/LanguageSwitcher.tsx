@@ -8,7 +8,12 @@ import { localePath, stripLocalePrefix } from '@/lib/i18n'
 
 const ENGLISH_ONLY_PATHS = new Set(['/our-standards'])
 
-const LanguageSwitcher: React.FC = () => {
+interface LanguageSwitcherProps {
+  /** dropdown：桌面右上角下拉；list：手机端汉堡菜单内平铺，避免小屏下拉被裁剪/遮挡 */
+  variant?: 'dropdown' | 'list'
+}
+
+const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ variant = 'dropdown' }) => {
   const { language } = useLanguage()
   const router = useRouter()
   const pathname = usePathname()
@@ -38,15 +43,37 @@ const LanguageSwitcher: React.FC = () => {
   const current = options.find(o => o.value === language)!
 
   const handleSwitch = (newLocale: string) => {
-    // Strip any locale prefix; empty result (locale home like /mn) falls back to '/'
     const pathWithoutLocale = stripLocalePrefix(pathname) || '/'
-    // Do not send visitors to non-existent translations of English-only pages.
     const destinationPath = ENGLISH_ONLY_PATHS.has(pathWithoutLocale) && newLocale !== 'en'
       ? '/'
       : pathWithoutLocale
     const newPath = localePath(newLocale as any, destinationPath)
     router.push(newPath)
     setOpen(false)
+  }
+
+  // 手机端：平铺所有语言，当前语言高亮，点击即切换（触摸目标足够大，无下拉）
+  if (variant === 'list') {
+    return (
+      <div className="grid grid-cols-2 gap-2" dir="ltr">
+        {options.map(option => (
+          <button
+            key={option.value}
+            type="button"
+            onClick={() => handleSwitch(option.value)}
+            aria-current={language === option.value ? 'true' : undefined}
+            className={`flex items-center gap-2 px-3 py-3 text-sm rounded-lg border text-left transition-colors ${
+              language === option.value
+                ? 'border-primary bg-primary/5 text-primary font-semibold'
+                : 'border-gray-200 text-gray-600 hover:bg-gray-50 active:bg-gray-100'
+            }`}
+          >
+            <Globe className="w-4 h-4 shrink-0 opacity-60" />
+            <span>{option.display}</span>
+          </button>
+        ))}
+      </div>
+    )
   }
 
   return (

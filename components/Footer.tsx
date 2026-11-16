@@ -151,7 +151,6 @@ const Footer: React.FC = () => {
                   hello@shanghaimedhealth.com
                 </a>
               </li>
-              <li>{translateWithFallback('footer.languages', 'English / 中文 / 日本語')}</li>
             </ul>
             <div className="mt-6">
               <Link

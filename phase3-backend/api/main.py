@@ -144,6 +144,12 @@ class AnalysisTask:
     # Private: never serialize this field in the free preview/status response.
     result: Any = field(default=None, repr=False)
     pipeline_error: Any = field(default=None, repr=False)
+    # Private report-delivery address; never expose it in public task responses.
+    email: Optional[str] = field(default=None, repr=False)
+    # Durable one-shot claim for the paid full-report email. The timestamp is
+    # written before background dispatch so payment/completion retries cannot
+    # schedule a duplicate. Optional default keeps old stored tasks readable.
+    full_report_email_scheduled_at: Optional[float] = field(default=None, repr=False)
 
 
 _UPSTASH_URL = os.getenv("UPSTASH_REDIS_REST_URL", "").strip()
@@ -989,6 +995,138 @@ def _full_report(result: Any) -> Any:
     return result
 
 
+def _flatten_report_text(value: Any) -> str:
+    """Render nested report mappings and lists as readable plaintext."""
+    lines: list[str] = []
+
+    def walk(item: Any, label: str = "", depth: int = 0) -> None:
+        indent = "  " * depth
+        if isinstance(item, dict):
+            if label:
+                lines.append(f"{indent}{label}:")
+                depth += 1
+                indent = "  " * depth
+            for key, child in item.items():
+                walk(child, str(key).replace("_", " ").strip(), depth)
+            return
+        if isinstance(item, (list, tuple)):
+            if label:
+                lines.append(f"{indent}{label}:")
+                depth += 1
+                indent = "  " * depth
+            for child in item:
+                if isinstance(child, (dict, list, tuple)):
+                    lines.append(f"{indent}-")
+                    walk(child, depth=depth + 1)
+                else:
+                    text = "" if child is None else str(child)
+                    lines.append(f"{indent}- {text}")
+            return
+        text = "" if item is None else str(item)
+        lines.append(f"{indent}{label}: {text}" if label else f"{indent}{text}")
+
+    walk(value)
+    return "\n".join(lines).strip()
+
+
+async def _deliver_report_email(
+    task_id: str, recipient: str, report_id: str, result: Any
+) -> None:
+    """Deliver a paid full report without changing analysis/payment outcomes."""
+    try:
+        report_text = _flatten_report_text(_full_report(result))
+        await asyncio.to_thread(
+            report_mail.send_report_email, recipient, report_id, report_text
+        )
+    except Exception as exc:
+        logger.warning(
+            "Paid full-report email delivery failed for analysis task %s (%s)",
+            task_id,
+            type(exc).__name__,
+        )
+        return
+    logger.info("Paid full-report email delivered for analysis task %s", task_id)
+
+
+def _is_test_email(email: Optional[str]) -> bool:
+    """Return whether an address is explicitly enabled for free report testing."""
+    normalized = (email or "").strip().lower()
+    if not normalized:
+        return False
+    allowed = {
+        item.strip().lower()
+        for item in os.getenv("TEST_EMAILS", "").split(",")
+        if item.strip()
+    }
+    return normalized in allowed
+
+
+def _unlock_test_report_locked(
+    task: AnalysisTask, report: ReportAccess
+) -> ReportAccess:
+    """Persist paid-equivalent access only for an explicitly listed test email.
+
+    Caller holds _store_lock. A real PayPal order always wins and is never
+    overwritten. Empty TEST_EMAILS and all unlisted addresses leave the normal
+    payment wall untouched.
+    """
+    if report.paid_order_id or not _is_test_email(task.email):
+        return report
+
+    paid_at = time.time()
+    unlocked_report = copy.deepcopy(report)
+    unlocked_report.paid_order_id = "TEST_FREE"
+    unlocked_report.paid_at = paid_at
+    unlocked_report.expires_at = paid_at + PAID_RESULT_TTL_SECONDS
+    _reports.set_durable(report.report_id, unlocked_report)
+    logger.info("Test email whitelist unlocked analysis task %s", task.task_id)
+    return unlocked_report
+
+
+def _schedule_paid_report_email_locked(
+    task: AnalysisTask, report: ReportAccess
+) -> None:
+    """Claim and schedule one paid full-report email; caller holds _store_lock.
+
+    Free previews and unpaid tasks never reach the sender. If payment completes
+    first, this does nothing until the analysis-completion hook calls it again.
+    The durable claim is deliberately at-most-once: an SMTP failure is logged,
+    not retried, and can never fail or roll back analysis/payment.
+    """
+    if (
+        report.task_id != task.task_id
+        or not report.paid_order_id
+        or task.status != "completed"
+        or not task.email
+        or task.full_report_email_scheduled_at is not None
+    ):
+        return
+
+    try:
+        claimed_task = copy.deepcopy(task)
+        claimed_task.full_report_email_scheduled_at = time.time()
+        # Both hooks serialize on _store_lock. Persist the claim before creating
+        # the sender so an idempotent capture retry or completion hook cannot
+        # enqueue a second copy, including after a process restart.
+        _tasks.set_durable(task.task_id, claimed_task)
+        job = asyncio.create_task(
+            _deliver_report_email(
+                claimed_task.task_id,
+                claimed_task.email,
+                report.report_id,
+                claimed_task.result,
+            )
+        )
+        _background_jobs.add(job)
+        job.add_done_callback(_background_jobs.discard)
+    except Exception as exc:
+        logger.warning(
+            "Could not schedule paid full-report email for analysis task %s (%s)",
+            task.task_id,
+            type(exc).__name__,
+        )
+
+
 class PipelineUnavailableError(RuntimeError):
     pass
 
@@ -1228,6 +1366,13 @@ async def _run_analysis(task_id: str, paths: list[Path], chief_complaint: str = 
         async with _store_lock:
             # Persist the derived result immediately; periodic sync is only a
             # fallback for progress callbacks and other in-place mutations.
+            # A payment hook may have claimed the email after the pipeline set
+            # status=completed but before this final write. Preserve that claim.
+            current_task = _tasks.get(task_id)
+            if current_task is not None and current_task is not task:
+                task.full_report_email_scheduled_at = (
+                    current_task.full_report_email_scheduled_at
+                )
             _tasks[task_id] = task
             for file_id in task.file_ids:
                 record = _uploads.get(file_id)
@@ -1237,6 +1382,16 @@ async def _run_analysis(task_id: str, paths: list[Path], chief_complaint: str = 
                 record.path = None
                 record.status = "deleted"
                 _uploads[file_id] = record
+            if task.status == "completed":
+                # A listed test email receives paid-equivalent access only after
+                # the completed result is durable. All other reports keep the
+                # normal payment wall; already-paid reports are never modified.
+                report = _report_for_task(task_id)
+                if report is not None:
+                    report = _unlock_test_report_locked(task, report)
+                    # This shared one-shot hook covers both test access and
+                    # PayPal payment completed while analysis was still running.
+                    _schedule_paid_report_email_locked(task, report)
         logger.info("Original files removed for analysis task %s", task_id)
 
 
@@ -1742,6 +1897,7 @@ async def analyze_files(
             file_ids=file_ids,
             created_at=now,
             updated_at=now,
+            email=pending_email,
         )
         report = ReportAccess(
             report_id=report_id,
@@ -2650,6 +2806,7 @@ async def capture_payment(payload: PayCaptureRequest, request: Request) -> Any:
         task, report, _ = _capture_context_locked(request, file_id, order_id)
         if report.paid_order_id:
             if report.paid_order_id == order_id:
+                _schedule_paid_report_email_locked(task, report)
                 return _payment_success(task, report, file_id, order_id)
             raise HTTPException(status_code=409, detail="Report was unlocked with another order.")
         if any(
@@ -2667,6 +2824,7 @@ async def capture_payment(payload: PayCaptureRequest, request: Request) -> Any:
             task, report, payment_order = _capture_context_locked(request, file_id, order_id)
             if report.paid_order_id:
                 if report.paid_order_id == order_id:
+                    _schedule_paid_report_email_locked(task, report)
                     return _payment_success(task, report, file_id, order_id)
                 raise HTTPException(status_code=409, detail="Report was unlocked with another order.")
             # Any uncertain or post-capture local state is reconciled with GET
@@ -2739,6 +2897,7 @@ async def capture_payment(payload: PayCaptureRequest, request: Request) -> Any:
                 raise HTTPException(status_code=409, detail="Payment state changed during capture.")
             if report.paid_order_id:
                 if report.paid_order_id == order_id:
+                    _schedule_paid_report_email_locked(task, report)
                     return _payment_success(task, report, file_id, order_id)
                 raise HTTPException(status_code=409, detail="Report was unlocked with another order.")
             if any(
@@ -2784,6 +2943,9 @@ async def capture_payment(payload: PayCaptureRequest, request: Request) -> Any:
                     },
                 )
             report = paid_report
+            # The paid report is durable before email is scheduled. The helper
+            # also checks status=completed and owns the one-shot claim.
+            _schedule_paid_report_email_locked(task, report)
             result = _payment_success(task, report, file_id, order_id)
 
     logger.info("PayPal payment captured for report task %s (order %s)", task_id, order_id)

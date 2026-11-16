@@ -2308,6 +2308,312 @@
         }
       }
 
+      /* Multi-patient confirmation and report isolation. Server evidence is displayed
+         as-is; only explicit user edits change the confirmation payload. */
+      .multi-patient-summary {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 18px;
+        padding: 14px 16px;
+        border: 1px solid #c9dfdd;
+        border-radius: var(--radius-md);
+        background: var(--color-primary-soft);
+      }
+
+      .multi-patient-summary strong {
+        color: var(--color-primary-dark);
+        font-size: 18px;
+      }
+
+      .multi-patient-summary span {
+        color: #536172;
+        font-size: 13px;
+      }
+
+      .multi-patient-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+        margin: 18px 0;
+      }
+
+      .multi-patient-card,
+      .multi-report-card {
+        min-width: 0;
+        padding: 18px;
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        background: #fff;
+      }
+
+      .multi-patient-card h3,
+      .multi-report-card h3 {
+        margin: 0 0 5px;
+        overflow-wrap: anywhere;
+        color: var(--color-title);
+        font-size: 17px;
+      }
+
+      .multi-patient-id,
+      .multi-report-meta {
+        margin: 0 0 13px;
+        overflow-wrap: anywhere;
+        color: var(--color-muted-text);
+        font-size: 12px;
+      }
+
+      .multi-patient-fields {
+        display: grid;
+        gap: 11px;
+      }
+
+      .multi-patient-fields label {
+        display: grid;
+        gap: 6px;
+        color: var(--color-title);
+        font-size: 12px;
+        font-weight: 650;
+      }
+
+      .multi-patient-fields input,
+      .multi-page-assignment {
+        width: 100%;
+        min-height: 42px;
+        box-sizing: border-box;
+        padding: 9px 11px;
+        border: 1px solid #cfd8e0;
+        border-radius: 8px;
+        background: #fff;
+        color: var(--color-title);
+        font: inherit;
+        font-size: 13px;
+      }
+
+      .multi-patient-fields input:focus,
+      .multi-page-assignment:focus {
+        border-color: var(--color-primary);
+        outline: 3px solid rgba(14, 90, 90, 0.12);
+      }
+
+      .multi-patient-pages {
+        margin: 13px 0 0;
+        color: #536172;
+        font-size: 12px;
+        line-height: 1.6;
+      }
+
+      .multi-page-table {
+        min-width: 720px;
+      }
+
+      .multi-page-table td:last-child {
+        min-width: 230px;
+      }
+
+      .multi-page-table tr.multi-row-error td {
+        background: var(--color-error-soft);
+      }
+
+      .multi-page-assignment:disabled {
+        cursor: not-allowed;
+        background: #f1f3f5;
+        color: #536172;
+      }
+
+      .assignment-badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 4px 8px;
+        border-radius: 999px;
+        background: #edf1f4;
+        color: #435163;
+        font-size: 11px;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      .assignment-badge.explicit {
+        background: var(--color-success-soft);
+        color: #226749;
+      }
+
+      .assignment-badge.inherited,
+      .assignment-badge.unassigned {
+        background: var(--color-warning-soft);
+        color: #6d4b19;
+      }
+
+      .assignment-badge.conflict {
+        background: var(--color-error-soft);
+        color: #96323b;
+      }
+
+      .multi-confirmation-actions,
+      .multi-report-actions,
+      .multi-payment-actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      .multi-report-list {
+        display: grid;
+        gap: 18px;
+      }
+
+      .multi-report-card {
+        scroll-margin-top: 90px;
+      }
+
+      .multi-report-card[data-paid="true"] {
+        border-color: #a9d4c1;
+      }
+
+      .multi-report-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .multi-report-progress {
+        margin: 15px 0;
+        padding: 13px;
+        border-radius: 10px;
+        background: #f6f8fa;
+      }
+
+      .multi-report-progress-top {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 7px;
+        color: #536172;
+        font-size: 12px;
+      }
+
+      .multi-report-progress .progress-track {
+        height: 8px;
+      }
+
+      .multi-report-progress p {
+        margin: 8px 0 0;
+        color: #536172;
+        font-size: 12px;
+      }
+
+      .multi-free-preview,
+      .multi-full-report,
+      .multi-access-credentials,
+      .multi-payment-panel {
+        margin-top: 15px;
+        padding: 15px;
+        border: 1px solid var(--color-border);
+        border-radius: 10px;
+        background: #fafcfd;
+      }
+
+      .multi-free-preview h4,
+      .multi-full-report h4,
+      .multi-access-credentials h4,
+      .multi-payment-panel h4 {
+        margin: 0 0 10px;
+        color: var(--color-title);
+        font-size: 14px;
+      }
+
+      .multi-free-preview p {
+        margin: 7px 0;
+        color: #536172;
+        font-size: 13px;
+        white-space: pre-wrap;
+      }
+
+      .multi-access-credentials {
+        border-color: #ead8ac;
+        background: #fffcf5;
+      }
+
+      .multi-access-credentials .credential-item {
+        margin-top: 10px;
+      }
+
+      .multi-access-credentials input {
+        width: 100%;
+        min-height: 42px;
+        box-sizing: border-box;
+        padding: 8px 10px;
+        border: 1px solid var(--color-border);
+        border-radius: 8px;
+        background: #fff;
+        color: var(--color-title);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      }
+
+      .multi-payment-panel .paypal-button-container {
+        max-width: 360px;
+      }
+
+      .multi-report-select {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        color: #536172;
+        font-size: 12px;
+      }
+
+      .multi-report-select input {
+        width: 18px;
+        height: 18px;
+        margin: 0;
+      }
+
+      .multi-report-feedback {
+        margin: 10px 0 0;
+        color: #536172;
+        font-size: 12px;
+      }
+
+      .multi-report-feedback.error {
+        color: #96323b;
+      }
+
+      .multi-report-feedback.success {
+        color: #226749;
+      }
+
+      .multi-full-report .report-chapter {
+        margin-top: 12px;
+        padding: 16px;
+      }
+
+      .multi-full-report .chapter-body {
+        white-space: pre-wrap;
+      }
+
+      @media (max-width: 720px) {
+        .multi-patient-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .multi-report-header,
+        .multi-patient-summary {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .multi-confirmation-actions .btn,
+        .multi-report-actions .btn,
+        .multi-payment-actions .btn {
+          width: 100%;
+        }
+      }
+
     .chief-complaint { margin: 18px 0 4px; }
     .chief-label { font-weight: 600; color: #1A2230; font-size: 15px; display: block; margin-bottom: 4px; }
     .chief-optional { font-weight: 400; color: #6b7686; font-size: 13px; }
@@ -2814,6 +3120,81 @@
 
           <section
             class="card card-pad"
+            id="multi-patient-section"
+            aria-labelledby="multi-patient-title"
+            data-anchor-id="medical-records-upload.multi-patient"
+            hidden
+          >
+            <div class="section-heading">
+              <div class="section-title-wrap">
+                <span class="section-number" aria-hidden="true">03</span>
+                <div>
+                  <h2 id="multi-patient-title">多人病历拆分</h2>
+                  <p>先核对每位患者与每一页的归属，再分别生成、分别解锁报告</p>
+                </div>
+              </div>
+              <span class="status-pill demo" id="multi-group-status">等待确认</span>
+            </div>
+
+            <div class="multi-patient-summary">
+              <strong id="multi-patient-count">检测到多位患者</strong>
+              <span id="multi-group-reference">拆分编号：—</span>
+            </div>
+
+            <div class="alert alert-error" id="multi-group-feedback" hidden role="alert"></div>
+
+            <div id="multi-confirmation">
+              <div class="alert alert-warning" role="note">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 3 2.8 20h18.4L12 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+                  <path d="M12 9v5M12 17h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                </svg>
+                <span>系统仅按页面中的姓名/MRN 证据展示归属，不会猜测患者身份。继承页必须核对；未分配页必须手动分配或排除；身份冲突页只能排除。此阶段尚未调用 AI 或创建报告。</span>
+              </div>
+
+              <div class="multi-patient-grid" id="multi-patient-list"></div>
+
+              <h3>逐页归属确认</h3>
+              <p class="settings-note">每一可读页只能属于一位患者或被排除。修改姓名/MRN 不会让系统自动重排页面。</p>
+              <div class="table-wrap">
+                <table class="multi-page-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">原 PDF 页码</th>
+                      <th scope="col">后端识别状态</th>
+                      <th scope="col">置信度</th>
+                      <th scope="col">确认归属</th>
+                    </tr>
+                  </thead>
+                  <tbody id="multi-page-list"></tbody>
+                </table>
+              </div>
+
+              <div class="center-message" id="multi-validation" role="status" aria-live="polite"></div>
+              <div class="multi-confirmation-actions">
+                <button class="btn btn-secondary" id="multi-refresh-group" type="button">重新读取后端归属</button>
+                <button class="btn btn-primary" id="multi-confirm-group" type="button" disabled data-anchor-id="medical-records-upload.confirm-multi-patient">确认并生成每人独立报告</button>
+              </div>
+            </div>
+
+            <div id="multi-results" hidden>
+              <div class="alert alert-success" role="note">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span>拆分已确认。每位患者有独立任务、报告、提取码与支付订单；选择一位患者只会解锁该患者的报告。</span>
+              </div>
+              <div class="multi-confirmation-actions">
+                <button class="btn btn-secondary" id="multi-refresh-reports" type="button">刷新各报告状态</button>
+                <button class="btn btn-primary" id="multi-select-all" type="button" disabled data-anchor-id="medical-records-upload.unlock-all-multi-patient">全选并逐份解锁</button>
+              </div>
+              <p class="settings-note">“全选”会为每份已完成且未支付报告分别显示 PayPal 按钮。每份报告需单独授权、单独扣款，不会合并为一个订单。</p>
+              <div class="multi-report-list" id="multi-report-list"></div>
+            </div>
+          </section>
+
+          <section
+            class="card card-pad"
             id="preview-section"
             aria-labelledby="preview-title"
             data-state="complete"
@@ -3254,6 +3635,7 @@
         const ALLOWED_EXTENSIONS = new Set(["jpg", "jpeg", "png", "webp", "bmp", "gif", "tif", "tiff", "heic", "heif", "pdf", "zip"]);
         const CONSENT_KEY = "shanghaimed-medical-records-consent";
         const TASK_KEY = "shanghaimed-medical-records-task";
+        const MULTI_GROUP_KEY = "shanghaimed-medical-records-multi-group";
         const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
         const elements = {
@@ -3281,6 +3663,21 @@
           analysisNote: document.getElementById("analysis-note"),
           analysisRetry: document.getElementById("analysis-retry"),
           steps: Array.from(document.querySelectorAll(".analysis-step")),
+          multiSection: document.getElementById("multi-patient-section"),
+          multiGroupStatus: document.getElementById("multi-group-status"),
+          multiPatientCount: document.getElementById("multi-patient-count"),
+          multiGroupReference: document.getElementById("multi-group-reference"),
+          multiGroupFeedback: document.getElementById("multi-group-feedback"),
+          multiConfirmation: document.getElementById("multi-confirmation"),
+          multiPatientList: document.getElementById("multi-patient-list"),
+          multiPageList: document.getElementById("multi-page-list"),
+          multiValidation: document.getElementById("multi-validation"),
+          multiRefreshGroup: document.getElementById("multi-refresh-group"),
+          multiConfirmGroup: document.getElementById("multi-confirm-group"),
+          multiResults: document.getElementById("multi-results"),
+          multiRefreshReports: document.getElementById("multi-refresh-reports"),
+          multiSelectAll: document.getElementById("multi-select-all"),
+          multiReportList: document.getElementById("multi-report-list"),
           previewSection: document.getElementById("preview-section"),
           lockedModule: document.getElementById("locked-module"),
           paymentStatus: document.getElementById("payment-status"),
@@ -3330,6 +3727,16 @@
         let uploadTimer = null;
         let lastFocusedElement = null;
         let fileIdCounter = 0;
+        let multiGroup = null;
+        let multiAssignments = new Map();
+        let multiGeneration = 0;
+        let multiConfirmPending = false;
+        let multiGroupRefreshPending = false;
+        let multiPollPromise = null;
+        let multiReportNodes = new Map();
+        let multiSelectedReports = new Set();
+        let multiPayments = new Map();
+        let multiPayPalConfigPromise = null;
 
         const analysisMessages = [
           "正在检查文件结构并解压压缩包…",
@@ -3357,15 +3764,16 @@
 
         function updateActionState() {
           const hasFiles = selectedFiles.length > 0;
-          elements.startButton.disabled = !consentGranted || !hasFiles || isProcessing;
-          elements.clearFiles.disabled = isProcessing;
-          elements.fileInput.disabled = !consentGranted || isProcessing;
-          elements.dropZone.setAttribute("aria-disabled", String(!consentGranted || isProcessing));
+          const busy = uploadInteractionLocked();
+          elements.startButton.disabled = !consentGranted || !hasFiles || busy;
+          elements.clearFiles.disabled = busy;
+          elements.fileInput.disabled = !consentGranted || busy;
+          elements.dropZone.setAttribute("aria-disabled", String(!consentGranted || busy));
           elements.uploadSection.classList.toggle("is-blocked", !consentGranted);
           elements.uploadSection.setAttribute("aria-disabled", String(!consentGranted));
-          elements.uploadSection.dataset.state = isProcessing ? "loading" : hasFiles ? "default" : "empty";
+          elements.uploadSection.dataset.state = busy ? "loading" : hasFiles ? "default" : "empty";
           elements.fileList.querySelectorAll("button").forEach((button) => {
-            button.disabled = isProcessing;
+            button.disabled = busy;
           });
         }
 
@@ -3478,6 +3886,7 @@
         }
 
         function resetResults() {
+          clearMultiPatientState();
           analysisGeneration += 1;
           if (uploadTimer) {
             window.clearInterval(uploadTimer);
@@ -3509,7 +3918,7 @@
         }
 
         function removeFile(fileId) {
-          if (isProcessing) return;
+          if (uploadInteractionLocked()) return;
           selectedFiles = selectedFiles.filter((item) => item.id !== fileId);
           showFileError("");
           resetResults();
@@ -3545,7 +3954,7 @@
             const remove = document.createElement("button");
             remove.className = "icon-button";
             remove.type = "button";
-            remove.disabled = isProcessing;
+            remove.disabled = uploadInteractionLocked();
             remove.setAttribute("aria-label", `移除文件 ${item.file.name}`);
             remove.setAttribute("aria-controls", "file-list");
             remove.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M9 7V4h6v3M8 7l1 14h6l1-14M10 11v6M14 11v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
@@ -3571,7 +3980,7 @@
             showConsentModal();
             return;
           }
-          if (isProcessing) {
+          if (uploadInteractionLocked()) {
             showFileError("当前分析正在进行，请完成后再添加文件");
             return;
           }
@@ -3927,7 +4336,7 @@
             showConsentModal();
             return;
           }
-          if (!selectedFiles.length || isProcessing) return;
+          if (!selectedFiles.length || uploadInteractionLocked()) return;
           const pendingEmail = emailEnabled ? elements.analysisEmail.value.trim() : '';
           if (pendingEmail && !elements.analysisEmail.checkValidity()) {
             showFileError('请输入有效的邮箱地址，或清空邮箱后再开始分析');
@@ -3987,6 +4396,11 @@
               body: JSON.stringify(analyzeBody),
             });
             if (generation !== analysisGeneration) return;
+            if (accepted && accepted.status === 'awaiting_confirmation' && accepted.multi_patient === true) {
+              clearTask();
+              enterMultiPatientPreview(accepted);
+              return;
+            }
             if (!accepted.task_id) throw new Error('分析受理响应缺少任务编号');
             adoptReportData(accepted);
             currentTaskId = String(accepted.task_id);
@@ -4838,6 +5252,1202 @@
           }
         }
 
+        // -------------------------------------------------------------------
+        // Multi-patient split: preview -> explicit confirmation -> isolated reports.
+        // This state is deliberately separate from the single-report state above.
+        // -------------------------------------------------------------------
+        let multiPatientPageNodes = new Map();
+        let multiPatientHeadingNodes = new Map();
+        let multiPatientOptionNodes = new Map();
+        let multiPageRows = new Map();
+        let multiDetailPromises = new Map();
+        let multiBulkPaymentPending = false;
+
+        function saveMultiGroup() {
+          if (!multiGroup || !multiGroup.group_id) return;
+          try {
+            window.localStorage.setItem(MULTI_GROUP_KEY, JSON.stringify({
+              groupId: String(multiGroup.group_id),
+              fileId: multiGroup.file_id ? String(multiGroup.file_id) : null,
+              startedAt: Date.now(),
+            }));
+          } catch (error) {
+            // Confirmation and polling still work when browser storage is disabled.
+          }
+        }
+
+        function loadSavedMultiGroup() {
+          try {
+            const raw = window.localStorage.getItem(MULTI_GROUP_KEY);
+            if (!raw) return null;
+            const saved = JSON.parse(raw);
+            if (!saved || !saved.groupId) return null;
+            return saved;
+          } catch (error) {
+            return null;
+          }
+        }
+
+        function clearMultiPatientState(forget = true) {
+          multiGeneration += 1;
+          multiGroup = null;
+          multiAssignments = new Map();
+          multiConfirmPending = false;
+          multiGroupRefreshPending = false;
+          multiPollPromise = null;
+          multiReportNodes = new Map();
+          multiSelectedReports = new Set();
+          multiPayments = new Map();
+          multiPayPalConfigPromise = null;
+          multiPatientPageNodes = new Map();
+          multiPatientHeadingNodes = new Map();
+          multiPatientOptionNodes = new Map();
+          multiPageRows = new Map();
+          multiDetailPromises = new Map();
+          multiBulkPaymentPending = false;
+          if (elements.multiSection) {
+            elements.multiSection.hidden = true;
+            elements.multiConfirmation.hidden = true;
+            elements.multiResults.hidden = true;
+            elements.multiPatientList.replaceChildren();
+            elements.multiPageList.replaceChildren();
+            elements.multiReportList.replaceChildren();
+            elements.multiGroupFeedback.hidden = true;
+            elements.multiGroupFeedback.textContent = '';
+            elements.multiValidation.textContent = '';
+          }
+          if (forget) {
+            try { window.localStorage.removeItem(MULTI_GROUP_KEY); } catch (error) {}
+          }
+        }
+
+        function setMultiGroupMessage(message, type = 'error') {
+          const node = elements.multiGroupFeedback;
+          if (!node) return;
+          node.hidden = !message;
+          node.textContent = message || '';
+          node.className = 'alert ' + (type === 'success' ? 'alert-success' : type === 'warning' ? 'alert-warning' : 'alert-error');
+        }
+
+        function multiElement(tagName, className, text) {
+          const node = document.createElement(tagName);
+          if (className) node.className = className;
+          if (text !== undefined && text !== null) node.textContent = String(text);
+          return node;
+        }
+
+        function multiOption(text, value) {
+          const option = document.createElement('option');
+          option.value = value;
+          option.textContent = text;
+          return option;
+        }
+
+        function multiPatientById(patientId) {
+          if (!multiGroup || !patientId) return null;
+          return multiGroup.patients.find((patient) => patient.patient_id === String(patientId)) || null;
+        }
+
+        function multiReportById(reportId) {
+          if (!multiGroup || !Array.isArray(multiGroup.reports)) return null;
+          return multiGroup.reports.find((report) => report.report_id === String(reportId)) || null;
+        }
+
+        function multiPatientLabel(patient) {
+          if (!patient) return '未知患者';
+          const name = String(patient.patient_name || '').trim() || ('患者 ' + patient.patient_id);
+          return patient.patient_mrn ? name + ' · ' + patient.patient_mrn : name;
+        }
+
+        function multiAnalysisInProgress() {
+          return Boolean(multiGroup && Array.isArray(multiGroup.reports) && multiGroup.reports.some((report) =>
+            report && report.task_id && !multiReportIsComplete(report) && !multiReportIsFailed(report) && !multiReportIsExpired(report)
+          ));
+        }
+
+        function uploadInteractionLocked() {
+          return isProcessing || multiConfirmPending || multiAnalysisInProgress();
+        }
+
+        function multiReportIsPaid(report) {
+          return Boolean(report && (
+            report.payment_verified === true || report.paid === true || report.paid_at || report.paid_order_id
+          ));
+        }
+
+        function multiReportIsExpired(report) {
+          const status = String((report && report.status) || '').toLowerCase();
+          if (report && report.expired === true) return true;
+          if (status === 'expired') return true;
+          if (report && report.expires_at) {
+            const expiresAt = new Date(report.expires_at).getTime();
+            if (Number.isFinite(expiresAt) && expiresAt <= Date.now()) return true;
+          }
+          return false;
+        }
+
+        function multiReportIsComplete(report) {
+          return ['completed', 'complete', 'succeeded'].includes(String((report && report.status) || '').toLowerCase());
+        }
+
+        function multiReportIsFailed(report) {
+          return ['failed', 'error'].includes(String((report && report.status) || '').toLowerCase());
+        }
+
+        function normalizeMultiPreview(data) {
+          if (!data || !data.group_id || !Array.isArray(data.patients) || data.patients.length < 2 || !Array.isArray(data.pages)) {
+            throw new Error('多人拆分预览响应不完整，未创建任何报告');
+          }
+          const patientIds = new Set();
+          const patients = data.patients.map((item) => {
+            const patientId = String(item.patient_id || '');
+            if (!patientId || patientIds.has(patientId)) throw new Error('患者标识缺失或重复，无法安全确认拆分');
+            patientIds.add(patientId);
+            return {
+              ...item,
+              patient_id: patientId,
+              patient_name: item.patient_name ? String(item.patient_name) : '',
+              patient_mrn: item.patient_mrn ? String(item.patient_mrn) : '',
+              page_numbers: Array.isArray(item.page_numbers) ? item.page_numbers.map(Number) : [],
+            };
+          });
+          const pageNumbers = new Set();
+          const allowedAssignments = new Set(['explicit', 'inherited', 'unassigned', 'conflict', 'skipped']);
+          const pages = data.pages.map((item) => {
+            const pageNumber = Number(item.page_number);
+            if (!Number.isInteger(pageNumber) || pageNumber < 1 || pageNumbers.has(pageNumber)) {
+              throw new Error('页面编号缺失或重复，无法安全确认拆分');
+            }
+            if (!allowedAssignments.has(item.assignment)) throw new Error('后端返回了未知页面归属状态，已停止确认');
+            pageNumbers.add(pageNumber);
+            return { ...item, page_number: pageNumber, patient_id: item.patient_id ? String(item.patient_id) : null };
+          });
+          return {
+            ...data,
+            group_id: String(data.group_id),
+            file_id: data.file_id ? String(data.file_id) : (uploadedFileIds[0] || ''),
+            patients,
+            pages,
+            reports: [],
+          };
+        }
+
+        function enterMultiPatientPreview(data) {
+          const nextGroup = normalizeMultiPreview(data);
+          multiGeneration += 1;
+          multiGroup = nextGroup;
+          multiAssignments = new Map();
+          nextGroup.pages.forEach((page) => {
+            if (page.assignment === 'conflict') multiAssignments.set(page.page_number, 'excluded');
+            else if (page.assignment === 'skipped') multiAssignments.set(page.page_number, 'skipped');
+            else if (
+              (page.assignment === 'explicit' || page.assignment === 'inherited')
+              && page.assignable === true
+              && multiPatientById(page.patient_id)
+            ) multiAssignments.set(page.page_number, page.patient_id);
+            else multiAssignments.set(page.page_number, '');
+          });
+          multiConfirmPending = false;
+          multiGroupRefreshPending = false;
+          multiPollPromise = null;
+          multiReportNodes = new Map();
+          multiSelectedReports = new Set();
+          multiPayments = new Map();
+          multiPayPalConfigPromise = null;
+          multiDetailPromises = new Map();
+          isProcessing = false;
+          clearTask();
+          elements.progressSection.hidden = true;
+          elements.previewSection.hidden = true;
+          elements.fullReport.hidden = true;
+          elements.lockedModule.hidden = true;
+          elements.accessCredentials.hidden = true;
+          elements.multiSection.hidden = false;
+          elements.multiConfirmation.hidden = false;
+          elements.multiResults.hidden = true;
+          elements.multiReportList.replaceChildren();
+          elements.multiPatientCount.textContent = '检测到 ' + nextGroup.patients.length + ' 位患者';
+          elements.multiGroupReference.textContent = '拆分编号：' + nextGroup.group_id;
+          elements.multiGroupStatus.textContent = '等待人工确认';
+          elements.multiGroupStatus.className = 'status-pill demo';
+          elements.uploadSection.querySelector('.status-pill').textContent = '待确认拆分';
+          elements.startButtonText.textContent = '重新分析';
+          setMultiGroupMessage('');
+          renderMultiPatientEditor();
+          saveMultiGroup();
+          updateActionState();
+          elements.multiSection.scrollIntoView({ behavior: reducedMotion.matches ? 'auto' : 'smooth', block: 'start' });
+        }
+
+        const MULTI_ASSIGNMENT_TEXT = Object.freeze({
+          explicit: '明确姓名/MRN',
+          inherited: '继承前页 · 必须核对',
+          unassigned: '未分配 · 必须处理',
+          conflict: '身份冲突 · 只能排除',
+          skipped: '图片/空白页 · 不进入报告',
+        });
+
+        function renderMultiPatientEditor() {
+          multiPatientPageNodes = new Map();
+          multiPatientHeadingNodes = new Map();
+          multiPatientOptionNodes = new Map();
+          multiPageRows = new Map();
+          elements.multiPatientList.replaceChildren();
+          elements.multiPageList.replaceChildren();
+          multiGroup.patients.forEach((patient) => {
+            const card = multiElement('article', 'multi-patient-card');
+            card.dataset.patientId = patient.patient_id;
+            const heading = multiElement('h3', '', multiPatientLabel(patient));
+            multiPatientHeadingNodes.set(patient.patient_id, heading);
+            card.append(
+              heading,
+              multiElement('p', 'multi-patient-id', '患者标识：' + patient.patient_id + '（由后端提供，不可修改）'),
+            );
+            const fields = multiElement('div', 'multi-patient-fields');
+            const nameLabel = multiElement('label', '', '患者姓名（可纠正）');
+            const nameInput = document.createElement('input');
+            nameInput.type = 'text';
+            nameInput.maxLength = 100;
+            nameInput.value = patient.patient_name || '';
+            nameInput.autocomplete = 'off';
+            nameInput.dataset.patientName = patient.patient_id;
+            nameInput.addEventListener('input', () => {
+              patient.patient_name = nameInput.value;
+              refreshMultiPatientOptionLabels();
+            });
+            nameLabel.appendChild(nameInput);
+            const mrnLabel = multiElement('label', '', 'MRN / 病历号（可纠正）');
+            const mrnInput = document.createElement('input');
+            mrnInput.type = 'text';
+            mrnInput.maxLength = 64;
+            mrnInput.value = patient.patient_mrn || '';
+            mrnInput.autocomplete = 'off';
+            mrnInput.dataset.patientMrn = patient.patient_id;
+            mrnInput.addEventListener('input', () => {
+              patient.patient_mrn = mrnInput.value;
+              refreshMultiPatientOptionLabels();
+            });
+            mrnLabel.appendChild(mrnInput);
+            fields.append(nameLabel, mrnLabel);
+            const pagesNode = multiElement('p', 'multi-patient-pages');
+            multiPatientPageNodes.set(patient.patient_id, pagesNode);
+            multiPatientOptionNodes.set(patient.patient_id, []);
+            card.append(fields, pagesNode);
+            elements.multiPatientList.appendChild(card);
+          });
+
+          multiGroup.pages.forEach((page) => {
+            const row = multiElement('tr');
+            multiPageRows.set(page.page_number, row);
+            row.dataset.pageNumber = String(page.page_number);
+            row.appendChild(multiElement('td', '', '第 ' + page.page_number + ' 页'));
+            const evidenceCell = multiElement('td');
+            const badge = multiElement('span', 'assignment-badge ' + page.assignment, MULTI_ASSIGNMENT_TEXT[page.assignment]);
+            evidenceCell.appendChild(badge);
+            if (page.needs_confirmation && (page.assignment === 'explicit' || page.assignment === 'inherited')) {
+              evidenceCell.appendChild(multiElement('div', 'settings-note', '需人工确认'));
+            }
+            row.appendChild(evidenceCell);
+            row.appendChild(multiElement('td', '', Number(page.confidence || 0).toFixed(1)));
+            const actionCell = multiElement('td');
+            const select = document.createElement('select');
+            select.className = 'multi-page-assignment';
+            select.dataset.pageAssignment = String(page.page_number);
+            select.setAttribute('aria-label', '第 ' + page.page_number + ' 页确认归属');
+            if (page.assignment === 'conflict') {
+              select.appendChild(multiOption('排除此页（身份冲突，必须排除）', 'excluded'));
+              select.value = 'excluded';
+              select.disabled = true;
+            } else if (page.assignment === 'skipped') {
+              select.appendChild(multiOption('图片或空白页，无需分配', 'skipped'));
+              select.value = 'skipped';
+              select.disabled = true;
+            } else {
+              select.appendChild(multiOption('请选择患者或排除', ''));
+              multiGroup.patients.forEach((patient) => {
+                const option = multiOption(multiPatientLabel(patient), patient.patient_id);
+                option.dataset.patientOption = patient.patient_id;
+                multiPatientOptionNodes.get(patient.patient_id).push(option);
+                select.appendChild(option);
+              });
+              select.appendChild(multiOption('排除此页（不进入任何报告）', 'excluded'));
+              select.value = multiAssignments.get(page.page_number) || '';
+              select.disabled = false;
+              select.addEventListener('change', () => {
+                multiAssignments.set(page.page_number, select.value);
+                validateMultiAssignments(false);
+                refreshMultiPatientSummaries();
+              });
+            }
+            actionCell.appendChild(select);
+            row.appendChild(actionCell);
+            elements.multiPageList.appendChild(row);
+          });
+          refreshMultiPatientSummaries();
+          validateMultiAssignments(false);
+        }
+
+        function refreshMultiPatientOptionLabels() {
+          multiGroup.patients.forEach((patient) => {
+            (multiPatientOptionNodes.get(patient.patient_id) || []).forEach((option) => {
+              option.textContent = multiPatientLabel(patient);
+            });
+            const heading = multiPatientHeadingNodes.get(patient.patient_id);
+            if (heading) heading.textContent = multiPatientLabel(patient);
+          });
+        }
+
+        function refreshMultiPatientSummaries() {
+          if (!multiGroup) return;
+          multiGroup.patients.forEach((patient) => {
+            const pages = [];
+            multiAssignments.forEach((value, pageNumber) => {
+              if (value === patient.patient_id) pages.push(pageNumber);
+            });
+            pages.sort((a, b) => a - b);
+            const node = multiPatientPageNodes.get(patient.patient_id);
+            if (node) node.textContent = pages.length
+              ? '已确认 ' + pages.length + ' 页：' + pages.join('、')
+              : '尚未分配页面；每位患者至少需要一页可读病历。';
+          });
+        }
+
+        function validateMultiAssignments(showSuccess = false) {
+          const errors = [];
+          const unresolved = [];
+          const invalidRows = new Set();
+          const excludedPages = [];
+          const pagesByPatient = new Map(multiGroup ? multiGroup.patients.map((patient) => [patient.patient_id, []]) : []);
+          if (!multiGroup) return { valid: false, errors: ['多人拆分状态不可用'], payload: null };
+          multiGroup.pages.forEach((page) => {
+            const value = multiAssignments.get(page.page_number);
+            if (page.assignment === 'skipped') return;
+            if (page.assignment === 'conflict') {
+              if (value !== 'excluded') {
+                errors.push('第 ' + page.page_number + ' 页存在身份冲突，必须排除');
+                invalidRows.add(page.page_number);
+              } else excludedPages.push(page.page_number);
+              return;
+            }
+            if (value === 'excluded') {
+              excludedPages.push(page.page_number);
+              return;
+            }
+            if (!value || !pagesByPatient.has(value)) {
+              unresolved.push(page.page_number);
+              invalidRows.add(page.page_number);
+              return;
+            }
+            pagesByPatient.get(value).push(page.page_number);
+          });
+          if (unresolved.length) errors.push('第 ' + unresolved.join('、') + ' 页尚未分配或排除');
+          multiGroup.patients.forEach((patient) => {
+            const pages = pagesByPatient.get(patient.patient_id) || [];
+            pages.sort((a, b) => a - b);
+            if (!pages.length) errors.push(multiPatientLabel(patient) + ' 至少需要一页可读病历');
+          });
+          multiPageRows.forEach((row, pageNumber) => {
+            row.classList.toggle('multi-row-error', invalidRows.has(pageNumber));
+          });
+          excludedPages.sort((a, b) => a - b);
+          const payload = {
+            patients: multiGroup.patients.map((patient) => ({
+              patient_id: patient.patient_id,
+              patient_name: String(patient.patient_name || '').trim() || null,
+              patient_mrn: String(patient.patient_mrn || '').trim() || null,
+              page_numbers: (pagesByPatient.get(patient.patient_id) || []).slice(),
+            })),
+            excluded_pages: excludedPages,
+          };
+          const valid = errors.length === 0;
+          elements.multiConfirmGroup.disabled = multiConfirmPending || !valid;
+          elements.multiValidation.className = 'center-message ' + (valid && showSuccess ? 'success' : valid ? '' : 'error');
+          elements.multiValidation.textContent = valid
+            ? (showSuccess ? '本地校验通过：所有可读页均已分配或排除，冲突页已全部排除。' : '请核对后确认；提交前会再次执行本地完整性校验。')
+            : errors.join('；');
+          return { valid, errors, payload };
+        }
+
+        function normalizeConfirmedReports(data) {
+          if (!multiGroup || !Array.isArray(data.reports) || !data.reports.length) {
+            throw new Error('确认响应未返回各患者独立报告，请勿重复提交');
+          }
+          const knownPatients = new Set(multiGroup.patients.map((patient) => patient.patient_id));
+          const seenPatients = new Set();
+          const seenReports = new Set();
+          const seenTasks = new Set();
+          const reports = data.reports.map((item) => {
+            const patientId = String(item.patient_id || '');
+            const reportId = String(item.report_id || '');
+            const taskId = String(item.task_id || '');
+            if (!knownPatients.has(patientId) || seenPatients.has(patientId)) throw new Error('确认响应的患者标识无效或重复');
+            if (!reportId || !taskId || seenReports.has(reportId) || seenTasks.has(taskId)) throw new Error('确认响应的报告或任务标识无效');
+            seenPatients.add(patientId);
+            seenReports.add(reportId);
+            seenTasks.add(taskId);
+            return { ...item, patient_id: patientId, report_id: reportId, task_id: taskId };
+          });
+          if (seenPatients.size !== knownPatients.size) throw new Error('确认响应缺少部分患者报告');
+          return reports;
+        }
+
+        function applyMultiConfirmedGroup(data, reportsOverride) {
+          if (!multiGroup || !data || String(data.group_id || multiGroup.group_id) !== multiGroup.group_id) {
+            throw new Error('多人拆分编号不一致，已停止更新页面');
+          }
+          const previousReports = new Map((multiGroup.reports || []).map((report) => [report.report_id, report]));
+          const incomingReports = reportsOverride || (Array.isArray(data.reports) ? data.reports : null);
+          let reports = multiGroup.reports || [];
+          if (incomingReports) {
+            reports = incomingReports.map((item) => {
+              const reportId = String(item.report_id || '');
+              const previous = previousReports.get(reportId) || {};
+              if (previous.patient_id && item.patient_id && previous.patient_id !== item.patient_id) {
+                throw new Error('报告与患者绑定发生变化，已停止更新以避免串患者');
+              }
+              return {
+                ...previous,
+                ...item,
+                report_id: reportId,
+                patient_id: String(item.patient_id || previous.patient_id || ''),
+                access_code: item.access_code || previous.access_code || null,
+              };
+            });
+          }
+          multiGroup = {
+            ...multiGroup,
+            ...data,
+            group_id: multiGroup.group_id,
+            file_id: String(data.file_id || multiGroup.file_id || uploadedFileIds[0] || ''),
+            patients: Array.isArray(data.patients) ? data.patients.map((patient) => ({
+              ...patient,
+              patient_id: String(patient.patient_id),
+              patient_name: patient.patient_name || '',
+              patient_mrn: patient.patient_mrn || '',
+            })) : multiGroup.patients,
+            reports,
+          };
+          saveMultiGroup();
+        }
+
+        async function confirmMultiPatientGroup() {
+          if (!multiGroup || multiConfirmPending || multiGroup.status !== 'awaiting_confirmation') return;
+          const validation = validateMultiAssignments(true);
+          if (!validation.valid) {
+            setMultiGroupMessage('请先完成逐页归属校验，再创建报告。', 'warning');
+            return;
+          }
+          const generation = multiGeneration;
+          const groupId = multiGroup.group_id;
+          multiConfirmPending = true;
+          elements.multiConfirmGroup.disabled = true;
+          elements.multiRefreshGroup.disabled = true;
+          setMultiGroupMessage('正在按确认结果创建每位患者的独立任务与报告…', 'warning');
+          updateActionState();
+          try {
+            const data = await requestJson('/multi-patient/groups/' + encodeURIComponent(groupId) + '/confirm?wait=false', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(validation.payload),
+            });
+            if (generation !== multiGeneration || !multiGroup || multiGroup.group_id !== groupId) return;
+            const reports = normalizeConfirmedReports(data);
+            applyMultiConfirmedGroup({ ...data, status: data.status || 'processing' }, reports);
+            multiConfirmPending = false;
+            elements.multiConfirmation.hidden = true;
+            elements.multiResults.hidden = false;
+            elements.progressSection.hidden = true;
+            elements.uploadSection.querySelector('.status-pill').textContent = '多人报告分析中';
+            setMultiGroupMessage('');
+            renderMultiReportList();
+            startMultiPolling();
+            loadReports();
+            elements.multiResults.scrollIntoView({ behavior: reducedMotion.matches ? 'auto' : 'smooth', block: 'start' });
+          } catch (error) {
+            if (generation !== multiGeneration) return;
+            multiConfirmPending = false;
+            setMultiGroupMessage('确认拆分失败：' + error.message + '。页面尚未显示任何新报告，请核对后重试。');
+            if (error.status === 409) refreshMultiPatientGroup();
+          } finally {
+            if (generation === multiGeneration) {
+              multiConfirmPending = false;
+              elements.multiRefreshGroup.disabled = false;
+              validateMultiAssignments(false);
+              updateActionState();
+            }
+          }
+        }
+
+        function mergeMultiReport(reportId, incoming) {
+          const current = multiReportById(reportId);
+          if (!current || !incoming) return null;
+          if (incoming.task_id && current.task_id && String(incoming.task_id) !== current.task_id) {
+            throw new Error('任务标识与报告不匹配，已阻止跨报告更新');
+          }
+          if (incoming.patient_id && current.patient_id && String(incoming.patient_id) !== current.patient_id) {
+            throw new Error('患者标识与报告不匹配，已阻止跨患者更新');
+          }
+          const merged = {
+            ...current,
+            ...incoming,
+            report_id: current.report_id,
+            task_id: current.task_id,
+            patient_id: current.patient_id,
+            access_code: incoming.access_code || current.access_code || null,
+          };
+          if (multiReportIsComplete(merged)) merged.progress = 100;
+          else {
+            const oldProgress = Number(current.progress);
+            const newProgress = Number(incoming.progress);
+            if (Number.isFinite(oldProgress) && Number.isFinite(newProgress)) merged.progress = Math.max(oldProgress, newProgress);
+          }
+          multiGroup.reports = multiGroup.reports.map((report) => report.report_id === reportId ? merged : report);
+          return merged;
+        }
+
+        function updateMultiGroupStatusFromReports() {
+          if (!multiGroup) return;
+          const reports = multiGroup.reports || [];
+          const completed = reports.filter(multiReportIsComplete).length;
+          const failed = reports.filter(multiReportIsFailed).length;
+          let label = '各报告分析中';
+          if (reports.length && completed === reports.length) label = '全部报告已生成';
+          else if (reports.length && completed + failed === reports.length) label = failed === reports.length ? '报告分析失败' : '部分报告已生成';
+          elements.multiGroupStatus.textContent = label + ' · ' + completed + '/' + reports.length;
+          elements.multiGroupStatus.className = 'status-pill ' + (completed === reports.length && reports.length ? 'success' : 'demo');
+          elements.uploadSection.querySelector('.status-pill').textContent = completed === reports.length && reports.length ? '多人分析完成' : '多人报告分析中';
+        }
+
+        function multiReportSignature() {
+          return (multiGroup && multiGroup.reports ? multiGroup.reports : [])
+            .map((report) => report.report_id + ':' + report.patient_id).join('|');
+        }
+
+        function renderMultiReportList() {
+          if (!multiGroup) return;
+          elements.multiSection.hidden = false;
+          elements.multiConfirmation.hidden = true;
+          elements.multiResults.hidden = false;
+          elements.multiPatientCount.textContent = (multiGroup.patients || []).length + ' 位患者 · 每人一份独立报告';
+          elements.multiGroupReference.textContent = '拆分编号：' + multiGroup.group_id;
+          const signature = multiReportSignature();
+          if (elements.multiReportList.dataset.signature !== signature) {
+            elements.multiReportList.replaceChildren();
+            multiReportNodes = new Map();
+            (multiGroup.reports || []).forEach((report, index) => {
+              const nodes = buildMultiReportCard(report, index);
+              multiReportNodes.set(report.report_id, nodes);
+              elements.multiReportList.appendChild(nodes.card);
+            });
+            elements.multiReportList.dataset.signature = signature;
+          }
+          (multiGroup.reports || []).forEach((report) => updateMultiReportCard(report));
+          updateMultiGroupStatusFromReports();
+          updateMultiSelectAllState();
+        }
+
+        function buildMultiReportCard(report, index) {
+          const card = multiElement('article', 'multi-report-card');
+          card.dataset.reportId = report.report_id;
+          card.dataset.patientId = report.patient_id;
+          const header = multiElement('div', 'multi-report-header');
+          const headingWrap = multiElement('div');
+          const name = multiElement('h3');
+          const meta = multiElement('p', 'multi-report-meta');
+          headingWrap.append(name, meta);
+          const status = multiElement('span', 'status-pill demo');
+          header.append(headingWrap, status);
+
+          const progressBlock = multiElement('div', 'multi-report-progress');
+          const progressTop = multiElement('div', 'multi-report-progress-top');
+          const progressLabel = multiElement('span', '', '独立 AI 分析进度');
+          const percent = multiElement('strong', '', '0%');
+          progressTop.append(progressLabel, percent);
+          const progressTrack = multiElement('div', 'progress-track');
+          progressTrack.setAttribute('role', 'progressbar');
+          progressTrack.setAttribute('aria-label', '该患者独立 AI 分析进度');
+          progressTrack.setAttribute('aria-valuemin', '0');
+          progressTrack.setAttribute('aria-valuemax', '100');
+          progressTrack.setAttribute('aria-valuenow', '0');
+          const fill = multiElement('div', 'progress-fill');
+          progressTrack.appendChild(fill);
+          const note = multiElement('p', '', '等待分析');
+          note.setAttribute('aria-live', 'polite');
+          progressBlock.append(progressTop, progressTrack, note);
+
+          const access = multiElement('div', 'multi-access-credentials');
+          access.hidden = true;
+          const preview = multiElement('div', 'multi-free-preview');
+          preview.hidden = true;
+
+          const payment = multiElement('div', 'multi-payment-panel');
+          payment.hidden = true;
+          payment.appendChild(multiElement('h4', '', '解锁这位患者的完整报告'));
+          const paymentActions = multiElement('div', 'multi-payment-actions');
+          const selectLabel = multiElement('label', 'multi-report-select');
+          const select = document.createElement('input');
+          select.type = 'checkbox';
+          select.setAttribute('aria-label', '选择此报告进行逐份支付');
+          select.addEventListener('change', () => {
+            if (select.checked) multiSelectedReports.add(report.report_id);
+            else multiSelectedReports.delete(report.report_id);
+          });
+          selectLabel.append(select, document.createTextNode('加入“全选”支付'));
+          const unlock = multiElement('button', 'btn btn-primary btn-small', '解锁此报告');
+          unlock.type = 'button';
+          unlock.addEventListener('click', () => prepareMultiReportPayment(report.report_id));
+          paymentActions.append(selectLabel, unlock);
+          const payPalContainer = multiElement('div', 'paypal-button-container');
+          payPalContainer.id = 'multi-paypal-' + index;
+          payPalContainer.hidden = true;
+          payPalContainer.dataset.reportId = report.report_id;
+          const paymentFeedback = multiElement('p', 'multi-report-feedback', '此报告使用独立 PayPal 订单，不会解锁其他患者。');
+          payment.append(paymentActions, payPalContainer, paymentFeedback);
+
+          const full = multiElement('div', 'multi-full-report');
+          full.hidden = true;
+          const fullTitle = multiElement('h4', '', '完整病历分析报告');
+          const chapters = multiElement('div', 'report-chapters');
+          const reportActions = multiElement('div', 'multi-report-actions');
+          const pdfButton = multiElement('button', 'btn btn-secondary btn-small', '下载此患者 PDF 报告');
+          pdfButton.type = 'button';
+          pdfButton.addEventListener('click', () => downloadMultiReportPdf(report.report_id));
+          reportActions.appendChild(pdfButton);
+          const pdfFeedback = multiElement('p', 'multi-report-feedback');
+          pdfFeedback.setAttribute('role', 'alert');
+          full.append(fullTitle, chapters, reportActions, pdfFeedback);
+          card.append(header, progressBlock, access, preview, payment, full);
+          return {
+            card, name, meta, status, progressBlock, progressTrack, fill, percent, note,
+            access, accessCode: null, preview, previewSignature: '', payment, paymentActions, select, unlock,
+            payPalContainer, paymentFeedback, full, chapters, fullSignature: '', pdfButton, pdfFeedback,
+          };
+        }
+
+        function updateMultiAccessCard(nodes, report) {
+          if (nodes.accessCode === (report.access_code || null)) return;
+          nodes.accessCode = report.access_code || null;
+          nodes.access.replaceChildren();
+          if (!nodes.accessCode) {
+            nodes.access.hidden = true;
+            return;
+          }
+          nodes.access.hidden = false;
+          nodes.access.appendChild(multiElement('h4', '', '请立即分别保存报告编号与提取码'));
+          nodes.access.appendChild(multiElement('p', 'multi-report-meta', '报告编号：' + report.report_id));
+          const credential = multiElement('div', 'credential-item');
+          credential.appendChild(multiElement('span', 'credential-label', '此患者独立提取码（仅本次显示）'));
+          const input = document.createElement('input');
+          input.readOnly = true;
+          input.value = report.access_code;
+          input.setAttribute('aria-label', '此患者独立报告提取码');
+          input.addEventListener('focus', () => input.select());
+          const copy = multiElement('button', 'btn btn-secondary btn-small', '复制此患者提取码');
+          copy.type = 'button';
+          const feedback = multiElement('p', 'multi-report-feedback');
+          copy.addEventListener('click', async () => {
+            try {
+              await copyText(report.access_code);
+              feedback.textContent = '提取码已复制，请安全保存。';
+              feedback.className = 'multi-report-feedback success';
+            } catch (error) {
+              feedback.textContent = '自动复制失败，请手动选择并复制。';
+              feedback.className = 'multi-report-feedback error';
+            }
+          });
+          credential.append(input, copy, feedback);
+          nodes.access.appendChild(credential);
+          nodes.access.appendChild(multiElement('p', 'credentials-warning', '每位患者的提取码不同，不能混用。刷新后不再显示提取码，可通过“我的报告”恢复或认领。'));
+        }
+
+        function updateMultiPreviewCard(nodes, report) {
+          const previewData = report.preview || report.report_preview || report.free_preview || {};
+          const signature = JSON.stringify(previewData);
+          if (nodes.previewSignature === signature) return;
+          nodes.previewSignature = signature;
+          nodes.preview.replaceChildren();
+          nodes.preview.appendChild(multiElement('h4', '', '此患者免费预览'));
+          nodes.preview.appendChild(multiElement('p', '', previewData.summary ? String(previewData.summary) : '暂未提供摘要，请稍后刷新报告。'));
+          nodes.preview.appendChild(multiElement('p', '', '推荐科室：' + (previewData.specialty ? String(previewData.specialty) : '待医生评估')));
+          if (Array.isArray(previewData.key_findings) && previewData.key_findings.length) {
+            nodes.preview.appendChild(multiElement('p', '', '关注重点：' + previewData.key_findings.map(String).join('；')));
+          }
+          nodes.preview.appendChild(multiElement('p', 'preview-disclaimer', 'AI 整理仅供参考，不构成诊断、治疗或就医建议。'));
+        }
+
+        function updateMultiFullReportCard(nodes, report) {
+          const fullReport = report.full_report || report.report_full || null;
+          const signature = fullReport ? JSON.stringify(fullReport) : '';
+          if (nodes.fullSignature === signature) return;
+          nodes.fullSignature = signature;
+          nodes.chapters.replaceChildren();
+          if (!fullReport) return;
+          const sections = Array.isArray(fullReport.sections) ? fullReport.sections : [];
+          sections.forEach((section, index) => {
+            const article = multiElement('article', 'report-chapter');
+            const heading = multiElement('div', 'chapter-heading');
+            heading.append(
+              multiElement('span', 'chapter-number', String(index + 1).padStart(2, '0')),
+              multiElement('h3', '', section.title || ('章节 ' + (index + 1))),
+            );
+            article.append(heading, multiElement('p', 'chapter-body', section.content || ''));
+            nodes.chapters.appendChild(article);
+          });
+          if (!sections.length && Array.isArray(fullReport.paragraphs)) {
+            const article = multiElement('article', 'report-chapter');
+            article.appendChild(multiElement('h3', '', fullReport.title || '完整报告'));
+            fullReport.paragraphs.forEach((paragraph) => article.appendChild(multiElement('p', 'chapter-body', paragraph)));
+            nodes.chapters.appendChild(article);
+          }
+          const doctors = Array.isArray(fullReport.doctors) ? fullReport.doctors : [];
+          if (doctors.length) {
+            const article = multiElement('article', 'report-chapter');
+            article.appendChild(multiElement('h3', '', '推荐医生'));
+            doctors.forEach((doctor) => {
+              const specialties = Array.isArray(doctor.specialties) ? doctor.specialties.join('、') : (doctor.specialties || '');
+              article.appendChild(multiElement('p', 'chapter-body',
+                [doctor.name, doctor.title, doctor.department].filter(Boolean).join(' · ')
+                + '\n' + [doctor.hospital, doctor.hospital_level].filter(Boolean).join(' · ')
+                + (specialties ? '\n擅长：' + specialties : '')));
+            });
+            nodes.chapters.appendChild(article);
+          }
+          if (!nodes.chapters.children.length) {
+            nodes.chapters.appendChild(multiElement('p', '', '支付已确认，完整内容暂未返回。请稍后刷新此报告，无需重复支付。'));
+          }
+        }
+
+        function updateMultiReportCard(report) {
+          const nodes = multiReportNodes.get(report.report_id);
+          if (!nodes || nodes.card.dataset.patientId !== report.patient_id) return;
+          const patient = multiPatientById(report.patient_id);
+          const complete = multiReportIsComplete(report);
+          const failed = multiReportIsFailed(report);
+          const expired = multiReportIsExpired(report);
+          const paid = multiReportIsPaid(report);
+          nodes.name.textContent = multiPatientLabel(patient || report);
+          const pages = report.source_page_numbers || (patient && patient.page_numbers) || [];
+          nodes.meta.textContent = '患者标识：' + report.patient_id + ' · 报告：' + report.report_id
+            + (report.patient_mrn || (patient && patient.patient_mrn) ? ' · MRN：' + (report.patient_mrn || patient.patient_mrn) : '')
+            + (pages.length ? ' · 来源页：' + pages.join('、') : '');
+          nodes.status.textContent = expired ? '已过期' : failed ? '分析失败' : complete ? (paid ? '已解锁' : '免费预览已生成') : '分析中';
+          nodes.status.className = 'status-pill ' + (complete && !expired ? 'success' : 'demo');
+          const numericProgress = Number(report.progress);
+          const progress = complete ? 100 : Number.isFinite(numericProgress) ? Math.max(0, Math.min(100, Math.round(numericProgress))) : 0;
+          nodes.percent.textContent = progress + '%';
+          nodes.fill.style.width = progress + '%';
+          nodes.progressTrack.setAttribute('aria-valuenow', String(progress));
+          nodes.note.textContent = expired ? '报告已过期' : failed ? (report.error || '此患者报告分析失败') : complete ? '此患者分析完成' : analysisStageText(report.current_step);
+          nodes.card.dataset.paid = String(paid);
+          updateMultiAccessCard(nodes, report);
+          nodes.preview.hidden = !complete || expired;
+          if (complete) updateMultiPreviewCard(nodes, report);
+          const canPay = complete && !paid && !expired;
+          const fullReport = report.full_report || report.report_full || null;
+          const needsPaidRecovery = paid && !fullReport && !expired;
+          nodes.payment.hidden = !canPay && !needsPaidRecovery;
+          nodes.paymentActions.hidden = !canPay;
+          nodes.select.disabled = !canPay;
+          nodes.select.checked = canPay && multiSelectedReports.has(report.report_id);
+          nodes.unlock.disabled = !canPay;
+          if (paid) {
+            multiSelectedReports.delete(report.report_id);
+            nodes.payPalContainer.hidden = true;
+          }
+          nodes.full.hidden = !paid || !fullReport || expired;
+          if (paid && fullReport) updateMultiFullReportCard(nodes, report);
+          if (paid && !fullReport) {
+            nodes.paymentFeedback.textContent = '支付已确认，正在恢复此患者完整报告；请勿重复支付。';
+            nodes.paymentFeedback.className = 'multi-report-feedback success';
+          }
+        }
+
+        function updateMultiSelectAllState() {
+          const candidates = (multiGroup && multiGroup.reports ? multiGroup.reports : [])
+            .filter((report) => multiReportIsComplete(report) && !multiReportIsPaid(report) && !multiReportIsExpired(report));
+          elements.multiSelectAll.textContent = candidates.length ? '全选并逐份解锁（' + candidates.length + ' 份）' : '暂无可解锁报告';
+          elements.multiSelectAll.disabled = multiBulkPaymentPending || candidates.length === 0;
+          updateActionState();
+          elements.multiRefreshReports.disabled = multiGroupRefreshPending;
+        }
+
+        async function fetchMultiReportDetail(reportId, generation = multiGeneration) {
+          if (!reportId || generation !== multiGeneration) return null;
+          if (multiDetailPromises.has(reportId)) return multiDetailPromises.get(reportId);
+          const groupId = multiGroup && multiGroup.group_id;
+          const promise = (async () => {
+            try {
+              const detail = await requestJson('/reports/' + encodeURIComponent(reportId));
+              if (generation !== multiGeneration || !multiGroup || multiGroup.group_id !== groupId) return null;
+              const merged = mergeMultiReport(reportId, detail);
+              if (merged) updateMultiReportCard(merged);
+              updateMultiSelectAllState();
+              return merged;
+            } catch (error) {
+              if (generation !== multiGeneration) return null;
+              const nodes = multiReportNodes.get(reportId);
+              if (nodes && [401, 403, 404, 410].includes(error.status)) {
+                nodes.paymentFeedback.textContent = '此报告暂时无法恢复：' + error.message;
+                nodes.paymentFeedback.className = 'multi-report-feedback error';
+              }
+              return null;
+            } finally {
+              if (generation === multiGeneration) multiDetailPromises.delete(reportId);
+            }
+          })();
+          multiDetailPromises.set(reportId, promise);
+          return promise;
+        }
+
+        async function startMultiPolling() {
+          if (!multiGroup || multiPollPromise) return multiPollPromise;
+          const generation = multiGeneration;
+          const groupId = multiGroup.group_id;
+          const promise = (async () => {
+            for (let attempt = 0; attempt < 120; attempt += 1) {
+              if (generation !== multiGeneration || !multiGroup || multiGroup.group_id !== groupId) return;
+              const reports = multiGroup.reports || [];
+              reports.filter(multiReportIsComplete).forEach((report) => {
+                if (!report.preview && !report.full_report) fetchMultiReportDetail(report.report_id, generation);
+              });
+              const pending = reports.filter((report) => (
+                report.task_id && !multiReportIsComplete(report) && !multiReportIsFailed(report) && !multiReportIsExpired(report)
+              ));
+              if (!pending.length) {
+                updateMultiGroupStatusFromReports();
+                updateMultiSelectAllState();
+                loadReports();
+                return;
+              }
+              await wait(10000);
+              if (generation !== multiGeneration || !multiGroup || multiGroup.group_id !== groupId) return;
+              await Promise.all(pending.map(async (snapshot) => {
+                try {
+                  const data = await requestJson('/status/' + encodeURIComponent(snapshot.task_id));
+                  if (generation !== multiGeneration || !multiGroup || multiGroup.group_id !== groupId) return;
+                  const merged = mergeMultiReport(snapshot.report_id, data);
+                  if (merged) {
+                    updateMultiReportCard(merged);
+                    if (multiReportIsComplete(merged)) fetchMultiReportDetail(merged.report_id, generation);
+                  }
+                } catch (error) {
+                  if (generation !== multiGeneration) return;
+                  if ([401, 403, 404, 410].includes(error.status)) {
+                    const nodes = multiReportNodes.get(snapshot.report_id);
+                    if (nodes) nodes.note.textContent = '进度恢复失败：' + error.message;
+                  }
+                }
+              }));
+              if (generation !== multiGeneration) return;
+              updateMultiGroupStatusFromReports();
+              updateMultiSelectAllState();
+            }
+            if (generation === multiGeneration) setMultiGroupMessage('部分报告仍在分析，请稍后点击“刷新各报告状态”。', 'warning');
+          })();
+          multiPollPromise = promise;
+          try {
+            await promise;
+          } finally {
+            if (multiPollPromise === promise) multiPollPromise = null;
+          }
+        }
+
+        async function refreshMultiPatientGroup() {
+          if (!multiGroup || multiGroupRefreshPending) return;
+          const generation = multiGeneration;
+          const groupId = multiGroup.group_id;
+          multiGroupRefreshPending = true;
+          elements.multiRefreshGroup.disabled = true;
+          updateMultiSelectAllState();
+          setMultiGroupMessage('正在从后端重新读取拆分与报告状态…', 'warning');
+          try {
+            const data = await requestJson('/multi-patient/groups/' + encodeURIComponent(groupId));
+            if (generation !== multiGeneration || !multiGroup || multiGroup.group_id !== groupId) return;
+            if (data.status === 'awaiting_confirmation') {
+              multiGroupRefreshPending = false;
+              enterMultiPatientPreview(data);
+              return;
+            }
+            applyMultiConfirmedGroup(data);
+            setMultiGroupMessage('');
+            renderMultiReportList();
+            startMultiPolling();
+          } catch (error) {
+            if (generation !== multiGeneration) return;
+            setMultiGroupMessage('刷新多人拆分失败：' + error.message);
+          } finally {
+            if (generation === multiGeneration) {
+              multiGroupRefreshPending = false;
+              elements.multiRefreshGroup.disabled = false;
+              updateMultiSelectAllState();
+            }
+          }
+        }
+
+        async function resumeMultiPatientGroup() {
+          const saved = loadSavedMultiGroup();
+          if (!saved || multiGroup) return;
+          const generation = ++multiGeneration;
+          multiGroup = {
+            group_id: String(saved.groupId),
+            file_id: saved.fileId ? String(saved.fileId) : '',
+            status: 'restoring', patients: [], pages: [], reports: [],
+          };
+          elements.multiSection.hidden = false;
+          elements.multiConfirmation.hidden = true;
+          elements.multiResults.hidden = true;
+          elements.multiGroupStatus.textContent = '正在恢复多人拆分';
+          elements.multiGroupReference.textContent = '拆分编号：' + saved.groupId;
+          try {
+            if (reportCenterReady) await reportCenterReady;
+            if (generation !== multiGeneration) return;
+            const data = await requestJson('/multi-patient/groups/' + encodeURIComponent(saved.groupId));
+            if (generation !== multiGeneration) return;
+            if (data.status === 'awaiting_confirmation') {
+              enterMultiPatientPreview(data);
+            } else {
+              applyMultiConfirmedGroup(data);
+              renderMultiReportList();
+              startMultiPolling();
+            }
+            setMultiGroupMessage('');
+          } catch (error) {
+            if (generation !== multiGeneration) return;
+            if (error.status === 404 || error.status === 410) {
+              clearMultiPatientState();
+              return;
+            }
+            elements.multiResults.hidden = false;
+            elements.multiReportList.replaceChildren();
+            elements.multiReportSummary.textContent = '报告列表尚未恢复，请点击“刷新各报告状态”重试。';
+            updateMultiSelectAllState();
+            setMultiGroupMessage('多人拆分恢复失败：' + error.message + '。请点击“刷新各报告状态”，或从“我的报告”逐份恢复。');
+          }
+        }
+
+        async function getMultiPayPalConfig() {
+          if (!multiPayPalConfigPromise) {
+            multiPayPalConfigPromise = requestJson('/pay/config').catch((error) => {
+              multiPayPalConfigPromise = null;
+              throw error;
+            });
+          }
+          return multiPayPalConfigPromise;
+        }
+
+        function multiPaymentIsCurrent(reportId, generation, state) {
+          return generation === multiGeneration && multiPayments.get(reportId) === state && Boolean(multiReportById(reportId));
+        }
+
+        async function prepareMultiReportPayment(reportId) {
+          const report = multiReportById(reportId);
+          if (!report || !multiReportIsComplete(report) || multiReportIsPaid(report) || multiReportIsExpired(report)) return;
+          multiSelectedReports.add(reportId);
+          const nodes = multiReportNodes.get(reportId);
+          if (nodes) nodes.select.checked = true;
+          await renderMultiPayPalButtons(reportId);
+        }
+
+        async function renderMultiPayPalButtons(reportId) {
+          const report = multiReportById(reportId);
+          const nodes = multiReportNodes.get(reportId);
+          if (!report || !nodes || !multiReportIsComplete(report) || multiReportIsPaid(report)) return;
+          const container = nodes.payPalContainer;
+          if (container.dataset.rendered === 'true' || container.dataset.rendered === 'loading') return;
+          const generation = multiGeneration;
+          const fileId = String(multiGroup.file_id || uploadedFileIds[0] || '');
+          container.hidden = false;
+          container.dataset.rendered = 'loading';
+          setPaymentContainerMessage(container, '正在加载此患者独立支付…');
+          if (!fileId) {
+            container.dataset.rendered = 'false';
+            setPaymentContainerMessage(container, '缺少文件标识，请刷新多人拆分状态后再试。');
+            return;
+          }
+          const state = { orderId: null, orderPromise: null, capture: null };
+          multiPayments.set(reportId, state);
+          try {
+            const cfg = await getMultiPayPalConfig();
+            if (!multiPaymentIsCurrent(reportId, generation, state)) return;
+            if (!cfg.enabled || !cfg.client_id) {
+              container.dataset.rendered = 'false';
+              setPaymentContainerMessage(container, '支付通道即将开通，如需报告请通过人工咨询获取。');
+              return;
+            }
+            await loadPayPalSDK(cfg.client_id, cfg.env);
+            if (!multiPaymentIsCurrent(reportId, generation, state)) return;
+            const buttons = window.paypal.Buttons({
+              style: { layout: 'vertical', color: 'blue', shape: 'rect', label: 'paypal', height: 45 },
+              createOrder: async () => {
+                if (!multiPaymentIsCurrent(reportId, generation, state)) throw new Error('报告状态已变化，请重新打开');
+                if (state.orderId) return state.orderId;
+                if (state.orderPromise) return state.orderPromise;
+                state.orderPromise = (async () => {
+                  const data = await requestJson('/pay/orders', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ file_id: fileId, report_id: reportId }),
+                  });
+                  if (!multiPaymentIsCurrent(reportId, generation, state) || !data.order_id) {
+                    throw new Error('此患者订单状态已变化，请重新打开报告');
+                  }
+                  state.orderId = String(data.order_id);
+                  return state.orderId;
+                })();
+                try {
+                  return await state.orderPromise;
+                } finally {
+                  state.orderPromise = null;
+                }
+              },
+              onApprove: async (data) => {
+                if (!multiPaymentIsCurrent(reportId, generation, state)) return;
+                if (!state.orderId || state.orderId !== data.orderID) throw new Error('支付订单与此患者报告不匹配');
+                if (state.capture && state.capture.orderId === data.orderID) return state.capture.promise;
+                const capturePromise = (async () => {
+                  nodes.paymentFeedback.textContent = '支付已提交，正在确认此患者报告…';
+                  nodes.paymentFeedback.className = 'multi-report-feedback';
+                  const captured = await requestJson('/pay/capture', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ order_id: data.orderID, file_id: fileId, report_id: reportId }),
+                  });
+                  if (!multiPaymentIsCurrent(reportId, generation, state)) return;
+                  if (captured.payment_verified !== true) {
+                    throw new Error('支付服务尚未确认付款，请稍后刷新报告，不要重复支付');
+                  }
+                  let restored = { ...captured, report_id: reportId, patient_id: report.patient_id };
+                  try {
+                    const detail = await requestJson('/reports/' + encodeURIComponent(reportId));
+                    restored = {
+                      ...captured,
+                      ...detail,
+                      report_id: reportId,
+                      patient_id: report.patient_id,
+                      payment_verified: true,
+                    };
+                    const capturedFull = captured.full_report || captured.report_full;
+                    if (!restored.full_report && !restored.report_full && capturedFull) restored.full_report = capturedFull;
+                  } catch (error) {
+                    restored.payment_verified = true;
+                  }
+                  if (!restored.full_report && !restored.report_full) {
+                    throw new Error('付款已确认，但完整报告暂时恢复失败，请稍后刷新，不要重复支付');
+                  }
+                  if (!multiPaymentIsCurrent(reportId, generation, state)) return;
+                  const merged = mergeMultiReport(reportId, restored);
+                  if (merged) updateMultiReportCard(merged);
+                  multiSelectedReports.delete(reportId);
+                  container.hidden = true;
+                  nodes.paymentFeedback.textContent = '支付已确认，仅解锁此患者完整报告。';
+                  nodes.paymentFeedback.className = 'multi-report-feedback success';
+                  updateMultiSelectAllState();
+                  loadReports();
+                  nodes.full.scrollIntoView({ behavior: reducedMotion.matches ? 'auto' : 'smooth', block: 'start' });
+                })();
+                state.capture = { orderId: data.orderID, promise: capturePromise };
+                try {
+                  await capturePromise;
+                } catch (error) {
+                  if (!multiPaymentIsCurrent(reportId, generation, state)) return;
+                  state.capture = null;
+                  nodes.paymentFeedback.textContent = '支付确认失败：' + error.message + '。如已付款，请稍后刷新恢复，不要重复支付。';
+                  nodes.paymentFeedback.className = 'multi-report-feedback error';
+                  throw error;
+                }
+              },
+              onError: () => {
+                if (!multiPaymentIsCurrent(reportId, generation, state)) return;
+                nodes.paymentFeedback.textContent = '此患者支付流程未完成。如已付款，请刷新报告恢复，不要重复支付。';
+                nodes.paymentFeedback.className = 'multi-report-feedback error';
+              },
+            });
+            await buttons.render('#' + container.id);
+            if (!multiPaymentIsCurrent(reportId, generation, state)) return;
+            container.dataset.rendered = 'true';
+          } catch (error) {
+            if (!multiPaymentIsCurrent(reportId, generation, state)) return;
+            container.dataset.rendered = 'false';
+            multiPayments.delete(reportId);
+            setPaymentContainerMessage(container, '支付组件加载失败：' + error.message + '。请点击“解锁此报告”重试。');
+          }
+        }
+
+        async function selectAllMultiReportsForPayment() {
+          if (!multiGroup || multiBulkPaymentPending) return;
+          const candidates = (multiGroup.reports || []).filter((report) => (
+            multiReportIsComplete(report) && !multiReportIsPaid(report) && !multiReportIsExpired(report)
+          ));
+          if (!candidates.length) return;
+          multiBulkPaymentPending = true;
+          updateMultiSelectAllState();
+          try {
+            candidates.forEach((report) => multiSelectedReports.add(report.report_id));
+            candidates.forEach((report) => {
+              const nodes = multiReportNodes.get(report.report_id);
+              if (nodes) nodes.select.checked = true;
+            });
+            for (const report of candidates) {
+              await renderMultiPayPalButtons(report.report_id);
+            }
+            setMultiGroupMessage('已为 ' + candidates.length + ' 份报告分别准备 PayPal 支付。请在各患者卡片中逐份授权；每次扣款只解锁对应报告。', 'success');
+          } finally {
+            multiBulkPaymentPending = false;
+            updateMultiSelectAllState();
+          }
+        }
+
+        async function downloadMultiReportPdf(reportId) {
+          const report = multiReportById(reportId);
+          const nodes = multiReportNodes.get(reportId);
+          if (!report || !nodes || !multiReportIsPaid(report) || nodes.pdfButton.disabled) return;
+          const generation = multiGeneration;
+          const authGeneration = sessionGeneration;
+          const isCurrent = () => (
+            generation === multiGeneration && authGeneration === sessionGeneration
+            && multiReportById(reportId) && multiReportIsPaid(multiReportById(reportId))
+          );
+          nodes.pdfButton.disabled = true;
+          nodes.pdfButton.setAttribute('aria-busy', 'true');
+          nodes.pdfButton.textContent = '正在生成此患者 PDF…';
+          nodes.pdfFeedback.textContent = '';
+          try {
+            const response = await fetch(API_BASE + '/reports/' + encodeURIComponent(reportId) + '/pdf', {
+              credentials: 'same-origin', cache: 'no-store', headers: { Accept: 'application/pdf' },
+            });
+            if (!isCurrent()) return;
+            if (!response.ok) {
+              const data = await response.json().catch(() => ({}));
+              const error = new Error(apiErrorMessage(data, 'PDF 生成失败，请稍后重试'));
+              error.status = response.status;
+              throw error;
+            }
+            const blob = await response.blob();
+            if (!isCurrent()) return;
+            if (!blob.size || (blob.type && !blob.type.toLowerCase().includes('pdf'))) throw new Error('服务器未返回有效的 PDF 文件');
+            const objectUrl = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = objectUrl;
+            link.download = 'MediMatch_' + (reportId.replace(/[^A-Za-z0-9_-]/g, '') || 'report') + '.pdf';
+            document.body.appendChild(link);
+            link.click();
+            link.remove();
+            window.setTimeout(() => URL.revokeObjectURL(objectUrl), 10000);
+          } catch (error) {
+            if (!isCurrent()) return;
+            nodes.pdfFeedback.textContent = error.status === 403
+              ? '此患者完整 PDF 需单独解锁后下载。'
+              : error.status === 409 ? '此患者报告仍在生成中，请稍后重试。' : 'PDF 下载失败：' + error.message;
+            nodes.pdfFeedback.className = 'multi-report-feedback error';
+          } finally {
+            if (generation === multiGeneration && authGeneration === sessionGeneration) {
+              nodes.pdfButton.disabled = false;
+              nodes.pdfButton.setAttribute('aria-busy', 'false');
+              nodes.pdfButton.textContent = '下载此患者 PDF 报告';
+            }
+          }
+        }
+
         function renderFullReport(report) {
           const container = document.querySelector('.report-chapters');
           if (!container) return;
@@ -5004,7 +6614,7 @@
             showConsentModal();
             return;
           }
-          if (!isProcessing && event.dataTransfer) addFiles(event.dataTransfer.files);
+          if (!uploadInteractionLocked() && event.dataTransfer) addFiles(event.dataTransfer.files);
         });
 
         ["dragover", "drop"].forEach((eventName) => {
@@ -5012,7 +6622,7 @@
         });
 
         elements.clearFiles.addEventListener("click", () => {
-          if (isProcessing) return;
+          if (uploadInteractionLocked()) return;
           selectedFiles = [];
           elements.fileInput.value = "";
           showFileError("");
@@ -5041,6 +6651,13 @@
           verifyEmailCode();
         });
         elements.logoutButton.addEventListener('click', logout);
+        if (elements.multiConfirmGroup) {
+          elements.multiConfirmGroup.addEventListener('click', confirmMultiPatientGroup);
+          elements.multiRefreshGroup.addEventListener('click', refreshMultiPatientGroup);
+          elements.multiRefreshReports.addEventListener('click', refreshMultiPatientGroup);
+          elements.multiSelectAll.addEventListener('click', selectAllMultiReportsForPayment);
+        }
+
         document.getElementById('copy-report-id').addEventListener('click', () => copyCredential('report'));
         document.getElementById('copy-access-code').addEventListener('click', () => copyCredential('code'));
         elements.acceptedAccessCode.addEventListener('focus', () => elements.acceptedAccessCode.select());
@@ -5081,6 +6698,7 @@
         updateActionState();
         reportCenterReady = initializeReportCenter();
         resumeAnalysisIfPending();
+        resumeMultiPatientGroup();
       })();
     </script>
   </body>

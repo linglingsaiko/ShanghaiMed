@@ -2573,8 +2573,8 @@
                   <path d="M7 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M8 12h8M8 16h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
                 </svg>
                 <div>
-                  <strong>病历整理建议</strong><br />
-                  请将病历资料整理齐全后打包上传，包括影像报告、化验单、门诊/住院病历、手术记录、病理报告、用药清单。
+                  <strong>单人病历提醒</strong><br />
+                  一次仅上传一位患者的病历；若混放两位及以上患者的病历，会严重影响 AI 分析的准确性，请先按患者拆分后再上传。
                 </div>
               </div>
 
@@ -3842,6 +3842,14 @@
           if (pendingEmail && !elements.analysisEmail.checkValidity()) {
             showFileError('请输入有效的邮箱地址，或清空邮箱后再开始分析');
             elements.analysisEmail.focus();
+            return;
+          }
+
+          // 防呆：确认本次上传的病历仅属于同一位患者，避免多人病历影响分析准确性
+          const singlePatientConfirmed = window.confirm(
+            '请确认：本次上传的病历仅属于【同一位患者】。\n\n一次仅上传一个人的病历；若混放两位及以上患者的病历，会严重影响 AI 分析结果的准确性。\n\n点击"确定"确认为一人份病历并开始分析；点击"取消"返回重新整理。'
+          );
+          if (!singlePatientConfirmed) {
             return;
           }
 

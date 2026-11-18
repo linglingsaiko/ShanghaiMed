@@ -2956,78 +2956,6 @@
           </section>
 
           <section
-            class="card card-pad report-center"
-            id="report-center"
-            aria-labelledby="report-center-title"
-            data-anchor-id="medical-records-upload.report-center"
-          >
-            <div class="section-heading">
-              <div class="section-title-wrap">
-                <div class="report-center-intro">
-                  <h2 id="report-center-title">我的报告</h2>
-                  <p>此设备上的报告会自动列出；换设备时，可用邮箱验证码登录找回。</p>
-                </div>
-              </div>
-              <button class="btn btn-secondary btn-small" id="refresh-reports" type="button">刷新列表</button>
-            </div>
-
-            <div class="report-center-grid">
-              <div class="report-center-panel">
-                <h3>此设备上的报告</h3>
-                <p>只显示报告编号、进度与支付状态。打开时需通过当前安全会话验证。</p>
-                <div class="center-message" id="reports-state" role="status" aria-live="polite">正在加载报告…</div>
-                <ul class="report-list" id="report-list" aria-label="我的病历分析报告"></ul>
-              </div>
-
-              <div class="center-form">
-                <div class="report-center-panel" hidden>
-                  <h3>跨设备找回</h3>
-                  <p>输入分析受理时保存的报告编号和提取码（仅显示一次）。提取码不是报告编号。</p>
-                  <form class="center-form" id="claim-form" autocomplete="off">
-                    <label class="center-field" for="claim-report-id">
-                      报告编号
-                      <input id="claim-report-id" name="report_id" type="text" maxlength="80" required autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="SM-…" />
-                    </label>
-                    <label class="center-field" for="claim-access-code">
-                      提取码
-                      <input id="claim-access-code" name="access_code" type="password" maxlength="200" required autocomplete="off" spellcheck="false" placeholder="输入安全保存的提取码" />
-                    </label>
-                    <div class="center-form-actions">
-                      <button class="btn btn-primary btn-small" id="claim-submit" type="submit">认领并打开报告</button>
-                    </div>
-                  </form>
-                </div>
-
-                <div class="report-center-panel" id="auth-panel" hidden>
-                  <div class="auth-state">
-                    <span id="auth-state">正在检查登录状态…</span>
-                    <button class="btn btn-quiet btn-small" id="logout-button" type="button" hidden>退出登录</button>
-                  </div>
-                  <form class="auth-login-fields" id="email-login-form" autocomplete="on">
-                    <label class="center-field" for="auth-email">
-                      邮箱
-                      <input id="auth-email" name="email" type="email" maxlength="254" required autocomplete="email" inputmode="email" placeholder="you@example.com" />
-                    </label>
-                    <div class="auth-actions">
-                      <button class="btn btn-secondary btn-small" id="request-code" type="button">获取验证码</button>
-                    </div>
-                    <label class="center-field" for="auth-code">
-                      邮箱验证码
-                      <input id="auth-code" name="code" type="text" maxlength="12" inputmode="numeric" autocomplete="one-time-code" spellcheck="false" placeholder="输入收到的验证码" />
-                    </label>
-                    <div class="auth-actions">
-                      <button class="btn btn-primary btn-small" id="verify-code" type="submit">验证码登录</button>
-                    </div>
-                  </form>
-                </div>
-                <div class="center-message" id="email-unavailable" role="status" hidden></div>
-                <div class="center-message" id="auth-feedback" role="status" aria-live="polite" hidden></div>
-                <div class="center-message" id="report-center-feedback" role="status" aria-live="polite" hidden></div>
-              </div>
-            </div>
-          </section>
-
-          <section
             class="card card-pad access-credentials"
             id="access-credentials"
             aria-labelledby="credentials-title"
@@ -3585,6 +3513,78 @@
           </section>
         </div>
       </div>
+          <section
+            class="card card-pad report-center"
+            id="report-center"
+            aria-labelledby="report-center-title"
+            data-anchor-id="medical-records-upload.report-center"
+          >
+            <div class="section-heading">
+              <div class="section-title-wrap">
+                <div class="report-center-intro">
+                  <h2 id="report-center-title">我的报告</h2>
+                  <p>此设备上的报告会自动列出；换设备时，可用邮箱验证码登录找回。</p>
+                </div>
+              </div>
+              <button class="btn btn-secondary btn-small" id="refresh-reports" type="button">刷新列表</button>
+            </div>
+
+            <div class="report-center-grid">
+              <div class="report-center-panel">
+                <h3>此设备上的报告</h3>
+                <p>只显示报告编号、进度与支付状态。打开时需通过当前安全会话验证。</p>
+                <div class="center-message" id="reports-state" role="status" aria-live="polite">正在加载报告…</div>
+                <ul class="report-list" id="report-list" aria-label="我的病历分析报告"></ul>
+              </div>
+
+              <div class="center-form">
+                <div class="report-center-panel" hidden>
+                  <h3>跨设备找回</h3>
+                  <p>输入分析受理时保存的报告编号和提取码（仅显示一次）。提取码不是报告编号。</p>
+                  <form class="center-form" id="claim-form" autocomplete="off">
+                    <label class="center-field" for="claim-report-id">
+                      报告编号
+                      <input id="claim-report-id" name="report_id" type="text" maxlength="80" required autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="SM-…" />
+                    </label>
+                    <label class="center-field" for="claim-access-code">
+                      提取码
+                      <input id="claim-access-code" name="access_code" type="password" maxlength="200" required autocomplete="off" spellcheck="false" placeholder="输入安全保存的提取码" />
+                    </label>
+                    <div class="center-form-actions">
+                      <button class="btn btn-primary btn-small" id="claim-submit" type="submit">认领并打开报告</button>
+                    </div>
+                  </form>
+                </div>
+
+                <div class="report-center-panel" id="auth-panel" hidden>
+                  <div class="auth-state">
+                    <span id="auth-state">正在检查登录状态…</span>
+                    <button class="btn btn-quiet btn-small" id="logout-button" type="button" hidden>退出登录</button>
+                  </div>
+                  <form class="auth-login-fields" id="email-login-form" autocomplete="on">
+                    <label class="center-field" for="auth-email">
+                      邮箱
+                      <input id="auth-email" name="email" type="email" maxlength="254" required autocomplete="email" inputmode="email" placeholder="you@example.com" />
+                    </label>
+                    <div class="auth-actions">
+                      <button class="btn btn-secondary btn-small" id="request-code" type="button">获取验证码</button>
+                    </div>
+                    <label class="center-field" for="auth-code">
+                      邮箱验证码
+                      <input id="auth-code" name="code" type="text" maxlength="12" inputmode="numeric" autocomplete="one-time-code" spellcheck="false" placeholder="输入收到的验证码" />
+                    </label>
+                    <div class="auth-actions">
+                      <button class="btn btn-primary btn-small" id="verify-code" type="submit">验证码登录</button>
+                    </div>
+                  </form>
+                </div>
+                <div class="center-message" id="email-unavailable" role="status" hidden></div>
+                <div class="center-message" id="auth-feedback" role="status" aria-live="polite" hidden></div>
+                <div class="center-message" id="report-center-feedback" role="status" aria-live="polite" hidden></div>
+              </div>
+            </div>
+          </section>
+
     </main>
 
     <footer class="site-footer">

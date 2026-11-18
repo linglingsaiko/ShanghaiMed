@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#0E5A5A" />
     <meta
       name="description"
-      content="ShanghaiMed 病历上传与 AI 医生匹配：上传病历、AI 分析、获取免费预览与完整报告。"
+      content="ShanghaiMed 病历上传与 AI 医生匹配：上传病历、完成支付、AI 分析并获取完整报告。"
     />
     <title>MediMatch 病历分析 · 精准专科医生匹配｜ShanghaiMed</title>
     <style>
@@ -1260,6 +1260,79 @@
         font-size: 11px;
       }
 
+      .payment-panel {
+        margin-top: 20px;
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        background: #fafbfc;
+      }
+
+      .payment-panel-content {
+        display: grid;
+        place-items: center;
+        padding: 32px 24px;
+        text-align: center;
+      }
+
+      .payment-copy {
+        width: 100%;
+        max-width: 500px;
+      }
+
+      .payment-icon {
+        width: 50px;
+        height: 50px;
+        display: grid;
+        place-items: center;
+        margin: 0 auto 12px;
+        border: 1px solid #d5e4e3;
+        border-radius: 50%;
+        background: #fff;
+        color: var(--color-primary);
+        box-shadow: 0 8px 24px rgba(26, 34, 48, 0.09);
+      }
+
+      .payment-copy h3 {
+        margin-bottom: 7px;
+        font-size: 20px;
+      }
+
+      .payment-copy p {
+        margin-bottom: 17px;
+        color: #536172;
+        font-size: 13px;
+      }
+
+      .payment-features {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px 14px;
+        padding: 0;
+        margin: 0 0 18px;
+        list-style: none;
+        color: var(--color-title);
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      .payment-features li::before {
+        content: "✓";
+        margin-right: 5px;
+        color: var(--color-success);
+      }
+
+      .payment-panel .paypal-button-container {
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      @media (max-width: 640px) {
+        .payment-panel-content {
+          padding: 24px 14px;
+        }
+      }
+
       .report-toolbar {
         display: flex;
         align-items: center;
@@ -2062,7 +2135,7 @@
         body.is-paid #access-credentials,
         body.is-paid #upload-section,
         body.is-paid #progress-section,
-        body.is-paid #preview-section,
+        body.is-paid #payment-section,
         body.is-paid .site-footer,
         body.is-paid .report-toolbar,
         body.is-paid .report-demo-note,
@@ -2759,7 +2832,7 @@
             <path d="M12 11v6M12 7h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
           </svg>
           <span>
-            <strong>服务说明：</strong>上传的病历将通过加密连接传输至服务器进行 AI 分析，分析完成后原始文件将被自动删除。报告仅供参考，不构成医疗建议。
+            <strong>服务说明：</strong>上传的病历将通过加密连接传输；按页面提示完成支付后启动 AI 分析，分析完成后原始文件将被自动删除。报告仅供参考，不构成医疗建议。
           </span>
         </div>
 
@@ -2824,7 +2897,7 @@
                     </svg>
                   </div>
                   <p class="drop-title">拖拽文件到这里，或 <span>点击选择文件</span></p>
-                  <p class="drop-hint">支持多文件上传 · 无需注册即可预览</p>
+                  <p class="drop-hint">支持多文件上传 · 无需注册即可使用</p>
                   <div class="format-list" aria-label="支持的文件格式">
                     <span class="format-chip">JPG</span>
                     <span class="format-chip">PNG</span>
@@ -2943,7 +3016,7 @@
                   id="start-analysis"
                   type="button"
                   disabled
-                  aria-controls="progress-section preview-section"
+                  aria-controls="progress-section payment-section"
                   data-anchor-id="medical-records-upload.start-analysis"
                 >
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -2999,7 +3072,7 @@
                 <span class="section-number" aria-hidden="true">02</span>
                 <div>
                   <h2 id="progress-title">上传与 AI 分析进度</h2>
-                  <p>请保持页面打开，分析完成后会自动生成免费预览</p>
+                  <p>支付确认后开始分析；请保持页面打开，完成后将直接展示完整报告</p>
                 </div>
               </div>
               <span class="status-pill" id="progress-pill">处理中</span>
@@ -3099,7 +3172,7 @@
                 <span class="section-number" aria-hidden="true">03</span>
                 <div>
                   <h2 id="multi-patient-title">多人病历拆分</h2>
-                  <p>先核对每位患者与每一页的归属，再分别生成、分别解锁报告</p>
+                  <p>先核对每位患者与每一页的归属，再分别支付、分别生成报告</p>
                 </div>
               </div>
               <span class="status-pill demo" id="multi-group-status">等待确认</span>
@@ -3151,130 +3224,56 @@
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                   <path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
-                <span>拆分已确认。每位患者有独立任务、报告、提取码与支付订单；选择一位患者只会解锁该患者的报告。</span>
+                <span>拆分已确认。每位患者有独立任务、报告、提取码与支付订单；每次支付只启动该患者的 AI 分析。</span>
               </div>
               <div class="multi-confirmation-actions">
                 <button class="btn btn-secondary" id="multi-refresh-reports" type="button">刷新各报告状态</button>
-                <button class="btn btn-primary" id="multi-select-all" type="button" disabled data-anchor-id="medical-records-upload.unlock-all-multi-patient">全选并逐份解锁</button>
+                <button class="btn btn-primary" id="multi-select-all" type="button" disabled data-anchor-id="medical-records-upload.unlock-all-multi-patient">全选并逐份支付</button>
               </div>
-              <p class="settings-note">“全选”会为每份已完成且未支付报告分别显示 PayPal 按钮。每份报告需单独授权、单独扣款，不会合并为一个订单。</p>
+              <p class="settings-note">“全选”会为每份待支付报告分别显示 PayPal 按钮。每份报告需单独授权、单独扣款，不会合并为一个订单。</p>
               <div class="multi-report-list" id="multi-report-list"></div>
             </div>
           </section>
 
           <section
             class="card card-pad"
-            id="preview-section"
-            aria-labelledby="preview-title"
-            data-state="complete"
-            data-anchor-id="medical-records-upload.preview"
+            id="payment-section"
+            aria-labelledby="payment-title"
+            data-anchor-id="medical-records-upload.payment"
             hidden
           >
             <div class="section-heading">
               <div class="section-title-wrap">
                 <span class="section-number" aria-hidden="true">03</span>
                 <div>
-                  <h2 id="preview-title">您的免费预览已生成</h2>
-                  <p>先了解病历摘要与推荐科室，再决定是否解锁完整报告</p>
+                  <h2 id="payment-title">完成支付后开始 AI 分析</h2>
+                  <p id="payment-description">支付成功后开始分析，完成后直接展示完整报告</p>
                 </div>
               </div>
-              <span class="status-pill success">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-                分析完成
-              </span>
+              <span class="status-pill" id="payment-pill">待支付</span>
             </div>
 
-            <div class="preview-grid">
-              <article class="summary-card">
-                <div class="summary-card-header">
-                  <span class="summary-icon" aria-hidden="true">
-                    <svg width="21" height="21" viewBox="0 0 24 24" fill="none">
-                      <path d="M7 3h10a2 2 0 0 1 2 2v16H5V5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
-                      <path d="M9 8h6M9 12h6M9 16h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+            <div class="alert alert-success" id="payment-status" hidden role="status"></div>
+
+            <div class="payment-panel" id="payment-panel">
+              <div class="payment-panel-content">
+                <div class="payment-copy">
+                  <span class="payment-icon" aria-hidden="true">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+                      <rect x="4" y="10" width="16" height="10" rx="2" stroke="currentColor" stroke-width="1.8" />
+                      <path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
                     </svg>
                   </span>
-                  <h3>病历摘要</h3>
-                </div>
-                <dl class="summary-list">
-                  <div class="summary-row">
-                    <dt>主要诉求</dt>
-                    <dd>腰痛伴下肢放射痛，希望明确就诊方向</dd>
-                  </div>
-                  <div class="summary-row">
-                    <dt>症状病程</dt>
-                    <dd>约 8 个月，近期症状反复</dd>
-                  </div>
-                  <div class="summary-row">
-                    <dt>已识别资料</dt>
-                    <dd>MRI 报告、门诊记录、化验单，共 6 份</dd>
-                  </div>
-                  <div class="summary-row">
-                    <dt>关键事件</dt>
-                    <dd>已梳理 3 个就诊与检查时间节点</dd>
-                  </div>
-                </dl>
-              </article>
-
-              <article class="summary-card">
-                <div class="summary-card-header">
-                  <span class="summary-icon" aria-hidden="true">
-                    <svg width="21" height="21" viewBox="0 0 24 24" fill="none">
-                      <path d="M12 21s7-4.4 7-11V5l-7-2-7 2v5c0 6.6 7 11 7 11Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
-                      <path d="M12 7v6M9 10h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
-                    </svg>
-                  </span>
-                  <h3>推荐科室</h3>
-                </div>
-                <div class="department-primary">
-                  <span class="department-label">优先就诊方向</span>
-                  <span class="department-name">脊柱外科</span>
-                </div>
-                <p class="department-secondary">
-                  <strong>鉴别方向：</strong>神经内科、康复医学科<br />
-                  推荐依据为症状描述与影像报告关键词，最终科室以医生评估为准。
-                </p>
-              </article>
-            </div>
-            <p class="preview-disclaimer">以上为 AI 基于您上传的病历生成的分析结果，仅供参考，不构成诊断、治疗或就医建议。</p>
-
-            <div class="alert alert-success" id="payment-status" hidden role="status">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-              支付已确认，完整报告已解锁。
-            </div>
-
-            <div class="locked-module" id="locked-module">
-              <div class="locked-content" aria-hidden="true">
-                <div class="locked-skeleton-title"></div>
-                <div class="locked-skeleton-grid">
-                  <div class="locked-skeleton-card"></div>
-                  <div class="locked-skeleton-card"></div>
-                  <div class="locked-skeleton-card"></div>
-                </div>
-                <div class="locked-skeleton-line"></div>
-                <div class="locked-skeleton-line short"></div>
-                <div class="locked-skeleton-line"></div>
-              </div>
-              <div class="lock-overlay">
-                <div class="lock-panel">
-                  <span class="lock-icon" aria-hidden="true">
-                    <svg width="23" height="23" viewBox="0 0 24 24" fill="none">
-                      <rect x="5" y="10" width="14" height="11" rx="2" stroke="currentColor" stroke-width="1.8" />
-                      <path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
-                    </svg>
-                  </span>
-                  <h3>完整报告已准备好</h3>
-                  <p>解锁医生推荐、就诊路径对比、准备指南及医院信息</p>
-                  <ul class="unlock-features">
-                    <li>6 个完整章节</li>
-                    <li>3 位医生匹配</li>
-                    <li>正式 PDF 报告下载</li>
+                  <h3 id="payment-panel-title">支付后启动 AI 分析</h3>
+                  <p id="payment-panel-description">本次支付仅用于当前报告。支付确认后自动开始分析，无需再次点击“开始 AI 分析”。</p>
+                  <ul class="payment-features">
+                    <li>完整病历分析</li>
+                    <li>TOP3 医生推荐</li>
+                    <li>就诊准备指南</li>
+                    <li>PDF 报告</li>
                   </ul>
-                  <div id="paypal-button-container" class="paypal-button-container" hidden></div>
-                  <span class="payment-note">安全支付 · 支付后立即解锁完整报告</span>
+                  <div id="paypal-button-container" class="paypal-button-container" aria-label="PayPal 安全支付"></div>
+                  <span class="payment-note">安全支付 · 支付确认后自动启动分析，完成后直接显示完整报告</span>
                 </div>
               </div>
             </div>
@@ -3719,8 +3718,12 @@
           multiRefreshReports: document.getElementById("multi-refresh-reports"),
           multiSelectAll: document.getElementById("multi-select-all"),
           multiReportList: document.getElementById("multi-report-list"),
-          previewSection: document.getElementById("preview-section"),
-          lockedModule: document.getElementById("locked-module"),
+          paymentSection: document.getElementById("payment-section"),
+          paymentPanel: document.getElementById("payment-panel"),
+          paymentTitle: document.getElementById("payment-title"),
+          paymentDescription: document.getElementById("payment-description"),
+          paymentPanelTitle: document.getElementById("payment-panel-title"),
+          paymentPanelDescription: document.getElementById("payment-panel-description"),
           paymentStatus: document.getElementById("payment-status"),
           fullReport: document.getElementById("full-report"),
           printButton: document.getElementById("print-report"),
@@ -3764,6 +3767,7 @@
         let selectedFiles = [];
         let isProcessing = false;
         let isPaid = false;
+        let analysisRetryPending = false;
         let consentGranted = false;
         let uploadTimer = null;
         let lastFocusedElement = null;
@@ -3777,6 +3781,7 @@
         let multiReportNodes = new Map();
         let multiSelectedReports = new Set();
         let multiPayments = new Map();
+        let multiRetryPending = new Set();
         let multiPayPalConfigPromise = null;
 
         const analysisMessages = [
@@ -3923,7 +3928,7 @@
             elements.reportDownloadFeedback.hidden = true;
             elements.reportDownloadFeedback.textContent = '';
           }
-          elements.lockedModule.hidden = false;
+          elements.paymentPanel.hidden = false;
         }
 
         function resetResults() {
@@ -3938,12 +3943,12 @@
           clearAccessCredentials();
           const chapters = document.querySelector('.report-chapters');
           if (chapters) chapters.replaceChildren();
-          const summaryList = elements.previewSection.querySelector('.summary-list');
-          if (summaryList) summaryList.replaceChildren();
-          const departmentName = elements.previewSection.querySelector('.department-name');
-          if (departmentName) departmentName.textContent = '';
+          analysisRetryPending = false;
+          elements.analysisRetry.hidden = true;
+          elements.analysisRetry.disabled = false;
+          elements.analysisRetry.textContent = '重新开始 AI 分析';
           elements.progressSection.hidden = true;
-          elements.previewSection.hidden = true;
+          elements.paymentSection.hidden = true;
           elements.progressSection.dataset.state = "loading";
           elements.progressPill.textContent = "处理中";
           elements.progressPill.classList.remove("success");
@@ -4285,7 +4290,10 @@
         }
 
         function reportIsPaid(report) {
-          return Boolean(report && (report.paid === true || report.paid_at || report.paid_order_id));
+          return Boolean(report && (
+            report.paid === true || report.payment_verified === true
+            || report.paid_at || report.paid_order_id
+          ));
         }
 
         function reportIsExpired(report) {
@@ -4309,31 +4317,119 @@
           const savedTask = loadTask();
           if (savedTask && currentTaskId && savedTask.taskId === currentTaskId) clearTask();
           adoptReportData(result);
-          setProgress("upload", 100);
-          setProgress("analysis", 100);
-          for (let i = 0; i < elements.steps.length; i++) {
-            setStepState(i, "complete");
-          }
-          elements.analysisNote.textContent = "分析完成，免费预览已生成";
+          setProgress('upload', 100);
+          setProgress('analysis', 100);
+          for (let i = 0; i < elements.steps.length; i++) setStepState(i, 'complete');
+          elements.analysisNote.textContent = '分析完成，完整报告已生成';
           elements.progressSection.hidden = false;
-          elements.progressSection.dataset.state = "complete";
-          elements.progressPill.textContent = "已完成";
-          elements.progressPill.classList.add("success");
-          elements.uploadSection.querySelector(".status-pill").textContent = "分析完成";
-          elements.previewSection.hidden = false;
-          applyPreview(result.preview || result.report_preview || result.free_preview || {});
-          if (!isPaid) renderPayPalButtons();
-          elements.reportDate.textContent = formatReportDate(result.completed_at || result.created_at) || new Date().toLocaleString("zh-CN", { hour12: false });
-          if (elements.analysisRetry) elements.analysisRetry.hidden = true;
+          elements.progressSection.dataset.state = 'complete';
+          elements.progressPill.textContent = '已完成';
+          elements.progressPill.classList.add('success');
+          elements.uploadSection.querySelector('.status-pill').textContent = '分析完成';
+          elements.paymentSection.hidden = true;
+          elements.paymentPanel.hidden = true;
+          elements.analysisRetry.hidden = true;
+          elements.reportDate.textContent = formatReportDate(result.completed_at || result.created_at)
+            || new Date().toLocaleString('zh-CN', { hour12: false });
           isProcessing = false;
-          elements.startButtonText.textContent = "重新分析";
+          elements.startButtonText.textContent = '开始新的分析';
           updateActionState();
           if (options.refreshList !== false) loadReports();
+        }
+
+        function showPaymentRequired(detail, options = {}) {
+          adoptReportData(detail);
+          if (detail && detail.task_id) currentTaskId = String(detail.task_id);
+          if (currentTaskId) saveTask(currentTaskId);
+          const status = String(detail && detail.status || '').toLowerCase();
+          const analysisComplete = options.analysisComplete === true || status === 'completed';
+          isProcessing = false;
+          isPaid = false;
+          elements.fullReport.hidden = true;
+          elements.paymentSection.hidden = false;
+          elements.paymentPanel.hidden = false;
+          elements.paymentTitle.textContent = analysisComplete ? '完成支付后查看完整报告' : '完成支付后开始 AI 分析';
+          elements.paymentDescription.textContent = analysisComplete
+            ? '这份历史报告已分析完成，支付确认后直接展示完整报告'
+            : '支付成功后开始分析，完成后直接展示完整报告';
+          elements.paymentPanelTitle.textContent = analysisComplete ? '支付后查看完整报告' : '支付后启动 AI 分析';
+          elements.paymentPanelDescription.textContent = analysisComplete
+            ? '本次支付仅用于当前报告，支付确认后自动打开完整内容。'
+            : '本次支付仅用于当前报告。支付确认后自动开始分析，无需再次点击“开始 AI 分析”。';
+          elements.paymentStatus.hidden = true;
+          elements.paymentStatus.textContent = '';
+          elements.paymentStatus.classList.remove('alert-error');
+          elements.paymentStatus.classList.add('alert-success');
+          elements.progressSection.hidden = false;
+          elements.progressSection.dataset.state = 'awaiting_payment';
+          elements.progressPill.textContent = '待支付';
+          elements.progressPill.classList.remove('success');
+          elements.uploadSection.querySelector('.status-pill').textContent = '待支付';
+          setProgress('upload', 100);
+          setProgress('analysis', analysisComplete ? 100 : 0);
+          resetSteps();
+          if (analysisComplete) {
+            for (let i = 0; i < elements.steps.length; i++) setStepState(i, 'complete');
+          } else {
+            setStepState(0, 'complete');
+          }
+          elements.uploadStatus.textContent = '文件上传完成，报告任务已创建';
+          elements.analysisNote.textContent = analysisComplete
+            ? '历史报告已分析完成，请在下方完成支付后查看完整报告。'
+            : '病历已上传，完成支付后将自动开始 AI 分析。';
+          elements.analysisRetry.hidden = true;
+          elements.startButtonText.textContent = '开始新的分析';
+          updateActionState();
+          void renderPayPalButtons();
+          loadReports();
           if (options.scroll !== false) {
-            elements.previewSection.scrollIntoView({
-              behavior: reducedMotion.matches ? "auto" : "smooth",
-              block: "start",
+            elements.paymentSection.scrollIntoView({
+              behavior: reducedMotion.matches ? 'auto' : 'smooth', block: 'start',
             });
+          }
+        }
+
+        function beginPaidAnalysis(detail) {
+          adoptReportData(detail);
+          isPaid = true;
+          isProcessing = true;
+          if (currentTaskId) saveTask(currentTaskId);
+          elements.paymentSection.hidden = true;
+          elements.paymentPanel.hidden = true;
+          elements.fullReport.hidden = true;
+          elements.analysisRetry.hidden = true;
+          elements.progressSection.hidden = false;
+          elements.progressSection.dataset.state = 'loading';
+          elements.progressPill.textContent = '分析中';
+          elements.progressPill.classList.remove('success');
+          elements.uploadSection.querySelector('.status-pill').textContent = '分析中';
+          setProgress('upload', 100);
+          resetSteps();
+          setStepState(0, 'complete');
+          setStepState(1, 'active');
+          applyAnalysisProgress(detail, false);
+          elements.analysisNote.textContent = '支付已确认，AI 分析已启动，请保持页面打开…';
+          elements.startButtonText.textContent = '分析进行中';
+          updateActionState();
+          elements.progressSection.scrollIntoView({
+            behavior: reducedMotion.matches ? 'auto' : 'smooth', block: 'start',
+          });
+          void runAnalysisToCompletion(currentTaskId, analysisGeneration, true);
+        }
+
+        async function runAnalysisToCompletion(taskId, generation, scroll) {
+          try {
+            const result = await pollAnalysisStatus(taskId, generation);
+            if (generation !== analysisGeneration || !result) return;
+            if (String(result.status || '').toLowerCase() === 'pending_payment') {
+              showPaymentRequired(result, { scroll });
+              return;
+            }
+            completeOpenedReport(result, scroll);
+            loadReports();
+          } catch (error) {
+            if (generation !== analysisGeneration) return;
+            failAnalysis(error);
           }
         }
 
@@ -4355,20 +4451,29 @@
         function failAnalysis(error) {
           clearTask();
           const friendly = mapApiError(error && error.message);
-          const noReadableText = friendly.indexOf("未检测到可解读的文字报告") !== -1
-            || friendly.indexOf("No readable text report") !== -1;
-          elements.analysisNote.textContent = noReadableText ? friendly : "分析失败：" + friendly;
-          elements.progressSection.dataset.state = "error";
-          elements.progressPill.textContent = "失败";
+          const noReadableText = friendly.indexOf('未检测到可解读的文字报告') !== -1
+            || friendly.indexOf('No readable text report') !== -1;
+          const paidFailure = isPaid || Boolean(error && reportIsPaid(error.report));
+          isPaid = paidFailure;
+          analysisRetryPending = false;
+          elements.analysisNote.textContent = noReadableText ? friendly : '分析失败：' + friendly;
+          elements.progressSection.hidden = false;
+          elements.progressSection.dataset.state = 'error';
+          elements.progressPill.textContent = '失败';
+          elements.paymentSection.hidden = true;
+          elements.paymentPanel.hidden = true;
+          elements.fullReport.hidden = true;
           elements.steps.forEach((step, index) => {
-            if (step.dataset.state === "loading") setStepState(index, "error");
+            if (step.dataset.state === 'loading') setStepState(index, 'error');
           });
-          if (elements.analysisRetry) elements.analysisRetry.hidden = noReadableText;
+          elements.analysisRetry.disabled = false;
+          elements.analysisRetry.hidden = noReadableText && !paidFailure;
+          elements.analysisRetry.textContent = paidFailure ? '重试分析（无需再次支付）' : '重新开始 AI 分析';
           isProcessing = false;
-          elements.startButtonText.textContent = "重新分析";
-          showFileError(noReadableText
-            ? friendly
-            : "AI 分析失败：" + friendly + "，可点击进度卡片中的红色按钮重试");
+          elements.startButtonText.textContent = '开始新的分析';
+          showFileError(paidFailure
+            ? 'AI 分析失败，可点击“重试分析”重新排队；原支付仍然有效，不会重复扣款。'
+            : noReadableText ? friendly : 'AI 分析失败：' + friendly + '，可点击进度卡片中的红色按钮重试');
           updateActionState();
         }
 
@@ -4461,12 +4566,13 @@
               block: 'start',
             });
 
+            if (String(accepted.status || '').toLowerCase() === 'pending_payment') {
+              showPaymentRequired(accepted, { scroll: true });
+              return;
+            }
             applyAnalysisProgress(accepted, false);
             elements.analysisNote.textContent = analysisStageText(accepted.current_step);
-            const result = await pollAnalysisStatus(currentTaskId, generation);
-            if (generation !== analysisGeneration) return;
-            completeOpenedReport(result, true);
-            loadReports();
+            await runAnalysisToCompletion(currentTaskId, generation, true);
           } catch (error) {
             if (generation !== analysisGeneration) return;
             failAnalysis(error);
@@ -4528,6 +4634,10 @@
 
         const ANALYSIS_STAGE_TEXT = Object.freeze({
           queued: "分析任务已排队，即将开始…",
+          queued_after_payment: "支付已确认，分析任务正在排队…",
+          queued_for_paid_retry: "重试请求已受理，分析任务正在重新排队…",
+          awaiting_payment: "等待支付确认…",
+          pending_payment: "等待支付，支付确认后开始分析…",
           validating_uploaded_files: "正在校验上传的病历文件…",
           ocr_recognizing: "正在识别病历文件中的文字…",
           ocr_integrating: "正在整合病历识别结果…",
@@ -4536,8 +4646,8 @@
           matching_department: "正在匹配适合的专科与医生…",
           ai_analysis: "AI 正在分析病情、匹配专科…",
           generating_report: "正在生成分析报告…",
-          generating_free_preview: "正在生成免费预览…",
-          completed: "分析完成，免费预览已生成",
+          generating_free_preview: "正在生成完整报告…",
+          completed: "分析完成，完整报告已生成",
           failed: "分析失败",
           cancelled: "分析已取消",
         });
@@ -4589,19 +4699,21 @@
               if (currentReportId) {
                 try {
                   const detail = await requestJson('/reports/' + encodeURIComponent(currentReportId));
-                  const merged = { ...data, ...detail };
-                  if (!merged.preview && !merged.report_preview && !merged.free_preview) {
-                    merged.preview = data.preview || data.report_preview || data.free_preview;
-                  }
-                  return merged;
+                  return { ...data, ...detail };
                 } catch (error) {
-                  return data;
+                  if ([401, 403, 404, 410].includes(error.status)) throw error;
+                  // 已完成不代表详情读取一定成功；继续恢复，避免已支付用户被误送回支付页。
+                  continue;
                 }
               }
               return data;
             }
+            if (reportIsPaid(data)) isPaid = true;
+            if (data.status === 'pending_payment') return data;
             if (data.status === 'failed') {
-              throw new Error((data.pipeline_error && data.pipeline_error.message) || data.error || 'AI 分析失败');
+              const failure = new Error((data.pipeline_error && data.pipeline_error.message) || data.error || 'AI 分析失败');
+              failure.report = data;
+              throw failure;
             }
             const elapsed = (Date.now() - startedAt) / 1000;
             const elapsedMin = Math.floor(elapsed / 60);
@@ -4635,11 +4747,14 @@
             if (reportCenterReady) await reportCenterReady;
             if (generation !== analysisGeneration) return;
             const matchingReport = reportSummaries.find((report) => report.task_id === task.taskId);
-            if (matchingReport) adoptReportData(matchingReport);
-            const result = await pollAnalysisStatus(task.taskId, generation);
-            if (generation !== analysisGeneration) return;
-            completeOpenedReport(result, true);
-            loadReports();
+            if (matchingReport) {
+              adoptReportData(matchingReport);
+              const detail = await requestJson('/reports/' + encodeURIComponent(matchingReport.report_id));
+              if (generation !== analysisGeneration) return;
+              displayReportDetail(detail, true);
+              return;
+            }
+            await runAnalysisToCompletion(task.taskId, generation, true);
           } catch (error) {
             if (generation !== analysisGeneration) return;
             clearTask();
@@ -4652,27 +4767,6 @@
           }
         }
 
-        function applyPreview(preview) {
-          const safePreview = preview && typeof preview === 'object' ? preview : {};
-          const listEl = elements.previewSection.querySelector('.summary-list');
-          if (listEl) {
-            const row = document.createElement('div');
-            row.className = 'summary-row';
-            const term = document.createElement('dt');
-            term.textContent = 'AI 病历摘要';
-            const description = document.createElement('dd');
-            description.textContent = safePreview.summary ? String(safePreview.summary) : '暂未提供摘要，请稍后刷新报告。';
-            row.append(term, description);
-            listEl.replaceChildren(row);
-          }
-          const deptEl = elements.previewSection.querySelector('.department-name');
-          if (deptEl) {
-            deptEl.textContent = safePreview.specialty ? String(safePreview.specialty) : '待医生评估';
-          }
-          const secondaryEl = elements.previewSection.querySelector('.department-secondary');
-          if (secondaryEl) secondaryEl.hidden = Boolean(safePreview.specialty);
-        }
-
         function reportStatusLabel(report) {
           if (reportIsExpired(report)) return '已过期';
           const status = String((report && report.status) || 'processing').toLowerCase();
@@ -4680,6 +4774,7 @@
             completed: '分析完成',
             complete: '分析完成',
             succeeded: '分析完成',
+            pending_payment: '待支付',
             failed: '分析失败',
             error: '分析失败',
             processing: '分析中',
@@ -4712,7 +4807,11 @@
             open.className = 'btn btn-secondary btn-small';
             open.type = 'button';
             const expired = reportIsExpired(report);
-            open.textContent = expired ? '已过期' : (reportIsPaid(report) ? '查看完整报告' : '打开报告');
+            const status = String(report.status || '').toLowerCase();
+            open.textContent = expired ? '已过期'
+              : status === 'pending_payment' ? '去支付'
+                : reportIsPaid(report) && (status === 'failed' || status === 'error') ? '重试分析'
+                  : reportIsPaid(report) ? '查看完整报告' : '打开报告';
             open.disabled = expired || openingReport;
             open.setAttribute('aria-label', (expired ? '报告已过期 ' : '打开报告 ') + String(report.report_id));
             if (!expired) open.addEventListener('click', () => openReport(String(report.report_id)));
@@ -4990,8 +5089,8 @@
         function scrollActiveReport() {
           const target = !elements.fullReport.hidden
             ? elements.fullReport
-            : !elements.previewSection.hidden
-              ? elements.previewSection
+            : !elements.paymentSection.hidden
+              ? elements.paymentSection
               : elements.progressSection;
           target.scrollIntoView({ behavior: reducedMotion.matches ? 'auto' : 'smooth', block: 'start' });
         }
@@ -4999,9 +5098,10 @@
         function showReportTerminalState(title, message, scroll) {
           isProcessing = false;
           elements.progressSection.hidden = false;
-          elements.previewSection.hidden = true;
+          elements.paymentSection.hidden = true;
           elements.fullReport.hidden = true;
-          elements.lockedModule.hidden = true;
+          elements.paymentPanel.hidden = true;
+          elements.analysisRetry.hidden = true;
           elements.progressSection.dataset.state = title === '已过期' ? 'expired' : 'error';
           elements.progressPill.textContent = title;
           elements.progressPill.classList.remove('success');
@@ -5015,21 +5115,26 @@
           adoptReportData(report);
           isPaid = true;
           document.body.classList.add('is-paid');
-          elements.paymentStatus.hidden = false;
-          elements.paymentStatus.classList.remove('alert-error');
-          elements.paymentStatus.classList.add('alert-success');
-          elements.paymentStatus.textContent = '支付已确认，完整报告已解锁；之后可从“我的报告”再次查看。';
-          elements.lockedModule.hidden = true;
+          elements.paymentSection.hidden = true;
+          elements.paymentPanel.hidden = true;
+          elements.paymentStatus.hidden = true;
           elements.fullReport.hidden = false;
-          const fullReport = report.full_report || report.report_full || null;
-          renderFullReport(fullReport);
+          renderFullReport(report.full_report || report.report_full || null);
         }
 
         function completeOpenedReport(detail, scroll) {
+          if (reportIsExpired(detail)) {
+            showReportTerminalState('已过期', '报告已超过保存期限。', scroll);
+            return;
+          }
           const shouldUnlock = reportIsPaid(detail) || detail.full_report || detail.report_full;
-          if (shouldUnlock) isPaid = true;
+          if (!shouldUnlock) {
+            showPaymentRequired(detail, { scroll, analysisComplete: true });
+            return;
+          }
+          isPaid = true;
           finishAnalysis(detail, { scroll: false, refreshList: false });
-          if (shouldUnlock) unlockPaidReport(detail);
+          unlockPaidReport(detail);
           if (scroll) scrollActiveReport();
         }
 
@@ -5037,16 +5142,14 @@
           const generation = analysisGeneration;
           try {
             if (currentTaskId) {
-              const result = await pollAnalysisStatus(currentTaskId, generation);
-              if (generation !== analysisGeneration) return;
-              completeOpenedReport(result, true);
-              loadReports();
+              await runAnalysisToCompletion(currentTaskId, generation, true);
             } else {
               await pollReportDetail(reportId, generation);
             }
           } catch (error) {
             if (generation !== analysisGeneration) return;
             isProcessing = false;
+            elements.analysisRetry.hidden = true;
             elements.progressSection.dataset.state = 'error';
             elements.progressPill.textContent = '恢复中断';
             elements.analysisNote.textContent = error.message + '。可稍后从“我的报告”重新打开。';
@@ -5066,14 +5169,28 @@
               continue;
             }
             if (generation !== analysisGeneration) return;
+            adoptReportData(detail);
             const status = String(detail.status || '').toLowerCase();
+            if (status === 'pending_payment' || (detail.payment_required && !reportIsPaid(detail))) {
+              showPaymentRequired(detail, { scroll: true });
+              loadReports();
+              return;
+            }
             if (status === 'completed' || status === 'complete' || status === 'succeeded') {
               completeOpenedReport(detail, true);
               loadReports();
               return;
             }
             if (status === 'failed' || status === 'error' || reportIsExpired(detail)) {
-              showReportTerminalState(reportIsExpired(detail) ? '已过期' : '分析失败', reportIsExpired(detail) ? '报告已超过保存期限。' : (detail.error || '分析未能完成。'), true);
+              if (reportIsExpired(detail)) {
+                showReportTerminalState('已过期', '报告已超过保存期限。', true);
+              } else {
+                isPaid = reportIsPaid(detail);
+                const failure = new Error(detail.error || '分析未能完成。');
+                failure.report = detail;
+                failAnalysis(failure);
+                scrollActiveReport();
+              }
               loadReports();
               return;
             }
@@ -5093,8 +5210,16 @@
             showReportTerminalState('已过期', '报告已超过保存期限，无法继续查看。', scroll);
             return;
           }
+          if (status === 'pending_payment' || (detail.payment_required && !reportIsPaid(detail))) {
+            showPaymentRequired(detail, { scroll });
+            return;
+          }
           if (status === 'failed' || status === 'error') {
-            showReportTerminalState('分析失败', detail.error || '分析未能完成，请开始新的分析。', scroll);
+            isPaid = reportIsPaid(detail);
+            const failure = new Error(detail.error || '分析未能完成。');
+            failure.report = detail;
+            failAnalysis(failure);
+            if (scroll) scrollActiveReport();
             return;
           }
           if (status === 'completed' || status === 'complete' || status === 'succeeded') {
@@ -5103,9 +5228,11 @@
           }
 
           isProcessing = true;
+          isPaid = reportIsPaid(detail);
           elements.progressSection.hidden = false;
-          elements.previewSection.hidden = true;
+          elements.paymentSection.hidden = true;
           elements.fullReport.hidden = true;
+          elements.analysisRetry.hidden = true;
           elements.progressSection.dataset.state = 'loading';
           elements.progressPill.textContent = '处理中';
           elements.uploadSection.querySelector('.status-pill').textContent = '已恢复报告';
@@ -5119,12 +5246,12 @@
           elements.analysisNote.textContent = '报告仍在分析中，正在恢复进度…';
           updateActionState();
           if (scroll) scrollActiveReport();
-          resumeOpenedReport(currentReportId);
+          void resumeOpenedReport(currentReportId);
         }
 
         async function openReport(reportId) {
           if (!reportId || openingReport) return;
-          if (currentReportId === reportId && (!elements.previewSection.hidden || isProcessing)) {
+          if (currentReportId === reportId && (!elements.paymentSection.hidden || isProcessing)) {
             scrollActiveReport();
             return;
           }
@@ -5191,14 +5318,14 @@
         async function renderPayPalButtons() {
           const container = document.getElementById('paypal-button-container');
           if (!container || isPaid) return;
+          container.hidden = false;
+          if (container.dataset.rendered === 'true') return;
           const version = ++payPalRenderVersion;
           const fileId = uploadedFileIds[0];
           const reportId = currentReportId;
-          container.hidden = false;
-          if (container.dataset.rendered === 'true') return;
           container.dataset.rendered = 'true';
-          if (!fileId) {
-            setPaymentContainerMessage(container, '报告文件标识尚未恢复，请从“我的报告”重新打开后再试。');
+          if (!fileId || !reportId) {
+            setPaymentContainerMessage(container, '报告标识尚未恢复，请从“我的报告”重新打开后再试。');
             return;
           }
           try {
@@ -5219,7 +5346,7 @@
                   const data = await requestJson('/pay/orders', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ file_id: fileId }),
+                    body: JSON.stringify({ file_id: fileId, report_id: reportId }),
                   });
                   if (version !== payPalRenderVersion || !data.order_id) {
                     throw new Error('订单状态已变化，请重新打开报告');
@@ -5242,39 +5369,47 @@
                   elements.paymentStatus.hidden = false;
                   elements.paymentStatus.classList.remove('alert-error');
                   elements.paymentStatus.classList.add('alert-success');
-                  elements.paymentStatus.textContent = '支付已提交，正在确认并恢复完整报告…';
+                  elements.paymentStatus.textContent = '支付已提交，正在确认并启动 AI 分析…';
                   const captured = await requestJson('/pay/capture', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ order_id: data.orderID, file_id: fileId }),
+                    body: JSON.stringify({ order_id: data.orderID, file_id: fileId, report_id: reportId }),
                   });
                   if (captured.payment_verified !== true) {
                     throw new Error('支付服务尚未确认付款，请稍后从“我的报告”恢复，不要重复支付');
                   }
-                  let restored = captured;
-                  if (currentReportId) {
-                    try {
-                      const detail = await requestJson('/reports/' + encodeURIComponent(currentReportId));
-                      restored = { ...detail };
-                      const capturedFull = captured.full_report || captured.report_full;
-                      if (!restored.full_report && !restored.report_full && capturedFull) {
-                        restored.full_report = capturedFull;
-                      }
-                    } catch (error) {
-                      restored = { ...captured, report_id: currentReportId };
-                    }
-                  }
-                  if (!restored.full_report && !restored.report_full) {
-                    throw new Error('付款已确认，但完整报告暂时恢复失败，请稍后从“我的报告”重试');
-                  }
-                  restored.paid = true;
                   if (version !== payPalRenderVersion) return;
-                  unlockPaidReport(restored);
+                  const restored = {
+                    ...captured,
+                    report_id: captured.report_id || reportId,
+                    task_id: captured.task_id || currentTaskId,
+                    file_ids: captured.file_ids || uploadedFileIds.slice(),
+                    paid: true,
+                  };
+                  adoptReportData(restored);
+                  const status = String(restored.status || '').toLowerCase();
+                  if (status === 'failed' || status === 'error') {
+                    const failure = new Error(restored.error || restored.message || '支付已确认，但 AI 分析失败');
+                    failure.report = restored;
+                    isPaid = true;
+                    failAnalysis(failure);
+                    scrollActiveReport();
+                    loadReports();
+                    return;
+                  }
+                  if (status === 'completed' || status === 'complete' || status === 'succeeded') {
+                    let completed = restored;
+                    if (!completed.full_report && !completed.report_full) {
+                      const detail = await requestJson('/reports/' + encodeURIComponent(reportId));
+                      completed = { ...completed, ...detail, paid: true };
+                    }
+                    if (version !== payPalRenderVersion) return;
+                    completeOpenedReport(completed, true);
+                    loadReports();
+                    return;
+                  }
+                  beginPaidAnalysis(restored);
                   loadReports();
-                  elements.fullReport.scrollIntoView({
-                    behavior: reducedMotion.matches ? 'auto' : 'smooth',
-                    block: 'start',
-                  });
                 })();
                 payPalCapture = { orderId: data.orderID, promise: capturePromise };
                 try {
@@ -5297,7 +5432,68 @@
             await buttons.render('#paypal-button-container');
           } catch (error) {
             if (version !== payPalRenderVersion) return;
+            container.dataset.rendered = 'false';
             setPaymentContainerMessage(container, '支付组件加载失败，请刷新页面或重新打开报告后重试。');
+          }
+        }
+
+        function retryAnalysis() {
+          if (isPaid && currentReportId) {
+            void retryPaidAnalysis();
+            return;
+          }
+          void startAnalysis();
+        }
+
+        async function retryPaidAnalysis() {
+          if (!isPaid || !currentReportId || analysisRetryPending) return;
+          const reportId = currentReportId;
+          const generation = ++analysisGeneration;
+          payPalRenderVersion += 1;
+          analysisRetryPending = true;
+          isProcessing = true;
+          elements.analysisRetry.hidden = false;
+          elements.analysisRetry.disabled = true;
+          elements.analysisRetry.textContent = '正在重新排队…';
+          elements.progressSection.hidden = false;
+          elements.progressSection.dataset.state = 'loading';
+          elements.progressPill.textContent = '重新排队';
+          elements.progressPill.classList.remove('success');
+          elements.paymentSection.hidden = true;
+          elements.fullReport.hidden = true;
+          setProgress('analysis', 0);
+          elements.analysisNote.textContent = '正在提交重试请求，原支付仍然有效，不会重复扣款…';
+          elements.startButtonText.textContent = '重试受理中';
+          showFileError('');
+          updateActionState();
+          try {
+            const accepted = await requestJson('/reports/' + encodeURIComponent(reportId) + '/retry-analysis', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({}),
+            });
+            if (generation !== analysisGeneration) return;
+            if (!accepted.task_id) throw new Error('重试响应缺少任务编号');
+            adoptReportData(accepted);
+            isPaid = true;
+            analysisRetryPending = false;
+            elements.analysisRetry.disabled = false;
+            elements.analysisRetry.hidden = true;
+            beginPaidAnalysis(accepted);
+            loadReports();
+          } catch (error) {
+            if (generation !== analysisGeneration) return;
+            analysisRetryPending = false;
+            isProcessing = false;
+            elements.progressSection.dataset.state = 'error';
+            elements.progressPill.textContent = '重试未受理';
+            elements.analysisNote.textContent = '重试请求失败：' + error.message;
+            elements.analysisRetry.hidden = false;
+            elements.analysisRetry.disabled = false;
+            elements.analysisRetry.textContent = '重试分析（无需再次支付）';
+            elements.startButtonText.textContent = '开始新的分析';
+            showFileError('重试请求未成功，不会产生新的扣款。请稍后重试，或从“我的报告”重新打开。');
+            updateActionState();
           }
         }
 
@@ -5347,6 +5543,7 @@
           multiReportNodes = new Map();
           multiSelectedReports = new Set();
           multiPayments = new Map();
+          multiRetryPending = new Set();
           multiPayPalConfigPromise = null;
           multiPatientPageNodes = new Map();
           multiPatientHeadingNodes = new Map();
@@ -5410,7 +5607,8 @@
 
         function multiAnalysisInProgress() {
           return Boolean(multiGroup && Array.isArray(multiGroup.reports) && multiGroup.reports.some((report) =>
-            report && report.task_id && !multiReportIsComplete(report) && !multiReportIsFailed(report) && !multiReportIsExpired(report)
+            report && report.task_id && !multiReportNeedsPayment(report)
+            && !multiReportIsComplete(report) && !multiReportIsFailed(report) && !multiReportIsExpired(report)
           ));
         }
 
@@ -5441,6 +5639,14 @@
 
         function multiReportIsFailed(report) {
           return ['failed', 'error'].includes(String((report && report.status) || '').toLowerCase());
+        }
+
+        function multiReportNeedsPayment(report) {
+          const status = String((report && report.status) || '').toLowerCase();
+          return Boolean(report && !multiReportIsPaid(report) && !multiReportIsExpired(report) && (
+            status === 'pending_payment' || report.payment_required === true
+            || (multiReportIsComplete(report) && report.awaiting_report_detail !== true)
+          ));
         }
 
         function normalizeMultiPreview(data) {
@@ -5502,14 +5708,15 @@
           multiReportNodes = new Map();
           multiSelectedReports = new Set();
           multiPayments = new Map();
+          multiRetryPending = new Set();
           multiPayPalConfigPromise = null;
           multiDetailPromises = new Map();
           isProcessing = false;
           clearTask();
           elements.progressSection.hidden = true;
-          elements.previewSection.hidden = true;
+          elements.paymentSection.hidden = true;
           elements.fullReport.hidden = true;
-          elements.lockedModule.hidden = true;
+          elements.paymentPanel.hidden = true;
           elements.accessCredentials.hidden = true;
           elements.multiSection.hidden = false;
           elements.multiConfirmation.hidden = false;
@@ -5845,7 +6052,9 @@
             access_code: incoming.access_code || current.access_code || null,
           };
           if (multiReportIsComplete(merged)) merged.progress = 100;
-          else {
+          else if (multiReportIsFailed(current) && String(incoming.status || '').toLowerCase() === 'queued') {
+            merged.progress = Number(incoming.progress) || 0;
+          } else {
             const oldProgress = Number(current.progress);
             const newProgress = Number(incoming.progress);
             if (Number.isFinite(oldProgress) && Number.isFinite(newProgress)) merged.progress = Math.max(oldProgress, newProgress);
@@ -5859,12 +6068,17 @@
           const reports = multiGroup.reports || [];
           const completed = reports.filter(multiReportIsComplete).length;
           const failed = reports.filter(multiReportIsFailed).length;
+          const awaitingPayment = reports.filter(multiReportNeedsPayment).length;
           let label = '各报告分析中';
-          if (reports.length && completed === reports.length) label = '全部报告已生成';
+          if (awaitingPayment) label = '待支付 ' + awaitingPayment + ' 份';
+          else if (reports.length && completed === reports.length) label = '全部报告已生成';
           else if (reports.length && completed + failed === reports.length) label = failed === reports.length ? '报告分析失败' : '部分报告已生成';
-          elements.multiGroupStatus.textContent = label + ' · ' + completed + '/' + reports.length;
-          elements.multiGroupStatus.className = 'status-pill ' + (completed === reports.length && reports.length ? 'success' : 'demo');
-          elements.uploadSection.querySelector('.status-pill').textContent = completed === reports.length && reports.length ? '多人分析完成' : '多人报告分析中';
+          elements.multiGroupStatus.textContent = label + ' · 已完成 ' + completed + '/' + reports.length;
+          elements.multiGroupStatus.className = 'status-pill ' + (completed === reports.length && reports.length && !awaitingPayment ? 'success' : 'demo');
+          elements.uploadSection.querySelector('.status-pill').textContent = awaitingPayment
+            ? '多人报告待支付'
+            : completed === reports.length && reports.length ? '多人分析完成' : '多人报告分析中';
+          updateActionState();
         }
 
         function multiReportSignature() {
@@ -5920,18 +6134,19 @@
           progressTrack.setAttribute('aria-valuenow', '0');
           const fill = multiElement('div', 'progress-fill');
           progressTrack.appendChild(fill);
-          const note = multiElement('p', '', '等待分析');
+          const note = multiElement('p', '', '等待支付');
           note.setAttribute('aria-live', 'polite');
-          progressBlock.append(progressTop, progressTrack, note);
+          const retryButton = multiElement('button', 'analysis-retry-btn', '重试分析（无需再次支付）');
+          retryButton.type = 'button';
+          retryButton.hidden = true;
+          retryButton.addEventListener('click', () => retryMultiReportAnalysis(report.report_id));
+          progressBlock.append(progressTop, progressTrack, note, retryButton);
 
           const access = multiElement('div', 'multi-access-credentials');
           access.hidden = true;
-          const preview = multiElement('div', 'multi-free-preview');
-          preview.hidden = true;
-
           const payment = multiElement('div', 'multi-payment-panel');
           payment.hidden = true;
-          payment.appendChild(multiElement('h4', '', '解锁这位患者的完整报告'));
+          payment.appendChild(multiElement('h4', '', '支付后开始这位患者的 AI 分析'));
           const paymentActions = multiElement('div', 'multi-payment-actions');
           const selectLabel = multiElement('label', 'multi-report-select');
           const select = document.createElement('input');
@@ -5942,15 +6157,15 @@
             else multiSelectedReports.delete(report.report_id);
           });
           selectLabel.append(select, document.createTextNode('加入“全选”支付'));
-          const unlock = multiElement('button', 'btn btn-primary btn-small', '解锁此报告');
-          unlock.type = 'button';
-          unlock.addEventListener('click', () => prepareMultiReportPayment(report.report_id));
-          paymentActions.append(selectLabel, unlock);
+          const payButton = multiElement('button', 'btn btn-primary btn-small', '支付并开始分析');
+          payButton.type = 'button';
+          payButton.addEventListener('click', () => prepareMultiReportPayment(report.report_id));
+          paymentActions.append(selectLabel, payButton);
           const payPalContainer = multiElement('div', 'paypal-button-container');
           payPalContainer.id = 'multi-paypal-' + index;
           payPalContainer.hidden = true;
           payPalContainer.dataset.reportId = report.report_id;
-          const paymentFeedback = multiElement('p', 'multi-report-feedback', '此报告使用独立 PayPal 订单，不会解锁其他患者。');
+          const paymentFeedback = multiElement('p', 'multi-report-feedback', '此报告使用独立 PayPal 订单，只启动该患者的分析。');
           payment.append(paymentActions, payPalContainer, paymentFeedback);
 
           const full = multiElement('div', 'multi-full-report');
@@ -5965,10 +6180,10 @@
           const pdfFeedback = multiElement('p', 'multi-report-feedback');
           pdfFeedback.setAttribute('role', 'alert');
           full.append(fullTitle, chapters, reportActions, pdfFeedback);
-          card.append(header, progressBlock, access, preview, payment, full);
+          card.append(header, progressBlock, access, payment, full);
           return {
-            card, name, meta, status, progressBlock, progressTrack, fill, percent, note,
-            access, accessCode: null, preview, previewSignature: '', payment, paymentActions, select, unlock,
+            card, name, meta, status, progressBlock, progressTrack, fill, percent, note, retryButton,
+            access, accessCode: null, payment, paymentActions, select, payButton,
             payPalContainer, paymentFeedback, full, chapters, fullSignature: '', pdfButton, pdfFeedback,
           };
         }
@@ -6007,21 +6222,6 @@
           credential.append(input, copy, feedback);
           nodes.access.appendChild(credential);
           nodes.access.appendChild(multiElement('p', 'credentials-warning', '每位患者的提取码不同，不能混用。刷新后不再显示提取码，可通过“我的报告”恢复或认领。'));
-        }
-
-        function updateMultiPreviewCard(nodes, report) {
-          const previewData = report.preview || report.report_preview || report.free_preview || {};
-          const signature = JSON.stringify(previewData);
-          if (nodes.previewSignature === signature) return;
-          nodes.previewSignature = signature;
-          nodes.preview.replaceChildren();
-          nodes.preview.appendChild(multiElement('h4', '', '此患者免费预览'));
-          nodes.preview.appendChild(multiElement('p', '', previewData.summary ? String(previewData.summary) : '暂未提供摘要，请稍后刷新报告。'));
-          nodes.preview.appendChild(multiElement('p', '', '推荐科室：' + (previewData.specialty ? String(previewData.specialty) : '待医生评估')));
-          if (Array.isArray(previewData.key_findings) && previewData.key_findings.length) {
-            nodes.preview.appendChild(multiElement('p', '', '关注重点：' + previewData.key_findings.map(String).join('；')));
-          }
-          nodes.preview.appendChild(multiElement('p', 'preview-disclaimer', 'AI 整理仅供参考，不构成诊断、治疗或就医建议。'));
         }
 
         function updateMultiFullReportCard(nodes, report) {
@@ -6074,50 +6274,96 @@
           const failed = multiReportIsFailed(report);
           const expired = multiReportIsExpired(report);
           const paid = multiReportIsPaid(report);
+          const awaitingDetail = report.awaiting_report_detail === true;
+          const needsPayment = multiReportNeedsPayment(report);
           nodes.name.textContent = multiPatientLabel(patient || report);
           const pages = report.source_page_numbers || (patient && patient.page_numbers) || [];
           nodes.meta.textContent = '患者标识：' + report.patient_id + ' · 报告：' + report.report_id
             + (report.patient_mrn || (patient && patient.patient_mrn) ? ' · MRN：' + (report.patient_mrn || patient.patient_mrn) : '')
             + (pages.length ? ' · 来源页：' + pages.join('、') : '');
-          nodes.status.textContent = expired ? '已过期' : failed ? '分析失败' : complete ? (paid ? '已解锁' : '免费预览已生成') : '分析中';
-          nodes.status.className = 'status-pill ' + (complete && !expired ? 'success' : 'demo');
+          nodes.status.textContent = expired ? '已过期'
+            : failed ? (paid ? '分析失败 · 可重试' : '分析失败')
+              : needsPayment ? '待支付'
+                : awaitingDetail ? '报告整理中'
+                  : complete ? '完整报告已生成' : '分析中';
+          nodes.status.className = 'status-pill ' + (complete && paid && !expired ? 'success' : 'demo');
           const numericProgress = Number(report.progress);
-          const progress = complete ? 100 : Number.isFinite(numericProgress) ? Math.max(0, Math.min(100, Math.round(numericProgress))) : 0;
+          const progress = complete ? 100 : needsPayment ? 0
+            : Number.isFinite(numericProgress) ? Math.max(0, Math.min(100, Math.round(numericProgress))) : 0;
           nodes.percent.textContent = progress + '%';
           nodes.fill.style.width = progress + '%';
           nodes.progressTrack.setAttribute('aria-valuenow', String(progress));
-          nodes.note.textContent = expired ? '报告已过期' : failed ? (report.error || '此患者报告分析失败') : complete ? '此患者分析完成' : analysisStageText(report.current_step);
+          nodes.note.textContent = expired ? '报告已过期'
+            : failed ? ((report.error || '此患者报告分析失败') + (paid ? '；可重试，无需再次支付' : ''))
+              : needsPayment ? (complete ? '历史报告已完成，支付后查看完整内容。' : '完成支付后自动开始此患者的 AI 分析。')
+                : awaitingDetail ? '分析已完成，正在安全恢复完整报告…'
+                  : complete ? '此患者完整报告已生成' : analysisStageText(report.current_step);
           nodes.card.dataset.paid = String(paid);
           updateMultiAccessCard(nodes, report);
-          nodes.preview.hidden = !complete || expired;
-          if (complete) updateMultiPreviewCard(nodes, report);
-          const canPay = complete && !paid && !expired;
+          const retrying = multiRetryPending.has(report.report_id);
+          nodes.retryButton.hidden = !failed || !paid || expired;
+          nodes.retryButton.disabled = retrying;
+          nodes.retryButton.textContent = retrying ? '正在重新排队…' : '重试分析（无需再次支付）';
           const fullReport = report.full_report || report.report_full || null;
-          const needsPaidRecovery = paid && !fullReport && !expired;
-          nodes.payment.hidden = !canPay && !needsPaidRecovery;
-          nodes.paymentActions.hidden = !canPay;
-          nodes.select.disabled = !canPay;
-          nodes.select.checked = canPay && multiSelectedReports.has(report.report_id);
-          nodes.unlock.disabled = !canPay;
+          const needsPaidRecovery = paid && complete && !fullReport && !expired;
+          nodes.payment.hidden = !needsPayment && !needsPaidRecovery;
+          nodes.paymentActions.hidden = !needsPayment;
+          nodes.select.disabled = !needsPayment;
+          nodes.select.checked = needsPayment && multiSelectedReports.has(report.report_id);
+          nodes.payButton.disabled = !needsPayment;
           if (paid) {
             multiSelectedReports.delete(report.report_id);
             nodes.payPalContainer.hidden = true;
           }
           nodes.full.hidden = !paid || !fullReport || expired;
           if (paid && fullReport) updateMultiFullReportCard(nodes, report);
-          if (paid && !fullReport) {
-            nodes.paymentFeedback.textContent = '支付已确认，正在恢复此患者完整报告；请勿重复支付。';
+          if (needsPaidRecovery) {
+            nodes.paymentFeedback.textContent = '支付已确认，此患者分析已完成，正在恢复完整报告；请勿重复支付。';
             nodes.paymentFeedback.className = 'multi-report-feedback success';
           }
+          if (needsPayment) void renderMultiPayPalButtons(report.report_id);
         }
 
         function updateMultiSelectAllState() {
           const candidates = (multiGroup && multiGroup.reports ? multiGroup.reports : [])
-            .filter((report) => multiReportIsComplete(report) && !multiReportIsPaid(report) && !multiReportIsExpired(report));
-          elements.multiSelectAll.textContent = candidates.length ? '全选并逐份解锁（' + candidates.length + ' 份）' : '暂无可解锁报告';
+            .filter(multiReportNeedsPayment);
+          elements.multiSelectAll.textContent = candidates.length ? '全选并逐份支付（' + candidates.length + ' 份）' : '暂无可支付报告';
           elements.multiSelectAll.disabled = multiBulkPaymentPending || candidates.length === 0;
           updateActionState();
           elements.multiRefreshReports.disabled = multiGroupRefreshPending;
+        }
+
+        async function retryMultiReportAnalysis(reportId) {
+          const report = multiReportById(reportId);
+          if (!report || !multiReportIsFailed(report) || !multiReportIsPaid(report)
+            || multiReportIsExpired(report) || multiRetryPending.has(reportId)) return;
+          const generation = multiGeneration;
+          multiRetryPending.add(reportId);
+          updateMultiReportCard(report);
+          setMultiGroupMessage('正在重新提交此患者的分析任务，原支付仍然有效，不会重复扣款。', 'warning');
+          try {
+            const accepted = await requestJson('/reports/' + encodeURIComponent(reportId) + '/retry-analysis', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({}),
+            });
+            if (generation !== multiGeneration) return;
+            if (!accepted.task_id) throw new Error('重试响应缺少任务编号');
+            const merged = mergeMultiReport(reportId, { ...accepted, payment_verified: true });
+            if (merged) updateMultiReportCard(merged);
+            setMultiGroupMessage('此患者已重新排队，完成后会直接显示完整报告；未产生新扣款。', 'success');
+            void startMultiPolling();
+            loadReports();
+          } catch (error) {
+            if (generation !== multiGeneration) return;
+            setMultiGroupMessage('此患者重试请求失败：' + error.message + '。未产生新扣款，请稍后重试。');
+          } finally {
+            if (generation === multiGeneration) {
+              multiRetryPending.delete(reportId);
+              const current = multiReportById(reportId);
+              if (current) updateMultiReportCard(current);
+            }
+          }
         }
 
         async function fetchMultiReportDetail(reportId, generation = multiGeneration) {
@@ -6128,7 +6374,7 @@
             try {
               const detail = await requestJson('/reports/' + encodeURIComponent(reportId));
               if (generation !== multiGeneration || !multiGroup || multiGroup.group_id !== groupId) return null;
-              const merged = mergeMultiReport(reportId, detail);
+              const merged = mergeMultiReport(reportId, { ...detail, awaiting_report_detail: false });
               if (merged) updateMultiReportCard(merged);
               updateMultiSelectAllState();
               return merged;
@@ -6156,11 +6402,15 @@
             for (let attempt = 0; attempt < 120; attempt += 1) {
               if (generation !== multiGeneration || !multiGroup || multiGroup.group_id !== groupId) return;
               const reports = multiGroup.reports || [];
-              reports.filter(multiReportIsComplete).forEach((report) => {
-                if (!report.preview && !report.full_report) fetchMultiReportDetail(report.report_id, generation);
-              });
-              const pending = reports.filter((report) => (
-                report.task_id && !multiReportIsComplete(report) && !multiReportIsFailed(report) && !multiReportIsExpired(report)
+              for (const report of reports.filter(multiReportIsComplete)) {
+                if (!report.full_report && !report.report_full
+                  && (multiReportIsPaid(report) || report.awaiting_report_detail === true)) {
+                  await fetchMultiReportDetail(report.report_id, generation);
+                }
+              }
+              const pending = (multiGroup.reports || []).filter((report) => (
+                report.task_id && !multiReportNeedsPayment(report)
+                && !multiReportIsComplete(report) && !multiReportIsFailed(report) && !multiReportIsExpired(report)
               ));
               if (!pending.length) {
                 updateMultiGroupStatusFromReports();
@@ -6174,10 +6424,13 @@
                 try {
                   const data = await requestJson('/status/' + encodeURIComponent(snapshot.task_id));
                   if (generation !== multiGeneration || !multiGroup || multiGroup.group_id !== groupId) return;
-                  const merged = mergeMultiReport(snapshot.report_id, data);
-                  if (merged) {
-                    updateMultiReportCard(merged);
-                    if (multiReportIsComplete(merged)) fetchMultiReportDetail(merged.report_id, generation);
+                  const completed = ['completed', 'complete', 'succeeded'].includes(String(data.status || '').toLowerCase());
+                  const merged = mergeMultiReport(snapshot.report_id, completed
+                    ? { ...data, awaiting_report_detail: true }
+                    : data);
+                  if (merged) updateMultiReportCard(merged);
+                  if (merged && multiReportIsComplete(merged)) {
+                    await fetchMultiReportDetail(merged.report_id, generation);
                   }
                 } catch (error) {
                   if (generation !== multiGeneration) return;
@@ -6290,7 +6543,7 @@
 
         async function prepareMultiReportPayment(reportId) {
           const report = multiReportById(reportId);
-          if (!report || !multiReportIsComplete(report) || multiReportIsPaid(report) || multiReportIsExpired(report)) return;
+          if (!multiReportNeedsPayment(report)) return;
           multiSelectedReports.add(reportId);
           const nodes = multiReportNodes.get(reportId);
           if (nodes) nodes.select.checked = true;
@@ -6300,7 +6553,7 @@
         async function renderMultiPayPalButtons(reportId) {
           const report = multiReportById(reportId);
           const nodes = multiReportNodes.get(reportId);
-          if (!report || !nodes || !multiReportIsComplete(report) || multiReportIsPaid(report)) return;
+          if (!report || !nodes || !multiReportNeedsPayment(report)) return;
           const container = nodes.payPalContainer;
           if (container.dataset.rendered === 'true' || container.dataset.rendered === 'loading') return;
           const generation = multiGeneration;
@@ -6329,6 +6582,7 @@
               style: { layout: 'vertical', color: 'blue', shape: 'rect', label: 'paypal', height: 45 },
               createOrder: async () => {
                 if (!multiPaymentIsCurrent(reportId, generation, state)) throw new Error('报告状态已变化，请重新打开');
+                if (!multiReportNeedsPayment(multiReportById(reportId))) throw new Error('此报告已不再待支付，请刷新状态');
                 if (state.orderId) return state.orderId;
                 if (state.orderPromise) return state.orderPromise;
                 state.orderPromise = (async () => {
@@ -6351,10 +6605,11 @@
               },
               onApprove: async (data) => {
                 if (!multiPaymentIsCurrent(reportId, generation, state)) return;
+                if (multiReportIsPaid(multiReportById(reportId))) return;
                 if (!state.orderId || state.orderId !== data.orderID) throw new Error('支付订单与此患者报告不匹配');
                 if (state.capture && state.capture.orderId === data.orderID) return state.capture.promise;
                 const capturePromise = (async () => {
-                  nodes.paymentFeedback.textContent = '支付已提交，正在确认此患者报告…';
+                  nodes.paymentFeedback.textContent = '支付已提交，正在确认并启动此患者的 AI 分析…';
                   nodes.paymentFeedback.className = 'multi-report-feedback';
                   const captured = await requestJson('/pay/capture', {
                     method: 'POST',
@@ -6365,34 +6620,48 @@
                   if (captured.payment_verified !== true) {
                     throw new Error('支付服务尚未确认付款，请稍后刷新报告，不要重复支付');
                   }
-                  let restored = { ...captured, report_id: reportId, patient_id: report.patient_id };
-                  try {
-                    const detail = await requestJson('/reports/' + encodeURIComponent(reportId));
-                    restored = {
-                      ...captured,
-                      ...detail,
-                      report_id: reportId,
-                      patient_id: report.patient_id,
-                      payment_verified: true,
-                    };
-                    const capturedFull = captured.full_report || captured.report_full;
-                    if (!restored.full_report && !restored.report_full && capturedFull) restored.full_report = capturedFull;
-                  } catch (error) {
-                    restored.payment_verified = true;
-                  }
-                  if (!restored.full_report && !restored.report_full) {
-                    throw new Error('付款已确认，但完整报告暂时恢复失败，请稍后刷新，不要重复支付');
+                  let restored = {
+                    ...captured,
+                    report_id: reportId,
+                    patient_id: report.patient_id,
+                    task_id: captured.task_id || report.task_id,
+                    payment_verified: true,
+                    paid: true,
+                    awaiting_report_detail: false,
+                  };
+                  const status = String(restored.status || '').toLowerCase();
+                  if (['completed', 'complete', 'succeeded'].includes(status)
+                    && !restored.full_report && !restored.report_full) {
+                    try {
+                      const detail = await requestJson('/reports/' + encodeURIComponent(reportId));
+                      restored = { ...restored, ...detail, report_id: reportId, patient_id: report.patient_id, payment_verified: true, paid: true };
+                    } catch (error) {
+                      restored.awaiting_report_detail = true;
+                    }
                   }
                   if (!multiPaymentIsCurrent(reportId, generation, state)) return;
                   const merged = mergeMultiReport(reportId, restored);
                   if (merged) updateMultiReportCard(merged);
                   multiSelectedReports.delete(reportId);
                   container.hidden = true;
-                  nodes.paymentFeedback.textContent = '支付已确认，仅解锁此患者完整报告。';
-                  nodes.paymentFeedback.className = 'multi-report-feedback success';
+                  updateMultiGroupStatusFromReports();
                   updateMultiSelectAllState();
                   loadReports();
-                  nodes.full.scrollIntoView({ behavior: reducedMotion.matches ? 'auto' : 'smooth', block: 'start' });
+                  const mergedStatus = String((merged && merged.status) || status).toLowerCase();
+                  if (mergedStatus === 'failed' || mergedStatus === 'error') {
+                    setMultiGroupMessage('此患者支付已确认，但分析失败；可在该患者卡片中重试，无需再次支付。');
+                    nodes.retryButton.scrollIntoView({ behavior: reducedMotion.matches ? 'auto' : 'smooth', block: 'center' });
+                    return;
+                  }
+                  if (merged && multiReportIsComplete(merged) && (merged.full_report || merged.report_full)) {
+                    nodes.paymentFeedback.textContent = '支付已确认，此患者完整报告已生成。';
+                    nodes.paymentFeedback.className = 'multi-report-feedback success';
+                    nodes.full.scrollIntoView({ behavior: reducedMotion.matches ? 'auto' : 'smooth', block: 'start' });
+                    return;
+                  }
+                  setMultiGroupMessage('此患者支付已确认，AI 分析已启动；其他患者状态不受影响。', 'success');
+                  nodes.note.scrollIntoView({ behavior: reducedMotion.matches ? 'auto' : 'smooth', block: 'center' });
+                  void startMultiPolling();
                 })();
                 state.capture = { orderId: data.orderID, promise: capturePromise };
                 try {
@@ -6418,15 +6687,13 @@
             if (!multiPaymentIsCurrent(reportId, generation, state)) return;
             container.dataset.rendered = 'false';
             multiPayments.delete(reportId);
-            setPaymentContainerMessage(container, '支付组件加载失败：' + error.message + '。请点击“解锁此报告”重试。');
+            setPaymentContainerMessage(container, '支付组件加载失败：' + error.message + '。请点击“支付并开始分析”重试。');
           }
         }
 
         async function selectAllMultiReportsForPayment() {
           if (!multiGroup || multiBulkPaymentPending) return;
-          const candidates = (multiGroup.reports || []).filter((report) => (
-            multiReportIsComplete(report) && !multiReportIsPaid(report) && !multiReportIsExpired(report)
-          ));
+          const candidates = (multiGroup.reports || []).filter(multiReportNeedsPayment);
           if (!candidates.length) return;
           multiBulkPaymentPending = true;
           updateMultiSelectAllState();
@@ -6439,7 +6706,7 @@
             for (const report of candidates) {
               await renderMultiPayPalButtons(report.report_id);
             }
-            setMultiGroupMessage('已为 ' + candidates.length + ' 份报告分别准备 PayPal 支付。请在各患者卡片中逐份授权；每次扣款只解锁对应报告。', 'success');
+            setMultiGroupMessage('已为 ' + candidates.length + ' 份报告分别准备 PayPal 支付。请在各患者卡片中逐份授权；每次扣款只启动对应患者的分析。', 'success');
           } finally {
             multiBulkPaymentPending = false;
             updateMultiSelectAllState();
@@ -6485,7 +6752,7 @@
           } catch (error) {
             if (!isCurrent()) return;
             nodes.pdfFeedback.textContent = error.status === 403
-              ? '此患者完整 PDF 需单独解锁后下载。'
+              ? '此患者完整 PDF 需完成对应报告支付后下载。'
               : error.status === 409 ? '此患者报告仍在生成中，请稍后重试。' : 'PDF 下载失败：' + error.message;
             nodes.pdfFeedback.className = 'multi-report-feedback error';
           } finally {
@@ -6613,7 +6880,7 @@
           } catch (error) {
             if (!isCurrentDownload()) return;
             const message = error.status === 403
-              ? '完整 PDF 需在报告解锁后下载；当前仍可查看免费预览。'
+              ? '完整 PDF 需在对应报告支付完成后下载。'
               : error.status === 404
                 ? '报告不存在、已过期或当前会话无权下载，请重新打开报告。'
                 : error.status === 409
@@ -6683,7 +6950,7 @@
 
         elements.startButton.addEventListener("click", startAnalysis);
         if (elements.analysisRetry) {
-          elements.analysisRetry.addEventListener("click", startAnalysis);
+          elements.analysisRetry.addEventListener("click", retryAnalysis);
         }
         elements.printButton.addEventListener("click", downloadReportPdf);
         elements.agreeConsent.addEventListener("click", agreeToConsent);

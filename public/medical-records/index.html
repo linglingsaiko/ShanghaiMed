@@ -324,6 +324,30 @@
         color: var(--color-primary);
       }
 
+
+      .demo-strip span { flex: 1; }
+      .demo-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        margin-inline-start: auto;
+        align-self: center;
+        padding: 10px 20px;
+        border-radius: 999px;
+        background: var(--color-primary);
+        color: #fff;
+        font-weight: 600;
+        font-size: 13px;
+        white-space: nowrap;
+        text-decoration: none;
+        box-shadow: 0 2px 6px rgba(14, 90, 90, .25);
+        transition: background .15s ease;
+      }
+      .demo-cta:hover { background: #0a4545; color: #fff; text-decoration: none; }
+      @media (max-width: 640px) {
+        .demo-strip { flex-wrap: wrap; }
+        .demo-cta { margin-inline-start: 0; }
+      }
       .workflow {
         display: grid;
         gap: 24px;
@@ -2813,7 +2837,14 @@
             支持图片、PDF、压缩包上传，病历越完整，推荐越精准
           </p>
 <ul aria-label="隐私与安全保障" class="trust-list">
-
+<li>
+<svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15">
+<path d="m5 12 4 4L19 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></path>
+</svg>原始病历分析后删除</li>
+<li>
+<svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15">
+<path d="m5 12 4 4L19 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></path>
+</svg>全程 HTTPS 加密</li>
 </ul>
 </section>
 <div class="demo-strip" role="note">
@@ -2823,7 +2854,7 @@
 </svg>
 <span>
 <strong>服务说明：</strong>上传的病历将通过加密连接传输；按页面提示完成支付后启动 AI 分析，分析完成后原始文件将被自动删除。报告仅供参考，不构成医疗建议。
-          </span><a href="/medical-records/demo_zh.html" target="_blank" rel="noopener" style="color:#0E5A5A;font-weight:600;text-decoration:underline;white-space:nowrap;margin-inline-start:8px;">查看示例报告 →</a>
+          </span><a href="/medical-records/demo_zh.pdf" target="_blank" rel="noopener" class="demo-cta">查看示例报告 (PDF) →</a>
 </div>
 <div class="workflow">
 <div class="consent-banner" hidden="" id="consent-declined" role="status">

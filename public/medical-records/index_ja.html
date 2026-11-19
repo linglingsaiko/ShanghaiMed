@@ -324,6 +324,30 @@
         color: var(--color-primary);
       }
 
+
+      .demo-strip span { flex: 1; }
+      .demo-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        margin-inline-start: auto;
+        align-self: center;
+        padding: 10px 20px;
+        border-radius: 999px;
+        background: var(--color-primary);
+        color: #fff;
+        font-weight: 600;
+        font-size: 13px;
+        white-space: nowrap;
+        text-decoration: none;
+        box-shadow: 0 2px 6px rgba(14, 90, 90, .25);
+        transition: background .15s ease;
+      }
+      .demo-cta:hover { background: #0a4545; color: #fff; text-decoration: none; }
+      @media (max-width: 640px) {
+        .demo-strip { flex-wrap: wrap; }
+        .demo-cta { margin-inline-start: 0; }
+      }
       .workflow {
         display: grid;
         gap: 24px;
@@ -2778,7 +2802,7 @@
 </span>
 <span>
 <span class="brand-name">ShanghaiMed</span>
-<span class="brand-subtitle">MEDICAL RECORDS · PHASE 3</span>
+<span class="brand-subtitle">医療記録・AI分析</span>
 </span>
 </a>
 <nav aria-label="ページナビゲーション" class="nav-actions">
@@ -2790,7 +2814,7 @@
 <a class="back-link" href="https://shanghaimedhealth.com/">
 <svg aria-hidden="true" fill="none" height="16" viewbox="0 0 24 24" width="16">
 <path d="m15 18-6-6 6-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-</svg>公式ウェブサイトに戻る</a>
+</svg>戻って来て、上海メッド。</a>
 <select aria-label="切换语言 / Switch language" class="lang-switcher" data-current="index_ja.html" lang="en" onchange="if(this.value){window.location.href=this.value}"><option value="index.html">中文</option><option value="index_en.html">English</option><option selected="" value="index_ja.html">日本語</option><option value="index_ar.html">العربية</option><option value="index_ru.html">Русский</option><option value="index_mn.html">Монгол</option><option value="index_ms.html">Bahasa Melayu</option><option value="index_id.html">Bahasa Indonesia</option></select></nav>
 </div>
 </header>
@@ -2801,11 +2825,18 @@
 <div class="container">
 <section aria-labelledby="hero-title" class="hero">
 <div class="eyebrow">
-<span aria-hidden="true" class="eyebrow-dot"></span>メディマッチ独自のAI・高精度な専門科診断</div>
-<h1 id="hero-title">病歴をアップロードすると、MediMatchが最も適した専門医を紹介してくれます。</h1>
-<p class="hero-subtitle">写真、PDF、圧縮ファイルのアップロードをサポートします。病歴がより完全であるほど、推奨内容がより的確になります。</p>
+<span aria-hidden="true" class="eyebrow-dot"></span>メディマッチAI・精密な専門分野のマッチング</div>
+<h1 id="hero-title">医療記録をアップロードしてください。MediMatchがあなたに合った専門医を紹介します。</h1>
+<p class="hero-subtitle">画像、PDF、ZIPファイルをアップロードしてください。より完全な記録は、より適切な推奨につながります。</p>
 <ul aria-label="プライバシーとセキュリティ保護" class="trust-list">
-
+<li>
+<svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15">
+<path d="m5 12 4 4L19 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></path>
+</svg>分析後に元の記録は削除されます。</li>
+<li>
+<svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15">
+<path d="m5 12 4 4L19 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></path>
+</svg>全体的にHTTPSで暗号化されています</li>
 </ul>
 </section>
 <div class="demo-strip" role="note">
@@ -2814,7 +2845,7 @@
 <path d="M12 11v6M12 7h.01" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
 </svg>
 <span>
-<strong>サービス説明：</strong>アップロードされた病歴は暗号化された接続を経由して送信されます。ページの指示に従って支払いを完了した後、AI 分析が開始され、分析が完了した後、元のファイルは自動的に削除されます。このレポートは参考用であり、医療に関するアドバイスを提供するものではありません。</span><a href="/medical-records/demo_ja.html" target="_blank" rel="noopener" style="color:#0E5A5A;font-weight:600;text-decoration:underline;white-space:nowrap;margin-inline-start:8px;">サンプルレポートを見る →</a>
+<strong>サービス説明：</strong>アップロードされた病歴は暗号化された接続を経由して送信されます。ページの指示に従って支払いを完了した後、AI 分析が開始され、分析が完了した後、元のファイルは自動的に削除されます。このレポートは参考用であり、医療に関するアドバイスを提供するものではありません。</span><a href="/medical-records/demo_ja.pdf" target="_blank" rel="noopener" class="demo-cta">サンプルレポート (PDF) →</a>
 </div>
 <div class="workflow">
 <div class="consent-banner" hidden="" id="consent-declined" role="status">
@@ -2832,8 +2863,8 @@
 <div class="section-title-wrap">
 <span aria-hidden="true" class="section-number">01</span>
 <div>
-<h2 id="upload-title">病歴ファイルを選択してください。</h2>
-<p>複数の資料を一度に選択することができ、整理したファイルをZIP形式でパッケージ化することもできます。</p>
+<h2 id="upload-title">医療記録を選択してください。</h2>
+<p>複数のファイルを一度に選択するか、ZIP形式で一括アップロードしてください。</p>
 </div>
 </div>
 <span class="status-pill">アップロード待ち</span>
@@ -2890,10 +2921,10 @@
 <path d="M7 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M8 12h8M8 16h5" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path>
 </svg>
 <div>
-<strong>個人別の病歴通知</strong><br/>患者ごとの病歴を1つずつアップロードしてください。2人以上の患者の病歴を混在してアップロードすると、AI分析の精度に影響する可能性があるため、まず患者ごとに分類してからアップロードしてください。</div>
+<strong>レポートごとに1人の患者</strong><br/>患者ごとの病歴を1つずつアップロードしてください。2人以上の患者の病歴を混在してアップロードすると、AI分析の精度に影響する可能性があるため、まず患者ごとに分類してからアップロードしてください。</div>
 </div>
 <div class="chief-complaint" id="chief-complaint-block">
-<label class="chief-label" for="chief-complaint-input">主訴<span class="chief-optional">（オプションですが、記入することをお勧めします。AIがより的確に専門分野にマッチングするのに役立ちます）</span>
+<label class="chief-label" for="chief-complaint-input">主訴<span class="chief-optional">オプションですが、お勧めです — AIがあなたの専門分野をより正確にマッチングするのに役立ちます。</span>
 </label>
 <p class="chief-hint">あなたの主な不快感、継続時間、そして解決したい問題を説明してください。AIは主な苦情と病歴を分析します。</p>
 <div class="chief-input-wrap">
@@ -2908,7 +2939,7 @@
 </div>
 </div>
 <div class="chief-complaint" id="personal-preferences-block">
-<label class="chief-label" for="personal-preferences-input">個人化の要件<span class="chief-optional">（オプションで、医療に関するご希望をお知らせください）</span>
+<label class="chief-label" for="personal-preferences-input">個人化の要件<span class="chief-optional">(オプション。あなたの介護の希望を教えてください。)</span>
 </label>
 <p class="chief-hint">例えば、私は中医学と西洋医学の両方を受けたい、女性の医師に診察してもらいたい、特定の種類の病院を好むなどの要望があります。AIはこれらの要望を分析し、最適な医療を提供するようにします。</p>
 <div class="chief-input-wrap">
@@ -2916,9 +2947,9 @@
 </div>
 </div>
 <div class="analysis-email-block" hidden="" id="analysis-email-block">
-<label class="chief-label" for="analysis-email">メールアドレス<span class="chief-optional">（任意で記入しておけば、どのデバイスからでもこのレポートを簡単に復元できます）</span>
+<label class="chief-label" for="analysis-email">メールアドレス<span class="chief-optional">(お勧め — どのデバイスからでもこのレポートを取得できます。)</span>
 </label>
-<p class="chief-hint">ここでは直接ログインやレポートの送信はできません。メールの認証コードを確認した後で、対応するレポートを受け取ることができます。</p>
+<p class="chief-hint">私たちはあなたのレポートを直接メール送信はしません。メール認証後、ここでマッチングレポートを請求することができます。</p>
 <input autocomplete="email" class="analysis-email-input" id="analysis-email" inputmode="email" maxlength="254" placeholder="you@example.com" type="email"/>
 </div>
 <div class="upload-actions">
@@ -2926,7 +2957,7 @@
 <svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15">
 <path d="M12 3 4 6v5c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-3Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path>
 <path d="m9 12 2 2 4-5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
-</svg>このファイルはこの分析のためだけに使用され、公開展示されることはありません。</p>
+</svg>あなたのファイルはこの分析のためだけに使用され、決して公開されることはありません。</p>
 <button aria-controls="progress-section payment-section" class="btn btn-primary" data-anchor-id="medical-records-upload.start-analysis" disabled="" id="start-analysis" type="button">
 <svg aria-hidden="true" fill="none" height="18" viewbox="0 0 24 24" width="18">
 <path d="m12 3 1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5L12 3ZM19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8L19 15Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.7"></path>
@@ -2940,8 +2971,8 @@
 <div class="section-heading">
 <div class="section-title-wrap">
 <div>
-<h2 id="credentials-title">すぐにレポートを保存して証明書を回収してください。</h2>
-<p>分析が受け入れられました。レポート番号は固定であり、抽出コードはこの応答のみで表示されます。</p>
+<h2 id="credentials-title">レポート番号と抽出コードを今すぐに保存しておいてください。</h2>
+<p>分析が受け入れられました。レポート番号は変わりませんが、抽出コードはこの応答のみに表示されます。</p>
 </div>
 </div>
 </div>
@@ -2957,7 +2988,7 @@
 <button class="btn btn-secondary btn-small" id="copy-access-code" type="button">抽出コードをコピーする</button>
 </div>
 </div>
-<p class="credentials-warning"><strong>安全に保管しておいてください。デバイス間でデータを復元するには、上記の2つの項目を同時に使用する必要があります。</strong>ページを更新または閉じた後で、抽出コードをもう一度表示できなくなります。公開チャットやスクリーンショットで共有しないでください。</p>
+<p class="credentials-warning"><strong>安全に保管しておいてください。両方があれば、他のデバイスでレポートを取得することができます。</strong>このページを更新したり、閉じたりすると、抽出コードはもう二度と表示されないでしょう。公開チャットやスクリーンショットで共有しないでください。</p>
 <div class="center-message" hidden="" id="credentials-feedback" role="status"></div>
 </section>
 <section aria-labelledby="progress-title" class="card card-pad" data-anchor-id="medical-records-upload.progress" data-state="loading" hidden="" id="progress-section">
@@ -2966,7 +2997,7 @@
 <span aria-hidden="true" class="section-number">02</span>
 <div>
 <h2 id="progress-title">アップロードとAI分析の進歩状況</h2>
-<p>支払いが確認された後、分析が開始されます。ページを開いたままにしておいてください。完了後、完全なレポートが直接表示されます。</p>
+<p>支払いが確認された後、分析が開始されます。このページを開いたままにしておいてください。準備ができたら、完全なレポートがここに表示されます。</p>
 </div>
 </div>
 <span class="status-pill" id="progress-pill">処理中</span>
@@ -3007,7 +3038,7 @@
 </li>
 <li class="analysis-step" data-state="default" data-step="1">
 <span aria-hidden="true" class="step-icon">2</span>
-<p class="step-name">人工知能（AI）は病歴の内容を認識することができます。</p>
+<p class="step-name">人工知能があなたの医療記録を読み取る。</p>
 <span class="step-status">待ってください。</span>
 </li>
 <li class="analysis-step" data-state="default" data-step="2">
@@ -3034,15 +3065,15 @@
 <div class="section-title-wrap">
 <span aria-hidden="true" class="section-number">03</span>
 <div>
-<h2 id="multi-patient-title">複数人の病歴を分割する</h2>
-<p>まず、患者ごとに各ページに登録されているかどうかを確認し、別々に支払いを行い、別々にレポートを生成する必要があります。</p>
+<h2 id="multi-patient-title">複数患者の記録を分割する</h2>
+<p>各ページの患者を確認し、別途支払いとレポートの生成を行ってください。</p>
 </div>
 </div>
 <span class="status-pill demo" id="multi-group-status">確認を待っています</span>
 </div>
 <div class="multi-patient-summary">
 <strong id="multi-patient-count">多くの患者が検出されました。</strong>
-<span id="multi-group-reference">分割番号：—</span>
+<span id="multi-group-reference">患者： —</span>
 </div>
 <div class="alert alert-error" hidden="" id="multi-group-feedback" role="alert"></div>
 <div id="multi-confirmation">
@@ -3055,14 +3086,14 @@
 </div>
 <div class="multi-patient-grid" id="multi-patient-list"></div>
 <h3>ページごとの帰属確認</h3>
-<p class="settings-note">読み取り可能なページは1人の患者にのみ割り当てられ、または除外されます。名前/MRNを変更しても、システムは自動的にページを再編成することはありません。</p>
+<p class="settings-note">各ページは1人の患者に属し、または除外されます。名前やMRNを編集しても、ページは自動的に再割り当てされることはありません。</p>
 <div class="table-wrap">
 <table class="multi-page-table">
 <thead>
 <tr>
-<th scope="col">元のPDFのページ番号</th>
-<th scope="col">バックエンドによる状態認識</th>
-<th scope="col">信頼度</th>
+<th scope="col">オリジナルのPDFページ</th>
+<th scope="col">人工知能によって検出された所有権</th>
+<th scope="col">自信</th>
 <th scope="col">帰属を確認する</th>
 </tr>
 </thead>
@@ -3071,8 +3102,8 @@
 </div>
 <div aria-live="polite" class="center-message" id="multi-validation" role="status"></div>
 <div class="multi-confirmation-actions">
-<button class="btn btn-secondary" id="multi-refresh-group" type="button">バックエンドのアトリビューションを再読み込みする。</button>
-<button class="btn btn-primary" data-anchor-id="medical-records-upload.confirm-multi-patient" disabled="" id="multi-confirm-group" type="button">個人ごとの独立レポートを確認し、作成する。</button>
+<button class="btn btn-secondary" id="multi-refresh-group" type="button">人工知能の帰属を再確認してください。</button>
+<button class="btn btn-primary" data-anchor-id="medical-records-upload.confirm-multi-patient" disabled="" id="multi-confirm-group" type="button">患者ごとに確認し、レポートを生成する。</button>
 </div>
 </div>
 <div hidden="" id="multi-results">
@@ -3083,8 +3114,8 @@
 <span>分割が確認されました。患者ごとに個別のタスク、レポート、抽出コード、および支払いオーダーがあります。各支払いでは、該当する患者のAI分析のみが開始されます。</span>
 </div>
 <div class="multi-confirmation-actions">
-<button class="btn btn-secondary" id="multi-refresh-reports" type="button">各レポートの状態を更新する。</button>
-<button class="btn btn-primary" data-anchor-id="medical-records-upload.unlock-all-multi-patient" disabled="" id="multi-select-all" type="button">すべてを選択し、個別に支払う</button>
+<button class="btn btn-secondary" id="multi-refresh-reports" type="button">すべてのレポートのステータスを更新してください。</button>
+<button class="btn btn-primary" data-anchor-id="medical-records-upload.unlock-all-multi-patient" disabled="" id="multi-select-all" type="button">全てを選択して個別に支払う</button>
 </div>
 <p class="settings-note">「すべて選択」を選択すると、支払い待ちの各レポートにPayPalのボタンが表示されます。各レポートは別途承認され、別途引き落とされますが、1つの注文にはまとめられません。</p>
 <div class="multi-report-list" id="multi-report-list"></div>
@@ -3114,13 +3145,13 @@
 <h3 id="payment-panel-title">支払い後にAI分析を開始する。</h3>
 <p id="payment-panel-description">この支払いは現在のレポートのみに使用されます。支払いが確認された後、分析が自動的に開始され、「AI分析を開始」をもう一度クリックする必要はありません。</p>
 <ul class="payment-features">
-<li>完全な病歴分析</li>
-<li>トップ3の医師のおすすめ</li>
-<li>診察の準備ガイド</li>
+<li>完全な医療記録分析</li>
+<li>医師がお勧めするトップ3の製品</li>
+<li>ご訪問の準備</li>
 <li>PDF レポート</li>
 </ul>
 <div aria-label="ペイパルの安全な支払い" class="paypal-button-container" id="paypal-button-container"></div>
-<span class="payment-note">安全な支払い・支払いが確認された後、分析が自動的に開始され、完了後にすぐに完全なレポートが表示されます。</span>
+<span class="payment-note">安全な支払い・支払いが確認されると、分析が自動的に開始され、あなたの完全なレポートがここに表示されます。</span>
 </div>
 </div>
 </div>
@@ -3130,7 +3161,7 @@
 <div class="section-title-wrap">
 <span aria-hidden="true" class="section-number">04</span>
 <div>
-<h2 id="report-title">完全な病歴分析レポート</h2>
+<h2 id="report-title">完全な医療記録分析レポート</h2>
 <p>6 つの章 · 医師の推薦 · 診察の準備 · 病院情報</p>
 </div>
 </div>
@@ -3149,19 +3180,19 @@
 <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"></circle>
 <path d="M12 11v6M12 7h.01" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
 </svg>
-<span><strong>人工知能によるレポート作成：</strong>以下の報告書は、あなたがアップロードした病歴をAIが分析して生成したもので、参考用に提供されるもので、医療アドバイスを提供するものではありません。</span>
+<span><strong>人工知能によるレポート作成：</strong>このレポートは、あなたがアップロードした記録からAIによって生成されたものです。参考用にのみ提供され、医療に関するアドバイスではありません。</span>
 </div>
 <div class="report-meta">
 <span>報告書番号：<span id="report-id">—</span></span>
-<span>生成時刻：<span id="report-date">—</span></span>
-<span>データの完全性：アップロードされたファイルに基づいて評価されます</span>
-<span>報告言語：中国語</span>
+<span>生成された:<span id="report-date">—</span></span>
+<span>データの完全性: アップロードされたファイルに基づく。</span>
+<span>報告言語：日本語</span>
 </div>
 <div class="report-chapters">
 <article class="report-chapter">
 <div class="chapter-heading">
 <span class="chapter-number">01</span>
-<h3>病歴の要約と重要なタイムライン</h3>
+<h3>医療履歴の要約と主要なタイムライン</h3>
 </div>
 <p class="chapter-intro">患者の主な症状は腰痛と下肢の放射痛でした。AIは診察記録、画像報告、投薬情報を時系列で整理し、医師が患者の病歴を迅速に把握するうえで役立ちました。</p>
 <ol class="timeline">
@@ -3190,15 +3221,15 @@
 <p class="chapter-intro">以下は、AIによる病歴に基づく情報の要約です。画像の重症度を説明するものではなく、医師による面談に代わるものでもありません。</p>
 <div class="finding-list">
 <div class="finding-item">
-<strong>画像データ</strong>
+<strong>画像処理</strong>
 <p>腰椎のMRI検査報告書が認識されました。原画像ファイルやCDを持参して診察に来てください。</p>
 </div>
 <div class="finding-item">
-<strong>検査データ</strong>
+<strong>実験結果</strong>
 <p>通常の検査票が認識されました。検査日、基準範囲、そして追加検査が必要かどうかを確認する必要があります。</p>
 </div>
 <div class="finding-item">
-<strong>症状と投薬</strong>
+<strong>症状と薬剤</strong>
 <p>医師が判断する際に役立つ、症状の変化、これまでの治療効果、投薬量、アレルギー歴などを追加することをお勧めします。</p>
 </div>
 </div>
@@ -3284,7 +3315,7 @@
 <article class="report-chapter">
 <div class="chapter-heading">
 <span class="chapter-number">05</span>
-<h3>診察の準備案内と病院情報</h3>
+<h3>訪問の準備と病院情報</h3>
 </div>
 <div class="preparation-grid">
 <div>
@@ -3339,15 +3370,15 @@
 </div>
 <div class="report-center-grid">
 <div class="report-center-panel">
-<h3>このデバイス上のレポート</h3>
-<p>レポート番号、進歩状況、支払い状況のみが表示されます。開く際には現在のセキュリティセッションで認証が必要です。</p>
+<h3>このデバイスに関するレポート</h3>
+<p>報告されるのは番号、進歩状況、および支払い状況のみです。報告を開始するには、現在のセキュアセッションが必要です。</p>
 <div aria-live="polite" class="center-message" id="reports-state" role="status">レポートの読み込み中...</div>
 <ul aria-label="私の病歴分析レポート" class="report-list" id="report-list"></ul>
 </div>
 <div class="center-form">
 <div class="report-center-panel" hidden="">
-<h3>デバイス間でデータを復元する</h3>
-<p>入力分析を受け付けたときに保存されたレポート番号と抽出コード（1回のみ表示）を入力してください。抽出コードはレポート番号ではありません。</p>
+<h3>他のデバイスでレポートを取得する</h3>
+<p>保存したレポート番号と抽出コードを入力してください（1回だけ表示されます）。抽出コードはレポート番号とは別のものです。</p>
 <form autocomplete="off" class="center-form" id="claim-form">
 <label class="center-field" for="claim-report-id">レポート番号<input autocapitalize="characters" autocomplete="off" id="claim-report-id" maxlength="80" name="report_id" placeholder="SM-…" required="" spellcheck="false" type="text"/>
 </label>
@@ -3412,11 +3443,11 @@
 </li>
 <li>
 <span aria-hidden="true" class="consent-check">✓</span>
-<span>分析が完了した後、原本の病歴は削除されます。</span>
+<span>分析後に元の記録は削除されます。</span>
 </li>
 <li>
 <span aria-hidden="true" class="consent-check">✓</span>
-<span>レポート作成のために必要な構造化結果のみを保持する。</span>
+<span>あなたのレポートに必要な構造化結果のみが保持されます。</span>
 </li>
 <li>
 <span aria-hidden="true" class="consent-check">✓</span>
@@ -3649,7 +3680,7 @@
             step.classList.remove("is-active", "is-complete");
             step.dataset.state = "default";
             step.querySelector(".step-icon").textContent = String(index + 1);
-            step.querySelector(".step-status").textContent = "待ってください。";
+            step.querySelector(".step-status").textContent = "保留中";
           });
         }
 
@@ -3717,7 +3748,7 @@
           elements.progressPill.textContent = "処理中";
           elements.progressPill.classList.remove("success");
           elements.startButtonText.textContent = "人工知能（AI）分析を開始する。";
-          elements.uploadSection.querySelector(".status-pill").textContent = "アップロード待ち";
+          elements.uploadSection.querySelector(".status-pill").textContent = "まだアップロードしていないよ。";
           setProgress("upload", 0);
           setProgress("analysis", 0);
           elements.uploadStatus.textContent = "暗号化接続が確立されています...";
@@ -3759,7 +3790,7 @@
             const status = document.createElement("span");
             status.className = "file-state";
             status.dataset.fileStatus = String(item.id);
-            status.textContent = item.status || "アップロード待ち";
+            status.textContent = item.status || "まだアップロードしていないよ。";
 
             const remove = document.createElement("button");
             remove.className = "icon-button";
@@ -3778,7 +3809,7 @@
           elements.filePanel.hidden = selectedFiles.length === 0;
           elements.fileCount.textContent = selectedFiles.length
             ? `ファイルを ${selectedFiles.length} 個選択しました · 合計 ${formatFileSize(totalSize)} 個`
-            : "ファイルは0件選択されています";
+            : "選択されたファイルは0件です";
           elements.pdfImageNotice.hidden = !selectedFiles.some(
             (item) => getExtension(item.file.name) === "pdf"
           );
@@ -3815,7 +3846,7 @@
               errors.push(`「${file.name}」はすでにリストにあります。重複するファイルはスキップされました。`);
             } else {
               existingKeys.add(key);
-              validFiles.push({ id: ++fileIdCounter, file, status: "アップロード待ち" });
+              validFiles.push({ id: ++fileIdCounter, file, status: "まだアップロードしていないよ。" });
             }
           });
 
@@ -3847,11 +3878,11 @@
           } else if (state === "error") {
             step.dataset.state = "error";
             icon.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>';
-            status.textContent = "失敗";
+            status.textContent = "失敗した。";
           } else {
             step.dataset.state = "default";
             icon.textContent = String(index + 1);
-            status.textContent = "待ってください。";
+            status.textContent = "保留中";
           }
         }
 
@@ -3966,10 +3997,10 @@
             uploadedFileIds = result.file_ids || [];
 
             setProgress("upload", 100);
-            elements.uploadStatus.textContent = "ファイルのアップロードが完了しました。AI 分析を開始しようとしています。";
-            selectedFiles.forEach((item) => { item.status = "アップロードされました"; });
+            elements.uploadStatus.textContent = "ファイルがアップロードされました。AIによる分析はまもなく開始されます。";
+            selectedFiles.forEach((item) => { item.status = "アップロードした。"; });
             elements.fileList.querySelectorAll("[data-file-status]").forEach((status) => {
-              status.textContent = "アップロードされました";
+              status.textContent = "アップロードした。";
               status.classList.add("complete");
             });
           } catch (error) {
@@ -4042,7 +4073,7 @@
             await copyText(text);
             setMessage(elements.credentialsFeedback, isCode ? "抽出コードがコピーされました。安全な場所に貼り付けて保存してください。" : "レポート番号がコピーされました。", 'success');
           } catch (error) {
-            setMessage(elements.credentialsFeedback, "自動コピーに失敗しました。手動で選択してコピーしてください。", 'error');
+            setMessage(elements.credentialsFeedback, "自動的にコピーできませんでした。手動で選択してコピーしてください。", 'error');
           }
         }
 
@@ -4084,7 +4115,7 @@
           setProgress('upload', 100);
           setProgress('analysis', 100);
           for (let i = 0; i < elements.steps.length; i++) setStepState(i, 'complete');
-          elements.analysisNote.textContent = "分析が完了し、完全なレポートが生成されました。";
+          elements.analysisNote.textContent = "分析が完了しました。あなたの完全なレポートが準備されています。";
           elements.progressSection.hidden = false;
           elements.progressSection.dataset.state = 'complete';
           elements.progressPill.textContent = "完了しました。";
@@ -4112,11 +4143,11 @@
           elements.fullReport.hidden = true;
           elements.paymentSection.hidden = false;
           elements.paymentPanel.hidden = false;
-          elements.paymentTitle.textContent = analysisComplete ? "支払いが完了したら、完全なレポートを確認してください。" : "支払いが完了した後、AI 分析を開始する。";
+          elements.paymentTitle.textContent = analysisComplete ? "支払いが完了したら、完全なレポートを確認してください。" : "人工知能分析を開始するための支払いを完了してください。";
           elements.paymentDescription.textContent = analysisComplete
             ? "この歴史報告書の分析が完了し、支払いが確認されれば、完全な報告書が直接表示されます。"
-            : "支払いが成功した後、分析を開始し、完了したらすぐに完全なレポートを表示します。";
-          elements.paymentPanelTitle.textContent = analysisComplete ? "支払い後に完全なレポートを表示する" : "支払い後にAI分析を開始する。";
+            : "支払いが成功すると、分析が自動的に開始され、完全なレポートがここに表示されます。";
+          elements.paymentPanelTitle.textContent = analysisComplete ? "支払い後に完全なレポートを表示する" : "人工知能分析を開始するには料金がかかります。";
           elements.paymentPanelDescription.textContent = analysisComplete
             ? "この支払いは現在のレポートのみに適用され、支払いが確認された後に完全なコンテンツが自動的に開きます。"
             : "この支払いは現在のレポートのみに使用されます。支払いが確認された後、分析が自動的に開始され、「AI分析を開始」をもう一度クリックする必要はありません。";
@@ -4126,9 +4157,9 @@
           elements.paymentStatus.classList.add('alert-success');
           elements.progressSection.hidden = false;
           elements.progressSection.dataset.state = 'awaiting_payment';
-          elements.progressPill.textContent = "支払い待ち";
+          elements.progressPill.textContent = "支払いを待っています";
           elements.progressPill.classList.remove('success');
-          elements.uploadSection.querySelector('.status-pill').textContent = "支払い待ち";
+          elements.uploadSection.querySelector('.status-pill').textContent = "支払いを待っています";
           setProgress('upload', 100);
           setProgress('analysis', analysisComplete ? 100 : 0);
           resetSteps();
@@ -4137,7 +4168,7 @@
           } else {
             setStepState(0, 'complete');
           }
-          elements.uploadStatus.textContent = "ファイルのアップロードが完了し、レポートのタスクが作成されました。";
+          elements.uploadStatus.textContent = "ファイルがアップロードされました。あなたのレポートタスクが作成されました。";
           elements.analysisNote.textContent = analysisComplete
             ? "履歴レポートの分析が完了しました。下記にてお支払いを完了後、完全なレポートをご覧いただけます。"
             : "病歴がアップロードされました。支払いが完了した後、AI 分析が自動的に開始されます。";
@@ -4164,15 +4195,15 @@
           elements.analysisRetry.hidden = true;
           elements.progressSection.hidden = false;
           elements.progressSection.dataset.state = 'loading';
-          elements.progressPill.textContent = "";
+          elements.progressPill.textContent = "分析する。。。";
           elements.progressPill.classList.remove('success');
-          elements.uploadSection.querySelector('.status-pill').textContent = "";
+          elements.uploadSection.querySelector('.status-pill').textContent = "分析する。。。";
           setProgress('upload', 100);
           resetSteps();
           setStepState(0, 'complete');
           setStepState(1, 'active');
           applyAnalysisProgress(detail, false);
-          elements.analysisNote.textContent = "支払いが確認され、AI分析が開始されました。ページを開いたままにしておいてください...";
+          elements.analysisNote.textContent = "支払いが確認されました。AI分析が開始されました - このページを開いたままにしておいてください...";
           elements.startButtonText.textContent = "分析が進行中です";
           updateActionState();
           elements.progressSection.scrollIntoView({
@@ -4223,7 +4254,7 @@
           elements.analysisNote.textContent = noReadableText ? friendly : "分析の失敗：" + friendly;
           elements.progressSection.hidden = false;
           elements.progressSection.dataset.state = 'error';
-          elements.progressPill.textContent = "失敗";
+          elements.progressPill.textContent = "失敗した。";
           elements.paymentSection.hidden = true;
           elements.paymentPanel.hidden = true;
           elements.fullReport.hidden = true;
@@ -4296,7 +4327,7 @@
 
           if (generation !== analysisGeneration) return;
           setStepState(0, "active");
-          elements.analysisNote.textContent = "AI 分析が進行中ですので、お待ちください。。。";
+          elements.analysisNote.textContent = "人工知能の分析が実行中です。お待ちください。。。";
           setProgress("analysis", 10);
 
           try {
@@ -4411,7 +4442,7 @@
           ai_analysis: "人工知能（AI）は患者の状態を分析し、専門医とマッチングを行っています。",
           generating_report: "分析レポートの生成中...",
           generating_free_preview: "完全なレポートが生成中です...。",
-          completed: "分析が完了し、完全なレポートが生成されました。",
+          completed: "分析が完了しました。あなたの完全なレポートが準備されています。",
           failed: "分析に失敗しました。",
           cancelled: "分析がキャンセルされました。",
         });
@@ -4527,7 +4558,7 @@
           setStepState(0, "complete");
           setStepState(1, "active");
           setProgress("analysis", 0);
-          elements.analysisNote.textContent = "進行中の分析が検出されました。進歩状況を復元中です...";
+          elements.analysisNote.textContent = "分析はすでに実行中です。あなたの進歩状況を復元中...。";
           updateActionState();
             if (matchingReport) {
               adoptReportData(matchingReport);
@@ -4542,7 +4573,7 @@
             clearTask();
             isProcessing = false;
             elements.progressSection.dataset.state = "error";
-            elements.progressPill.textContent = "復旧に失敗しました。";
+            elements.progressPill.textContent = "セッションを復元できませんでした。";
             elements.analysisNote.textContent = error.message || "以前の分析は終了したか、または有効期限が切れました。「私のレポート」から再試行してください。";
             elements.startButtonText.textContent = "再分析する。";
             updateActionState();
@@ -4557,13 +4588,13 @@
             completed: "分析が完了しました。",
             complete: "分析が完了しました。",
             succeeded: "分析が完了しました。",
-            pending_payment: "支払い待ち",
+            pending_payment: "支払いを待っています",
             failed: "分析に失敗しました。",
             error: "分析に失敗しました。",
-            processing: "",
+            processing: "分析する。。。",
             pending: "分析を待つ",
             queued: "列に並んでいる中",
-            running: "",
+            running: "分析する。。。",
           };
           return labels[status] || "処理中";
         }
@@ -4581,7 +4612,7 @@
             id.textContent = String(report.report_id);
             const meta = document.createElement('p');
             meta.className = 'report-list-meta';
-            const date = formatReportDate(report.created_at || report.updated_at) || "明日確認してください。";
+            const date = formatReportDate(report.created_at || report.updated_at) || "日付が利用できません";
             const payment = reportIsPaid(report) ? "支払いが完了しました。" : "未払いです";
             meta.textContent = date + ' · ' + reportStatusLabel(report) + ' · ' + payment;
             copy.append(id, meta);
@@ -4626,7 +4657,7 @@
             if (error.status === 401 || error.status === 403) {
               reportSummaries = [];
               renderReportList();
-              setMessage(elements.reportsState, "現在のセキュリティセッションは無効になっています。再ログインをするか、レポート番号と抽出コードを使用してアクセスしてください。", 'warning');
+              setMessage(elements.reportsState, "あなたのセキュアセッションが有効期限になりました。再度ログインするか、レポート番号と抽出コードを使用してレポートを取得してください。", 'warning');
             } else {
               setMessage(elements.reportsState, "レポートの一覧を読み込むことができませんでした。" + error.message + "もう一度お試しください。「リストを更新」をクリックしてください。", 'error');
             }
@@ -4642,10 +4673,10 @@
         function updateAuthState() {
           if (currentUser) {
             const user = currentUser.user && typeof currentUser.user === 'object' ? currentUser.user : currentUser;
-            elements.authState.textContent = "ログイン済みです" + (user.email ? '：' + String(user.email) : '');
+            elements.authState.textContent = "あなたはログインしています。" + (user.email ? '：' + String(user.email) : '');
             elements.logoutButton.hidden = false;
           } else {
-            elements.authState.textContent = "ログインしていません。メールアドレスを認証した後、他のデバイスでそのメールアドレスで登録されたレポートにアクセスできます。";
+            elements.authState.textContent = "ログインしていません。メールを確認してください、そうすれば他のデバイスでそこにリンクされたレポートにアクセスできるようになります。";
             elements.logoutButton.hidden = true;
           }
         }
@@ -4662,7 +4693,7 @@
             if (generation !== sessionGeneration) return null;
             currentUser = null;
             updateAuthState();
-            elements.authState.textContent = "ログイン状態は一時的に確認できませんが、引用コードを使用してレポートを復元することは可能です。";
+            elements.authState.textContent = "現時点ではログイン状態を確認できませんが、抽出コードを使用してレポートを取得することはできます。";
             return null;
           }
         }
@@ -4678,7 +4709,7 @@
               await loadAuthMe();
             } else {
               currentUser = null;
-              setMessage(elements.emailUnavailable, "メール認証コードによるログインは現在設定されていません。それでも、レポート番号と抽出コードを使用してデバイス間でレポートを検索することができます。", 'warning');
+              setMessage(elements.emailUnavailable, "メールログインはまだ設定されていません。それでも、レポート番号と抽出コードを使用して他のデバイスからレポートを取得できます。", 'warning');
             }
           } catch (error) {
             emailEnabled = false;
@@ -4696,7 +4727,7 @@
           if (!emailEnabled || authRequestPending) return;
           const email = elements.authEmail.value.trim();
           if (!email || !elements.authEmail.checkValidity()) {
-            setMessage(elements.authFeedback, "まず、有効なメールアドレスを入力してください。", 'error');
+            setMessage(elements.authFeedback, "有効なメールアドレスを入力してください。", 'error');
             elements.authEmail.focus();
             return;
           }
@@ -4712,7 +4743,7 @@
             });
             if (generation !== sessionGeneration) return;
             elements.authCode.value = '';
-            setMessage(elements.authFeedback, "認証コードが送信されました。メールを確認して、10分以内に認証を完了してください。", 'success');
+            setMessage(elements.authFeedback, "認証コードが送信されました。メールをチェックして、10分以内に認証を完了してください。", 'success');
             elements.authCode.focus();
           } catch (error) {
             if (generation !== sessionGeneration) return;
@@ -4735,7 +4766,7 @@
             return;
           }
           if (!code) {
-            setMessage(elements.authFeedback, "メールに記載された認証コードを入力してください。", 'error');
+            setMessage(elements.authFeedback, "メールからのコードを入力してください。", 'error');
             elements.authCode.focus();
             return;
           }
@@ -4757,7 +4788,7 @@
             const verifiedUser = await loadAuthMe();
             if (nextGeneration !== sessionGeneration) return;
             if (!verifiedUser) {
-              setMessage(elements.authFeedback, "現時点ではログイン状態を確認できませんので、ログインしたと見なさないでください。ページを更新してからもう一度お試しください。", 'warning');
+              setMessage(elements.authFeedback, "現時点ではログイン状態を確認できません。ページを更新してからもう一度お試しください。", 'warning');
               return;
             }
             const reportsRefreshed = await loadReports();
@@ -4813,13 +4844,13 @@
           beginSessionTransition();
           authVerifyPending = true;
           elements.logoutButton.disabled = true;
-          setMessage(elements.authFeedback, "終了しようとしている。。。");
+          setMessage(elements.authFeedback, "ログアウトする。。。");
           try {
             await requestJson('/auth/logout', { method: 'POST' });
             await loadReports();
-            setMessage(elements.authFeedback, "ログアウトに成功しました。", 'success');
+            setMessage(elements.authFeedback, "あなたはログアウトされています。", 'success');
           } catch (error) {
-            setMessage(elements.authFeedback, "ログアウトのリクエストに失敗しました。ページの機密コンテンツはすでに削除されています。" + error.message, 'error');
+            setMessage(elements.authFeedback, "ログアウトに失敗しました。機密ページのコンテンツがクリアされました。" + error.message, 'error');
           } finally {
             authVerifyPending = false;
             elements.logoutButton.disabled = false;
@@ -4831,13 +4862,13 @@
           const reportId = elements.claimReportId.value.trim();
           const accessCode = elements.claimAccessCode.value.trim();
           if (!reportId || !accessCode) {
-            setMessage(elements.reportCenterFeedback, "レポート番号と抽出コードを同時に入力してください。", 'error');
+            setMessage(elements.reportCenterFeedback, "レポート番号と抽出コードの両方を入力してください。", 'error');
             return;
           }
           const generation = sessionGeneration;
           claimPending = true;
           elements.claimSubmit.disabled = true;
-          setMessage(elements.reportCenterFeedback, "セキュリティ請求の報告をしています...。");
+          setMessage(elements.reportCenterFeedback, "あなたのレポートを安全にクレームする...。");
           try {
             await requestJson('/reports/claim', {
               method: 'POST',
@@ -4848,7 +4879,7 @@
             elements.claimAccessCode.value = '';
             await loadReports();
             if (generation !== sessionGeneration) return;
-            setMessage(elements.reportCenterFeedback, "認証が成功しました。レポートを開いています...", 'success');
+            setMessage(elements.reportCenterFeedback, "報告がされた。開封中...。", 'success');
             await openReport(reportId);
           } catch (error) {
             if (generation !== sessionGeneration) return;
@@ -5018,15 +5049,15 @@
           elements.analysisRetry.hidden = true;
           elements.progressSection.dataset.state = 'loading';
           elements.progressPill.textContent = "処理中";
-          elements.uploadSection.querySelector('.status-pill').textContent = "レポートが復元されました。";
+          elements.uploadSection.querySelector('.status-pill').textContent = "レポートが復元されました";
           elements.startButtonText.textContent = "分析が進行中です";
           setProgress('upload', 100);
           setProgress('analysis', 0);
           applyAnalysisProgress(detail, false);
           setStepState(0, 'complete');
           setStepState(1, 'active');
-          elements.uploadStatus.textContent = "「私のレポート」から安全に復元されました。";
-          elements.analysisNote.textContent = "レポートはまだ分析中で、復旧の進歩が続いています...。";
+          elements.uploadStatus.textContent = "「マイレポート」から安全に復元されました。";
+          elements.analysisNote.textContent = "分析はまだ実行中です。進歩状況を復元中...。";
           updateActionState();
           if (scroll) scrollActiveReport();
           void resumeOpenedReport(currentReportId);
@@ -5041,7 +5072,7 @@
           const generation = sessionGeneration;
           openingReport = true;
           renderReportList();
-          setMessage(elements.reportCenterFeedback, "レポートの復元中です...");
+          setMessage(elements.reportCenterFeedback, "あなたのレポートを復元中...");
           try {
             const detail = await requestJson('/reports/' + encodeURIComponent(reportId));
             if (generation !== sessionGeneration) return;
@@ -5152,7 +5183,7 @@
                   elements.paymentStatus.hidden = false;
                   elements.paymentStatus.classList.remove('alert-error');
                   elements.paymentStatus.classList.add('alert-success');
-                  elements.paymentStatus.textContent = "支払いが完了しました。現在、確認中であり、AI分析が開始されます。。。。";
+                  elements.paymentStatus.textContent = "支払いが完了しました。現在検証中です — すぐにAI分析が開始されます...。";
                   const captured = await requestJson('/pay/capture', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -5237,16 +5268,16 @@
           isProcessing = true;
           elements.analysisRetry.hidden = false;
           elements.analysisRetry.disabled = true;
-          elements.analysisRetry.textContent = "もう一度列に並んでいるんだよ。。。";
+          elements.analysisRetry.textContent = "列に戻る。。。";
           elements.progressSection.hidden = false;
           elements.progressSection.dataset.state = 'loading';
-          elements.progressPill.textContent = "もう一度列に並びなおす必要があります。";
+          elements.progressPill.textContent = "列に戻る";
           elements.progressPill.classList.remove('success');
           elements.paymentSection.hidden = true;
           elements.fullReport.hidden = true;
           setProgress('analysis', 0);
-          elements.analysisNote.textContent = "再試行のリクエストが送信されていますが、元の支払いはまだ有効であり、二度と料金が請求されることはありません...。";
-          elements.startButtonText.textContent = "もう一度お試しください。現在、再試行を受け付けております。";
+          elements.analysisNote.textContent = "再試行を送信中。あなたの元の支払いはまだ有効です — 二度請求されることはありません。。。";
+          elements.startButtonText.textContent = "もう一度お試しください。お待ちください。。。";
           showFileError('');
           updateActionState();
           try {
@@ -5269,7 +5300,7 @@
             analysisRetryPending = false;
             isProcessing = false;
             elements.progressSection.dataset.state = 'error';
-            elements.progressPill.textContent = "再試行は受け付けられませんでした。";
+            elements.progressPill.textContent = "あなたのリクエストは受け入れられませんでした。もう一度お試しください。";
             elements.analysisNote.textContent = "リトライリクエストが失敗しました。" + error.message;
             elements.analysisRetry.hidden = false;
             elements.analysisRetry.disabled = false;
@@ -5506,10 +5537,10 @@
           elements.multiResults.hidden = true;
           elements.multiReportList.replaceChildren();
           elements.multiPatientCount.textContent = "検出されました。 " + nextGroup.patients.length + " 患者の位置";
-          elements.multiGroupReference.textContent = "分割番号：" + nextGroup.group_id;
+          elements.multiGroupReference.textContent = "分割の詳細：" + nextGroup.group_id;
           elements.multiGroupStatus.textContent = "人工確認を待っています";
           elements.multiGroupStatus.className = 'status-pill demo';
-          elements.uploadSection.querySelector('.status-pill').textContent = "分割を確認する必要があります";
+          elements.uploadSection.querySelector('.status-pill').textContent = "分割確認が保留中です";
           elements.startButtonText.textContent = "再分析する。";
           setMultiGroupMessage('');
           renderMultiPatientEditor();
@@ -5796,7 +5827,7 @@
             elements.multiConfirmation.hidden = true;
             elements.multiResults.hidden = false;
             elements.progressSection.hidden = true;
-            elements.uploadSection.querySelector('.status-pill').textContent = "複数人の報告に基づく分析では、";
+            elements.uploadSection.querySelector('.status-pill').textContent = "複数のレポートを分析しています...。";
             setMultiGroupMessage('');
             renderMultiReportList();
             startMultiPolling();
@@ -5860,7 +5891,7 @@
           elements.multiGroupStatus.className = 'status-pill ' + (completed === reports.length && reports.length && !awaitingPayment ? 'success' : 'demo');
           elements.uploadSection.querySelector('.status-pill').textContent = awaitingPayment
             ? "多くの人が未払いの報告をしています"
-            : completed === reports.length && reports.length ? "複数人の分析が完了しました。" : "複数人の報告に基づく分析では、";
+            : completed === reports.length && reports.length ? "複数人の分析が完了しました。" : "複数のレポートを分析しています...。";
           updateActionState();
         }
 
@@ -5875,7 +5906,7 @@
           elements.multiConfirmation.hidden = true;
           elements.multiResults.hidden = false;
           elements.multiPatientCount.textContent = (multiGroup.patients || []).length + " 患者ごとに・1人につき1つの独立報告書";
-          elements.multiGroupReference.textContent = "分割番号：" + multiGroup.group_id;
+          elements.multiGroupReference.textContent = "分割の詳細：" + multiGroup.group_id;
           const signature = multiReportSignature();
           if (elements.multiReportList.dataset.signature !== signature) {
             elements.multiReportList.replaceChildren();
@@ -5995,10 +6026,10 @@
           copy.addEventListener('click', async () => {
             try {
               await copyText(report.access_code);
-              feedback.textContent = "抽出コードがコピーされました。安全に保管してください。";
+              feedback.textContent = "抽出コードをコピーしました。安全に保管してください。";
               feedback.className = 'multi-report-feedback success';
             } catch (error) {
-              feedback.textContent = "自動コピーに失敗しました。手動で選択してコピーしてください。";
+              feedback.textContent = "自動的にコピーできませんでした。手動で選択してコピーしてください。";
               feedback.className = 'multi-report-feedback error';
             }
           });
@@ -6066,9 +6097,9 @@
             + (pages.length ? " ・ ソースページ：" + pages.join('、') : '');
           nodes.status.textContent = expired ? "有効期限が過ぎています"
             : failed ? (paid ? "分析に失敗しました。・再試行してください。" : "分析に失敗しました。")
-              : needsPayment ? "支払い待ち"
+              : needsPayment ? "支払いを待っています"
                 : awaitingDetail ? "レポートの作成中です"
-                  : complete ? "完全なレポートが生成されました。" : "";
+                  : complete ? "完全なレポートが生成されました。" : "分析する。。。";
           nodes.status.className = 'status-pill ' + (complete && paid && !expired ? 'success' : 'demo');
           const numericProgress = Number(report.progress);
           const progress = complete ? 100 : needsPayment ? 0
@@ -6086,7 +6117,7 @@
           const retrying = multiRetryPending.has(report.report_id);
           nodes.retryButton.hidden = !failed || !paid || expired;
           nodes.retryButton.disabled = retrying;
-          nodes.retryButton.textContent = retrying ? "もう一度列に並んでいるんだよ。。。" : "分析を再試行（再度支払う必要はありません）";
+          nodes.retryButton.textContent = retrying ? "列に戻る。。。" : "分析を再試行（再度支払う必要はありません）";
           const fullReport = report.full_report || report.report_full || null;
           const needsPaidRecovery = paid && complete && !fullReport && !expired;
           nodes.payment.hidden = !needsPayment && !needsPaidRecovery;
@@ -6281,8 +6312,8 @@
           elements.multiSection.hidden = false;
           elements.multiConfirmation.hidden = true;
           elements.multiResults.hidden = true;
-          elements.multiGroupStatus.textContent = "複数人で分割する機能の復旧が進められています";
-          elements.multiGroupReference.textContent = "分割番号：" + saved.groupId;
+          elements.multiGroupStatus.textContent = "複数患者のビューを復元中...。";
+          elements.multiGroupReference.textContent = "分割の詳細：" + saved.groupId;
           try {
             if (reportCenterReady) await reportCenterReady;
             if (generation !== multiGeneration) return;
@@ -6508,7 +6539,7 @@
           );
           nodes.pdfButton.disabled = true;
           nodes.pdfButton.setAttribute('aria-busy', 'true');
-          nodes.pdfButton.textContent = "この患者のPDFが生成中です...。";
+          nodes.pdfButton.textContent = "この患者のPDFを生成中...";
           nodes.pdfFeedback.textContent = '';
           try {
             const response = await fetch(API_BASE + '/reports/' + encodeURIComponent(reportId) + '/pdf', {
@@ -6727,7 +6758,7 @@
           showFileError("");
           resetResults();
           renderFiles();
-          elements.uploadSection.querySelector(".status-pill").textContent = "アップロード待ち";
+          elements.uploadSection.querySelector(".status-pill").textContent = "まだアップロードしていないよ。";
           elements.fileInput.focus();
         });
 

@@ -324,6 +324,30 @@
         color: var(--color-primary);
       }
 
+
+      .demo-strip span { flex: 1; }
+      .demo-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        margin-inline-start: auto;
+        align-self: center;
+        padding: 10px 20px;
+        border-radius: 999px;
+        background: var(--color-primary);
+        color: #fff;
+        font-weight: 600;
+        font-size: 13px;
+        white-space: nowrap;
+        text-decoration: none;
+        box-shadow: 0 2px 6px rgba(14, 90, 90, .25);
+        transition: background .15s ease;
+      }
+      .demo-cta:hover { background: #0a4545; color: #fff; text-decoration: none; }
+      @media (max-width: 640px) {
+        .demo-strip { flex-wrap: wrap; }
+        .demo-cta { margin-inline-start: 0; }
+      }
       .workflow {
         display: grid;
         gap: 24px;
@@ -2778,7 +2802,7 @@
 </span>
 <span>
 <span class="brand-name">ShanghaiMed</span>
-<span class="brand-subtitle">MEDICAL RECORDS · PHASE 3</span>
+<span class="brand-subtitle">Эмнэлгийн бүртгэл · Хиймэл оюун ухааны шинжилгээ</span>
 </span>
 </a>
 <nav aria-label="Хуудасны навигаци" class="nav-actions">
@@ -2790,7 +2814,7 @@
 <a class="back-link" href="https://shanghaimedhealth.com/">
 <svg aria-hidden="true" fill="none" height="16" viewbox="0 0 24 24" width="16">
 <path d="m15 18-6-6 6-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-</svg>Албан ёсны вэбсайт руу буцах</a>
+</svg>ShanghaiMed руу буцах</a>
 <select aria-label="切换语言 / Switch language" class="lang-switcher" data-current="index_mn.html" lang="en" onchange="if(this.value){window.location.href=this.value}"><option value="index.html">中文</option><option value="index_en.html">English</option><option value="index_ja.html">日本語</option><option value="index_ar.html">العربية</option><option value="index_ru.html">Русский</option><option selected="" value="index_mn.html">Монгол</option><option value="index_ms.html">Bahasa Melayu</option><option value="index_id.html">Bahasa Indonesia</option></select></nav>
 </div>
 </header>
@@ -2801,11 +2825,18 @@
 <div class="container">
 <section aria-labelledby="hero-title" class="hero">
 <div class="eyebrow">
-<span aria-hidden="true" class="eyebrow-dot"></span>MediMatch-ийн тусгай хиймэл оюун ухаан · нарийн мэргэжлийн чиглэлийн үнэн зөв эрэмбэ тогтоолт</div>
-<h1 id="hero-title">Эрүүл мэндийн бүртгэлээ байршуулбал, MediMatch танд хамгийн тохирох нарийн мэргэжлийн эмчийг сонгож өгнө.</h1>
-<p class="hero-subtitle">Зураг, PDF болон шахсан файл оруулахыг дэмжинэ. Өвчний түүх хэдий чинээ бүрэн байна, зөвлөмж төдий чинээ оновчтой байна.</p>
+<span aria-hidden="true" class="eyebrow-dot"></span>MediMatch AI · Өндөр нарийвчлалтай нарийн мэргэжлийн тааруулга</div>
+<h1 id="hero-title">Эмнэлгийн тэмдэглэлээ байршуулна уу — MediMatch таныг тохирох мэргэжлийн эмчтэй тааруулна</h1>
+<p class="hero-subtitle">Зураг, PDF эсвэл ZIP файл байршуулна уу. Бүртгэл илүү бүрэн гүйцэд байх тусам зөвлөмж илүү нарийвчлалтай болно.</p>
 <ul aria-label="Нууцлал ба аюулгүй байдлын баталгаа" class="trust-list">
-
+<li>
+<svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15">
+<path d="m5 12 4 4L19 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></path>
+</svg>Анхны бүртгэлүүд шинжилгээний дараа устгагдана</li>
+<li>
+<svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15">
+<path d="m5 12 4 4L19 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></path>
+</svg>Бүх үе шатанд HTTPS-ээр шифрлэгдсэн</li>
 </ul>
 </section>
 <div class="demo-strip" role="note">
@@ -2814,7 +2845,7 @@
 <path d="M12 11v6M12 7h.01" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
 </svg>
 <span>
-<strong>Үйлчилгээний тодорхойлолт:</strong>Байршуулсан эмнэлгийн баримтууд шифрлэгдсэн холболтоор дамжуулагдана; хуудас дээрх зааврын дагуу төлбөрөө хийж дуусгасны дараа хиймэл оюуны шинжилгээ эхлэх бөгөөд шинжилгээ дууссаны дараа эх файлууд автоматаар устгагдана. Тайлан нь зөвхөн лавлагаанд зориулагдсан бөгөөд эмнэлгийн зөвлөгөө болохгүй.</span><a href="/medical-records/demo_mn.html" target="_blank" rel="noopener" style="color:#0E5A5A;font-weight:600;text-decoration:underline;white-space:nowrap;margin-inline-start:8px;">Жишээ тайлан үзэх →</a>
+<strong>Үйлчилгээний тодорхойлолт:</strong>Байршуулсан эмнэлгийн баримтууд шифрлэгдсэн холболтоор дамжуулагдана; хуудас дээрх зааврын дагуу төлбөрөө хийж дуусгасны дараа хиймэл оюуны шинжилгээ эхлэх бөгөөд шинжилгээ дууссаны дараа эх файлууд автоматаар устгагдана. Тайлан нь зөвхөн лавлагаанд зориулагдсан бөгөөд эмнэлгийн зөвлөгөө болохгүй.</span><a href="/medical-records/demo_mn.pdf" target="_blank" rel="noopener" class="demo-cta">Жишээ тайлан (PDF) →</a>
 </div>
 <div class="workflow">
 <div class="consent-banner" hidden="" id="consent-declined" role="status">
@@ -2832,8 +2863,8 @@
 <div class="section-title-wrap">
 <span aria-hidden="true" class="section-number">01</span>
 <div>
-<h2 id="upload-title">Эмнэлгийн бүртгэлийн файлыг сонгох</h2>
-<p>Та олон материалыг нэг дор сонгох боломжтой бөгөөд эмхэлж бэлдсэн файлуудаа ZIP хэлбэрээр архивлаж болно.</p>
+<h2 id="upload-title">Эмнэлгийн бүртгэлүүдийг сонгох</h2>
+<p>Нэгэн зэрэг олон файлыг сонгоно уу, эсвэл тэдгээрийг ZIP архив болгон хамтад нь байршуулна уу.</p>
 </div>
 </div>
 <span class="status-pill">Байршуулахыг хүлээж байна</span>
@@ -2890,10 +2921,10 @@
 <path d="M7 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M8 12h8M8 16h5" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path>
 </svg>
 <div>
-<strong>Нэг өвчтөний эмнэлгийн бүртгэлийн сануулга</strong><br/>Нэг удаад зөвхөн нэг өвчтөний өвчний түүхийг байршуулна уу. Хоёр ба түүнээс дээш өвчтөний өвчний түүхийг хольж байршуулбал хиймэл оюун ухааны шинжилгээний үнэн зөв байдалд ноцтой нөлөөлөх тул эхлээд өвчтөн бүрээр нь салгаад дараа нь байршуулна уу.</div>
+<strong>Тайлан бүрт нэг өвчтөн</strong><br/>Нэг удаад зөвхөн нэг өвчтөний өвчний түүхийг байршуулна уу. Хоёр ба түүнээс дээш өвчтөний өвчний түүхийг хольж байршуулбал хиймэл оюун ухааны шинжилгээний үнэн зөв байдалд ноцтой нөлөөлөх тул эхлээд өвчтөн бүрээр нь салгаад дараа нь байршуулна уу.</div>
 </div>
 <div class="chief-complaint" id="chief-complaint-block">
-<label class="chief-label" for="chief-complaint-input">Гол зовиур<span class="chief-optional">（Заавал биш, бөглөхийг зөвлөж байна — хиймэл оюун ухаанд эмчилгээний мэргэжлийн чиглэлийг илүү нарийвчлалтай тааруулахад туслана）</span>
+<label class="chief-label" for="chief-complaint-input">Гол зовиур<span class="chief-optional">(Сонголттой, гэхдээ зөвлөж байна — хиймэл оюун ухаанд таны мэргэжлийн чиглэлийг илүү нарийвчлалтай тааруулахад тусална.)</span>
 </label>
 <p class="chief-hint">Та өөрийн хамгийн гол таагүй байдал, түүний үргэлжлэх хугацаа болон шийдвэрлэхийг хүсч буй асуудлаа тодорхойлно уу. AI нь таны үндсэн гомдлыг эмнэлгийн баримт бичигтэй хамт шинжлэх болно.</p>
 <div class="chief-input-wrap">
@@ -2908,7 +2939,7 @@
 </div>
 </div>
 <div class="chief-complaint" id="personal-preferences-block">
-<label class="chief-label" for="personal-preferences-input">Хувийн тохиргооны шаардлага<span class="chief-optional">(Сонголттой, эмчлүүлэх давуу талаа бидэнд хэлнэ үү)</span>
+<label class="chief-label" for="personal-preferences-input">Хувийн тохиргооны шаардлага<span class="chief-optional">(Заавал биш. Та асрамжийн талаарх өөрийн хүсэл сонирхлоо бидэнд хэлнэ үү.)</span>
 </label>
 <p class="chief-hint">Жишээ нь: "Би хятад уламжлалт анагаах ухаан болон орчин үеийн анагаах ухааны эмчид зэрэг үзүүлэхийг, эмэгтэй эмч томилж өгөхийг, тодорхой төрлийн эмнэлгийг илүүд үзэхийг хүсэж байна" гэх мэт. Хиймэл оюун ухаан таны шаардлагуудыг нэгтгэн шинжлэх болно.</p>
 <div class="chief-input-wrap">
@@ -2916,9 +2947,9 @@
 </div>
 </div>
 <div class="analysis-email-block" hidden="" id="analysis-email-block">
-<label class="chief-label" for="analysis-email">Цахим шуудан<span class="chief-optional">(Бөглөхийг зөвлөж байна, ямар ч төхөөрөмж дээр энэ тайланг хялбархан сэргээх боломжтой)</span>
+<label class="chief-label" for="analysis-email">Цахим шуудан<span class="chief-optional">(Зөвлөмж болгож байна — та ямар ч төхөөрөмж дээр энэхүү тайланг олж авч болно.)</span>
 </label>
-<p class="chief-hint">Энд шууд нэвтрэх эсвэл тайлан илгээх үйлдэл хийгдэхгүй; цахим шуудангийн баталгаажуулах кодоор баталгаажуулж дууссаны дараа л тохирох тайланг нэхэмжлэх боломжтой.</p>
+<p class="chief-hint">Бид таны тайланг шууд имэйлээр илгээхгүй. Имэйлээ баталгаажуулсны дараа та тохирох тайлангуудаа эндээс авах боломжтой.</p>
 <input autocomplete="email" class="analysis-email-input" id="analysis-email" inputmode="email" maxlength="254" placeholder="you@example.com" type="email"/>
 </div>
 <div class="upload-actions">
@@ -2926,7 +2957,7 @@
 <svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15">
 <path d="M12 3 4 6v5c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-3Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path>
 <path d="m9 12 2 2 4-5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
-</svg>Энэхүү баримт бичиг нь зөвхөн энэ удаагийн шинжилгээнд зориулагдсан бөгөөд олон нийтэд нээлттэй үзүүлэхэд ашиглагдахгүй.</p>
+</svg>Таны файлууд зөвхөн энэ шинжилгээнд ашиглагдах бөгөөд хэзээ ч олон нийтэд харуулагдахгүй.</p>
 <button aria-controls="progress-section payment-section" class="btn btn-primary" data-anchor-id="medical-records-upload.start-analysis" disabled="" id="start-analysis" type="button">
 <svg aria-hidden="true" fill="none" height="18" viewbox="0 0 24 24" width="18">
 <path d="m12 3 1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5L12 3ZM19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8L19 15Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.7"></path>
@@ -2940,8 +2971,8 @@
 <div class="section-heading">
 <div class="section-title-wrap">
 <div>
-<h2 id="credentials-title">Тайланг сэргээх эрхийн бичгийг яг одоо хадгална уу</h2>
-<p>Шинжилгээг бүртгэн хүлээн авлаа. Тайлангийн дугаар тогтмол өөрчлөгдөхгүй. Татах код зөвхөн энэ удаагийн хариуд л харагдана.</p>
+<h2 id="credentials-title">Одоо тайлангийнхаа дугаар болон татах кодоо хадгална уу.</h2>
+<p>Шинжилгээ хүлээн зөвшөөрөгдлөө. Таны тайлангийн дугаар хэвээрээ байна; олборлолтын код зөвхөн энэ хариултанд харуулагдана.</p>
 </div>
 </div>
 </div>
@@ -2957,7 +2988,7 @@
 <button class="btn btn-secondary btn-small" id="copy-access-code" type="button">Хандалтын кодыг хуулах</button>
 </div>
 </div>
-<p class="credentials-warning"><strong>Аюулгүй хадгална уу. Төхөөрөмж хооронд сэргээхэд дээрх хоёр зүйлийг хамтад нь ашиглах шаардлагатай.</strong>Хуудсыг шинэчилсэн эсвэл хаасны дараа татах кодыг дахин харах боломжгүй; олон нийтийн чат болон дэлгэцийн зургаар хуваалцаж болохгүй.</p>
+<p class="credentials-warning"><strong>Тэдгээрийг аюулгүй хадгалаарай — тайлангаа бусад төхөөрөмж дээр татаж авахад аль аль нь танд хэрэгтэй болно.</strong>Та энэ хуудсыг шинэчлэх эсвэл хаасны дараа олборлох кодыг дахин харах боломжгүй. Үүнийг олон нийтийн чат болон дэлгэцийн агшинд хуваалцаж болохгүй.</p>
 <div class="center-message" hidden="" id="credentials-feedback" role="status"></div>
 </section>
 <section aria-labelledby="progress-title" class="card card-pad" data-anchor-id="medical-records-upload.progress" data-state="loading" hidden="" id="progress-section">
@@ -2966,7 +2997,7 @@
 <span aria-hidden="true" class="section-number">02</span>
 <div>
 <h2 id="progress-title">Байршуулалт болон хиймэл оюун ухааны шинжилгээний явц</h2>
-<p>Төлбөр баталгаажсаны дараа дүн шинжилгээ эхэлнэ; хуудсыг нээлттэй байлгана уу, дууссаны дараа бүрэн тайланг шууд харуулна.</p>
+<p>Төлбөр баталгаажсаны дараа шинжилгээ эхэлнэ. Энэ хуудсыг нээлттэй байлгаарай — таны бүрэн тайлан бэлэн болмогц энд харагдах болно.</p>
 </div>
 </div>
 <span class="status-pill" id="progress-pill">Боловсруулж байна</span>
@@ -2980,7 +3011,7 @@
 </svg>Файл оруулах явц</span>
 <span class="progress-percent" id="upload-percent">0%</span>
 </div>
-<div aria-label="Файл оруулах явц" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="progress-track" id="upload-progress" role="progressbar">
+<div aria-label="Файл байршуулах явц" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="progress-track" id="upload-progress" role="progressbar">
 <div class="progress-fill" id="upload-fill"></div>
 </div>
 <p aria-live="polite" class="progress-status" id="upload-status">Шифрлэгдсэн холболт тогтоогдож байна…</p>
@@ -3007,7 +3038,7 @@
 </li>
 <li class="analysis-step" data-state="default" data-step="1">
 <span aria-hidden="true" class="step-icon">2</span>
-<p class="step-name">Эмнэлгийн бүртгэлийн агуулгыг хиймэл оюун ухаанаар таних</p>
+<p class="step-name">Хиймэл оюун ухаан таны эрүүл мэндийн бүртгэлийг уншдаг.</p>
 <span class="step-status">Хүлээх</span>
 </li>
 <li class="analysis-step" data-state="default" data-step="2">
@@ -3034,15 +3065,15 @@
 <div class="section-title-wrap">
 <span aria-hidden="true" class="section-number">03</span>
 <div>
-<h2 id="multi-patient-title">Олон хүний өвчний түүхийг салгах</h2>
-<p>Эхлээд өвчтөн бүрийн хуудас бүрийн харьяаллыг нягтлан шалгаад, дараа нь тус тусад нь төлбөр төлж, тайлан үүсгэнэ үү.</p>
+<h2 id="multi-patient-title">Олон өвчтөний бүртгэлийг хуваах</h2>
+<p>Хуудас бүрийн өвчтөнийг баталгаажуулж, дараа нь төлбөрөө хийж, тайлангуудыг тусад нь гаргана уу.</p>
 </div>
 </div>
 <span class="status-pill demo" id="multi-group-status">Баталгаажуулалтыг хүлээж байна</span>
 </div>
 <div class="multi-patient-summary">
 <strong id="multi-patient-count">Олон өвчтөн илрүүлэв</strong>
-<span id="multi-group-reference">Хуваасан дугаар: —</span>
+<span id="multi-group-reference">Өвчтөнүүд: —</span>
 </div>
 <div class="alert alert-error" hidden="" id="multi-group-feedback" role="alert"></div>
 <div id="multi-confirmation">
@@ -3055,14 +3086,14 @@
 </div>
 <div class="multi-patient-grid" id="multi-patient-list"></div>
 <h3>Хуудас тус бүрийн харьяаллыг баталгаажуулах</h3>
-<p class="settings-note">Унших боломжтой хуудас бүр зөвхөн нэг өвчтөнд харьяалагдах эсвэл хасагдах ёстой. Нэр/MRN-г өөрчилснөөр систем хуудсуудыг автоматаар дахин эрэмбэлэхгүй.</p>
+<p class="settings-note">Хуудас бүр нэг өвчтөнд харьяалагдана, эсвэл хасагдана. Нэр/эмнэлгийн бүртгэлийн дугаар (MRN)-г засварласнаар хуудсууд автоматаар дахин хуваарилагдахгүй.</p>
 <div class="table-wrap">
 <table class="multi-page-table">
 <thead>
 <tr>
-<th scope="col">Эх PDF-ийн хуудасны дугаар</th>
-<th scope="col">Арын таних төлөв</th>
-<th scope="col">итгэх түвшин</th>
+<th scope="col">PDF файлын эх хуудас</th>
+<th scope="col">Хиймэл оюун ухаанаар илрүүлсэн өмчлөл</th>
+<th scope="col">Итгэл</th>
 <th scope="col">Харьяаллыг батлах</th>
 </tr>
 </thead>
@@ -3071,8 +3102,8 @@
 </div>
 <div aria-live="polite" class="center-message" id="multi-validation" role="status"></div>
 <div class="multi-confirmation-actions">
-<button class="btn btn-secondary" id="multi-refresh-group" type="button">Арын талын харьяаллыг дахин унших</button>
-<button class="btn btn-primary" data-anchor-id="medical-records-upload.confirm-multi-patient" disabled="" id="multi-confirm-group" type="button">Баталгаажуулаад хүн бүрт тусдаа тайлан үүсгэх</button>
+<button class="btn btn-secondary" id="multi-refresh-group" type="button">Хиймэл оюун ухааны атрибуцийг дахин шалгана уу</button>
+<button class="btn btn-primary" data-anchor-id="medical-records-upload.confirm-multi-patient" disabled="" id="multi-confirm-group" type="button">Баталгаажуулж, өвчтөн бүрд тайлан гарга.</button>
 </div>
 </div>
 <div hidden="" id="multi-results">
@@ -3083,8 +3114,8 @@
 <span>Хуваалт баталгаажлаа. Өвчтөн бүр бие даасан даалгавар, тайлан, авах код болон төлбөрийн захиалгатай; төлбөр төлөх бүрд зөвхөн тухайн өвчтөний хиймэл оюун ухааны шинжилгээ эхэлнэ.</span>
 </div>
 <div class="multi-confirmation-actions">
-<button class="btn btn-secondary" id="multi-refresh-reports" type="button">Тайлангуудын статусыг шинэчлэх</button>
-<button class="btn btn-primary" data-anchor-id="medical-records-upload.unlock-all-multi-patient" disabled="" id="multi-select-all" type="button">Бүгдийг сонгоод тус бүрээр нь төлөх</button>
+<button class="btn btn-secondary" id="multi-refresh-reports" type="button">Тайлангийн бүх статусыг шинэчилнэ үү</button>
+<button class="btn btn-primary" data-anchor-id="medical-records-upload.unlock-all-multi-patient" disabled="" id="multi-select-all" type="button">Бүгдийг сонгоод тус тусад нь төлнө үү</button>
 </div>
 <p class="settings-note">"Бүгдийг сонгох"-ыг сонгоход төлбөр хүлээгдэж буй тайлан тус бүрт ПэйПал товчлуур тус тусад нь харагдана. Тайлан тус бүрийн төлбөрийг тус тусад нь зөвшөөрч, тус тусад нь суутган авах шаардлагатай бөгөөд нэг захиалга болгон нэгтгэхгүй.</p>
 <div class="multi-report-list" id="multi-report-list"></div>
@@ -3114,13 +3145,13 @@
 <h3 id="payment-panel-title">Төлбөр төлсний дараа AI шинжилгээг эхлүүлнэ</h3>
 <p id="payment-panel-description">Энэ төлбөр зөвхөн одоогийн тайланд зориулагдсан. Төлбөр баталгаажсаны дараа шинжилгээ автоматаар эхлэх тул "AI шинжилгээг эхлүүлэх" товчийг дахин дарах шаардлагагүй.</p>
 <ul class="payment-features">
-<li>Өвчний бүрэн түүхийн шинжилгээ</li>
-<li>Шилдэг 3 эмчийн зөвлөмж</li>
-<li>Эмнэлэгт үзүүлэхэд бэлдэх гарын авлага</li>
+<li>Эмнэлгийн бүртгэлийн иж бүрэн шинжилгээ</li>
+<li>Эмч нарын шилдэг 3 зөвлөмж</li>
+<li>Таны уулзалтад бэлдэх</li>
 <li>PDF тайлан</li>
 </ul>
 <div aria-label="PayPal аюулгүй төлбөр" class="paypal-button-container" id="paypal-button-container"></div>
-<span class="payment-note">Аюулгүй төлбөр · Төлбөрийг баталгаажуулсны дараа шинжилгээ автоматаар эхэлж, дууссаны дараа бүрэн тайланг шууд харуулна.</span>
+<span class="payment-note">Найдвартай төлбөр · Төлбөр баталгаажсаны дараа шинжилгээ автоматаар эхлэх бөгөөд таны бүрэн тайлан энд харагдана.</span>
 </div>
 </div>
 </div>
@@ -3130,7 +3161,7 @@
 <div class="section-title-wrap">
 <span aria-hidden="true" class="section-number">04</span>
 <div>
-<h2 id="report-title">Бүрэн өвчний түүхийн шинжилгээний тайлан</h2>
+<h2 id="report-title">Эмнэлгийн бүртгэлийн шинжилгээний бүрэн тайлан</h2>
 <p>6 бүлэг · Эмчийн зөвлөмжүүд · Үзлэгт бэлдэх · Эмнэлгийн мэдээлэл</p>
 </div>
 </div>
@@ -3149,19 +3180,19 @@
 <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"></circle>
 <path d="M12 11v6M12 7h.01" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
 </svg>
-<span><strong>Хиймэл оюун ухаанаар үүсгэсэн тайлан:</strong>Доорх тайланг таны байршуулсан өвчний түүхийг үндэслэн AI-гаар шинжлэн боловсруулсан бөгөөд зөвхөн лавлахад зориулагдсан тул эмнэлгийн зөвлөмж болохгүй.</span>
+<span><strong>Хиймэл оюун ухаанаар үүсгэсэн тайлан:</strong>Энэхүү тайланг таны байршуулсан бүртгэлүүдэд үндэслэн хиймэл оюун ухаанаар үүсгэсэн болно. Зөвхөн лавлагаанд зориулагдсан бөгөөд эмнэлгийн зөвлөгөө биш болно.</span>
 </div>
 <div class="report-meta">
 <span>Тайлангийн дугаар:<span id="report-id">—</span></span>
-<span>Үүсгэсэн цаг:<span id="report-date">—</span></span>
-<span>Мэдээллийн бүрэн байдал: байршуулсан файлуудад үндэслэн үнэлэгдэнэ</span>
-<span>Тайлангийн хэл: Хятад хэл</span>
+<span>Үүсгэсэн:<span id="report-date">—</span></span>
+<span>Өгөгдлийн бүрэн байдал: байршуулсан файлууд дээр үндэслэсэн</span>
+<span>Тайлангийн хэл: Монгол хэл</span>
 </div>
 <div class="report-chapters">
 <article class="report-chapter">
 <div class="chapter-heading">
 <span class="chapter-number">01</span>
-<h3>Өвчний түүхийн хураангуй ба гол цаг хугацааны хэлхээс</h3>
+<h3>Өвчний түүхийн хураангуй ба гол цаг хугацааны дараалал</h3>
 </div>
 <p class="chapter-intro">Жишээ өвчтөн бүсэлхий нурууны өвчин доод мөчрүүдэд цацрагдах өвчин дагалдсан гэсэн үндсэн гомдолтой бөгөөд Хиймэл оюун ухаан (AI) амбулаторийн үзлэгийн бүртгэл, дүрс оношилгооны тайлан болон эм хэрэглэлтийн мэдээллийг цаг хугацааны дарааллаар эмхэтгэн, эмч нарт өвчний явцыг хурдан таньж мэдэхэд тус дөхөм болно.</p>
 <ol class="timeline">
@@ -3190,15 +3221,15 @@
 <p class="chapter-intro">Дараах нь хиймэл оюун ухаанаар өвчний түүхэнд тулгуурлан нэгтгэсэн мэдээлэл бөгөөд дүрс шинжилгээний үр дүнгийн хүнд байдлыг тайлбарлахгүй, мөн эмчийн нүүр тулсан үзлэгийг орлохгүй.</p>
 <div class="finding-list">
 <div class="finding-item">
-<strong>Дүрс оношилгооны материал</strong>
+<strong>Дүрслэл</strong>
 <p>Бүсэлхийн нурууны MRI шинжилгээний текст тайланг танилаа; эмчид үзүүлэхдээ анхны дүрсний файл эсвэл CD дискийг авч явахыг зөвлөж байна.</p>
 </div>
 <div class="finding-item">
-<strong>Шинжилгээний мэдээлэл</strong>
+<strong>Шинжилгээний хариу</strong>
 <p>Ердийн шинжилгээний хуудас танигдсан; шинжилгээний огноо, лавлах хязгаар болон дараа нь давтан шинжилгээ шаардлагатай эсэхийг нягтлах шаардлагатай.</p>
 </div>
 <div class="finding-item">
-<strong>Шинж тэмдэг ба эм хэрэглээ</strong>
+<strong>Шинж тэмдэг ба эм бэлдмэл</strong>
 <p>Эмчийн дүгнэлтэд зориулж шинж тэмдгийн өөрчлөлт, өмнөх эмчилгээний үр дүн, эмийн тун болон харшлын түүхээ нэмж оруулахыг зөвлөж байна.</p>
 </div>
 </div>
@@ -3206,7 +3237,7 @@
 <article class="report-chapter">
 <div class="chapter-heading">
 <span class="chapter-number">03</span>
-<h3>Эмчийн зөвлөмж</h3>
+<h3>Эмч нарын зөвлөмжүүд</h3>
 </div>
 <p class="chapter-intro">Эмнэлгийн тэнхимийн чиглэлийг жишээ өвчний түүхэнд тулгуурлан боловсруулдаг бөгөөд бодит зөвлөмж гаргахад шалгаж баталгаажуулсан эмчийн мэдээллийн сан болон ээлжийн хуваарийн мэдээлэлд холбогдох шаардлагатай.</p>
 <div class="doctor-grid">
@@ -3284,7 +3315,7 @@
 <article class="report-chapter">
 <div class="chapter-heading">
 <span class="chapter-number">05</span>
-<h3>Эмнэлэгт үзүүлэх бэлтгэлийн гарын авлага болон эмнэлгийн мэдээлэл</h3>
+<h3>Үзлэгт бэлдэх ба эмнэлгийн мэдээлэл</h3>
 </div>
 <div class="preparation-grid">
 <div>
@@ -3331,7 +3362,7 @@
 <div class="section-heading">
 <div class="section-title-wrap">
 <div class="report-center-intro">
-<h2 id="report-center-title">Миний тайлан</h2>
+<h2 id="report-center-title">Миний тайлангууд</h2>
 <p>Энэ төхөөрөмж дээрх тайлангууд автоматаар жагсаагдана; төхөөрөмж солих үед имэйлийн баталгаажуулах кодоор нэвтэрч сэргээж болно.</p>
 </div>
 </div>
@@ -3339,15 +3370,15 @@
 </div>
 <div class="report-center-grid">
 <div class="report-center-panel">
-<h3>Энэ төхөөрөмж дээрх тайлангууд</h3>
-<p>Зөвхөн тайлангийн дугаар, явц болон төлбөрийн төлөвийг харуулна. Үүнийг нээхэд одоогийн аюулгүй сессийн баталгаажуулалт шаардлагатай.</p>
+<h3>Энэ төхөөрөмжийн тухай тайлангууд</h3>
+<p>Зөвхөн тайлангийн дугаар, явц болон төлбөрийн төлөв харагдана. Тайланг нээхэд таны одоогийн аюулгүй сесс шаардлагатай.</p>
 <div aria-live="polite" class="center-message" id="reports-state" role="status">Тайлан ачааллаж байна…</div>
 <ul aria-label="Миний өвчний түүхийн шинжилгээний тайлан" class="report-list" id="report-list"></ul>
 </div>
 <div class="center-form">
 <div class="report-center-panel" hidden="">
-<h3>Төхөөрөмж хооронд сэргээх</h3>
-<p>Шинжилгээг хүлээн авах үед хадгалсан тайлангийн дугаар болон татах кодыг (зөвхөн нэг удаа харагдана) оруулна уу. Татах код нь тайлангийн дугаар биш юм.</p>
+<h3>Бусад төхөөрөмж дээр тайлангуудыг татах</h3>
+<p>Хадгалж авсан тайлангийн дугаар болон гаргаж авах кодоо оруулна уу (эдгээр нь зөвхөн нэг удаа харагдана). Гаргаж авах код нь тайлангийн дугаараас өөр байна.</p>
 <form autocomplete="off" class="center-form" id="claim-form">
 <label class="center-field" for="claim-report-id">Тайлангийн дугаар<input autocapitalize="characters" autocomplete="off" id="claim-report-id" maxlength="80" name="report_id" placeholder="SM-…" required="" spellcheck="false" type="text"/>
 </label>
@@ -3412,11 +3443,11 @@
 </li>
 <li>
 <span aria-hidden="true" class="consent-check">✓</span>
-<span>Шинжилгээ дууссаны дараа анхны эмнэлгийн бүртгэлүүд устах болно.</span>
+<span>Шинжилгээ хийсний дараа анхан шатны бүртгэлүүдийг устгадаг.</span>
 </li>
 <li>
 <span aria-hidden="true" class="consent-check">✓</span>
-<span>Тайлан гаргахад шаардлагатай бүтэцлэгдсэн үр дүнг л хадгална.</span>
+<span>Зөвхөн таны тайланд хэрэгтэй бүтэцлэгдсэн үр дүнгүүд л хадгалагдана.</span>
 </li>
 <li>
 <span aria-hidden="true" class="consent-check">✓</span>
@@ -3649,7 +3680,7 @@
             step.classList.remove("is-active", "is-complete");
             step.dataset.state = "default";
             step.querySelector(".step-icon").textContent = String(index + 1);
-            step.querySelector(".step-status").textContent = "Хүлээх";
+            step.querySelector(".step-status").textContent = "Хүлээгдэж буй";
           });
         }
 
@@ -3717,7 +3748,7 @@
           elements.progressPill.textContent = "Боловсруулж байна";
           elements.progressPill.classList.remove("success");
           elements.startButtonText.textContent = "AI шинжилгээг эхлүүлэх";
-          elements.uploadSection.querySelector(".status-pill").textContent = "Байршуулахыг хүлээж байна";
+          elements.uploadSection.querySelector(".status-pill").textContent = "Одоохондоо байршуулагдаагүй байна";
           setProgress("upload", 0);
           setProgress("analysis", 0);
           elements.uploadStatus.textContent = "Шифрлэгдсэн холболт тогтоогдож байна…";
@@ -3759,7 +3790,7 @@
             const status = document.createElement("span");
             status.className = "file-state";
             status.dataset.fileStatus = String(item.id);
-            status.textContent = item.status || "Байршуулахыг хүлээж байна";
+            status.textContent = item.status || "Одоохондоо байршуулагдаагүй байна";
 
             const remove = document.createElement("button");
             remove.className = "icon-button";
@@ -3778,7 +3809,7 @@
           elements.filePanel.hidden = selectedFiles.length === 0;
           elements.fileCount.textContent = selectedFiles.length
             ? `${selectedFiles.length} файл сонгогдсон · нийт ${formatFileSize(totalSize)}`
-            : "0 файл сонгогдлоо";
+            : "0 файл сонгогдсон";
           elements.pdfImageNotice.hidden = !selectedFiles.some(
             (item) => getExtension(item.file.name) === "pdf"
           );
@@ -3815,7 +3846,7 @@
               errors.push(`"${file.name}" жагсаалтад аль хэдийн байгаа тул давхардсан файлыг алгаслаа.`);
             } else {
               existingKeys.add(key);
-              validFiles.push({ id: ++fileIdCounter, file, status: "Байршуулахыг хүлээж байна" });
+              validFiles.push({ id: ++fileIdCounter, file, status: "Одоохондоо байршуулагдаагүй байна" });
             }
           });
 
@@ -3847,11 +3878,11 @@
           } else if (state === "error") {
             step.dataset.state = "error";
             icon.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>';
-            status.textContent = "Амжилтгүй";
+            status.textContent = "Амжилтгүй болсон";
           } else {
             step.dataset.state = "default";
             icon.textContent = String(index + 1);
-            status.textContent = "Хүлээх";
+            status.textContent = "Хүлээгдэж буй";
           }
         }
 
@@ -3966,10 +3997,10 @@
             uploadedFileIds = result.file_ids || [];
 
             setProgress("upload", 100);
-            elements.uploadStatus.textContent = "Файл хуулж дууслаа, удахгүй AI шинжилгээ эхэлнэ.";
-            selectedFiles.forEach((item) => { item.status = "Байршуулсан"; });
+            elements.uploadStatus.textContent = "Файлууд байршуулагдлаа. Хиймэл оюун ухааны шинжилгээ удахгүй эхэлнэ.";
+            selectedFiles.forEach((item) => { item.status = "байршуулсан"; });
             elements.fileList.querySelectorAll("[data-file-status]").forEach((status) => {
-              status.textContent = "Байршуулсан";
+              status.textContent = "байршуулсан";
               status.classList.add("complete");
             });
           } catch (error) {
@@ -4042,7 +4073,7 @@
             await copyText(text);
             setMessage(elements.credentialsFeedback, isCode ? "Татах кодыг хууллаа. Аюулгүй газар буулгаж хадгална уу." : "Тайлангийн дугаар хуулагдлаа.", 'success');
           } catch (error) {
-            setMessage(elements.credentialsFeedback, "Автоматаар хуулах амжилтгүй боллоо. Гараар сонгоод хуулна уу.", 'error');
+            setMessage(elements.credentialsFeedback, "Автоматаар хуулах боломжгүй. Үүнийг гараар сонгон хуулна уу.", 'error');
           }
         }
 
@@ -4084,7 +4115,7 @@
           setProgress('upload', 100);
           setProgress('analysis', 100);
           for (let i = 0; i < elements.steps.length; i++) setStepState(i, 'complete');
-          elements.analysisNote.textContent = "Шинжилгээ дууслаа. Бүрэн тайлан үүсгэгдлээ.";
+          elements.analysisNote.textContent = "Шинжилгээ дууссан. Таны бүрэн тайлан бэлэн боллоо.";
           elements.progressSection.hidden = false;
           elements.progressSection.dataset.state = 'complete';
           elements.progressPill.textContent = "Дууссан";
@@ -4112,11 +4143,11 @@
           elements.fullReport.hidden = true;
           elements.paymentSection.hidden = false;
           elements.paymentPanel.hidden = false;
-          elements.paymentTitle.textContent = analysisComplete ? "Төлбөр хийж дууссаны дараа бүрэн тайланг үзнэ үү" : "Төлбөр хийгдсэний дараа хиймэл оюуны шинжилгээ эхэлнэ.";
+          elements.paymentTitle.textContent = analysisComplete ? "Төлбөр хийж дууссаны дараа бүрэн тайланг үзнэ үү" : "Төлбөрөө хийж дуусгаад AI шинжилгээг эхлүүлнэ үү";
           elements.paymentDescription.textContent = analysisComplete
             ? "Энэ түүхэн тайлангийн шинжилгээ бүрэн дууссан. Төлбөр баталгаажсаны дараа бүрэн тайлан шууд харагдана."
-            : "Төлбөр амжилттай хийгдсэний дараа дүн шинжилгээ эхлэх бөгөөд дууссаны дараа бүрэн тайланг шууд харуулна.";
-          elements.paymentPanelTitle.textContent = analysisComplete ? "Төлбөр төлсний дараа бүрэн тайланг үзэх" : "Төлбөр төлсний дараа AI шинжилгээг эхлүүлнэ";
+            : "Төлбөр амжилттай хийгдсэн даруйд шинжилгээ автоматаар эхэлж, таны бүрэн тайлан энд харагдах болно.";
+          elements.paymentPanelTitle.textContent = analysisComplete ? "Төлбөр төлсний дараа бүрэн тайланг үзэх" : "Төлбөр төлж AI дүн шинжилгээг эхлүүлэх";
           elements.paymentPanelDescription.textContent = analysisComplete
             ? "Энэхүү төлбөр нь зөвхөн одоогийн тайланд зориулагдсан бөгөөд төлбөрийг баталгаажуулсны дараа бүрэн агуулга автоматаар нээгдэнэ."
             : "Энэ төлбөр зөвхөн одоогийн тайланд зориулагдсан. Төлбөр баталгаажсаны дараа шинжилгээ автоматаар эхлэх тул \"AI шинжилгээг эхлүүлэх\" товчийг дахин дарах шаардлагагүй.";
@@ -4126,9 +4157,9 @@
           elements.paymentStatus.classList.add('alert-success');
           elements.progressSection.hidden = false;
           elements.progressSection.dataset.state = 'awaiting_payment';
-          elements.progressPill.textContent = "Төлбөр хүлээгдэж байна";
+          elements.progressPill.textContent = "Төлбөрийг хүлээж байна";
           elements.progressPill.classList.remove('success');
-          elements.uploadSection.querySelector('.status-pill').textContent = "Төлбөр хүлээгдэж байна";
+          elements.uploadSection.querySelector('.status-pill').textContent = "Төлбөрийг хүлээж байна";
           setProgress('upload', 100);
           setProgress('analysis', analysisComplete ? 100 : 0);
           resetSteps();
@@ -4137,7 +4168,7 @@
           } else {
             setStepState(0, 'complete');
           }
-          elements.uploadStatus.textContent = "Файл хуулж дууссан, тайлангийн даалгавар үүсгэгдлээ.";
+          elements.uploadStatus.textContent = "Файлууд байршуулагдлаа. Таны тайлангийн даалгавар үүсгэгдлээ.";
           elements.analysisNote.textContent = analysisComplete
             ? "Түүхэн тайлангийн шинжилгээ дууслаа. Доор хэсэгт төлбөрөө хийсний дараа бүрэн тайланг үзнэ үү."
             : "Эмнэлгийн бүртгэл байршуулагдлаа. Төлбөрөө хийж дууссаны дараа AI дүн шинжилгээ автоматаар эхэлнэ.";
@@ -4164,15 +4195,15 @@
           elements.analysisRetry.hidden = true;
           elements.progressSection.hidden = false;
           elements.progressSection.dataset.state = 'loading';
-          elements.progressPill.textContent = "Шинжилж байна";
+          elements.progressPill.textContent = "Шинжилж байна…";
           elements.progressPill.classList.remove('success');
-          elements.uploadSection.querySelector('.status-pill').textContent = "Шинжилж байна";
+          elements.uploadSection.querySelector('.status-pill').textContent = "Шинжилж байна…";
           setProgress('upload', 100);
           resetSteps();
           setStepState(0, 'complete');
           setStepState(1, 'active');
           applyAnalysisProgress(detail, false);
-          elements.analysisNote.textContent = "Төлбөр баталгаажлаа. AI шинжилгээ эхэлсэн тул хуудсыг нээлттэй байлгана уу…";
+          elements.analysisNote.textContent = "Төлбөр баталгаажлаа. Хиймэл оюун ухааны шинжилгээ эхэллээ — энэ хуудсыг нээлттэй байлгана уу…";
           elements.startButtonText.textContent = "Шинжилгээ явагдаж байна";
           updateActionState();
           elements.progressSection.scrollIntoView({
@@ -4223,7 +4254,7 @@
           elements.analysisNote.textContent = noReadableText ? friendly : "Шинжилгээ амжилтгүй боллоо:" + friendly;
           elements.progressSection.hidden = false;
           elements.progressSection.dataset.state = 'error';
-          elements.progressPill.textContent = "Амжилтгүй";
+          elements.progressPill.textContent = "Амжилтгүй болсон";
           elements.paymentSection.hidden = true;
           elements.paymentPanel.hidden = true;
           elements.fullReport.hidden = true;
@@ -4296,7 +4327,7 @@
 
           if (generation !== analysisGeneration) return;
           setStepState(0, "active");
-          elements.analysisNote.textContent = "AI шинжилгээ хийгдэж байгаа тул та тэвчээртэй хүлээнэ үү…";
+          elements.analysisNote.textContent = "Хиймэл оюун ухааны шинжилгээ явагдаж байна. Хүлээж байгаарай…";
           setProgress("analysis", 10);
 
           try {
@@ -4411,7 +4442,7 @@
           ai_analysis: "AI өвчний байдалд дүн шинжилгээ хийж, тохирох нарийн мэргэжлийг тааруулж байна…",
           generating_report: "Шинжилгээний тайланг үүсгэж байна…",
           generating_free_preview: "Бүрэн тайланг үүсгэж байна…",
-          completed: "Шинжилгээ дууслаа. Бүрэн тайлан үүсгэгдлээ.",
+          completed: "Шинжилгээ дууссан. Таны бүрэн тайлан бэлэн боллоо.",
           failed: "Шинжилгээ амжилтгүй боллоо",
           cancelled: "Шинжилгээ цуцлагдсан",
         });
@@ -4527,7 +4558,7 @@
           setStepState(0, "complete");
           setStepState(1, "active");
           setProgress("analysis", 0);
-          elements.analysisNote.textContent = "Явагдаж буй шинжилгээ илэрсэн тул таны явцыг сэргээж байна…";
+          elements.analysisNote.textContent = "Шинжилгээ аль хэдийн явагдаж байна. Таны явцыг сэргээж байна…";
           updateActionState();
             if (matchingReport) {
               adoptReportData(matchingReport);
@@ -4542,7 +4573,7 @@
             clearTask();
             isProcessing = false;
             elements.progressSection.dataset.state = "error";
-            elements.progressPill.textContent = "Сэргээх амжилтгүй боллоо.";
+            elements.progressPill.textContent = "Таны сессийг сэргээж чадсангүй";
             elements.analysisNote.textContent = error.message || "Өмнөх шинжилгээ дууссан эсвэл хугацаа нь дууссан тул “Миний тайлангууд” хэсгээс дахин оролдоно уу.";
             elements.startButtonText.textContent = "Дахин шинжлэх";
             updateActionState();
@@ -4557,13 +4588,13 @@
             completed: "Шинжилгээ дууссан",
             complete: "Шинжилгээ дууссан",
             succeeded: "Шинжилгээ дууссан",
-            pending_payment: "Төлбөр хүлээгдэж байна",
+            pending_payment: "Төлбөрийг хүлээж байна",
             failed: "Шинжилгээ амжилтгүй боллоо",
             error: "Шинжилгээ амжилтгүй боллоо",
-            processing: "Шинжилж байна",
+            processing: "Шинжилж байна…",
             pending: "Шинжилгээ хүлээгдэж байна",
             queued: "Дараалалд байна",
-            running: "Шинжилж байна",
+            running: "Шинжилж байна…",
           };
           return labels[status] || "Боловсруулж байна";
         }
@@ -4581,7 +4612,7 @@
             id.textContent = String(report.report_id);
             const meta = document.createElement('p');
             meta.className = 'report-list-meta';
-            const date = formatReportDate(report.created_at || report.updated_at) || "Огноо батлагдаагүй";
+            const date = formatReportDate(report.created_at || report.updated_at) || "Огноо тодорхойгүй";
             const payment = reportIsPaid(report) ? "Төлөгдсөн" : "Төлбөр төлөгдөөгүй";
             meta.textContent = date + ' · ' + reportStatusLabel(report) + ' · ' + payment;
             copy.append(id, meta);
@@ -4608,7 +4639,7 @@
           if (reportsLoading) return false;
           reportsLoading = true;
           elements.refreshReports.disabled = true;
-          if (!reportSummaries.length) setMessage(elements.reportsState, "Тайлан ачааллаж байна…");
+          if (!reportSummaries.length) setMessage(elements.reportsState, "Тайлангуудыг ачааллаж байна…");
           try {
             const data = await requestJson('/reports');
             if (generation !== sessionGeneration) return false;
@@ -4626,7 +4657,7 @@
             if (error.status === 401 || error.status === 403) {
               reportSummaries = [];
               renderReportList();
-              setMessage(elements.reportsState, "Одоогийн аюулгүй сесс хүчингүй боллоо. Дахин нэвтэрнэ үү, эсвэл тайлангийн дугаар болон татах кодыг ашиглан тайлангаа эзэмшинэ үү.", 'warning');
+              setMessage(elements.reportsState, "Таны аюулгүй сессийн хугацаа дууслаа. Дахин нэвтэрнэ үү, эсвэл тайлангийн дугаар болон задлах кодоор тайланг гаргаж авна уу.", 'warning');
             } else {
               setMessage(elements.reportsState, "Тайлангийн жагсаалтыг ачаалж чадсангүй:" + error.message + "«Жагсаалтыг шинэчлэх» товчийг дарж дахин оролдоно уу.", 'error');
             }
@@ -4642,10 +4673,10 @@
         function updateAuthState() {
           if (currentUser) {
             const user = currentUser.user && typeof currentUser.user === 'object' ? currentUser.user : currentUser;
-            elements.authState.textContent = "Нэвтэрсэн" + (user.email ? '：' + String(user.email) : '');
+            elements.authState.textContent = "Та нэвтэрсэн байна." + (user.email ? '：' + String(user.email) : '');
             elements.logoutButton.hidden = false;
           } else {
-            elements.authState.textContent = "Нэвтрээгүй байна. Цахим шуудангийн хаягаа баталгаажуулсны дараа уг хаягаар нэхэн авсан тайланг бусад төхөөрөмж дээр сэргээх боломжтой.";
+            elements.authState.textContent = "Нэвтрээгүй байна. Бусад төхөөрөмж дээр цахим шуудангийн хаягтай холбогдсон тайлангуудыг олж авахын тулд хаягаа баталгаажуулна уу.";
             elements.logoutButton.hidden = true;
           }
         }
@@ -4662,7 +4693,7 @@
             if (generation !== sessionGeneration) return null;
             currentUser = null;
             updateAuthState();
-            elements.authState.textContent = "Нэвтрэх төлвийг түр хугацаанд шалгах боломжгүй ч, авах код ашиглан тайланг олж авах боломжтой.";
+            elements.authState.textContent = "Бид таны нэвтрэх төлвийг яг одоо баталгаажуулж чадахгүй байгаа ч та тайлангуудаа татах код ашиглан авах боломжтой хэвээр байна.";
             return null;
           }
         }
@@ -4678,7 +4709,7 @@
               await loadAuthMe();
             } else {
               currentUser = null;
-              setMessage(elements.emailUnavailable, "Имэйлийн баталгаажуулалтын кодоор нэвтрэх нь одоогоор тохируулагдаагүй байна. Та тайлангийн дугаар болон татах кодыг ашиглан төхөөрөмж хооронд тайлангаа сэргээх боломжтой хэвээр байна.", 'warning');
+              setMessage(elements.emailUnavailable, "Имэйлээр нэвтрэх хараахан тохируулагдаагүй байна. Та тайлангийн дугаар болон задлах кодыг ашиглан бусад төхөөрөмж дээр тайлангаа авах боломжтой хэвээр байна.", 'warning');
             }
           } catch (error) {
             emailEnabled = false;
@@ -4696,14 +4727,14 @@
           if (!emailEnabled || authRequestPending) return;
           const email = elements.authEmail.value.trim();
           if (!email || !elements.authEmail.checkValidity()) {
-            setMessage(elements.authFeedback, "Эхлээд хүчинтэй имэйл хаяг оруулна уу.", 'error');
+            setMessage(elements.authFeedback, "Хүчинтэй имэйл хаяг оруулна уу.", 'error');
             elements.authEmail.focus();
             return;
           }
           const generation = sessionGeneration;
           authRequestPending = true;
           elements.requestCode.disabled = true;
-          setMessage(elements.authFeedback, "Баталгаажуулах кодыг хүсэж байна…");
+          setMessage(elements.authFeedback, "Баталгаажуулах код хүсэж байна…");
           try {
             await requestJson('/auth/request', {
               method: 'POST',
@@ -4712,7 +4743,7 @@
             });
             if (generation !== sessionGeneration) return;
             elements.authCode.value = '';
-            setMessage(elements.authFeedback, "Баталгаажуулах код илгээгдлээ. Цахим шуудангаа шалгаад 10 минутын дотор баталгаажуулалтыг дуусгана уу.", 'success');
+            setMessage(elements.authFeedback, "Баталгаажуулах код илгээгдлээ. Имэйлээ шалгаад 10 минутын дотор баталгаажуулна уу.", 'success');
             elements.authCode.focus();
           } catch (error) {
             if (generation !== sessionGeneration) return;
@@ -4735,7 +4766,7 @@
             return;
           }
           if (!code) {
-            setMessage(elements.authFeedback, "Имэйл дэх баталгаажуулах кодыг оруулна уу.", 'error');
+            setMessage(elements.authFeedback, "Имэйл дэх кодыг оруулна уу.", 'error');
             elements.authCode.focus();
             return;
           }
@@ -4757,7 +4788,7 @@
             const verifiedUser = await loadAuthMe();
             if (nextGeneration !== sessionGeneration) return;
             if (!verifiedUser) {
-              setMessage(elements.authFeedback, "Нэвтрэх төлөвийг түр хугацаанд баталгаажуулах боломжгүй байгаа тул та нэвтэрсэн гэж бүү тооцоорой; хуудсыг сэргээгээд дахин оролдоно уу.", 'warning');
+              setMessage(elements.authFeedback, "Бид таны нэвтрэх төлвийг яг одоо баталгаажуулж чадахгүй байна. Хуудсыг дахин ачаалаад дахин оролдоно уу.", 'warning');
               return;
             }
             const reportsRefreshed = await loadReports();
@@ -4817,9 +4848,9 @@
           try {
             await requestJson('/auth/logout', { method: 'POST' });
             await loadReports();
-            setMessage(elements.authFeedback, "Нэвтрэлтээс аюулгүйгээр гарлаа.", 'success');
+            setMessage(elements.authFeedback, "Та нэвтрэлтээс гарсан байна.", 'success');
           } catch (error) {
-            setMessage(elements.authFeedback, "Гарах хүсэлт амжилтгүй боллоо, хуудасны эмзэг агуулга цэвэрлэгдлээ:" + error.message, 'error');
+            setMessage(elements.authFeedback, "Гарах амжилтгүй боллоо. Хуудасны эмзэг агуулга цэвэрлэгдлээ:" + error.message, 'error');
           } finally {
             authVerifyPending = false;
             elements.logoutButton.disabled = false;
@@ -4831,13 +4862,13 @@
           const reportId = elements.claimReportId.value.trim();
           const accessCode = elements.claimAccessCode.value.trim();
           if (!reportId || !accessCode) {
-            setMessage(elements.reportCenterFeedback, "Тайлангийн дугаар болон авах кодыг хамт оруулна уу.", 'error');
+            setMessage(elements.reportCenterFeedback, "Тайлангийн дугаар болон задлан авах кодыг хоёуланг нь оруулна уу.", 'error');
             return;
           }
           const generation = sessionGeneration;
           claimPending = true;
           elements.claimSubmit.disabled = true;
-          setMessage(elements.reportCenterFeedback, "Тайланг аюулгүйгээр нэхэмжилж байна…");
+          setMessage(elements.reportCenterFeedback, "Таны тайланг аюулгүйгээр нэхэмжилж байна…");
           try {
             await requestJson('/reports/claim', {
               method: 'POST',
@@ -4848,7 +4879,7 @@
             elements.claimAccessCode.value = '';
             await loadReports();
             if (generation !== sessionGeneration) return;
-            setMessage(elements.reportCenterFeedback, "Амжилттай нозлоо, тайланг нээж байна…", 'success');
+            setMessage(elements.reportCenterFeedback, "Тайлан хүлээн авагдсан. Нээгдэж байна…", 'success');
             await openReport(reportId);
           } catch (error) {
             if (generation !== sessionGeneration) return;
@@ -5025,8 +5056,8 @@
           applyAnalysisProgress(detail, false);
           setStepState(0, 'complete');
           setStepState(1, 'active');
-          elements.uploadStatus.textContent = "\"Миний тайлангууд\"-аас аюулгүй сэргээгдсэн";
-          elements.analysisNote.textContent = "Тайланд дүн шинжилгээ хийгдсээр байгаа бөгөөд явц сэргээгдэж байна…";
+          elements.uploadStatus.textContent = "\"Миний тайлангууд\"-аас аюулгүйгээр сэргээгдсэн.";
+          elements.analysisNote.textContent = "Шинжилгээ үргэлжилсээр байна. Явцыг сэргээж байна…";
           updateActionState();
           if (scroll) scrollActiveReport();
           void resumeOpenedReport(currentReportId);
@@ -5041,7 +5072,7 @@
           const generation = sessionGeneration;
           openingReport = true;
           renderReportList();
-          setMessage(elements.reportCenterFeedback, "Тайланг сэргээж байна…");
+          setMessage(elements.reportCenterFeedback, "Таны тайланг сэргээж байна…");
           try {
             const detail = await requestJson('/reports/' + encodeURIComponent(reportId));
             if (generation !== sessionGeneration) return;
@@ -5049,7 +5080,7 @@
             currentReportId = String(detail.report_id || reportId);
             elements.reportId.textContent = currentReportId;
             displayReportDetail(detail, true);
-            setMessage(elements.reportCenterFeedback, "Тайлан сэргээгдлээ.", 'success');
+            setMessage(elements.reportCenterFeedback, "Тайлан сэргээгдсэн.", 'success');
           } catch (error) {
             if (generation !== sessionGeneration) return;
             if (error.status === 410) {
@@ -5152,7 +5183,7 @@
                   elements.paymentStatus.hidden = false;
                   elements.paymentStatus.classList.remove('alert-error');
                   elements.paymentStatus.classList.add('alert-success');
-                  elements.paymentStatus.textContent = "Төлбөр илгээгдсэн бөгөөд баталгаажуулж, AI шинжилгээг эхлүүлж байна…";
+                  elements.paymentStatus.textContent = "Төлбөр тань илгээгдсэн. Одоо баталгаажуулж байна — хиймэл оюун ухааны шинжилгээ удахгүй эхэлнэ…";
                   const captured = await requestJson('/pay/capture', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -5237,16 +5268,16 @@
           isProcessing = true;
           elements.analysisRetry.hidden = false;
           elements.analysisRetry.disabled = true;
-          elements.analysisRetry.textContent = "Дахин дараалалд орж байна…";
+          elements.analysisRetry.textContent = "Дараалалд дахин нэгдэж байна…";
           elements.progressSection.hidden = false;
           elements.progressSection.dataset.state = 'loading';
-          elements.progressPill.textContent = "Дахин дараалалд орох";
+          elements.progressPill.textContent = "Дараалалд дахин нэгдэх";
           elements.progressPill.classList.remove('success');
           elements.paymentSection.hidden = true;
           elements.fullReport.hidden = true;
           setProgress('analysis', 0);
-          elements.analysisNote.textContent = "Дахин оролдох хүсэлтийг илгээж байна. Анхны төлбөр хүчинтэй хэвээр тул давхар мөнгө хасагдахгүй...";
-          elements.startButtonText.textContent = "Дахин оролдлогыг хүлээн авч байна";
+          elements.analysisNote.textContent = "Дахин илгээж байна. Таны анхны төлбөр хүчинтэй хэвээр байна — танаас хоёр удаа төлбөр авахгүй…";
+          elements.startButtonText.textContent = "Дахин оролдож байна, түр хүлээнэ үү…";
           showFileError('');
           updateActionState();
           try {
@@ -5269,7 +5300,7 @@
             analysisRetryPending = false;
             isProcessing = false;
             elements.progressSection.dataset.state = 'error';
-            elements.progressPill.textContent = "Дахин оролдлогыг хүлээн аваагүй байна.";
+            elements.progressPill.textContent = "Таны хүсэлт хүлээн авагдаагүй. Дахин оролдоно уу";
             elements.analysisNote.textContent = "Дахин оролдох хүсэлт амжилтгүй боллоо:" + error.message;
             elements.analysisRetry.hidden = false;
             elements.analysisRetry.disabled = false;
@@ -5506,10 +5537,10 @@
           elements.multiResults.hidden = true;
           elements.multiReportList.replaceChildren();
           elements.multiPatientCount.textContent = "Илэрсэн " + nextGroup.patients.length + " өвчтнүүд";
-          elements.multiGroupReference.textContent = "Хуваагдсан дугаар:" + nextGroup.group_id;
+          elements.multiGroupReference.textContent = "Хуваалтын дэлгэрэнгүй мэдээлэл:" + nextGroup.group_id;
           elements.multiGroupStatus.textContent = "Хүний баталгаажуулалтыг хүлээж байна";
           elements.multiGroupStatus.className = 'status-pill demo';
-          elements.uploadSection.querySelector('.status-pill').textContent = "Хуваалтыг баталгаажуулахыг хүлээж байна";
+          elements.uploadSection.querySelector('.status-pill').textContent = "Хуваалтын баталгаажуулалтыг хүлээж байна";
           elements.startButtonText.textContent = "Дахин шинжлэх";
           setMultiGroupMessage('');
           renderMultiPatientEditor();
@@ -5796,7 +5827,7 @@
             elements.multiConfirmation.hidden = true;
             elements.multiResults.hidden = false;
             elements.progressSection.hidden = true;
-            elements.uploadSection.querySelector('.status-pill').textContent = "Олон хүний тайланд дүн шинжилгээ хийгдэж байна";
+            elements.uploadSection.querySelector('.status-pill').textContent = "Олон тайланд дүн шинжилгээ хийж байна…";
             setMultiGroupMessage('');
             renderMultiReportList();
             startMultiPolling();
@@ -5860,7 +5891,7 @@
           elements.multiGroupStatus.className = 'status-pill ' + (completed === reports.length && reports.length && !awaitingPayment ? 'success' : 'demo');
           elements.uploadSection.querySelector('.status-pill').textContent = awaitingPayment
             ? "Олон хүний тайлангийн төлбөр хүлээгдэж байна"
-            : completed === reports.length && reports.length ? "Олон хүний шинжилгээ дууссан" : "Олон хүний тайланд дүн шинжилгээ хийгдэж байна";
+            : completed === reports.length && reports.length ? "Олон хүний шинжилгээ дууссан" : "Олон тайланд дүн шинжилгээ хийж байна…";
           updateActionState();
         }
 
@@ -5875,7 +5906,7 @@
           elements.multiConfirmation.hidden = true;
           elements.multiResults.hidden = false;
           elements.multiPatientCount.textContent = (multiGroup.patients || []).length + " Өвчтөн · хүн бүрд нэг бие даасан тайлан";
-          elements.multiGroupReference.textContent = "Хуваагдсан дугаар:" + multiGroup.group_id;
+          elements.multiGroupReference.textContent = "Хуваалтын дэлгэрэнгүй мэдээлэл:" + multiGroup.group_id;
           const signature = multiReportSignature();
           if (elements.multiReportList.dataset.signature !== signature) {
             elements.multiReportList.replaceChildren();
@@ -5995,10 +6026,10 @@
           copy.addEventListener('click', async () => {
             try {
               await copyText(report.access_code);
-              feedback.textContent = "Авах код хуулагдлаа, аюулгүйгээр хадгална уу.";
+              feedback.textContent = "Олборлолтын код хуулагдлаа. Үүнийг аюулгүй хадгалаарай.";
               feedback.className = 'multi-report-feedback success';
             } catch (error) {
-              feedback.textContent = "Автоматаар хуулах амжилтгүй боллоо. Гараар сонгоод хуулна уу.";
+              feedback.textContent = "Автоматаар хуулах боломжгүй. Үүнийг гараар сонгон хуулна уу.";
               feedback.className = 'multi-report-feedback error';
             }
           });
@@ -6066,9 +6097,9 @@
             + (pages.length ? " · Эх сурвалжлах хуудас:" + pages.join('、') : '');
           nodes.status.textContent = expired ? "Хугацаа дууссан"
             : failed ? (paid ? "Шинжилгээ амжилтгүй боллоо · Дахин оролдох боломжтой" : "Шинжилгээ амжилтгүй боллоо")
-              : needsPayment ? "Төлбөр хүлээгдэж байна"
+              : needsPayment ? "Төлбөрийг хүлээж байна"
                 : awaitingDetail ? "Тайлан эмхэтгэгдэж байна"
-                  : complete ? "Бүрэн тайлан үүсгэгдсэн" : "Шинжилж байна";
+                  : complete ? "Бүрэн тайлан үүсгэгдсэн" : "Шинжилж байна…";
           nodes.status.className = 'status-pill ' + (complete && paid && !expired ? 'success' : 'demo');
           const numericProgress = Number(report.progress);
           const progress = complete ? 100 : needsPayment ? 0
@@ -6086,7 +6117,7 @@
           const retrying = multiRetryPending.has(report.report_id);
           nodes.retryButton.hidden = !failed || !paid || expired;
           nodes.retryButton.disabled = retrying;
-          nodes.retryButton.textContent = retrying ? "Дахин дараалалд орж байна…" : "Шинжилгээг дахин хийх (дахин төлбөр төлөх шаардлагагүй)";
+          nodes.retryButton.textContent = retrying ? "Дараалалд дахин нэгдэж байна…" : "Шинжилгээг дахин хийх (дахин төлбөр төлөх шаардлагагүй)";
           const fullReport = report.full_report || report.report_full || null;
           const needsPaidRecovery = paid && complete && !fullReport && !expired;
           nodes.payment.hidden = !needsPayment && !needsPaidRecovery;
@@ -6281,8 +6312,8 @@
           elements.multiSection.hidden = false;
           elements.multiConfirmation.hidden = true;
           elements.multiResults.hidden = true;
-          elements.multiGroupStatus.textContent = "Олон тоглогчийн хуваалтыг сэргээж байна";
-          elements.multiGroupReference.textContent = "Хуваагдсан дугаар:" + saved.groupId;
+          elements.multiGroupStatus.textContent = "Олон өвчтөний харагдацыг сэргээж байна…";
+          elements.multiGroupReference.textContent = "Хуваалтын дэлгэрэнгүй мэдээлэл:" + saved.groupId;
           try {
             if (reportCenterReady) await reportCenterReady;
             if (generation !== multiGeneration) return;
@@ -6727,7 +6758,7 @@
           showFileError("");
           resetResults();
           renderFiles();
-          elements.uploadSection.querySelector(".status-pill").textContent = "Байршуулахыг хүлээж байна";
+          elements.uploadSection.querySelector(".status-pill").textContent = "Одоохондоо байршуулагдаагүй байна";
           elements.fileInput.focus();
         });
 

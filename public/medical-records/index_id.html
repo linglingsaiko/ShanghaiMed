@@ -324,6 +324,30 @@
         color: var(--color-primary);
       }
 
+
+      .demo-strip span { flex: 1; }
+      .demo-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        margin-inline-start: auto;
+        align-self: center;
+        padding: 10px 20px;
+        border-radius: 999px;
+        background: var(--color-primary);
+        color: #fff;
+        font-weight: 600;
+        font-size: 13px;
+        white-space: nowrap;
+        text-decoration: none;
+        box-shadow: 0 2px 6px rgba(14, 90, 90, .25);
+        transition: background .15s ease;
+      }
+      .demo-cta:hover { background: #0a4545; color: #fff; text-decoration: none; }
+      @media (max-width: 640px) {
+        .demo-strip { flex-wrap: wrap; }
+        .demo-cta { margin-inline-start: 0; }
+      }
       .workflow {
         display: grid;
         gap: 24px;
@@ -2778,7 +2802,7 @@
 </span>
 <span>
 <span class="brand-name">ShanghaiMed</span>
-<span class="brand-subtitle">MEDICAL RECORDS · PHASE 3</span>
+<span class="brand-subtitle">CATATAN MEDIS · ANALISIS AI</span>
 </span>
 </a>
 <nav aria-label="Navigasi halaman." class="nav-actions">
@@ -2790,7 +2814,7 @@
 <a class="back-link" href="https://shanghaimedhealth.com/">
 <svg aria-hidden="true" fill="none" height="16" viewbox="0 0 24 24" width="16">
 <path d="m15 18-6-6 6-6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-</svg>Kembali ke situs web resmi.</a>
+</svg>Kembali ke ShanghaiMed.</a>
 <select aria-label="切换语言 / Switch language" class="lang-switcher" data-current="index_id.html" lang="en" onchange="if(this.value){window.location.href=this.value}"><option value="index.html">中文</option><option value="index_en.html">English</option><option value="index_ja.html">日本語</option><option value="index_ar.html">العربية</option><option value="index_ru.html">Русский</option><option value="index_mn.html">Монгол</option><option value="index_ms.html">Bahasa Melayu</option><option selected="" value="index_id.html">Bahasa Indonesia</option></select></nav>
 </div>
 </header>
@@ -2801,11 +2825,18 @@
 <div class="container">
 <section aria-labelledby="hero-title" class="hero">
 <div class="eyebrow">
-<span aria-hidden="true" class="eyebrow-dot"></span>AI eksklusif MediMatch · Triase spesialis yang akurat.</div>
-<h1 id="hero-title">Unggah riwayat medis Anda, dan biarkan MediMatch mencocokkan Anda dengan dokter spesialis yang paling sesuai.</h1>
-<p class="hero-subtitle">Mendukung unggahan gambar, PDF, dan file terkompresi. Semakin lengkap riwayat medisnya, semakin akurat rekomendasinya.</p>
+<span aria-hidden="true" class="eyebrow-dot"></span>MediMatch AI · Pencocokan Spesialisasi yang Tepat.</div>
+<h1 id="hero-title">Unggah catatan medis Anda — MediMatch mencocokkan Anda dengan spesialis yang tepat.</h1>
+<p class="hero-subtitle">Unggah gambar, PDF, atau file ZIP. Catatan yang lebih lengkap berarti rekomendasi yang lebih akurat.</p>
 <ul aria-label="Privasi dan perlindungan keamanan." class="trust-list">
-
+<li>
+<svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15">
+<path d="m5 12 4 4L19 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></path>
+</svg>Catatan asli dihapus setelah analisis.</li>
+<li>
+<svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15">
+<path d="m5 12 4 4L19 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></path>
+</svg>Dienkripsi dengan HTTPS sepanjang waktu.</li>
 </ul>
 </section>
 <div class="demo-strip" role="note">
@@ -2814,7 +2845,7 @@
 <path d="M12 11v6M12 7h.01" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
 </svg>
 <span>
-<strong>Deskripsi layanan:</strong>Catatan medis yang diunggah akan ditransmisikan melalui koneksi terenkripsi; setelah selesai melakukan pembayaran sesuai petunjuk di halaman, analisis AI akan dimulai. Setelah analisis selesai, file asli akan dihapus secara otomatis. Laporan tersebut hanya untuk referensi dan tidak merupakan saran medis.</span><a href="/medical-records/demo_id.html" target="_blank" rel="noopener" style="color:#0E5A5A;font-weight:600;text-decoration:underline;white-space:nowrap;margin-inline-start:8px;">Lihat contoh laporan →</a>
+<strong>Deskripsi layanan:</strong>Catatan medis yang diunggah akan ditransmisikan melalui koneksi terenkripsi; setelah selesai melakukan pembayaran sesuai petunjuk di halaman, analisis AI akan dimulai. Setelah analisis selesai, file asli akan dihapus secara otomatis. Laporan tersebut hanya untuk referensi dan tidak merupakan saran medis.</span><a href="/medical-records/demo_id.pdf" target="_blank" rel="noopener" class="demo-cta">Lihat contoh laporan (PDF) →</a>
 </div>
 <div class="workflow">
 <div class="consent-banner" hidden="" id="consent-declined" role="status">
@@ -2832,8 +2863,8 @@
 <div class="section-title-wrap">
 <span aria-hidden="true" class="section-number">01</span>
 <div>
-<h2 id="upload-title">Pilih file rekam medis.</h2>
-<p>Anda dapat memilih lebih dari satu file sekaligus, dan juga mengemas file yang telah diatur menjadi format ZIP.</p>
+<h2 id="upload-title">Pilih catatan medis.</h2>
+<p>Pilih beberapa file sekaligus, atau unggah semuanya sebagai ZIP.</p>
 </div>
 </div>
 <span class="status-pill">Menunggu untuk diunggah.</span>
@@ -2890,10 +2921,10 @@
 <path d="M7 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M8 12h8M8 16h5" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path>
 </svg>
 <div>
-<strong>Pengingat riwayat medis untuk satu orang.</strong><br/>Unggah hanya riwayat medis satu pasien saja; jika Anda mencampurkan riwayat medis dari dua pasien atau lebih, itu akan sangat memengaruhi akurasi analisis AI. Silakan pisahkan data berdasarkan pasien terlebih dahulu sebelum mengunggahnya.</div>
+<strong>Satu pasien per laporan.</strong><br/>Unggah hanya riwayat medis satu pasien saja; jika Anda mencampurkan riwayat medis dari dua pasien atau lebih, itu akan sangat memengaruhi akurasi analisis AI. Silakan pisahkan data berdasarkan pasien terlebih dahulu sebelum mengunggahnya.</div>
 </div>
 <div class="chief-complaint" id="chief-complaint-block">
-<label class="chief-label" for="chief-complaint-input">Keluhan utama<span class="chief-optional">(Opsional, disarankan untuk mengisi, untuk membantu AI mencocokkan spesialisasi dengan lebih akurat)</span>
+<label class="chief-label" for="chief-complaint-input">Keluhan utama<span class="chief-optional">(Opsional, tetapi direkomendasikan — membantu AI mencocokkan spesialisasi Anda dengan lebih akurat.)</span>
 </label>
 <p class="chief-hint">Silakan jelaskan gejala utama Anda, durasinya, dan masalah yang ingin Anda selesaikan. AI akan menganalisis keluhan Anda bersama dengan riwayat medis Anda.</p>
 <div class="chief-input-wrap">
@@ -2908,7 +2939,7 @@
 </div>
 </div>
 <div class="chief-complaint" id="personal-preferences-block">
-<label class="chief-label" for="personal-preferences-input">Persyaratan personalisasi.<span class="chief-optional">(Opsional, beri tahu kami tentang preferensi Anda dalam hal perawatan medis)</span>
+<label class="chief-label" for="personal-preferences-input">Persyaratan personalisasi.<span class="chief-optional">(Opsional. Beri tahu kami preferensi perawatan Anda.)</span>
 </label>
 <p class="chief-hint">Contohnya: Saya ingin mengunjungi dokter Tiongkok dan Barat secara bersamaan, saya ingin diberi janji dengan dokter wanita, atau saya memiliki preferensi untuk jenis rumah sakit tertentu. AI akan menganalisis permintaan Anda secara bersamaan.</p>
 <div class="chief-input-wrap">
@@ -2916,9 +2947,9 @@
 </div>
 </div>
 <div class="analysis-email-block" hidden="" id="analysis-email-block">
-<label class="chief-label" for="analysis-email">Email<span class="chief-optional">(Disarankan untuk mengisi ini, agar laporan ini dapat ditemukan kembali di perangkat apa pun)</span>
+<label class="chief-label" for="analysis-email">Email<span class="chief-optional">(Direkomendasikan — memungkinkan Anda mengambil laporan ini di perangkat apa pun.)</span>
 </label>
-<p class="chief-hint">Di sini, Anda tidak akan langsung masuk atau mengirim laporan; Anda harus menyelesaikan verifikasi kode email terlebih dahulu sebelum dapat mengklaim laporan yang sesuai.</p>
+<p class="chief-hint">Kami tidak akan mengirim laporan Anda langsung melalui email. Setelah verifikasi email, Anda dapat mengklaim laporan yang cocok di sini.</p>
 <input autocomplete="email" class="analysis-email-input" id="analysis-email" inputmode="email" maxlength="254" placeholder="you@example.com" type="email"/>
 </div>
 <div class="upload-actions">
@@ -2926,7 +2957,7 @@
 <svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15">
 <path d="M12 3 4 6v5c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6l-8-3Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path>
 <path d="m9 12 2 2 4-5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
-</svg>Dokumen tersebut hanya digunakan untuk analisis ini dan tidak akan digunakan untuk tampilan publik.</p>
+</svg>File-file Anda hanya digunakan untuk analisis ini dan tidak pernah ditampilkan secara publik.</p>
 <button aria-controls="progress-section payment-section" class="btn btn-primary" data-anchor-id="medical-records-upload.start-analysis" disabled="" id="start-analysis" type="button">
 <svg aria-hidden="true" fill="none" height="18" viewbox="0 0 24 24" width="18">
 <path d="m12 3 1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5L12 3ZM19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8L19 15Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.7"></path>
@@ -2940,8 +2971,8 @@
 <div class="section-heading">
 <div class="section-title-wrap">
 <div>
-<h2 id="credentials-title">Silakan segera simpan laporan untuk mengambil kembali buktinya.</h2>
-<p>Analisis telah diterima. Nomor laporan tetap tidak berubah, dan kode ekstraksi hanya ditampilkan dalam respons ini.</p>
+<h2 id="credentials-title">Simpan nomor laporan dan kode ekstraksi Anda sekarang.</h2>
+<p>Analisis diterima. Nomor laporan Anda tetap sama; kode ekstraksi hanya ditampilkan dalam tanggapan ini.</p>
 </div>
 </div>
 </div>
@@ -2957,7 +2988,7 @@
 <button class="btn btn-secondary btn-small" id="copy-access-code" type="button">Salin kode ekstraksi.</button>
 </div>
 </div>
-<p class="credentials-warning"><strong>Silakan simpan dengan aman. Untuk memulihkan data di perangkat lain, Anda perlu menggunakan kedua item tersebut secara bersamaan.</strong>Setelah menyegarkan atau menutup halaman, Anda tidak akan bisa melihat kode ekstraksi lagi; tolong jangan bagikan melalui obrolan publik atau tangkapan layar.</p>
+<p class="credentials-warning"><strong>Jaga mereka tetap aman — Anda akan membutuhkan keduanya untuk mengambil laporan Anda di perangkat lain.</strong>Anda tidak akan melihat kode ekstraksi lagi setelah menyegarkan atau menutup halaman ini. Jangan bagikan itu di obrolan publik atau tangkapan layar.</p>
 <div class="center-message" hidden="" id="credentials-feedback" role="status"></div>
 </section>
 <section aria-labelledby="progress-title" class="card card-pad" data-anchor-id="medical-records-upload.progress" data-state="loading" hidden="" id="progress-section">
@@ -2966,7 +2997,7 @@
 <span aria-hidden="true" class="section-number">02</span>
 <div>
 <h2 id="progress-title">Mengunggah dan menganalisis progres AI.</h2>
-<p>Analisis akan dimulai setelah pembayaran dikonfirmasi; silakan biarkan halaman tetap terbuka, dan laporan lengkap akan langsung ditampilkan setelah selesai.</p>
+<p>Analisis dimulai setelah pembayaran dikonfirmasi. Biarkan halaman ini terbuka - laporan lengkap Anda akan muncul di sini setelah siap.</p>
 </div>
 </div>
 <span class="status-pill" id="progress-pill">Sedang diproses</span>
@@ -3007,7 +3038,7 @@
 </li>
 <li class="analysis-step" data-state="default" data-step="1">
 <span aria-hidden="true" class="step-icon">2</span>
-<p class="step-name">AI mengidentifikasi isi dari catatan medis.</p>
+<p class="step-name">AI membaca catatan medis Anda.</p>
 <span class="step-status">Menunggu.</span>
 </li>
 <li class="analysis-step" data-state="default" data-step="2">
@@ -3034,15 +3065,15 @@
 <div class="section-title-wrap">
 <span aria-hidden="true" class="section-number">03</span>
 <div>
-<h2 id="multi-patient-title">Membagi catatan medis dari banyak orang.</h2>
-<p>Pertama, periksa kepemilikan setiap pasien untuk setiap halaman, lalu lakukan pembayaran dan buat laporan secara terpisah untuk masing-masing pasien.</p>
+<h2 id="multi-patient-title">Membagi catatan multi-pasien.</h2>
+<p>Konfirmasi pasien setiap halaman, lalu bayar dan hasilkan laporan secara terpisah.</p>
 </div>
 </div>
 <span class="status-pill demo" id="multi-group-status">Menunggu konfirmasi.</span>
 </div>
 <div class="multi-patient-summary">
 <strong id="multi-patient-count">Diidentifikasi beberapa pasien.</strong>
-<span id="multi-group-reference">Nomor pembagian: —</span>
+<span id="multi-group-reference">Pasien: —</span>
 </div>
 <div class="alert alert-error" hidden="" id="multi-group-feedback" role="alert"></div>
 <div id="multi-confirmation">
@@ -3055,14 +3086,14 @@
 </div>
 <div class="multi-patient-grid" id="multi-patient-list"></div>
 <h3>Konfirmasi atribusi halaman demi halaman.</h3>
-<p class="settings-note">Setiap halaman yang dapat dibaca hanya dapat dimiliki oleh satu pasien atau dikecualikan. Mengubah nama/MRN tidak akan membuat sistem mengatur ulang halaman secara otomatis.</p>
+<p class="settings-note">Setiap halaman milik satu pasien atau dikecualikan. Mengedit nama/MRN tidak akan mengalokasikan ulang halaman secara otomatis.</p>
 <div class="table-wrap">
 <table class="multi-page-table">
 <thead>
 <tr>
 <th scope="col">Halaman PDF asli.</th>
-<th scope="col">Memahami status backend.</th>
-<th scope="col">Tingkat kepercayaan</th>
+<th scope="col">Kepemilikan yang terdeteksi oleh AI.</th>
+<th scope="col">Konfidensi</th>
 <th scope="col">Konfirmasi kepemilikan.</th>
 </tr>
 </thead>
@@ -3071,8 +3102,8 @@
 </div>
 <div aria-live="polite" class="center-message" id="multi-validation" role="status"></div>
 <div class="multi-confirmation-actions">
-<button class="btn btn-secondary" id="multi-refresh-group" type="button">Membaca ulang atribut backend.</button>
-<button class="btn btn-primary" data-anchor-id="medical-records-upload.confirm-multi-patient" disabled="" id="multi-confirm-group" type="button">Konfirmasi dan hasilkan laporan terpisah untuk setiap orang.</button>
+<button class="btn btn-secondary" id="multi-refresh-group" type="button">Periksa kembali atribusi AI.</button>
+<button class="btn btn-primary" data-anchor-id="medical-records-upload.confirm-multi-patient" disabled="" id="multi-confirm-group" type="button">Konfirmasi & hasilkan laporan untuk setiap pasien.</button>
 </div>
 </div>
 <div hidden="" id="multi-results">
@@ -3083,8 +3114,8 @@
 <span>Pemisahan telah dikonfirmasi. Setiap pasien memiliki tugas, laporan, kode ekstraksi, dan pesanan pembayaran yang terpisah; setiap pembayaran hanya mengaktifkan analisis AI untuk pasien tersebut.</span>
 </div>
 <div class="multi-confirmation-actions">
-<button class="btn btn-secondary" id="multi-refresh-reports" type="button">Memperbarui status semua laporan.</button>
-<button class="btn btn-primary" data-anchor-id="medical-records-upload.unlock-all-multi-patient" disabled="" id="multi-select-all" type="button">Pilih semua dan bayar satu per satu.</button>
+<button class="btn btn-secondary" id="multi-refresh-reports" type="button">Segarkan semua status laporan.</button>
+<button class="btn btn-primary" data-anchor-id="medical-records-upload.unlock-all-multi-patient" disabled="" id="multi-select-all" type="button">Pilih semua & bayar secara terpisah.</button>
 </div>
 <p class="settings-note">"Pilih Semua" akan menampilkan tombol PayPal untuk setiap laporan yang harus dibayar. Setiap laporan memerlukan otorisasi terpisah dan penagihan terpisah, dan tidak akan digabungkan menjadi satu pesanan.</p>
 <div class="multi-report-list" id="multi-report-list"></div>
@@ -3114,13 +3145,13 @@
 <h3 id="payment-panel-title">Setelah pembayaran, luncurkan analisis AI.</h3>
 <p id="payment-panel-description">Pembayaran ini hanya untuk laporan saat ini. Analisis akan dimulai secara otomatis setelah pembayaran dikonfirmasi, tanpa perlu mengklik "Mulai Analisis AI" lagi.</p>
 <ul class="payment-features">
-<li>Analisis riwayat medis lengkap.</li>
-<li>3 Dokter Teratas yang Direkomendasikan</li>
-<li>Panduan persiapan untuk kunjungan ke dokter.</li>
+<li>Analisis Rekam Medis Lengkap.</li>
+<li>3 Rekomendasi Dokter Teratas.</li>
+<li>Mempersiapkan Kunjungan Anda</li>
 <li>Laporan PDF.</li>
 </ul>
 <div aria-label="Pembayaran aman PayPal." class="paypal-button-container" id="paypal-button-container"></div>
-<span class="payment-note">Pembayaran aman · Analisis akan dimulai secara otomatis setelah pembayaran dikonfirmasi, dan laporan lengkap akan langsung ditampilkan setelah selesai.</span>
+<span class="payment-note">Pembayaran aman · Analisis dimulai secara otomatis setelah pembayaran dikonfirmasi, dan laporan lengkap Anda muncul di sini.</span>
 </div>
 </div>
 </div>
@@ -3130,7 +3161,7 @@
 <div class="section-title-wrap">
 <span aria-hidden="true" class="section-number">04</span>
 <div>
-<h2 id="report-title">Laporan analisis riwayat medis lengkap.</h2>
+<h2 id="report-title">Laporan Analisis Rekam Medis Lengkap.</h2>
 <p>6 bab · Rekomendasi dokter · Persiapan kunjungan · Informasi rumah sakit</p>
 </div>
 </div>
@@ -3149,19 +3180,19 @@
 <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"></circle>
 <path d="M12 11v6M12 7h.01" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
 </svg>
-<span><strong>Generasi laporan oleh AI:</strong>Laporan berikut ini dihasilkan dari analisis kasus medis yang Anda unggah oleh AI, dan hanya untuk referensi, bukan merupakan saran medis.</span>
+<span><strong>Generasi laporan oleh AI:</strong>Laporan ini dihasilkan oleh AI dari catatan yang Anda unggah. Hanya untuk referensi - bukan nasihat medis.</span>
 </div>
 <div class="report-meta">
 <span>Nomor laporan:<span id="report-id">—</span></span>
-<span>Waktu pembuatan:<span id="report-date">—</span></span>
-<span>Tingkat kelengkapan data: dinilai berdasarkan dokumen yang diunggah.</span>
-<span>Bahasa laporan: Cina</span>
+<span>Dihasilkan:<span id="report-date">—</span></span>
+<span>Kelengkapan data: berdasarkan file yang diunggah.</span>
+<span>Bahasa laporan: Bahasa Mandarin</span>
 </div>
 <div class="report-chapters">
 <article class="report-chapter">
 <div class="chapter-heading">
 <span class="chapter-number">01</span>
-<h3>Riwayat medis singkat dan garis waktu kritis.</h3>
+<h3>Ringkasan Riwayat Medis & Garis Waktu Utama</h3>
 </div>
 <p class="chapter-intro">Pasien contoh mengeluhkan sakit punggung dengan nyeri yang menjalar ke kaki. AI mengatur catatan rawat jalan, laporan gambar, dan informasi pengobatan secara kronologis, membantu dokter memahami perjalanan penyakit secara cepat.</p>
 <ol class="timeline">
@@ -3190,15 +3221,15 @@
 <p class="chapter-intro">Berikut ini adalah ringkasan informasi berdasarkan riwayat medis oleh AI, yang tidak menjelaskan tingkat keparahan gambar dan tidak menggantikan konsultasi langsung dengan dokter.</p>
 <div class="finding-list">
 <div class="finding-item">
-<strong>Material gambar.</strong>
+<strong>Membayangkan.</strong>
 <p>Laporan teks MRI lumbal telah diidentifikasi; disarankan untuk membawa file gambar asli atau CD saat berkonsultasi.</p>
 </div>
 <div class="finding-item">
-<strong>Data uji laboratorium.</strong>
+<strong>Hasil laboratorium.</strong>
 <p>Laporan laboratorium rutin telah diidentifikasi; perlu memeriksa tanggal pemeriksaan, rentang referensi, dan apakah perlu dilakukan pemeriksaan ulang.</p>
 </div>
 <div class="finding-item">
-<strong>Gejala dan pengobatan.</strong>
+<strong>Gejala & obat-obatan.</strong>
 <p>Diperlukan untuk menyampaikan perubahan gejala, efek pengobatan sebelumnya, dosis obat, dan riwayat alergi kepada dokter agar mereka dapat menilainya.</p>
 </div>
 </div>
@@ -3206,7 +3237,7 @@
 <article class="report-chapter">
 <div class="chapter-heading">
 <span class="chapter-number">03</span>
-<h3>Dokter merekomendasikan.</h3>
+<h3>Rekomendasi dokter.</h3>
 </div>
 <p class="chapter-intro">Generasi arah departemen berdasarkan kasus sampel. Rekomendasi aktual membutuhkan akses ke database dokter yang telah diverifikasi dan informasi jadwal kerja mereka.</p>
 <div class="doctor-grid">
@@ -3284,7 +3315,7 @@
 <article class="report-chapter">
 <div class="chapter-heading">
 <span class="chapter-number">05</span>
-<h3>Panduan persiapan kunjungan ke dokter dan informasi tentang rumah sakit.</h3>
+<h3>Persiapan Kunjungan & Informasi Rumah Sakit.</h3>
 </div>
 <div class="preparation-grid">
 <div>
@@ -3331,7 +3362,7 @@
 <div class="section-heading">
 <div class="section-title-wrap">
 <div class="report-center-intro">
-<h2 id="report-center-title">Laporan saya</h2>
+<h2 id="report-center-title">Laporan Saya</h2>
 <p>Laporan pada perangkat ini akan terdaftar secara otomatis; saat mengganti perangkat, Anda dapat masuk kembali menggunakan kode verifikasi email.</p>
 </div>
 </div>
@@ -3339,15 +3370,15 @@
 </div>
 <div class="report-center-grid">
 <div class="report-center-panel">
-<h3>Laporan pada perangkat ini</h3>
-<p>Hanya menampilkan nomor laporan, kemajuan, dan status pembayaran. Saat dibuka, perlu divalidasi melalui sesi keamanan saat ini.</p>
+<h3>Laporan tentang perangkat ini</h3>
+<p>Hanya nomor laporan, progres, dan status pembayaran yang ditampilkan. Membuka laporan membutuhkan sesi aman Anda saat ini.</p>
 <div aria-live="polite" class="center-message" id="reports-state" role="status">Memuat laporan...</div>
 <ul aria-label="Laporan analisis riwayat medis saya" class="report-list" id="report-list"></ul>
 </div>
 <div class="center-form">
 <div class="report-center-panel" hidden="">
-<h3>Mengambil kembali di seluruh perangkat.</h3>
-<p>Masukkan nomor laporan dan kode ekstraksi yang disimpan saat menerima analisis (hanya ditampilkan sekali). Kode ekstraksi bukanlah nomor laporan.</p>
+<h3>Ambil laporan pada perangkat lain.</h3>
+<p>Masukkan nomor laporan dan kode ekstraksi yang Anda simpan (hanya ditampilkan sekali). Kode ekstraksi berbeda dari nomor laporan.</p>
 <form autocomplete="off" class="center-form" id="claim-form">
 <label class="center-field" for="claim-report-id">Nomor laporan.<input autocapitalize="characters" autocomplete="off" id="claim-report-id" maxlength="80" name="report_id" placeholder="SM-…" required="" spellcheck="false" type="text"/>
 </label>
@@ -3412,11 +3443,11 @@
 </li>
 <li>
 <span aria-hidden="true" class="consent-check">✓</span>
-<span>Rekam medis asli akan dihapus setelah analisis selesai.</span>
+<span>Catatan asli dihapus setelah dianalisis.</span>
 </li>
 <li>
 <span aria-hidden="true" class="consent-check">✓</span>
-<span>Hanya simpan hasil terstruktur yang diperlukan untuk generasi laporan.</span>
+<span>Hanya hasil terstruktur yang diperlukan untuk laporan Anda yang disimpan.</span>
 </li>
 <li>
 <span aria-hidden="true" class="consent-check">✓</span>
@@ -3649,7 +3680,7 @@
             step.classList.remove("is-active", "is-complete");
             step.dataset.state = "default";
             step.querySelector(".step-icon").textContent = String(index + 1);
-            step.querySelector(".step-status").textContent = "\nMenunggu.";
+            step.querySelector(".step-status").textContent = "Menunggu.";
           });
         }
 
@@ -3717,7 +3748,7 @@
           elements.progressPill.textContent = "Sedang diproses";
           elements.progressPill.classList.remove("success");
           elements.startButtonText.textContent = "Mulai analisis AI.";
-          elements.uploadSection.querySelector(".status-pill").textContent = "Menunggu untuk diunggah.";
+          elements.uploadSection.querySelector(".status-pill").textContent = "Belum diunggah.";
           setProgress("upload", 0);
           setProgress("analysis", 0);
           elements.uploadStatus.textContent = "Menghubungkan secara enkripsi...";
@@ -3759,7 +3790,7 @@
             const status = document.createElement("span");
             status.className = "file-state";
             status.dataset.fileStatus = String(item.id);
-            status.textContent = item.status || "Menunggu untuk diunggah.";
+            status.textContent = item.status || "Belum diunggah.";
 
             const remove = document.createElement("button");
             remove.className = "icon-button";
@@ -3778,7 +3809,7 @@
           elements.filePanel.hidden = selectedFiles.length === 0;
           elements.fileCount.textContent = selectedFiles.length
             ? `\n${selectedFiles.length} file telah dipilih · Totalnya ${formatFileSize(totalSize)}`
-            : "0 file telah dipilih.";
+            : "0 file dipilih.";
           elements.pdfImageNotice.hidden = !selectedFiles.some(
             (item) => getExtension(item.file.name) === "pdf"
           );
@@ -3815,7 +3846,7 @@
               errors.push(`" ${file.name} " sudah ada dalam daftar, dan file duplikatnya sudah diabaikan.`);
             } else {
               existingKeys.add(key);
-              validFiles.push({ id: ++fileIdCounter, file, status: "Menunggu untuk diunggah." });
+              validFiles.push({ id: ++fileIdCounter, file, status: "Belum diunggah." });
             }
           });
 
@@ -3847,11 +3878,11 @@
           } else if (state === "error") {
             step.dataset.state = "error";
             icon.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>';
-            status.textContent = "\nKegagalan.";
+            status.textContent = "Gagal.";
           } else {
             step.dataset.state = "default";
             icon.textContent = String(index + 1);
-            status.textContent = "\nMenunggu.";
+            status.textContent = "Menunggu.";
           }
         }
 
@@ -3966,10 +3997,10 @@
             uploadedFileIds = result.file_ids || [];
 
             setProgress("upload", 100);
-            elements.uploadStatus.textContent = "Unggahan file telah selesai, dan analisis AI akan segera dimulai.";
-            selectedFiles.forEach((item) => { item.status = "\nTelah diunggah."; });
+            elements.uploadStatus.textContent = "File-file telah diunggah. Analisis AI akan dimulai sebentar lagi.";
+            selectedFiles.forEach((item) => { item.status = "Diunggah."; });
             elements.fileList.querySelectorAll("[data-file-status]").forEach((status) => {
-              status.textContent = "\nTelah diunggah.";
+              status.textContent = "Diunggah.";
               status.classList.add("complete");
             });
           } catch (error) {
@@ -4042,7 +4073,7 @@
             await copyText(text);
             setMessage(elements.credentialsFeedback, isCode ? "Kode ekstraksi telah disalin, silakan tempel di lokasi yang aman untuk disimpan." : "Nomor laporan telah disalin.", 'success');
           } catch (error) {
-            setMessage(elements.credentialsFeedback, "Salin otomatis gagal, silakan pilih dan salin secara manual.", 'error');
+            setMessage(elements.credentialsFeedback, "Tidak bisa menyalin secara otomatis. Silakan pilih dan salin secara manual.", 'error');
           }
         }
 
@@ -4084,10 +4115,10 @@
           setProgress('upload', 100);
           setProgress('analysis', 100);
           for (let i = 0; i < elements.steps.length; i++) setStepState(i, 'complete');
-          elements.analysisNote.textContent = "Analisis selesai, laporan lengkap telah dibuat.";
+          elements.analysisNote.textContent = "Analisis selesai. Laporan lengkap Anda sudah siap.";
           elements.progressSection.hidden = false;
           elements.progressSection.dataset.state = 'complete';
-          elements.progressPill.textContent = "\nSudah selesai.";
+          elements.progressPill.textContent = "Selesai.";
           elements.progressPill.classList.add('success');
           elements.uploadSection.querySelector('.status-pill').textContent = "Analisis selesai.";
           elements.paymentSection.hidden = true;
@@ -4112,11 +4143,11 @@
           elements.fullReport.hidden = true;
           elements.paymentSection.hidden = false;
           elements.paymentPanel.hidden = false;
-          elements.paymentTitle.textContent = analysisComplete ? "Setelah menyelesaikan pembayaran, lihat laporan lengkapnya." : "Setelah menyelesaikan pembayaran, mulailah analisis AI.";
+          elements.paymentTitle.textContent = analysisComplete ? "Setelah menyelesaikan pembayaran, lihat laporan lengkapnya." : "Selesaikan pembayaran untuk memulai analisis AI.";
           elements.paymentDescription.textContent = analysisComplete
             ? "Laporan sejarah ini telah selesai dianalisis, dan laporan lengkapnya akan langsung ditampilkan setelah pembayaran dikonfirmasi."
-            : "Setelah pembayaran berhasil, analisis akan dimulai, dan setelah selesai, laporan lengkap akan langsung ditampilkan.";
-          elements.paymentPanelTitle.textContent = analysisComplete ? "Setelah melakukan pembayaran, lihat laporan lengkapnya." : "Setelah pembayaran, luncurkan analisis AI.";
+            : "Setelah pembayaran berhasil, analisis dimulai secara otomatis dan laporan lengkap Anda akan muncul di sini.";
+          elements.paymentPanelTitle.textContent = analysisComplete ? "Setelah melakukan pembayaran, lihat laporan lengkapnya." : "Bayar untuk memulai analisis AI.";
           elements.paymentPanelDescription.textContent = analysisComplete
             ? "Pembayaran ini hanya untuk laporan saat ini, dan konten lengkapnya akan otomatis terbuka setelah pembayaran dikonfirmasi."
             : "Pembayaran ini hanya untuk laporan saat ini. Analisis akan dimulai secara otomatis setelah pembayaran dikonfirmasi, tanpa perlu mengklik \"Mulai Analisis AI\" lagi.";
@@ -4126,9 +4157,9 @@
           elements.paymentStatus.classList.add('alert-success');
           elements.progressSection.hidden = false;
           elements.progressSection.dataset.state = 'awaiting_payment';
-          elements.progressPill.textContent = "Belum dibayar.";
+          elements.progressPill.textContent = "Menunggu pembayaran.";
           elements.progressPill.classList.remove('success');
-          elements.uploadSection.querySelector('.status-pill').textContent = "Belum dibayar.";
+          elements.uploadSection.querySelector('.status-pill').textContent = "Menunggu pembayaran.";
           setProgress('upload', 100);
           setProgress('analysis', analysisComplete ? 100 : 0);
           resetSteps();
@@ -4137,7 +4168,7 @@
           } else {
             setStepState(0, 'complete');
           }
-          elements.uploadStatus.textContent = "Unggahan file selesai, tugas laporan telah dibuat.";
+          elements.uploadStatus.textContent = "File-file telah diunggah. Tugas laporan Anda telah dibuat.";
           elements.analysisNote.textContent = analysisComplete
             ? "Laporan sejarah telah selesai dianalisis. Silakan lihat laporan lengkapnya setelah menyelesaikan pembayaran di bawah ini."
             : "Riwayat medis telah diunggah, dan analisis AI akan dimulai secara otomatis setelah pembayaran selesai.";
@@ -4164,15 +4195,15 @@
           elements.analysisRetry.hidden = true;
           elements.progressSection.hidden = false;
           elements.progressSection.dataset.state = 'loading';
-          elements.progressPill.textContent = "Dalam analisisnya";
+          elements.progressPill.textContent = "Menganalisis...";
           elements.progressPill.classList.remove('success');
-          elements.uploadSection.querySelector('.status-pill').textContent = "Dalam analisisnya";
+          elements.uploadSection.querySelector('.status-pill').textContent = "Menganalisis...";
           setProgress('upload', 100);
           resetSteps();
           setStepState(0, 'complete');
           setStepState(1, 'active');
           applyAnalysisProgress(detail, false);
-          elements.analysisNote.textContent = "Pembayaran telah dikonfirmasi, analisis AI telah dimulai, silakan tetap buka halaman ini...";
+          elements.analysisNote.textContent = "Pembayaran telah dikonfirmasi. Analisis AI telah dimulai - silakan tetap buka halaman ini...";
           elements.startButtonText.textContent = "Analisis sedang berlangsung.";
           updateActionState();
           elements.progressSection.scrollIntoView({
@@ -4223,7 +4254,7 @@
           elements.analysisNote.textContent = noReadableText ? friendly : "Menganalisis kegagalan:" + friendly;
           elements.progressSection.hidden = false;
           elements.progressSection.dataset.state = 'error';
-          elements.progressPill.textContent = "\nKegagalan.";
+          elements.progressPill.textContent = "Gagal.";
           elements.paymentSection.hidden = true;
           elements.paymentPanel.hidden = true;
           elements.fullReport.hidden = true;
@@ -4296,7 +4327,7 @@
 
           if (generation !== analysisGeneration) return;
           setStepState(0, "active");
-          elements.analysisNote.textContent = "Analisis AI sedang berlangsung, mohon tunggu dengan sabar...";
+          elements.analysisNote.textContent = "Analisis AI sedang berjalan. Mohon tunggu...";
           setProgress("analysis", 10);
 
           try {
@@ -4411,8 +4442,8 @@
           ai_analysis: "AI sedang menganalisis kondisi penyakit dan mencocokkan spesialis...",
           generating_report: "Melakukan pembuatan laporan analisis...",
           generating_free_preview: "Melakukan pembuatan laporan lengkap...",
-          completed: "Analisis selesai, laporan lengkap telah dibuat.",
-          failed: "Menganalisis kegagalan.",
+          completed: "Analisis selesai. Laporan lengkap Anda sudah siap.",
+          failed: "Analisis gagal.",
           cancelled: "Analisis telah dibatalkan.",
         });
 
@@ -4527,7 +4558,7 @@
           setStepState(0, "complete");
           setStepState(1, "active");
           setProgress("analysis", 0);
-          elements.analysisNote.textContent = "Terdeteksi adanya analisis yang sedang berlangsung, kami sedang memulihkan progres Anda...";
+          elements.analysisNote.textContent = "Sebuah analisis sudah berjalan. Memulihkan progres Anda...";
           updateActionState();
             if (matchingReport) {
               adoptReportData(matchingReport);
@@ -4542,7 +4573,7 @@
             clearTask();
             isProcessing = false;
             elements.progressSection.dataset.state = "error";
-            elements.progressPill.textContent = "Pemulihan gagal.";
+            elements.progressPill.textContent = "Tidak bisa memulihkan sesi Anda.";
             elements.analysisNote.textContent = error.message || "Analisis sebelumnya telah selesai atau kedaluwarsa, silakan coba lagi dari \"Laporan Saya\".";
             elements.startButtonText.textContent = "Analisis ulang.";
             updateActionState();
@@ -4557,13 +4588,13 @@
             completed: "Analisis selesai.",
             complete: "Analisis selesai.",
             succeeded: "Analisis selesai.",
-            pending_payment: "Belum dibayar.",
-            failed: "Menganalisis kegagalan.",
-            error: "Menganalisis kegagalan.",
-            processing: "Dalam analisisnya",
+            pending_payment: "Menunggu pembayaran.",
+            failed: "Analisis gagal.",
+            error: "Analisis gagal.",
+            processing: "Menganalisis...",
             pending: "Menunggu analisis.",
             queued: "Di antre.",
-            running: "Dalam analisisnya",
+            running: "Menganalisis...",
           };
           return labels[status] || "Sedang diproses";
         }
@@ -4581,7 +4612,7 @@
             id.textContent = String(report.report_id);
             const meta = document.createElement('p');
             meta.className = 'report-list-meta';
-            const date = formatReportDate(report.created_at || report.updated_at) || "Harap konfirmasi pada hari Senin.";
+            const date = formatReportDate(report.created_at || report.updated_at) || "Tanggal tidak tersedia.";
             const payment = reportIsPaid(report) ? "\nSudah dibayar." : "Belum dibayar.";
             meta.textContent = date + ' · ' + reportStatusLabel(report) + ' · ' + payment;
             copy.append(id, meta);
@@ -4626,7 +4657,7 @@
             if (error.status === 401 || error.status === 403) {
               reportSummaries = [];
               renderReportList();
-              setMessage(elements.reportsState, "Sesi keamanan saat ini telah kedaluwarsa. Silakan masuk ulang, atau gunakan nomor laporan dan kode ekstraksi untuk mengklaimnya.", 'warning');
+              setMessage(elements.reportsState, "Sesi aman Anda telah kedaluwarsa. Masuk lagi, atau klaim laporan dengan nomor laporan dan kode ekstraksi.", 'warning');
             } else {
               setMessage(elements.reportsState, "Gagal memuat daftar laporan:" + error.message + "Anda dapat mengklik \"Refresh List\" untuk mencoba lagi.", 'error');
             }
@@ -4642,10 +4673,10 @@
         function updateAuthState() {
           if (currentUser) {
             const user = currentUser.user && typeof currentUser.user === 'object' ? currentUser.user : currentUser;
-            elements.authState.textContent = "\nSudah login." + (user.email ? '：' + String(user.email) : '');
+            elements.authState.textContent = "Anda sudah login." + (user.email ? '：' + String(user.email) : '');
             elements.logoutButton.hidden = false;
           } else {
-            elements.authState.textContent = "Belum login. Setelah memverifikasi email, Anda dapat mengambil laporan yang diklaim oleh email tersebut di perangkat lain.";
+            elements.authState.textContent = "Tidak masuk. Verifikasi email Anda untuk mengambil laporan yang terkait dengannya di perangkat lain.";
             elements.logoutButton.hidden = true;
           }
         }
@@ -4662,7 +4693,7 @@
             if (generation !== sessionGeneration) return null;
             currentUser = null;
             updateAuthState();
-            elements.authState.textContent = "Status login untuk sementara tidak dapat dikonfirmasi, tetapi Anda masih dapat menggunakan kode ekstraksi untuk mengambil laporan.";
+            elements.authState.textContent = "Kami tidak dapat mengonfirmasi status login Anda saat ini, tetapi Anda masih dapat mengambil laporan dengan kode ekstraksi.";
             return null;
           }
         }
@@ -4678,7 +4709,7 @@
               await loadAuthMe();
             } else {
               currentUser = null;
-              setMessage(elements.emailUnavailable, "Kode verifikasi email untuk login saat ini belum dikonfigurasi. Anda masih dapat menggunakan nomor laporan dan kode ekstraksi untuk mengambil laporan di perangkat lain.", 'warning');
+              setMessage(elements.emailUnavailable, "Login email belum dikonfigurasi. Anda masih dapat mengambil laporan di perangkat lain dengan nomor laporan dan kode ekstraksi.", 'warning');
             }
           } catch (error) {
             emailEnabled = false;
@@ -4696,14 +4727,14 @@
           if (!emailEnabled || authRequestPending) return;
           const email = elements.authEmail.value.trim();
           if (!email || !elements.authEmail.checkValidity()) {
-            setMessage(elements.authFeedback, "Silakan masukkan alamat email yang valid terlebih dahulu.", 'error');
+            setMessage(elements.authFeedback, "Masukkan alamat email yang valid.", 'error');
             elements.authEmail.focus();
             return;
           }
           const generation = sessionGeneration;
           authRequestPending = true;
           elements.requestCode.disabled = true;
-          setMessage(elements.authFeedback, "Sedang meminta kode verifikasi...");
+          setMessage(elements.authFeedback, "Meminta kode verifikasi...");
           try {
             await requestJson('/auth/request', {
               method: 'POST',
@@ -4712,7 +4743,7 @@
             });
             if (generation !== sessionGeneration) return;
             elements.authCode.value = '';
-            setMessage(elements.authFeedback, "Kode verifikasi telah dikirimkan. Mohon periksa email Anda dan selesaikan verifikasi dalam 10 menit.", 'success');
+            setMessage(elements.authFeedback, "Kode verifikasi telah dikirim. Periksa email Anda dan verifikasi dalam waktu 10 menit.", 'success');
             elements.authCode.focus();
           } catch (error) {
             if (generation !== sessionGeneration) return;
@@ -4730,12 +4761,12 @@
           const email = elements.authEmail.value.trim();
           const code = elements.authCode.value.trim();
           if (!email || !elements.authEmail.checkValidity()) {
-            setMessage(elements.authFeedback, "Silakan masukkan alamat email yang valid.", 'error');
+            setMessage(elements.authFeedback, "Masukkan alamat email yang valid.", 'error');
             elements.authEmail.focus();
             return;
           }
           if (!code) {
-            setMessage(elements.authFeedback, "Silakan masukkan kode verifikasi dalam email.", 'error');
+            setMessage(elements.authFeedback, "Masukkan kode dari email tersebut.", 'error');
             elements.authCode.focus();
             return;
           }
@@ -4757,7 +4788,7 @@
             const verifiedUser = await loadAuthMe();
             if (nextGeneration !== sessionGeneration) return;
             if (!verifiedUser) {
-              setMessage(elements.authFeedback, "Untuk saat ini, status login Anda tidak dapat dikonfirmasi. Jangan anggap Anda sudah login. Silakan coba lagi setelah menyegarkan halaman.", 'warning');
+              setMessage(elements.authFeedback, "Kami tidak dapat mengonfirmasi status login Anda saat ini. Silakan segarkan halaman dan coba lagi.", 'warning');
               return;
             }
             const reportsRefreshed = await loadReports();
@@ -4813,13 +4844,13 @@
           beginSessionTransition();
           authVerifyPending = true;
           elements.logoutButton.disabled = true;
-          setMessage(elements.authFeedback, "Sedang keluar...");
+          setMessage(elements.authFeedback, "Logging out...");
           try {
             await requestJson('/auth/logout', { method: 'POST' });
             await loadReports();
-            setMessage(elements.authFeedback, "Anda telah keluar dari akun dengan aman.", 'success');
+            setMessage(elements.authFeedback, "Anda sudah logout.", 'success');
           } catch (error) {
-            setMessage(elements.authFeedback, "Permintaan keluar gagal, konten sensitif halaman telah dihapus:" + error.message, 'error');
+            setMessage(elements.authFeedback, "Logout gagal. Konten halaman sensitif telah dihapus:" + error.message, 'error');
           } finally {
             authVerifyPending = false;
             elements.logoutButton.disabled = false;
@@ -4831,13 +4862,13 @@
           const reportId = elements.claimReportId.value.trim();
           const accessCode = elements.claimAccessCode.value.trim();
           if (!reportId || !accessCode) {
-            setMessage(elements.reportCenterFeedback, "Silakan masukkan nomor laporan dan kode ekstraksi secara bersamaan.", 'error');
+            setMessage(elements.reportCenterFeedback, "Masukkan nomor laporan dan kode ekstraksi.", 'error');
             return;
           }
           const generation = sessionGeneration;
           claimPending = true;
           elements.claimSubmit.disabled = true;
-          setMessage(elements.reportCenterFeedback, "Sedang mengajukan laporan klaim keamanan...");
+          setMessage(elements.reportCenterFeedback, "Mengklaim laporan Anda dengan aman...");
           try {
             await requestJson('/reports/claim', {
               method: 'POST',
@@ -4848,7 +4879,7 @@
             elements.claimAccessCode.value = '';
             await loadReports();
             if (generation !== sessionGeneration) return;
-            setMessage(elements.reportCenterFeedback, "Klaim berhasil, sedang membuka laporan...", 'success');
+            setMessage(elements.reportCenterFeedback, "Laporan mengklaim. Pembukaan...", 'success');
             await openReport(reportId);
           } catch (error) {
             if (generation !== sessionGeneration) return;
@@ -5018,15 +5049,15 @@
           elements.analysisRetry.hidden = true;
           elements.progressSection.dataset.state = 'loading';
           elements.progressPill.textContent = "Sedang diproses";
-          elements.uploadSection.querySelector('.status-pill').textContent = "Laporan telah dipulihkan.";
+          elements.uploadSection.querySelector('.status-pill').textContent = "Laporkan dipulihkan.";
           elements.startButtonText.textContent = "Analisis sedang berlangsung.";
           setProgress('upload', 100);
           setProgress('analysis', 0);
           applyAnalysisProgress(detail, false);
           setStepState(0, 'complete');
           setStepState(1, 'active');
-          elements.uploadStatus.textContent = "\nData telah dipulihkan dengan aman dari \"Laporan Saya\".";
-          elements.analysisNote.textContent = "Laporan tersebut masih dalam analisis, dan proses pemulihan sedang berlangsung...";
+          elements.uploadStatus.textContent = "Pulihkan dengan aman dari \"Laporan Saya\".";
+          elements.analysisNote.textContent = "Analisis masih berjalan. Memulihkan progres...";
           updateActionState();
           if (scroll) scrollActiveReport();
           void resumeOpenedReport(currentReportId);
@@ -5041,7 +5072,7 @@
           const generation = sessionGeneration;
           openingReport = true;
           renderReportList();
-          setMessage(elements.reportCenterFeedback, "Sedang memulihkan laporan...");
+          setMessage(elements.reportCenterFeedback, "Memulihkan laporan Anda...");
           try {
             const detail = await requestJson('/reports/' + encodeURIComponent(reportId));
             if (generation !== sessionGeneration) return;
@@ -5049,7 +5080,7 @@
             currentReportId = String(detail.report_id || reportId);
             elements.reportId.textContent = currentReportId;
             displayReportDetail(detail, true);
-            setMessage(elements.reportCenterFeedback, "Laporan telah dipulihkan.", 'success');
+            setMessage(elements.reportCenterFeedback, "Laporkan dipulihkan.", 'success');
           } catch (error) {
             if (generation !== sessionGeneration) return;
             if (error.status === 410) {
@@ -5152,7 +5183,7 @@
                   elements.paymentStatus.hidden = false;
                   elements.paymentStatus.classList.remove('alert-error');
                   elements.paymentStatus.classList.add('alert-success');
-                  elements.paymentStatus.textContent = "Pembayaran telah diajukan, sedang dikonfirmasi dan mengaktifkan analisis AI...";
+                  elements.paymentStatus.textContent = "Pembayaran telah diajukan. Sedang diverifikasi sekarang — analisis AI akan dimulai sebentar lagi...";
                   const captured = await requestJson('/pay/capture', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -5237,16 +5268,16 @@
           isProcessing = true;
           elements.analysisRetry.hidden = false;
           elements.analysisRetry.disabled = true;
-          elements.analysisRetry.textContent = "Sedang mengantre ulang...";
+          elements.analysisRetry.textContent = "Kembali mengantre...";
           elements.progressSection.hidden = false;
           elements.progressSection.dataset.state = 'loading';
-          elements.progressPill.textContent = "Antre lagi";
+          elements.progressPill.textContent = "Gabung kembali ke antrean.";
           elements.progressPill.classList.remove('success');
           elements.paymentSection.hidden = true;
           elements.fullReport.hidden = true;
           setProgress('analysis', 0);
-          elements.analysisNote.textContent = "Meminta untuk mengirimkan permintaan ulang. Pembayaran asli masih valid, dan tidak akan ada pengurangan biaya yang berlebihan...";
-          elements.startButtonText.textContent = "Sedang mencoba lagi";
+          elements.analysisNote.textContent = "Mengirimkan permintaan ulang. Pembayaran asli Anda masih valid - Anda tidak akan dikenakan biaya dua kali...";
+          elements.startButtonText.textContent = "Mencoba lagi, tolong tunggu...";
           showFileError('');
           updateActionState();
           try {
@@ -5269,7 +5300,7 @@
             analysisRetryPending = false;
             isProcessing = false;
             elements.progressSection.dataset.state = 'error';
-            elements.progressPill.textContent = "Coba lagi, permintaan Anda belum diterima.";
+            elements.progressPill.textContent = "Permintaan Anda tidak diterima. Silakan coba lagi.";
             elements.analysisNote.textContent = "Permintaan coba ulang gagal:" + error.message;
             elements.analysisRetry.hidden = false;
             elements.analysisRetry.disabled = false;
@@ -5506,7 +5537,7 @@
           elements.multiResults.hidden = true;
           elements.multiReportList.replaceChildren();
           elements.multiPatientCount.textContent = "Diidentifikasi. " + nextGroup.patients.length + " \nSeorang pasien";
-          elements.multiGroupReference.textContent = "Nomor pembagian:" + nextGroup.group_id;
+          elements.multiGroupReference.textContent = "Rincian pembagian:" + nextGroup.group_id;
           elements.multiGroupStatus.textContent = "Menunggu konfirmasi manual.";
           elements.multiGroupStatus.className = 'status-pill demo';
           elements.uploadSection.querySelector('.status-pill').textContent = "Menunggu konfirmasi pembagian.";
@@ -5796,7 +5827,7 @@
             elements.multiConfirmation.hidden = true;
             elements.multiResults.hidden = false;
             elements.progressSection.hidden = true;
-            elements.uploadSection.querySelector('.status-pill').textContent = "Dalam analisis laporan dari banyak orang";
+            elements.uploadSection.querySelector('.status-pill').textContent = "Menganalisis beberapa laporan...";
             setMultiGroupMessage('');
             renderMultiReportList();
             startMultiPolling();
@@ -5860,7 +5891,7 @@
           elements.multiGroupStatus.className = 'status-pill ' + (completed === reports.length && reports.length && !awaitingPayment ? 'success' : 'demo');
           elements.uploadSection.querySelector('.status-pill').textContent = awaitingPayment
             ? "Banyak orang melaporkan bahwa pembayaran belum dilakukan."
-            : completed === reports.length && reports.length ? "Analisis oleh banyak orang telah selesai." : "Dalam analisis laporan dari banyak orang";
+            : completed === reports.length && reports.length ? "Analisis oleh banyak orang telah selesai." : "Menganalisis beberapa laporan...";
           updateActionState();
         }
 
@@ -5875,7 +5906,7 @@
           elements.multiConfirmation.hidden = true;
           elements.multiResults.hidden = false;
           elements.multiPatientCount.textContent = (multiGroup.patients || []).length + " Setiap pasien · Satu laporan terpisah untuk setiap orang.";
-          elements.multiGroupReference.textContent = "Nomor pembagian:" + multiGroup.group_id;
+          elements.multiGroupReference.textContent = "Rincian pembagian:" + multiGroup.group_id;
           const signature = multiReportSignature();
           if (elements.multiReportList.dataset.signature !== signature) {
             elements.multiReportList.replaceChildren();
@@ -5995,10 +6026,10 @@
           copy.addEventListener('click', async () => {
             try {
               await copyText(report.access_code);
-              feedback.textContent = "Kode ekstraksi telah disalin, silakan simpan dengan aman.";
+              feedback.textContent = "Kode ekstraksi disalin. Simpan dengan aman.";
               feedback.className = 'multi-report-feedback success';
             } catch (error) {
-              feedback.textContent = "Salin otomatis gagal, silakan pilih dan salin secara manual.";
+              feedback.textContent = "Tidak bisa menyalin secara otomatis. Silakan pilih dan salin secara manual.";
               feedback.className = 'multi-report-feedback error';
             }
           });
@@ -6065,10 +6096,10 @@
             + (report.patient_mrn || (patient && patient.patient_mrn) ? ' · MRN：' + (report.patient_mrn || patient.patient_mrn) : '')
             + (pages.length ? " · Halaman sumber:" + pages.join('、') : '');
           nodes.status.textContent = expired ? "\nTelah kedaluwarsa"
-            : failed ? (paid ? "Menganalisis kegagalan · Dapat mencoba lagi" : "Menganalisis kegagalan.")
-              : needsPayment ? "Belum dibayar."
+            : failed ? (paid ? "Menganalisis kegagalan · Dapat mencoba lagi" : "Analisis gagal.")
+              : needsPayment ? "Menunggu pembayaran."
                 : awaitingDetail ? "Laporan sedang disusun."
-                  : complete ? "Laporan lengkap telah dibuat." : "Dalam analisisnya";
+                  : complete ? "Laporan lengkap telah dibuat." : "Menganalisis...";
           nodes.status.className = 'status-pill ' + (complete && paid && !expired ? 'success' : 'demo');
           const numericProgress = Number(report.progress);
           const progress = complete ? 100 : needsPayment ? 0
@@ -6086,7 +6117,7 @@
           const retrying = multiRetryPending.has(report.report_id);
           nodes.retryButton.hidden = !failed || !paid || expired;
           nodes.retryButton.disabled = retrying;
-          nodes.retryButton.textContent = retrying ? "Sedang mengantre ulang..." : "Analisis ulang (tanpa perlu membayar lagi)";
+          nodes.retryButton.textContent = retrying ? "Kembali mengantre..." : "Analisis ulang (tanpa perlu membayar lagi)";
           const fullReport = report.full_report || report.report_full || null;
           const needsPaidRecovery = paid && complete && !fullReport && !expired;
           nodes.payment.hidden = !needsPayment && !needsPaidRecovery;
@@ -6281,8 +6312,8 @@
           elements.multiSection.hidden = false;
           elements.multiConfirmation.hidden = true;
           elements.multiResults.hidden = true;
-          elements.multiGroupStatus.textContent = "Sedang memulihkan split multiplayer.";
-          elements.multiGroupReference.textContent = "Nomor pembagian:" + saved.groupId;
+          elements.multiGroupStatus.textContent = "Memulihkan tampilan multi-pasien...";
+          elements.multiGroupReference.textContent = "Rincian pembagian:" + saved.groupId;
           try {
             if (reportCenterReady) await reportCenterReady;
             if (generation !== multiGeneration) return;
@@ -6508,7 +6539,7 @@
           );
           nodes.pdfButton.disabled = true;
           nodes.pdfButton.setAttribute('aria-busy', 'true');
-          nodes.pdfButton.textContent = "Membuat PDF untuk pasien ini...";
+          nodes.pdfButton.textContent = "Membuat PDF pasien ini...";
           nodes.pdfFeedback.textContent = '';
           try {
             const response = await fetch(API_BASE + '/reports/' + encodeURIComponent(reportId) + '/pdf', {
@@ -6727,7 +6758,7 @@
           showFileError("");
           resetResults();
           renderFiles();
-          elements.uploadSection.querySelector(".status-pill").textContent = "Menunggu untuk diunggah.";
+          elements.uploadSection.querySelector(".status-pill").textContent = "Belum diunggah.";
           elements.fileInput.focus();
         });
 

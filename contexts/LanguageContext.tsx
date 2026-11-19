@@ -193,7 +193,7 @@ const enTranslations = {
     },
     findDoctor: {
       badge: "Meet MediMatch · Our Purpose-Built AI",
-      title: "Don't just pick a department. Get a written report that names your exact sub-specialty — and three doctors to book.",
+      title: "Don't just pick a department. Get a written report that names your exact sub-specialty — and three doctors matched to your case.",
       body1: "In many countries, seeing a specialist starts with a referral — and often weeks or months of waiting. In China, you can book a specialist directly, no referral required. The catch: at a major hospital, a triage nurse points you to a department based on a few words.",
       body2: "But each department splits into narrow sub-specialties, and even within the same sub-specialty, every doctor focuses on different conditions. A rushed triage can mean the wrong registration, a wasted visit, and a referral back to square one.",
       body3: "MediMatch takes a more careful first step. Upload your medical records, enter your chief complaint, and note your personalization requirements — our AI reads them together and writes you a full report: a timeline of your condition, trends in your lab results, the sub-specialty your case actually calls for, three matched doctors, and an estimated cost range. Bring it to your chosen doctor so they grasp your case in minutes — book directly via the hospitals' official links, or let our care team assist.",
@@ -799,7 +799,7 @@ export const translations: Record<Language, any> = {
     },
     findDoctor: {
       badge: "MediMatch のご紹介 · 私たちの専用AI",
-      title: "診療科を選ぶだけでは不十分。あなたの正確な専門領域と、予約できる3人の医師を記した書面レポートを手に入れましょう。",
+      title: "診療科を選ぶだけでは不十分。あなたの正確な専門領域と、あなたの症例に合った3人の医師を記した書面レポートを手に入れましょう。",
       body1: "多くの国では、専門医の受診にはまず紹介が必要で、数週間から数か月待つことも珍しくありません。中国では、紹介なしで専門医を直接予約できます。ただし大病院では、トリアージの看護師がほんの数言をもとに診療科を割り振ります。",
       body2: "しかし各診療科はさらに細かい専門領域に分かれ、同じ専門領域の中でも医師ごとに得意とする病状が異なります。急いだトリアージは、誤った受付、無駄な来院、振り出しへの逆戻りにつながることがあります。",
       body3: "MediMatchは、この第一歩をより丁寧に行います。医療記録をアップロードし、主訴を入力し、ご希望の条件を記入すると、当社のAIがそれらを総合的に読み取り、症状の経過タイムライン、検査結果の傾向、あなたの症例に本当に必要な専門領域、マッチした3人の医師、費用の目安をまとめた詳細なレポートを作成します。このレポートを選んだ医師に持参すれば、医師は数分であなたの症例を把握できます。病院の公式リンクから直接予約することも、当社のケアチームにサポートを依頼することもできます。",
@@ -1924,7 +1924,7 @@ export const translations: Record<Language, any> = {
     // ── How It Works ──
     findDoctor: {
       badge: "تعرفوا على MediMatch · الذكاء الاصطناعي المصمم خصيصًا لنا.",
-      title: "لا تختار قسمًا عشوائيًا. اطلب تقريرًا مكتوبًا يحدد تخصصك الفرعي بالضبط - وثلاثة أطباء يجب حجز موعد معهم.",
+      title: "لا تختار قسمًا عشوائيًا. اطلب تقريرًا مكتوبًا يحدد تخصصك الفرعي بالضبط - وثلاثة أطباء مناسبين لحالتك.",
       body1: "في كثير من البلدان، يبدأ زيارة أخصائي بإحالة - وغالبًا ما تستغرق الانتظار أسابيع أو أشهر. في الصين، يمكنك حجز موعد مع أخصائي مباشرةً، دون الحاجة إلى إحالة. العيب هو أنه في المستشفى الرئيسي، تقوم ممرضة الفرز بتوجيهك إلى القسم استنادًا إلى بضع كلمات.",
       body2: "لكن كل قسم ينقسم إلى تخصصات فرعية ضيقة، وحتى داخل نفس التخصص الفرعي، يركز كل طبيب على حالات مختلفة. يمكن أن يؤدي الفرز المتعجل إلى تسجيل خاطئ، وزيارة مهدرة، وإحالة مرة أخرى إلى نقطة البداية.",
       body3: "يتخذ MediMatch خطوة أولى أكثر حذراً. قم بتحميل سجلاتك الطبية، وأدخل شكواك الرئيسية، وضع ملاحظة حول متطلبات التخصيص الخاصة بك - يقرأها نظام الذكاء الاصطناعي لدينا معًا ويكتب لك تقريرًا كاملًا: جدول زمني لحالتك، واتجاهات في نتائج الفحوصات المخبرية، والتخصص الفرعي الذي تتطلبه حالتك بالفعل، وثلاثة أطباء متطابقين، ونطاق التكلفة المقدرة. اطلع الطبيب الذي اخترته على ذلك حتى يفهم حالتك في دقائق - احجز مباشرةً عبر الروابط الرسمية للمستشفيات، أو دع فريق الرعاية لدينا يساعدك.",
@@ -2471,7 +2471,7 @@ export const translations: Record<Language, any> = {
 
     findDoctor: {
       badge: "Познакомьтесь с MediMatch · Наш специализированный ИИ.",
-      title: "Не просто выбирайте отделение. Получите письменный отчет, в котором указана ваша точная субспециализация, а также имена трех врачей, к которым следует записаться на прием.",
+      title: "Не просто выбирайте отделение. Получите письменный отчет, в котором указана ваша точная субспециализация, а также три врача, подходящих для вашего случая.",
       body1: "Во многих странах посещение специалиста начинается с направления от врача, а затем часто приходится ждать неделями или месяцами. В Китае вы можете записаться на приём к специалисту напрямую, без направления. Однако есть и подвох: в крупных больницах медсестра на приёмном отделении направляет вас в нужный отдел, основываясь всего на нескольких словах, сказанных вами.",
       body2: "Но каждое отделение делится на узкие подспециализации, и даже в рамках одной подспециализации каждый врач фокусируется на разных состояниях. Спешка при сортировке пациентов может привести к неправильной регистрации, потерянному визиту и необходимости направлять пациента обратно на начальный этап.",
       body3: "MediMatch делает более тщательный первый шаг. Загрузите свои медицинские записи, укажите основную жалобу и отметьте свои требования к персонализации — наш ИИ прочитает их вместе и напишет вам полный отчет: хронологию вашего состояния, тенденции в результатах лабораторных анализов, подспециализацию, которая действительно требуется для вашего случая, три подходящих врача и примерный диапазон стоимости. Представьте это выбранному вами врачу, чтобы он понял ваш случай за считанные минуты — запишитесь на прием напрямую через официальные ссылки больниц или позвольте нашей команде по уходу помочь вам.",
@@ -2880,7 +2880,7 @@ export const translations: Record<Language, any> = {
 
     findDoctor: {
       badge: "MediMatch-тэй танилцана уу · Бидний тусгай зориулалтаар бүтээсэн хиймэл оюун ухаан",
-      title: "Зүгээр л нэг тасаг сонгоод өнгөрөх хэрэггүй. Танд яг тохирох тодорхой дэд нарийн мэргэжил — мөн захиалга өгөх боломжтой гурван эмчийн нэрийг тусгасан бичгэн тайлан аваарай.",
+      title: "Зүгээр л нэг тасаг сонгоод өнгөрөх хэрэггүй. Танд яг тохирох нарийн дэд мэргэжлийн чиглэлийг тодорхой нэрлэсэн бичгэн тайлан, мөн таны өвчний тохиолдолд нийцсэн гурван эмчийн мэдээлэл аваарай.",
       body1: "Олон оронд нарийн мэргэжлийн эмчид үзүүлэх нь чиглүүлснээр эхэлдэг бөгөөд ихэвчлэн хэдэн долоо хоног, бүр хэдэн сар хүлээх шаардлагатай болдог. Хятадад та нарийн мэргэжлийн эмчид шууд цаг авч болно, чиглүүлэх шаардлагагүй. Гэхдээ нэг гагцаа бий: томоохон эмнэлэгт өвчтөнийг ялган ангилах сувилагч таныг хэдхэн үгэнд тулгуурлан тасаг руу чиглүүлдэг.",
       body2: "Гэхдээ тасаг бүр нарийн дэд мэргэшлүүдэд хуваагддаг бөгөөд нэг дэд мэргэшлийн дотор ч эмч бүр өөр өөр өвчин эмгэгт төвлөрдөг. Яаран сандран триаж хийх нь буруу бүртгэл, дэмий үзлэг, эхнээс нь эхлэх дахин чиглүүлэлт гэсэн утгатай байж болно.",
       body3: "MediMatch нь илүү анхааралтай, нягт нямбай эхний алхам хийдэг. Эмнэлгийн бүртгэл материалаа байршуулж, үндсэн гомдлоо оруулан, хувийн тохиргооны шаардлагуудаа тэмдэглэнэ үү — манай хиймэл оюун ухаан эдгээр бүх мэдээллийг нэгтгэн боловсруулж, танд бүрэн тайлан гаргаж өгдөг: таны өвчний хөгжлийн цаг хугацааны дараалал, лабораторийн шинжилгээний үр дүнгийн өөрчлөлтийн хандлага, таны тохиолдолд үнэхээр шаардлагатай дэд мэргэшлийн чиглэл, танд тохирох гурван эмч, зардлын тооцоолсон хязгаар. Уг тайланг сонгосон эмчдээ авч очвол тэд таны өвчний байдлыг хэдхэн минутанд бүрэн ойлгох бөгөөд та эмнэлгүүдийн албан ёсны цахим холбоосоор шууд цаг захиалах, эсвэл манай эрүүл мэндийн тусламжийн багаас туслалцаа авах боломжтой.",
@@ -3798,7 +3798,7 @@ export const translations: Record<Language, any> = {
       },
       findDoctor: {
       badge: "Temui MediMatch · AI kami yang dibina khusus untuk tujuan tertentu.",
-      title: "Jangan hanya pilih sebuah jabatan. Dapatkan laporan bertulis yang menyatakan sub-spesialisasi anda yang tepat — dan tiga doktor untuk ditemui.",
+      title: "Jangan hanya pilih sebuah jabatan. Dapatkan laporan bertulis yang menyatakan sub-spesialisasi anda yang tepat - dan tiga doktor yang sepadan dengan kes anda.",
       body1: "Di banyak negara, melihat seorang pakar dimulakan dengan rujukan - dan seringkali minggu atau bulan menunggu. Di China, anda boleh menempah seorang pakar secara langsung, tanpa memerlukan rujukan. Namun, di hospital utama, seorang jururawat triase akan mengarahkan anda ke jabatan berdasarkan beberapa perkataan.",
       body2: "Tetapi setiap jabatan terbahagi kepada sub-spesialisasi yang sempit, dan walaupun dalam sub-spesialisasi yang sama, setiap doktor memberi tumpuan kepada keadaan yang berbeza. Triase yang tergesa-gesa boleh bermakna pendaftaran yang salah, lawatan yang sia-sia, dan rujukan kembali ke titik permulaan.",
       body3: "MediMatch mengambil langkah pertama dengan lebih berhati-hati. Muat naik rekod perubatan anda, masukkan aduan utama anda, dan nyatakan syarat-syarat pembiasaan anda — AI kami membaca semuanya dan menulis laporan lengkap untuk anda: garis masa keadaan anda, trend dalam hasil makmal anda, sub-spesialisasi yang sebenarnya diperlukan untuk kes anda, tiga doktor yang sepadan, dan anggaran kos. Bawa ia ke doktor pilihan anda supaya mereka memahami kes anda dalam beberapa minit — tempah terus melalui pautan rasmi hospital, atau biarkan pasukan penjagaan kami membantu.",
@@ -4615,7 +4615,7 @@ export const translations: Record<Language, any> = {
       },
       findDoctor: {
       badge: "Temui MediMatch · AI Kami yang Dibuat Khusus untuk Tujuan Tertentu.",
-      title: "Jangan hanya memilih departemen. Dapatkan laporan tertulis yang menyebutkan sub-spesialisasi Anda yang tepat - dan tiga dokter untuk dipesan.",
+      title: "Jangan hanya memilih departemen. Dapatkan laporan tertulis yang menyebutkan sub-spesialisasi Anda yang tepat - dan tiga dokter yang cocok untuk kasus Anda.",
       body1: "Di banyak negara, menemui spesialis dimulai dengan rujukan - dan seringkali dengan menunggu selama berminggu-minggu atau berbulan-bulan. Di Tiongkok, Anda dapat memesan spesialis secara langsung, tanpa memerlukan rujukan. Namun, ada kendalanya: di rumah sakit besar, perawat triase mengarahkan Anda ke departemen berdasarkan beberapa kata.",
       body2: "Namun, setiap departemen terbagi menjadi sub-spesialisasi yang sempit, dan bahkan dalam sub-spesialisasi yang sama, setiap dokter fokus pada kondisi yang berbeda. Triase yang terburu-buru dapat berarti pendaftan yang salah, kunjungan yang sia-sia, dan rujukan kembali ke titik awal.",
       body3: "MediMatch mengambil langkah pertama yang lebih hati-hati. Unggah catatan medis Anda, masukkan keluhan utama Anda, dan catat persyaratan personalisasi Anda — AI kami membaca semuanya dan menulis laporan lengkap untuk Anda: garis waktu kondisi Anda, tren hasil lab Anda, sub-spesialisasi yang sebenarnya dibutuhkan kasus Anda, tiga dokter yang cocok, dan perkiraan kisaran biaya. Bawa ini ke dokter pilihan Anda sehingga mereka memahami kasus Anda dalam hitungan menit — pesan langsung melalui tautan resmi rumah sakit, atau biarkan tim perawatan kami membantu.",

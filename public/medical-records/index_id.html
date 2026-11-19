@@ -1868,7 +1868,8 @@
       }
 
       @media (max-width: 720px) {
-        .container {
+        .container,
+        .report-center {
           width: min(calc(100% - 28px), var(--content-width));
         }
 
@@ -2173,6 +2174,8 @@
       }
       .report-center {
         scroll-margin-top: 24px;
+        width: min(calc(100% - 40px), var(--content-width));
+        margin-inline: auto;
       }
 
       .report-center-intro {

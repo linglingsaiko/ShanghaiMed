@@ -6054,7 +6054,7 @@
               article.appendChild(multiElement('p', 'chapter-body',
                 [doctor.name, doctor.title, doctor.department].filter(Boolean).join(' · ')
                 + '\n' + [doctor.hospital, doctor.hospital_level].filter(Boolean).join(' · ')
-                + (specialties ? "\\nМэргэшсэн чиглэл:" + specialties : '')));
+                + (specialties ? "\nМэргэшсэн чиглэл:" + specialties : '')));
             });
             nodes.chapters.appendChild(article);
           }

@@ -3981,9 +3981,9 @@
 
             setProgress("upload", 100);
             elements.uploadStatus.textContent = "Загрузка файла завершена, и вскоре начнётся анализ с помощью ИИ.";
-            selectedFiles.forEach((item) => { item.status = "\\nФайл загружен."; });
+            selectedFiles.forEach((item) => { item.status = "\nФайл загружен."; });
             elements.fileList.querySelectorAll("[data-file-status]").forEach((status) => {
-              status.textContent = "\\nФайл загружен.";
+              status.textContent = "\nФайл загружен.";
               status.classList.add("complete");
             });
           } catch (error) {
@@ -4498,9 +4498,9 @@
             const remaining = Math.max(0, estimatedTotal - elapsed);
             const remainingMin = Math.ceil(remaining / 60);
             if (remaining > 30) {
-              elements.analysisNote.textContent = stage + "\\n(Это уже было сделано.) " + elapsedMin + " Минуты, ожидается, что потребуется ещё примерно " + remainingMin + " (В минутах)";
+              elements.analysisNote.textContent = stage + "\n(Это уже было сделано.) " + elapsedMin + " Минуты, ожидается, что потребуется ещё примерно " + remainingMin + " (В минутах)";
             } else {
-              elements.analysisNote.textContent = stage + "\\n(Это уже было сделано.) " + elapsedMin + " Ожидайте, пожалуйста. Обработка завершится через несколько минут.";
+              elements.analysisNote.textContent = stage + "\n(Это уже было сделано.) " + elapsedMin + " Ожидайте, пожалуйста. Обработка завершится через несколько минут.";
             }
           }
           throw new Error("Анализ займёт некоторое время, пожалуйста, подождите и откройте его снова в разделе \"Мои отчёты\".");
@@ -5593,7 +5593,7 @@
             const row = multiElement('tr');
             multiPageRows.set(page.page_number, row);
             row.dataset.pageNumber = String(page.page_number);
-            row.appendChild(multiElement('td', '', "\\n " + page.page_number + " Страница"));
+            row.appendChild(multiElement('td', '', "\n " + page.page_number + " Страница"));
             const evidenceCell = multiElement('td');
             const badge = multiElement('span', 'assignment-badge ' + page.assignment, MULTI_ASSIGNMENT_TEXT[page.assignment]);
             evidenceCell.appendChild(badge);
@@ -5606,7 +5606,7 @@
             const select = document.createElement('select');
             select.className = 'multi-page-assignment';
             select.dataset.pageAssignment = String(page.page_number);
-            select.setAttribute('aria-label', "\\n " + page.page_number + " Эта страница подтверждает право собственности.");
+            select.setAttribute('aria-label', "\n " + page.page_number + " Эта страница подтверждает право собственности.");
             if (page.assignment === 'conflict') {
               select.appendChild(multiOption("Удалить эту страницу (конфликт идентичности, её необходимо удалить).", 'excluded'));
               select.value = 'excluded';
@@ -5677,7 +5677,7 @@
             if (page.assignment === 'skipped') return;
             if (page.assignment === 'conflict') {
               if (value !== 'excluded') {
-                errors.push("\\n " + page.page_number + " На этой странице существует конфликт идентификаторов, который необходимо устранить.");
+                errors.push("\n " + page.page_number + " На этой странице существует конфликт идентификаторов, который необходимо устранить.");
                 invalidRows.add(page.page_number);
               } else excludedPages.push(page.page_number);
               return;
@@ -5693,7 +5693,7 @@
             }
             pagesByPatient.get(value).push(page.page_number);
           });
-          if (unresolved.length) errors.push("\\n " + unresolved.join('、') + " Страница ещё не была назначена или исключена.");
+          if (unresolved.length) errors.push("\n " + unresolved.join('、') + " Страница ещё не была назначена или исключена.");
           multiGroup.patients.forEach((patient) => {
             const pages = pagesByPatient.get(patient.patient_id) || [];
             pages.sort((a, b) => a - b);
@@ -5867,7 +5867,7 @@
           const failed = reports.filter(multiReportIsFailed).length;
           const awaitingPayment = reports.filter(multiReportNeedsPayment).length;
           let label = "В каждом анализе отчета";
-          if (awaitingPayment) label = "Ожидает оплаты. " + awaitingPayment + " \\nЭкземпляр";
+          if (awaitingPayment) label = "Ожидает оплаты. " + awaitingPayment + " \nЭкземпляр";
           else if (reports.length && completed === reports.length) label = "Все отчеты уже подготовлены.";
           else if (reports.length && completed + failed === reports.length) label = failed === reports.length ? "Отчет анализирует неудачу." : "Часть отчета уже подготовлена.";
           elements.multiGroupStatus.textContent = label + " · Работа завершена. " + completed + '/' + reports.length;
@@ -6054,7 +6054,7 @@
               article.appendChild(multiElement('p', 'chapter-body',
                 [doctor.name, doctor.title, doctor.department].filter(Boolean).join(' · ')
                 + '\n' + [doctor.hospital, doctor.hospital_level].filter(Boolean).join(' · ')
-                + (specialties ? "\\nСпециализация:" + specialties : '')));
+                + (specialties ? "\nСпециализация:" + specialties : '')));
             });
             nodes.chapters.appendChild(article);
           }
@@ -6522,7 +6522,7 @@
           );
           nodes.pdfButton.disabled = true;
           nodes.pdfButton.setAttribute('aria-busy', 'true');
-          nodes.pdfButton.textContent = "Ожидайте, пожалуйста...\\nPDF-файл для этого пациента создаётся...";
+          nodes.pdfButton.textContent = "Ожидайте, пожалуйста...\nPDF-файл для этого пациента создаётся...";
           nodes.pdfFeedback.textContent = '';
           try {
             const response = await fetch(API_BASE + '/reports/' + encodeURIComponent(reportId) + '/pdf', {

@@ -5,7 +5,7 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="#0E5A5A" name="theme-color"/>
 <meta content="ShanghaiMed: Upload medical records and match with AI doctors: upload medical records, complete payment, conduct AI analysis, and obtain a comprehensive report." name="description"/>
-<title>\nMediMatch Medical Record Analysis · Precise Specialist Doctor Matching｜ShanghaiMed</title>
+<title>MediMatch Medical Record Analysis · Precise Specialist Doctor Matching｜ShanghaiMed</title>
 <style>
       :root {
         color-scheme: light;
@@ -2801,7 +2801,7 @@
 <div class="container">
 <section aria-labelledby="hero-title" class="hero">
 <div class="eyebrow">
-<span aria-hidden="true" class="eyebrow-dot"></span>\nMediMatch's exclusive AI · Precise Specialty Triage</div>
+<span aria-hidden="true" class="eyebrow-dot"></span>MediMatch's exclusive AI · Precise Specialty Triage</div>
 <h1 id="hero-title">Upload your medical records, and let MediMatch match you with the most suitable specialist doctor</h1>
 <p class="hero-subtitle">Support the upload of images, PDFs, and compressed files. The more complete the medical records are, the more accurate the recommendations will be</p>
 <ul aria-label="Privacy and security protection" class="trust-list">
@@ -3023,7 +3023,7 @@
 </li>
 <li class="analysis-step" data-state="default" data-step="2">
 <span aria-hidden="true" class="step-icon">3</span>
-<p class="step-name">\nTimeline Review</p>
+<p class="step-name">Timeline Review</p>
 <span class="step-status">Wait</span>
 </li>
 <li class="analysis-step" data-state="default" data-step="3">
@@ -3072,7 +3072,7 @@
 <thead>
 <tr>
 <th scope="col">The original PDF page number</th>
-<th scope="col">\nBack-end state recognition</th>
+<th scope="col">Back-end state recognition</th>
 <th scope="col">Confidence level</th>
 <th scope="col">Confirm ownership</th>
 </tr>
@@ -3130,7 +3130,7 @@
 <li>Guidelines for Preparing for a Medical Visit</li>
 <li>PDF Report</li>
 </ul>
-<div aria-label="\nPayPal secure payment" class="paypal-button-container" id="paypal-button-container"></div>
+<div aria-label="PayPal secure payment" class="paypal-button-container" id="paypal-button-container"></div>
 <span class="payment-note">Security payment · The analysis will automatically start after the payment is confirmed, and the complete report will be displayed directly after it is completed.</span>
 </div>
 </div>
@@ -3141,7 +3141,7 @@
 <div class="section-title-wrap">
 <span aria-hidden="true" class="section-number">04</span>
 <div>
-<h2 id="report-title">\nComplete medical history analysis report</h2>
+<h2 id="report-title">Complete medical history analysis report</h2>
 <p>6 Chapters · Doctor's Recommendations · Preparation for a Visit · Hospital Information</p>
 </div>
 </div>
@@ -3201,7 +3201,7 @@
 <p class="chapter-intro">The following is an AI-based summary of medical records, which does not explain the severity of the images and does not replace face-to-face consultations with doctors.</p>
 <div class="finding-list">
 <div class="finding-item">
-<strong>\nImage materials</strong>
+<strong>Image materials</strong>
 <p>The MRI report of the lumbar spine has been identified. It is recommended to bring the original image files or CDs with you when you visit the doctor.</p>
 </div>
 <div class="finding-item">
@@ -3226,7 +3226,7 @@
 <h4>Doctor A</h4>
 <p class="doctor-role">Spinal Surgery · Chief Physician</p>
 <ul class="doctor-detail">
-<li><strong>Matching direction:</strong>\nAssessment of lumbar spine diseases</li>
+<li><strong>Matching direction:</strong>Assessment of lumbar spine diseases</li>
 <li><strong>Recommendation Reason:</strong>It is consistent with the main symptoms and imaging data</li>
 <li><strong>Preparation for a medical visit:</strong>Original MRI, outpatient records, and medication lists</li>
 </ul>
@@ -3861,7 +3861,7 @@
           } else if (state === "error") {
             step.dataset.state = "error";
             icon.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>';
-            status.textContent = "\\nFailure";
+            status.textContent = "\nFailure";
           } else {
             step.dataset.state = "default";
             icon.textContent = String(index + 1);
@@ -4237,7 +4237,7 @@
           elements.analysisNote.textContent = noReadableText ? friendly : "Analysis of the failure:" + friendly;
           elements.progressSection.hidden = false;
           elements.progressSection.dataset.state = 'error';
-          elements.progressPill.textContent = "\\nFailure";
+          elements.progressPill.textContent = "\nFailure";
           elements.paymentSection.hidden = true;
           elements.paymentPanel.hidden = true;
           elements.fullReport.hidden = true;
@@ -4405,7 +4405,7 @@
               recognition.start();
               recognizing = true;
               btn.classList.add('recording');
-              btnText.textContent = "\\nListening now · Click to stop";
+              btnText.textContent = "\nListening now · Click to stop";
             } catch (e) { resetBtn(); }
           });
         })();
@@ -4596,7 +4596,7 @@
             const meta = document.createElement('p');
             meta.className = 'report-list-meta';
             const date = formatReportDate(report.created_at || report.updated_at) || "Please confirm it tomorrow";
-            const payment = reportIsPaid(report) ? "It has been paid" : "\\nUnpaid";
+            const payment = reportIsPaid(report) ? "It has been paid" : "\nUnpaid";
             meta.textContent = date + ' · ' + reportStatusLabel(report) + ' · ' + payment;
             copy.append(id, meta);
 
@@ -5593,7 +5593,7 @@
             const row = multiElement('tr');
             multiPageRows.set(page.page_number, row);
             row.dataset.pageNumber = String(page.page_number);
-            row.appendChild(multiElement('td', '', " " + page.page_number + " \\nPage"));
+            row.appendChild(multiElement('td', '', " " + page.page_number + " \nPage"));
             const evidenceCell = multiElement('td');
             const badge = multiElement('span', 'assignment-badge ' + page.assignment, MULTI_ASSIGNMENT_TEXT[page.assignment]);
             evidenceCell.appendChild(badge);
@@ -5920,7 +5920,7 @@
 
           const progressBlock = multiElement('div', 'multi-report-progress');
           const progressTop = multiElement('div', 'multi-report-progress-top');
-          const progressLabel = multiElement('span', '', "\\nProgress of independent AI analysis");
+          const progressLabel = multiElement('span', '', "\nProgress of independent AI analysis");
           const percent = multiElement('strong', '', '0%');
           progressTop.append(progressLabel, percent);
           const progressTrack = multiElement('div', 'progress-track');
@@ -5967,7 +5967,7 @@
 
           const full = multiElement('div', 'multi-full-report');
           full.hidden = true;
-          const fullTitle = multiElement('h4', '', "\\nComplete medical history analysis report");
+          const fullTitle = multiElement('h4', '', "\nComplete medical history analysis report");
           const chapters = multiElement('div', 'report-chapters');
           const reportActions = multiElement('div', 'multi-report-actions');
           const pdfButton = multiElement('button', 'btn btn-secondary btn-small', "Download this patient's PDF report");
@@ -6054,7 +6054,7 @@
               article.appendChild(multiElement('p', 'chapter-body',
                 [doctor.name, doctor.title, doctor.department].filter(Boolean).join(' · ')
                 + '\n' + [doctor.hospital, doctor.hospital_level].filter(Boolean).join(' · ')
-                + (specialties ? "\\nSpecialties:" + specialties : '')));
+                + (specialties ? "\nSpecialties:" + specialties : '')));
             });
             nodes.chapters.appendChild(article);
           }

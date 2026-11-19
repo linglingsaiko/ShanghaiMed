@@ -2804,7 +2804,7 @@
 <span aria-hidden="true" class="eyebrow-dot"></span>AI eksklusif MediMatch · Pengasingan spesialis yang tepat.</div>
 <h1 id="hero-title">Muat naik rekod perubatan anda, dan biarkan MediMatch mencari doktor pakar yang paling sesuai untuk anda.</h1>
 <p class="hero-subtitle">Menyokong pengunggahan gambar, PDF, dan pakej terkompresi. Semakin lengkap rekod perubatan, semakin tepat cadangan yang akan diberikan.</p>
-<ul aria-label="\nPrivasi dan jaminan keselamatan" class="trust-list">
+<ul aria-label="Privasi dan jaminan keselamatan" class="trust-list">
 <li>
 <svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15">
 <path d="m5 12 4 4L19 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></path>
@@ -3442,7 +3442,7 @@
 </ul>
 <p class="consent-privacy">Dengan mengklik “Setuju dan Teruskan”, anda memahami dan bersetuju dengan kaedah pemprosesan di atas. Fail anda akan diunggah melalui sambungan terenkripsi, dan fail asal akan dipadamkan secara automatik setelah analisis selesai.</p>
 <div class="modal-actions">
-<button class="btn btn-secondary" data-anchor-id="medical-records-upload.decline-consent" id="decline-consent" type="button">\nMenolak</button>
+<button class="btn btn-secondary" data-anchor-id="medical-records-upload.decline-consent" id="decline-consent" type="button">Menolak</button>
 <button class="btn btn-primary" data-anchor-id="medical-records-upload.agree-consent" id="agree-consent" type="button">Setuju dan teruskan.</button>
 </div>
 </section>
@@ -3863,7 +3863,7 @@
           } else if (state === "error") {
             step.dataset.state = "error";
             icon.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>';
-            status.textContent = "\\nKegagalan.";
+            status.textContent = "\nKegagalan.";
           } else {
             step.dataset.state = "default";
             icon.textContent = String(index + 1);
@@ -3983,9 +3983,9 @@
 
             setProgress("upload", 100);
             elements.uploadStatus.textContent = "Proses muat naik dokumen telah selesai, dan analisis AI akan bermula segera.";
-            selectedFiles.forEach((item) => { item.status = "\\nTelah dimuat naik."; });
+            selectedFiles.forEach((item) => { item.status = "\nTelah dimuat naik."; });
             elements.fileList.querySelectorAll("[data-file-status]").forEach((status) => {
-              status.textContent = "\\nTelah dimuat naik.";
+              status.textContent = "\nTelah dimuat naik.";
               status.classList.add("complete");
             });
           } catch (error) {
@@ -4239,7 +4239,7 @@
           elements.analysisNote.textContent = noReadableText ? friendly : "Menganalisis kegagalan:" + friendly;
           elements.progressSection.hidden = false;
           elements.progressSection.dataset.state = 'error';
-          elements.progressPill.textContent = "\\nKegagalan.";
+          elements.progressPill.textContent = "\nKegagalan.";
           elements.paymentSection.hidden = true;
           elements.paymentPanel.hidden = true;
           elements.fullReport.hidden = true;
@@ -4598,7 +4598,7 @@
             const meta = document.createElement('p');
             meta.className = 'report-list-meta';
             const date = formatReportDate(report.created_at || report.updated_at) || "Harapkan pengesahan pada hari esok.";
-            const payment = reportIsPaid(report) ? "\\nTelah dibayar" : "Belum dibayar.";
+            const payment = reportIsPaid(report) ? "\nTelah dibayar" : "Belum dibayar.";
             meta.textContent = date + ' · ' + reportStatusLabel(report) + ' · ' + payment;
             copy.append(id, meta);
 
@@ -5399,7 +5399,7 @@
         }
 
         function multiPatientLabel(patient) {
-          if (!patient) return "Sabit tidak diketahui\\nPasien tidak dikenal pasti";
+          if (!patient) return "Sabit tidak diketahui\nPasien tidak dikenal pasti";
           const name = String(patient.patient_name || '').trim() || ("Pasien " + patient.patient_id);
           return patient.patient_mrn ? name + ' · ' + patient.patient_mrn : name;
         }
@@ -5535,7 +5535,7 @@
         }
 
         const MULTI_ASSIGNMENT_TEXT = Object.freeze({
-          explicit: "\\nNama/MRN yang jelas",
+          explicit: "\nNama/MRN yang jelas",
           inherited: "Meneruskan halaman sebelumnya · Perlu menyemak",
           unassigned: "Tidak ditugaskan · Perlu diproses",
           conflict: "Konflik identiti · Hanya boleh dikecualikan.",
@@ -5595,7 +5595,7 @@
             const row = multiElement('tr');
             multiPageRows.set(page.page_number, row);
             row.dataset.pageNumber = String(page.page_number);
-            row.appendChild(multiElement('td', '', "\\nKedua " + page.page_number + " \\nHalaman"));
+            row.appendChild(multiElement('td', '', "\nKedua " + page.page_number + " \nHalaman"));
             const evidenceCell = multiElement('td');
             const badge = multiElement('span', 'assignment-badge ' + page.assignment, MULTI_ASSIGNMENT_TEXT[page.assignment]);
             evidenceCell.appendChild(badge);
@@ -5608,7 +5608,7 @@
             const select = document.createElement('select');
             select.className = 'multi-page-assignment';
             select.dataset.pageAssignment = String(page.page_number);
-            select.setAttribute('aria-label', "\\nKedua " + page.page_number + " Halaman ini mengesahkan pemilikan.");
+            select.setAttribute('aria-label', "\nKedua " + page.page_number + " Halaman ini mengesahkan pemilikan.");
             if (page.assignment === 'conflict') {
               select.appendChild(multiOption("Memadamkan halaman ini (konflik identiti, mesti dihapuskan)", 'excluded'));
               select.value = 'excluded';
@@ -5679,7 +5679,7 @@
             if (page.assignment === 'skipped') return;
             if (page.assignment === 'conflict') {
               if (value !== 'excluded') {
-                errors.push("\\nKedua " + page.page_number + " Ada konflik identiti pada halaman ini, yang perlu diselesaikan.");
+                errors.push("\nKedua " + page.page_number + " Ada konflik identiti pada halaman ini, yang perlu diselesaikan.");
                 invalidRows.add(page.page_number);
               } else excludedPages.push(page.page_number);
               return;
@@ -5695,7 +5695,7 @@
             }
             pagesByPatient.get(value).push(page.page_number);
           });
-          if (unresolved.length) errors.push("\\nKedua " + unresolved.join('、') + " Halaman belum diperuntukkan atau dikecualikan.");
+          if (unresolved.length) errors.push("\nKedua " + unresolved.join('、') + " Halaman belum diperuntukkan atau dikecualikan.");
           multiGroup.patients.forEach((patient) => {
             const pages = pagesByPatient.get(patient.patient_id) || [];
             pages.sort((a, b) => a - b);
@@ -5869,7 +5869,7 @@
           const failed = reports.filter(multiReportIsFailed).length;
           const awaitingPayment = reports.filter(multiReportNeedsPayment).length;
           let label = "Dalam setiap analisis laporan,";
-          if (awaitingPayment) label = "Belum dibayar " + awaitingPayment + " \\nSebuah";
+          if (awaitingPayment) label = "Belum dibayar " + awaitingPayment + " \nSebuah";
           else if (reports.length && completed === reports.length) label = "Semua laporan telah dijana.";
           else if (reports.length && completed + failed === reports.length) label = failed === reports.length ? "Laporan menganalisis kegagalan." : "Sebahagian daripada laporan telah dihasilkan.";
           elements.multiGroupStatus.textContent = label + " · Telah selesai. " + completed + '/' + reports.length;
@@ -6056,7 +6056,7 @@
               article.appendChild(multiElement('p', 'chapter-body',
                 [doctor.name, doctor.title, doctor.department].filter(Boolean).join(' · ')
                 + '\n' + [doctor.hospital, doctor.hospital_level].filter(Boolean).join(' · ')
-                + (specialties ? "\\nBidang kepakaran:" + specialties : '')));
+                + (specialties ? "\nBidang kepakaran:" + specialties : '')));
             });
             nodes.chapters.appendChild(article);
           }

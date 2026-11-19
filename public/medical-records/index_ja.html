@@ -2759,17 +2759,9 @@
       border: 1px solid #E3E8EE; border-radius: 12px;
       font-size: 14px; line-height: 1.6; color: #1A2230; background: #fff; font-family: inherit;
     }
-    #chief-complaint-input { min-height: 76px; padding: 12px 12px 40px; }
+    #chief-complaint-input { min-height: 76px; padding: 12px; }
     #personal-preferences-input { padding: 12px; }
     #chief-complaint-input:focus, #personal-preferences-input:focus { outline: none; border-color: #0E5A5A; box-shadow: 0 0 0 3px rgba(14,90,90,.12); }
-    .voice-btn {
-      position: absolute; right: 8px; bottom: 8px; display: inline-flex; align-items: center; gap: 5px;
-      padding: 6px 12px; border: 1px solid #0E5A5A; background: #fff; color: #0E5A5A;
-      border-radius: 999px; font-size: 12.5px; cursor: pointer; transition: all .2s;
-    }
-    .voice-btn:hover { background: #f0f7f7; }
-    .voice-btn.recording { background: #e23d3d; border-color: #e23d3d; color: #fff; animation: ccPulse 1.2s infinite; }
-    @keyframes ccPulse { 0%,100% { opacity: 1; } 50% { opacity: .55; } }
     
 .lang-switcher {
   padding: 6px 10px;
@@ -2929,13 +2921,6 @@
 <p class="chief-hint">あなたの主な不快感、継続時間、そして解決したい問題を説明してください。AIは主な苦情と病歴を分析します。</p>
 <div class="chief-input-wrap">
 <textarea aria-label="主訴：主な症状、持続時間、解決したい問題を記述する。" id="chief-complaint-input" maxlength="2000" placeholder="例えば、最近3カ月間に胸が苦しくなったり、運動後に息切れしたり、休息で症状が軽くなるなどの症状がある場合、心臓に関する問題を調べてみる必要があります。" rows="3"></textarea>
-<button aria-label="音声入力による主訴" class="voice-btn" id="voice-input-btn" type="button">
-<svg aria-hidden="true" fill="none" height="16" viewbox="0 0 24 24" width="16">
-<rect height="11" rx="3" stroke="currentColor" stroke-width="1.8" width="6" x="9" y="3"></rect>
-<path d="M5 11a7 7 0 0 0 14 0M12 18v3" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path>
-</svg>
-<span id="voice-btn-text">音声入力</span>
-</button>
 </div>
 </div>
 <div class="chief-complaint" id="personal-preferences-block">
@@ -2947,10 +2932,9 @@
 </div>
 </div>
 <div class="analysis-email-block" hidden="" id="analysis-email-block">
-<label class="chief-label" for="analysis-email">メールアドレス<span class="chief-optional">(お勧め — どのデバイスからでもこのレポートを取得できます。)</span>
+<label class="chief-label" for="analysis-email">メールアドレス<span class="chief-optional">（必須・レポート取得に必要）</span>
 </label>
-<p class="chief-hint">私たちはあなたのレポートを直接メール送信はしません。メール認証後、ここでマッチングレポートを請求することができます。</p>
-<input autocomplete="email" class="analysis-email-input" id="analysis-email" inputmode="email" maxlength="254" placeholder="you@example.com" type="email"/>
+<input autocomplete="email" class="analysis-email-input" id="analysis-email" inputmode="email" maxlength="254" placeholder="" type="email"/>
 </div>
 <div class="upload-actions">
 <p class="action-note">
@@ -3395,7 +3379,7 @@
 <button class="btn btn-quiet btn-small" hidden="" id="logout-button" type="button">ログアウトする</button>
 </div>
 <form autocomplete="on" class="auth-login-fields" id="email-login-form">
-<label class="center-field" for="auth-email">メールアドレス<input autocomplete="email" id="auth-email" inputmode="email" maxlength="254" name="email" placeholder="you@example.com" required="" type="email"/>
+<label class="center-field" for="auth-email">メールアドレス<input autocomplete="email" id="auth-email" inputmode="email" maxlength="254" name="email" placeholder="" required="" type="email"/>
 </label>
 <div class="auth-actions">
 <button class="btn btn-secondary btn-small" id="request-code" type="button">認証コードを取得する</button>
@@ -4384,48 +4368,6 @@
           return chiefText;
         }
 
-        (function initVoiceInput() {
-          const btn = document.getElementById('voice-input-btn');
-          const textarea = document.getElementById('chief-complaint-input');
-          const btnText = document.getElementById('voice-btn-text');
-          if (!btn || !textarea || !btnText) return;
-          const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-          if (!SR) { btn.style.display = 'none'; return; }
-          let recognition = null;
-          let recognizing = false;
-          function resetBtn() {
-            recognizing = false;
-            btn.classList.remove('recording');
-            btnText.textContent = "音声入力";
-          }
-          btn.addEventListener('click', function () {
-            if (recognizing) { try { recognition.stop(); } catch (e) {} return; }
-            recognition = new SR();
-            recognition.lang = (navigator.language || 'zh-CN').toLowerCase().indexOf('zh') === 0 ? 'zh-CN' : 'en-US';
-            recognition.continuous = true;
-            recognition.interimResults = true;
-            recognition.onresult = function (e) {
-              let finalText = '';
-              for (let i = e.resultIndex; i < e.results.length; i++) {
-                if (e.results[i].isFinal) finalText += e.results[i][0].transcript;
-              }
-              if (finalText) {
-                let cur = textarea.value.replace(/\s+$/, '');
-                if (cur && !/[，。,.！？!?]$/.test(cur)) cur += '，';
-                textarea.value = cur + finalText;
-                textarea.dispatchEvent(new Event('input'));
-              }
-            };
-            recognition.onerror = resetBtn;
-            recognition.onend = resetBtn;
-            try {
-              recognition.start();
-              recognizing = true;
-              btn.classList.add('recording');
-              btnText.textContent = "現在、聴いている・停止をクリックする";
-            } catch (e) { resetBtn(); }
-          });
-        })();
 
         const ANALYSIS_STAGE_TEXT = Object.freeze({
           queued: "分析タスクがキューに入れられており、まもなく開始されます...。",

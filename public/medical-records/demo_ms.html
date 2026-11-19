@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="utf-8"/>
+<style>
+@page { size: A4; margin: 18mm 16mm 20mm 16mm; }
+* { box-sizing: border-box; }
+body { font-family: "Noto Sans CJK SC","Noto Serif CJK SC",sans-serif; font-size: 10.5pt; line-height: 1.65; color: #1a2332; margin: 0; }
+h1 { font-size: 20pt; color: #0d4a6e; border-bottom: 3px solid #0d4a6e; padding-bottom: 6px; margin: 0 0 4px 0; }
+.subtitle { font-size: 11pt; color: #5a7085; margin-bottom: 16px; }
+h2 { font-size: 14pt; color: #0d4a6e; margin: 22px 0 8px 0; padding: 6px 10px; background: #e8f1f7; border-left: 4px solid #0d4a6e; break-after: avoid; overflow-wrap: break-word; }
+h3 { font-size: 12pt; color: #1a5276; margin: 14px 0 6px 0; break-after: avoid; }
+p { margin: 6px 0; text-align: justify; }
+table { width: 100%; border-collapse: collapse; margin: 8px 0 12px 0; font-size: 9.5pt; }
+table.keep-together { break-inside: avoid; }
+thead { display: table-header-group; }
+th { background: #0d4a6e; color: #fff; padding: 5px 8px; text-align: left; font-weight: 600; }
+td { padding: 4px 8px; border-bottom: 1px solid #d0dce6; vertical-align: top; }
+tr:nth-child(even) td { background: #f4f8fb; }
+.info-box { background: #f0f6fa; border: 1px solid #b8d0e0; border-radius: 6px; padding: 12px 16px; margin: 10px 0; break-inside: avoid; }
+.alert-box { background: #fff8e6; border: 1px solid #e6c87a; border-radius: 6px; padding: 10px 14px; margin: 10px 0; break-inside: avoid; }
+.alert-box strong { color: #8a6d1a; }
+.phase { margin: 14px 0; padding: 12px 16px; border: 1px solid #c5d8e5; border-radius: 8px; break-inside: avoid; }
+.phase-title { font-size: 11.5pt; font-weight: 700; color: #0d4a6e; margin-bottom: 4px; }
+.phase-result { display: inline-block; padding: 2px 10px; border-radius: 4px; font-size: 9pt; font-weight: 600; margin-left: 8px; }
+.improved { background: #d4edda; color: #155724; }
+.worsened { background: #f8d7da; color: #721c24; }
+.stable { background: #d1ecf1; color: #0c5460; }
+.adjusted { background: #fff3cd; color: #856404; }
+.ebm-note { background: #eaf2f8; border-left: 3px solid #2980b9; padding: 8px 12px; margin: 8px 0; font-size: 9.5pt; color: #1a5276; break-inside: avoid; }
+.ebm-note strong { color: #1a5276; }
+.url { font-size: 9pt; color: #666; word-break: break-all; }
+.two-col { display: flex; gap: 16px; }
+.two-col > div { flex: 1; }
+.footer-note { font-size: 9pt; color: #888; margin-top: 24px; border-top: 1px solid #ddd; padding-top: 8px; }
+.doctor-card { border: 1px solid #c5d8e5; border-radius: 8px; padding: 12px 16px; margin: 10px 0; break-inside: avoid; }
+.doctor-name { font-size: 12pt; font-weight: 700; color: #0d4a6e; }
+.doctor-hospital { font-size: 10.5pt; color: #333; margin: 2px 0; }
+.doctor-detail { font-size: 9.5pt; color: #555; margin: 4px 0; }
+</style>
+</head>
+<body>
+<h1>Laporan Ringkasan Rekod Perubatan MediMatch</h1>
+<div class="subtitle">Laporan Sampel · Laporan ini dihasilkan daripada kes perubatan fiktif. Ia tidak mengandungi maklumat pesakit sebenar dan hanya untuk rujukan.</div>
+<!-- ═══════════════ Patient Information ═══════════════ -->
+<h2>I. Maklumat Pesakit.</h2>
+<table class="keep-together">
+<tr><th style="width:25%">Barang</th><th>Butir-butir</th></tr>
+<tr><td>Nama</td><td>Cik Wang (nama samaran)</td></tr>
+<tr><td>Jantina / Umur</td><td>Wanita / 42 tahun.</td></tr>
+<tr><td>Pejawatan</td><td>Pejabat juruketik</td></tr>
+<tr><td>Tempat Kediaman</td><td>Kawasan Baru Pudong, Shanghai.</td></tr>
+<tr><td>Diagnosis Disahkan</td><td>Artritis Reumatoid (RA)</td></tr>
+<tr><td>Masa Jangkitan Penyakit</td><td>3 tahun (permulaan awal pada bulan Mac 2023)</td></tr>
+<tr><td>Hospital Semasa</td><td>Jabatan Reumatologi dan Imunologi di sebuah hospital tersier di Pudong New Area, Shanghai.</td></tr>
+</table>
+<!-- ═══════════════ Chief Complaint ═══════════════ -->
+<h2>II. Aduan Utama dan Isu-Isu Klinikal Utama</h2>
+<p>Aduan Utama: Bengkak dan kesakitan berulang-ulang di pelbagai sendi selama 3 tahun, dengan gejala-gejala yang semakin buruk dan bengkak lutut kiri selama 2 minggu.</p>
+<p>Masalah Klinikal Utama: Aktiviti penyakit artritis reumatoid yang tidak dikawal dengan baik, respons rawatan yang berubah-ubah, dan sinovitis aktif di lutut kiri baru-baru ini. Sambil mengekalkan peningkatan yang dicapai setakat ini, strategi pengurusan jangka panjang perlu dioptimumkan untuk mengurangkan kekerapan kambuh dan untuk menilai sama ada perlu meningkatkan rawatan.</p>
+<!-- ═══════════════ Visit Timeline ═══════════════ -->
+<h2>III. Lawati Timeline.</h2>
+<table class="keep-together">
+<tr><th style="width:12%">Tarikh</th><th style="width:18%">Jenis lawatan</th><th style="width:35%">Temuan Utama</th><th style="width:35%">Pengurusan</th></tr>
+<tr><td>2023-03</td><td>Kunjungan awal.</td><td>Bengkak simetrik dan kesakitan pada sendi interphalangeal proksimal dan metacarpophalangeal kedua-dua tangan selama 4 minggu; kekakuan pagi &gt;1 jam.</td><td>Kajian autoantibodi komprehensif, penanda keradangan, dan pengimejan.</td></tr>
+<tr><td>2023-04</td><td>Diagnosis</td><td>RF 256 IU/mL, anti-CCP &gt;300 U/mL, ESR 68 mm/h, CRP 45 mg/L; radiograf tangan menunjukkan pembengkakan tisu lembut tanpa kerosakan tulang.</td><td>Diagnosis RA; Metotreksat (MTX) 15 mg/minggu + Asid Folic 5 mg/minggu dimulakan.</td></tr>
+<tr><td>2023-07</td><td>Tindakan susulan.</td><td>Bengkak dan kesakitan sendi berkurangan; kekakuan pagi dipendekkan kepada 20 minit; ESR berkurangan kepada 32, CRP 12.</td><td>MTX dikekalkan pada 15 mg/minggu; susulan berterusan.</td></tr>
+<tr><td>2023-10</td><td>Pengurangan dos yang diarahkan sendiri.</td><td>Pesakit secara sendirian mengurangkan MTX kepada 10 mg/minggu disebabkan kebimbangan terhadap kesan sampingan ubat.</td><td>— (tiada lawatan perubatan)</td></tr>
+<tr><td>2024-01</td><td>Kunjungan untuk kambuh kembali.</td><td>Peningkatan bengkak dan kesakitan pada sendi, dengan rentang gerakan terhad pada pergelangan tangan kanan; ESR kembali kepada 55, CRP 38; jangkitan saluran pernafasan atas secara serentak.</td><td>MTX dilanjutkan pada 15 mg/minggu; Hydroxychloroquine (HCQ) 200 mg dua kali sehari ditambahkan.</td></tr>
+<tr><td>2024-05</td><td>Tindakan susulan.</td><td>Symptoms improved markedly after 3 months of combination therapy; ESR 25, CRP normal</td><td>Regimen kombinasi MTX + HCQ dikekalkan.</td></tr>
+<tr><td>2024-08</td><td>Fungsi hati yang tidak normal.</td><td>ALT 85 U/L (2× batas atas normal), tanpa ketidakselesaan yang jelas.</td><td>MTX dikurangkan kepada 10 mg/minggu; terapi hepatoprotektif ditambahkan; ujian ulang dalam tempoh 2 minggu.</td></tr>
+<tr><td>2024-11</td><td>Tindakan susulan.</td><td>Fungsi hati kembali normal (ALT 35), tetapi gejala sendi sebahagiannya kembali.</td><td>MTX disesuaikan kepada 12.5 mg/minggu + HCQ dikekalkan + Prednisone dos rendah 5 mg/hari sebagai terapi jambatan.</td></tr>
+<tr><td>2025-04</td><td>Tindakan susulan.</td><td>Skor DAS28 3.2 (aktiviti penyakit rendah), fungsi hati normal, dan fungsi sendi yang baik.</td><td>Prednisone secara beransur-ansur dikurangkan dan dihentikan; MTX + HCQ dikekalkan.</td></tr>
+<tr><td>2025-07</td><td>Kunjungan terbaru</td><td>Bengkak lutut kiri, ESR 35, CRP 15; MRI lutut kiri menunjukkan efusi sendi dan penebalan sinovial.</td><td>Suntikan intra-artikular Diprospan (sebatian betamethasone) 1 mL ke dalam lutut kiri, dengan kelegaan gejala.</td></tr>
+</table>
+<!-- ═══════════════ Laboratory Trends ═══════════════ -->
+<h2>IV. Trend-trend Makmal.</h2>
+<table class="keep-together">
+<tr><th>Tarikh</th><th>ESR (mm/jam)</th><th>CRP<br/>(mg/L)</th><th>RF<br/>(IU/mL)</th><th>Anti-CCP (U/mL)</th><th>ALT<br/>(U/L)</th><th>Skor DAS28</th><th>Aktiviti Penyakit</th></tr>
+<tr><td>2023-04</td><td>68 ↑</td><td>45 ↑</td><td>256 ↑</td><td>&gt;300 ↑</td><td>22</td><td>5.8</td><td>Tinggi</td></tr>
+<tr><td>2023-07</td><td>32</td><td>12</td><td>128</td><td>&gt;300</td><td>25</td><td>3.8</td><td>Moderat.</td></tr>
+<tr><td>2024-01</td><td>55 ↑</td><td>38 ↑</td><td>198</td><td>&gt;300</td><td>28</td><td>5.2</td><td>Tinggi</td></tr>
+<tr><td>2024-05</td><td>25</td><td>6</td><td>95</td><td>245</td><td>32</td><td>3.1</td><td>Rendah</td></tr>
+<tr><td>2024-08</td><td>28</td><td>8</td><td>88</td><td>230</td><td>85 ↑</td><td>3.4</td><td>Rendah</td></tr>
+<tr><td>2025-01</td><td>30</td><td>10</td><td>92</td><td>228</td><td>35</td><td>3.5</td><td>Rendah</td></tr>
+<tr><td>2025-04</td><td>22</td><td>5</td><td>78</td><td>215</td><td>28</td><td>3.2</td><td>Rendah</td></tr>
+<tr><td>2025-07</td><td>35 ↑</td><td>15 ↑</td><td>85</td><td>220</td><td>30</td><td>3.6</td><td>Rendah-sederhana</td></tr>
+</table>
+<p style="font-size:9pt;color:#666;">Julat rujukan: ESR 0–20 mm/jam; CRP 0–8 mg/L; RF 0–20 IU/mL; anti-CCP 0–5 U/mL; ALT 0–40 U/L. Skor DAS28: &lt;2.6 remisi, 2.6–3.2 aktiviti penyakit rendah, 3.2–5.1 aktiviti penyakit sederhana, &gt;5.1 aktiviti penyakit tinggi.</p>
+<!-- ═══════════════ Imaging Findings ═══════════════ -->
+<h2>V. Penemuan Pencitraan</h2>
+<h3>Radiograf Tangan (Perbandingan Berantai)</h3>
+<table class="keep-together">
+<tr><th style="width:15%">Tarikh</th><th>Temuan Utama</th><th style="width:30%">Signifikansi Klinikal</th></tr>
+<tr><td>2023-04</td><td>Bengkak tisu lembut di sekitar sendi interphalangeal proksimal kedua-dua tangan, tanpa kerosakan tulang yang jelas.</td><td>RA awal, tanpa kerosakan struktur buat masa ini.</td></tr>
+<tr><td>2024-01</td><td>Penyempitan kedua-dua ruang sendi pergelangan tangan; perubahan kistik subchondral kecil di pergelangan tangan kanan.</td><td>Errosi tulang awal semasa penyakit aktif.</td></tr>
+<tr><td>2025-04</td><td>Penyempitan ruang sendi pergelangan tangan bilateral tidak berubah daripada sebelumnya; tiada kerosakan tulang baru.</td><td>Tiada perkembangan kerosakan struktur selepas terapi kombinasi; penyakit dikawal dengan baik.</td></tr>
+</table>
+<h3>MRI Lutut Kiri (2025-07)</h3>
+<p>Effusi sendi lutut kiri sederhana dengan penebalan sinovial yang difus. Pencitraan yang diperkuat oleh kontras menunjukkan peningkatan sinovial, konsisten dengan sinovitis aktif. Tiada koyakan meniscal atau kecederaan ligamen yang dikenal pasti.</p>
+<!-- ═══════════════ Treatment Course and Disease Fluctuations ═══════════════ -->
+<h2>VI. Kursus Rawatan dan Analisis Fluktuasi Penyakit.</h2>
+<p>Bahagian ini mengulas tentang titik-titik penting dalam kursus rawatan dalam susunan kronologi, menganalisis sebab-sebab setiap peningkatan atau kemerosotan dan keberkesanan intervensi, dan membantu doktor yang merawat memahami corak evolusi penyakit dengan cepat.</p>
+<div class="phase">
+<span class="phase-title">Fasa 1: Diagnosis dan Rawatan Awal.</span><span class="phase-result improved">Diperbaiki.</span>
+<p>Tempoh: April 2023 - Julai 2023</p>
+<p>Kursus: Selepas diagnosis, MTX 15 mg/minggu ditambah Asid Folic dimulakan. MTX ialah ubat utama dalam rawatan RA dan memberikan kesan anti-inflamasi dan imunomodulator dengan menghambat dihydrofolate reductase. Selepas 3 bulan rawatan, bengkak dan kesakitan sendi pesakit bertambah baik secara ketara, kekakuan pagi berkurangan daripada &gt;1 jam kepada 20 minit, ESR berkurangan daripada 68 kepada 32 mm/jam, dan DAS28 berkurangan daripada 5.8 kepada 3.8.</p>
+<p>Sebab Peningkatan: MTX mencapai kepekatan plasma dalam keadaan stabil dan secara berkesan menekan keradangan sinovial. Suplemen asid folik mengurangkan kesan sampingan yang berkaitan dengan MTX seperti mukositis oral dan meningkatkan kepatuhan terhadap ubat.</p>
+<div class="ebm-note"><strong>Evidence Note:</strong> EULAR 2022 recommends MTX as the first-line anchor drug for RA (grade of recommendation A, level of evidence 1a). MTX monotherapy enables approximately 40–50% of patients with RA to achieve low disease activity (Smolen et al., Ann Rheum Dis 2023).</div>
+</div>
+<div class="phase">
+<span class="phase-title">Fasa 2: Pengurangan Dos Secara Sendiri dan Kambuh Penyakit.</span><span class="phase-result worsened">Diperburukkan.</span>
+<p>Tempoh: Oktober 2023 - Januari 2024</p>
+<p>Kursus: Kerana kebimbangan mengenai kesan buruk jangka panjang MTX (hepatotoksisiti dan myelosupresi), pesakit secara sendirinya mengurangkan MTX daripada 15 mg kepada 10 mg/minggu tanpa berunding dengan doktor. Pada Januari 2024 (musim sejuk), berikutan jangkitan saluran pernafasan atas, bengkak dan kesakitan sendi bertambah buruk, julat gerakan di pergelangan tangan kanan menjadi terhad, ESR kembali kepada 55 mm/jam, dan DAS28 meningkat lagi kepada 5.2.</p>
+<p>Sebab Kemerosotan: Beberapa faktor yang menyumbang—(1) dos MTX yang tidak mencukupi membawa kepada kawalan penyakit yang berkurangan; (2) suhu musim sejuk yang rendah boleh memburukkan gejala sendi; dan (3) jangkitan saluran pernafasan atas mencetuskan aktivasi sistem imun, mengakibatkan peningkatan aktiviti penyakit RA. Jangkitan merupakan pencetus umum eksaserbasi RA akut.</p>
+<div class="ebm-note"><strong>Evidence Note:</strong> The ACR 2021 guideline emphasizes that patients with RA should not adjust DMARD doses on their own (strong recommendation, moderate-quality evidence). Infection can trigger RA relapse through molecular mimicry and bystander activation (Catrina et al., Nat Rev Rheumatol 2021).</div>
+</div>
+<div class="phase">
+<span class="phase-title">Fasa 3: Terapi Kombinasi.</span><span class="phase-result improved">Diperbaiki.</span>
+<p>Tempoh: Februari 2024 - Mei 2024</p>
+<p>Kursus: MTX dilanjutkan pada 15 mg/minggu, dan HCQ 200 mg dua kali sehari ditambahkan. HCQ menunjukkan kesan imunomodulator dengan menghambat laluan isyarat reseptor Toll-like dan mempunyai kesan sinergistik dengan MTX. Selepas 3 bulan terapi kombinasi, ESR menurun kepada 25 mm/jam, CRP kembali normal, dan DAS28 menurun kepada 3.1, mencapai aktiviti penyakit yang rendah.</p>
+<p>Sebab untuk Peningkatan: Terapi kombinasi MTX + HCQ secara sinergistik menekan keradangan, dan HCQ juga dapat mengurangkan risiko hepatotoksisiti yang berkaitan dengan MTX. Kepatuhan pesakit terhadap pengambilan ubat meningkat selepas pendidikan mengenai kekambuhan sebelumnya.</p>
+<div class="ebm-note"><strong>Evidence Note:</strong> The MTX + HCQ combination regimen has been shown to be superior to MTX monotherapy in multiple RCTs (grade of recommendation A). HCQ can reduce the incidence of MTX-related liver enzyme elevation (O'Dell et al., Arthritis Rheum 2002).</div>
+</div>
+<div class="phase">
+<span class="phase-title">Fasa 4: Fungsi Hati Abnormal dan Penyesuaian Rawatan.</span><span class="phase-result adjusted">Diubahsuai</span>
+<p>Tempoh: Ogos 2024 - November 2024</p>
+<p>Kursus: Susulan rutin mendedahkan peningkatan ALT kepada 85 U/L (2× batas atas normal), tanpa ketidakselesaan yang jelas. MTX dikurangkan kepada 10 mg/minggu, dan terapi hepatoprotektif ditambahkan. Fungsi hati kembali normal 2 bulan kemudian (ALT 35 U/L), tetapi gejala sendi sebahagiannya kembali selepas pengurangan dos MTX. MTX kemudian disesuaikan kepada 12.5 mg/minggu, dengan Prednisone dos rendah 5 mg/d ditambah sebagai terapi sambungan.</p>
+<p>Hasil Intervensi: Fungsi hati pulih dengan baik, tetapi pengurangan dos MTX mengakibatkan kawalan penyakit yang berkurangan, menunjukkan bahawa pesakit ini agak sensitif terhadap dos MTX. Glukokortikoid dos rendah secara berkesan mengimbangi kesan anti-inflamasi yang tidak mencukupi semasa pengurangan dos MTX.</p>
+<div class="ebm-note"><strong>Evidence Note:</strong> MTX-related liver enzyme elevation occurs in 15–20% of patients; most cases are transient and resolve after dose reduction or temporary discontinuation (Kremer et al., Arthritis Rheum 1994). EULAR recommends monitoring liver function every 8–12 weeks during MTX treatment (grade of recommendation A).</div>
+</div>
+<div class="phase">
+<span class="phase-title">Fasa 5: Kestabilan Selepas Terapi Menjembatani.</span><span class="phase-result stable">Stabil.</span>
+<p>Tempoh: Januari 2025 - April 2025</p>
+<p>Kursus: Selepas 3 bulan terapi jambatan dengan MTX 12.5 mg/minggu + HCQ 200 mg dua kali sehari + Prednisone 5 mg/hari, DAS28 menurun kepada 3.2, mencapai sasaran aktiviti penyakit rendah. Prednisone secara beransur-ansur dikurangkan dan dihentikan, dan rejimen kombinasi MTX + HCQ dikekalkan.</p>
+<p>Sebab Kestabilan: Pelaksanaan strategi treat-to-target (T2T) yang berkesan - skor DAS28 digunakan sebagai sasaran rawatan, rejimen rawatan disesuaikan dengan segera, dan kawalan penyakit akhirnya dicapai. Glukokortikoid bridging menyediakan perlindungan anti-inflamasi jangka pendek sebelum DMARDs mengambil kesan penuh.</p>
+<div class="ebm-note"><strong>Evidence Note:</strong> The T2T strategy has been demonstrated to be superior to conventional care in multiple RCTs (grade of recommendation A, level of evidence 1a). EULAR 2022 strongly recommends remission or low disease activity as the treatment target (Smolen et al., Ann Rheum Dis 2023).</div>
+</div>
+<div class="phase">
+<span class="phase-title">Fasa 6: Kambuh setempat dan Suntikan Intra-artikular.</span><span class="phase-result improved">Diperbaiki.</span>
+<p>Tempoh: Julai 2025 (yang terbaru)</p>
+<p>Kursus: Walaupun penyakit sistemik dikawal dengan baik, bengkak terpencil di lutut kiri berkembang. MRI mengesahkan sinovitis aktif. Suntikan intra-artikular Diprospan 1 mL diberikan ke dalam lutut kiri; bengkaknya hilang ketara dalam masa 1 minggu selepas suntikan, dan julat gerakan pulih.</p>
+<p>Sebab untuk Penambahbaikan: Suntikan glukokortikoid intra-artikular bertindak secara langsung terhadap keradangan tempatan dan mempunyai kesan sampingan sistemik yang minimum. Pembengkakan sendi terpencil adalah agak biasa dalam RA dan tidak semestinya memerlukan penyesuaian regimen rawatan sistemik.</p>
+<div class="ebm-note"><strong>Evidence Note:</strong> Intra-articular glucocorticoid injection is a first-line local treatment for isolated joint flares in RA (grade of recommendation A). The ACR 2021 guideline suggests that, when systemic disease is well controlled, local therapy may be prioritized over escalation of the systemic regimen for an isolated joint flare.</div>
+</div>
+<!-- ═══════════════ Current Medications ═══════════════ -->
+<h2>VII. Rejimen Ubat Semasa</h2>
+<table class="keep-together">
+<tr><th style="width:20%">Ubat-ubatan.</th><th style="width:20%">Dos</th><th style="width:15%">Laluan</th><th style="width:45%">Catatan</th></tr>
+<tr><td>Methotrexate (MTX)</td><td>12.5 mg sekali seminggu.</td><td>Oral</td><td>Ubat utama; dikekalkan pada dos yang dikurangkan disebabkan oleh sejarah fungsi hati yang tidak normal.</td></tr>
+<tr><td>Asid folik</td><td>5 mg sekali seminggu (hari selepas MTX)</td><td>Oral</td><td>Mengurangkan kesan sampingan yang berkaitan dengan MTX.</td></tr>
+<tr><td>Hidroksiklorokuin (HCQ)</td><td>200 mg dua kali sehari.</td><td>Oral</td><td>DMARD digunakan dalam kombinasi untuk keberkesanan sinergistik.</td></tr>
+</table>
+<p style="font-size:9pt;color:#666;">Catatan: Ubat-ubatan dan dos di atas adalah petikan dari rekod preskripsi yang disediakan oleh pesakit dan hanya untuk rujukan doktor; mereka tidak merupakan nasihat pengambilan ubat.</p>
+<!-- ═══════════════ Current Clinical Assessment ═══════════════ -->
+<h2>VIII. Penilaian Klinikal Semasa</h2>
+<div class="info-box">
+<p>Skor DAS28: 3.6 (aktiviti penyakit rendah-sederhana)</p>
+<p>Trend Aktiviti Penyakit: Trend keseluruhan adalah menurun. Aktiviti penyakit yang rendah (3.2) dicapai pada bulan April 2025, dengan peningkatan ringan kepada 3.6 pada bulan Julai 2025 disebabkan oleh kekambuhan terlokalisasi di lutut kiri.</p>
+<p>Kerosakan Struktur: Penyempitan ruang sendi pergelangan tangan bilateral (yang pertama kali dikesan pada Januari 2024), tanpa perkembangan pada susulan pada bulan April 2025.</p>
+<p>Status Fungsi: Bebas dalam aktiviti kehidupan harian; batasan ringan pada rentang gerakan pergelangan tangan kanan; pemulihan fungsi yang baik pada lutut kiri selepas suntikan.</p>
+<p>Cabaran Utama: Dos MTX dibataskan oleh fungsi hati dan tidak boleh ditingkatkan kepada dos penuh; aktiviti penyakit berfluktuasi antara tahap rendah dan sederhana, dan remisi lengkap belum dicapai.</p>
+</div>
+<div class="alert-box">
+<strong>⚠️ Issues Requiring Attention:</strong>
+<p>(1) Dos MTX semasa tidak mencukupi untuk mencapai remisi lengkap; penambahan DMARD sintetik biologi atau yang ditujukan harus dinilai;</p>
+<p>(2) Sejarah fungsi hati yang tidak normal menunjukkan toleransi MTX yang terhad, memerlukan pemantauan berterusan;</p>
+<p>(3) Pengurangan dos secara sendirian sebelum ini mengakibatkan kekambuhan, dan pendidikan mengenai kepatuhan terhadap ubat perlu diperkuatkan;</p>
+<p>(4) Titer anti-CCP yang tinggi secara berterusan menunjukkan prognosis yang buruk dan memerlukan pengurusan penyakit yang lebih proaktif.</p>
+</div>
+<!-- ═══════════════ Local Physician's Conclusions ═══════════════ -->
+<h2>IX. Kesimpulan Doktor Tempatan.</h2>
+<p>Pesakit mempunyai diagnosis artritis reumatoid yang telah lama wujud dengan tempoh penyakit selama 3 tahun dan kini mempunyai aktiviti penyakit rendah hingga sederhana. MTX digabungkan dengan HCQ telah berkesan, namun dosnya terhad oleh fungsi hati dan remisi lengkap belum dicapai. Dirujuk ke Jabatan Reumatologi dan Imunologi di pusat rujukan tertiari untuk menilai peningkatan ke terapi biologi. Pesakit dinasihatkan untuk tidak menyesuaikan dos ubat secara sendirian dan untuk menghadiri pemantauan susulan secara regular.</p>
+<!-- ═══════════════ Subspecialty Analysis ═══════════════ -->
+<h2>X. Analisis Subspesialisasi.</h2>
+<p>Pengkhususan yang disyorkan: Reumatologi dan Imunologi</p>
+<p>Pesakit telah disahkan menghidap arthritis rheumatoid selama 3 tahun dan kini mempunyai aktiviti penyakit yang rendah hingga sederhana. Isu-isu berikut memerlukan penilaian oleh pakar:</p>
+<p>(1) Penilaian untuk Peningkatan Rawatan. MTX tidak boleh digunakan pada dos penuh disebabkan fungsi hati yang tidak normal, dan aktiviti penyakit belum mencapai remisi lengkap pada dos semasa (12.5 mg/minggu). Menurut cadangan EULAR 2022, apabila MTX digabungkan dengan DMARD sintetik konvensional (csDMARDs) gagal mencapai sasaran rawatan, penambahan DMARD biologi (bDMARD) atau DMARD sintetik yang ditujukan (tsDMARD) harus dipertimbangkan. Seorang pakar harus menilai manfaat dan risiko peningkatan rawatan.</p>
+<p>(2) Pilihan Terapi Biologi. Untuk pesakit dengan RA dan respons yang tidak mencukupi terhadap MTX, inhibitor TNF (cth., adalimumab dan etanercept), antagonis reseptor IL-6 (cth., tocilizumab), dan inhibitor JAK (cth., tofacitinib dan baricitinib) semuanya merupakan pilihan berpotensi. Pilihan harus mengambil kira fungsi hati pesakit, risiko jangkitan, penyakit bersama, dan pertimbangan kewangan.</p>
+<p>(3) Perlindungan Tulang Jangka Panjang. Pesakit sudah mempunyai erosi tulang di kedua-dua pergelangan tangan, dan titer anti-CCP yang tinggi menunjukkan risiko yang agak tinggi untuk kerosakan tulang progresif. Kepadatan mineral tulang harus dinilai, suplementasi kalsium dan vitamin D harus dipertimbangkan, dan terapi anti-osteoporosis harus dimulakan jika ditunjukkan.</p>
+<div class="ebm-note"><strong>Evidence Note:</strong> EULAR 2022 recommends adding a bDMARD or tsDMARD when MTX combined with csDMARDs fails to achieve the treatment target (grade of recommendation A). The efficacy of TNF inhibitors, IL-6 antagonists, and JAK inhibitors in patients with RA and an inadequate response to MTX has been demonstrated in multiple phase III RCTs.</div>
+<!-- ═══════════════ Matched Specialists ═══════════════ -->
+<h2>XI. Pakar-pakar yang dipadankan.</h2>
+<p>Berdasarkan profil klinikal pesakit (RA, tindak balas yang tidak mencukupi terhadap MTX, dan keperluan untuk menilai terapi biologi), pakar reumatologi dan imunologi berikut di Shanghai disyorkan:</p>
+<div class="doctor-card">
+<div class="doctor-name">Rekomendasi 1: Bao Chunde, Ketua Doktor.</div>
+<div class="doctor-hospital">Hospital Renji, Sekolah Perubatan Universiti Shanghai Jiao Tong, Jabatan Reumatologi dan Imunologi</div>
+<div class="doctor-detail">Kepakaran: Diagnosis dan pengurusan penyakit rematik, termasuk artritis reumatoid, lupus eritematosus sistemik, dan ankylosing spondylitis, dengan pengalaman yang sangat luas dalam terapi biologi.</div>
+<div class="doctor-detail">Laman web rasmi hospital: https://www.renji.com</div>
+</div>
+<div class="doctor-card">
+<div class="doctor-name">Rekomendasi 2: Jiang Lindi, Ketua Doktor.</div>
+<div class="doctor-hospital">Hospital Zhongshan, Universiti Fudan, Jabatan Reumatologi dan Imunologi</div>
+<div class="doctor-detail">Kepakaran: Artritis reumatoid, sindrom Sjögren, dan vaskulitis, dengan penyelidikan mendalam tentang rawatan individu untuk AR yang tahan terhadap rawatan.</div>
+<div class="doctor-detail">Laman web rasmi hospital: https://www.zs-hospital.sh.cn</div>
+</div>
+<div class="doctor-card">
+<div class="doctor-name">Rekomendasi 3: Wan Weiguo, Ketua Doktor.</div>
+<div class="doctor-hospital">Hospital Huashan, Universiti Fudan, Jabatan Reumatologi dan Imunologi</div>
+<div class="doctor-detail">Pengarah Eksekutif Jabatan Reumatologi dan Imunologi. Kepakaran: Diagnosis dan pengurusan penyakit reumatik, termasuk artritis reumatoid, spondylitis ankylosing, lupus eritematosus sistemik, dan gout. Penyelidikan beliau terutamanya berfokuskan kepada anemia yang berkaitan dengan artritis reumatoid dan osteoporosis yang disebabkan oleh glukokortikoid.</div>
+<div class="doctor-detail">Laman web rasmi hospital: https://www.huashan.org.cn</div>
+</div>
+<!-- ═══════════════ Selection Recommendations ═══════════════ -->
+<h2>XII. Cadangan Pemilihan</h2>
+<h3>Keutamaan untuk Perundingan.</h3>
+<p>Diperlukan konsultasi reumatologi dan imunologi dalam tempoh 2 minggu, dengan fokus kepada penilaian untuk meningkatkan terapi biologi. Walaupun aktiviti penyakit semasa tidak dalam julat tinggi, dos MTX yang terhad dan titer anti-CCP yang tinggi menunjukkan prognosis yang buruk. Peningkatan rawatan awal mungkin membantu melambatkan perkembangan kerosakan tulang.</p>
+<h3>Kriteria Pemilihan</h3>
+<p>Jabatan Reumatologi dan Imunologi di Hospital Renji merupakan salah satu jabatan khusus reumatologi terawal yang ditubuhkan di China dan mempunyai pengalaman yang sangat luas dalam penggunaan klinikal agen biologi, menjadikannya sesuai untuk pesakit yang memerlukan peningkatan rawatan. Jabatan Reumatologi dan Imunologi di Hospital Zhongshan mempunyai kepakaran khusus dalam rawatan individu untuk RA yang tahan terhadap rawatan dan sesuai untuk pesakit yang tidak bertindak balas dengan baik terhadap terapi konvensional. Hospital Renji disyorkan sebagai pilihan pertama disebabkan kedudukan akademik dan pengalaman klinikal yang lebih kuat dalam rawatan biologi untuk RA.</p>
+<h3>Kesinambungan Penjagaan</h3>
+<p>Diperlukan susulan jangka panjang dengan pakar reumatologi yang sama. DAS28 harus dinilai setiap 3 bulan, dan ujian fungsi hati susulan, kiraan darah lengkap, dan pengimejan harus dilakukan setiap 6 bulan. Mengekalkan kesinambungan rejimen rawatan adalah penting untuk kawalan RA jangka panjang.</p>
+<!-- ═══════════════ Appointment Preparation Checklist ═══════════════ -->
+<h2>XIII. Senarai Semak Persiapan Temu Janji</h2>
+<h3>I. Dokumen-dokumen untuk Dibawa (Disyorkan)</h3>
+<p>1. Rekod perubatan lengkap: Rekod perubatan pesakit luar/laporan dari lawatan awal pada bulan Mac 2023 hingga lawatan terbaru pada bulan Julai 2025.</p>
+<p>2. Laporan makmal (termasuk julat rujukan): Semua keputusan ESR, CRP, RF, anti-CCP, dan fungsi hati (ALT/AST) sebelumnya, terutamanya laporan lengkap daripada episod fungsi hati abnormal pada Ogos 2024.</p>
+<p>3. Bahan pengimejan: Radiograf tangan dan laporan dari 2023-04, 2024-01, dan 2025-04; imej MRI lutut kiri dan laporan lengkap dari 2025-07 (bawa juga mana-mana halaman yang mengandungi butiran kuantitatif).</p>
+<p>4. Senarai ubat-ubatan semasa dan rekod preskripsi: Salinan preskripsi atau bungkusan ubat asli untuk MTX, Asid Folik, dan HCQ, termasuk sejarah penyesuaian dos.</p>
+<p>5. Rekod suntikan intra-artikular: Rekod prosedur untuk suntikan Diprospan ke dalam lutut kiri pada Julai 2025.</p>
+<p>6. Rekod ubat-ubatan hepatoprotektif yang digunakan semasa episod fungsi hati abnormal sebelumnya.</p>
+<p>7. Jika perundingan atau ujian sebelumnya telah dilakukan di hospital lain, bawa laporan asal atau salinan yang berkaitan.</p>
+<h3>II. Maklumat Tambahan Diperlukan</h3>
+<p>1. Keputusan ketumpatan mineral tulang: Jika belum dilakukan, pengujian disyorkan sebelum lawatan (pesakit dengan RA mempunyai risiko yang lebih tinggi untuk osteoporosis, dan penilaian diperlukan sebelum terapi biologi).</p>
+<p>2. Keputusan saringan hepatitis B, hepatitis C, dan tuberkulosis: Ini mesti diselesaikan sebelum terapi biologi, dan ujian lanjutan disyorkan.</p>
+<p>3. Rekod vaksinasi: Agen biologi boleh mempengaruhi fungsi imun, dan status vaksinasi harus dinilai.</p>
+<p>4. Kiraan darah lengkap dan hasil fungsi ginjal terkini.</p>
+<p>5. Diari gejala: Rekodkan lokasi pembengkakan dan kesakitan sendi, tempoh kekakuan pagi, pencetus, dan gejala-gejala yang berkaitan untuk membantu doktor menilai aktiviti penyakit.</p>
+<p>6. Sama ada ujian lain, seperti echocardiography dan ujian fungsi tiroid, telah dilakukan tidak didokumentasikan dalam rekod yang tersedia.</p>
+<p>7. Sejarah keluarga: Sama ada terdapat sejarah keluarga artritis reumatoid atau penyakit autoimun yang lain.</p>
+<!-- ═══════════════ Medical Care in China ═══════════════ -->
+<h2>XIV. Penjagaan Perubatan di China: Senarai Semak Perjalanan</h2>
+<h3>Rekod Perubatan dan Dokumen Pengenalpastian</h3>
+<p>· Pasport, visa, dan dokumen insurans; sahkan jika jabatan perkhidmatan perubatan antarabangsa menyokong pengebilan langsung dengan insurans anda.</p>
+<p>· Rekod perubatan asal, laporan ujian, fail pengimejan asal (DICOM), dan slaid patologi/blok parafin (jika berkenaan).</p>
+<p>· Rekod pembedahan sebelumnya, ringkasan pelepasan, senarai ubat, dan sejarah alahan.</p>
+<h3>Pengesahan Pra-Perjalanan</h3>
+<p>· Semak jadual klinik doktor, syarat-syarat temujanji perkhidmatan perubatan antarabangsa, dan dokumen-dokumen yang diperlukan melalui saluran hospital rasmi.</p>
+<p>· Sahkan sama ada interpretasi, pengiringan, atau penilaian pra-jauh diperlukan, dan berikan masa yang mencukupi untuk ujian dan lawatan susulan.</p>
+<p>· Bayar yuran perubatan secara terus kepada hospital; laporan ini tidak menggantikan sebut harga hospital atau pengesahan temu janji.</p>
+<h3>Apa yang perlu dibawa ke hospital?</h3>
+<p>· Bawa pengenalan dan pengesahan temujanji seperti yang diperlukan oleh hospital, dan sahkan kampus dan lantai hospital terlebih dahulu.</p>
+<p>· Bawa laporan dan ubat-ubatan asli; jangan hentikan pengambilan ubat, meningkatkan dos, atau menyesuaikan rawatan sendiri.</p>
+<p>· Dalam keadaan kecemasan seperti kesakitan akut yang parah, kesukaran bernafas, atau kesedaran yang berubah, pergi segera ke jabatan kecemasan yang terdekat.</p>
+<!-- ═══════════════ References and Limitations ═══════════════ -->
+<h2>XV. Rujukan dan Batasan</h2>
+<p>Saran panduan perubatan yang dinyatakan dalam laporan ini (EULAR 2022 dan ACR 2021) berasal daripada garis panduan amalan klinikal yang diterbitkan secara awam, dan gred-gred cadangan dan tahap bukti dilaporkan seperti yang ditunjukkan dalam garis panduan asal. Rujukan diformat sebagai “Penulis et al., Jurnal Tahun” supaya pembaca yang berminat boleh merujuk kepada penerbitan asal.</p>
+<p>Kesimpulan klinikal, laluan perundingan yang disyorkan, yuran, dan jadual klinik adalah tertakluk kepada rekod perubatan asal dan pengesahan dengan hospital. Pautan laman web hospital rasmi yang disertakan dalam laporan ini diperoleh daripada sumber awam; sila sahkan melalui saluran hospital rasmi sebelum lawatan anda.</p>
+<p>Penafian: Laporan ini dihasilkan oleh AI berdasarkan rekod perubatan yang disediakan dan bertujuan semata-mata untuk mengatur maklumat perubatan dan menyokong pemadanan doktor. Ia tidak merupakan nasihat diagnosis, rawatan atau ubat. AI mungkin membuat kesilapan pengiktirafan atau interpretasi. Sila bawa rekod perubatan asal supaya doktor yang merawat boleh membuat penilaian berdasarkan evaluasi dan pemeriksaan secara peribadi. Dalam keadaan kecemasan, hubungi perkhidmatan kecemasan tempatan serta-merta atau pergi ke jabatan kecemasan.</p>
+<div class="footer-note">
+<p>Dihasilkan: 18 November 2026 | Versi Laporan: Demo v2.0 | MediMatch · ShanghaiMed</p>
+</div>
+</body>
+</html>

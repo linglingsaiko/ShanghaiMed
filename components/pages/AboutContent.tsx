@@ -342,7 +342,7 @@ export default function AboutContent() {
               <React.Fragment key={i}>
                 {part}
                 {i < arr.length - 1 && (
-                  <Link href="/medical-records" className="text-teal-700 font-medium hover:underline">MediMatch</Link>
+                  <a href={`/medical-records/index_${language}.html`} className="text-teal-700 font-medium hover:underline">MediMatch</a>
                 )}
               </React.Fragment>
             ))}

@@ -2825,7 +2825,7 @@
 <path d="M12 11v6M12 7h.01" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
 </svg>
 <span>
-<strong>Service Description:</strong>The uploaded medical records will be transmitted via an encrypted connection. After completing the payment according to the instructions on the page, the AI analysis will be initiated. Once the analysis is completed, the original files will be automatically deleted. The report is for reference only and does not constitute medical advice.</span>
+<strong>Service Description:</strong>The uploaded medical records will be transmitted via an encrypted connection. After completing the payment according to the instructions on the page, the AI analysis will be initiated. Once the analysis is completed, the original files will be automatically deleted. The report is for reference only and does not constitute medical advice.</span><a href="/medical-records/demo_en.html" target="_blank" rel="noopener" style="color:#0E5A5A;font-weight:600;text-decoration:underline;white-space:nowrap;margin-inline-start:8px;">View a sample report →</a>
 </div>
 <div class="workflow">
 <div class="consent-banner" hidden="" id="consent-declined" role="status">
@@ -4510,8 +4510,30 @@
           const task = loadTask();
           if (!task || !task.taskId) return;
           const generation = ++analysisGeneration;
-          isProcessing = true;
           currentTaskId = task.taskId;
+          try {
+            if (reportCenterReady) await reportCenterReady;
+            if (generation !== analysisGeneration) return;
+            const matchingReport = reportSummaries.find((report) => report.task_id === task.taskId);
+            // 静默状态检查：待支付任务不在页面加载时自动恢复 UI，
+            // 保持上传区初始状态；续付入口在"我的报告"列表。
+            if (matchingReport) {
+              const savedStatus = String(matchingReport.status || '').toLowerCase();
+              if (savedStatus === 'pending_payment' && !reportIsPaid(matchingReport)) return;
+            } else {
+              let probe = null;
+              try {
+                probe = await requestJson('/status/' + encodeURIComponent(task.taskId));
+              } catch (probeError) {
+                return; // 网络异常：本次不恢复，保留任务供下次刷新
+              }
+              if (generation !== analysisGeneration) return;
+              const probeStatus = String((probe && probe.status) || '').toLowerCase();
+              if (probeStatus === 'pending_payment' && !reportIsPaid(probe)) return;
+              if (probeStatus === 'failed' || probeStatus === 'expired') { clearTask(); return; }
+            }
+            // 确认需要恢复（分析中/已支付/已完成）才显示进度区，且不自动滚动
+            isProcessing = true;
           elements.progressSection.hidden = false;
           elements.progressSection.dataset.state = "loading";
           elements.startButtonText.textContent = "The analysis is in progress";
@@ -4521,18 +4543,14 @@
           setProgress("analysis", 0);
           elements.analysisNote.textContent = "An ongoing analysis has been detected. We are currently restoring your progress for you...";
           updateActionState();
-          try {
-            if (reportCenterReady) await reportCenterReady;
-            if (generation !== analysisGeneration) return;
-            const matchingReport = reportSummaries.find((report) => report.task_id === task.taskId);
             if (matchingReport) {
               adoptReportData(matchingReport);
               const detail = await requestJson('/reports/' + encodeURIComponent(matchingReport.report_id));
               if (generation !== analysisGeneration) return;
-              displayReportDetail(detail, true);
+              displayReportDetail(detail, false);
               return;
             }
-            await runAnalysisToCompletion(task.taskId, generation, true);
+            await runAnalysisToCompletion(task.taskId, generation, false);
           } catch (error) {
             if (generation !== analysisGeneration) return;
             clearTask();
@@ -4543,6 +4561,7 @@
             elements.startButtonText.textContent = "Re-analyze";
             updateActionState();
           }
+
         }
 
         function reportStatusLabel(report) {

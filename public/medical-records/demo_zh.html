@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+@page { size: A4; margin: 18mm 16mm 20mm 16mm; }
+* { box-sizing: border-box; }
+body { font-family: "Noto Sans CJK SC","Noto Serif CJK SC",sans-serif; font-size: 10.5pt; line-height: 1.65; color: #1a2332; margin: 0; }
+h1 { font-size: 20pt; color: #0d4a6e; border-bottom: 3px solid #0d4a6e; padding-bottom: 6px; margin: 0 0 4px 0; }
+.subtitle { font-size: 11pt; color: #5a7085; margin-bottom: 16px; }
+h2 { font-size: 14pt; color: #0d4a6e; margin: 22px 0 8px 0; padding: 6px 10px; background: #e8f1f7; border-left: 4px solid #0d4a6e; break-after: avoid; overflow-wrap: break-word; }
+h3 { font-size: 12pt; color: #1a5276; margin: 14px 0 6px 0; break-after: avoid; }
+p { margin: 6px 0; text-align: justify; }
+table { width: 100%; border-collapse: collapse; margin: 8px 0 12px 0; font-size: 9.5pt; }
+table.keep-together { break-inside: avoid; }
+thead { display: table-header-group; }
+th { background: #0d4a6e; color: #fff; padding: 5px 8px; text-align: left; font-weight: 600; }
+td { padding: 4px 8px; border-bottom: 1px solid #d0dce6; vertical-align: top; }
+tr:nth-child(even) td { background: #f4f8fb; }
+.info-box { background: #f0f6fa; border: 1px solid #b8d0e0; border-radius: 6px; padding: 12px 16px; margin: 10px 0; break-inside: avoid; }
+.alert-box { background: #fff8e6; border: 1px solid #e6c87a; border-radius: 6px; padding: 10px 14px; margin: 10px 0; break-inside: avoid; }
+.alert-box strong { color: #8a6d1a; }
+.phase { margin: 14px 0; padding: 12px 16px; border: 1px solid #c5d8e5; border-radius: 8px; break-inside: avoid; }
+.phase-title { font-size: 11.5pt; font-weight: 700; color: #0d4a6e; margin-bottom: 4px; }
+.phase-result { display: inline-block; padding: 2px 10px; border-radius: 4px; font-size: 9pt; font-weight: 600; margin-left: 8px; }
+.improved { background: #d4edda; color: #155724; }
+.worsened { background: #f8d7da; color: #721c24; }
+.stable { background: #d1ecf1; color: #0c5460; }
+.adjusted { background: #fff3cd; color: #856404; }
+.ebm-note { background: #eaf2f8; border-left: 3px solid #2980b9; padding: 8px 12px; margin: 8px 0; font-size: 9.5pt; color: #1a5276; break-inside: avoid; }
+.ebm-note strong { color: #1a5276; }
+.url { font-size: 9pt; color: #666; word-break: break-all; }
+.two-col { display: flex; gap: 16px; }
+.two-col > div { flex: 1; }
+.footer-note { font-size: 9pt; color: #888; margin-top: 24px; border-top: 1px solid #ddd; padding-top: 8px; }
+.doctor-card { border: 1px solid #c5d8e5; border-radius: 8px; padding: 12px 16px; margin: 10px 0; break-inside: avoid; }
+.doctor-name { font-size: 12pt; font-weight: 700; color: #0d4a6e; }
+.doctor-hospital { font-size: 10.5pt; color: #333; margin: 2px 0; }
+.doctor-detail { font-size: 9.5pt; color: #555; margin: 4px 0; }
+</style>
+</head>
+<body>
+
+<h1>MediMatch 病历总结报告</h1>
+<div class="subtitle">示例报告 · 本报告基于虚构病历生成，不涉及任何真实患者信息，仅供参考</div>
+
+<!-- ═══════════════ 基本信息 ═══════════════ -->
+<h2>一、患者基本信息</h2>
+<table class="keep-together">
+<tr><th style="width:25%">项目</th><th>内容</th></tr>
+<tr><td>姓名</td><td>王女士（化名）</td></tr>
+<tr><td>性别 / 年龄</td><td>女 / 42 岁</td></tr>
+<tr><td>职业</td><td>办公室文员</td></tr>
+<tr><td>居住地</td><td>上海市浦东新区</td></tr>
+<tr><td>确诊疾病</td><td>类风湿关节炎（Rheumatoid Arthritis, RA）</td></tr>
+<tr><td>病程</td><td>3 年（2023 年 3 月首次发病）</td></tr>
+<tr><td>目前就诊医院</td><td>上海市浦东新区某三级医院风湿免疫科</td></tr>
+</table>
+
+<!-- ═══════════════ 主诉 ═══════════════ -->
+<h2>二、主诉与核心临床问题</h2>
+<p><strong>主诉：</strong>多关节肿痛反复发作 3 年，加重伴左膝关节肿胀 2 周。</p>
+<p><strong>核心临床问题：</strong>类风湿关节炎疾病活动度控制欠佳，治疗反应存在波动，近期出现左膝关节活动性滑膜炎。需要在维持现有缓解的基础上，优化长期管理策略，减少复发频率，并评估是否需要升级治疗方案。</p>
+
+<!-- ═══════════════ 就诊时间线 ═══════════════ -->
+<h2>三、就诊时间线</h2>
+<table class="keep-together">
+<tr><th style="width:12%">日期</th><th style="width:18%">就诊类型</th><th style="width:35%">主要发现</th><th style="width:35%">处置</th></tr>
+<tr><td>2023-03</td><td>首次就诊</td><td>双手近端指间关节、掌指关节对称性肿痛 4 周，晨僵 &gt;1 小时</td><td>完善自身抗体、炎症指标、影像学检查</td></tr>
+<tr><td>2023-04</td><td>确诊</td><td>RF 256 IU/mL，anti-CCP &gt;300 U/mL，ESR 68 mm/h，CRP 45 mg/L；双手 X 线示软组织肿胀，未见骨质破坏</td><td>确诊 RA，启动甲氨蝶呤（MTX）15 mg/周 + 叶酸 5 mg/周</td></tr>
+<tr><td>2023-07</td><td>随访</td><td>关节肿痛减轻，晨僵缩短至 20 分钟；ESR 降至 32，CRP 12</td><td>MTX 维持 15 mg/周，继续随访</td></tr>
+<tr><td>2023-10</td><td>自行减药</td><td>患者因担心药物副作用自行将 MTX 减至 10 mg/周</td><td>—（未就诊）</td></tr>
+<tr><td>2024-01</td><td>复发就诊</td><td>关节肿痛加重，右腕活动受限；ESR 反弹至 55，CRP 38；伴上呼吸道感染</td><td>恢复 MTX 15 mg/周，加用羟氯喹（HCQ）200 mg 每日两次</td></tr>
+<tr><td>2024-05</td><td>随访</td><td>联合用药 3 个月后症状明显缓解；ESR 25，CRP 正常</td><td>维持 MTX + HCQ 联合方案</td></tr>
+<tr><td>2024-08</td><td>肝功能异常</td><td>ALT 85 U/L（正常上限 2 倍），无明显不适</td><td>MTX 减量至 10 mg/周，加用保肝药物，2 周后复查</td></tr>
+<tr><td>2024-11</td><td>随访</td><td>肝功能恢复正常（ALT 35），但关节症状部分反复</td><td>MTX 调整至 12.5 mg/周 + HCQ 维持 + 小剂量泼尼松 5 mg/d 桥接</td></tr>
+<tr><td>2025-04</td><td>随访</td><td>DAS28 评分 3.2（低疾病活动度），肝功能正常，关节功能良好</td><td>泼尼松逐渐减量至停用，维持 MTX + HCQ</td></tr>
+<tr><td>2025-07</td><td>最近就诊</td><td>左膝关节肿胀，ESR 35，CRP 15；左膝 MRI 示关节腔积液、滑膜增厚</td><td>左膝关节腔注射得宝松（复方倍他米松）1 mL，症状缓解</td></tr>
+</table>
+
+<!-- ═══════════════ 检验趋势 ═══════════════ -->
+<h2>四、检验趋势</h2>
+<table class="keep-together">
+<tr><th>日期</th><th>ESR<br>(mm/h)</th><th>CRP<br>(mg/L)</th><th>RF<br>(IU/mL)</th><th>anti-CCP<br>(U/mL)</th><th>ALT<br>(U/L)</th><th>DAS28<br>评分</th><th>疾病活动度</th></tr>
+<tr><td>2023-04</td><td>68 ↑</td><td>45 ↑</td><td>256 ↑</td><td>&gt;300 ↑</td><td>22</td><td>5.8</td><td>高活动度</td></tr>
+<tr><td>2023-07</td><td>32</td><td>12</td><td>128</td><td>&gt;300</td><td>25</td><td>3.8</td><td>中活动度</td></tr>
+<tr><td>2024-01</td><td>55 ↑</td><td>38 ↑</td><td>198</td><td>&gt;300</td><td>28</td><td>5.2</td><td>高活动度</td></tr>
+<tr><td>2024-05</td><td>25</td><td>6</td><td>95</td><td>245</td><td>32</td><td>3.1</td><td>低活动度</td></tr>
+<tr><td>2024-08</td><td>28</td><td>8</td><td>88</td><td>230</td><td>85 ↑</td><td>3.4</td><td>低活动度</td></tr>
+<tr><td>2025-01</td><td>30</td><td>10</td><td>92</td><td>228</td><td>35</td><td>3.5</td><td>低活动度</td></tr>
+<tr><td>2025-04</td><td>22</td><td>5</td><td>78</td><td>215</td><td>28</td><td>3.2</td><td>低活动度</td></tr>
+<tr><td>2025-07</td><td>35 ↑</td><td>15 ↑</td><td>85</td><td>220</td><td>30</td><td>3.6</td><td>低-中活动度</td></tr>
+</table>
+<p style="font-size:9pt;color:#666;">参考范围：ESR 0–20 mm/h；CRP 0–8 mg/L；RF 0–20 IU/mL；anti-CCP 0–5 U/mL；ALT 0–40 U/L。DAS28 评分：&lt;2.6 缓解，2.6–3.2 低活动度，3.2–5.1 中活动度，&gt;5.1 高活动度。</p>
+
+<!-- ═══════════════ 影像所见 ═══════════════ -->
+<h2>五、影像所见</h2>
+<h3>双手 X 线（系列对比）</h3>
+<table class="keep-together">
+<tr><th style="width:15%">日期</th><th>主要发现</th><th style="width:30%">临床意义</th></tr>
+<tr><td>2023-04</td><td>双手近端指间关节周围软组织肿胀，未见明显骨质破坏</td><td>早期 RA，尚未出现结构性损伤</td></tr>
+<tr><td>2024-01</td><td>双腕关节间隙变窄，右腕关节面下小囊性变</td><td>疾病活动期出现早期骨侵蚀</td></tr>
+<tr><td>2025-04</td><td>双腕关节间隙变窄同前，未见新发骨质破坏</td><td>联合治疗后结构性损伤未进展，病情控制可</td></tr>
+</table>
+<h3>左膝 MRI（2025-07）</h3>
+<p>左膝关节腔中等量积液，滑膜弥漫性增厚，增强扫描示滑膜强化，提示活动性滑膜炎。未见半月板撕裂或韧带损伤。</p>
+
+<!-- ═══════════════ 治疗经过与病情起伏分析 ═══════════════ -->
+<h2>六、治疗经过与病情起伏分析</h2>
+<p>本节按时间顺序梳理治疗过程中的关键转折点，分析每次好转或恶化的原因及处置效果，帮助接诊医生快速把握疾病演变规律。</p>
+
+<div class="phase">
+<span class="phase-title">第一阶段：确诊与初始治疗</span><span class="phase-result improved">好转</span>
+<p><strong>时间：</strong>2023 年 4 月 – 2023 年 7 月</p>
+<p><strong>经过：</strong>确诊后启动 MTX 15 mg/周联合叶酸。MTX 是 RA 治疗的锚定药物（anchor drug），通过抑制二氢叶酸还原酶发挥抗炎和免疫调节作用。治疗 3 个月后，患者关节肿痛明显减轻，晨僵从 &gt;1 小时缩短至 20 分钟，ESR 从 68 降至 32 mm/h，DAS28 从 5.8 降至 3.8。</p>
+<p><strong>好转原因：</strong>MTX 达到稳态血药浓度，有效抑制滑膜炎症。叶酸补充减少了 MTX 相关口腔黏膜炎等不良反应，提高了用药依从性。</p>
+<div class="ebm-note"><strong>循证注释：</strong>EULAR 2022 推荐 MTX 作为 RA 一线锚定药物（推荐等级 A，证据级别 1a）。MTX 单药治疗可使约 40–50% 的 RA 患者达到低疾病活动度（Smolen et al., Ann Rheum Dis 2023）。</div>
+</div>
+
+<div class="phase">
+<span class="phase-title">第二阶段：自行减药与疾病复发</span><span class="phase-result worsened">恶化</span>
+<p><strong>时间：</strong>2023 年 10 月 – 2024 年 1 月</p>
+<p><strong>经过：</strong>患者因担心 MTX 长期副作用（肝毒性、骨髓抑制），在未咨询医生的情况下自行将 MTX 从 15 mg 减至 10 mg/周。2024 年 1 月冬季，合并上呼吸道感染后，关节肿痛明显加重，右腕关节出现活动受限，ESR 反弹至 55 mm/h，DAS28 回升至 5.2。</p>
+<p><strong>恶化原因：</strong>多因素叠加——（1）MTX 剂量不足导致疾病控制减弱；（2）冬季低温可加重关节症状；（3）上呼吸道感染触发免疫系统激活，诱发 RA 疾病活动度升高。感染是 RA 急性加重的常见诱因。</p>
+<div class="ebm-note"><strong>循证注释：</strong>ACR 2021 指南强调 RA 患者不应自行调整 DMARD 剂量（强烈推荐，中等质量证据）。感染可通过分子模拟和旁路激活机制诱发 RA 复发（Catrina et al., Nat Rev Rheumatol 2021）。</div>
+</div>
+
+<div class="phase">
+<span class="phase-title">第三阶段：联合用药</span><span class="phase-result improved">好转</span>
+<p><strong>时间：</strong>2024 年 2 月 – 2024 年 5 月</p>
+<p><strong>经过：</strong>恢复 MTX 15 mg/周，同时加用 HCQ 200 mg 每日两次。HCQ 通过抑制 Toll 样受体信号通路发挥免疫调节作用，与 MTX 有协同效应。联合用药 3 个月后，ESR 降至 25 mm/h，CRP 恢复正常，DAS28 降至 3.1，达到低疾病活动度。</p>
+<p><strong>好转原因：</strong>MTX + HCQ 联合用药协同抑制炎症，HCQ 还可降低 MTX 相关肝毒性风险。患者用药依从性改善（经上次复发教育后）。</p>
+<div class="ebm-note"><strong>循证注释：</strong>MTX + HCQ 联合方案在多项 RCT 中显示优于 MTX 单药（推荐等级 A）。HCQ 可减少 MTX 相关肝酶升高的发生率（O'Dell et al., Arthritis Rheum 2002）。</div>
+</div>
+
+<div class="phase">
+<span class="phase-title">第四阶段：肝功能异常与方案调整</span><span class="phase-result adjusted">调整</span>
+<p><strong>时间：</strong>2024 年 8 月 – 2024 年 11 月</p>
+<p><strong>经过：</strong>常规随访发现 ALT 升高至 85 U/L（正常上限 2 倍），无明显不适。MTX 减量至 10 mg/周并加用保肝药物。2 个月后肝功能恢复正常（ALT 35 U/L），但 MTX 减量后关节症状部分反复。随后 MTX 调整至 12.5 mg/周，加用小剂量泼尼松 5 mg/d 桥接。</p>
+<p><strong>处置效果：</strong>肝功能恢复良好，但 MTX 减量导致疾病控制减弱，提示该患者对 MTX 剂量较为敏感。小剂量激素桥接有效弥补了 MTX 减量期间的抗炎不足。</p>
+<div class="ebm-note"><strong>循证注释：</strong>MTX 相关肝酶升高发生率为 15–20%，多数为一过性，减量或暂停后可恢复（Kremer et al., Arthritis Rheum 1994）。EULAR 建议 MTX 治疗期间每 8–12 周监测肝功能（推荐等级 A）。</div>
+</div>
+
+<div class="phase">
+<span class="phase-title">第五阶段：桥接治疗后稳定</span><span class="phase-result stable">稳定</span>
+<p><strong>时间：</strong>2025 年 1 月 – 2025 年 4 月</p>
+<p><strong>经过：</strong>MTX 12.5 mg/周 + HCQ 200 mg bid + 泼尼松 5 mg/d 桥接治疗 3 个月后，DAS28 降至 3.2，达到低疾病活动度目标。泼尼松逐渐减量至停用，维持 MTX + HCQ 联合方案。</p>
+<p><strong>稳定原因：</strong>treat-to-target（T2T）策略的有效实施——以 DAS28 评分为目标导向，及时调整治疗方案，最终实现疾病控制。激素桥接在 DMARD 起效前提供短期抗炎覆盖。</p>
+<div class="ebm-note"><strong>循证注释：</strong>T2T 策略已被多项 RCT 证实优于常规治疗（推荐等级 A，证据级别 1a）。EULAR 2022 强烈推荐以缓解或低疾病活动度为治疗目标（Smolen et al., Ann Rheum Dis 2023）。</div>
+</div>
+
+<div class="phase">
+<span class="phase-title">第六阶段：局部反复与关节腔注射</span><span class="phase-result improved">好转</span>
+<p><strong>时间：</strong>2025 年 7 月（最近）</p>
+<p><strong>经过：</strong>在全身疾病控制良好的背景下，出现左膝关节孤立性肿胀。MRI 确认为活动性滑膜炎。行左膝关节腔注射得宝松 1 mL，注射后 1 周内肿胀明显消退，活动度恢复。</p>
+<p><strong>好转原因：</strong>关节腔注射糖皮质激素可直接作用于局部炎症，全身副作用小。孤立性关节复发在 RA 中较常见，不一定需要调整全身用药方案。</p>
+<div class="ebm-note"><strong>循证注释：</strong>关节腔注射糖皮质激素是 RA 孤立性关节复发的一线局部治疗（推荐等级 A）。ACR 2021 指南建议在全身疾病控制良好时，孤立性关节复发可优先考虑局部治疗而非升级全身方案。</div>
+</div>
+
+<!-- ═══════════════ 目前用药 ═══════════════ -->
+<h2>七、目前用药方案</h2>
+<table class="keep-together">
+<tr><th style="width:20%">药物</th><th style="width:20%">剂量</th><th style="width:15%">给药途径</th><th style="width:45%">说明</th></tr>
+<tr><td>甲氨蝶呤（MTX）</td><td>12.5 mg，每周一次</td><td>口服</td><td>锚定药物，因肝功能异常史减量维持</td></tr>
+<tr><td>叶酸</td><td>5 mg，每周一次（MTX 次日）</td><td>口服</td><td>减少 MTX 不良反应</td></tr>
+<tr><td>羟氯喹（HCQ）</td><td>200 mg，每日两次</td><td>口服</td><td>联合 DMARD，协同增效</td></tr>
+</table>
+<p style="font-size:9pt;color:#666;">注：以上药物用法用量摘自患者提供的处方记录，仅供医生参考，不构成用药建议。</p>
+
+<!-- ═══════════════ 目前病情评估 ═══════════════ -->
+<h2>八、目前病情评估</h2>
+<div class="info-box">
+<p><strong>DAS28 评分：3.6（低-中疾病活动度）</strong></p>
+<p><strong>疾病活动度趋势：</strong>总体呈下降趋势，2025 年 4 月达到低活动度（3.2），2025 年 7 月因左膝关节局部复发轻度回升至 3.6。</p>
+<p><strong>结构性损伤：</strong>双腕关节间隙变窄（2024 年 1 月出现），2025 年 4 月复查未见进展。</p>
+<p><strong>功能状态：</strong>日常生活可自理，右手腕关节活动轻度受限，左膝关节注射后功能恢复良好。</p>
+<p><strong>主要挑战：</strong>MTX 剂量受肝功能限制，无法达到足量；疾病活动度在低-中水平波动，尚未达到完全缓解。</p>
+</div>
+
+<div class="alert-box">
+<strong>⚠️ 需关注的问题：</strong>
+<p>（1）MTX 剂量不足以实现完全缓解，需评估是否加用生物制剂或靶向合成 DMARD；</p>
+<p>（2）肝功能异常史提示 MTX 耐受性有限，需持续监测；</p>
+<p>（3）患者曾自行减药导致复发，用药依从性教育仍需加强；</p>
+<p>（4）anti-CCP 持续高滴度提示预后较差，需更积极的疾病管理。</p>
+</div>
+
+<!-- ═══════════════ 当地医生结论 ═══════════════ -->
+<h2>九、当地医生结论</h2>
+<p>患者类风湿关节炎诊断明确，病程 3 年，目前处于低-中疾病活动度。MTX 联合 HCQ 治疗有效但剂量受肝功能限制，尚未达到完全缓解。建议转诊至上级医院风湿免疫科评估生物制剂升级治疗方案。已告知患者不可自行调整药物剂量，需定期随访监测。</p>
+
+<!-- ═══════════════ 亚专科分析 ═══════════════ -->
+<h2>十、亚专科分析</h2>
+<p><strong>推荐就诊方向：风湿免疫科</strong></p>
+<p>患者已确诊类风湿关节炎 3 年，目前处于低-中疾病活动度，存在以下需要专科评估的问题：</p>
+<p><strong>（1）治疗方案升级评估。</strong>MTX 因肝功能异常无法足量使用，目前剂量（12.5 mg/周）下疾病活动度未达完全缓解。根据 EULAR 2022 推荐，当 MTX 联合传统 DMARD 无法实现治疗目标时，应考虑加用生物制剂（bDMARD）或靶向合成 DMARD（tsDMARD）。需要专科医生评估升级治疗的获益与风险。</p>
+<p><strong>（2）生物制剂选择。</strong>对于 MTX 反应不足的 RA 患者，TNF 抑制剂（如阿达木单抗、依那西普）、IL-6 受体拮抗剂（如托珠单抗）和 JAK 抑制剂（如托法替布、巴瑞替尼）均为可选方案。选择需综合考虑患者肝功能状态、感染风险、合并症及经济因素。</p>
+<p><strong>（3）长期骨保护。</strong>患者已出现双腕关节骨侵蚀，anti-CCP 高滴度提示骨破坏进展风险较高。需要评估骨密度，考虑钙剂和维生素 D 补充，必要时启动抗骨质疏松治疗。</p>
+<div class="ebm-note"><strong>循证注释：</strong>EULAR 2022 推荐：MTX 联合传统 DMARD 未达标时，加用 bDMARD 或 tsDMARD（推荐等级 A）。TNF 抑制剂、IL-6 拮抗剂和 JAK 抑制剂在 MTX 反应不足 RA 患者中的疗效已在多项 III 期 RCT 中证实。</div>
+
+<!-- ═══════════════ 匹配专家 ═══════════════ -->
+<h2>十一、匹配专家</h2>
+<p>根据患者疾病特点（RA、MTX 反应不足、需评估生物制剂），推荐以下上海风湿免疫科专家：</p>
+
+<div class="doctor-card">
+<div class="doctor-name">推荐 1：鲍春德 主任医师</div>
+<div class="doctor-hospital">上海交通大学医学院附属仁济医院 风湿免疫科</div>
+<div class="doctor-detail">擅长：类风湿关节炎、系统性红斑狼疮、强直性脊柱炎等风湿性疾病的诊治，尤其在生物制剂治疗方面经验丰富。</div>
+<div class="doctor-detail">医院官网：https://www.renji.com</div>
+</div>
+
+<div class="doctor-card">
+<div class="doctor-name">推荐 2：姜林娣 主任医师</div>
+<div class="doctor-hospital">复旦大学附属中山医院 风湿免疫科</div>
+<div class="doctor-detail">擅长：类风湿关节炎、干燥综合征、血管炎等，在难治性 RA 的个体化治疗方面有深入研究。</div>
+<div class="doctor-detail">医院官网：https://www.zs-hospital.sh.cn</div>
+</div>
+
+<div class="doctor-card">
+<div class="doctor-name">推荐 3：万伟国 主任医师</div>
+<div class="doctor-hospital">复旦大学附属华山医院 风湿免疫科</div>
+<div class="doctor-detail">风湿免疫科常务副主任，擅长类风湿关节炎、强直性脊柱炎、系统性红斑狼疮、痛风等风湿性疾病的诊治，主要研究类风湿关节炎相关贫血及激素相关性骨质疏松。</div>
+<div class="doctor-detail">医院官网：https://www.huashan.org.cn</div>
+</div>
+
+<!-- ═══════════════ 选择建议 ═══════════════ -->
+<h2>十二、选择建议</h2>
+<h3>就诊优先级</h3>
+<p>建议在 2 周内就诊风湿免疫科，重点评估生物制剂升级治疗方案。当前疾病活动度虽未达高危水平，但 MTX 剂量受限且 anti-CCP 高滴度提示预后不良，早期升级治疗有助于延缓骨破坏进展。</p>
+<h3>选择维度</h3>
+<p><strong>仁济医院风湿免疫科</strong>是国内最早成立的风湿病专科之一，在生物制剂临床应用方面经验最为丰富，适合需要升级治疗方案的患者。<strong>中山医院风湿免疫科</strong>在难治性 RA 的个体化治疗方面有特色，适合常规治疗效果不佳的患者。建议优先考虑仁济医院，因其在 RA 生物制剂治疗领域的学术地位和临床经验更为突出。</p>
+<h3>就诊连续性</h3>
+<p>建议固定一位主治医生进行长期随访管理，每 3 个月评估一次 DAS28 评分，每 6 个月复查肝功能、血常规和影像学。保持治疗方案的连续性对于 RA 的长期控制至关重要。</p>
+
+<!-- ═══════════════ 就诊准备清单 ═══════════════ -->
+<h2>十三、就诊准备清单</h2>
+<h3>一、资料清单（建议携带）</h3>
+<p>1. 全部就诊记录：2023 年 3 月首次就诊至 2025 年 7 月最近就诊的门诊病历/报告。</p>
+<p>2. 检验报告单（含参考区间）：历次 ESR、CRP、RF、anti-CCP、肝功能（ALT/AST）结果，特别是 2024 年 8 月肝功能异常时的完整报告。</p>
+<p>3. 影像学资料：2023-04、2024-01、2025-04 双手 X 线片及报告；2025-07 左膝 MRI 片及完整报告（如有定量明细页一并携带）。</p>
+<p>4. 目前用药清单及处方记录：MTX、叶酸、HCQ 的处方底单或药盒，含剂量调整历史。</p>
+<p>5. 关节腔注射记录：2025 年 7 月左膝关节腔注射得宝松的操作记录。</p>
+<p>6. 既往肝功能异常时的保肝药物使用记录。</p>
+<p>7. 如曾在其他医院就诊或检查，携带相应报告原件或复印件。</p>
+<h3>二、待补充信息</h3>
+<p>1. 骨密度检查结果：如未做，建议就诊前完成（RA 患者骨质疏松风险增高，生物制剂治疗前需评估）。</p>
+<p>2. 乙肝、丙肝、结核筛查结果：生物制剂治疗前必须完成，建议提前检查。</p>
+<p>3. 疫苗接种记录：生物制剂可能影响免疫功能，需评估疫苗接种状态。</p>
+<p>4. 最近一次血常规、肾功能结果。</p>
+<p>5. 症状日记：建议记录关节肿痛部位、晨僵时长、诱因及伴随情况，供医生评估疾病活动度。</p>
+<p>6. 是否已做过心脏超声、甲状腺功能等其他检查，资料未见记载。</p>
+<p>7. 家族史：是否有类风湿关节炎或其他自身免疫性疾病家族史。</p>
+<!-- ═══════════════ 来华就医 ═══════════════ -->
+<h2>十四、来华就医 Travel Checklist</h2>
+<h3>病历与证件</h3>
+<p>· 护照、签证及保险资料；确认国际部是否支持您的保险直付。</p>
+<p>· 原始病历、检查报告、影像原始文件（DICOM）及病理切片/蜡块（如适用）。</p>
+<p>· 既往手术记录、出院小结、用药清单及过敏史。</p>
+<h3>行前确认</h3>
+<p>· 通过医院官方渠道核实医生出诊、国际部预约要求及所需资料。</p>
+<p>· 确认是否需要翻译、陪诊或远程预评估，并预留检查与复诊时间。</p>
+<p>· 医疗费用直接支付给医院；本报告不代替医院报价或预约确认。</p>
+<h3>到院携带</h3>
+<p>· 按医院要求携带身份证明与预约凭证，提前确认院区及楼层。</p>
+<p>· 携带原始报告和用药，不自行停药、加量或调整治疗。</p>
+<p>· 如出现急性剧烈疼痛、呼吸困难、意识改变等急症，请立即就近急诊。</p>
+
+<!-- ═══════════════ 引用与事实边界 ═══════════════ -->
+<h2>十五、引用与事实边界</h2>
+<p>本报告引用的医学指南推荐（EULAR 2022、ACR 2021）为公开发表的临床实践指南，推荐等级和证据级别按原指南标注。文献引用格式为"作者 et al., 期刊名 年份"，供有兴趣的读者查阅原始文献。</p>
+<p>病情结论、医生接诊方向、费用和出诊信息均以原始病历及医院官方核实为准。报告中涉及的医院官网链接来源于公开渠道，建议就诊前通过医院官方渠道确认。</p>
+<p><strong>免责声明：</strong>本报告由 AI 根据所提供病历生成，仅供就医信息整理与医生匹配参考，不构成诊断、治疗或用药建议。AI 可能存在识别或理解错误，请携带原始病历，由接诊医生结合面诊与检查作出判断；如出现急症，请立即联系当地急救或前往急诊。</p>
+
+<div class="footer-note">
+<p>生成时间：2026 年 11 月 18 日 | 报告版本：Demo v2.0 | MediMatch · ShanghaiMed</p>
+</div>
+
+</body>
+</html>

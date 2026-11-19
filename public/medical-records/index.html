@@ -2840,7 +2840,7 @@
 </svg>
 <span>
 <strong>服务说明：</strong>上传的病历将通过加密连接传输；按页面提示完成支付后启动 AI 分析，分析完成后原始文件将被自动删除。报告仅供参考，不构成医疗建议。
-          </span>
+          </span><a href="/medical-records/demo_zh.html" target="_blank" rel="noopener" style="color:#0E5A5A;font-weight:600;text-decoration:underline;white-space:nowrap;margin-inline-start:8px;">查看示例报告 →</a>
 </div>
 <div class="workflow">
 <div class="consent-banner" hidden="" id="consent-declined" role="status">
@@ -4570,8 +4570,30 @@
           const task = loadTask();
           if (!task || !task.taskId) return;
           const generation = ++analysisGeneration;
-          isProcessing = true;
           currentTaskId = task.taskId;
+          try {
+            if (reportCenterReady) await reportCenterReady;
+            if (generation !== analysisGeneration) return;
+            const matchingReport = reportSummaries.find((report) => report.task_id === task.taskId);
+            // 静默状态检查：待支付任务不在页面加载时自动恢复 UI，
+            // 保持上传区初始状态；续付入口在"我的报告"列表。
+            if (matchingReport) {
+              const savedStatus = String(matchingReport.status || '').toLowerCase();
+              if (savedStatus === 'pending_payment' && !reportIsPaid(matchingReport)) return;
+            } else {
+              let probe = null;
+              try {
+                probe = await requestJson('/status/' + encodeURIComponent(task.taskId));
+              } catch (probeError) {
+                return; // 网络异常：本次不恢复，保留任务供下次刷新
+              }
+              if (generation !== analysisGeneration) return;
+              const probeStatus = String((probe && probe.status) || '').toLowerCase();
+              if (probeStatus === 'pending_payment' && !reportIsPaid(probe)) return;
+              if (probeStatus === 'failed' || probeStatus === 'expired') { clearTask(); return; }
+            }
+            // 确认需要恢复（分析中/已支付/已完成）才显示进度区，且不自动滚动
+            isProcessing = true;
           elements.progressSection.hidden = false;
           elements.progressSection.dataset.state = "loading";
           elements.startButtonText.textContent = "分析进行中";
@@ -4581,18 +4603,14 @@
           setProgress("analysis", 0);
           elements.analysisNote.textContent = "检测到有进行中的分析，正在为你恢复进度…";
           updateActionState();
-          try {
-            if (reportCenterReady) await reportCenterReady;
-            if (generation !== analysisGeneration) return;
-            const matchingReport = reportSummaries.find((report) => report.task_id === task.taskId);
             if (matchingReport) {
               adoptReportData(matchingReport);
               const detail = await requestJson('/reports/' + encodeURIComponent(matchingReport.report_id));
               if (generation !== analysisGeneration) return;
-              displayReportDetail(detail, true);
+              displayReportDetail(detail, false);
               return;
             }
-            await runAnalysisToCompletion(task.taskId, generation, true);
+            await runAnalysisToCompletion(task.taskId, generation, false);
           } catch (error) {
             if (generation !== analysisGeneration) return;
             clearTask();
@@ -4603,6 +4621,7 @@
             elements.startButtonText.textContent = "重新分析";
             updateActionState();
           }
+
         }
 
         function reportStatusLabel(report) {

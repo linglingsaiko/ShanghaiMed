@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+@page { size: A4; margin: 18mm 16mm 20mm 16mm; }
+* { box-sizing: border-box; }
+body { font-family: "Noto Sans CJK SC","Noto Serif CJK SC",sans-serif; font-size: 10.5pt; line-height: 1.65; color: #1a2332; margin: 0; }
+h1 { font-size: 20pt; color: #0d4a6e; border-bottom: 3px solid #0d4a6e; padding-bottom: 6px; margin: 0 0 4px 0; }
+.subtitle { font-size: 11pt; color: #5a7085; margin-bottom: 16px; }
+h2 { font-size: 14pt; color: #0d4a6e; margin: 22px 0 8px 0; padding: 6px 10px; background: #e8f1f7; border-left: 4px solid #0d4a6e; break-after: avoid; overflow-wrap: break-word; }
+h3 { font-size: 12pt; color: #1a5276; margin: 14px 0 6px 0; break-after: avoid; }
+p { margin: 6px 0; text-align: justify; }
+table { width: 100%; border-collapse: collapse; margin: 8px 0 12px 0; font-size: 9.5pt; }
+table.keep-together { break-inside: avoid; }
+thead { display: table-header-group; }
+th { background: #0d4a6e; color: #fff; padding: 5px 8px; text-align: left; font-weight: 600; }
+td { padding: 4px 8px; border-bottom: 1px solid #d0dce6; vertical-align: top; }
+tr:nth-child(even) td { background: #f4f8fb; }
+.info-box { background: #f0f6fa; border: 1px solid #b8d0e0; border-radius: 6px; padding: 12px 16px; margin: 10px 0; break-inside: avoid; }
+.alert-box { background: #fff8e6; border: 1px solid #e6c87a; border-radius: 6px; padding: 10px 14px; margin: 10px 0; break-inside: avoid; }
+.alert-box strong { color: #8a6d1a; }
+.phase { margin: 14px 0; padding: 12px 16px; border: 1px solid #c5d8e5; border-radius: 8px; break-inside: avoid; }
+.phase-title { font-size: 11.5pt; font-weight: 700; color: #0d4a6e; margin-bottom: 4px; }
+.phase-result { display: inline-block; padding: 2px 10px; border-radius: 4px; font-size: 9pt; font-weight: 600; margin-left: 8px; }
+.improved { background: #d4edda; color: #155724; }
+.worsened { background: #f8d7da; color: #721c24; }
+.stable { background: #d1ecf1; color: #0c5460; }
+.adjusted { background: #fff3cd; color: #856404; }
+.ebm-note { background: #eaf2f8; border-left: 3px solid #2980b9; padding: 8px 12px; margin: 8px 0; font-size: 9.5pt; color: #1a5276; break-inside: avoid; }
+.ebm-note strong { color: #1a5276; }
+.url { font-size: 9pt; color: #666; word-break: break-all; }
+.two-col { display: flex; gap: 16px; }
+.two-col > div { flex: 1; }
+.footer-note { font-size: 9pt; color: #888; margin-top: 24px; border-top: 1px solid #ddd; padding-top: 8px; }
+.doctor-card { border: 1px solid #c5d8e5; border-radius: 8px; padding: 12px 16px; margin: 10px 0; break-inside: avoid; }
+.doctor-name { font-size: 12pt; font-weight: 700; color: #0d4a6e; }
+.doctor-hospital { font-size: 10.5pt; color: #333; margin: 2px 0; }
+.doctor-detail { font-size: 9.5pt; color: #555; margin: 4px 0; }
+</style>
+</head>
+<body>
+
+<h1>MediMatch Medical Record Summary Report</h1>
+<div class="subtitle">Sample Report · This report is generated from a fictional medical case. It does not contain any real patient information and is for reference only.</div>
+
+<!-- ═══════════════ Patient Information ═══════════════ -->
+<h2>I. Patient Information</h2>
+<table class="keep-together">
+<tr><th style="width:25%">Item</th><th>Details</th></tr>
+<tr><td>Name</td><td>Ms. Wang (pseudonym)</td></tr>
+<tr><td>Sex / Age</td><td>Female / 42 years</td></tr>
+<tr><td>Occupation</td><td>Office clerk</td></tr>
+<tr><td>Place of Residence</td><td>Pudong New Area, Shanghai</td></tr>
+<tr><td>Confirmed Diagnosis</td><td>Rheumatoid Arthritis (RA)</td></tr>
+<tr><td>Disease Duration</td><td>3 years (initial onset in March 2023)</td></tr>
+<tr><td>Current Hospital</td><td>Department of Rheumatology and Immunology at a tertiary hospital in Pudong New Area, Shanghai</td></tr>
+</table>
+
+<!-- ═══════════════ Chief Complaint ═══════════════ -->
+<h2>II. Chief Complaint and Key Clinical Issues</h2>
+<p><strong>Chief Complaint:</strong> Recurrent swelling and pain in multiple joints for 3 years, with worsening symptoms and left knee swelling for 2 weeks.</p>
+<p><strong>Key Clinical Issue:</strong> Inadequately controlled rheumatoid arthritis disease activity, a fluctuating treatment response, and recent active synovitis of the left knee. While preserving the improvement achieved to date, the long-term management strategy needs to be optimized to reduce the frequency of relapses and to assess whether treatment escalation is required.</p>
+
+<!-- ═══════════════ Visit Timeline ═══════════════ -->
+<h2>III. Visit Timeline</h2>
+<table class="keep-together">
+<tr><th style="width:12%">Date</th><th style="width:18%">Visit Type</th><th style="width:35%">Key Findings</th><th style="width:35%">Management</th></tr>
+<tr><td>2023-03</td><td>Initial visit</td><td>Symmetric swelling and pain of the proximal interphalangeal and metacarpophalangeal joints of both hands for 4 weeks; morning stiffness &gt;1 hour</td><td>Comprehensive autoantibody, inflammatory marker, and imaging studies</td></tr>
+<tr><td>2023-04</td><td>Diagnosis</td><td>RF 256 IU/mL, anti-CCP &gt;300 U/mL, ESR 68 mm/h, CRP 45 mg/L; hand radiographs showed soft-tissue swelling without bone destruction</td><td>RA diagnosed; Methotrexate (MTX) 15 mg/week + Folic acid 5 mg/week initiated</td></tr>
+<tr><td>2023-07</td><td>Follow-up</td><td>Joint swelling and pain decreased; morning stiffness shortened to 20 minutes; ESR decreased to 32, CRP 12</td><td>MTX maintained at 15 mg/week; follow-up continued</td></tr>
+<tr><td>2023-10</td><td>Self-directed dose reduction</td><td>The patient independently reduced MTX to 10 mg/week because of concerns about adverse drug effects</td><td>— (no medical visit)</td></tr>
+<tr><td>2024-01</td><td>Visit for relapse</td><td>Increased joint swelling and pain, with limited range of motion in the right wrist; ESR rebounded to 55, CRP 38; concurrent upper respiratory tract infection</td><td>MTX resumed at 15 mg/week; Hydroxychloroquine (HCQ) 200 mg twice daily added</td></tr>
+<tr><td>2024-05</td><td>Follow-up</td><td>Symptoms markedly improved after 3 months of combination therapy; ESR 25, CRP normal</td><td>MTX + HCQ combination regimen maintained</td></tr>
+<tr><td>2024-08</td><td>Abnormal liver function</td><td>ALT 85 U/L (2× the upper limit of normal), with no obvious discomfort</td><td>MTX reduced to 10 mg/week; hepatoprotective therapy added; repeat testing in 2 weeks</td></tr>
+<tr><td>2024-11</td><td>Follow-up</td><td>Liver function returned to normal (ALT 35), but joint symptoms partially recurred</td><td>MTX adjusted to 12.5 mg/week + HCQ maintained + low-dose Prednisone 5 mg/d as bridging therapy</td></tr>
+<tr><td>2025-04</td><td>Follow-up</td><td>DAS28 score 3.2 (low disease activity), normal liver function, and good joint function</td><td>Prednisone gradually tapered and discontinued; MTX + HCQ maintained</td></tr>
+<tr><td>2025-07</td><td>Most recent visit</td><td>Left knee swelling, ESR 35, CRP 15; left knee MRI showed joint effusion and synovial thickening</td><td>Intra-articular injection of Diprospan (compound betamethasone) 1 mL into the left knee, with symptom relief</td></tr>
+</table>
+
+<!-- ═══════════════ Laboratory Trends ═══════════════ -->
+<h2>IV. Laboratory Trends</h2>
+<table class="keep-together">
+<tr><th>Date</th><th>ESR<br>(mm/h)</th><th>CRP<br>(mg/L)</th><th>RF<br>(IU/mL)</th><th>anti-CCP<br>(U/mL)</th><th>ALT<br>(U/L)</th><th>DAS28<br>Score</th><th>Disease Activity</th></tr>
+<tr><td>2023-04</td><td>68 ↑</td><td>45 ↑</td><td>256 ↑</td><td>&gt;300 ↑</td><td>22</td><td>5.8</td><td>High</td></tr>
+<tr><td>2023-07</td><td>32</td><td>12</td><td>128</td><td>&gt;300</td><td>25</td><td>3.8</td><td>Moderate</td></tr>
+<tr><td>2024-01</td><td>55 ↑</td><td>38 ↑</td><td>198</td><td>&gt;300</td><td>28</td><td>5.2</td><td>High</td></tr>
+<tr><td>2024-05</td><td>25</td><td>6</td><td>95</td><td>245</td><td>32</td><td>3.1</td><td>Low</td></tr>
+<tr><td>2024-08</td><td>28</td><td>8</td><td>88</td><td>230</td><td>85 ↑</td><td>3.4</td><td>Low</td></tr>
+<tr><td>2025-01</td><td>30</td><td>10</td><td>92</td><td>228</td><td>35</td><td>3.5</td><td>Low</td></tr>
+<tr><td>2025-04</td><td>22</td><td>5</td><td>78</td><td>215</td><td>28</td><td>3.2</td><td>Low</td></tr>
+<tr><td>2025-07</td><td>35 ↑</td><td>15 ↑</td><td>85</td><td>220</td><td>30</td><td>3.6</td><td>Low–moderate</td></tr>
+</table>
+<p style="font-size:9pt;color:#666;">Reference ranges: ESR 0–20 mm/h; CRP 0–8 mg/L; RF 0–20 IU/mL; anti-CCP 0–5 U/mL; ALT 0–40 U/L. DAS28 score: &lt;2.6 remission, 2.6–3.2 low disease activity, 3.2–5.1 moderate disease activity, &gt;5.1 high disease activity.</p>
+
+<!-- ═══════════════ Imaging Findings ═══════════════ -->
+<h2>V. Imaging Findings</h2>
+<h3>Hand Radiographs (Serial Comparison)</h3>
+<table class="keep-together">
+<tr><th style="width:15%">Date</th><th>Key Findings</th><th style="width:30%">Clinical Significance</th></tr>
+<tr><td>2023-04</td><td>Soft-tissue swelling around the proximal interphalangeal joints of both hands, with no obvious bone destruction</td><td>Early RA, with no structural damage yet</td></tr>
+<tr><td>2024-01</td><td>Narrowing of both wrist joint spaces; small subchondral cystic changes in the right wrist</td><td>Early bone erosion during active disease</td></tr>
+<tr><td>2025-04</td><td>Bilateral wrist joint-space narrowing unchanged from before; no new bone destruction</td><td>No progression of structural damage after combination therapy; disease reasonably well controlled</td></tr>
+</table>
+<h3>Left Knee MRI (2025-07)</h3>
+<p>Moderate left knee joint effusion with diffuse synovial thickening. Contrast-enhanced imaging showed synovial enhancement, consistent with active synovitis. No meniscal tear or ligament injury was identified.</p>
+
+<!-- ═══════════════ Treatment Course and Disease Fluctuations ═══════════════ -->
+<h2>VI. Treatment Course and Analysis of Disease Fluctuations</h2>
+<p>This section reviews key turning points in the treatment course in chronological order, analyzes the reasons for each improvement or deterioration and the effectiveness of the interventions, and helps the treating physician quickly understand the pattern of disease evolution.</p>
+
+<div class="phase">
+<span class="phase-title">Phase 1: Diagnosis and Initial Treatment</span><span class="phase-result improved">Improved</span>
+<p><strong>Period:</strong> April 2023 – July 2023</p>
+<p><strong>Course:</strong> After diagnosis, MTX 15 mg/week plus Folic acid was initiated. MTX is the anchor drug in RA treatment and exerts anti-inflammatory and immunomodulatory effects by inhibiting dihydrofolate reductase. After 3 months of treatment, the patient's joint swelling and pain improved markedly, morning stiffness decreased from &gt;1 hour to 20 minutes, ESR decreased from 68 to 32 mm/h, and DAS28 decreased from 5.8 to 3.8.</p>
+<p><strong>Reason for Improvement:</strong> MTX reached steady-state plasma concentrations and effectively suppressed synovial inflammation. Folic acid supplementation reduced MTX-related adverse effects such as oral mucositis and improved medication adherence.</p>
+<div class="ebm-note"><strong>Evidence Note:</strong> EULAR 2022 recommends MTX as the first-line anchor drug for RA (grade of recommendation A, level of evidence 1a). MTX monotherapy enables approximately 40–50% of patients with RA to achieve low disease activity (Smolen et al., Ann Rheum Dis 2023).</div>
+</div>
+
+<div class="phase">
+<span class="phase-title">Phase 2: Self-Directed Dose Reduction and Disease Relapse</span><span class="phase-result worsened">Worsened</span>
+<p><strong>Period:</strong> October 2023 – January 2024</p>
+<p><strong>Course:</strong> Because of concerns about the long-term adverse effects of MTX (hepatotoxicity and myelosuppression), the patient independently reduced MTX from 15 mg to 10 mg/week without consulting a physician. In January 2024 (winter), following an upper respiratory tract infection, joint swelling and pain worsened markedly, range of motion in the right wrist became limited, ESR rebounded to 55 mm/h, and DAS28 increased again to 5.2.</p>
+<p><strong>Reason for Worsening:</strong> Multiple contributing factors—(1) an insufficient MTX dose led to diminished disease control; (2) cold winter temperatures can exacerbate joint symptoms; and (3) the upper respiratory tract infection triggered immune system activation, inducing an increase in RA disease activity. Infection is a common trigger of acute RA exacerbations.</p>
+<div class="ebm-note"><strong>Evidence Note:</strong> The ACR 2021 guideline emphasizes that patients with RA should not adjust DMARD doses on their own (strong recommendation, moderate-quality evidence). Infection can trigger RA relapse through molecular mimicry and bystander activation (Catrina et al., Nat Rev Rheumatol 2021).</div>
+</div>
+
+<div class="phase">
+<span class="phase-title">Phase 3: Combination Therapy</span><span class="phase-result improved">Improved</span>
+<p><strong>Period:</strong> February 2024 – May 2024</p>
+<p><strong>Course:</strong> MTX was resumed at 15 mg/week, and HCQ 200 mg twice daily was added. HCQ exerts immunomodulatory effects by inhibiting Toll-like receptor signaling pathways and has a synergistic effect with MTX. After 3 months of combination therapy, ESR decreased to 25 mm/h, CRP returned to normal, and DAS28 decreased to 3.1, achieving low disease activity.</p>
+<p><strong>Reason for Improvement:</strong> MTX + HCQ combination therapy synergistically suppressed inflammation, and HCQ can also reduce the risk of MTX-related hepatotoxicity. The patient's medication adherence improved after education regarding the previous relapse.</p>
+<div class="ebm-note"><strong>Evidence Note:</strong> The MTX + HCQ combination regimen has been shown to be superior to MTX monotherapy in multiple RCTs (grade of recommendation A). HCQ can reduce the incidence of MTX-related liver enzyme elevation (O'Dell et al., Arthritis Rheum 2002).</div>
+</div>
+
+<div class="phase">
+<span class="phase-title">Phase 4: Abnormal Liver Function and Treatment Adjustment</span><span class="phase-result adjusted">Adjusted</span>
+<p><strong>Period:</strong> August 2024 – November 2024</p>
+<p><strong>Course:</strong> Routine follow-up revealed an ALT elevation to 85 U/L (2× the upper limit of normal), with no obvious discomfort. MTX was reduced to 10 mg/week, and hepatoprotective therapy was added. Liver function returned to normal 2 months later (ALT 35 U/L), but joint symptoms partially recurred after the MTX dose reduction. MTX was subsequently adjusted to 12.5 mg/week, with low-dose Prednisone 5 mg/d added as bridging therapy.</p>
+<p><strong>Outcome of Intervention:</strong> Liver function recovered well, but the MTX dose reduction resulted in diminished disease control, suggesting that this patient is relatively sensitive to the MTX dose. Low-dose glucocorticoid bridging effectively compensated for the insufficient anti-inflammatory effect during MTX dose reduction.</p>
+<div class="ebm-note"><strong>Evidence Note:</strong> MTX-related liver enzyme elevation occurs in 15–20% of patients; most cases are transient and resolve after dose reduction or temporary discontinuation (Kremer et al., Arthritis Rheum 1994). EULAR recommends monitoring liver function every 8–12 weeks during MTX treatment (grade of recommendation A).</div>
+</div>
+
+<div class="phase">
+<span class="phase-title">Phase 5: Stability After Bridging Therapy</span><span class="phase-result stable">Stable</span>
+<p><strong>Period:</strong> January 2025 – April 2025</p>
+<p><strong>Course:</strong> After 3 months of bridging therapy with MTX 12.5 mg/week + HCQ 200 mg bid + Prednisone 5 mg/d, DAS28 decreased to 3.2, achieving the target of low disease activity. Prednisone was gradually tapered and discontinued, and the MTX + HCQ combination regimen was maintained.</p>
+<p><strong>Reason for Stability:</strong> Effective implementation of a treat-to-target (T2T) strategy—the DAS28 score was used as the treatment target, the treatment regimen was adjusted promptly, and disease control was ultimately achieved. Glucocorticoid bridging provided short-term anti-inflammatory coverage before the DMARDs took full effect.</p>
+<div class="ebm-note"><strong>Evidence Note:</strong> The T2T strategy has been demonstrated to be superior to conventional care in multiple RCTs (grade of recommendation A, level of evidence 1a). EULAR 2022 strongly recommends remission or low disease activity as the treatment target (Smolen et al., Ann Rheum Dis 2023).</div>
+</div>
+
+<div class="phase">
+<span class="phase-title">Phase 6: Localized Relapse and Intra-articular Injection</span><span class="phase-result improved">Improved</span>
+<p><strong>Period:</strong> July 2025 (most recent)</p>
+<p><strong>Course:</strong> Despite well-controlled systemic disease, isolated swelling of the left knee developed. MRI confirmed active synovitis. An intra-articular injection of Diprospan 1 mL was administered into the left knee; the swelling resolved markedly within 1 week after injection, and range of motion recovered.</p>
+<p><strong>Reason for Improvement:</strong> Intra-articular glucocorticoid injection acts directly on local inflammation and has minimal systemic adverse effects. Isolated joint flares are relatively common in RA and do not necessarily require adjustment of the systemic treatment regimen.</p>
+<div class="ebm-note"><strong>Evidence Note:</strong> Intra-articular glucocorticoid injection is a first-line local treatment for isolated joint flares in RA (grade of recommendation A). The ACR 2021 guideline suggests that, when systemic disease is well controlled, local therapy may be prioritized over escalation of the systemic regimen for an isolated joint flare.</div>
+</div>
+
+<!-- ═══════════════ Current Medications ═══════════════ -->
+<h2>VII. Current Medication Regimen</h2>
+<table class="keep-together">
+<tr><th style="width:20%">Medication</th><th style="width:20%">Dose</th><th style="width:15%">Route</th><th style="width:45%">Notes</th></tr>
+<tr><td>Methotrexate (MTX)</td><td>12.5 mg once weekly</td><td>Oral</td><td>Anchor drug; maintained at a reduced dose because of a history of abnormal liver function</td></tr>
+<tr><td>Folic acid</td><td>5 mg once weekly (the day after MTX)</td><td>Oral</td><td>Reduces MTX-related adverse effects</td></tr>
+<tr><td>Hydroxychloroquine (HCQ)</td><td>200 mg twice daily</td><td>Oral</td><td>DMARD used in combination for synergistic efficacy</td></tr>
+</table>
+<p style="font-size:9pt;color:#666;">Note: The medications and dosages above are excerpted from prescription records provided by the patient and are for physician reference only; they do not constitute medication advice.</p>
+
+<!-- ═══════════════ Current Clinical Assessment ═══════════════ -->
+<h2>VIII. Current Clinical Assessment</h2>
+<div class="info-box">
+<p><strong>DAS28 Score: 3.6 (low–moderate disease activity)</strong></p>
+<p><strong>Disease Activity Trend:</strong> The overall trend is downward. Low disease activity (3.2) was achieved in April 2025, with a mild increase to 3.6 in July 2025 due to a localized relapse in the left knee.</p>
+<p><strong>Structural Damage:</strong> Bilateral wrist joint-space narrowing (first noted in January 2024), with no progression on follow-up in April 2025.</p>
+<p><strong>Functional Status:</strong> Independent in activities of daily living; mild limitation of right wrist range of motion; good functional recovery of the left knee after injection.</p>
+<p><strong>Key Challenges:</strong> The MTX dose is limited by liver function and cannot be increased to a full dose; disease activity fluctuates between low and moderate levels, and complete remission has not been achieved.</p>
+</div>
+
+<div class="alert-box">
+<strong>⚠️ Issues Requiring Attention:</strong>
+<p>(1) The current MTX dose is insufficient to achieve complete remission; the addition of a biologic or targeted synthetic DMARD should be evaluated;</p>
+<p>(2) The history of abnormal liver function suggests limited MTX tolerability, requiring ongoing monitoring;</p>
+<p>(3) Previous self-directed dose reduction resulted in relapse, and education on medication adherence needs to be reinforced;</p>
+<p>(4) Persistently high anti-CCP titers indicate a poorer prognosis and necessitate more proactive disease management.</p>
+</div>
+
+<!-- ═══════════════ Local Physician's Conclusions ═══════════════ -->
+<h2>IX. Local Physician's Conclusions</h2>
+<p>The patient has a well-established diagnosis of rheumatoid arthritis with a disease duration of 3 years and currently has low–moderate disease activity. MTX combined with HCQ has been effective, but the dose is limited by liver function and complete remission has not been achieved. Referral to the Department of Rheumatology and Immunology at a tertiary referral center is recommended to assess escalation to biologic therapy. The patient has been advised not to adjust medication doses independently and to attend regular follow-up monitoring.</p>
+
+<!-- ═══════════════ Subspecialty Analysis ═══════════════ -->
+<h2>X. Subspecialty Analysis</h2>
+<p><strong>Recommended Specialty: Rheumatology and Immunology</strong></p>
+<p>The patient has had confirmed rheumatoid arthritis for 3 years and currently has low–moderate disease activity. The following issues require specialist assessment:</p>
+<p><strong>(1) Assessment for Treatment Escalation.</strong> MTX cannot be used at a full dose because of abnormal liver function, and disease activity has not reached complete remission at the current dose (12.5 mg/week). According to the EULAR 2022 recommendations, when MTX combined with conventional synthetic DMARDs (csDMARDs) fails to achieve the treatment target, addition of a biologic DMARD (bDMARD) or targeted synthetic DMARD (tsDMARD) should be considered. A specialist should assess the benefits and risks of treatment escalation.</p>
+<p><strong>(2) Selection of Biologic Therapy.</strong> For patients with RA and an inadequate response to MTX, TNF inhibitors (e.g., adalimumab and etanercept), IL-6 receptor antagonists (e.g., tocilizumab), and JAK inhibitors (e.g., tofacitinib and baricitinib) are all potential options. Selection should take into account the patient's liver function, infection risk, comorbidities, and financial considerations.</p>
+<p><strong>(3) Long-term Bone Protection.</strong> The patient already has bone erosions in both wrists, and high anti-CCP titers suggest a relatively high risk of progressive bone destruction. Bone mineral density should be assessed, calcium and vitamin D supplementation should be considered, and anti-osteoporosis therapy should be initiated if indicated.</p>
+<div class="ebm-note"><strong>Evidence Note:</strong> EULAR 2022 recommends adding a bDMARD or tsDMARD when MTX combined with csDMARDs fails to achieve the treatment target (grade of recommendation A). The efficacy of TNF inhibitors, IL-6 antagonists, and JAK inhibitors in patients with RA and an inadequate response to MTX has been demonstrated in multiple phase III RCTs.</div>
+
+<!-- ═══════════════ Matched Specialists ═══════════════ -->
+<h2>XI. Matched Specialists</h2>
+<p>Based on the patient's clinical profile (RA, inadequate response to MTX, and need for evaluation of biologic therapy), the following rheumatology and immunology specialists in Shanghai are recommended:</p>
+
+<div class="doctor-card">
+<div class="doctor-name">Recommendation 1: Bao Chunde, Chief Physician</div>
+<div class="doctor-hospital">Renji Hospital, Shanghai Jiao Tong University School of Medicine, Department of Rheumatology and Immunology</div>
+<div class="doctor-detail">Expertise: Diagnosis and management of rheumatic diseases, including rheumatoid arthritis, systemic lupus erythematosus, and ankylosing spondylitis, with particularly extensive experience in biologic therapies.</div>
+<div class="doctor-detail">Official hospital website: https://www.renji.com</div>
+</div>
+
+<div class="doctor-card">
+<div class="doctor-name">Recommendation 2: Jiang Lindi, Chief Physician</div>
+<div class="doctor-hospital">Zhongshan Hospital, Fudan University, Department of Rheumatology and Immunology</div>
+<div class="doctor-detail">Expertise: Rheumatoid arthritis, Sjögren's syndrome, and vasculitis, with in-depth research on individualized treatment of refractory RA.</div>
+<div class="doctor-detail">Official hospital website: https://www.zs-hospital.sh.cn</div>
+</div>
+
+<div class="doctor-card">
+<div class="doctor-name">Recommendation 3: Wan Weiguo, Chief Physician</div>
+<div class="doctor-hospital">Huashan Hospital, Fudan University, Department of Rheumatology and Immunology</div>
+<div class="doctor-detail">Executive Deputy Director of the Department of Rheumatology and Immunology. Expertise: Diagnosis and management of rheumatic diseases, including rheumatoid arthritis, ankylosing spondylitis, systemic lupus erythematosus, and gout. His research primarily focuses on rheumatoid arthritis-associated anemia and glucocorticoid-induced osteoporosis.</div>
+<div class="doctor-detail">Official hospital website: https://www.huashan.org.cn</div>
+</div>
+
+<!-- ═══════════════ Selection Recommendations ═══════════════ -->
+<h2>XII. Selection Recommendations</h2>
+<h3>Priority for Consultation</h3>
+<p>A rheumatology and immunology consultation within 2 weeks is recommended, focusing on evaluation for escalation to biologic therapy. Although current disease activity is not in the high range, the limited MTX dose and high anti-CCP titers indicate a poor prognosis. Early treatment escalation may help delay the progression of bone destruction.</p>
+<h3>Selection Criteria</h3>
+<p><strong>The Department of Rheumatology and Immunology at Renji Hospital</strong> was one of the earliest rheumatology specialty departments established in China and has particularly extensive experience in the clinical use of biologic agents, making it suitable for patients who require treatment escalation. <strong>The Department of Rheumatology and Immunology at Zhongshan Hospital</strong> has distinctive expertise in individualized treatment of refractory RA and is suitable for patients who respond poorly to conventional therapy. Renji Hospital is recommended as the first choice because of its stronger academic standing and clinical experience in biologic treatment for RA.</p>
+<h3>Continuity of Care</h3>
+<p>Long-term follow-up with the same treating rheumatologist is recommended. DAS28 should be assessed every 3 months, and follow-up liver function tests, complete blood counts, and imaging should be performed every 6 months. Maintaining continuity of the treatment regimen is essential for long-term RA control.</p>
+
+<!-- ═══════════════ Appointment Preparation Checklist ═══════════════ -->
+<h2>XIII. Appointment Preparation Checklist</h2>
+<h3>I. Documents to Bring (Recommended)</h3>
+<p>1. Complete medical records: Outpatient medical records/reports from the initial visit in March 2023 through the most recent visit in July 2025.</p>
+<p>2. Laboratory reports (including reference intervals): All previous ESR, CRP, RF, anti-CCP, and liver function (ALT/AST) results, particularly the complete report from the episode of abnormal liver function in August 2024.</p>
+<p>3. Imaging materials: Hand radiographs and reports from 2023-04, 2024-01, and 2025-04; left knee MRI images and the complete report from 2025-07 (bring any pages containing quantitative details as well).</p>
+<p>4. Current medication list and prescription records: Prescription copies or original medication packaging for MTX, Folic acid, and HCQ, including the history of dose adjustments.</p>
+<p>5. Intra-articular injection record: The procedure record for the Diprospan injection into the left knee in July 2025.</p>
+<p>6. Records of hepatoprotective medications used during the previous episode of abnormal liver function.</p>
+<p>7. If previous consultations or tests were performed at other hospitals, bring the corresponding original reports or copies.</p>
+<h3>II. Additional Information Needed</h3>
+<p>1. Bone mineral density results: If not yet performed, testing is recommended before the visit (patients with RA have an increased risk of osteoporosis, and assessment is required before biologic therapy).</p>
+<p>2. Hepatitis B, hepatitis C, and tuberculosis screening results: These must be completed before biologic therapy, and advance testing is recommended.</p>
+<p>3. Vaccination records: Biologic agents may affect immune function, and vaccination status should be assessed.</p>
+<p>4. Most recent complete blood count and renal function results.</p>
+<p>5. Symptom diary: Record the locations of joint swelling and pain, duration of morning stiffness, triggers, and associated symptoms to help the physician assess disease activity.</p>
+<p>6. Whether other tests, such as echocardiography and thyroid function tests, have been performed is not documented in the available records.</p>
+<p>7. Family history: Whether there is any family history of rheumatoid arthritis or other autoimmune diseases.</p>
+<!-- ═══════════════ Medical Care in China ═══════════════ -->
+<h2>XIV. Medical Care in China: Travel Checklist</h2>
+<h3>Medical Records and Identification Documents</h3>
+<p>· Passport, visa, and insurance documents; confirm whether the international medical services department supports direct billing with your insurance.</p>
+<p>· Original medical records, test reports, original imaging files (DICOM), and pathology slides/paraffin blocks (if applicable).</p>
+<p>· Previous surgical records, discharge summaries, medication list, and allergy history.</p>
+<h3>Pre-travel Confirmation</h3>
+<p>· Verify physician clinic schedules, international medical services appointment requirements, and required documents through official hospital channels.</p>
+<p>· Confirm whether interpretation, accompaniment, or remote pre-assessment is needed, and allow sufficient time for tests and follow-up visits.</p>
+<p>· Pay medical fees directly to the hospital; this report does not replace a hospital quotation or appointment confirmation.</p>
+<h3>What to Bring to the Hospital</h3>
+<p>· Bring identification and appointment confirmation as required by the hospital, and confirm the hospital campus and floor in advance.</p>
+<p>· Bring original reports and medications; do not discontinue medications, increase doses, or otherwise adjust treatment on your own.</p>
+<p>· In the event of an emergency such as acute severe pain, difficulty breathing, or altered consciousness, go immediately to the nearest emergency department.</p>
+
+<!-- ═══════════════ References and Limitations ═══════════════ -->
+<h2>XV. References and Limitations</h2>
+<p>The medical guideline recommendations cited in this report (EULAR 2022 and ACR 2021) are from publicly published clinical practice guidelines, and the grades of recommendation and levels of evidence are reported as indicated in the original guidelines. References are formatted as "Author et al., Journal Year" so that interested readers can consult the original publications.</p>
+<p>Clinical conclusions, recommended consultation pathways, fees, and clinic schedules are subject to the original medical records and verification with the hospitals. The official hospital website links included in this report were obtained from public sources; please confirm through official hospital channels before your visit.</p>
+<p><strong>Disclaimer:</strong> This report was generated by AI based on the medical records provided and is intended solely for organizing medical information and supporting physician matching. It does not constitute diagnostic, treatment, or medication advice. AI may make recognition or interpretation errors. Please bring the original medical records so that the treating physician can make judgments based on an in-person evaluation and examinations. In the event of an emergency, contact local emergency services immediately or go to an emergency department.</p>
+
+<div class="footer-note">
+<p>Generated: November 18, 2026 | Report Version: Demo v2.0 | MediMatch · ShanghaiMed</p>
+</div>
+
+</body>
+</html>

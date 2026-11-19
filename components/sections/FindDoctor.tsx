@@ -1,12 +1,11 @@
 'use client'
 
 import React from 'react'
-import Link from 'next/link'
 import { Upload, BrainCircuit, UserCheck } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 const FindDoctor: React.FC = () => {
-  const { t, tArr } = useLanguage()
+  const { t, tArr, language } = useLanguage()
   const fallbackSteps = ['Upload your records', 'AI reads your case', 'Meet your matched specialist']
   const translated = tArr('findDoctor.steps')
   const stepItems: string[] = translated.length === 3 ? translated : fallbackSteps
@@ -52,15 +51,15 @@ const FindDoctor: React.FC = () => {
 
         {/* CTA */}
         <div className="text-center">
-          <Link
-            href="/medical-records"
+          <a
+            href={`/medical-records/index_${language}.html`}
             className="inline-flex items-center gap-2 bg-accent text-white px-8 py-4 rounded-full font-semibold hover:bg-accent-600 transition-colors shadow-lg hover:shadow-xl"
           >
             {t('findDoctor.cta')}
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
-          </Link>
+          </a>
           <p className="text-gray-400 text-sm mt-6 max-w-xl mx-auto leading-relaxed">
             {t('findDoctor.disclaimer')}
           </p>

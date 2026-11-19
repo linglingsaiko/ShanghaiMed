@@ -3562,6 +3562,7 @@
         };
 
         let selectedFiles = [];
+        let pendingFiles = [];
         let isProcessing = false;
         let isPaid = false;
         let analysisRetryPending = false;
@@ -3610,10 +3611,10 @@
           const busy = uploadInteractionLocked();
           elements.startButton.disabled = !consentGranted || !hasFiles || busy;
           elements.clearFiles.disabled = busy;
-          elements.fileInput.disabled = !consentGranted || busy;
-          elements.dropZone.setAttribute("aria-disabled", String(!consentGranted || busy));
-          elements.uploadSection.classList.toggle("is-blocked", !consentGranted);
-          elements.uploadSection.setAttribute("aria-disabled", String(!consentGranted));
+          elements.fileInput.disabled = busy;
+          elements.dropZone.setAttribute("aria-disabled", String(busy));
+          elements.uploadSection.classList.toggle("is-blocked", busy);
+          elements.uploadSection.setAttribute("aria-disabled", String(busy));
           elements.uploadSection.dataset.state = busy ? "loading" : hasFiles ? "default" : "empty";
           elements.fileList.querySelectorAll("button").forEach((button) => {
             button.disabled = busy;
@@ -3638,11 +3639,15 @@
           hideConsentModal();
           elements.consentDeclined.hidden = true;
           updateActionState();
+          const pending = pendingFiles;
+          pendingFiles = [];
+          if (pending.length) addFiles(pending);
           window.requestAnimationFrame(() => elements.fileInput.focus());
         }
 
         function declineToConsent() {
           consentGranted = false;
+          pendingFiles = [];
           saveConsent("declined");
           hideConsentModal();
           elements.consentDeclined.hidden = false;
@@ -3820,6 +3825,7 @@
 
         function addFiles(fileList) {
           if (!consentGranted) {
+            pendingFiles = Array.from(fileList || []);
             showConsentModal();
             return;
           }
@@ -6683,7 +6689,7 @@
           elements.dropZone.addEventListener(eventName, (event) => {
             event.preventDefault();
             event.stopPropagation();
-            if (!consentGranted || isProcessing) return;
+            if (isProcessing) return;
             elements.dropZone.classList.add("is-dragging");
             if (event.dataTransfer) event.dataTransfer.dropEffect = "copy";
           });
@@ -6700,10 +6706,6 @@
           event.preventDefault();
           event.stopPropagation();
           elements.dropZone.classList.remove("is-dragging");
-          if (!consentGranted) {
-            showConsentModal();
-            return;
-          }
           if (!uploadInteractionLocked() && event.dataTransfer) addFiles(event.dataTransfer.files);
         });
 
@@ -6783,7 +6785,6 @@
           elements.consentDeclined.hidden = false;
         } else {
           consentGranted = false;
-          showConsentModal();
         }
         updateActionState();
         reportCenterReady = initializeReportCenter();

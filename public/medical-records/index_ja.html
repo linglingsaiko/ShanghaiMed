@@ -542,11 +542,11 @@
 
       .drop-zone {
         position: relative;
-        min-height: 236px;
+        min-height: 140px;
         display: grid;
         place-items: center;
         overflow: hidden;
-        padding: 32px 20px;
+        padding: 24px 20px;
         border: 1.5px dashed #9fbfbd;
         border-radius: var(--radius-md);
         background: #f8fbfb;
@@ -618,30 +618,6 @@
         color: var(--color-primary);
         text-decoration: underline;
         text-underline-offset: 3px;
-      }
-
-      .drop-hint {
-        margin-bottom: 16px;
-        color: var(--color-muted-text);
-        font-size: 13px;
-      }
-
-      .format-list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 7px;
-      }
-
-      .format-chip {
-        padding: 3px 9px;
-        border: 1px solid var(--color-border);
-        border-radius: 6px;
-        background: #fff;
-        color: #536172;
-        font-size: 11px;
-        font-weight: 750;
-        letter-spacing: 0.4px;
       }
 
       .upload-limits {
@@ -2871,15 +2847,6 @@
 </svg>
 </div>
 <p class="drop-title">ここにファイルをドラッグして、または<span>ファイルを選択するにはクリックしてください。</span></p>
-<p class="drop-hint">複数のファイルをアップロードできる・登録なしで利用できる</p>
-<div aria-label="サポートされるファイル形式" class="format-list">
-<span class="format-chip">JPG</span>
-<span class="format-chip">PNG</span>
-<span class="format-chip">WEBP</span>
-<span class="format-chip">HEIC</span>
-<span class="format-chip">PDF</span>
-<span class="format-chip">ZIP</span>
-</div>
 </div>
 </div>
 <p class="upload-limits" id="upload-limits">JPG、PNG、WEBP、HEIC、PDF、ZIPなどの一般的な形式をサポートします。・1つのファイルの最大サイズは50MBです。</p>

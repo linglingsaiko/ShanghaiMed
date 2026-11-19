@@ -5217,12 +5217,12 @@ export function LanguageProvider({ children, locale }: { children: ReactNode; lo
 
   // ar: 全量阿拉伯语翻译（经 GLM→DS→K3 三模型交叉验证 + 海湾本地化终审）
   // ru/mn: 仅白名单区块显示机器翻译，其余 YMYL 内容 fallback 英文
-  const MACHINE_TRANSLATABLE_SECTIONS = ['nav', 'whyShanghai', 'processFlow', 'careTeam', 'hero', 'testimonials', 'treatments', 'howItWorks', 'trust', 'pricing', 'insights', 'blog', 'faq', 'contact', 'footer', 'agentChat', 'pages', 'medicalDisclaimer', 'hospitals', 'faqPage']
+  const MACHINE_TRANSLATABLE_SECTIONS = ['nav', 'whyShanghai', 'processFlow', 'careTeam', 'hero', 'testimonials', 'treatments', 'howItWorks', 'trust', 'pricing', 'insights', 'blog', 'faq', 'contact', 'footer', 'agentChat', 'pages', 'medicalDisclaimer', 'hospitals', 'faqPage', 'findDoctor']
 
   const resolveKey = (key: string): any => {
     const keys = key.split('.')
     const section = keys[0]
-    // ja: 完整翻译；ar/ru/mn: 仅白名单区块用机器翻译，其余 YMYL 内容 fallback en
+    // ja: 完整翻译；ar/ru/mn/ms/id: 仅白名单区块用机器翻译，其余 YMYL 内容 fallback en（findDoctor 已按玲姐要求用 doubao-seed-translation 翻译并加白名单，2026-11-19）
     const lang: Language =
       language === 'ja' ||
       (language !== 'en' && MACHINE_TRANSLATABLE_SECTIONS.includes(section))

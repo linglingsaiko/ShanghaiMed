@@ -12,7 +12,7 @@ author: Sara Ma, Founder
 date: '2026-11-20T08:00:00.000Z'
 lastReviewed: '2026-11-20'
 featured: false
-featuredImage: /images/blog/medical-records-for-treatment-in-china-checklist.png
+featuredImage: /images/blog/see-specialist-shanghai-foreigner-guide.png
 seoTitle: 'Lihat Pakar di Shanghai sebagai Orang Asing: Panduan 2026'
 metaDescription: 'Lihat seorang pakar di Shanghai sebagai orang asing: tidak memerlukan rujukan GP. Bagaimana untuk memilih jabatan, hospital dan saluran tempahan yang betul, dan menyediakan rekod anda.'
 keywords:

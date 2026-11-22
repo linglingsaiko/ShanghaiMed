@@ -12,7 +12,7 @@ author: Sara Ma, Founder
 date: '2026-11-20T08:00:00.000Z'
 lastReviewed: '2026-11-20'
 featured: false
-featuredImage: /images/blog/medical-records-for-treatment-in-china-checklist.png
+featuredImage: /images/blog/see-specialist-shanghai-foreigner-guide.png
 seoTitle: 'Посещение специалиста в Шанхае в качестве иностранца: путеводитель 2026 года.'
 metaDescription: 'Обратиться к специалисту в Шанхае как иностранцу: не требуется направление от семейного врача. Как выбрать подходящее отделение, больницу и канал бронирования, а также подготовить свои медицинские документы.'
 keywords:

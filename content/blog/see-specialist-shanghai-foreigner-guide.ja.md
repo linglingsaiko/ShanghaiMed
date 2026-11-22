@@ -12,7 +12,7 @@ author: Sara Ma, Founder
 date: '2026-11-20T08:00:00.000Z'
 lastReviewed: '2026-11-20'
 featured: false
-featuredImage: /images/blog/medical-records-for-treatment-in-china-checklist.png
+featuredImage: /images/blog/see-specialist-shanghai-foreigner-guide.png
 seoTitle: '外国人として上海で専門医に診察を受ける：2026年版ガイド'
 metaDescription: '外国人として上海で専門医に診察を受ける場合、GPによる紹介は必要ありません。適切な科や病院、予約チャネルを選択し、必要な書類を準備する方法をご紹介します。'
 keywords:

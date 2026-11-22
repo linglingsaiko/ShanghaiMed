@@ -12,7 +12,7 @@ author: Sara Ma, Founder
 date: '2026-11-20T08:00:00.000Z'
 lastReviewed: '2026-11-20'
 featured: false
-featuredImage: /images/blog/medical-records-for-treatment-in-china-checklist.png
+featuredImage: /images/blog/see-specialist-shanghai-foreigner-guide.png
 seoTitle: 'Mengunjungi Spesialis di Shanghai sebagai Orang Asing: Panduan 2026.'
 metaDescription: 'Mengunjungi spesialis di Shanghai sebagai orang asing: tidak perlu rujukan dari dokter umum. Cara memilih departemen, rumah sakit, dan saluran pemesanan yang tepat, serta menyiapkan catatan Anda.'
 keywords:

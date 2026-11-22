@@ -1,7 +1,7 @@
 ---
 title: 'Гадаад хүн Шанхайд мэргэжлийн эмчид хэрхэн үзүүлэх вэ: Алхамчилсан гарын авлага (2026)'
 excerpt: 'Шанхайд GP-ийн илгээлт захиалгагүйгээр мэргэжлийн эмчид үзүүлэх: ямар тасаг, эмнэлэг, цаг захиалах суваг сонгох, эмнэлгийн бичиг баримтаа хэрхэн бэлдэх талаар.'
-featuredImage: /images/blog/medical-records-for-treatment-in-china-checklist.png
+featuredImage: /images/blog/see-specialist-shanghai-foreigner-guide.png
 category: guide
 author: Sara Ma, Founder
 date: '2026-11-20T08:00:00.000Z'

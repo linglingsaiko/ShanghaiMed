@@ -12,7 +12,7 @@ author: Sara Ma, Founder
 date: '2026-11-20T08:00:00.000Z'
 lastReviewed: '2026-11-20'
 featured: false
-featuredImage: /images/blog/medical-records-for-treatment-in-china-checklist.png
+featuredImage: /images/blog/see-specialist-shanghai-foreigner-guide.png
 seoTitle: 'راجع أخصائيًا في شنغهاي كأجنبي: دليل 2026.'
 metaDescription: 'راجع أخصائيًا في شنغهاي كأجنبي: لا حاجة إلى إحالة من طبيب عام. كيف تختار القسم المناسب والمستشفى وقناة الحجز، وتجهز سجلاتك.'
 keywords:

@@ -12,7 +12,7 @@ author: Sara Ma, Founder
 date: '2026-11-20T08:00:00.000Z'
 lastReviewed: '2026-11-20'
 featured: false
-featuredImage: /images/blog/medical-records-for-treatment-in-china-checklist.png
+featuredImage: /images/blog/see-specialist-shanghai-foreigner-guide.png
 seoTitle: 'See a Specialist in Shanghai as a Foreigner: 2026 Guide'
 metaDescription: 'See a specialist in Shanghai as a foreigner: no GP referral needed. How to choose the right department, hospital and booking channel, and prepare your records.'
 keywords:

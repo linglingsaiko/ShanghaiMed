@@ -3464,6 +3464,7 @@
 </section>
 </div>
 <script src="report-renderer.js"></script>
+<script src="report-v3-renderer.js"></script>
 <script>
       (() => {
         "use strict";
@@ -4899,7 +4900,7 @@
           elements.paymentPanel.hidden = true;
           elements.paymentStatus.hidden = true;
           elements.fullReport.hidden = false;
-          renderSingleFullReport(report.full_report || report.report_full || null);
+          renderSingleFullReport(report.full_report || report.report_full || null, report.report_v3 || null);
         }
 
         function completeOpenedReport(detail, scroll) {
@@ -6006,8 +6007,15 @@
 
         function updateMultiFullReportCard(nodes, report) {
           const fullReport = report.full_report || report.report_full || null;
-          const signature = fullReport ? JSON.stringify(fullReport) : '';
+          const v3Report = report.report_v3 || null;
+          const signature = v3Report
+            ? JSON.stringify([fullReport, v3Report])
+            : (fullReport ? JSON.stringify(fullReport) : '');
           if (nodes.fullSignature === signature) return;
+          if (v3Report && tryV3ReportRender(nodes.chapters, v3Report)) {
+            nodes.fullSignature = signature;
+            return;
+          }
           if (fullReport && tryStructuredReportRender(nodes.chapters, fullReport)) {
             nodes.fullSignature = signature;
             return;
@@ -6561,8 +6569,19 @@
           return renderer.render(container, report) === true;
         }
 
+        function tryV3ReportRender(container, report) {
+          const renderer = window.MediMatchReportV3Renderer;
+          if (!renderer || !renderer.isV3PreviewRequested(window.location.search)) return false;
+          return renderer.renderV3(container, report) === true;
+        }
+
         function renderSingleFullReport(report) {
+          const reportV3 = arguments[1] || null;
           const container = document.querySelector('#full-report .report-chapters');
+          if (container && reportV3 && tryV3ReportRender(container, reportV3)) {
+            elements.reportId.textContent = currentReportId || '—';
+            return;
+          }
           if (container && tryStructuredReportRender(container, report)) {
             elements.reportId.textContent = currentReportId || '—';
             return;

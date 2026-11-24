@@ -1,0 +1,110 @@
+{
+  "synthetic": true,
+  "case_id": "frontend_complete_v3_synthetic",
+  "report": {
+    "language": "zh",
+    "generated_at": "2026-11-24T13:00:00+00:00",
+    "version": "v3",
+    "patient_info": {
+      "name": "合成患者A（化名）",
+      "gender_age": "女 / 42 岁",
+      "occupation": "合成职业",
+      "residence": "合成城市",
+      "diagnosis": "膝骨关节炎（完全合成病例）",
+      "disease_course": "3 年（合成）",
+      "current_hospital": "未提供"
+    },
+    "chief_complaint": {
+      "chief": "合成膝部不适主诉。",
+      "core_problem": "仅用于结构测试的合成核心问题。"
+    },
+    "timeline": [
+      {"date": "2026-01", "visit_type": "检验记录", "findings": "合成检验记录", "treatment": "合成处置"}
+    ],
+    "lab_trends": {
+      "tests": [
+        {"name": "ESR", "unit": "mm/h", "ref_range": "0–20"},
+        {"name": "CRP", "unit": "mg/L", "ref_range": "0–8"}
+      ],
+      "rows": [
+        {"date": "2026-01", "values": {"ESR": "68", "CRP": "45"}, "flags": {"ESR": "↑", "CRP": "↑"}}
+      ],
+      "note": "所有数值均为合成结构测试数据。"
+    },
+    "imaging": [
+      {"type": "双膝X线（合成）", "date": "2026-01", "findings": "合成影像所见", "clinical_significance": "合成意义"}
+    ],
+    "treatment_phases": [
+      {
+        "title": "合成阶段",
+        "period": "2026-01 – 2026-02",
+        "outcome": "stable",
+        "description": "合成治疗经过",
+        "reason": "合成原因",
+        "ebm_note": {"source_id": "synthetic_only", "text": "合成知识库条目，仅验证结构，不是真实文献。"}
+      }
+    ],
+    "medications": [
+      {"drug": "合成药物", "dose": "5mg 每日一次", "route": "口服", "note": "仅结构测试"}
+    ],
+    "assessment": {
+      "info_box": ["评分需医生评估（合成样例）"],
+      "alert_box": ["合成安全提示"]
+    },
+    "local_doctor_conclusion": "合成当地医生结论，不是真实诊断。",
+    "subspecialty_analysis": {
+      "direction": "骨科（合成）",
+      "points": [
+        {"title": "合成分析点", "content": "合成分析内容", "ebm_note": {"source_id": "synthetic_analysis", "text": "合成亚专科循证文本，仅用于前端结构测试。"}}
+      ]
+    },
+    "matched_doctors": [
+      {
+        "rank": 1,
+        "name": "合成医生",
+        "title": "合成职称",
+        "hospital": "合成医院",
+        "department": "合成科室",
+        "specialties": "合成擅长",
+        "fudan_rank": "合成排名占位文本",
+        "hospital_website": null,
+        "match_reason": "合成匹配理由"
+      }
+    ],
+    "selection_advice": {
+      "priority": "合成优先事项",
+      "dimensions": "合成选择维度",
+      "continuity": "合成随访建议"
+    },
+    "visit_preparation": {
+      "materials": ["合成病历材料"],
+      "to_supplement": ["合成待补资料"]
+    },
+    "travel_checklist": {
+      "documents": ["合成证件清单"],
+      "pre_trip": ["合成行前事项"],
+      "on_site": ["合成到院事项"]
+    },
+    "references_boundary": {
+      "guideline_notes": "本样例不验证循证真实性。",
+      "disclaimer": "合成免责声明，不构成诊断或治疗建议。"
+    },
+    "chapter_status": {
+      "patient_info": "complete",
+      "chief_complaint": "complete",
+      "timeline": "complete",
+      "lab_trends": "complete",
+      "imaging": "complete",
+      "treatment_phases": "complete",
+      "medications": "complete",
+      "assessment": "complete",
+      "local_doctor_conclusion": "complete",
+      "subspecialty_analysis": "complete",
+      "matched_doctors": "complete",
+      "selection_advice": "complete",
+      "visit_preparation": "complete",
+      "travel_checklist": "complete",
+      "references_boundary": "complete"
+    }
+  }
+}

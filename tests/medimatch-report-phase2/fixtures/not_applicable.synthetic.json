@@ -1,0 +1,60 @@
+{
+  "synthetic": true,
+  "case_id": "frontend_not_applicable_v3_synthetic",
+  "report": {
+    "language": "zh",
+    "generated_at": "2026-11-24T13:05:00+00:00",
+    "version": "v3",
+    "patient_info": {
+      "name": "未提供",
+      "gender_age": "女 / 42 岁",
+      "occupation": "",
+      "residence": "",
+      "diagnosis": "合成诊断",
+      "disease_course": "",
+      "current_hospital": ""
+    },
+    "chief_complaint": {"chief": "合成主诉", "core_problem": ""},
+    "timeline": [],
+    "lab_trends": {
+      "tests": [{"name": "ESR", "unit": "mm/h", "ref_range": ""}],
+      "rows": [{"date": "2026-01", "values": {"ESR": "68"}, "flags": {"ESR": ""}}],
+      "note": "缺少参考范围，不判断箭头（合成）。"
+    },
+    "imaging": [],
+    "treatment_phases": [],
+    "medications": [],
+    "assessment": {"info_box": ["评分需医生评估"], "alert_box": []},
+    "local_doctor_conclusion": "",
+    "subspecialty_analysis": {"direction": "", "points": []},
+    "matched_doctors": [],
+    "selection_advice": {"priority": "", "dimensions": "", "continuity": ""},
+    "visit_preparation": {"materials": ["合成既有病历"], "to_supplement": ["合成待补资料"]},
+    "travel_checklist": {
+      "documents": ["合成证件清单"],
+      "pre_trip": ["合成行前事项"],
+      "on_site": ["合成到院事项"]
+    },
+    "references_boundary": {
+      "guideline_notes": "无命中知识库条目（合成样例）。",
+      "disclaimer": "合成免责声明，不构成诊断或治疗建议。"
+    },
+    "chapter_status": {
+      "patient_info": "insufficient_data",
+      "chief_complaint": "insufficient_data",
+      "timeline": "insufficient_data",
+      "lab_trends": "insufficient_data",
+      "imaging": "not_applicable",
+      "treatment_phases": "insufficient_data",
+      "medications": "insufficient_data",
+      "assessment": "insufficient_data",
+      "local_doctor_conclusion": "insufficient_data",
+      "subspecialty_analysis": "insufficient_data",
+      "matched_doctors": "not_applicable",
+      "selection_advice": "insufficient_data",
+      "visit_preparation": "complete",
+      "travel_checklist": "complete",
+      "references_boundary": "complete"
+    }
+  }
+}

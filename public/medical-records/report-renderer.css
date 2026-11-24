@@ -1,0 +1,121 @@
+@page { size: A4; margin: 18mm 16mm 20mm 16mm; }
+
+.mmr-report {
+  color: #1a2332;
+  font-family: "Noto Sans CJK SC", "Noto Serif CJK SC", sans-serif;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.mmr-report * { box-sizing: border-box; }
+.mmr-report .mmr-chapter { break-inside: auto; margin: 0 0 16px; }
+.mmr-report .chapter-heading { break-after: avoid; }
+.mmr-report .chapter-heading h3 {
+  margin: 0;
+  padding: 6px 10px;
+  background: #e8f1f7;
+  border-left: 4px solid #0d4a6e;
+  color: #0d4a6e;
+  font-size: 18px;
+  overflow-wrap: anywhere;
+}
+.mmr-report .chapter-number { flex: 0 0 auto; }
+.mmr-report .mmr-paragraph { margin: 6px 0; overflow-wrap: anywhere; }
+.mmr-report .chapter-body { white-space: pre-wrap; }
+.mmr-report .mmr-table-wrap { margin: 8px 0 12px; overflow-x: auto; }
+.mmr-report .mmr-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.mmr-report .mmr-table.keep-together { break-inside: avoid; }
+.mmr-report .mmr-table thead { display: table-header-group; }
+.mmr-report .mmr-table th {
+  padding: 6px 8px;
+  background: #0d4a6e;
+  color: #fff;
+  font-weight: 600;
+  text-align: left;
+  vertical-align: top;
+}
+.mmr-report .mmr-table td {
+  padding: 6px 8px;
+  border-bottom: 1px solid #d0dce6;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+.mmr-report .mmr-table tbody tr:nth-child(even) td { background: #f4f8fb; }
+.mmr-report .mmr-table-note { margin: 6px 0; color: #5a6572; font-size: 12px; overflow-wrap: anywhere; }
+.mmr-report .mmr-info-box,
+.mmr-report .mmr-alert-box {
+  margin: 10px 0;
+  padding: 12px 16px;
+  border: 1px solid #b8d0e0;
+  border-radius: 6px;
+  background: #f0f6fa;
+  break-inside: avoid;
+}
+.mmr-report .mmr-alert-box { border-color: #e6c87a; background: #fff8e6; }
+.mmr-report .mmr-alert-box strong { color: #8a6d1a; }
+.mmr-report .mmr-phase {
+  margin: 14px 0;
+  padding: 12px 16px;
+  border: 1px solid #c5d8e5;
+  border-radius: 8px;
+  break-inside: avoid;
+}
+.mmr-report .mmr-phase-heading { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.mmr-report .mmr-phase-title { color: #0d4a6e; font-size: 15px; font-weight: 700; }
+.mmr-report .mmr-phase-result { padding: 2px 10px; border-radius: 4px; font-size: 12px; font-weight: 600; }
+.mmr-report .mmr-phase-result.improved { background: #d4edda; color: #155724; }
+.mmr-report .mmr-phase-result.worsened { background: #f8d7da; color: #721c24; }
+.mmr-report .mmr-phase-result.stable { background: #d1ecf1; color: #0c5460; }
+.mmr-report .mmr-phase-result.adjusted { background: #fff3cd; color: #856404; }
+.mmr-report .mmr-ebm-note {
+  margin: 8px 0;
+  padding: 8px 12px;
+  border-left: 3px solid #2980b9;
+  background: #eaf2f8;
+  color: #1a5276;
+  font-size: 13px;
+  break-inside: avoid;
+}
+.mmr-report .mmr-doctor-card {
+  margin: 10px 0;
+  padding: 12px 16px;
+  border: 1px solid #c5d8e5;
+  border-radius: 8px;
+  break-inside: avoid;
+}
+.mmr-report .mmr-doctor-name { color: #0d4a6e; font-size: 16px; font-weight: 700; overflow-wrap: anywhere; }
+.mmr-report .mmr-doctor-hospital { margin: 3px 0; color: #333; overflow-wrap: anywhere; }
+.mmr-report .mmr-doctor-detail { margin: 5px 0; color: #555; font-size: 13px; overflow-wrap: anywhere; }
+.mmr-report .mmr-url { word-break: break-all; }
+.mmr-report .mmr-url a { color: #0d5d7a; }
+.mmr-report .mmr-source-details { margin: 8px 0 12px; }
+.mmr-report .mmr-source-details summary { color: #0d5d7a; cursor: pointer; }
+.mmr-report .mmr-source-details .chapter-body { margin-top: 8px; }
+.mmr-report .mmr-disclaimer { margin-top: 14px; }
+.mmr-report .mmr-list-group { margin: 10px 0; break-inside: avoid; }
+.mmr-report .mmr-subheading { margin: 0 0 4px; color: #0d4a6e; font-size: 14px; }
+.mmr-report .mmr-list { margin: 4px 0 8px; padding-left: 22px; }
+.mmr-report .mmr-list li { margin: 4px 0; overflow-wrap: anywhere; }
+
+@media (max-width: 640px) {
+  .mmr-report { font-size: 13px; }
+  .mmr-report .chapter-heading h3 { font-size: 16px; }
+  .mmr-report .mmr-table { min-width: 560px; }
+}
+
+@media print {
+  .mmr-report { color: #1a2332; font-size: 10.5pt; }
+  .mmr-report .mmr-chapter { margin: 0 0 12px; padding: 0; border: 0; box-shadow: none; }
+  .mmr-report .chapter-heading h3 { font-size: 14pt; }
+  .mmr-report .mmr-table-wrap { overflow: visible; }
+  .mmr-report .mmr-table { min-width: 0; font-size: 9.5pt; }
+  .mmr-report .mmr-table th,
+  .mmr-report .mmr-table td { padding: 4px 6px; }
+  .mmr-report .mmr-source-details { display: none; }
+  .mmr-report .mmr-url a { color: inherit; text-decoration: none; }
+  .mmr-report .mmr-doctor-card,
+  .mmr-report .mmr-phase,
+  .mmr-report .mmr-info-box,
+  .mmr-report .mmr-alert-box,
+  .mmr-report .mmr-ebm-note { break-inside: avoid; }
+}

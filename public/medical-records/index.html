@@ -3463,6 +3463,7 @@
 </div>
 </section>
 </div>
+<script src="report-renderer.js"></script>
 <script>
       (() => {
         "use strict";
@@ -4898,7 +4899,7 @@
           elements.paymentPanel.hidden = true;
           elements.paymentStatus.hidden = true;
           elements.fullReport.hidden = false;
-          renderFullReport(report.full_report || report.report_full || null);
+          renderSingleFullReport(report.full_report || report.report_full || null);
         }
 
         function completeOpenedReport(detail, scroll) {
@@ -6007,6 +6008,17 @@
           const fullReport = report.full_report || report.report_full || null;
           const signature = fullReport ? JSON.stringify(fullReport) : '';
           if (nodes.fullSignature === signature) return;
+          if (fullReport && tryStructuredReportRender(nodes.chapters, fullReport)) {
+            nodes.fullSignature = signature;
+            return;
+          }
+          updateMultiFullReportCardLegacy(nodes, report);
+        }
+
+        function updateMultiFullReportCardLegacy(nodes, report) {
+          const fullReport = report.full_report || report.report_full || null;
+          const signature = fullReport ? JSON.stringify(fullReport) : '';
+          if (nodes.fullSignature === signature) return;
           nodes.fullSignature = signature;
           nodes.chapters.replaceChildren();
           if (!fullReport) return;
@@ -6541,6 +6553,21 @@
               nodes.pdfButton.textContent = '下载此患者 PDF 报告';
             }
           }
+        }
+
+        function tryStructuredReportRender(container, report) {
+          const renderer = window.MediMatchReportRenderer;
+          if (!renderer || !renderer.isStructuredPreviewRequested(window.location.search)) return false;
+          return renderer.render(container, report) === true;
+        }
+
+        function renderSingleFullReport(report) {
+          const container = document.querySelector('#full-report .report-chapters');
+          if (container && tryStructuredReportRender(container, report)) {
+            elements.reportId.textContent = currentReportId || '—';
+            return;
+          }
+          renderFullReport(report);
         }
 
         function renderFullReport(report) {

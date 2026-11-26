@@ -1,0 +1,159 @@
+{
+  "case_id": "frontend_phase3_complete_synthetic",
+  "synthetic": true,
+  "description": "阶段3完全合成医生官网链路夹具；人物、医院、域名、医生、评分和循证条目均非真实数据，不用于网络访问。",
+  "report": {
+    "language": "zh",
+    "generated_at": "2026-11-25T01:02:03+00:00",
+    "version": "v3",
+    "patient_info": {
+      "name": "合成患者G24",
+      "gender_age": "女 / 44岁",
+      "occupation": "合成职业",
+      "residence": "合成城市",
+      "diagnosis": "未提供",
+      "disease_course": "三个月",
+      "current_hospital": "合成市立医院"
+    },
+    "chief_complaint": {
+      "chief": "合成右膝不适三个月，加重一周",
+      "core_problem": "整理合成症状、既有检查与随访重点，不建立新诊断。"
+    },
+    "timeline": [],
+    "lab_trends": {
+      "tests": [
+        {
+          "name": "合成ESR",
+          "unit": "mm/h",
+          "ref_range": "0-20"
+        }
+      ],
+      "rows": [
+        {
+          "date": "2026-01-05",
+          "values": {
+            "合成ESR": "28"
+          },
+          "flags": {
+            "合成ESR": "↑"
+          }
+        }
+      ],
+      "note": "检验数值、日期、单位与参考范围仅来自整合后的结构化记录并保持原文；箭头仅按同次数值与同次参考范围计算，不采用来源 flag。"
+    },
+    "imaging": [
+      {
+        "type": "右膝合成X线",
+        "date": "2026-01-05",
+        "findings": "合成关节间隙轻度变窄",
+        "clinical_significance": "需由医生结合合成查体评估"
+      }
+    ],
+    "treatment_phases": [
+      {
+        "title": "合成当前处理阶段",
+        "period": "2026-01-05",
+        "outcome": "stable",
+        "description": "当地合成病历记录随访及进一步评估安排。",
+        "reason": "仅整理合成病历明确内容，后续方案由接诊医生确认。",
+        "ebm_note": {
+          "source_id": "PMID_00000001",
+          "text": "Synthetic guideline excerpt A: the synthetic rehabilitation discussion must remain source-bound."
+        }
+      }
+    ],
+    "medications": [
+      {
+        "drug": "合成止痛药",
+        "dose": "5 mg 每日一次",
+        "route": "口服",
+        "note": "仅为合成数据"
+      }
+    ],
+    "assessment": {
+      "info_box": [
+        "DAS28 5.8（病历原文明确给出；日期：2026-01-05）",
+        "合成资料提示右膝症状需要结合查体与原始检查综合评估。"
+      ],
+      "alert_box": [
+        "合成安全提示：请勿自行调整药物，急症应及时就医。"
+      ]
+    },
+    "local_doctor_conclusion": "当地医生结论：当地医生考虑合成膝部疾病，建议合成骨科随访。",
+    "subspecialty_analysis": {
+      "direction": "合成骨科膝关节方向",
+      "points": [
+        {
+          "title": "合成资料核对",
+          "content": "建议携带原始影像并复核症状变化，专科判断以面诊为准。",
+          "ebm_note": null
+        }
+      ]
+    },
+    "matched_doctors": [
+      {
+        "rank": 1,
+        "name": "合成医生甲",
+        "title": "合成主任医师",
+        "hospital": "合成医院",
+        "department": "合成骨科",
+        "specialties": "合成膝关节方向",
+        "match_reason": "合成匹配理由",
+        "fudan_rank": "合成排名",
+        "hospital_website": "https://hospital.synthetic-fixture.org/"
+      }
+    ],
+    "selection_advice": {
+      "priority": "优先核对最终匹配列表中合成医生甲的出诊信息。",
+      "dimensions": "按合成亚专科方向、可及性与连续性比较，不新增医生或官网。",
+      "continuity": "就诊后保留合成病历与随访计划，便于连续管理。"
+    },
+    "visit_preparation": {
+      "materials": [
+        "合成原始病历",
+        "合成影像与检验资料"
+      ],
+      "to_supplement": [
+        "补充合成症状变化记录"
+      ]
+    },
+    "travel_checklist": {
+      "documents": [
+        "携带有效护照、签证或适用的入境许可，并核对有效期。",
+        "整理原始病历、检验与影像资料、当前用药清单及必要的英文或中文翻译件。",
+        "准备保险直付或理赔所需材料，并提前向保险方确认适用范围。"
+      ],
+      "pre_trip": [
+        "在出行前由接诊医疗机构确认预约、科室、时间及资料是否齐全。",
+        "核对行程、住宿、无障碍或翻译需求；不要因出行自行加药、停药或换药。",
+        "费用、号源和治疗安排以医院官方渠道及当次确认为准。"
+      ],
+      "on_site": [
+        "到院携带原件，主动向医生说明既往史、过敏史和当前用药。",
+        "对诊断、检查、治疗及费用有疑问时，在操作前向医院工作人员核实。",
+        "保留当次病历、费用票据和随访安排，回国后与原接诊医生保持连续管理。"
+      ]
+    },
+    "references_boundary": {
+      "guideline_notes": "本报告仅列出实际使用且已命中的循证来源；正文引用原文由后端按 source_id 固定填入：\nPMID_00000001｜Synthetic citation A. 2026;0(0):0-0. Fixture only.｜https://pubmed.ncbi.nlm.nih.gov/00000001/｜适用边界：仅用于完全合成结构测试，不构成任何真实临床建议。",
+      "disclaimer": "本报告仅基于所提供资料进行信息整理，不构成诊断、治疗或用药建议，不能替代具有资质的医生面诊。请勿自行加药、停药、换药。如出现胸痛、呼吸困难、意识改变、严重过敏或其他急症表现，请立即拨打当地急救电话或前往急诊。检验、影像、用药、评分及当地医生结论均须回查原始资料并由医生核验；循证条目仅在其适用范围内作为背景信息，未提供、未命中或不确定的内容不得补造为事实。"
+    },
+    "chapter_status": {
+      "patient_info": "insufficient_data",
+      "chief_complaint": "complete",
+      "timeline": "insufficient_data",
+      "lab_trends": "complete",
+      "imaging": "complete",
+      "treatment_phases": "complete",
+      "medications": "complete",
+      "assessment": "complete",
+      "local_doctor_conclusion": "complete",
+      "subspecialty_analysis": "complete",
+      "matched_doctors": "complete",
+      "selection_advice": "complete",
+      "visit_preparation": "complete",
+      "travel_checklist": "complete",
+      "references_boundary": "complete"
+    }
+  }
+}

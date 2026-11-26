@@ -1,0 +1,27 @@
+{
+  "case_id": "phase3_negative_matrix_synthetic",
+  "synthetic": true,
+  "description": "完全合成负例矩阵；所有域名仅用于离线安全测试，不进行网络访问。",
+  "unsafe_websites": [
+    "javascript:alert(1)",
+    "data:text/html,<script>alert(1)</script>",
+    "http://hospital.synthetic-fixture.org/",
+    "https://user:pass@hospital.synthetic-fixture.org/",
+    "https://hospital.synthetic-fixture.org:8443/",
+    "https://invalid.example/",
+    "https://untrusted-official.invalid/",
+    "https://hospital.synthetic-fixture.org\\@evil.example.org/",
+    "https://hospital.synthetic-fixture.org/\njavascript:alert(1)",
+    "https://localhost/",
+    "https://127.0.0.1/"
+  ],
+  "malformed_websites": [
+    1,
+    true,
+    [],
+    {}
+  ],
+  "third_party_doctor_url": "https://third-party.synthetic-fixture.org/doctor/a",
+  "cross_hospital_website": "https://other-hospital.synthetic-fixture.org/",
+  "xss_text": "<img src=x onerror=alert(1)>合成医生"
+}

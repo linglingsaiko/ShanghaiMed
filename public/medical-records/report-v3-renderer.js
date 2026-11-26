@@ -34,6 +34,9 @@
   const OUTCOME_LABELS = Object.freeze({ improved: "好转", worsened: "恶化", stable: "稳定", adjusted: "调整" });
   const SOURCE_ID = /^(?:[a-z0-9][a-z0-9_:-]{0,127}|PMID_[0-9]+)$/;
   const ISO_DATE_TIME = /^(\d{4})-(\d{2})-(\d{2})[T ](\d{2}):(\d{2})(?::(\d{2})(?:\.(\d+))?)?(Z|[+-]\d{2}:?\d{2})$/;
+  const HTTPS_WEBSITE = /^https:\/\/([A-Za-z0-9.-]+)(?::([0-9]+))?(?:[/?#]\S*)?$/;
+  const HOST_LABEL = /^[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?$/;
+  const RESERVED_TLDS = Object.freeze(["example", "invalid", "localhost", "test"]);
   let styleRequested = false;
 
   function isV3PreviewRequested(search) {
@@ -114,6 +117,19 @@
       if (zoneHour > 23 || zoneMinute > 59) return false;
     }
     return true;
+  }
+
+  function safeHospitalWebsite(value) {
+    if (typeof value !== "string" || value.length < 1 || value.length > 2048) return false;
+    if (!/^[\x21-\x7e]+$/.test(value) || /[\\<>"']/.test(value)) return false;
+    const match = HTTPS_WEBSITE.exec(value);
+    if (!match || (match[2] !== undefined && match[2] !== "443")) return false;
+    const host = match[1];
+    if (host.length > 253 || host.startsWith(".") || host.endsWith(".")) return false;
+    const labels = host.split(".");
+    if (labels.length < 2 || labels.some((label) => !HOST_LABEL.test(label))) return false;
+    if (!/^[A-Za-z]{2,63}$/.test(labels[labels.length - 1])) return false;
+    return !RESERVED_TLDS.includes(labels[labels.length - 1].toLowerCase());
   }
 
   function validateReportV3(report) {
@@ -212,7 +228,10 @@
       }
       ["name", "title", "hospital", "department", "specialties", "match_reason"].forEach((key) => string(doctor[key], path + "." + key));
       if (doctor.fudan_rank !== null) string(doctor.fudan_rank, path + ".fudan_rank");
-      if (doctor.hospital_website !== null) invalid(path + ".hospital_website: phase 2 requires null");
+      if (doctor.hospital_website !== null) {
+        string(doctor.hospital_website, path + ".hospital_website", true);
+        if (!safeHospitalWebsite(doctor.hospital_website)) invalid(path + ".hospital_website: invalid safe HTTPS URL");
+      }
     });
 
     const selection = objectWithKeys(report.selection_advice, ["priority", "dimensions", "continuity"], "selection_advice");
@@ -439,7 +458,19 @@
       const affiliation = [doctor.hospital, doctor.department].filter(present).join(" · ");
       if (affiliation) card.appendChild(el("div", "mmr-doctor-hospital", affiliation));
       paragraph(card, present(doctor.specialties) ? "擅长：" + doctor.specialties : "", "mmr-doctor-detail");
-      paragraph(card, present(doctor.fudan_rank) ? "复旦榜：" + doctor.fudan_rank : "", "mmr-doctor-detail");
+      paragraph(card, present(doctor.fudan_rank) ? "复旦榜：" + doctor.fudan_rank : "复旦榜：库内暂无排名信息", "mmr-doctor-detail");
+      const website = el("p", "mmr-doctor-detail mmr-url");
+      website.appendChild(el("strong", "", "医院官网："));
+      if (doctor.hospital_website !== null) {
+        const link = el("a", "", doctor.hospital_website);
+        link.href = doctor.hospital_website;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        website.appendChild(link);
+      } else {
+        website.appendChild(el("span", "", "请以医院官方渠道确认"));
+      }
+      card.appendChild(website);
       paragraph(card, present(doctor.match_reason) ? "匹配理由：" + doctor.match_reason : "", "mmr-doctor-detail");
       parent.appendChild(card);
     });
